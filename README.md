@@ -1,3 +1,5 @@
+현재 기준 구속 차이의 원인 진단과 후속 순서는 [SPEED_GAP_FINDINGS.md](SPEED_GAP_FINDINGS.md)를 먼저 확인하세요.
+
 # 야구 투구 Real2Sim 연구실
 
 구속 향상으로 이어지는 단계와 통과 기준은 [SPEED_GAIN_JOURNEY.md](SPEED_GAIN_JOURNEY.md), 구속 표시 영상은 [SPEED_VIDEO_FINDINGS.md](SPEED_VIDEO_FINDINGS.md)를 확인하세요. 손목 입력 변경에서 속력이 늘어도 일·동작 폭 조건을 만족하지 않으면 채택하지 않습니다.
