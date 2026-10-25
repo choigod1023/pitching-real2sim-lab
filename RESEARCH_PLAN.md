@@ -196,3 +196,6 @@ uv pip install --target artifacts/vendor --no-deps myo-sim==0.2.3
 - [MyoArm 설명](https://github.com/MyoHub/myo_sim/blob/main/myo_sim/models/arm/README.md)
 
 2026-10-25: 1~2단계 실행. 다음은 3단계. 아직 투구 근육 제어·공 release·수정 구속 향상 예측은 완료하지 않았다.
+# 2026-10-25 구속 오차 개선 후 우선순위
+
+야구 구속 증가가 최종 목표다. 다른 스포츠는 보조 방법 검증이며 최종 야구 결과를 대신하지 않는다. `SPEED_CORRECTION_FINDINGS.md`의 선수 제외 보정 및 다음 10명 27투구 확대 평가에서 절대 오차는 감소했지만 변화 예측은 무변화보다 나빴다. 보정 출력을 실제 물리 공 속도와 혼합하지 않는다. 따라서 개선 동작 최적화는 계속 보류하며, 손–공 전달과 실제 이탈을 식별할 추가 관측 근거가 다음 물리 모델 수정의 선행 조건이다.
