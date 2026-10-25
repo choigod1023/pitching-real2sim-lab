@@ -48,22 +48,23 @@ def render(skeleton, index, path):
         Image.fromarray(renderer.render()).save(path)
 
 
-def launch(skeleton, report, smoke_seconds=0):
+def launch(skeleton, report, smoke_seconds=0, reference=None, caption='', autoplay=False):
     import tkinter as tk
     from tkinter import ttk
     import mujoco.viewer
-    root=tk.Tk(); root.title('투구 연구실 | 실제 측정 ↔ 관절 모델')
-    root.geometry('660x510'); root.minsize(620,500)
+    root=tk.Tk(); root.title('투구 수정 탐색 | 운동학적 예비 실험' if reference is not None else '투구 연구실 | 실제 측정 ↔ 관절 모델')
+    root.geometry('720x630'); root.minsize(620,580)
     style=ttk.Style(root); style.configure('TLabel',font=('Malgun Gothic',10))
     style.configure('TButton',font=('Malgun Gothic',10))
     frame=ttk.Frame(root,padding=18); frame.pack(fill='both',expand=True)
-    ttk.Label(frame,text='실제 투구 재현 · 첫 번째 연구 단계',font=('Malgun Gothic',16,'bold')).pack(anchor='w')
+    ttk.Label(frame,text='원본과 수정 후보 비교 · 힘 검증 전' if reference is not None else '실제 투구 재현 · 첫 번째 연구 단계',font=('Malgun Gothic',16,'bold')).pack(anchor='w')
     ttk.Label(frame,text='좌표 재생 모드 — 힘으로 생성한 투구 시뮬레이션이 아닙니다.',foreground='#a04b00').pack(anchor='w',pady=(8,12))
-    ttk.Label(frame,text='청록색: 실제 측정 마커와 연결선\n주황색: 고정된 뼈 길이를 갖는 단순 관절 모델').pack(anchor='w')
+    ttk.Label(frame,text=('청록색: 원본의 처리된 관절 좌표\n주황색: 수정 후보를 옮긴 단순 관절 모델' if reference is not None else '청록색: 실제 측정 마커와 연결선\n주황색: 고정된 뼈 길이를 갖는 단순 관절 모델')).pack(anchor='w')
+    if caption:ttk.Label(frame,text=caption,wraplength=660).pack(anchor='w',pady=8)
     ttk.Label(frame,text=f'파일: {skeleton.trial.path.name}',wraplength=610).pack(anchor='w',pady=12)
     status=tk.StringVar(); ttk.Label(frame,textvariable=status).pack(anchor='w')
     position=tk.DoubleVar(value=0)
-    playing=[False]; clock=[time.perf_counter()]; updating=[False]
+    playing=[autoplay]; clock=[time.perf_counter()]; updating=[False]
     def seek(value):
         if not updating[0]:
             playing[0]=False
@@ -103,7 +104,7 @@ def launch(skeleton, report, smoke_seconds=0):
         index=min(skeleton.trial.count-1,int(position.get()))
         with viewer.lock():
             skeleton.pose(index,1.3)
-            draw_reference(viewer.user_scn,skeleton.trial,index)
+            draw_reference(viewer.user_scn,reference if reference is not None else skeleton.trial,index)
         viewer.sync()
         status.set(f'프레임 {index+1} / {skeleton.trial.count}     시간 {index/skeleton.trial.rate:.3f}초')
         root.after(16,update)
