@@ -1,5 +1,15 @@
 # 구속 향상 예측 연구: 실행 계획과 인계
 
+## 최신: 실제 적분 상태에서 공 분리 보존 검사 완료
+
+작업 위치 `outputs/pitching-lab/release-conservation`. `coupled_payload.py`가 실제 전방 적분 끝의 qpos/qvel을 저장하고 `release_conservation.py`가 그 상태를 공 없는 팔과 독립 자유 구체에 나눠 넘긴다. 공 중심 속도는 실제 적분 상태의 Jacobian으로 계산하며 기준 궤적의 속도로 덮어쓰지 않는다. 2개 투구에서 무충격 분리 순간 질량·선운동량·각운동량·역학적 에너지가 수치 정밀도 내에서 보존됨을 확인했다. 전체 46개 테스트 통과.
+
+조건부 모델 구속은 3034_1/2에서 114.737/115.499km/h, 실측은 130.196/131.001km/h로 각각 약 15.5km/h 낮다. 두 투구만으로 변화량 예측이 검증됐다고 주장하지 않는다. 분리 뒤 50ms는 팔의 외부 입력을 0으로 한 수치 검사이며 실제 follow-through가 아니다.
+
+다음은 그립 위치, 손 관성, 전완 프레임/필터 가정을 사전에 고정한 범위로 바꾸는 민감도 검사다. 관측 구속에 맞춰 값을 고르지 않는다. 이후 더 많은 선수/투구에서 구속 및 선수 내 변화 성능을 평가하고, 근육 및 외부 일 예산이 확보된 경우에만 수정 후보 최적화로 진행한다. 같은 궤적에 필요한 힘을 재계산한 결과와 같은 입력 힘을 유지한 결과를 구분한다.
+
+재실행: `coupled_payload.py --pitch 3034_1 --out artifacts/coupled-payload/3034_1` 실행 후 `release_conservation.py --source artifacts/coupled-payload/3034_1/release-state-1.npz --out artifacts/release-conservation/3034_1`. Python 실행 파일은 상위 `.venv/Scripts/python.exe`다.
+
 ## 최신: 팔·손·공의 강체 부착 동역학 연결
 
 작업 위치 `outputs/pitching-lab/coupled-payload`. RFRM 마커가 전완 축에서 떨어져 있어 전완 마커 프레임을 구성할 수 있음을 확인했다. `coupled_payload.py`에서 전완 축 회전과 손의 상대 회전을 분리하고 손 및 0.145kg 공의 관성을 팔 동역학에 연결했다. 2개 투구, 2개 시간 간격, 공 질량 유무를 검사했으며 45개 테스트가 통과했다. 손/공을 더한 모델은 같은 궤적에도 요구 힘과 외부 일이 달라지므로 기존 2분절 팔 결과를 그대로 힘 예산으로 쓰면 안 된다.
