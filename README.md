@@ -1,3 +1,5 @@
+최신 동일 투구 손·공 연결 실험은 [HAND_BALL_LINK_FINDINGS.md](HAND_BALL_LINK_FINDINGS.md)를 확인하세요.
+
 현재 기준 구속 차이의 원인 진단과 후속 순서는 [SPEED_GAP_FINDINGS.md](SPEED_GAP_FINDINGS.md)를 먼저 확인하세요.
 
 # 야구 투구 Real2Sim 연구실
