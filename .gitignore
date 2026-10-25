@@ -5,3 +5,4 @@ artifacts/
 *.csv
 *.zip
 *.log
+MUJOCO_LOG.TXT
