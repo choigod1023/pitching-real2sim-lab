@@ -1,5 +1,15 @@
 # 구속 향상 예측 연구: 실행 계획과 인계
 
+## 최신: 측정 정의 감사 및 정적 손 템플릿 대조 완료
+
+작업 위치 `outputs/pitching-lab/source-audit`. 공개 소스와 411개 투구·100개 정적 C3D를 감사했다. 사용 EVENT 및 이름 있는 헤더 이벤트는 0개, 명시적인 ball 라벨은 0개였다. 구속 파일명은 메타데이터와 전부 일치했다. BR은 비공개 DB의 `bp_events.BR_time`, 구속은 `bp_poi_metrics.pitch_speed_mph`에서 추출됨을 확인했지만 검출 규칙·장비별 측정 위치/시점은 확정하지 못했다. 장비사 일반 설명을 이 데이터의 실제 프로토콜로 간주하지 않는다. 상세 출처와 한계는 SOURCE_AUDIT.md.
+
+이어 세션별 정적 손 템플릿을 같은 10명·29개 개발 투구에 적용했다. 평활화한 강체 프레임의 변화 MAE는 2.167km/h(투구별 템플릿 2.368), 무변화 기준은 0.861이었다. 정적 템플릿 적합 마커 RMSE 평균은 3.247mm로 투구별 템플릿 1.621mm보다 컸다. 다섯 처리 조건 모두 보고했고 새로운 기본값은 채택하지 않았다. 여전히 같은 손목 속도와 가정 15cm 공 중심의 해석적 비교이며 새 동역학 또는 개입 검증이 아니다. 60개 테스트 통과. MyoSim empty-prefix 경고는 남는다.
+
+다음은 목표 구속으로 시점을 선택하지 않는 사전 지정 BR ±1/±2프레임 민감도다. 모든 조건의 선수 내 변화 성능과 변화 부호 안정성을 보고하고 실제 BR 오차의 신뢰구간으로 부르지 않는다. 이 실험은 시간 정렬 가정에 대한 강건성 검사다. 이를 통해 어떤 시점이 실제 이탈인지 식별되지는 않는다. 개선 후보 탐색은 보류한다. 이후 정답 누출 없는 선수 단위 학습/평가 보정 가능성과 필요한 직접 공 관측을 구분해 판단한다.
+
+재실행: `../.venv/Scripts/python.exe source_audit.py`; `../.venv/Scripts/python.exe hand_geometry.py --cohort ../cohort-baseline/artifacts/cohort-baseline --template-source static --out artifacts/static-hand`.
+
 ## 최신: 손 기하 보존 전처리 비교 완료
 
 작업 위치 `outputs/pitching-lab/hand-geometry`. 원시 3마커의 강체 적합 잔차를 측정하고 Kabsch 적합 및 회전행렬 Gaussian smoothing 후 SO(3) 투영을 구현했다. 원시 자료의 투구 구간 내 최대 마커쌍 거리 변동은 투구별 평균 11.557mm, 적합 마커 RMSE는 1.621mm였다. 강체 거리를 유지하도록 바꾸어도 구속 변화 MAE는 2.368km/h로 무변화 0.861보다 못했다. 같은 Gaussian 폭을 쓰는 Cartesian 대조군은 2.442km/h였다. 58개 테스트 통과.
