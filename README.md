@@ -1,5 +1,7 @@
 # 야구 투구 재현 연구실
 
+스포츠 질문, 비교 실험과 필요한 자료는 [SPORTS_RESEARCH.md](SPORTS_RESEARCH.md)에 정리했습니다. `python sport_outcomes.py`는 로컬 자료를 점검합니다. `pilot.py` 출력은 원 투구의 **실측 구속(km/h)**과 후보의 **손 대리점 속도 변화(m/s)**를 분리하며, 아직 없는 후보 구속·제구 예측은 결과 JSON에 null로 표시합니다.
+
 ## 운동학적 예비 실험 (2026-10-25)
 
 `python pilot.py`는 100명·411개 투구에서 각 25개 수학적 수정 후보를 탐색합니다. 선수별 첫 투구로 설정을 고르고 나머지 투구에서 계산합니다. `python show_pilot.py`는 예시를 GUI로 재생하고 GIF를 저장하며, `python write_report.py`는 결과 설명을 생성합니다. 출력은 `artifacts/pilot/`에 있으며 Git에 포함하지 않습니다.
