@@ -45,7 +45,7 @@ def fit_pose(points, forearm_marker, hand_rotation):
     return np.column_stack([base, roll, wxyz(wrist)]), support
 
 
-def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.)):
+def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.), free_ball=False):
     if not np.isfinite([*lengths, dt, ball_mass, *grip]).all() or min(*lengths, dt) <= 0 or ball_mass < 0:
         raise ValueError('Invalid model parameters')
     def cylinder(m, l, r):
@@ -53,6 +53,12 @@ def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.)):
     l1, l2 = lengths
     grip_text = ' '.join(map(str, grip))
     payload = '' if ball_mass == 0 else f'<geom type="sphere" size=".0364" mass="{ball_mass}" pos="{grip_text}"/>'
+    free_body = ''
+    if free_ball:
+        if ball_mass <= 0:
+            raise ValueError('Detached ball needs positive mass')
+        payload = ''
+        free_body = f'<body name="free_ball"><freejoint name="ball_free"/><geom type="sphere" size=".0364" mass="{ball_mass}"/></body>'
     # Hand cuboid: 0.16 x 0.08 x 0.03m, 0.482044kg, generic assumption.
     mh = .482044
     hand_i = ' '.join(str(mh*(a*a+b*b)/12) for a, b in [(.08,.03),(.16,.03),(.16,.08)])
@@ -66,11 +72,11 @@ def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.)):
     <inertial pos=".08 0 0" mass="{mh}" diaginertia="{hand_i}"/>
     <site name="wrist"/><body name="ball_payload">
     {payload}<site name="ball_center" pos="{grip_text}"/></body>
-    </body></body></body></worldbody></mujoco>'''
+    </body></body></body>{free_body}</worldbody></mujoco>'''
     return mujoco.MjModel.from_xml_string(xml)
 
 
-def inverse_and_rollout(model, q, dt):
+def inverse_and_rollout(model, q, dt, return_state=False):
     vel, acc = derivatives(model, q, dt)
     d = mujoco.MjData(model)
     loads, reference = [], []
@@ -93,6 +99,8 @@ def inverse_and_rollout(model, q, dt):
               'external_shoulder_net_work_j': float(np.trapezoid(np.sum(loads[:, :6]*vel[:, :6], axis=1), dx=dt)),
               'wrist_peak_generalized_torque_nm': float(np.linalg.norm(loads[:, 8:11], axis=1).max()),
               'state_resets_after_initialization': 0}
+    if return_state:
+        return result, loads, {'qpos': d.qpos.copy(), 'qvel': d.qvel.copy()}
     return result, loads
 
 
@@ -137,7 +145,10 @@ def run(data, pitch, out):
         times = np.linspace(a,b,int(np.ceil((b-a)/requested_dt))+1); dt = float(times[1]-times[0])
         q, support = fit_pose(points_curve(times), fore_curve(times), hand_curve(times).as_matrix())
         empty, empty_loads = inverse_and_rollout(model_for(lengths, dt, ball_mass=0.), q, dt)
-        loaded, loaded_loads = inverse_and_rollout(model_for(lengths, dt), q, dt)
+        loaded, loaded_loads, state = inverse_and_rollout(model_for(lengths, dt), q, dt, return_state=True)
+        out.mkdir(parents=True, exist_ok=True)
+        np.savez(out/f'release-state-{len(runs)}.npz', lengths=lengths, dt=dt,
+                 qpos=state['qpos'], qvel=state['qvel'])
         delta = loaded_loads-empty_loads
         runs.append({'dt_s': dt, 'min_forearm_marker_transverse_support_mm': float(support.min()*1000),
                      'without_ball_mass': empty, 'with_ball_mass': loaded,
