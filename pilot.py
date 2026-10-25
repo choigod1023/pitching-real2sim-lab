@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from sport_outcomes import attach_observed_speed, evidence_contract
 
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT.parent/'openbiomechanics/baseball_pitching/data'
@@ -97,7 +98,7 @@ def main():
             row=evaluate(df,a,d);row.update(user=int(m.user),session_pitch=m.session_pitch)
             rows.append(row)
         if idx%50==0:print(f'Evaluated {idx+1}/{len(meta)} pitches',flush=True)
-    candidates=pd.DataFrame(rows)
+    candidates=attach_observed_speed(pd.DataFrame(rows),meta)
     first=candidates[['user','session_pitch']].drop_duplicates().groupby('user',sort=True).first().session_pitch
     candidates['split']=np.where(candidates.session_pitch.isin(first.values),'selection','heldout')
     train=candidates[candidates.split=='selection']
@@ -132,7 +133,8 @@ def main():
                          'heldout_eligible_fraction':float(g.eligible.mean()),
                          'heldout_timing_robust_positive_fraction':float((g.min_delta_release_pm1frame>.05).mean())}
     candidates.to_csv(OUT/'candidates.csv',index=False);results.to_csv(OUT/'heldout.csv',index=False)
-    report={'study_type':'offline kinematic counterfactual feasibility pilot, not causal or dynamic',
+    report={'evidence':evidence_contract(),
+            'study_type':'offline kinematic counterfactual feasibility pilot, not causal or dynamic',
             'screen_limits':{'forearm_direction_deg':5,'hand_displacement_m':.05,'peak_hand_acceleration_ratio':1.1},
             'candidates_per_pitch':len(GRID),'evaluated_pitches':candidates.session_pitch.nunique(),
             'selection_athletes':len(choices),'skipped':skipped,'common_setting':list(common),'common_screened_setting':list(common_screened),
