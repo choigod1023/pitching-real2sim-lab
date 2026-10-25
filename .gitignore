@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+artifacts/
+*.c3d
+*.csv
+*.zip
+*.log
