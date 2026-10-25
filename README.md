@@ -1,5 +1,7 @@
 # 야구 투구 재현 연구실
 
+최신 실험은 [EXPERIMENT_FINDINGS.md](EXPERIMENT_FINDINGS.md): 관절 제약을 지키는 방향 fitting, 순간 근육 힘 검사, 공 release 보정의 선수 분리 평가와 **같은 선수 내 구속 차이 평가**를 구현했습니다. 현재는 구속 향상 추천에 필요한 검증을 통과하지 않았습니다.
+
 후속 진행 순서와 실행 근거는 [RESEARCH_PLAN.md](RESEARCH_PLAN.md)에 기록합니다. `release_baseline.py`는 관측 구속 예측의 선수 분리 평가, `muscle_model_check.py`는 공개 팔 근육 모델의 실제 물리 구동 점검입니다. 두 단계 모두 수정 동작의 구속 향상 검증과는 구분합니다.
 
 스포츠 질문, 비교 실험과 필요한 자료는 [SPORTS_RESEARCH.md](SPORTS_RESEARCH.md)에 정리했습니다. `python sport_outcomes.py`는 로컬 자료를 점검합니다. `pilot.py` 출력은 원 투구의 **실측 구속(km/h)**과 후보의 **손 대리점 속도 변화(m/s)**를 분리하며, 아직 없는 후보 구속·제구 예측은 결과 JSON에 null로 표시합니다.
