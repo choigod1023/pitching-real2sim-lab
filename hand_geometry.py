@@ -74,7 +74,17 @@ def static_template(c):
     return np.median(np.einsum('nji,nkj->nki',frame,raw-origin[:,None,:]),axis=0)
 
 
-def run(data,cohort,out,template_source='trial'):
+def release_times(end,rate,t,offsets):
+    if not np.isfinite(rate) or rate<=0:raise ValueError('Invalid sampling rate')
+    offsets=np.asarray(offsets,dtype=float)
+    if offsets.ndim!=1 or not len(offsets) or not np.isfinite(offsets).all():raise ValueError('Invalid offsets')
+    if np.any(offsets!=np.round(offsets)) or len(np.unique(offsets))!=len(offsets):raise ValueError('Unique integer frame offsets required')
+    times=end+offsets/rate
+    if np.any(times<t[1]) or np.any(times>t[-2]):raise ValueError('Release outside supported interval')
+    return times
+
+
+def run(data,cohort,out,template_source='trial',offsets=(0,)):
     if template_source not in ('trial','static'):raise ValueError('Unknown template source')
     data,cohort,out=Path(data),Path(cohort),Path(out);out.mkdir(parents=True,exist_ok=True)
     selection=pd.read_csv(cohort/'selection.csv');meta=pd.read_csv(data/'metadata.csv').set_index('session_pitch')
@@ -120,16 +130,20 @@ def run(data,cohort,out,template_source='trial'):
                          'smoothed_to_raw_marker_rmse_mm':float(np.sqrt(np.mean(np.sum((smooth[mask]-raw[mask])**2,axis=2)))*1000)})
         curve=CubicSpline(t,np.stack([vector(g,n+'_jc') for n in ['shoulder','elbow','wrist']],axis=1))
         with np.load(cohort/'cases'/item.session_pitch/'20/reference-0.npz') as cache:
-            wrist_v=retarget_velocity(curve(end),curve(end,1),cache['lengths'])
+            lengths=cache['lengths'].copy()
+        eval_times=release_times(end,rate,t,offsets)
         for method,r in [('raw_frame',frame),('cartesian20',cart_r),('cartesian_gaussian',gaussian_cart_r),('rigid_fit',fit_r),('rigid_matrix_smooth',smooth_r)]:
             rotation_curve=RotationSpline(t,Rotation.from_matrix(r))
-            v=wrist_v+rotation_velocity(rotation_curve,end,np.array([.15,0.,0.]))
-            predictions.append({'user':int(item.user),'pitch':item.session_pitch,'method':method,
-                                'predicted_kmh':float(np.linalg.norm(v)*3.6),'observed_kmh':float(row.pitch_speed_mph)*1.609344})
+            for shift,eval_time in zip(offsets,eval_times):
+                wrist_v=retarget_velocity(curve(eval_time),curve(eval_time,1),lengths)
+                v=wrist_v+rotation_velocity(rotation_curve,eval_time,np.array([.15,0.,0.]))
+                predictions.append({'user':int(item.user),'pitch':item.session_pitch,'method':method,
+                                    'offset_frames':int(shift),'offset_ms':float(shift/rate*1000),
+                                    'predicted_kmh':float(np.linalg.norm(v)*3.6),'observed_kmh':float(row.pitch_speed_mph)*1.609344})
     geo=pd.DataFrame(geometry);pred=pd.DataFrame(predictions);scores=[]
-    for method,g in pred.groupby('method'):
+    for (method,shift),g in pred.groupby(['method','offset_frames']):
         # Reuse scoring only; this is an analytic point velocity, not rollout.
-        score=summarize(g.assign(cutoff_hz=0.))[0];score.pop('cutoff_hz');scores.append({'method':method,**score})
+        score=summarize(g.assign(cutoff_hz=0.))[0];score.pop('cutoff_hz');scores.append({'method':method,'offset_frames':int(shift),**score})
     report={'pitches':len(geo),'athletes':int(geo.user.nunique()),'scores':scores,'sources':sources,
             'selection_sha256':hashlib.sha256((cohort/'selection.csv').read_bytes()).hexdigest(),
             'geometry_pitch_weighted_mean':{c:float(geo[c].mean()) for c in geo.columns if c.endswith('_mm')},
@@ -151,4 +165,5 @@ if __name__=='__main__':
     p.add_argument('--data',type=Path,default=Path(__file__).resolve().parent.parent/'openbiomechanics/baseball_pitching/data')
     p.add_argument('--cohort',type=Path,required=True);p.add_argument('--out',type=Path,default=Path('artifacts/hand-geometry'))
     p.add_argument('--template-source',choices=['trial','static'],default='trial')
-    a=p.parse_args();r=run(a.data,a.cohort,a.out,a.template_source);print(json.dumps(r,indent=2))
+    p.add_argument('--timing-audit',action='store_true')
+    a=p.parse_args();r=run(a.data,a.cohort,a.out,a.template_source,(-2,-1,0,1,2) if a.timing_audit else (0,));print(json.dumps(r,indent=2))
