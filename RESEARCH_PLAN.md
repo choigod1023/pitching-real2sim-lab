@@ -205,3 +205,5 @@ uv pip install --target artifacts/vendor --no-deps myo-sim==0.2.3
 2026-10-25: 공개 OBP CV의 BaseballThrow_001 8시점 파일 목록을 확인하고 실제 접근·관측 가능성을 검사한다. COORDINATE_PROTOCOL.md와 COORDINATE_FINDINGS.md를 따른다. 손–공 상대운동 재구성과 미관측 구속 예측을 구분하며, 실제 좌표가 없는 상태에서 모델에 임의 좌표를 넣지 않는다. 좌표 미분의 독립 잡음 전파와 이탈 전후 혼합 편향 검사를 구현했다.
 
 2026-10-25: 공의 신발 겹침 프레임을 제외한 다중 프레임 적합으로 가정된 픽셀 잡음 민감도를 약80% 줄였다. 그러나 중심 검출 방법 간1km/h 초과 차이가 남아 실제 정확도 개선으로 채택하지 않는다. TRAJECTORY_FINDINGS.md와 RADAR_ACCURACY.md를 참조하고 추가 카메라/중심/동기화 검증이 우선이다.
+
+2026-10-25: tracking-calibration에서 배경 차분 공 중심3방법×3임계값, 원본3영상전체PTS감사,보정범위/시차/fold민감도를실행했다. 범위내9프레임조건100.8723~101.5048km/h,재투영잔차약3px가남아1km/h정확도미검증. Theia 동일투구19분절C3D를확보해실제영상과재구성및별도3034_1물리영상합본을생성했다. 다음은독립보정표적·다른카메라대응으로공중심/노출시차/기하오차를분리하는것이다. 현재기하잔차를공속도에맞춰보정하지않는다. 상세CENTER_FINDINGS.md/CAMERA_FINDINGS.md/JOINT_VIDEO_FINDINGS.md.

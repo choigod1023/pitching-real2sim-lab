@@ -1,6 +1,15 @@
-# 야구 투구 재현 연구실
+# 야구 투구 Real2Sim 연구실
 
-최신 실험은 [EXPERIMENT_FINDINGS.md](EXPERIMENT_FINDINGS.md): 관절 제약을 지키는 방향 fitting, 순간 근육 힘 검사, 공 release 보정의 선수 분리 평가와 **같은 선수 내 구속 차이 평가**를 구현했습니다. 현재는 구속 향상 추천에 필요한 검증을 통과하지 않았습니다.
+현재 연구 상태와 저장 위치는 [CURRENT_STATUS.md](CURRENT_STATUS.md)를 먼저 확인하세요. 목표는 선수의 힘 능력을 늘리지 않고 작은 관절 동작 수정으로 실제 구속을 높일 수 있는지 검증하는 것입니다. **구속 향상 예측은 아직 검증을 통과하지 않았습니다.**
+
+최신 작업은 실제 야구 영상의 공 중심 추적, 카메라 시간·보정 검사, 동일 투구의 Theia3D 관절 재구성입니다. [CENTER_FINDINGS.md](CENTER_FINDINGS.md), [CAMERA_FINDINGS.md](CAMERA_FINDINGS.md), [JOINT_VIDEO_FINDINGS.md](JOINT_VIDEO_FINDINGS.md)에 실제 실행 결과와 한계를 기록합니다.
+
+기존 힘 기반 팔·손·공 전방 적분과 실제 관절 좌표를 재생하는 시각화는 구분합니다. 아래 초기 GUI 설명의 `mj_forward` 재생은 물리 동작 예측이 아닙니다.
+
+## 초기 도구와 이전 실험 기록
+
+
+이전 실험은 [EXPERIMENT_FINDINGS.md](EXPERIMENT_FINDINGS.md): 관절 제약을 지키는 방향 fitting, 순간 근육 힘 검사, 공 release 보정의 선수 분리 평가와 **같은 선수 내 구속 차이 평가**를 구현했습니다. 현재는 구속 향상 추천에 필요한 검증을 통과하지 않았습니다.
 
 후속 진행 순서와 실행 근거는 [RESEARCH_PLAN.md](RESEARCH_PLAN.md)에 기록합니다. `release_baseline.py`는 관측 구속 예측의 선수 분리 평가, `muscle_model_check.py`는 공개 팔 근육 모델의 실제 물리 구동 점검입니다. 두 단계 모두 수정 동작의 구속 향상 검증과는 구분합니다.
 
@@ -14,7 +23,7 @@
 
 실제 C3D 투구와 고정된 분절 길이를 갖는 MuJoCo 관절 모델을 나란히 재생하는 초기 연구 도구입니다.
 
-**현재는 운동학적 재생입니다. 힘으로 동작을 생성하는 제어기, 동작 최적화, 구속 예측, 실제 선수 개선 효과는 구현하지 않았습니다.**
+**아래 초기 preview.py 도구는 운동학적 재생입니다. 이후 별도 모듈의 힘 기반 팔 적분과는 다릅니다. 동작 최적화와 실제 선수 개선 효과는 아직 검증하지 않았습니다.**
 
 ## 실행
 
