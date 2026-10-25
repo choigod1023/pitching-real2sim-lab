@@ -45,8 +45,8 @@ def fit_pose(points, forearm_marker, hand_rotation):
     return np.column_stack([base, roll, wxyz(wrist)]), support
 
 
-def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.), free_ball=False):
-    if not np.isfinite([*lengths, dt, ball_mass, *grip]).all() or min(*lengths, dt) <= 0 or ball_mass < 0:
+def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.), free_ball=False, hand_mass_scale=1.):
+    if not np.isfinite([*lengths, dt, ball_mass, *grip, hand_mass_scale]).all() or min(*lengths, dt, hand_mass_scale) <= 0 or ball_mass < 0:
         raise ValueError('Invalid model parameters')
     def cylinder(m, l, r):
         return f'{m*(3*r*r+l*l)/12} {m*(3*r*r+l*l)/12} {m*r*r/2}'
@@ -60,7 +60,7 @@ def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.), free_ball=False):
         payload = ''
         free_body = f'<body name="free_ball"><freejoint name="ball_free"/><geom type="sphere" size=".0364" mass="{ball_mass}"/></body>'
     # Hand cuboid: 0.16 x 0.08 x 0.03m, 0.482044kg, generic assumption.
-    mh = .482044
+    mh = .482044*hand_mass_scale
     hand_i = ' '.join(str(mh*(a*a+b*b)/12) for a, b in [(.08,.03),(.16,.03),(.16,.08)])
     xml = f'''<mujoco><compiler angle="radian"/><option timestep="{dt}" integrator="Euler"/>
     <default><geom contype="0" conaffinity="0"/></default><worldbody><body name="upper">
@@ -76,7 +76,7 @@ def model_for(lengths, dt, ball_mass=.145, grip=(.15, 0., 0.), free_ball=False):
     return mujoco.MjModel.from_xml_string(xml)
 
 
-def inverse_and_rollout(model, q, dt, return_state=False):
+def inverse_and_rollout(model, q, dt, return_state=False, applied_loads=None):
     vel, acc = derivatives(model, q, dt)
     d = mujoco.MjData(model)
     loads, reference = [], []
@@ -86,9 +86,14 @@ def inverse_and_rollout(model, q, dt, return_state=False):
         loads.append(d.qfrc_inverse.copy())
         reference.append(d.site_xpos[model.site('ball_center').id].copy())
     loads, reference = np.array(loads), np.array(reference)
+    controls = loads if applied_loads is None else np.asarray(applied_loads)
+    if controls.shape != loads.shape or not np.isfinite(controls).all():
+        raise ValueError('Applied loads must match reference dimensions and be finite')
     d = mujoco.MjData(model); d.qpos[:] = q[0]; d.qvel[:] = vel[0]
     errors = [0.]
-    for force, target in zip(loads[:-1], reference[1:]):
+    applied_shoulder_work = 0.
+    for force, target in zip(controls[:-1], reference[1:]):
+        applied_shoulder_work += float(force[:6]@d.qvel[:6])*dt
         d.qfrc_applied[:] = force
         mujoco.mj_step(model, d); mujoco.mj_forward(model, d)
         if d.warning.number.any() or not np.isfinite(d.qpos).all():
@@ -98,13 +103,20 @@ def inverse_and_rollout(model, q, dt, return_state=False):
               'ball_point_final_error_mm': float(errors[-1]*1000),
               'external_shoulder_net_work_j': float(np.trapezoid(np.sum(loads[:, :6]*vel[:, :6], axis=1), dx=dt)),
               'wrist_peak_generalized_torque_nm': float(np.linalg.norm(loads[:, 8:11], axis=1).max()),
-              'state_resets_after_initialization': 0}
+              'state_resets_after_initialization': 0,
+              'load_policy': 'recomputed_inverse' if applied_loads is None else 'fixed_supplied',
+              'integrator': int(model.opt.integrator),
+              'actual_shoulder_work_left_riemann_j': applied_shoulder_work,
+              'external_shoulder_net_work_scope': 'Inverse demand evaluated on reference, not actual applied work.'}
+    jp, jr = np.zeros((3,model.nv)), np.zeros((3,model.nv))
+    mujoco.mj_jacSite(model,d,jp,jr,model.site('ball_center').id)
+    result['conditional_release_speed_kmh'] = float(np.linalg.norm(jp@d.qvel)*3.6)
     if return_state:
         return result, loads, {'qpos': d.qpos.copy(), 'qvel': d.qvel.copy()}
     return result, loads
 
 
-def run(data, pitch, out):
+def run(data, pitch, out, cutoff_hz=20., steps=(1/2880,1/5760)):
     data, out = Path(data), Path(out)
     meta = pd.read_csv(data/'metadata.csv').merge(
         pd.read_csv(data/'poi/poi_metrics.csv', usecols=['session_pitch','p_throws']),
@@ -120,13 +132,15 @@ def run(data, pitch, out):
     labels = [v.strip() for v in c['parameters']['POINT']['LABELS']['value']]
     rate = float(c['parameters']['POINT']['RATE']['value'][0])
     scale = {'m':1., 'cm':.01, 'mm':.001}[c['parameters']['POINT']['UNITS']['value'][0].strip().lower()]
-    sos = butter(4, 20, fs=rate, output='sos')
+    if not np.isfinite(cutoff_hz) or not 0 <= cutoff_hz < rate/2:
+        raise ValueError('Cutoff must be zero (raw) or below Nyquist')
+    sos = None if cutoff_hz == 0 else butter(4, cutoff_hz, fs=rate, output='sos')
     markers = {}
     for name in ['RFIN', 'RWRA', 'RWRB', 'RFRM']:
         raw = c['data']['points'][:, labels.index(name), :].T
         if not np.isfinite(raw).all() or np.any(raw[:, 3] < 0):
             raise ValueError('Missing marker; no gap filling')
-        markers[name] = sosfiltfilt(sos, raw[:, :3]*scale, axis=0)
+        markers[name] = raw[:, :3]*scale if sos is None else sosfiltfilt(sos, raw[:, :3]*scale, axis=0)
     all_data = pd.read_csv(data/'full_sig/landmarks.csv')
     g = all_data[all_data.session_pitch.eq(pitch)].sort_values('time')
     t = regular_time(g)
@@ -141,7 +155,7 @@ def run(data, pitch, out):
         raise ValueError('Insufficient interpolation support')
     lengths = np.median(np.linalg.norm(np.diff(points_curve(np.linspace(a,b,100)), axis=1), axis=2), axis=0)
     runs = []
-    for requested_dt in [1/2880, 1/5760]:
+    for requested_dt in steps:
         times = np.linspace(a,b,int(np.ceil((b-a)/requested_dt))+1); dt = float(times[1]-times[0])
         q, support = fit_pose(points_curve(times), fore_curve(times), hand_curve(times).as_matrix())
         empty, empty_loads = inverse_and_rollout(model_for(lengths, dt, ball_mass=0.), q, dt)
@@ -149,6 +163,8 @@ def run(data, pitch, out):
         out.mkdir(parents=True, exist_ok=True)
         np.savez(out/f'release-state-{len(runs)}.npz', lengths=lengths, dt=dt,
                  qpos=state['qpos'], qvel=state['qvel'])
+        np.savez(out/f'reference-{len(runs)}.npz', lengths=lengths, dt=dt,
+                 qpos=q, required_loads=loaded_loads)
         delta = loaded_loads-empty_loads
         runs.append({'dt_s': dt, 'min_forearm_marker_transverse_support_mm': float(support.min()*1000),
                      'without_ball_mass': empty, 'with_ball_mass': loaded,
@@ -163,7 +179,8 @@ def run(data, pitch, out):
               'wrist_frame': 'Hand frame relative to forearm marker frame; three unrestricted rotational DOFs, not a validated wrist joint.',
               'inertia': 'Generic arm cylinders, 0.482044kg hand cuboid 0.16x0.08x0.03m, solid spherical ball. Not subject-specific.',
               'coupling': 'Ball inertia is part of articulated dynamics; ball-present and ball-absent loads are recomputed separately, not equal-ability candidates.',
-              'processing': '20Hz zero-phase hand/forearm markers; processed joint centers may use different processing. Offline RotationSpline interpolation.',
+              'cutoff_hz': cutoff_hz,
+              'processing': 'Raw if cutoff=0, otherwise zero-phase hand/forearm filtering; processed joint centers unchanged and may use different processing. Offline RotationSpline interpolation.',
               'limitations': ['No finger mechanics or true grip identification', 'No muscle capacities or anatomical ROM',
                              'Prescribed observed motion and external shoulder wrench', 'No detachment integrated with arm',
                              'No ball-speed improvement prediction or coaching recommendation'], 'optimization_ready': False}
