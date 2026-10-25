@@ -55,7 +55,27 @@ def distances(points):
     return np.stack([np.linalg.norm(points[:,a]-points[:,b],axis=1) for a,b in [(0,1),(0,2),(1,2)]],axis=1)
 
 
-def run(data,cohort,out):
+def static_template(c):
+    labels=[s.strip() for s in c['parameters']['POINT']['LABELS']['value']]
+    required=['RFIN','RWRA','RWRB']
+    # Accept one consistent skeleton namespace only; never mix ambiguous bodies.
+    namespaces=[prefix for prefix in ('','Skeleton_001_')
+                if all(labels.count(prefix+n)==1 for n in required)]
+    if len(namespaces)!=1:raise ValueError('Missing or ambiguous static hand namespace')
+    indices=[labels.index(namespaces[0]+n) for n in required]
+    points=c['data']['points'][:,indices,:]
+    scale={'m':1.,'mm':.001,'cm':.01}[c['parameters']['POINT']['UNITS']['value'][0].strip().lower()]
+    raw=points[:3].transpose(2,1,0)*scale
+    valid=np.isfinite(raw).all(axis=(1,2)) & (points[3]>=0).all(axis=0)
+    valid &= np.linalg.norm(np.cross(raw[:,1]-raw[:,0],raw[:,2]-raw[:,0]),axis=1)>1e-8
+    if not valid.any():raise ValueError('No valid static hand frame')
+    raw=raw[valid];origin=(raw[:,1]+raw[:,2])/2
+    _,frame=hand_frame(raw[:,0],raw[:,1],raw[:,2])
+    return np.median(np.einsum('nji,nkj->nki',frame,raw-origin[:,None,:]),axis=0)
+
+
+def run(data,cohort,out,template_source='trial'):
+    if template_source not in ('trial','static'):raise ValueError('Unknown template source')
     data,cohort,out=Path(data),Path(cohort),Path(out);out.mkdir(parents=True,exist_ok=True)
     selection=pd.read_csv(cohort/'selection.csv');meta=pd.read_csv(data/'metadata.csv').set_index('session_pitch')
     landmarks=pd.read_csv(data/'full_sig/landmarks.csv');geometry=[];predictions=[];sources=[]
@@ -79,6 +99,11 @@ def run(data,cohort,out):
         _,frame=hand_frame(*markers)
         local=np.einsum('nji,nkj->nki',frame,raw-origin[:,None,:])
         template=np.median(local[mask],axis=0)
+        if template_source=='static':
+            static_paths=list((data/'c3d').rglob(row.modelname_new))
+            if len(static_paths)!=1:raise ValueError('Ambiguous static C3D')
+            template=static_template(ezc3d.c3d(str(static_paths[0])))
+            sources[-1]['static_sha256']=hashlib.sha256(static_paths[0].read_bytes()).hexdigest()
         fit_o,fit_r,fit=fit_cluster(template,raw)
         smooth_o,smooth_r,smooth=smooth_cluster(template,fit_o,fit_r,rate)
         cart=sosfiltfilt(butter(4,20,fs=rate,output='sos'),raw,axis=0)
@@ -109,7 +134,7 @@ def run(data,cohort,out):
             'selection_sha256':hashlib.sha256((cohort/'selection.csv').read_bytes()).hexdigest(),
             'geometry_pitch_weighted_mean':{c:float(geo[c].mean()) for c in geo.columns if c.endswith('_mm')},
             'geometry_pitch_max':{c:float(geo[c].max()) for c in geo.columns if c.endswith('_mm')},
-            'template':'Per-trial median local marker positions during foot-contact to BR; no speed targets. Offline fitting, not a static anatomical calibration.',
+            'template':('Per-trial median local marker positions during foot-contact to BR; no speed targets. Offline fitting, not a static anatomical calibration.' if template_source=='trial' else 'Session-matched static C3D median local marker positions; no speed targets. Marker geometry only, not anatomical axes or ball grip.'),
             'smoothing':'Gaussian rotation-matrix smoothing sigma=1/(2*pi*20) seconds then proper SO(3) projection; centroid origin uses Butterworth20. Not frequency-equivalent to Cartesian Butterworth20.',
             'evaluation':'All five methods on the same inspected development cohort; same retargeted wrist velocity and 15cm point offset. Cartesian Gaussian control uses the same sigma as matrix smoothing. Analytic kinematics only, not newly validated dynamics.',
             'limits':['Preserving distances is imposed, not proof that raw markers are truly rigid.',
@@ -125,4 +150,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--data',type=Path,default=Path(__file__).resolve().parent.parent/'openbiomechanics/baseball_pitching/data')
     p.add_argument('--cohort',type=Path,required=True);p.add_argument('--out',type=Path,default=Path('artifacts/hand-geometry'))
-    a=p.parse_args();r=run(a.data,a.cohort,a.out);print(json.dumps(r,indent=2))
+    p.add_argument('--template-source',choices=['trial','static'],default='trial')
+    a=p.parse_args();r=run(a.data,a.cohort,a.out,a.template_source);print(json.dumps(r,indent=2))
