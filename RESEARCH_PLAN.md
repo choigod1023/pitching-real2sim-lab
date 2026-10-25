@@ -1,5 +1,13 @@
 # 구속 향상 예측 연구: 실행 계획과 인계
 
+## 최신: 힘·일 및 파라미터 민감도 완료
+
+작업 위치 `outputs/pitching-lab/dynamics-sensitivity`. `dynamics_sensitivity.py`에서 두 투구 각각 질량·반경 7조건을 실행했다. 아래 이전 다음 단계 1은 기초 스트레스 검사까지 완료했다. 몸통을 대신하는 외부 어깨 힘/토크가 약 120~128J의 순 일을 공급했고, 일반 질량을 ±20% 바꾸면서 원래 힘을 유지하면 손목 RMSE가 72~119mm로 증가했다. ±20%는 실측 생체 범위가 아닌 공학적 스트레스 조건이다.
+
+다음은 손·공 분절과 이탈 조건을 식별 가능한 값/가정/불확실성으로 구분하여 추가하는 것이다. 이때 어깨 공급 일과 구동력 한계를 후보별로 늘려서 구속 개선을 만들지 않는다. 현재 작업을 계승할 때는 최신 격리 브랜치에서 테스트 및 결과 기록을 읽는다. 구속 개선 gate는 아직 닫혀 있다.
+
+재실행: `../.venv/Scripts/python.exe torque_arm.py --pitch 3034_1 --output artifacts/torque-arm/3034_1`, 이어서 `../.venv/Scripts/python.exe dynamics_sensitivity.py --source artifacts/torque-arm/3034_1 --out artifacts/dynamics-sensitivity/3034_1`. 3034_2도 같은 방식이다. 재사용한 기존 rollout 입력은 결과 JSON에 절대경로 및 SHA256으로 기록된다.
+
 ## 2026-10-25 후속 단계 갱신
 
 최신 작업 위치는 `outputs/pitching-lab/model-validation`이다. 아래 과거 기록보다 이 갱신을 우선한다. `centered_release.py`로 선수 내 변화 학습을 실행했고, `torque_arm.py`로 관찰 투구를 역동역학 힘으로 실제 적분하는 2분절 팔 기준 모델을 만들었다. 35개 테스트 통과. 2개 투구에서 세 시간 간격의 수렴을 확인했다. 이는 근육 실행 가능성 또는 공 구속 개선의 검증이 아니다.
