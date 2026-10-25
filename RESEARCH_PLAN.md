@@ -1,5 +1,7 @@
 # 구속 향상 예측 연구: 실행 계획과 인계
 
+최신 진행: [EXPERIMENT_FINDINGS.md](EXPERIMENT_FINDINGS.md). 현재 전용 작업 폴더는 `outputs/pitching-lab/pitch-fitting`이다. 관절 제약 fitting, 순간 근육 힘 검사, 전체 구간 fitting 및 관성 민감도, 손 회전 기반 공 위치 보정, 동일 선수 내 구속 차이 비교까지 연속 실행했다. 동작 적합성과 힘 요구 문제 및 단순 기준 방법보다 못한 변화량 예측 때문에 구속 개선 최적화 gate는 아직 통과하지 않았다. 아래 단계 목록은 최초 계획이며 완료 표시를 과대해석하지 않는다.
+
 목표: 공개 실측 투구로 보정한 물리 모델에서, 힘 능력을 늘리지 않고 작은 동작 수정으로 구속 향상 후보를 예측한다. 후보가 물리 제약과 모델 불확실성을 견디는지 확인한다. 선수 훈련 효과·편안함·부상 예방을 입증했다고 주장하지 않는다.
 
 ## 단계와 진행 기준
@@ -16,7 +18,7 @@
 
 ## 재실행
 
-현재 전용 작업 폴더: `outputs/pitching-lab/dynamics-baseline`.
+초기 기준 방법 작업 폴더: `outputs/pitching-lab/dynamics-baseline`. 최신 코드는 `outputs/pitching-lab/pitch-fitting`에 있다.
 Python: 상위 `pitching-lab/.venv/Scripts/python.exe`.
 
 ```powershell
