@@ -1,5 +1,7 @@
 # 야구 투구 Real2Sim 연구실
 
+구속 향상으로 이어지는 단계와 통과 기준은 [SPEED_GAIN_JOURNEY.md](SPEED_GAIN_JOURNEY.md), 구속 표시 영상은 [SPEED_VIDEO_FINDINGS.md](SPEED_VIDEO_FINDINGS.md)를 확인하세요. 손목 입력 변경에서 속력이 늘어도 일·동작 폭 조건을 만족하지 않으면 채택하지 않습니다.
+
 현재 연구 상태와 저장 위치는 [CURRENT_STATUS.md](CURRENT_STATUS.md)를 먼저 확인하세요. 목표는 선수의 힘 능력을 늘리지 않고 작은 관절 동작 수정으로 실제 구속을 높일 수 있는지 검증하는 것입니다. **구속 향상 예측은 아직 검증을 통과하지 않았습니다.**
 
 최신 작업은 실제 야구 영상의 공 중심 추적, 카메라 시간·보정 검사, 동일 투구의 Theia3D 관절 재구성입니다. [CENTER_FINDINGS.md](CENTER_FINDINGS.md), [CAMERA_FINDINGS.md](CAMERA_FINDINGS.md), [JOINT_VIDEO_FINDINGS.md](JOINT_VIDEO_FINDINGS.md)에 실제 실행 결과와 한계를 기록합니다.
