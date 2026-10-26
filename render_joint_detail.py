@@ -106,5 +106,3 @@ def main():
     (out/'metadata.json').write_text(json.dumps(report,indent=2),encoding='utf8');print(json.dumps(report,ensure_ascii=False))
 
 if __name__=='__main__':main()
-
-
