@@ -11,7 +11,7 @@ def check(root):
     controls=root.winfo_children()[2]
     entries=[w for w in controls.winfo_children() if isinstance(w,ttk.Entry)]
     button=next(w for w in controls.winfo_children() if isinstance(w,ttk.Button))
-    entries[-1].delete(0,'end');entries[-1].insert(0,'20');button.invoke()
+    entries[-1].delete(0,'end');entries[-1].insert(0,'30');button.invoke()
     root.update()
     canvas=next(w for w in root.winfo_children() if isinstance(w,tk.Canvas))
     assert len(canvas.find_all())>50

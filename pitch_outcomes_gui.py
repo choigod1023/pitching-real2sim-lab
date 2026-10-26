@@ -1,5 +1,6 @@
 """Local desktop interface for conditional joint-to-flight comparisons."""
 import json
+import numpy as np
 import tkinter as tk
 from tkinter import ttk, messagebox
 from pitch_outcomes import evaluate
@@ -33,9 +34,14 @@ def launch(data, output):
             canvas.create_text(560,160,text='현재 이탈 상태로는 홈 플레이트 이전에 지면에 도달합니다.\n실제 공 이탈 방향 검증이 필요합니다.',font=('Malgun Gothic',18))
             return
         canvas.create_text(280,18,text='측면 궤적 (m)');canvas.create_text(840,18,text='홈 플레이트 도착점과 가정 반복 편차')
-        # Fixed scales make baseline/candidate comparison honest.
+        # Shared scale for baseline/candidate; include even multi-metre misses.
         side=lambda p:(35+p[1]*29,325-p[2]*110)
-        front=lambda p:(840+p[0]*180,325-p[1]*110)
+        cloud=[result['assumptions']['target_xz_m']]
+        for item in (base,row):
+            if item['status']=='ok':cloud.extend(item['endpoints_xz_m']);cloud.append(item['plate_xz_m'])
+        cloud=np.array(cloud);lo=cloud.min(0)-.15;hi=cloud.max(0)+.15
+        front=lambda p:(590+(p[0]-lo[0])/(hi[0]-lo[0])*490,320-(p[1]-lo[1])/(hi[1]-lo[1])*270)
+        canvas.create_text(840,345,text=f'좌우 {lo[0]:.2f}~{hi[0]:.2f}m / 높이 {lo[1]:.2f}~{hi[1]:.2f}m (공통 축척)')
         for item,color in [(base,'#999999'),(row,'#1267bd')]:
             if item['status']!='ok':continue
             coords=[c for point in item['path_m'] for c in side(point)]
