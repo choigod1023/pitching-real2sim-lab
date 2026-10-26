@@ -296,3 +296,6 @@ MyoSim0.2.3의 clavphant_r,scapphant_r,humphant_r,humphant1_r는 각각 mass0.00
 ```
 
 공식 OBP [가공 신호 설명](https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_pitching)과 [Visual3D 모델](https://github.com/drivelineresearch/openbiomechanics/blob/main/baseball_pitching/code/v3d/model/v6_model_hybrid_lm.mdh)을 참조했다. RFIN 및 hand_jc는 공 중심 측정값이 아니다. 데이터의 관절 모멘트와 위 reduced-coordinate 모멘트는 좌표 정의를 맞추기 전 직접 비교하지 않는다.
+
+
+동일 프레임 전달 보정: CONSISTENT_TRANSFER_FINDINGS.md 참조. 공칭 D→E 속력 MAE 3.112→2.833km/h, 방향13.253→12.547도. 기존 B1.324/C0.799보다 나빠 채택하지 않는다. 9조건 전체 보존, 206테스트(204통과/2skip). 3034 기록 구속 차이와 실제 개입 예측은 해결되지 않았다.
