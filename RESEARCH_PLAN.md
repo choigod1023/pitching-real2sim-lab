@@ -191,6 +191,12 @@ uv pip install --target artifacts/vendor --no-deps myo-sim==0.2.3
 
 ## 출처
 
+### 2026-10-26 여러 관절 타이밍 검사
+
+`TIMING_COMBINATION_PROTOCOL.md`의 사전 지정 125조건을 두 해상도로 실행했고 결과는 `TIMING_COMBINATION_RESULTS.md`에 기록했다. 실제 다관절 변경 112조건 중 작은 동작 범위를 만족한 것은 1조건이며 구속은 감소했다. 수정 124조건 모두 엄격한 힘·일 예산을 통과하지 못했다. 이를 모든 협응 전략의 불가능성으로 확대하지 않는다. 후속은 기준 모델의 손·공 연결과 이탈 시점 검증, 외부 어깨 입력 및 생리적 능력 제한의 근거 확보다. 현재 모델의 구속 증가를 실제 선수에게 권고하지 않는다.
+
+재실행: `../.venv/Scripts/python.exe multi_joint_timing.py`, `../.venv/Scripts/python.exe audit_multi_joint_timing.py`, `../.venv/Scripts/python.exe render_multi_joint_video.py --case s0_e1_w-1`. 영상은 실제 적분 상태를 보여주며 실측 기록과의 차이가 없다는 증거가 아니다.
+
 - [OpenBiomechanics 좌표·신호 설명](https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_pitching)
 - [MyoSim 공개 모델](https://github.com/MyoHub/myo_sim), Apache-2.0, 사용 버전 0.2.3
 - [MyoArm 설명](https://github.com/MyoHub/myo_sim/blob/main/myo_sim/models/arm/README.md)
