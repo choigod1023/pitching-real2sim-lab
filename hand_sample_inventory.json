@@ -1,0 +1,24 @@
+{
+  "file": "sampleHumandata.xlsx",
+  "sha256": "e7889352e351d5fc8339d21b6a813fb2e70946d36d8fc6b1b72f8e309ed535b8",
+  "md5": "82feb6ef2856b401ac84479d88ab9379",
+  "sheets": [
+    {
+      "sheet": "Sheet1",
+      "headers": [
+        "time(s)",
+        "Angle"
+      ],
+      "rows": 98184,
+      "finite": true,
+      "nonincreasing_steps": 0,
+      "median_dt_s": 0.03999999999996362,
+      "inferred_rate_hz": 25.000000000022737,
+      "time_range_s": [
+        0.04,
+        3927.36
+      ]
+    }
+  ],
+  "scope": "Inventory only. Unlabelled sample is not assigned to baseball trials."
+}
