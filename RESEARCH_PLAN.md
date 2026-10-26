@@ -191,6 +191,12 @@ uv pip install --target artifacts/vendor --no-deps myo-sim==0.2.3
 
 ## 출처
 
+### 2026-10-26 각도·팔 방향·타이밍 제약 최적화
+
+`MOTION_SEARCH_PROTOCOL.md`의 6변수와 고정 자세·힘·일 제한에서 Sobol 초기점 및 SLSQP 세 시작점을 실행했다. 423개 평가에서 유효한 양의 구속 증가를 찾지 못했다. 자세 제한을 통과한 +7.495km/h 사례는 추가 힘과 일을 요구하므로 탈락 처리했다. 힘·일 제한을 사후 완화하지 않았으며 전역 최적성도 주장하지 않는다. 후속은 현재 일반화 좌표별 예산이 실제 능력을 어느 정도 표현하는지와 관찰 궤적 추적 오차를 검증하는 것이다. 최속 탈락 사례를 선수의 조정 권고나 오차 보정으로 사용하지 않는다.
+
+재현: `../.venv/Scripts/python.exe constrained_motion_search.py`, `../.venv/Scripts/python.exe audit_motion_search.py`, `../.venv/Scripts/python.exe render_motion_search_video.py`. 입력은 앞선 실제 느린 투구의 재구성 결과이며 원자료 경로와 해시는 결과 JSON에 보존했다.
+
 ### 2026-10-26 같은 선수의 관찰 차이에서 만든 후보
 
 `WITHIN_ATHLETE_FINDINGS.md`의 97명 반복 투구 비교와 `OBSERVED_CANDIDATE_SIMULATION.md`의 선수 2 실제 느린 투구 재구성을 실행했다. 기록 변화 +2.575km/h를 모델이 +0.155km/h로 과소 재현한다. 관찰된 팔꿈치 타이밍 차이를 제한적으로 옮겨도 힘·일 제약을 통과하지 못했다. 발견군에서 고른 손목 타이밍 방향은 평가군에서 반전했다. 따라서 이 결과로 신체 조정을 처방하지 않는다. 후속은 기록 변화 재현 실패의 손·공 전달 원인과 관절 좌표 및 처방 궤적 추적 오차를 분리하는 작업이며, 평가군에서 우연히 좋은 특징을 사후 채택하지 않는다.
