@@ -1,0 +1,65 @@
+{
+  "article": "https://api.figshare.com/v2/articles/28861655",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "downloaded": [
+    {
+      "name": "BenchtopFigure3s.xlsx",
+      "size": 93210,
+      "download_url": "https://ndownloader.figshare.com/files/53965202",
+      "expected_md5": "da385cd8c5feb71c9fbac6ab25588a58",
+      "actual_md5": "da385cd8c5feb71c9fbac6ab25588a58"
+    },
+    {
+      "name": "BenchtopFigure2s.xlsx",
+      "size": 13816,
+      "download_url": "https://ndownloader.figshare.com/files/53965205",
+      "expected_md5": "f3e39537712a10a2123fb64c0e1b5f78",
+      "actual_md5": "f3e39537712a10a2123fb64c0e1b5f78"
+    },
+    {
+      "name": "sampleHumandata.xlsx",
+      "size": 1569447,
+      "download_url": "https://ndownloader.figshare.com/files/53969009",
+      "expected_md5": "82feb6ef2856b401ac84479d88ab9379",
+      "actual_md5": "82feb6ef2856b401ac84479d88ab9379"
+    }
+  ],
+  "figshare_failures": [
+    {
+      "id": 39352664,
+      "error": "504 Server Error: Gateway Time-out for url: https://ndownloader.figshare.com/files/39352664"
+    },
+    {
+      "id": 30919798,
+      "error": "504 Server Error: Gateway Time-out for url: https://ndownloader.figshare.com/files/30919798"
+    },
+    {
+      "id": 30920326,
+      "error": "504 Server Error: Gateway Time-out for url: https://ndownloader.figshare.com/files/30920326"
+    },
+    {
+      "id": 31687949,
+      "error": "504 Server Error: Gateway Time-out for url: https://ndownloader.figshare.com/files/31687949"
+    },
+    {
+      "id": 31687952,
+      "error": "504 Server Error: Gateway Time-out for url: https://ndownloader.figshare.com/files/31687952"
+    }
+  ],
+  "official_failures": [
+    {
+      "name": "README.txt",
+      "url": "https://data.4tu.nl/file/e1d11a8a-6a6a-4437-a47a-8c6c474c46b9/64603ca2-cba6-484f-8dbd-fe5085adb879",
+      "error": "HTTPSConnectionPool(host='data.4tu.nl', port=443): Max retries exceeded with url: /file/e1d11a8a-6a6a-4437-a47a-8c6c474c46b9/64603ca2-cba6-484f-8dbd-fe5085adb879 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.4tu.nl', port=443) at 0x269539b5d30>, 'Connection to data.4tu.nl timed out. (connect timeout=8)'))"
+    },
+    {
+      "name": "Data.csv",
+      "url": "https://data.4tu.nl/file/e1d11a8a-6a6a-4437-a47a-8c6c474c46b9/f48d5db0-2538-4ea9-b9aa-76dbbff19576",
+      "error": "HTTPSConnectionPool(host='data.4tu.nl', port=443): Max retries exceeded with url: /file/e1d11a8a-6a6a-4437-a47a-8c6c474c46b9/f48d5db0-2538-4ea9-b9aa-76dbbff19576 (Caused by ConnectTimeoutError(<HTTPSConnection(host='data.4tu.nl', port=443) at 0x269539b6090>, 'Connection to data.4tu.nl timed out. (connect timeout=8)'))"
+    }
+  ]
+}
