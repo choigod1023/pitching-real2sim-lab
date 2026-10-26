@@ -1,3 +1,5 @@
+최신 관절 수정 및 힘·일 검사 결과는 [JOINT_ACTION_FINDINGS.md](JOINT_ACTION_FINDINGS.md)를 확인하세요.
+
 최신 수정 전후 비교 결과는 [BEFORE_AFTER_FINDINGS.md](BEFORE_AFTER_FINDINGS.md)를 확인하세요.
 
 최신 동일 투구 손·공 연결 실험은 [HAND_BALL_LINK_FINDINGS.md](HAND_BALL_LINK_FINDINGS.md)를 확인하세요.
