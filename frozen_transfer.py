@@ -35,7 +35,7 @@ def chain_state(model,time):
     return p,v
 
 
-def run():
+def run(chain_fitter=None, output_slug='frozen-transfer', protocol='FROZEN_TRANSFER_PROTOCOL.md'):
     import ezc3d
     root=Path(__file__).resolve().parent;lab=root.parent
     observation=lab/'hand-ball-link/artifacts/hand-ball/observation.json'
@@ -65,7 +65,7 @@ def run():
         origin=np.array([p['hand_origin_rig_m'] for p in condition['positions']])
         rotation=np.einsum('ij,jkn->nik',q,hand[:,:,frames+condition['c3d_frame_offset']])
         states=launch_states(times,ball[:4],origin[:4],rotation)
-        chain=fit_chain(times,ball[:4],origin[:4],rotation);states['D']=chain_state(chain,times[-1])
+        chain=(chain_fitter or fit_chain)(times,ball[:4],origin[:4],rotation);states['D']=chain_state(chain,times[-1])
         metrics={}
         for name,(position,velocity) in states.items():
             future,_=free_flight(position,velocity,gravity,1/rate,2,9)
@@ -91,12 +91,13 @@ def run():
     gates=dict(nominal_late_beats_B=beats(nominal['D']['late'],nominal['B']['late']),nominal_late_beats_C=beats(nominal['D']['late'],nominal['C']['late']),
         robust_late_beats_B=wins>=7,near_speed_better=nominal['D']['near']['speed_mae_kmh']<nominal['B']['near']['speed_mae_kmh'],
         near_direction_better=nominal['D']['near']['mean_direction_error_deg']<nominal['B']['near']['mean_direction_error_deg'])
-    result=dict(protocol_sha256=hashlib.sha256((root/'FROZEN_TRANSFER_PROTOCOL.md').read_bytes()).hexdigest(),
+    result=dict(protocol_sha256=hashlib.sha256((root/protocol).read_bytes()).hexdigest(),
+        chain_fitter=(chain_fitter or fit_chain).__name__,
         source_sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in [observation,later_path,body,alignment_path,intr_path,rig_path]},
         train_frames=frames.tolist(),evaluation_frames=list(range(977,986)),rate_hz=rate,gravity=gravity.tolist(),rows=rows,gates=gates,
         retained_for_further_validation=all(gates.values()),robust_wins_of_9=wins,human_intervention_validated=False,
         scope='Previously inspected single development pitch; future hands excluded from ALL models. Actual observed training ball required. Optical candidates are not ground truth.')
-    out=root/'artifacts/frozen-transfer';out.mkdir(parents=True,exist_ok=True)
+    out=root/'artifacts'/output_slug;out.mkdir(parents=True,exist_ok=True)
     (out/'results.json').write_text(json.dumps(result,indent=2,allow_nan=False),encoding='utf-8')
     print(json.dumps(dict(gates=gates,wins=wins,nominal={k:dict(near=v['near'],late=v['late']) for k,v in nominal.items()}),indent=2))
     return result
