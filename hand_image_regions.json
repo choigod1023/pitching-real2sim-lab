@@ -1,0 +1,24 @@
+{
+  "scope": "AI single-reader approximate visible wrist/elbow regions, frozen before projection; NOT anatomical ground truth or confidence intervals",
+  "unobservable": [{"camera":22,"frames":[974,977,979],"segments":["l_hand","l_larm"],"reason":"throwing-side arm obscured by torso; visible extended hand is non-throwing side"}],
+  "regions": [
+    {"camera":19,"frame":974,"segment":"l_hand","box":[835,449,855,475]},
+    {"camera":19,"frame":974,"segment":"l_larm","box":[815,350,840,380]},
+    {"camera":19,"frame":977,"segment":"l_hand","box":[803,439,830,466]},
+    {"camera":19,"frame":977,"segment":"l_larm","box":[800,345,829,379]},
+    {"camera":19,"frame":979,"segment":"l_hand","box":[781,437,809,461]},
+    {"camera":19,"frame":979,"segment":"l_larm","box":[802,348,823,377]},
+    {"camera":20,"frame":974,"segment":"l_hand","box":[365,345,392,369]},
+    {"camera":20,"frame":974,"segment":"l_larm","box":[434,302,464,330]},
+    {"camera":20,"frame":977,"segment":"l_hand","box":[379,322,410,347]},
+    {"camera":20,"frame":977,"segment":"l_larm","box":[439,289,472,319]},
+    {"camera":20,"frame":979,"segment":"l_hand","box":[381,302,414,329]},
+    {"camera":20,"frame":979,"segment":"l_larm","box":[447,279,477,306]},
+    {"camera":21,"frame":974,"segment":"l_hand","box":[628,542,654,568]},
+    {"camera":21,"frame":974,"segment":"l_larm","box":[653,445,682,479]},
+    {"camera":21,"frame":977,"segment":"l_hand","box":[588,523,617,551]},
+    {"camera":21,"frame":977,"segment":"l_larm","box":[636,451,665,482]},
+    {"camera":21,"frame":979,"segment":"l_hand","box":[563,508,590,535]},
+    {"camera":21,"frame":979,"segment":"l_larm","box":[619,447,649,479]}
+  ]
+}
