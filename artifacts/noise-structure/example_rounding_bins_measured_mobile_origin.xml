@@ -1,0 +1,89 @@
+<mujoco model="MuJoCo Model">
+  <compiler angle="radian"/>
+
+  <option timestep="0.000173661" integrator="RK4"/>
+
+  <default>
+    <geom contype="0" conaffinity="0"/>
+  </default>
+
+  <worldbody>
+    <body name="pelvis">
+      <inertial pos="0 0 0" mass="14.6781" diaginertia="0.0885579 0.110086 0.119382"/>
+      <joint name="root_support" type="free"/>
+      <geom size="0.12 0.1 0.09" type="box" mass="0"/>
+      <body name="torso">
+        <inertial pos="0 0 0.271048" quat="0 1 0 0" mass="33.435" diaginertia="1.59141 1.59141 0.268835"/>
+        <joint name="torso_rotation" type="ball"/>
+        <geom size="0.13 0.271048" pos="0 0 0.271048" quat="0 1 0 0" type="capsule" mass="0"/>
+        <body name="upper" pos="0.14665 0 0.539143">
+          <inertial pos="0 0 -0.178135" mass="2.53318" diaginertia="0.0278075 0.0278075 0.00202654"/>
+          <joint name="pitch_origin_0" type="slide" axis="1 0 0" limited="false"/>
+          <joint name="pitch_origin_1" type="slide" axis="0 1 0" limited="false"/>
+          <joint name="pitch_origin_2" type="slide" limited="false"/>
+          <joint name="pitch_shoulder" type="ball"/>
+          <site name="shoulder_jc"/>
+          <body name="forearm" pos="0 0 -0.35627">
+            <inertial pos="0 0 -0.153002" mass="1.51429" diaginertia="0.012157 0.012157 0.000681434"/>
+            <joint name="elbow" axis="0 1 0"/>
+            <joint name="marker_roll"/>
+            <site name="elbow_jc"/>
+            <body name="hand" pos="0 0 -0.306003">
+              <inertial pos="0.08 0 0" mass="0.570199" diaginertia="0.00034687 0.00125918 0.00152053"/>
+              <joint name="wrist_marker_rotation" type="ball"/>
+              <site name="wrist"/>
+              <body name="ball_payload">
+                <geom size="0.0364" pos="0.15 0 0" mass="0.145"/>
+                <site name="ball_center" pos="0.15 0 0"/>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="glove_upper" pos="-0.14665 0 0.560782">
+          <inertial pos="0 0 -0.173424" mass="2.53318" diaginertia="0.0350159 0.0350159 0.00197253"/>
+          <joint name="glove_origin_0" type="slide" axis="1 0 0" limited="false"/>
+          <joint name="glove_origin_1" type="slide" axis="0 1 0" limited="false"/>
+          <joint name="glove_origin_2" type="slide" limited="false"/>
+          <joint name="glove_shoulder" type="ball"/>
+          <geom size="0.04 0.173424" pos="0 0 -0.173424" type="capsule" mass="0"/>
+          <site name="glove_shoulder_jc"/>
+          <body name="glove_forearm" pos="0 0 -0.346849">
+            <inertial pos="0 0 -0.137672" mass="2.0845" diaginertia="0.0178344 0.0178344 0.000914227"/>
+            <joint name="glove_elbow" axis="0 1 0"/>
+            <geom size="0.03 0.137672" pos="0 0 -0.137672" type="capsule" mass="0"/>
+            <site name="glove_elbow_jc"/>
+            <site name="glove_wrist_jc" pos="0 0 -0.275345"/>
+          </body>
+        </body>
+      </body>
+      <body name="rear_thigh" pos="0.13689 0 0.00522641">
+        <inertial pos="0 0 -0.250446" mass="11.7001" diaginertia="0.341561 0.341561 0.0204801"/>
+        <joint name="rear_hip" type="ball"/>
+        <geom size="0.06 0.250446" pos="0 0 -0.250446" type="capsule" mass="0"/>
+        <site name="rear_hip"/>
+        <body name="rear_shank" pos="0 0 -0.500892">
+          <inertial pos="0 0 -0.27636" mass="6.5733" diaginertia="0.155004 0.155004 0.0055669"/>
+          <joint name="rear_knee" axis="0 1 0"/>
+          <geom size="0.04 0.21307" pos="0 0 -0.21307" type="capsule" mass="0"/>
+          <geom size="0.05" pos="0 0 -0.42614" mass="0"/>
+          <site name="rear_knee_jc"/>
+          <site name="rear_ankle_jc" pos="0 0 -0.42614"/>
+        </body>
+      </body>
+      <body name="lead_thigh" pos="-0.13689 0 -0.00522641">
+        <inertial pos="0 0 -0.239297" mass="11.7001" diaginertia="0.316776 0.316776 0.020457"/>
+        <joint name="lead_hip" type="ball"/>
+        <geom size="0.06 0.239297" pos="0 0 -0.239297" type="capsule" mass="0"/>
+        <site name="lead_hip"/>
+        <body name="lead_shank" pos="0 0 -0.478595">
+          <inertial pos="0 0 -0.264709" mass="6.5733" diaginertia="0.14335 0.14335 0.0055637"/>
+          <joint name="lead_knee" axis="0 1 0"/>
+          <geom size="0.04 0.204088" pos="0 0 -0.204088" type="capsule" mass="0"/>
+          <geom size="0.05" pos="0 0 -0.408175" mass="0"/>
+          <site name="lead_knee_jc"/>
+          <site name="lead_ankle_jc" pos="0 0 -0.408175"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
