@@ -1,0 +1,41 @@
+{
+  "pitch": "3034_5",
+  "rows": [
+    {
+      "mode": "before",
+      "speed_kmh": 108.18588138343242,
+      "measured_speed_kmh": 128.5865856,
+      "pose_change_rmse_mm": 0.041186956850438355,
+      "observed_arm_rmse_mm": 42.00674587492474,
+      "residual_force_rms_n": 1548.0574120021138,
+      "residual_torque_rms_nm": 390.3830626579066,
+      "internal_positive_work_j": 625.8728933947326,
+      "residual_positive_work_j": 80.52123034341396,
+      "speed_error_kmh": -20.40070421656759,
+      "ground_only_speed_kmh": 111.79891047127576,
+      "ground_only_original_pose_rmse_mm": 59.65928114581193
+    },
+    {
+      "mode": "after",
+      "speed_kmh": 105.81330264915982,
+      "measured_speed_kmh": 128.5865856,
+      "pose_change_rmse_mm": 3.5915063579537696,
+      "observed_arm_rmse_mm": 41.76259017891033,
+      "residual_force_rms_n": 1334.7749250142306,
+      "residual_torque_rms_nm": 292.7552771317546,
+      "internal_positive_work_j": 568.5335414942706,
+      "residual_positive_work_j": 86.51473364395356,
+      "speed_error_kmh": -22.773282950840184,
+      "ground_only_speed_kmh": 107.45274814748932,
+      "ground_only_original_pose_rmse_mm": 63.614255723585394
+    }
+  ],
+  "optimizer": {
+    "nfev": 9,
+    "status": 2,
+    "cost": 636.1883912944231
+  },
+  "correction_translation_max_mm": 6.514709321717774,
+  "correction_rotation_max_deg": 0.5049872187923867,
+  "protocol": "8 cubic B-spline control points, each translation component <=5mm and rotation component <=0.5deg; ground residual/pose weighted fit, no target speed. Root correction only, internal relative joint angles unchanged. Residual assisted and ground-only rollouts separated. Reused development data, not same-ability optimization."
+}

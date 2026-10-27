@@ -1,0 +1,9 @@
+{
+  "model_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\baseline-calibration\\artifacts\\baseline-calibration\\calibrated.xml",
+  "model_sha256": "f423825dabdbbd471dd7149e966a99f708354d207dab54273e65f0de069ca793",
+  "source_base_commit": "90bad1d",
+  "ball_speed_used_in_fit": false,
+  "force_filter_hz": 40,
+  "force_filter_order": 4,
+  "force_filter_zero_phase": true
+}
