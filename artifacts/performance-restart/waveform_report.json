@@ -1,0 +1,102 @@
+{
+  "counts": {
+    "matched_metadata_poi": 411,
+    "max_speed_table_difference_mph": 0.0,
+    "right_fastball_before_complete_case": 319,
+    "eligible_rows": 318,
+    "athletes": 77,
+    "sessions": 77,
+    "invalid_events": [
+      {
+        "pitch": "1370_1",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2857_4",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2918_3",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_2",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_3",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_4",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_5",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2923_1",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2923_2",
+        "reason": "missing or invalid FP10/BR interval"
+      }
+    ]
+  },
+  "additional_exclusions": [],
+  "channels": [
+    "pelvis_velo_z",
+    "torso_velo_z",
+    "shoulder_velo_x",
+    "shoulder_velo_y",
+    "shoulder_velo_z",
+    "elbow_velo_x",
+    "elbow_velo_y",
+    "elbow_velo_z",
+    "wrist_velo_x",
+    "wrist_velo_y",
+    "wrist_velo_z"
+  ],
+  "phase_points": 21,
+  "ridge_alpha": 100,
+  "summaries": [
+    {
+      "model": "arm_wrist_waveform",
+      "n_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.1384724553625925,
+      "baseline_mae_kmh": 1.076457480497927,
+      "bias_kmh": 0.27126911290741307,
+      "athlete_macro_mae_kmh": 1.1258658022572168,
+      "baseline_macro_mae_kmh": 1.073766857142859,
+      "athletes_improved": 33
+    },
+    {
+      "model": "full_waveform",
+      "n_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.1373773068895046,
+      "baseline_mae_kmh": 1.076457480497927,
+      "bias_kmh": 0.2845873473400741,
+      "athlete_macro_mae_kmh": 1.1219999609576021,
+      "baseline_macro_mae_kmh": 1.073766857142859,
+      "athletes_improved": 35
+    },
+    {
+      "model": "trunk_waveform",
+      "n_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.099499415106012,
+      "baseline_mae_kmh": 1.076457480497927,
+      "bias_kmh": 0.3042466856777249,
+      "athlete_macro_mae_kmh": 1.1127855156774276,
+      "baseline_macro_mae_kmh": 1.073766857142859,
+      "athletes_improved": 29
+    }
+  ],
+  "independent_external_validation": false,
+  "causal_effect": false,
+  "scope": "Same reused OBP cohort; excluded athlete, measured anchor speed. Joint angular velocity channels are coordinate conventions, not muscle forces. Peak-vs-waveform comparison is a new retrospective model comparison."
+}
