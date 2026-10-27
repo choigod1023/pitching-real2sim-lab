@@ -10,6 +10,7 @@ from scipy.linalg import null_space
 from scipy.optimize import lsq_linear,nnls
 from anatomical_muscle_screen import ov,equilibrium_tendon_forces
 from anatomical_shoulder_fit import arr
+from applied_path_forces import applied_path_force_matrix
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT/'artifacts/wrist-muscle'
 MODEL=ROOT/'artifacts/elbow-moment-validation/matched/registered_plus_elbow.osim'
@@ -35,7 +36,7 @@ def frame_jacobian(model,state,body,nu):
         out.append(np.r_[arr(vel.get(0)),arr(vel.get(1))])
     return np.array(out).T
 
-def run(pitch):
+def run(pitch,force_mapping='applied_force'):
     m=o.Model(str(MODEL));s=m.initSystem();matter=m.getMatterSubsystem();cs=m.getCoordinateSet();nu=s.getNU();nc=cs.getSize();names=[cs.get(i).getName() for i in range(nc)]
     muscles=[m.getMuscles().get(i) for i in range(m.getMuscles().getSize())]
     for i in range(m.getForceSet().getSize()):m.getForceSet().get(i).setAppliesForce(s,False)
@@ -62,10 +63,12 @@ def run(pitch):
         for k in range(nu):
             g=o.Vector();matter.multiplyByG(s,ov(np.eye(nu)[k]),g);G.append(arr(g))
             s.setU(ov(np.eye(nu)[k]));m.realizeVelocity(s)
-            R.append([-mus.getGeometryPath().getLengtheningSpeed(s) for mus in muscles])
+            R.append([-mus.getPath().getLengtheningSpeed(s) for mus in muscles])
             E.append([cs.get(j).getSpeedValue(s) for j in range(nc)])
         G=np.array(G).T;R=np.array(R);E=np.array(E).T;S=null_space(np.vstack([G,root]));M=S.T@R;target=S.T@tau
         s.setU(ov(U[i]));m.realizeVelocity(s)
+        if force_mapping=='applied_force':R=applied_path_force_matrix(m,s,muscles);M=S.T@R
+        elif force_mapping!='legacy_speed':raise ValueError('Unknown force mapping')
         endpoints=[];lengths=[]
         for a in [0.,1.]:
             forces,l=equilibrium_tendon_forces(m,s,muscles,a);endpoints.append(forces);lengths.append(l)
@@ -97,7 +100,7 @@ def run(pitch):
             torque_reconstruction_error=float(np.linalg.norm(tau-inertial-velocity-gravity)),
             max_normalized_fiber_length=float(np.max(lengths)),max_endpoint_force=float(high.max()),
             positive_unbounded_max_force=float(positive.max()),positive_unbounded_solver='nnls_active_set'))
-    result={'pitch':pitch,'rows':rows,'mean_scope':'RMS within pitch, then arithmetic mean across pitches'}
+    result={'pitch':pitch,'force_mapping':force_mapping,'rows':rows,'mean_scope':'RMS within pitch, then arithmetic mean across pitches'}
     metrics=['residual','no_passive_bound','static_fmax','positive_unbounded','signed_unbounded']
     result['rms']={k:float(np.sqrt(np.mean([r[k]**2 for r in rows]))) for k in metrics}
     result['groups']={g:{k:float(np.sqrt(np.mean([r['groups'][g][k]**2 for r in rows]))) for k in ['residual','demand','acceleration','velocity','gravity']} for g in GROUPS}
