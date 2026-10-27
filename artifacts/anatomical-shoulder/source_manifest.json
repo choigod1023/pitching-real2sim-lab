@@ -1,0 +1,139 @@
+{
+  "source_url": "https://github.com/ComputationalBiomechanicsLab/rmr-solver",
+  "source_commit": "d40ebd8ba658633993e531e408c0d96df30ff367",
+  "source_sha256": "c357e61eb266558c0bfe9212462fbc1d621e0398c2eafc4e1a4aa92fe5c7a9ff",
+  "runtime": "version 4.6-2026-06-22-85aaf64, build date 18:27:55 Jun 22 2026",
+  "muscles": 33,
+  "constraints": 1,
+  "upper_scale": 1.4439021432734487,
+  "forearm_scale": 1.1879137035352318,
+  "torso_scale": 1.096646642424643,
+  "fmax_unchanged": true,
+  "marker_correspondence": {
+    "CLAV": "ij",
+    "C7": "c7",
+    "STRN": "px"
+  },
+  "limitation": "Marker correspondences assume compatible placements and are not independently verified. Source bounds are model bounds, not athlete-specific ROM. Wrist is welded in source, no ball/contact yet.",
+  "coordinates": [
+    {
+      "name": "ground_thorax_rot_x",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "ground_thorax_rot_y",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "ground_thorax_rot_z",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "ground_thorax_tx",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "ground_thorax_ty",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "ground_thorax_tz",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "clav_prot",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "clav_elev",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "scapula_abduction",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "scapula_elevation",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "scapula_upward_rot",
+      "range": [
+        -3.14159265,
+        3.14159265
+      ]
+    },
+    {
+      "name": "scapula_winging",
+      "range": [
+        -1.57079633,
+        1.57079633
+      ]
+    },
+    {
+      "name": "plane_elv",
+      "range": [
+        -1.5,
+        3.14159265
+      ]
+    },
+    {
+      "name": "shoulder_elv",
+      "range": [
+        -0.78,
+        2.53
+      ]
+    },
+    {
+      "name": "axial_rot",
+      "range": [
+        -1.57079500000002,
+        1.57079500000002
+      ]
+    },
+    {
+      "name": "elbow_flexion",
+      "range": [
+        0.0,
+        2.26892803
+      ]
+    },
+    {
+      "name": "pro_sup",
+      "range": [
+        -1.57079633,
+        1.57079633
+      ]
+    }
+  ]
+}
