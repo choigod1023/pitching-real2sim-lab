@@ -1,0 +1,8 @@
+# Full-body comparison protocol
+
+- Fixed example: OBP athlete user=2, session3034, all five fastballs. The session ID is not an athlete ID. Select extreme speeds within this fixed example, not the most favorable movement contrast.
+- Compare lead/rear knee and hip X peak absolute velocity and pelvis/torso Z peak absolute velocity from FP10 to BR. Report peak times relative to both FP10 and BR; first maximum on native 360Hz grid. Also inspect FP100 anchor and FP10/BR +/- one sample window sensitivity. One sample is 2.778ms, not a measurement confidence interval.
+- Report author POI stride, lead knee extension, pelvis/torso peak speed, FP separation. Show all five pitches and all ten pair directions; these pairs are dependent, not ten independent athletes. No regression or causal effect estimate from five pitches.
+- Video: actual processed joint coordinates, two common elapsed-time alignments FP10 and BR. Remove only each pitch's fixed horizontal pelvis origin at FP10, preserve vertical coordinates and subsequent translation. No time warping, spatial rotation, bone length fitting, or extrapolation. Overlay original slow/fast trajectories with live angle differences.
+- This is measured-motion replay, not a new force-constrained forward simulation, prescribed intervention, or demonstrated gain. 20Hz processed data and event definition uncertainty remain. No strength/work equivalence claim.
+- Sources: https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_pitching ; local metadata.csv, data_dictionary.csv, poi/poi_metrics.csv and full_sig joint_angles/joint_velos/landmarks.
