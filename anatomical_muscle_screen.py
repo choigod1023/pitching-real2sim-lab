@@ -70,12 +70,16 @@ def main(output_dir=None):
             R=np.array(R);s.setU(ov(U[i]));m.realizeVelocity(s)
             target=S.T@tau;fmax=np.array([mus.getMaxIsometricForce() for mus in muscles]);envelopes={}
             for cap in [1.,1.4]:
-                A=(S.T@R)*(fmax*cap)[None,:]
+                # Only original Millard muscles have the verified 1.4 envelope.
+                # Imported Schutte wrist muscles retain a 1.0 Fmax diagnostic;
+                # their source equilibrium curves are evaluated below.
+                caps=np.array([cap if mus.getConcreteClassName()=='Millard2012EquilibriumMuscle' else 1. for mus in muscles])
+                A=(S.T@R)*(fmax*caps)[None,:]
                 fit=lsq_linear(A,target,bounds=(0,1),tol=1e-8,max_iter=200)
                 residual=A@fit.x-target
                 envelopes[str(cap)]=dict(residual_norm_nm=float(np.linalg.norm(residual)),
                     demand_norm_nm=float(np.linalg.norm(target)),max_fraction=float(fit.x.max()),
-                    muscle_tendon_positive_power_w=float(np.maximum((R.T@U[i])*(fit.x*fmax*cap),0).sum()))
+                    muscle_tendon_positive_power_w=float(np.maximum((R.T@U[i])*(fit.x*fmax*caps),0).sum()))
             # Actual Millard equilibrium tendon-force endpoints, with current
             # model lengths and velocities. Still an instantaneous relaxation:
             # no shared tendon/activation state trajectory is integrated.
@@ -91,6 +95,7 @@ def main(output_dir=None):
                 fit=lsq_linear(A,target-offset,bounds=(0,1),tol=1e-8,max_iter=200)
                 hill=dict(status='success',residual_norm_nm=float(np.linalg.norm(A@fit.x+offset-target)),
                     endpoint_force_max_n=float(high.max()),largest_force_muscle=muscles[int(high.argmax())].getName(),
+                    wrist_endpoint_force_max_n=float(max((high[j] for j,mus in enumerate(muscles) if mus.getName() in ['ECRL','ECRB','ECU','FCR','FCU','PL']),default=0.)),
                     normalized_fiber_length_max=float(fiber_lengths.max()))
             except Exception as exc:hill=dict(status='failed',error=str(exc)[:300])
             rows.append(dict(sample=i,free_internal_dofs=S.shape[1],envelopes=envelopes,hill_equilibrium_interval=hill))
