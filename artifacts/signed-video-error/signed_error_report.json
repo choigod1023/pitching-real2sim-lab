@@ -1,0 +1,344 @@
+{
+  "independent_baseball_trials": 1,
+  "source_videos": [
+    {
+      "camera": 15,
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\ball-coordinate-audit\\artifacts\\video-audit\\camera15.mp4",
+      "bytes": 15055511,
+      "sha256": "fa7e90ac413e5fc953ab000955993475d6ee54bfae4c65960f1fab47a04b0b42",
+      "trial": "BaseballThrow_001",
+      "role": "visibility audit only: body occlusion"
+    },
+    {
+      "camera": 19,
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\ball-coordinate-audit\\artifacts\\video-audit\\camera19.mp4",
+      "bytes": 19679753,
+      "sha256": "fcf893ea4883ebeae1f99e9abf1470e8ace27dd22f1f820f34b2b7cd44488ac4",
+      "trial": "BaseballThrow_001",
+      "role": "later optical reference"
+    },
+    {
+      "camera": 20,
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\camera20.mp4",
+      "bytes": 15341265,
+      "sha256": "71ceff9056cd39d7f3d727b7696ed8bab5d4c7e084ada94d5f46a3614e58cead",
+      "trial": "BaseballThrow_001",
+      "role": "training and near reference"
+    },
+    {
+      "camera": 21,
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\camera21.mp4",
+      "bytes": 19850625,
+      "sha256": "1bbf95eb85758f2d065649c93e08f7b0cd8e8e0829ac9117c7197cb44b64ded7",
+      "trial": "BaseballThrow_001",
+      "role": "training and near reference"
+    },
+    {
+      "camera": 22,
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\ball-coordinate-audit\\artifacts\\video-audit\\camera22.mp4",
+      "bytes": 17068958,
+      "sha256": "51f30dea8506a4613cf278a4bd84542c65714ffbcc869a6ec949b2e6eaca8736",
+      "trial": "BaseballThrow_001",
+      "role": "later optical reference"
+    }
+  ],
+  "sign": "prediction minus optical reference, km/h",
+  "near_frames": [
+    977,
+    978,
+    979
+  ],
+  "near_nominal": {
+    "A": {
+      "signed_interval_errors_kmh": [
+        -26.339523160455784,
+        -24.759006794013217
+      ],
+      "mean_signed_kmh": -25.5492649772345
+    },
+    "B": {
+      "signed_interval_errors_kmh": [
+        -2.1221196898024033,
+        -0.5261627466557854
+      ],
+      "mean_signed_kmh": -1.3241412182290873
+    },
+    "C": {
+      "signed_interval_errors_kmh": [
+        -1.1155812462946813,
+        0.48326760694297377
+      ],
+      "mean_signed_kmh": -0.31615681967585374
+    }
+  },
+  "near_mean_error_across_27_processing_conditions": {
+    "A": {
+      "n": 27,
+      "mean_signed": -23.663798388964143,
+      "sample_sd": 3.0722870510887974,
+      "min_signed": -29.219577629736605,
+      "max_signed": -17.160965446026424,
+      "mae": 23.663798388964143,
+      "max_absolute": 29.219577629736605,
+      "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+    },
+    "B": {
+      "n": 27,
+      "mean_signed": -1.3734744149837785,
+      "sample_sd": 1.9676253656172529,
+      "min_signed": -4.601284752562108,
+      "max_signed": 2.879842199155078,
+      "mae": 1.9563300247941895,
+      "max_absolute": 4.601284752562108,
+      "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+    },
+    "C": {
+      "n": 27,
+      "mean_signed": -1.165495945351318,
+      "sample_sd": 1.123133890556753,
+      "min_signed": -3.616835579095529,
+      "max_signed": 0.20886944601885915,
+      "mae": 1.2119113777999533,
+      "max_absolute": 3.616835579095529,
+      "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+    }
+  },
+  "later_frames": [
+    980,
+    981,
+    985
+  ],
+  "later_primary_reference": {
+    "mode": "local_ellipse",
+    "thresholds": [
+      130,
+      90
+    ],
+    "speed_kmh": 99.98981943436787
+  },
+  "later_reference_candidates": [
+    {
+      "mode": "component",
+      "thresholds": [
+        100,
+        70
+      ],
+      "speed_kmh": 102.67177025095185
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        100,
+        90
+      ],
+      "speed_kmh": 102.39104059096417
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        100,
+        110
+      ],
+      "speed_kmh": 101.88826401818058
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        130,
+        70
+      ],
+      "speed_kmh": 102.4488696272537
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        130,
+        90
+      ],
+      "speed_kmh": 102.16886676759677
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        130,
+        110
+      ],
+      "speed_kmh": 101.66598595564354
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        100,
+        70
+      ],
+      "speed_kmh": 100.32143932213152
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        100,
+        90
+      ],
+      "speed_kmh": 100.19808998798568
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        100,
+        110
+      ],
+      "speed_kmh": 100.3088699439696
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        130,
+        70
+      ],
+      "speed_kmh": 100.1116500763663
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        130,
+        90
+      ],
+      "speed_kmh": 99.98981943436787
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        130,
+        110
+      ],
+      "speed_kmh": 100.10208618287315
+    }
+  ],
+  "failed_references": [
+    {
+      "mode": "component",
+      "thresholds": [
+        160,
+        70
+      ],
+      "reason": "No complete three-frame optical reference"
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        160,
+        90
+      ],
+      "reason": "No complete three-frame optical reference"
+    },
+    {
+      "mode": "component",
+      "thresholds": [
+        160,
+        110
+      ],
+      "reason": "No complete three-frame optical reference"
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        160,
+        70
+      ],
+      "reason": "No complete three-frame optical reference"
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        160,
+        90
+      ],
+      "reason": "No complete three-frame optical reference"
+    },
+    {
+      "mode": "local_ellipse",
+      "thresholds": [
+        160,
+        110
+      ],
+      "reason": "No complete three-frame optical reference"
+    }
+  ],
+  "later_mean_error_across_27_model_conditions": {
+    "A": {
+      "n": 27,
+      "mean_signed": -20.593645448486924,
+      "sample_sd": 3.0070349909167757,
+      "min_signed": -25.362208419030907,
+      "max_signed": -14.367200853332307,
+      "mae": 20.593645448486924,
+      "max_absolute": 25.362208419030907,
+      "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+    },
+    "B": {
+      "n": 27,
+      "mean_signed": 1.7556097604543428,
+      "sample_sd": 1.7852538259440593,
+      "min_signed": -1.0667797715966572,
+      "max_signed": 5.533743857824206,
+      "mae": 1.9413285726079026,
+      "max_absolute": 5.533743857824206,
+      "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+    },
+    "C": {
+      "n": 27,
+      "mean_signed": 1.9697632446334472,
+      "sample_sd": 0.7209513099739662,
+      "min_signed": 0.38779519133348117,
+      "max_signed": 2.8248892624461632,
+      "mae": 1.9697632446334472,
+      "max_absolute": 2.8248892624461632,
+      "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+    }
+  },
+  "later_nominal": {
+    "A": {
+      "prediction_kmh": 77.13801650363871,
+      "primary_signed_error_kmh": -22.851802930729164,
+      "reference_processing_spread": {
+        "n": 12,
+        "mean_signed": -24.050879509551688,
+        "sample_sd": 1.0953080442016319,
+        "min_signed": -25.533753747313142,
+        "max_signed": -22.851802930729164,
+        "mae": 24.050879509551688,
+        "max_absolute": 25.533753747313142,
+        "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+      }
+    },
+    "B": {
+      "prediction_kmh": 101.43466532906034,
+      "primary_signed_error_kmh": 1.4448458946924632,
+      "reference_processing_spread": {
+        "n": 12,
+        "mean_signed": 0.24576931586994277,
+        "sample_sd": 1.0953080442016316,
+        "min_signed": -1.2371049218915147,
+        "max_signed": 1.4448458946924632,
+        "mae": 1.016903521908039,
+        "max_absolute": 1.4448458946924632,
+        "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+      }
+    },
+    "C": {
+      "prediction_kmh": 102.45608062074416,
+      "primary_signed_error_kmh": 2.466261186376286,
+      "reference_processing_spread": {
+        "n": 12,
+        "mean_signed": 1.2671846075537658,
+        "sample_sd": 1.0953080442016316,
+        "min_signed": -0.2156896302076916,
+        "max_signed": 2.466261186376286,
+        "mae": 1.3031328792550478,
+        "max_absolute": 2.466261186376286,
+        "interval_interpretation": "Descriptive processing spread; not confidence or population accuracy interval"
+      }
+    }
+  },
+  "scope": "Same development throw; optical candidates and provisional calibration, shared source dependencies. No population CI, no new independent trial, no muscle/force validation. Mean plus/minus SD describes processing settings, not repeated independent throws."
+}
