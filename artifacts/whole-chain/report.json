@@ -1,0 +1,1469 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "calibration_pitch": true,
+      "landmark_rmse_mm": {
+        "pelvis": 1.6669419574469598e-13,
+        "shoulder": 30.58416901109387,
+        "elbow": 43.59353469417622,
+        "wrist": 46.3917466035539
+      },
+      "root_force_residual_rms_n": 1536.142395102253,
+      "root_torque_residual_rms_nm": 439.1517179206948,
+      "diagnostics": [
+        {
+          "frame_offset": -1,
+          "time_s": 1.5972229508196722,
+          "baseline_proxy_speed_kmh": 113.27765169370154,
+          "all_observed_to_wrist_proxy_speed_kmh": 116.92392363273534,
+          "recorded_speed_kmh": 130.19592960000003,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": -0.00011588637562927791,
+            "pelvis_to_shoulder": 2.001461218109476,
+            "shoulder_to_elbow": 0.17329893800535717,
+            "elbow_to_wrist": 1.471627669294591
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0002497878285923717,
+            "pelvis_to_shoulder": 3.8945331685751876,
+            "shoulder_to_elbow": 2.6725918181636197,
+            "elbow_to_wrist": 2.1479267749155317
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            13.47573017313811,
+            2.141774225632342,
+            -1.825921921179483
+          ],
+          "observed_RFIN_speed_kmh": 90.21003634376649,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 113.27765169370154
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.75547091809264
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.46877521448486
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.91347742356744
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 115.270205963408
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.76837955274796
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 115.45841172000401
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.92404171059889
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 113.2775380011769
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.75535444767772
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.46866494177281
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.9133643010254
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 115.27008723664362
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.76825818038895
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 115.45829635945346
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.92392363273534
+            }
+          ]
+        },
+        {
+          "frame_offset": 0,
+          "time_s": 1.6,
+          "baseline_proxy_speed_kmh": 111.73082262004641,
+          "all_observed_to_wrist_proxy_speed_kmh": 115.53931451463508,
+          "recorded_speed_kmh": 130.19592960000003,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": 0.0002491903083026159,
+            "pelvis_to_shoulder": 1.6595174170813938,
+            "shoulder_to_elbow": 0.4754191122837691,
+            "elbow_to_wrist": 1.6733061749152043
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0002974704226752049,
+            "pelvis_to_shoulder": 3.629196278506655,
+            "shoulder_to_elbow": 1.6859894915884295,
+            "elbow_to_wrist": 2.2786541465605867
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            12.193383090981861,
+            3.2130850642868474,
+            -4.847715284474161
+          ],
+          "observed_RFIN_speed_kmh": 89.62685938260323,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 111.73082262004641
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.40576402911555
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 112.22163388821278
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.87494372986276
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 113.38585991759885
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.07891226380909
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.86727247867056
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.53906553873502
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 111.73107204450486
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.40601542404966
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 112.22188100387791
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.87519288878578
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 113.3861091716455
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.07916342293562
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.86751947859922
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.53931451463508
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": "3034_2",
+      "calibration_pitch": false,
+      "landmark_rmse_mm": {
+        "pelvis": 1.7868254344478838e-13,
+        "shoulder": 29.42158105685001,
+        "elbow": 39.05083173282922,
+        "wrist": 41.80710698545415
+      },
+      "root_force_residual_rms_n": 1686.6197292916647,
+      "root_torque_residual_rms_nm": 447.77663032992024,
+      "diagnostics": [
+        {
+          "frame_offset": -1,
+          "time_s": 1.555522807017544,
+          "baseline_proxy_speed_kmh": 115.68905834440729,
+          "all_observed_to_wrist_proxy_speed_kmh": 116.31700101165502,
+          "recorded_speed_kmh": 131.0006016,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": 0.0003333654288996494,
+            "pelvis_to_shoulder": 2.2994361866914788,
+            "shoulder_to_elbow": 0.12819549425658155,
+            "elbow_to_wrist": -1.800022379129223
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0007064831830689875,
+            "pelvis_to_shoulder": 4.138002706699491,
+            "shoulder_to_elbow": 0.1764860670579399,
+            "elbow_to_wrist": 1.8287094909369106
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            12.631363167590674,
+            3.128269232350691,
+            -2.5246247543839253
+          ],
+          "observed_RFIN_speed_kmh": 92.07151619709308,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 115.68905834440729
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.88905645677457
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 115.81877513295103
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.01895658090056
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 117.99020617586888
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.1900135478955
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 118.11673176885628
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.31666967848389
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 115.68939370364446
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.88939351788927
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 115.81911095447043
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.01929410911661
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 117.99053546040503
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.1903444070387
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 118.11706152224868
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.31700101165502
+            }
+          ]
+        },
+        {
+          "frame_offset": 0,
+          "time_s": 1.5583,
+          "baseline_proxy_speed_kmh": 113.42109113486052,
+          "all_observed_to_wrist_proxy_speed_kmh": 113.67742839712507,
+          "recorded_speed_kmh": 131.0006016,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": -0.00028241225428260464,
+            "pelvis_to_shoulder": 1.9681224502665897,
+            "shoulder_to_elbow": 0.03989978681989115,
+            "elbow_to_wrist": -1.7514025625676468
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.000548122111144908,
+            "pelvis_to_shoulder": 3.903194907901437,
+            "shoulder_to_elbow": 0.4604306079714468,
+            "elbow_to_wrist": 1.768487640168478
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            10.983522808674216,
+            3.9812635885159233,
+            -5.095351669595965
+          ],
+          "observed_RFIN_speed_kmh": 91.22037732300198,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 113.42109113486052
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.66617411703697
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.4631044751343
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.70803787326992
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 115.38763972285203
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.63994198784209
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 115.42561571650695
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.67770625048139
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 113.42080419789316
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.66588773160107
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.46281880353006
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.7077527724866
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 115.38735994949731
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.63966288483925
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 115.42533717460762
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.67742839712507
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": "3034_3",
+      "calibration_pitch": false,
+      "landmark_rmse_mm": {
+        "pelvis": 1.8185259534132393e-13,
+        "shoulder": 29.3058014459235,
+        "elbow": 39.46922402287531,
+        "wrist": 42.27100571477532
+      },
+      "root_force_residual_rms_n": 1669.3030177017008,
+      "root_torque_residual_rms_nm": 459.1617392454274,
+      "diagnostics": [
+        {
+          "frame_offset": -1,
+          "time_s": 1.4555228070175439,
+          "baseline_proxy_speed_kmh": 114.68446334636847,
+          "all_observed_to_wrist_proxy_speed_kmh": 115.38149180063279,
+          "recorded_speed_kmh": 129.23032320000002,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": -0.0003579513415630231,
+            "pelvis_to_shoulder": 2.1366346642681577,
+            "shoulder_to_elbow": 0.13039967530879912,
+            "elbow_to_wrist": -1.569647933971081
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0005012937377799277,
+            "pelvis_to_shoulder": 3.889918019710981,
+            "shoulder_to_elbow": 0.2163340543175488,
+            "elbow_to_wrist": 1.5813150529164381
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            12.913076136546781,
+            2.278002433535729,
+            -1.9883809488770172
+          ],
+          "observed_RFIN_speed_kmh": 93.31628197503825,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 114.68446334636847
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.11402412940065
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 114.8162227043284
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.24598312867931
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 116.8218464893461
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.25282003115906
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 116.9507170455947
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.38184563622752
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 114.68410131617047
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.1136619127758
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 114.81586020816295
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.2456204404815
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 116.82149319531159
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.25246667752768
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 116.95036327552818
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 115.38149180063279
+            }
+          ]
+        },
+        {
+          "frame_offset": 0,
+          "time_s": 1.4583,
+          "baseline_proxy_speed_kmh": 112.198279741937,
+          "all_observed_to_wrist_proxy_speed_kmh": 112.41539777052664,
+          "recorded_speed_kmh": 129.23032320000002,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": 0.0006617876055348877,
+            "pelvis_to_shoulder": 1.788237571519261,
+            "shoulder_to_elbow": 0.03238323449092917,
+            "elbow_to_wrist": -1.6041645650260865
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0006764966336901967,
+            "pelvis_to_shoulder": 3.4807697068331094,
+            "shoulder_to_elbow": 0.6074811634487366,
+            "elbow_to_wrist": 1.6183672051077538
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            11.280974487424395,
+            3.313606275431651,
+            -4.509703217470498
+          ],
+          "observed_RFIN_speed_kmh": 92.98114841151124,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 112.198279741937
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.59383127346325
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 112.23343920393036
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.62786421503866
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 113.98786986351384
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 112.3851461159685
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 114.01863310059436
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 112.41473752208628
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 112.19894306122089
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.59449443397278
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 112.23410299859762
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.62852786463428
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 113.98852981794937
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 112.385805855995
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 114.0192935494536
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 112.41539777052664
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": "3034_4",
+      "calibration_pitch": false,
+      "landmark_rmse_mm": {
+        "pelvis": 1.7456153358843388e-13,
+        "shoulder": 30.86111465396176,
+        "elbow": 40.414505375711585,
+        "wrist": 43.292964260247565
+      },
+      "root_force_residual_rms_n": 1735.4735785075884,
+      "root_torque_residual_rms_nm": 476.0919007460588,
+      "diagnostics": [
+        {
+          "frame_offset": -1,
+          "time_s": 1.4500214285714286,
+          "baseline_proxy_speed_kmh": 116.04131449884764,
+          "all_observed_to_wrist_proxy_speed_kmh": 116.56857720179654,
+          "recorded_speed_kmh": 128.4256512,
+          "exact_velocity_sum_error": 1.7763568394002505e-15,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": 0.0005508717154268556,
+            "pelvis_to_shoulder": 1.9671833255205997,
+            "shoulder_to_elbow": 0.14284774639948594,
+            "elbow_to_wrist": -1.5833192406866095
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0006750643368654635,
+            "pelvis_to_shoulder": 3.968754488237644,
+            "shoulder_to_elbow": 0.2949797470215388,
+            "elbow_to_wrist": 1.7231483102059673
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            12.740408625801898,
+            3.4270073266553522,
+            -3.400697577242002
+          ],
+          "observed_RFIN_speed_kmh": 91.70659328240339,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 116.04131449884764
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.4614110265946
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 116.1867637331832
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.60592583679582
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 118.01356817182645
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.42779291169343
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 118.15477128484304
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.56802689226343
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 116.04186596421295
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.46196024826439
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 116.18731589053986
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 114.60647576732752
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 118.01411993859075
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.42834250457337
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 118.15532375153052
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 116.56857720179654
+            }
+          ]
+        },
+        {
+          "frame_offset": 0,
+          "time_s": 1.4528,
+          "baseline_proxy_speed_kmh": 113.30787786696423,
+          "all_observed_to_wrist_proxy_speed_kmh": 113.29429645288185,
+          "recorded_speed_kmh": 128.4256512,
+          "exact_velocity_sum_error": 1.7763568394002505e-15,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": -0.00027647996521196205,
+            "pelvis_to_shoulder": 1.622528463591833,
+            "shoulder_to_elbow": -0.018796407475684635,
+            "elbow_to_wrist": -1.6170369902333173
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0005713667491649243,
+            "pelvis_to_shoulder": 3.6768406232557926,
+            "shoulder_to_elbow": 0.6283274894886535,
+            "elbow_to_wrist": 1.6462075795672804
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            10.681933090025336,
+            4.267971061302329,
+            -5.892517655447544
+          ],
+          "observed_RFIN_speed_kmh": 90.95044631566007,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 113.30787786696423
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.69096635434202
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.2923188599448
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.67373370108527
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 114.93208065182432
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.3166197537348
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 114.91175236807327
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.29457396266639
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 113.30760240291919
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.69069225273257
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 113.29204076923386
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 111.6734569308212
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 114.9318044484333
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.31634488621975
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 114.91147356347
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 113.29429645288185
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "pitch": "3034_5",
+      "calibration_pitch": false,
+      "landmark_rmse_mm": {
+        "pelvis": 1.7303041241110646e-13,
+        "shoulder": 33.48107134972598,
+        "elbow": 44.435721274375055,
+        "wrist": 46.867257063039006
+      },
+      "root_force_residual_rms_n": 1548.0574120021138,
+      "root_torque_residual_rms_nm": 390.3830626579066,
+      "diagnostics": [
+        {
+          "frame_offset": -1,
+          "time_s": 1.4111215384615383,
+          "baseline_proxy_speed_kmh": 110.28627291373007,
+          "all_observed_to_wrist_proxy_speed_kmh": 110.92008251421345,
+          "recorded_speed_kmh": 128.5865856,
+          "exact_velocity_sum_error": 0.0,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": 7.476486350436554e-05,
+            "pelvis_to_shoulder": 1.963987868871964,
+            "shoulder_to_elbow": 0.18998623357526512,
+            "elbow_to_wrist": -1.520239266827359
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.000648970336226745,
+            "pelvis_to_shoulder": 4.43734803704296,
+            "shoulder_to_elbow": 0.2623598033519406,
+            "elbow_to_wrist": 1.6112338373290265
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            11.680470686785942,
+            2.3076002379284724,
+            -3.6774942390837912
+          ],
+          "observed_RFIN_speed_kmh": 94.98398598313226,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 110.28627291373007
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.76868030319173
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 110.47936362168447
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.96178881510625
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 112.25599188652589
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.73314022898325
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 112.44290738556018
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.91999759151105
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 110.2863376249843
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.76874335099626
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 110.47942743493223
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.96185095533473
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 112.25607905762777
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.73322607809713
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 112.44299364055581
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 110.92008251421345
+            }
+          ]
+        },
+        {
+          "frame_offset": 0,
+          "time_s": 1.4139,
+          "baseline_proxy_speed_kmh": 108.21433106250889,
+          "all_observed_to_wrist_proxy_speed_kmh": 108.29922535038543,
+          "recorded_speed_kmh": 128.5865856,
+          "exact_velocity_sum_error": 1.7763568394002505e-15,
+          "attribution_speed_change_kmh": {
+            "pelvis_translation": -3.5268030806889783e-06,
+            "pelvis_to_shoulder": 1.6613185341363168,
+            "shoulder_to_elbow": 0.01663849473640866,
+            "elbow_to_wrist": -1.593059214193108
+          },
+          "component_velocity_discrepancy_kmh": {
+            "pelvis_translation": 0.0006162988740461215,
+            "pelvis_to_shoulder": 4.348416259475955,
+            "shoulder_to_elbow": 0.7735943444734655,
+            "elbow_to_wrist": 1.6626600183643616
+          },
+          "modeled_hand_offset_velocity_m_s": [
+            9.948243328883436,
+            3.186937092771032,
+            -5.722177424102818
+          ],
+          "observed_RFIN_speed_kmh": 94.50921268801878,
+          "all_subset_replacements": [
+            {
+              "observed_components": [],
+              "speed_kmh": 108.21433106250889
+            },
+            {
+              "observed_components": [
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 106.62427205219548
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 108.23727747278814
+            },
+            {
+              "observed_components": [
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 106.64432326043585
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 109.8820415708976
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.2889408319302
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 109.89533211815426
+            },
+            {
+              "observed_components": [
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.29923902628738
+            },
+            {
+              "observed_components": [
+                "pelvis_translation"
+              ],
+              "speed_kmh": 108.2143375731543
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 106.62428007824218
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 108.23728398280149
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 106.64433128573289
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder"
+              ],
+              "speed_kmh": 109.88202671499381
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.28892715397981
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow"
+              ],
+              "speed_kmh": 109.89531726478403
+            },
+            {
+              "observed_components": [
+                "pelvis_translation",
+                "pelvis_to_shoulder",
+                "shoulder_to_elbow",
+                "elbow_to_wrist"
+              ],
+              "speed_kmh": 108.29922535038543
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "model_sha256": "f423825dabdbbd471dd7149e966a99f708354d207dab54273e65f0de069ca793",
+  "scope": "Same five observed pitches. Frozen first-pitch geometry/mass; original processed coordinate precision. Reference kinematics plus inverse wrench audit, NOT new forward rollout or causal energy attribution. Scalar radar speed has no observed velocity vector. Hand/ball remains assumed and RFIN is not ball.",
+  "ground_contact_validated": false,
+  "muscles_validated": false,
+  "hand_ball_observed": false
+}

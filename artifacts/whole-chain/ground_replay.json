@@ -1,0 +1,61 @@
+{
+  "pitch": "3034_4",
+  "rows": [
+    {
+      "mode": "inverse_root_reference",
+      "substeps": 1,
+      "status": "success",
+      "completed_samples": 449,
+      "speed_kmh": 113.27520908817282,
+      "all_sites_rmse_mm": 0.029036730556783786,
+      "pelvis_position_error_mm": 0.02902271864383422
+    },
+    {
+      "mode": "inverse_root_reference",
+      "substeps": 2,
+      "status": "success",
+      "completed_samples": 449,
+      "speed_kmh": 113.27549794552067,
+      "all_sites_rmse_mm": 0.029139556689871483,
+      "pelvis_position_error_mm": 0.029092842591001495
+    },
+    {
+      "mode": "inverse_root_reference",
+      "substeps": 4,
+      "status": "success",
+      "completed_samples": 449,
+      "speed_kmh": 113.27557013701286,
+      "all_sites_rmse_mm": 0.029168493964919495,
+      "pelvis_position_error_mm": 0.029110565684623977
+    },
+    {
+      "mode": "measured_global_wrench",
+      "substeps": 1,
+      "status": "success",
+      "completed_samples": 449,
+      "speed_kmh": 116.89462083748846,
+      "all_sites_rmse_mm": 69.98096140565748,
+      "pelvis_position_error_mm": 43.69726324492009
+    },
+    {
+      "mode": "measured_global_wrench",
+      "substeps": 2,
+      "status": "success",
+      "completed_samples": 449,
+      "speed_kmh": 116.89787635475226,
+      "all_sites_rmse_mm": 69.98590475753223,
+      "pelvis_position_error_mm": 43.7015635664348
+    },
+    {
+      "mode": "measured_global_wrench",
+      "substeps": 4,
+      "status": "success",
+      "completed_samples": 449,
+      "speed_kmh": 116.89869993021037,
+      "all_sites_rmse_mm": 69.98716772361215,
+      "pelvis_position_error_mm": 43.70265216511483
+    }
+  ],
+  "recorded_speed_kmh": 128.4256512,
+  "scope": "Replace only floating-root inverse wrench by measured global plate wrench evaluated at each RK4 state. Internal inverse-demand torques unchanged. Forces applied to pelvis to test whole-body balance, not a foot-contact model. Negative result diagnoses inconsistency, not ground-force causal contribution or athlete intervention."
+}
