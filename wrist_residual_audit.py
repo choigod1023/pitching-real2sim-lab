@@ -9,6 +9,7 @@ from scipy.signal import savgol_filter
 from scipy.optimize import lsq_linear
 from anatomical_muscle_screen import ov,equilibrium_tendon_forces
 from anatomical_shoulder_fit import arr,model_points
+from applied_path_forces import applied_path_force_matrix
 from directional_shoulder_fit import orientations
 from scipy.spatial.transform import Rotation
 ROOT=Path(__file__).resolve().parent
@@ -20,7 +21,7 @@ def project(v,G,rhs=None):
     rhs=np.zeros(G.shape[0]) if rhs is None else rhs
     return v-G.T@np.linalg.lstsq(G@G.T,G@v-rhs,rcond=None)[0]
 
-def run(model_file,pitch,mode):
+def run(model_file,pitch,mode,force_mapping='applied_force'):
     m=o.Model(str(model_file));s=m.initSystem();matter=m.getMatterSubsystem();cs=m.getCoordinateSet();nu=s.getNU()
     muscles=[m.getMuscles().get(i) for i in range(m.getMuscles().getSize())]
     for i in range(m.getForceSet().getSize()):m.getForceSet().get(i).setAppliesForce(s,False)
@@ -59,8 +60,10 @@ def run(model_file,pitch,mode):
         put(q[i]);s.setU(ov(U[i]));m.realizeVelocity(s);tau=arr(solver.solve(s,ov(ud[i])))
         S=null_space(np.vstack([Gs[i],root]));R=[]
         for k in range(nu):
-            s.setU(ov(np.eye(nu)[k]));m.realizeVelocity(s);R.append([-mus.getGeometryPath().getLengtheningSpeed(s) for mus in muscles])
+            s.setU(ov(np.eye(nu)[k]));m.realizeVelocity(s);R.append([-mus.getPath().getLengtheningSpeed(s) for mus in muscles])
         R=np.array(R);s.setU(ov(U[i]));m.realizeVelocity(s)
+        if force_mapping=='applied_force':R=applied_path_force_matrix(m,s,muscles)
+        elif force_mapping!='legacy_speed':raise ValueError('Unknown force mapping')
         ends=[equilibrium_tendon_forces(m,s,muscles,a)[0] for a in [0.,1.]];low=np.minimum(*ends);high=np.maximum(*ends)
         A=(S.T@R)*(high-low)[None,:];target=S.T@tau;offset=S.T@R@low
         fit=lsq_linear(A,target-offset,bounds=(0,1),tol=1e-8,max_iter=200)
@@ -80,7 +83,7 @@ def run(model_file,pitch,mode):
         rows.append(dict(sample=i,residual=float(np.linalg.norm(res)),common_component=float(np.linalg.norm(common)),wrist_complement=float(np.sqrt(max(0,res@res-common@common))),common_only_fit=float(np.linalg.norm(commonA@cf.x-commontarget)),zero_accel_diagnostic=float(np.linalg.norm(A@f0.x+offset-S.T@tau0)),acceleration_demand=float(np.linalg.norm(S.T@(tau-tau0))),max_endpoint_force=float(high.max()),u_constraint=float(np.linalg.norm(Gs[i]@U[i])),a_constraint=float(np.linalg.norm(Gs[i]@ud[i]+gd[i]@U[i]))))
         rows[-1]['zero_passive_bound_diagnostic']=float(np.linalg.norm(relaxed@no_passive.x-target))
     keys=['residual','common_component','wrist_complement','common_only_fit','zero_accel_diagnostic','acceleration_demand','u_constraint','a_constraint','zero_passive_bound_diagnostic']
-    report=dict(pitch=pitch,mode=mode,model=Path(model_file).stem,frames=len(rows),rms={k:float(np.sqrt(np.mean([r[k]**2 for r in rows]))) for k in keys},peak_force=max(r['max_endpoint_force'] for r in rows),arm_rmse_mm=float(np.sqrt(np.mean(np.sum((np.array(positions)[:,3:]-z['target'][:,3:])**2,axis=2)))*1000),hand_rmse_deg=float(np.rad2deg(np.sqrt(np.mean(np.array(angles)**2)))),constraint_position_max=float(max(closures)),rows=rows)
+    report=dict(pitch=pitch,mode=mode,force_mapping=force_mapping,model=Path(model_file).stem,frames=len(rows),rms={k:float(np.sqrt(np.mean([r[k]**2 for r in rows]))) for k in keys},peak_force=max(r['max_endpoint_force'] for r in rows),arm_rmse_mm=float(np.sqrt(np.mean(np.sum((np.array(positions)[:,3:]-z['target'][:,3:])**2,axis=2)))*1000),hand_rmse_deg=float(np.rad2deg(np.sqrt(np.mean(np.array(angles)**2)))),constraint_position_max=float(max(closures)),rows=rows)
     np.savez_compressed(OUT/f'{Path(model_file).stem}_{pitch}_{mode}.npz',q=q,U=U,udot=ud,time=t,predicted=positions)
     print({k:v for k,v in report.items() if k!='rows'},flush=True);return report
 

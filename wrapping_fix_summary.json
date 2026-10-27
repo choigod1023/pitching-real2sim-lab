@@ -1,0 +1,303 @@
+{
+  "native_force_mapping_verified": true,
+  "global_geometry_accepted": false,
+  "local_derivative_pass_only": true,
+  "full_pitch_optimization_eligible": false,
+  "candidate_search_executed": false,
+  "isolation": [
+    {
+      "condition": "original.osim",
+      "length_m": 0.1888659238176351,
+      "speed_m_s": 0.002517632962432074,
+      "max_derivative_error_m_s": 0.0098372249227518
+    },
+    {
+      "condition": "reverse.osim",
+      "length_m": 0.1943103236180033,
+      "speed_m_s": 0.003559005919677485,
+      "max_derivative_error_m_s": 0.00012015251015937926
+    },
+    {
+      "condition": "first_only.osim",
+      "length_m": 0.17732718471237086,
+      "speed_m_s": -0.0006588475090031161,
+      "max_derivative_error_m_s": 1.080584741777876e-06
+    },
+    {
+      "condition": "second_only.osim",
+      "length_m": 0.19597449171803083,
+      "speed_m_s": -0.0018843877650763462,
+      "max_derivative_error_m_s": 3.6192017048228275e-11
+    },
+    {
+      "condition": "none.osim",
+      "length_m": 0.17721360112870846,
+      "speed_m_s": -0.0006124537743722749,
+      "max_derivative_error_m_s": 1.9993924484790204e-11
+    }
+  ],
+  "source_angle_step_deg": 0.005729577951307601,
+  "source_maximum_length_jump_mm": 7.312244174111443,
+  "same_pose_history_range_mm": 0.0,
+  "geodesic_trial": {
+    "status": "rejected_initialization",
+    "error": "std::exception in 'SimTK::State & OpenSim::Model::initSystem()': SimTK Exception thrown at CableSpan.cpp:926:\n  Error detected by Simbody method CurveSegment::Impl::assertSurfaceBounds: Next point lies inside the surface\n  (Required condition '!isPointBelowSurface(getContactGeometry(), nextPoint_S)' was not met.)\n",
+    "scope": "Experimental solver; no same-anatomy replacement validated. Source quadrant restrictions are not preserved by full contact surfaces."
+  },
+  "global_length_fit": {
+    "degree": 9,
+    "selection_rmse_mm": 8.628509173795868,
+    "selection_max_mm": 108.65132889689933,
+    "test_rmse_mm": 7.575242682771724,
+    "test_max_mm": 102.52663178857121
+  },
+  "local_0p02_length_fit": {
+    "degree": 9,
+    "selection_rmse_mm": 1.047126960474193,
+    "selection_max_mm": 5.568090833415473,
+    "test_rmse_mm": 1.0781037128892739,
+    "test_max_mm": 5.5947054137902015
+  },
+  "local_0p002_length_fit": {
+    "degree": 9,
+    "selection_rmse_mm": 0.00010741338840710095,
+    "selection_max_mm": 0.002385871773202819,
+    "test_rmse_mm": 9.175407019629625e-05,
+    "test_max_mm": 0.0012768329682721902
+  },
+  "local_domain_low_rad": [
+    -0.131336796684541,
+    1.1938137606882293,
+    -1.57079500000002
+  ],
+  "local_domain_high_rad": [
+    -0.127336796684541,
+    1.1978137606882293,
+    -1.5675862654800483
+  ],
+  "local_before_max_derivative_error_m_s": 0.0098372249227518,
+  "local_after_max_derivative_error_m_s": 3.852228652387324e-08,
+  "force_mapping": {
+    "results": [
+      {
+        "mapping": "legacy_speed",
+        "mean_residual_nm": 134.3640862602844,
+        "pitches": [
+          {
+            "pitch": "3034_1",
+            "force_mapping": "legacy_speed",
+            "frames": 58,
+            "projected_demand_rms_nm": 156.48338736276824,
+            "hill_success_frames": 58,
+            "hill_residual_rms_nm": 134.45151544603144,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 81.5118061272947,
+                "frames_residual_over_1nm": 43
+              },
+              "1.4": {
+                "residual_rms_nm": 68.90016926290471,
+                "frames_residual_over_1nm": 39
+              }
+            }
+          },
+          {
+            "pitch": "3034_2",
+            "force_mapping": "legacy_speed",
+            "frames": 54,
+            "projected_demand_rms_nm": 170.67019867670757,
+            "hill_success_frames": 54,
+            "hill_residual_rms_nm": 130.38989383228812,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 72.40615359113859,
+                "frames_residual_over_1nm": 28
+              },
+              "1.4": {
+                "residual_rms_nm": 48.676946441002634,
+                "frames_residual_over_1nm": 28
+              }
+            }
+          },
+          {
+            "pitch": "3034_3",
+            "force_mapping": "legacy_speed",
+            "frames": 54,
+            "projected_demand_rms_nm": 171.79583833002653,
+            "hill_success_frames": 54,
+            "hill_residual_rms_nm": 129.83021652490214,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 72.18767346271666,
+                "frames_residual_over_1nm": 27
+              },
+              "1.4": {
+                "residual_rms_nm": 47.53529117674267,
+                "frames_residual_over_1nm": 27
+              }
+            }
+          },
+          {
+            "pitch": "3034_4",
+            "force_mapping": "legacy_speed",
+            "frames": 53,
+            "projected_demand_rms_nm": 175.49035491945946,
+            "hill_success_frames": 53,
+            "hill_residual_rms_nm": 132.35921683897925,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 72.87772772927197,
+                "frames_residual_over_1nm": 28
+              },
+              "1.4": {
+                "residual_rms_nm": 48.712534278793676,
+                "frames_residual_over_1nm": 28
+              }
+            }
+          },
+          {
+            "pitch": "3034_5",
+            "force_mapping": "legacy_speed",
+            "frames": 62,
+            "projected_demand_rms_nm": 172.81983943475612,
+            "hill_success_frames": 62,
+            "hill_residual_rms_nm": 144.78958865922124,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 98.22985172441877,
+                "frames_residual_over_1nm": 46
+              },
+              "1.4": {
+                "residual_rms_nm": 82.5117011148132,
+                "frames_residual_over_1nm": 40
+              }
+            }
+          }
+        ]
+      },
+      {
+        "mapping": "applied_force",
+        "mean_residual_nm": 137.60998267667077,
+        "pitches": [
+          {
+            "pitch": "3034_1",
+            "force_mapping": "applied_force",
+            "frames": 58,
+            "projected_demand_rms_nm": 156.48338736276824,
+            "hill_success_frames": 58,
+            "hill_residual_rms_nm": 134.70060106621796,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 81.01021447307039,
+                "frames_residual_over_1nm": 44
+              },
+              "1.4": {
+                "residual_rms_nm": 68.20776539935433,
+                "frames_residual_over_1nm": 39
+              }
+            }
+          },
+          {
+            "pitch": "3034_2",
+            "force_mapping": "applied_force",
+            "frames": 54,
+            "projected_demand_rms_nm": 170.67019867670757,
+            "hill_success_frames": 54,
+            "hill_residual_rms_nm": 134.85221697613835,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 72.39179228957065,
+                "frames_residual_over_1nm": 27
+              },
+              "1.4": {
+                "residual_rms_nm": 48.632822887648004,
+                "frames_residual_over_1nm": 27
+              }
+            }
+          },
+          {
+            "pitch": "3034_3",
+            "force_mapping": "applied_force",
+            "frames": 54,
+            "projected_demand_rms_nm": 171.79583833002653,
+            "hill_success_frames": 54,
+            "hill_residual_rms_nm": 135.05738013915277,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 72.18852608068926,
+                "frames_residual_over_1nm": 26
+              },
+              "1.4": {
+                "residual_rms_nm": 47.534880531891375,
+                "frames_residual_over_1nm": 26
+              }
+            }
+          },
+          {
+            "pitch": "3034_4",
+            "force_mapping": "applied_force",
+            "frames": 53,
+            "projected_demand_rms_nm": 175.49035491945946,
+            "hill_success_frames": 53,
+            "hill_residual_rms_nm": 137.9743067832846,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 72.87652181692039,
+                "frames_residual_over_1nm": 28
+              },
+              "1.4": {
+                "residual_rms_nm": 48.64175179155279,
+                "frames_residual_over_1nm": 28
+              }
+            }
+          },
+          {
+            "pitch": "3034_5",
+            "force_mapping": "applied_force",
+            "frames": 62,
+            "projected_demand_rms_nm": 172.81983943475612,
+            "hill_success_frames": 62,
+            "hill_residual_rms_nm": 145.46540841856006,
+            "envelopes": {
+              "1.0": {
+                "residual_rms_nm": 98.93429438885845,
+                "frames_residual_over_1nm": 46
+              },
+              "1.4": {
+                "residual_rms_nm": 83.53310885676528,
+                "frames_residual_over_1nm": 40
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "scope": "Native force-map correction only. Wrapped length/velocity consistency and continuous muscle dynamics remain unresolved; no athlete performance inference."
+  },
+  "local_single_state_force": {
+    "rows": [
+      {
+        "model": "mass_corrected.osim",
+        "pitch": "3034_4",
+        "sample": 28,
+        "residual_nm": 77.51557701683979,
+        "subscapularis_unit_tension_power_w": -0.8301915633592378,
+        "subscapularis_path_speed_m_s": -0.31352044396731615,
+        "unit_force_power_balance_error_w": 1.1437120073265539,
+        "scope": "One already-seen state. Other wrapped muscles remain unvalidated; NOT pitch-level RMS or speed gain."
+      },
+      {
+        "model": "local_0p002_length_based_trial.osim",
+        "pitch": "3034_4",
+        "sample": 28,
+        "residual_nm": 233.460896789076,
+        "subscapularis_unit_tension_power_w": -4.375680726800432,
+        "subscapularis_path_speed_m_s": 4.375680726800432,
+        "unit_force_power_balance_error_w": 0.0,
+        "scope": "One already-seen state. Other wrapped muscles remain unvalidated; NOT pitch-level RMS or speed gain."
+      }
+    ],
+    "full_pitch_eligible": false,
+    "reason": "Local domain only; other muscles fail independent path checks."
+  }
+}
