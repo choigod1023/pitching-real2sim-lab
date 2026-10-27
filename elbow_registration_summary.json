@@ -1,0 +1,410 @@
+{
+  "manifest": {
+    "humeral_elbow_anchor_shift_m": [
+      0.0018972086496836186,
+      0.06378724583747264,
+      -0.0005379568796918671
+    ],
+    "shift_norm_mm": 63.81772112661978,
+    "source_axes_angle_deg": 0.0,
+    "wrist_names": [
+      "ECRL",
+      "ECRB",
+      "ECU",
+      "FCR",
+      "FCU",
+      "PL"
+    ],
+    "added_elbow_muscles": [
+      "TRIlat",
+      "TRImed",
+      "ANC",
+      "BRA",
+      "BRD",
+      "SUP",
+      "PT",
+      "PQ"
+    ],
+    "note": "Elbow anchor alignment is a model-to-model registration assumption, not measured individual attachment sites. Added muscles change modeled force capacity; NOT a same-capacity improvement comparison."
+  },
+  "conditions": [
+    {
+      "model": "scaled_source",
+      "mean_residual_nm": 239.567183730453,
+      "pitches": [
+        {
+          "pitch": "3034_1",
+          "rms": {
+            "residual": 224.83617515162442,
+            "common_component": 223.44279635356222,
+            "wrist_complement": 24.99244714933799,
+            "common_only_fit": 223.31198085353566,
+            "zero_accel_diagnostic": 382.72411996369794,
+            "acceleration_demand": 381.5865371239406,
+            "u_constraint": 0.02817580776497353,
+            "a_constraint": 17.551146117019748,
+            "zero_passive_bound_diagnostic": 186.22786813184936
+          },
+          "peak_force": 2520.966744809327,
+          "arm_rmse_mm": 10.339383528530599,
+          "hand_rmse_deg": 8.498856109938357
+        },
+        {
+          "pitch": "3034_2",
+          "rms": {
+            "residual": 236.00055038142963,
+            "common_component": 234.54772525013914,
+            "wrist_complement": 26.146211203976737,
+            "common_only_fit": 234.4349780309985,
+            "zero_accel_diagnostic": 1245.4971213478123,
+            "acceleration_demand": 1183.5991386174776,
+            "u_constraint": 0.019984421833519412,
+            "a_constraint": 7.251078407242748,
+            "zero_passive_bound_diagnostic": 214.84756169727683
+          },
+          "peak_force": 3314.5214733972953,
+          "arm_rmse_mm": 9.973301986527899,
+          "hand_rmse_deg": 11.047616065824956
+        },
+        {
+          "pitch": "3034_3",
+          "rms": {
+            "residual": 238.24803334499416,
+            "common_component": 236.8817502430869,
+            "wrist_complement": 25.4786537032324,
+            "common_only_fit": 236.75677398281132,
+            "zero_accel_diagnostic": 1248.7488645857586,
+            "acceleration_demand": 1190.8898952711306,
+            "u_constraint": 0.020765664424731423,
+            "a_constraint": 7.860327519275649,
+            "zero_passive_bound_diagnostic": 217.18942688998908
+          },
+          "peak_force": 3316.775496986684,
+          "arm_rmse_mm": 9.988407090710188,
+          "hand_rmse_deg": 11.668808529476367
+        },
+        {
+          "pitch": "3034_4",
+          "rms": {
+            "residual": 245.75523853259176,
+            "common_component": 244.30875309254137,
+            "wrist_complement": 26.62462072178193,
+            "common_only_fit": 244.18732668581885,
+            "zero_accel_diagnostic": 1148.8388170514768,
+            "acceleration_demand": 1093.898382480608,
+            "u_constraint": 0.021657422567093246,
+            "a_constraint": 8.490566283663052,
+            "zero_passive_bound_diagnostic": 224.86398318100433
+          },
+          "peak_force": 2588.983782867154,
+          "arm_rmse_mm": 9.95803912857627,
+          "hand_rmse_deg": 10.872731188758735
+        },
+        {
+          "pitch": "3034_5",
+          "rms": {
+            "residual": 252.99592124162504,
+            "common_component": 251.87002963844773,
+            "wrist_complement": 23.84165126047255,
+            "common_only_fit": 251.74768784577356,
+            "zero_accel_diagnostic": 724.2377025584966,
+            "acceleration_demand": 612.0373983269649,
+            "u_constraint": 0.01888499493907273,
+            "a_constraint": 8.462341506949098,
+            "zero_passive_bound_diagnostic": 219.91632672397606
+          },
+          "peak_force": 2483.2196509115956,
+          "arm_rmse_mm": 9.801922625852695,
+          "hand_rmse_deg": 11.249882941029739
+        }
+      ]
+    },
+    {
+      "model": "registered_wrist",
+      "mean_residual_nm": 243.03090984806212,
+      "pitches": [
+        {
+          "pitch": "3034_1",
+          "rms": {
+            "residual": 228.91537926577917,
+            "common_component": 227.2435647434694,
+            "wrist_complement": 27.615451237960183,
+            "common_only_fit": 227.00772108131824,
+            "zero_accel_diagnostic": 385.2253271622824,
+            "acceleration_demand": 381.5865371239406,
+            "u_constraint": 0.02817580776497353,
+            "a_constraint": 17.551146117019748,
+            "zero_passive_bound_diagnostic": 190.79920486575898
+          },
+          "peak_force": 2520.966744809327,
+          "arm_rmse_mm": 10.339383528530599,
+          "hand_rmse_deg": 8.498856109938357
+        },
+        {
+          "pitch": "3034_2",
+          "rms": {
+            "residual": 239.35789930281464,
+            "common_component": 237.69780482307118,
+            "wrist_complement": 28.141740190498332,
+            "common_only_fit": 237.54145212926719,
+            "zero_accel_diagnostic": 1248.3486599906157,
+            "acceleration_demand": 1183.5991386174776,
+            "u_constraint": 0.019984421833519412,
+            "a_constraint": 7.251078407242748,
+            "zero_passive_bound_diagnostic": 218.49294393954588
+          },
+          "peak_force": 3314.5214733972953,
+          "arm_rmse_mm": 9.973301986527899,
+          "hand_rmse_deg": 11.047616065824956
+        },
+        {
+          "pitch": "3034_3",
+          "rms": {
+            "residual": 241.4453503205841,
+            "common_component": 239.94675086405417,
+            "wrist_complement": 26.859150046364388,
+            "common_only_fit": 239.7690582106261,
+            "zero_accel_diagnostic": 1251.8146053956823,
+            "acceleration_demand": 1190.8898952711306,
+            "u_constraint": 0.020765664424731423,
+            "a_constraint": 7.860327519275649,
+            "zero_passive_bound_diagnostic": 220.65275734039838
+          },
+          "peak_force": 3316.775496986684,
+          "arm_rmse_mm": 9.988407090710188,
+          "hand_rmse_deg": 11.668808529476367
+        },
+        {
+          "pitch": "3034_4",
+          "rms": {
+            "residual": 249.36321113464072,
+            "common_component": 247.66634054253254,
+            "wrist_complement": 29.041260813706185,
+            "common_only_fit": 247.54085681963687,
+            "zero_accel_diagnostic": 1151.8788573686202,
+            "acceleration_demand": 1093.898382480608,
+            "u_constraint": 0.021657422567093246,
+            "a_constraint": 8.490566283663052,
+            "zero_passive_bound_diagnostic": 228.7203186908353
+          },
+          "peak_force": 2588.983782867154,
+          "arm_rmse_mm": 9.95803912857627,
+          "hand_rmse_deg": 10.872731188758735
+        },
+        {
+          "pitch": "3034_5",
+          "rms": {
+            "residual": 256.0727092164921,
+            "common_component": 254.75645189349046,
+            "wrist_complement": 25.9303417662362,
+            "common_only_fit": 254.5738038589907,
+            "zero_accel_diagnostic": 724.9419783045349,
+            "acceleration_demand": 612.0373983269649,
+            "u_constraint": 0.01888499493907273,
+            "a_constraint": 8.462341506949098,
+            "zero_passive_bound_diagnostic": 223.17093797979066
+          },
+          "peak_force": 2483.2196509115956,
+          "arm_rmse_mm": 9.801922625852695,
+          "hand_rmse_deg": 11.249882941029739
+        }
+      ]
+    },
+    {
+      "model": "registered_plus_elbow",
+      "mean_residual_nm": 239.87659085134607,
+      "pitches": [
+        {
+          "pitch": "3034_1",
+          "rms": {
+            "residual": 225.07285588716294,
+            "common_component": 223.48061283649932,
+            "wrist_complement": 26.724635515312578,
+            "common_only_fit": 223.35273640571393,
+            "zero_accel_diagnostic": 382.08286985643525,
+            "acceleration_demand": 381.5865371239406,
+            "u_constraint": 0.02817580776497353,
+            "a_constraint": 17.551146117019748,
+            "zero_passive_bound_diagnostic": 186.0421107026469
+          },
+          "peak_force": 2520.966744809327,
+          "arm_rmse_mm": 10.339383528530599,
+          "hand_rmse_deg": 8.498856109938357
+        },
+        {
+          "pitch": "3034_2",
+          "rms": {
+            "residual": 236.32165475517868,
+            "common_component": 234.80017447950038,
+            "wrist_complement": 26.773168856562908,
+            "common_only_fit": 234.6997809293357,
+            "zero_accel_diagnostic": 1245.39614771119,
+            "acceleration_demand": 1183.5991386174776,
+            "u_constraint": 0.019984421833519412,
+            "a_constraint": 7.251078407242748,
+            "zero_passive_bound_diagnostic": 214.91136650519599
+          },
+          "peak_force": 3314.5214733972953,
+          "arm_rmse_mm": 9.973301986527899,
+          "hand_rmse_deg": 11.047616065824956
+        },
+        {
+          "pitch": "3034_3",
+          "rms": {
+            "residual": 238.5485621831316,
+            "common_component": 237.1615647330953,
+            "wrist_complement": 25.686742358447365,
+            "common_only_fit": 237.06977984636947,
+            "zero_accel_diagnostic": 1248.5907815282656,
+            "acceleration_demand": 1190.8898952711306,
+            "u_constraint": 0.020765664424731423,
+            "a_constraint": 7.860327519275649,
+            "zero_passive_bound_diagnostic": 217.22212491794704
+          },
+          "peak_force": 3316.775496986684,
+          "arm_rmse_mm": 9.988407090710188,
+          "hand_rmse_deg": 11.668808529476367
+        },
+        {
+          "pitch": "3034_4",
+          "rms": {
+            "residual": 246.06971421113894,
+            "common_component": 244.4928429482176,
+            "wrist_complement": 27.81283874490001,
+            "common_only_fit": 244.41090593117227,
+            "zero_accel_diagnostic": 1148.7084220693018,
+            "acceleration_demand": 1093.898382480608,
+            "u_constraint": 0.021657422567093246,
+            "a_constraint": 8.490566283663052,
+            "zero_passive_bound_diagnostic": 224.8733162279644
+          },
+          "peak_force": 2588.983782867154,
+          "arm_rmse_mm": 9.95803912857627,
+          "hand_rmse_deg": 10.872731188758735
+        },
+        {
+          "pitch": "3034_5",
+          "rms": {
+            "residual": 253.37016722011816,
+            "common_component": 252.15934941181231,
+            "wrist_complement": 24.740738496701834,
+            "common_only_fit": 252.0603100632272,
+            "zero_accel_diagnostic": 722.4067378158909,
+            "acceleration_demand": 612.0373983269649,
+            "u_constraint": 0.01888499493907273,
+            "a_constraint": 8.462341506949098,
+            "zero_passive_bound_diagnostic": 219.92759917894526
+          },
+          "peak_force": 2483.2196509115956,
+          "arm_rmse_mm": 9.801922625852695,
+          "hand_rmse_deg": 11.249882941029739
+        }
+      ]
+    }
+  ],
+  "axis_marker_check": [
+    {
+      "pitch": "3034_1",
+      "angle_rmse_deg": 9.587436609611675,
+      "angle_median_deg": 8.755483820130655,
+      "angle_max_deg": 18.12081083665942,
+      "marker_separation_mm": 80.97230113405553
+    },
+    {
+      "pitch": "3034_2",
+      "angle_rmse_deg": 20.133336993139043,
+      "angle_median_deg": 19.86062881706912,
+      "angle_max_deg": 24.83474261668497,
+      "marker_separation_mm": 75.02813705789858
+    },
+    {
+      "pitch": "3034_3",
+      "angle_rmse_deg": 20.237835892680103,
+      "angle_median_deg": 19.566057123454684,
+      "angle_max_deg": 25.116901962327557,
+      "marker_separation_mm": 74.52057841878498
+    },
+    {
+      "pitch": "3034_4",
+      "angle_rmse_deg": 20.37303398248524,
+      "angle_median_deg": 20.238344672001823,
+      "angle_max_deg": 24.554307046055637,
+      "marker_separation_mm": 75.11967044035205
+    },
+    {
+      "pitch": "3034_5",
+      "angle_rmse_deg": 20.414007889951204,
+      "angle_median_deg": 20.021100320756116,
+      "angle_max_deg": 25.38544423944353,
+      "marker_separation_mm": 75.89480261573925
+    }
+  ],
+  "candidate_search_executed": false,
+  "axis_refit": [
+    {
+      "pitch": "3034_1",
+      "axis_proxy_rms_deg": 9.449288292307362,
+      "residual_nm": 225.74681082200607,
+      "arm_rmse_mm": 10.364839194816847,
+      "hand_rmse_deg": 8.571426707553416,
+      "optimizer": {
+        "nfev": 14,
+        "status": 2,
+        "cost": 2364.6920481963143,
+        "initial_cost": 2365.774438603561
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "axis_proxy_rms_deg": 20.13333605091702,
+      "residual_nm": 239.35790032404498,
+      "arm_rmse_mm": 9.97330224006803,
+      "hand_rmse_deg": 11.047616236240847,
+      "optimizer": {
+        "nfev": 2,
+        "status": 4,
+        "cost": 2070.269686464426,
+        "initial_cost": 2070.269696902856
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "axis_proxy_rms_deg": 20.237834620339825,
+      "residual_nm": 241.44534990028208,
+      "arm_rmse_mm": 9.988407428446923,
+      "hand_rmse_deg": 11.668808896601883,
+      "optimizer": {
+        "nfev": 2,
+        "status": 4,
+        "cost": 2065.781423693205,
+        "initial_cost": 2065.7814380389536
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "axis_proxy_rms_deg": 20.37303247758775,
+      "residual_nm": 249.3632152070186,
+      "arm_rmse_mm": 9.958039503014449,
+      "hand_rmse_deg": 10.872731486785394,
+      "optimizer": {
+        "nfev": 2,
+        "status": 4,
+        "cost": 1972.1045906363747,
+        "initial_cost": 1972.104609178828
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "axis_proxy_rms_deg": 20.41096866284969,
+      "residual_nm": 256.07714158151555,
+      "arm_rmse_mm": 9.80263817584034,
+      "hand_rmse_deg": 11.250666435268965,
+      "optimizer": {
+        "nfev": 3,
+        "status": 4,
+        "cost": 2567.1466033590805,
+        "initial_cost": 2567.1907002404896
+      }
+    }
+  ]
+}
