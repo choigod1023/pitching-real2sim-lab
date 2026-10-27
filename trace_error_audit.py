@@ -21,7 +21,7 @@ DATA=Path(__file__).resolve().parent.parent/'openbiomechanics/baseball_pitching/
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 class ObservedPitch:
-    def __init__(self,pitch,data=DATA):
+    def __init__(self,pitch,data=DATA,reconstruct_rounding=False):
         data=Path(data);self.pitch=pitch
         meta=pd.read_csv(data/'metadata.csv');row=meta[meta.session_pitch.eq(pitch)].iloc[0]
         poi=pd.read_csv(data/'poi/poi_metrics.csv');pr=poi[poi.session_pitch.eq(pitch)].iloc[0]
@@ -36,6 +36,10 @@ class ObservedPitch:
             if not np.isfinite(raw).all() or np.any(raw[:,3]<0):raise ValueError('Missing marker, no interpolation of gaps')
             markers[name]=sosfiltfilt(sos,raw[:,:3]*scale,axis=0)
         all_g=pd.read_csv(data/'full_sig/landmarks.csv');g=all_g[all_g.session_pitch.eq(pitch)].sort_values('time')
+        rounding_info=None
+        if reconstruct_rounding:
+            from quantization_reconstruction import reconstruct_landmarks
+            g,rounding_info=reconstruct_landmarks(g)
         t=regular_time(g)
         if len(t)!=len(markers['RFIN']) or not np.allclose(t,np.arange(len(t))/rate,atol=.000051,rtol=0):raise ValueError('Time alignment mismatch')
         _,frames=hand_frame(markers['RFIN'],markers['RWRA'],markers['RWRB'])
@@ -45,7 +49,7 @@ class ObservedPitch:
         self.hand_proxy=CubicSpline(t,vector(g,'hand_jc'))
         self.a=float(g.fp_10_time.iloc[0]);self.b=float(g.BR_time.iloc[0]);self.tmin=t[0];self.tmax=t[-1]
         self.lengths=np.median(np.linalg.norm(np.diff(self.points(np.linspace(self.a,self.b,100)),axis=1),axis=2),axis=0)
-        self.ledger=dict(pitch=pitch,user=int(row.user),session=int(row.session),recorded_speed_kmh=float(row.pitch_speed_mph)*1.609344,
+        self.ledger=dict(rounding_reconstruction=rounding_info,pitch=pitch,user=int(row.user),session=int(row.session),recorded_speed_kmh=float(row.pitch_speed_mph)*1.609344,
             rate_hz=rate,raw_point_units=units,processed_position_units='m',frame_count=len(t),fp10_s=self.a,br_s=self.b,
             point_processing='4th-order zero-phase 20Hz Butterworth on hand/forearm markers; supplied processed joint centers unchanged',
             source_paths={'c3d':str(paths[0]),'landmarks':str(data/'full_sig/landmarks.csv')},

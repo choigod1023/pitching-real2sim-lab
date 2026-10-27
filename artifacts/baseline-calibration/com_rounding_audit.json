@@ -1,0 +1,85 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "force_residual_rms_n": {
+        "rounded": 4097.342528077039,
+        "bounded": 685.450931036665
+      },
+      "optimizer": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 2495,
+        "max_adjustment_mm": 0.05,
+        "objective_before": 2020.999999999749,
+        "objective_after": 17.14031337404907,
+        "rounding_step_m": 0.0001
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "force_residual_rms_n": {
+        "rounded": 3840.3447136659356,
+        "bounded": 715.5178056834355
+      },
+      "optimizer": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 2875,
+        "max_adjustment_mm": 0.05,
+        "objective_before": 2117.5000000006835,
+        "objective_after": 36.78205321443617,
+        "rounding_step_m": 0.0001
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "force_residual_rms_n": {
+        "rounded": 3139.5718021657244,
+        "bounded": 719.0327473039775
+      },
+      "optimizer": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 659,
+        "max_adjustment_mm": 0.05,
+        "objective_before": 1792.500000000337,
+        "objective_after": 47.507245933588436,
+        "rounding_step_m": 0.0001
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "force_residual_rms_n": {
+        "rounded": 4116.760712075253,
+        "bounded": 778.8517123227045
+      },
+      "optimizer": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 2788,
+        "max_adjustment_mm": 0.05,
+        "objective_before": 1953.9999999998472,
+        "objective_after": 23.23932910603237,
+        "rounding_step_m": 0.0001
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "force_residual_rms_n": {
+        "rounded": 3718.5850025904624,
+        "bounded": 722.263756263584
+      },
+      "optimizer": {
+        "converged": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 580,
+        "max_adjustment_mm": 0.05,
+        "objective_before": 1655.000000000255,
+        "objective_after": 15.785026222702802,
+        "rounding_step_m": 0.0001
+      }
+    }
+  ],
+  "scope": "Observed derived COM versus raw global GRF. Not model output or radar speed validation."
+}

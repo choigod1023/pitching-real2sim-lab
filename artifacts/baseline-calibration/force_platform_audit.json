@@ -1,0 +1,756 @@
+{
+  "runs": [
+    {
+      "axis_diagnostics": [
+        {
+          "side": "rear",
+          "plate_index": 1,
+          "matrix": [
+            [
+              0.9968376770375441,
+              0.007713410321835261,
+              -0.0750733694615593
+            ],
+            [
+              -0.007936281312372945,
+              0.9989284002138702,
+              0.004624163111378154
+            ],
+            [
+              0.07524654765508436,
+              -0.003925799304314117,
+              0.9971441863670243
+            ]
+          ],
+          "rmse_n": 1.5690576960651077,
+          "determinant": 0.9986481743693553,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        },
+        {
+          "side": "lead",
+          "plate_index": 2,
+          "matrix": [
+            [
+              -1.0613140396342493,
+              -0.038074675376622104,
+              -0.001677441438686399
+            ],
+            [
+              0.039199433348409876,
+              1.2112936695728198,
+              0.03876174332595129
+            ],
+            [
+              -0.0029756956426925905,
+              0.014893621676513482,
+              1.0290572107999192
+            ]
+          ],
+          "rmse_n": 6.881960270989951,
+          "determinant": -1.3207719127319497,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        }
+      ],
+      "pitch": "3034_1",
+      "analog_rate_hz": 1080.0,
+      "samples": 2178,
+      "point_rate_hz": 360.0,
+      "best": [
+        {
+          "rmse_n": 209.09380641770665,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 209.2655308655248,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        },
+        {
+          "rmse_n": 209.32548837679474,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "raw"
+        },
+        {
+          "rmse_n": 209.40167727414163,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 209.57478188120268,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        }
+      ],
+      "platforms": [
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 627,
+          "active_valid_samples": 627,
+          "fp_to_br_active_samples": 178,
+          "corners_center_m": [
+            1.7254250049591064,
+            -0.7571832612156868,
+            -0.10694095119833946
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 1589,
+          "active_valid_samples": 1589,
+          "fp_to_br_active_samples": 92,
+          "corners_center_m": [
+            -0.04418925568461418,
+            -0.3055314291268587,
+            -0.001964295678135386
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 637,
+          "active_valid_samples": 637,
+          "fp_to_br_active_samples": 183,
+          "corners_center_m": [
+            1.72029247879982,
+            0.14733023941516876,
+            -0.10243684984743595
+          ]
+        }
+      ]
+    },
+    {
+      "axis_diagnostics": [
+        {
+          "side": "rear",
+          "plate_index": 1,
+          "matrix": [
+            [
+              0.9959782095136502,
+              0.00718684258751879,
+              -0.07501547681135409
+            ],
+            [
+              -0.009661665881829824,
+              0.9975568313322682,
+              0.004741830736886878
+            ],
+            [
+              0.07550003318294145,
+              -0.0037696712906393724,
+              0.9971292257868815
+            ]
+          ],
+          "rmse_n": 2.4144120275965593,
+          "determinant": 0.9964293390360373,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        },
+        {
+          "side": "lead",
+          "plate_index": 2,
+          "matrix": [
+            [
+              -1.126736525961022,
+              -0.0657677332179604,
+              -0.07077857301068516
+            ],
+            [
+              0.14803231967329572,
+              1.2554538796502264,
+              0.18335160632648667
+            ],
+            [
+              -0.025601974560621143,
+              0.011856950038152202,
+              1.0155515944928633
+            ]
+          ],
+          "rmse_n": 8.290473411398741,
+          "determinant": -1.4263183030184297,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        }
+      ],
+      "pitch": "3034_2",
+      "analog_rate_hz": 1080.0,
+      "samples": 2157,
+      "point_rate_hz": 360.0,
+      "best": [
+        {
+          "rmse_n": 210.3648851480134,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 210.4429584369413,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        },
+        {
+          "rmse_n": 210.50926403817454,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "raw"
+        },
+        {
+          "rmse_n": 210.98078956044787,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 211.0603016538174,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        }
+      ],
+      "platforms": [
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 638,
+          "active_valid_samples": 638,
+          "fp_to_br_active_samples": 164,
+          "corners_center_m": [
+            1.7254250049591064,
+            -0.7571832612156868,
+            -0.10694095119833946
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 1589,
+          "active_valid_samples": 1589,
+          "fp_to_br_active_samples": 83,
+          "corners_center_m": [
+            -0.04418925568461418,
+            -0.3055314291268587,
+            -0.001964295678135386
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 651,
+          "active_valid_samples": 651,
+          "fp_to_br_active_samples": 171,
+          "corners_center_m": [
+            1.72029247879982,
+            0.14733023941516876,
+            -0.10243684984743595
+          ]
+        }
+      ]
+    },
+    {
+      "axis_diagnostics": [
+        {
+          "side": "rear",
+          "plate_index": 1,
+          "matrix": [
+            [
+              0.9963694180427718,
+              0.007455548205971773,
+              -0.07505347962572438
+            ],
+            [
+              -0.009008935618276431,
+              0.9975043351251313,
+              0.0046884610333406155
+            ],
+            [
+              0.07541765402685725,
+              -0.0037990664517121367,
+              0.9971363593283549
+            ]
+          ],
+          "rmse_n": 2.528145820946856,
+          "determinant": 0.9967677104421987,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        },
+        {
+          "side": "lead",
+          "plate_index": 2,
+          "matrix": [
+            [
+              -1.0673556956265993,
+              -0.048740413878061745,
+              -0.003088837064547029
+            ],
+            [
+              0.034514636232578846,
+              1.2235454274858588,
+              0.04624151561598929
+            ],
+            [
+              -0.005120183734998579,
+              0.014726460710383638,
+              1.0354325551367927
+            ]
+          ],
+          "rmse_n": 7.596368808599481,
+          "determinant": -1.3497722913014447,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        }
+      ],
+      "pitch": "3034_3",
+      "analog_rate_hz": 1080.0,
+      "samples": 2016,
+      "point_rate_hz": 360.0,
+      "best": [
+        {
+          "rmse_n": 220.1234216286376,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 220.2834864582736,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        },
+        {
+          "rmse_n": 220.34946298155162,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "raw"
+        },
+        {
+          "rmse_n": 220.6902025179639,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 220.8505103257019,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        }
+      ],
+      "platforms": [
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 608,
+          "active_valid_samples": 608,
+          "fp_to_br_active_samples": 167,
+          "corners_center_m": [
+            1.7254250049591064,
+            -0.7571832612156868,
+            -0.10694095119833946
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 1488,
+          "active_valid_samples": 1488,
+          "fp_to_br_active_samples": 84,
+          "corners_center_m": [
+            -0.04418925568461418,
+            -0.3055314291268587,
+            -0.001964295678135386
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 618,
+          "active_valid_samples": 618,
+          "fp_to_br_active_samples": 171,
+          "corners_center_m": [
+            1.72029247879982,
+            0.14733023941516876,
+            -0.10243684984743595
+          ]
+        }
+      ]
+    },
+    {
+      "axis_diagnostics": [
+        {
+          "side": "rear",
+          "plate_index": 1,
+          "matrix": [
+            [
+              0.9961695531987754,
+              0.007516031216814018,
+              -0.07503422131849062
+            ],
+            [
+              -0.008410850339795193,
+              0.9965178224377895,
+              0.004646143078575579
+            ],
+            [
+              0.07547043696747668,
+              -0.003749413379183363,
+              0.9971310777494337
+            ]
+          ],
+          "rmse_n": 2.815282487571291,
+          "determinant": 0.9955765367770621,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        },
+        {
+          "side": "lead",
+          "plate_index": 2,
+          "matrix": [
+            [
+              -1.2875585902602857,
+              -0.05371564759992098,
+              -0.2914282489343974
+            ],
+            [
+              0.24835141869104202,
+              1.2124455367280047,
+              0.3464257073625848
+            ],
+            [
+              -0.08076146496887028,
+              0.03207229953720275,
+              0.9372107961626812
+            ]
+          ],
+          "rmse_n": 18.535641818873724,
+          "determinant": -1.4656211740635938,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        }
+      ],
+      "pitch": "3034_4",
+      "analog_rate_hz": 1080.0,
+      "samples": 2019,
+      "point_rate_hz": 360.0,
+      "best": [
+        {
+          "rmse_n": 223.45828043387334,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 223.69642013875065,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        },
+        {
+          "rmse_n": 223.8422802274782,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "raw"
+        },
+        {
+          "rmse_n": 225.98407604954656,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 226.25426592005786,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        }
+      ],
+      "platforms": [
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 611,
+          "active_valid_samples": 611,
+          "fp_to_br_active_samples": 162,
+          "corners_center_m": [
+            1.7254250049591064,
+            -0.7571832612156868,
+            -0.10694095119833946
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 1434,
+          "active_valid_samples": 1434,
+          "fp_to_br_active_samples": 78,
+          "corners_center_m": [
+            -0.04418925568461418,
+            -0.3055314291268587,
+            -0.001964295678135386
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 619,
+          "active_valid_samples": 619,
+          "fp_to_br_active_samples": 169,
+          "corners_center_m": [
+            1.72029247879982,
+            0.14733023941516876,
+            -0.10243684984743595
+          ]
+        }
+      ]
+    },
+    {
+      "axis_diagnostics": [
+        {
+          "side": "rear",
+          "plate_index": 1,
+          "matrix": [
+            [
+              0.9958886409132852,
+              0.007315562517543132,
+              -0.07500464337945828
+            ],
+            [
+              -0.009854961665743437,
+              0.995974255528019,
+              0.004711087154195218
+            ],
+            [
+              0.07559666339210756,
+              -0.0036848470140971247,
+              0.9971221598182374
+            ]
+          ],
+          "rmse_n": 3.141801207409216,
+          "determinant": 0.9947613086309749,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        },
+        {
+          "side": "lead",
+          "plate_index": 2,
+          "matrix": [
+            [
+              -1.0585724442525477,
+              -0.039449186067262186,
+              -0.004766344140241435
+            ],
+            [
+              0.046546178130228606,
+              1.2253740753189466,
+              0.022219799303064818
+            ],
+            [
+              0.0006082581297409156,
+              0.008054220739686658,
+              1.0249032319780758
+            ]
+          ],
+          "rmse_n": 9.612437754938698,
+          "determinant": -1.3273777740339103,
+          "interpretation": "Diagnostic unconstrained fit only, not an authorized physical coordinate conversion"
+        }
+      ],
+      "pitch": "3034_5",
+      "analog_rate_hz": 1080.0,
+      "samples": 2007,
+      "point_rate_hz": 360.0,
+      "best": [
+        {
+          "rmse_n": 230.47844382546734,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 230.7008241030513,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        },
+        {
+          "rmse_n": 230.8154421913998,
+          "assignment": [
+            0,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "raw"
+        },
+        {
+          "rmse_n": 230.86624217382857,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "20Hz"
+        },
+        {
+          "rmse_n": 231.08874848190848,
+          "assignment": [
+            1,
+            1,
+            2
+          ],
+          "sign": 1,
+          "processing": "40Hz"
+        }
+      ],
+      "platforms": [
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 648,
+          "active_valid_samples": 648,
+          "fp_to_br_active_samples": 169,
+          "corners_center_m": [
+            1.7254250049591064,
+            -0.7571832612156868,
+            -0.10694095119833946
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 1434,
+          "active_valid_samples": 1434,
+          "fp_to_br_active_samples": 108,
+          "corners_center_m": [
+            -0.04418925568461418,
+            -0.3055314291268587,
+            -0.001964295678135386
+          ]
+        },
+        {
+          "force_unit": "N",
+          "moment_unit": "Nm",
+          "position_unit": "m",
+          "active_samples": 678,
+          "active_valid_samples": 678,
+          "fp_to_br_active_samples": 196,
+          "corners_center_m": [
+            1.72029247879982,
+            0.14733023941516876,
+            -0.10243684984743595
+          ]
+        }
+      ]
+    }
+  ],
+  "assignment_codes": {
+    "0": "unassigned",
+    "1": "rear",
+    "2": "lead"
+  },
+  "ground_contact_validated": false,
+  "scope": "Force-channel identity audit. 40Hz is documented in the current OBP datasheet; raw/20Hz comparisons are preserved. Raw moment/COP validity does not establish contact-model adequacy."
+}
