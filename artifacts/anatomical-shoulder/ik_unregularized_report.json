@@ -1,0 +1,85 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "arm_rmse_mm": 10.144791978417183,
+      "torso_rmse_mm": 17.253733823753983,
+      "shoulder_rmse_mm": 10.90283744922303,
+      "wrist_rmse_mm": 5.230664546407599,
+      "ac_closure_max_mm": 0.00930787447873175,
+      "frames": 62,
+      "solver_max_evaluations": 61,
+      "bound_hit_frames": {
+        "axial_rot": 24,
+        "pro_sup": 37
+      },
+      "wrist_speed_at_br_kmh": 67.4571840219901,
+      "ball_speed_predicted": false
+    },
+    {
+      "pitch": "3034_2",
+      "arm_rmse_mm": 9.673829687486181,
+      "torso_rmse_mm": 17.476013983263314,
+      "shoulder_rmse_mm": 9.319459514273243,
+      "wrist_rmse_mm": 6.618708752525613,
+      "ac_closure_max_mm": 0.010871737909709337,
+      "frames": 58,
+      "solver_max_evaluations": 49,
+      "bound_hit_frames": {
+        "axial_rot": 27,
+        "pro_sup": 17
+      },
+      "wrist_speed_at_br_kmh": 69.62073041411632,
+      "ball_speed_predicted": false
+    },
+    {
+      "pitch": "3034_3",
+      "arm_rmse_mm": 9.659540232208002,
+      "torso_rmse_mm": 17.55296584187473,
+      "shoulder_rmse_mm": 9.414301055671908,
+      "wrist_rmse_mm": 6.2054847224629395,
+      "ac_closure_max_mm": 0.010953156104500445,
+      "frames": 58,
+      "solver_max_evaluations": 66,
+      "bound_hit_frames": {
+        "axial_rot": 27,
+        "pro_sup": 17
+      },
+      "wrist_speed_at_br_kmh": 68.8515683791369,
+      "ball_speed_predicted": false
+    },
+    {
+      "pitch": "3034_4",
+      "arm_rmse_mm": 9.628960879647172,
+      "torso_rmse_mm": 16.891791275378445,
+      "shoulder_rmse_mm": 9.457727474404669,
+      "wrist_rmse_mm": 6.2978000947715955,
+      "ac_closure_max_mm": 0.010637924172448722,
+      "frames": 57,
+      "solver_max_evaluations": 50,
+      "bound_hit_frames": {
+        "axial_rot": 26,
+        "pro_sup": 17
+      },
+      "wrist_speed_at_br_kmh": 68.71278406932623,
+      "ball_speed_predicted": false
+    },
+    {
+      "pitch": "3034_5",
+      "arm_rmse_mm": 9.602181408093932,
+      "torso_rmse_mm": 17.367454256281025,
+      "shoulder_rmse_mm": 9.586665190600279,
+      "wrist_rmse_mm": 6.1863366154086155,
+      "ac_closure_max_mm": 0.009699297876350783,
+      "frames": 66,
+      "solver_max_evaluations": 70,
+      "bound_hit_frames": {
+        "axial_rot": 26,
+        "pro_sup": 15
+      },
+      "wrist_speed_at_br_kmh": 67.64439017397176,
+      "ball_speed_predicted": false
+    }
+  ],
+  "scope": "Published constrained shoulder IK; wrist proxy is not ball speed. No athlete capacity inference or counterfactual optimization."
+}

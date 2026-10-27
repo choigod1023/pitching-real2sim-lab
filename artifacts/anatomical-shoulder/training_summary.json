@@ -1,0 +1,24 @@
+{
+  "fast_pitch": "3034_2",
+  "slow_pitch": "3034_4",
+  "measured_speed_difference_kmh": 2.574950400000006,
+  "source_model_wrist_proxy_difference_kmh": 1.5160525106502831,
+  "wrist_proxy_is_not_ball_prediction": true,
+  "observed_br_local_shoulder_difference_mm": [
+    -3.7638786057447025,
+    -1.1073022197344295,
+    0.5112893188845626
+  ],
+  "local_axes": [
+    "CLAV-C7 anterior proxy",
+    "cross(anterior,superior) lateral proxy",
+    "CLAV-STRN superior proxy"
+  ],
+  "accepted_improvement_candidates": 0,
+  "counterfactual_candidates_evaluated": 0,
+  "reason": "No valid baseline muscle-driven ball simulation; prerequisite failed, not proof that no feasible improvement exists.",
+  "model_frames": 281,
+  "frames_active_envelope_residual_over_1nm": 278,
+  "ability_improvement_demonstrated": false,
+  "source_model_ik_only": true
+}
