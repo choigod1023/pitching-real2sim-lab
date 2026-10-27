@@ -5,6 +5,7 @@ Millard equilibrium endpoints are evaluated separately, but no continuous
 tendon/activation dynamics, ball payload or glenohumeral stability gate is solved.
 """
 import json,xml.etree.ElementTree as ET
+from pathlib import Path
 import numpy as np
 import opensim as o
 from scipy.linalg import null_space
@@ -16,7 +17,24 @@ def ov(x):
     for i,a in enumerate(x):v.set(i,float(a))
     return v
 
-def main():
+def equilibrium_tendon_forces(model,state,muscles,activation):
+    """OpenSim equilibrateMuscles skips disabled muscles: enable temporarily.
+
+    Inverse dynamics intentionally disables forces, but equilibrium must not
+    inherit that mode. Restore flags even on solver exceptions.
+    """
+    flags=[mus.appliesForce(state) for mus in muscles]
+    try:
+        for mus in muscles:
+            mus.setAppliesForce(state,True);mus.setActivation(state,activation)
+        model.equilibrateMuscles(state);model.realizeDynamics(state)
+        return np.array([mus.getTendonForce(state) for mus in muscles]),np.array([mus.getNormalizedFiberLength(state) for mus in muscles])
+    finally:
+        for mus,flag in zip(muscles,flags):mus.setAppliesForce(state,flag)
+
+def main(output_dir=None):
+    global OUT
+    if output_dir is not None:OUT=Path(output_dir)
     o.Logger.setLevelString('error');m=o.Model(str(OUT/'scaled_source.osim'));s=m.initSystem();matter=m.getMatterSubsystem();cs=m.getCoordinateSet()
     source_caps=[float(x.text) for x in ET.parse(OUT/'scaled_source.osim').findall('.//max_eccentric_velocity_force_multiplier')]
     if len(source_caps)!=33 or not np.allclose(source_caps,1.4):raise ValueError('Unexpected source active force envelope')
@@ -65,16 +83,15 @@ def main():
             try:
                 ends=[]
                 for activation in [0.,1.]:
-                    for mus in muscles:mus.setActivation(s,activation)
-                    m.equilibrateMuscles(s);m.realizeDynamics(s)
-                    ends.append(np.array([mus.getTendonForce(s) for mus in muscles]))
+                    forces,fiber_lengths=equilibrium_tendon_forces(m,s,muscles,activation)
+                    ends.append(forces)
                 low=np.minimum(*ends);high=np.maximum(*ends)
                 if not np.isfinite(low).all() or not np.isfinite(high).all():raise ValueError('Nonfinite equilibrium force')
                 A=(S.T@R)*(high-low)[None,:];offset=S.T@R@low
                 fit=lsq_linear(A,target-offset,bounds=(0,1),tol=1e-8,max_iter=200)
                 hill=dict(status='success',residual_norm_nm=float(np.linalg.norm(A@fit.x+offset-target)),
                     endpoint_force_max_n=float(high.max()),largest_force_muscle=muscles[int(high.argmax())].getName(),
-                    normalized_fiber_length_max=float(max(mus.getNormalizedFiberLength(s) for mus in muscles)))
+                    normalized_fiber_length_max=float(fiber_lengths.max()))
             except Exception as exc:hill=dict(status='failed',error=str(exc)[:300])
             rows.append(dict(sample=i,free_internal_dofs=S.shape[1],envelopes=envelopes,hill_equilibrium_interval=hill))
         result=dict(pitch=pitch,frames=len(rows),
@@ -86,4 +103,6 @@ def main():
         reports.append(result);print({k:v for k,v in result.items() if k!='rows'},flush=True)
     (OUT/'muscle_screen.json').write_text(json.dumps(dict(reports=reports,scope=__doc__),indent=2))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import sys
+    main(sys.argv[1] if len(sys.argv)>1 else None)

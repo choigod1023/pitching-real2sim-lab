@@ -5,7 +5,7 @@
       "frames": 58,
       "projected_demand_rms_nm": 325.53479437960465,
       "hill_success_frames": 58,
-      "hill_residual_rms_nm": 4427.4663807802335,
+      "hill_residual_rms_nm": 281.66993665068554,
       "envelopes": {
         "1.0": {
           "residual_rms_nm": 241.63499883891006,
@@ -36,10 +36,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3500.014296515986,
-            "endpoint_force_max_n": 17232.319333681677,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 1066.0065182418173,
+            "endpoint_force_max_n": 2399.899320203571,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5213115695580555
           }
         },
         {
@@ -61,10 +61,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3461.628987428657,
-            "endpoint_force_max_n": 19811.99985016695,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 561.9358181675968,
+            "endpoint_force_max_n": 2456.757877870002,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5826890525454758
           }
         },
         {
@@ -86,10 +86,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3061.2997202143224,
-            "endpoint_force_max_n": 22538.338842895417,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 138.61347285294084,
+            "endpoint_force_max_n": 2497.8159442388765,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6032726013684484
           }
         },
         {
@@ -111,10 +111,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 2886.346945651368,
-            "endpoint_force_max_n": 25507.95473029224,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 243.94783088583765,
+            "endpoint_force_max_n": 2523.549036942405,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.93289359555301
           }
         },
         {
@@ -136,10 +136,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 2892.322947878005,
-            "endpoint_force_max_n": 28753.925281781685,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 69.7352265867871,
+            "endpoint_force_max_n": 2536.2716532485615,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.561999447551501
           }
         },
         {
@@ -161,10 +161,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3052.762668886209,
-            "endpoint_force_max_n": 32172.33912466282,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 93.53035484883118,
+            "endpoint_force_max_n": 2535.3298348643934,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.705151549698185
           }
         },
         {
@@ -186,10 +186,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3211.559536773825,
-            "endpoint_force_max_n": 35544.78630977609,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 121.0192595715976,
+            "endpoint_force_max_n": 2520.0400807140018,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7746837920970429
           }
         },
         {
@@ -211,10 +211,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3127.0068918133297,
-            "endpoint_force_max_n": 38576.34292792318,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 98.0784148852723,
+            "endpoint_force_max_n": 2492.15838056633,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.813397353950871
           }
         },
         {
@@ -236,10 +236,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3140.6876794684927,
-            "endpoint_force_max_n": 41017.889392987745,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 96.70642314167013,
+            "endpoint_force_max_n": 2455.8411228964233,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8236835380197327
           }
         },
         {
@@ -261,10 +261,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3177.530777248835,
-            "endpoint_force_max_n": 42749.46183209733,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 194.78753162936152,
+            "endpoint_force_max_n": 2414.295043200392,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8083278064912283
           }
         },
         {
@@ -286,10 +286,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3255.687060598662,
-            "endpoint_force_max_n": 43724.517811273974,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 205.93185803945744,
+            "endpoint_force_max_n": 2367.185736900358,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8199657842566688
           }
         },
         {
@@ -311,10 +311,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3176.935868537454,
-            "endpoint_force_max_n": 44433.064220144144,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 148.15908736524995,
+            "endpoint_force_max_n": 2332.2017810927296,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8300913004154207
           }
         },
         {
@@ -336,10 +336,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3248.31323927007,
-            "endpoint_force_max_n": 44840.05829635876,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 117.1170154389615,
+            "endpoint_force_max_n": 2307.246986922509,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8353524805106372
           }
         },
         {
@@ -361,10 +361,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3313.3854171706303,
-            "endpoint_force_max_n": 44949.169046110976,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 144.2282188938642,
+            "endpoint_force_max_n": 2290.301320721746,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8360523785391971
           }
         },
         {
@@ -386,10 +386,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3393.9670126801907,
-            "endpoint_force_max_n": 44876.16369513229,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 140.80694290598237,
+            "endpoint_force_max_n": 2279.0909217013973,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8337560144499403
           }
         },
         {
@@ -411,10 +411,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3483.5949231834866,
-            "endpoint_force_max_n": 44738.29313087115,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 130.37413648993098,
+            "endpoint_force_max_n": 2269.873798577146,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8299456392104698
           }
         },
         {
@@ -436,10 +436,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3573.4641445408115,
-            "endpoint_force_max_n": 44606.46222661495,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 126.1453506960379,
+            "endpoint_force_max_n": 2259.083178598241,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8252695155661125
           }
         },
         {
@@ -461,10 +461,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3675.134057602223,
-            "endpoint_force_max_n": 44500.17462330826,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 129.24208006331182,
+            "endpoint_force_max_n": 2245.0640493924566,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8198437571442492
           }
         },
         {
@@ -486,10 +486,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3790.963402608508,
-            "endpoint_force_max_n": 44403.531976243234,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 135.95730008167345,
+            "endpoint_force_max_n": 2228.3416915300204,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8134158463626855
           }
         },
         {
@@ -511,10 +511,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3976.9323672587634,
-            "endpoint_force_max_n": 44290.227920058234,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 170.60973121101748,
+            "endpoint_force_max_n": 2210.705320408418,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8056058047722858
           }
         },
         {
@@ -536,10 +536,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4100.5764883297625,
-            "endpoint_force_max_n": 44147.04866080035,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 168.52996837083347,
+            "endpoint_force_max_n": 2193.78450334793,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7962601261510382
           }
         },
         {
@@ -561,10 +561,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4099.446323949723,
-            "endpoint_force_max_n": 44284.030021506835,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7513717933891941
+            "residual_norm_nm": 154.54671947170058,
+            "endpoint_force_max_n": 2167.730998692531,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7922646841805727
           }
         },
         {
@@ -586,10 +586,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4123.889664609723,
-            "endpoint_force_max_n": 44335.92465081184,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7777437632025734
+            "residual_norm_nm": 145.4848855859572,
+            "endpoint_force_max_n": 2147.4097874038916,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.78805488598943
           }
         },
         {
@@ -611,9 +611,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4182.973325630613,
-            "endpoint_force_max_n": 44305.5518321562,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 126.45878146898255,
+            "endpoint_force_max_n": 2135.7085371529747,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.801098041228283
           }
         },
@@ -636,9 +636,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4226.682174381434,
-            "endpoint_force_max_n": 44225.15670648582,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 133.61322936894484,
+            "endpoint_force_max_n": 2128.95290381443,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.8203303674019504
           }
         },
@@ -661,9 +661,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4260.264346857874,
-            "endpoint_force_max_n": 44118.83557127327,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 139.85773784936706,
+            "endpoint_force_max_n": 2124.209262694803,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.8361451159497542
           }
         },
@@ -686,9 +686,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4294.3044847433575,
-            "endpoint_force_max_n": 43993.71499503414,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 147.33955610032297,
+            "endpoint_force_max_n": 2120.560751234143,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.8498855792024547
           }
         },
@@ -711,10 +711,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4332.083568649852,
-            "endpoint_force_max_n": 43846.3839831386,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.8626780506083818
+            "residual_norm_nm": 159.125354584595,
+            "endpoint_force_max_n": 2117.8369941303977,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.869181607138984
           }
         },
         {
@@ -736,10 +736,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4375.383455265384,
-            "endpoint_force_max_n": 43672.138406049955,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.8750667203849445
+            "residual_norm_nm": 173.71458044764162,
+            "endpoint_force_max_n": 2115.974557508814,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8908349140631475
           }
         },
         {
@@ -761,10 +761,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4422.905921541019,
-            "endpoint_force_max_n": 43470.55851066867,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.8870618472205845
+            "residual_norm_nm": 187.1707508067298,
+            "endpoint_force_max_n": 2115.095173073526,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9120030644940662
           }
         },
         {
@@ -786,10 +786,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4466.4649185404905,
-            "endpoint_force_max_n": 43245.489453295224,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.898387048673551
+            "residual_norm_nm": 195.53849927194153,
+            "endpoint_force_max_n": 2115.6150806445207,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9328544060461958
           }
         },
         {
@@ -811,10 +811,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4512.037358765627,
-            "endpoint_force_max_n": 43004.87071896957,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9087327714618594
+            "residual_norm_nm": 196.6233226394617,
+            "endpoint_force_max_n": 2117.9974639911707,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.953581050013379
           }
         },
         {
@@ -836,10 +836,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4557.866725518966,
-            "endpoint_force_max_n": 42758.80128749177,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9178982337624804
+            "residual_norm_nm": 192.60259051614105,
+            "endpoint_force_max_n": 2122.56427945031,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9742315118841414
           }
         },
         {
@@ -861,10 +861,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4603.089040753557,
-            "endpoint_force_max_n": 42516.33228229474,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.925827136539355
+            "residual_norm_nm": 189.3263001751072,
+            "endpoint_force_max_n": 2129.2919461165793,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.994565525347254
           }
         },
         {
@@ -886,10 +886,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4648.120534510373,
-            "endpoint_force_max_n": 42284.445920176964,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9325675846749408
+            "residual_norm_nm": 191.1390542546274,
+            "endpoint_force_max_n": 2137.943727336697,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.014104067665178
           }
         },
         {
@@ -911,10 +911,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4693.999061137964,
-            "endpoint_force_max_n": 42068.99315676343,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9382046643209723
+            "residual_norm_nm": 199.93314527716046,
+            "endpoint_force_max_n": 2148.2541227535257,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.032185835464834
           }
         },
         {
@@ -936,10 +936,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4741.109109112823,
-            "endpoint_force_max_n": 41876.17149634196,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.942804002279636
+            "residual_norm_nm": 215.05466381259484,
+            "endpoint_force_max_n": 2160.0624837084342,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.047998126822797
           }
         },
         {
@@ -961,10 +961,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4789.178295187251,
-            "endpoint_force_max_n": 41713.237674412514,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9464008872060943
+            "residual_norm_nm": 232.42598435137157,
+            "endpoint_force_max_n": 2173.3086688812896,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.060598634328853
           }
         },
         {
@@ -986,10 +986,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4837.703829471476,
-            "endpoint_force_max_n": 41587.31985626992,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9490223239724822
+            "residual_norm_nm": 250.51772451270733,
+            "endpoint_force_max_n": 2187.9605806485474,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.069000724673958
           }
         },
         {
@@ -1011,10 +1011,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4887.037226851688,
-            "endpoint_force_max_n": 41503.82217875523,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.950709159707723
+            "residual_norm_nm": 263.0937400473002,
+            "endpoint_force_max_n": 2203.881095726999,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.072476935128807
           }
         },
         {
@@ -1036,10 +1036,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4937.371546008194,
-            "endpoint_force_max_n": 41464.049109805586,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.951542234733451
+            "residual_norm_nm": 262.84685675562065,
+            "endpoint_force_max_n": 2220.7733444537776,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0709786251816324
           }
         },
         {
@@ -1061,10 +1061,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4987.239406201603,
-            "endpoint_force_max_n": 41465.16969412313,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.951637695687295
+            "residual_norm_nm": 251.00650209847012,
+            "endpoint_force_max_n": 2238.13035161466,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.06538427500696
           }
         },
         {
@@ -1086,10 +1086,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5033.824164289158,
-            "endpoint_force_max_n": 41500.86465023671,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9511403036444617
+            "residual_norm_nm": 236.68862061004432,
+            "endpoint_force_max_n": 2255.2446413812395,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0572793385415493
           }
         },
         {
@@ -1111,10 +1111,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5075.451008999136,
-            "endpoint_force_max_n": 41562.72888478093,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9502158219758468
+            "residual_norm_nm": 223.80161493096435,
+            "endpoint_force_max_n": 2271.3347477867305,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0484878017356736
           }
         },
         {
@@ -1136,10 +1136,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5123.579800548983,
-            "endpoint_force_max_n": 41642.34827801308,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9490253449764166
+            "residual_norm_nm": 226.98085964314055,
+            "endpoint_force_max_n": 2285.711616839267,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0406921368523223
           }
         },
         {
@@ -1161,10 +1161,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5181.452788850626,
-            "endpoint_force_max_n": 41733.687053481124,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9476973564338476
+            "residual_norm_nm": 244.08968578674373,
+            "endpoint_force_max_n": 2297.8386277306963,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.035276785123079
           }
         },
         {
@@ -1186,10 +1186,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5217.294280790022,
-            "endpoint_force_max_n": 41833.273089149756,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9463403401861712
+            "residual_norm_nm": 217.7793509652484,
+            "endpoint_force_max_n": 2307.286602218536,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0332017935862887
           }
         },
         {
@@ -1211,10 +1211,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5237.543665303043,
-            "endpoint_force_max_n": 41940.874145617294,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9450305007652506
+            "residual_norm_nm": 148.21560280010598,
+            "endpoint_force_max_n": 2313.737231047284,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.035383609302507
           }
         },
         {
@@ -1236,10 +1236,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5286.51992833627,
-            "endpoint_force_max_n": 42057.07183240646,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9438738346672635
+            "residual_norm_nm": 94.0544202597714,
+            "endpoint_force_max_n": 2316.792649529853,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.042940817399514
           }
         },
         {
@@ -1261,10 +1261,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5375.118183147167,
-            "endpoint_force_max_n": 42180.361067164,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.943114651779898
+            "residual_norm_nm": 81.94407062516052,
+            "endpoint_force_max_n": 2315.7604331671014,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0569806882327297
           }
         },
         {
@@ -1286,10 +1286,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5488.317819183639,
-            "endpoint_force_max_n": 42309.00335529398,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9492354669909917
+            "residual_norm_nm": 113.40389224141613,
+            "endpoint_force_max_n": 2309.7900229178726,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0787264219942645
           }
         },
         {
@@ -1311,10 +1311,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5595.415715251166,
-            "endpoint_force_max_n": 42417.94988440139,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9577496100235288
+            "residual_norm_nm": 176.7109599717704,
+            "endpoint_force_max_n": 2298.2339372649312,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.106439844132597
           }
         },
         {
@@ -1336,10 +1336,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5667.738129991309,
-            "endpoint_force_max_n": 42439.25090122299,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9661987055501737
+            "residual_norm_nm": 276.1606065115781,
+            "endpoint_force_max_n": 2281.3865867573054,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.134702774091645
           }
         },
         {
@@ -1361,10 +1361,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5730.022177679598,
-            "endpoint_force_max_n": 42265.94370727711,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9706687612647584
+            "residual_norm_nm": 353.56607789219856,
+            "endpoint_force_max_n": 2259.645398585827,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1555887568711785
           }
         },
         {
@@ -1386,10 +1386,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5837.978288475868,
-            "endpoint_force_max_n": 41764.74912365156,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9641016931260877
+            "residual_norm_nm": 361.9377861557531,
+            "endpoint_force_max_n": 2230.67308428852,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1548002194062352
           }
         },
         {
@@ -1411,10 +1411,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6021.532431241765,
-            "endpoint_force_max_n": 40863.93790186581,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9375327526125419
+            "residual_norm_nm": 707.3736337775224,
+            "endpoint_force_max_n": 2187.595367991791,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1313929136615313
           }
         },
         {
@@ -1436,10 +1436,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5758.17821063722,
-            "endpoint_force_max_n": 39754.88739241435,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9402244854011759
+            "residual_norm_nm": 844.9603691822717,
+            "endpoint_force_max_n": 2123.1477345899307,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.100548370476338
           }
         },
         {
@@ -1461,10 +1461,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4630.596744968677,
-            "endpoint_force_max_n": 39065.06106361584,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9479370941175873
+            "residual_norm_nm": 216.8263822171539,
+            "endpoint_force_max_n": 2038.284943523547,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0690886371071424
           }
         }
       ]
@@ -1474,7 +1474,7 @@
       "frames": 54,
       "projected_demand_rms_nm": 280.17657283760957,
       "hill_success_frames": 54,
-      "hill_residual_rms_nm": 4875.273902255555,
+      "hill_residual_rms_nm": 219.98265942438573,
       "envelopes": {
         "1.0": {
           "residual_rms_nm": 164.94286558958268,
@@ -1505,10 +1505,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3488.1714272829918,
-            "endpoint_force_max_n": 19192.880011443052,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 638.6684578630448,
+            "endpoint_force_max_n": 2464.0236704665767,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5010801758464825
           }
         },
         {
@@ -1530,10 +1530,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3532.2697524221653,
-            "endpoint_force_max_n": 21415.421191211182,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 220.64634591892167,
+            "endpoint_force_max_n": 2505.5801845028777,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5388369792559788
           }
         },
         {
@@ -1555,10 +1555,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3412.779591395402,
-            "endpoint_force_max_n": 23941.79739998331,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 15.047933520553052,
+            "endpoint_force_max_n": 2537.164209389563,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.548608288269018
           }
         },
         {
@@ -1580,10 +1580,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3381.0493484177764,
-            "endpoint_force_max_n": 26544.955434162046,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 41.85473668858108,
+            "endpoint_force_max_n": 2557.8006218391047,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5871036986154794
           }
         },
         {
@@ -1605,10 +1605,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3432.644156658357,
-            "endpoint_force_max_n": 29157.562723709147,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 45.02954794165168,
+            "endpoint_force_max_n": 2568.8283482926104,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6417875252838303
           }
         },
         {
@@ -1630,10 +1630,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3639.563044113164,
-            "endpoint_force_max_n": 31667.76585567075,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 70.67291783821321,
+            "endpoint_force_max_n": 2572.85823016073,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6999865880893246
           }
         },
         {
@@ -1655,10 +1655,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3760.6923286950087,
-            "endpoint_force_max_n": 33874.47089271046,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 106.47536396317714,
+            "endpoint_force_max_n": 2572.8503620110546,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.807080609337197
           }
         },
         {
@@ -1680,10 +1680,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3909.498645514284,
-            "endpoint_force_max_n": 35541.43573504559,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 110.96216899784764,
+            "endpoint_force_max_n": 2571.2552093334934,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.756002664920778
           }
         },
         {
@@ -1705,10 +1705,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4002.241482791634,
-            "endpoint_force_max_n": 36462.7221639971,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 86.37493233489666,
+            "endpoint_force_max_n": 2570.7333025894686,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8336068227306397
           }
         },
         {
@@ -1730,10 +1730,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4079.497628508596,
-            "endpoint_force_max_n": 36498.91127929138,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 36.302802247395945,
+            "endpoint_force_max_n": 2573.076346294803,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.800159335727036
           }
         },
         {
@@ -1755,10 +1755,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4165.00763617392,
-            "endpoint_force_max_n": 35586.713510004316,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 25.978887434052403,
+            "endpoint_force_max_n": 2577.2931611503836,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7356165174627487
           }
         },
         {
@@ -1780,10 +1780,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4191.291207840122,
-            "endpoint_force_max_n": 33754.54637171248,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 28.938091918626384,
+            "endpoint_force_max_n": 2580.734851234629,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6473515578579356
           }
         },
         {
@@ -1805,10 +1805,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4140.309325138753,
-            "endpoint_force_max_n": 31128.32126195957,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 40.37168487268569,
+            "endpoint_force_max_n": 2582.0485193218037,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5536722690255054
           }
         },
         {
@@ -1830,10 +1830,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4017.156854282285,
-            "endpoint_force_max_n": 27892.862087089536,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 57.98023324298262,
+            "endpoint_force_max_n": 2580.5417798826693,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5490958554589744
           }
         },
         {
@@ -1855,10 +1855,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3872.1815407875115,
-            "endpoint_force_max_n": 24166.873201783874,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 45.734495701530314,
+            "endpoint_force_max_n": 2571.6790246972605,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5592957164306653
           }
         },
         {
@@ -1880,10 +1880,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3680.03093544955,
-            "endpoint_force_max_n": 19900.769282059784,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 53.599349608267964,
+            "endpoint_force_max_n": 2542.6496983621255,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6250244757377816
           }
         },
         {
@@ -1905,10 +1905,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3372.651732151689,
-            "endpoint_force_max_n": 14901.239903459682,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 78.81297238873594,
+            "endpoint_force_max_n": 2486.7516952058604,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6918736224800521
           }
         },
         {
@@ -1930,10 +1930,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3168.293768045947,
-            "endpoint_force_max_n": 13154.335281290965,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 91.79861652771004,
+            "endpoint_force_max_n": 2403.0832635376128,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.756381542641718
           }
         },
         {
@@ -1955,10 +1955,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3469.175035678733,
-            "endpoint_force_max_n": 13093.180190446463,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 81.04423338780724,
+            "endpoint_force_max_n": 2292.484192282162,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8072054801467894
           }
         },
         {
@@ -1980,10 +1980,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3400.203050986695,
-            "endpoint_force_max_n": 13023.915559633731,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 194.4920581861881,
+            "endpoint_force_max_n": 2161.4225443592227,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.706260530660561
           }
         },
         {
@@ -2005,10 +2005,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3858.540806766587,
-            "endpoint_force_max_n": 12960.435338490974,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 140.4119550605913,
+            "endpoint_force_max_n": 2002.9023564714805,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7112646888726752
           }
         },
         {
@@ -2030,10 +2030,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3738.0760198538464,
-            "endpoint_force_max_n": 12567.408807561813,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 228.42739307161534,
+            "endpoint_force_max_n": 1903.9840502990185,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.717493044310191
           }
         },
         {
@@ -2055,10 +2055,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3333.932072335369,
-            "endpoint_force_max_n": 12200.339350415456,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 227.8861977763436,
+            "endpoint_force_max_n": 2020.1183273048175,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.73847826363682
           }
         },
         {
@@ -2080,10 +2080,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3360.0296208741042,
-            "endpoint_force_max_n": 12218.728060096188,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 178.60180803440025,
+            "endpoint_force_max_n": 2145.520870742426,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.762062402200479
           }
         },
         {
@@ -2105,10 +2105,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3313.1619109593585,
-            "endpoint_force_max_n": 12459.537379776726,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 128.82235240835746,
+            "endpoint_force_max_n": 2247.708112831078,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.779956949937763
           }
         },
         {
@@ -2130,10 +2130,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3319.506610205826,
-            "endpoint_force_max_n": 12662.566383098847,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 112.96893277091614,
+            "endpoint_force_max_n": 2326.185791976557,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7939095786306238
           }
         },
         {
@@ -2155,10 +2155,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3562.4658772206067,
-            "endpoint_force_max_n": 12750.698771476878,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 125.86466955342514,
+            "endpoint_force_max_n": 2380.489832290853,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.726612621508312
           }
         },
         {
@@ -2180,10 +2180,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3841.8791361500166,
-            "endpoint_force_max_n": 15472.796028792534,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 98.90094332948401,
+            "endpoint_force_max_n": 2413.7918717120656,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8090068586415287
           }
         },
         {
@@ -2205,10 +2205,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4051.3823709364183,
-            "endpoint_force_max_n": 17773.865642667264,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 88.50885400833901,
+            "endpoint_force_max_n": 2431.02417296173,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.770381518369313
           }
         },
         {
@@ -2230,10 +2230,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4133.873669931311,
-            "endpoint_force_max_n": 27585.536883026252,
+            "residual_norm_nm": 144.8618580412524,
+            "endpoint_force_max_n": 2476.7153139868,
             "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "normalized_fiber_length_max": 2.3650472598306544
           }
         },
         {
@@ -2255,10 +2255,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4601.445208988967,
-            "endpoint_force_max_n": 22384.61200294815,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 174.88817131242902,
+            "endpoint_force_max_n": 2477.8054649380174,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9046285036252617
           }
         },
         {
@@ -2280,10 +2280,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4914.829679769997,
-            "endpoint_force_max_n": 24798.18292711297,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 192.5748184936263,
+            "endpoint_force_max_n": 2510.2032600440634,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8999720508868614
           }
         },
         {
@@ -2305,10 +2305,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5137.038641986004,
-            "endpoint_force_max_n": 26997.023786576832,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 219.5218302889914,
+            "endpoint_force_max_n": 2539.2123195540885,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.040137626964134
           }
         },
         {
@@ -2330,10 +2330,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5375.027865332689,
-            "endpoint_force_max_n": 29001.447853377013,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 232.7684358397306,
+            "endpoint_force_max_n": 2562.14806973358,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1409748319308677
           }
         },
         {
@@ -2355,10 +2355,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5577.593113482655,
-            "endpoint_force_max_n": 30850.52671213942,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 236.2202547525457,
+            "endpoint_force_max_n": 2576.797291490996,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1993120837135534
           }
         },
         {
@@ -2380,10 +2380,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5735.895948696851,
-            "endpoint_force_max_n": 32547.631527951708,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 234.08015032489942,
+            "endpoint_force_max_n": 2583.314319204113,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.234980236219773
           }
         },
         {
@@ -2405,10 +2405,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5880.241898506204,
-            "endpoint_force_max_n": 34075.98037611725,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 192.28394397494503,
+            "endpoint_force_max_n": 2585.7754755235715,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8693817812400362
           }
         },
         {
@@ -2430,10 +2430,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6028.904815441689,
-            "endpoint_force_max_n": 35418.517447240534,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 220.06357722051834,
+            "endpoint_force_max_n": 2586.768655461029,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0534208894663917
           }
         },
         {
@@ -2455,10 +2455,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6038.29896379694,
-            "endpoint_force_max_n": 36566.221035455055,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 203.96365284429842,
+            "endpoint_force_max_n": 2587.2108050336474,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8597245879788957
           }
         },
         {
@@ -2480,10 +2480,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6089.539366478678,
-            "endpoint_force_max_n": 37513.727247412964,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 208.76869761040595,
+            "endpoint_force_max_n": 2587.4208866491094,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8562877967811353
           }
         },
         {
@@ -2505,10 +2505,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6099.247475606007,
-            "endpoint_force_max_n": 38257.32938853132,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 210.9401386358685,
+            "endpoint_force_max_n": 2587.5168032650536,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9785257875002566
           }
         },
         {
@@ -2530,10 +2530,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6124.920481094005,
-            "endpoint_force_max_n": 38792.25283946296,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 202.5392010299399,
+            "endpoint_force_max_n": 2587.540641994158,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9892258199966155
           }
         },
         {
@@ -2555,10 +2555,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6141.740922083834,
-            "endpoint_force_max_n": 39110.763354358205,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 183.3618298247953,
+            "endpoint_force_max_n": 2587.497998505283,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9831874971630503
           }
         },
         {
@@ -2580,10 +2580,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6186.611161738566,
-            "endpoint_force_max_n": 39199.72326763651,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 160.09334551473037,
+            "endpoint_force_max_n": 2587.3607651210345,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8550254437903304
           }
         },
         {
@@ -2605,10 +2605,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6216.626170477277,
-            "endpoint_force_max_n": 39037.386270974326,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 142.6582197590619,
+            "endpoint_force_max_n": 2587.028959557273,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8583380307014754
           }
         },
         {
@@ -2630,10 +2630,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6267.370347226293,
-            "endpoint_force_max_n": 38588.13551077928,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 134.18659510458895,
+            "endpoint_force_max_n": 2586.1730656319764,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.863234899348944
           }
         },
         {
@@ -2655,10 +2655,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6353.189632833393,
-            "endpoint_force_max_n": 37795.44529175323,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 132.78349024011692,
+            "endpoint_force_max_n": 2583.5626824703077,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8697538438266703
           }
         },
         {
@@ -2680,10 +2680,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6420.87440814281,
-            "endpoint_force_max_n": 36573.984033318826,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 157.9509095210162,
+            "endpoint_force_max_n": 2574.312570677541,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.2048794874767395
           }
         },
         {
@@ -2705,10 +2705,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6524.2091400259005,
-            "endpoint_force_max_n": 34800.76647731222,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 201.14479712057158,
+            "endpoint_force_max_n": 2549.752547664504,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1485486719095
           }
         },
         {
@@ -2730,10 +2730,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6610.208584906901,
-            "endpoint_force_max_n": 32463.6012004954,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 286.96122960031755,
+            "endpoint_force_max_n": 2512.131307821794,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.040730632087595
           }
         },
         {
@@ -2755,10 +2755,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6673.24550655445,
-            "endpoint_force_max_n": 29781.23072537777,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 378.40978265037,
+            "endpoint_force_max_n": 2466.5583899004596,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9073885859912378
           }
         },
         {
@@ -2780,10 +2780,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6467.536063905942,
-            "endpoint_force_max_n": 29020.81460674654,
+            "residual_norm_nm": 476.1621116434734,
+            "endpoint_force_max_n": 2587.103302514742,
             "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "normalized_fiber_length_max": 2.4102882387355486
           }
         },
         {
@@ -2805,10 +2805,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6460.3250622147425,
-            "endpoint_force_max_n": 24348.759942854926,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 491.75752560421273,
+            "endpoint_force_max_n": 2353.410932314373,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1042474645751237
           }
         },
         {
@@ -2830,10 +2830,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6246.596745108145,
-            "endpoint_force_max_n": 21974.34580446411,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 627.4279066356237,
+            "endpoint_force_max_n": 2284.442180798008,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.001096196922905
           }
         }
       ]
@@ -2843,7 +2843,7 @@
       "frames": 54,
       "projected_demand_rms_nm": 308.0146221407887,
       "hill_success_frames": 54,
-      "hill_residual_rms_nm": 4815.75321095921,
+      "hill_residual_rms_nm": 242.2119889863054,
       "envelopes": {
         "1.0": {
           "residual_rms_nm": 187.9568626418774,
@@ -2874,10 +2874,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3392.859117373887,
-            "endpoint_force_max_n": 17517.805977331627,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 684.892041345258,
+            "endpoint_force_max_n": 2455.5276820125396,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.482676584142298
           }
         },
         {
@@ -2899,10 +2899,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3469.7836419752994,
-            "endpoint_force_max_n": 20099.787068390662,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 275.01365573807493,
+            "endpoint_force_max_n": 2496.01174170185,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5301147621538365
           }
         },
         {
@@ -2924,10 +2924,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3311.9267930196347,
-            "endpoint_force_max_n": 22999.652181500027,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 25.25466539095969,
+            "endpoint_force_max_n": 2528.5776225496083,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.548360967723423
           }
         },
         {
@@ -2949,10 +2949,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3238.940039637061,
-            "endpoint_force_max_n": 25969.8510892436,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 58.213770336502684,
+            "endpoint_force_max_n": 2550.991180157822,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6145007108655773
           }
         },
         {
@@ -2974,10 +2974,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3288.7647096188302,
-            "endpoint_force_max_n": 28975.651965139212,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 50.728693785192526,
+            "endpoint_force_max_n": 2563.253044251244,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7171369597429675
           }
         },
         {
@@ -2999,10 +2999,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3479.351829511238,
-            "endpoint_force_max_n": 31930.53692843004,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 77.02837248626372,
+            "endpoint_force_max_n": 2566.8827916166147,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7993840217254562
           }
         },
         {
@@ -3024,10 +3024,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3590.615839979384,
-            "endpoint_force_max_n": 34640.34438145689,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 109.97472058493716,
+            "endpoint_force_max_n": 2564.3653965987523,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8710296970044233
           }
         },
         {
@@ -3049,10 +3049,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3699.9562428097947,
-            "endpoint_force_max_n": 36858.69653388314,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 116.35554475903011,
+            "endpoint_force_max_n": 2558.6003584916093,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9217598679047772
           }
         },
         {
@@ -3074,10 +3074,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3810.08699127773,
-            "endpoint_force_max_n": 38370.56195739508,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 120.66881965392881,
+            "endpoint_force_max_n": 2554.232458853553,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9479557396229794
           }
         },
         {
@@ -3099,10 +3099,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3916.8446113278333,
-            "endpoint_force_max_n": 39028.84283798089,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 83.85653077350813,
+            "endpoint_force_max_n": 2555.914195011063,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.880244362280875
           }
         },
         {
@@ -3124,10 +3124,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3999.9959466082605,
-            "endpoint_force_max_n": 38733.16923321942,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 50.06213107081876,
+            "endpoint_force_max_n": 2564.630900224201,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9012187763420163
           }
         },
         {
@@ -3149,10 +3149,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4104.605462228427,
-            "endpoint_force_max_n": 37417.76088896448,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 40.76284766090071,
+            "endpoint_force_max_n": 2575.5485104747886,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.822337648764347
           }
         },
         {
@@ -3174,10 +3174,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4142.798431795337,
-            "endpoint_force_max_n": 35098.358462483884,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 48.21414259350181,
+            "endpoint_force_max_n": 2582.1001457017255,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.714657257297245
           }
         },
         {
@@ -3199,10 +3199,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4076.5206560525826,
-            "endpoint_force_max_n": 31925.367776773684,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 90.34722162802288,
+            "endpoint_force_max_n": 2584.2616215095,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5925623131345148
           }
         },
         {
@@ -3224,10 +3224,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3930.8387206981765,
-            "endpoint_force_max_n": 28145.475408352868,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 129.36799043775662,
+            "endpoint_force_max_n": 2583.804175213248,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5651207295099516
           }
         },
         {
@@ -3249,10 +3249,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3780.109063745346,
-            "endpoint_force_max_n": 23929.1916881869,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 75.151327718924,
+            "endpoint_force_max_n": 2578.077213882163,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5569023093523455
           }
         },
         {
@@ -3274,10 +3274,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3596.8047398528934,
-            "endpoint_force_max_n": 19206.666156916795,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 69.87819433687791,
+            "endpoint_force_max_n": 2550.5423348937957,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.627063010065884
           }
         },
         {
@@ -3299,10 +3299,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3284.0504364477333,
-            "endpoint_force_max_n": 13716.133620294417,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 121.93886494191713,
+            "endpoint_force_max_n": 2488.8935624328765,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6987993421391898
           }
         },
         {
@@ -3324,10 +3324,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3180.6320571235483,
-            "endpoint_force_max_n": 13117.705559218717,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 125.85035910888497,
+            "endpoint_force_max_n": 2394.8338727051027,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7677996252636319
           }
         },
         {
@@ -3349,10 +3349,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3579.3068353703984,
-            "endpoint_force_max_n": 13049.35571495137,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 87.06095061393049,
+            "endpoint_force_max_n": 2270.968583475502,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8188718816802458
           }
         },
         {
@@ -3374,10 +3374,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3318.1023003528194,
-            "endpoint_force_max_n": 12973.039959070496,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 308.33624821760776,
+            "endpoint_force_max_n": 2125.4632647060685,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7106637431198393
           }
         },
         {
@@ -3399,10 +3399,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4142.111862706405,
-            "endpoint_force_max_n": 12891.2948510127,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 467.9142424839117,
+            "endpoint_force_max_n": 1927.857670875881,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.714417241643489
           }
         },
         {
@@ -3424,10 +3424,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3579.008656785527,
-            "endpoint_force_max_n": 12352.875720669015,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 237.80342090906004,
+            "endpoint_force_max_n": 1890.5800849836976,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7235948205742442
           }
         },
         {
@@ -3449,10 +3449,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3266.482338261135,
-            "endpoint_force_max_n": 12042.722167831012,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 256.7067008827801,
+            "endpoint_force_max_n": 2052.8186980685086,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7484851703301332
           }
         },
         {
@@ -3474,10 +3474,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3378.766149740075,
-            "endpoint_force_max_n": 12183.94889180021,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 175.32185763300404,
+            "endpoint_force_max_n": 2176.8293126182525,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7705154098250704
           }
         },
         {
@@ -3499,10 +3499,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3297.075533630981,
-            "endpoint_force_max_n": 12462.644777661086,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 106.16786563609149,
+            "endpoint_force_max_n": 2275.3596378266902,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7861877953723782
           }
         },
         {
@@ -3524,10 +3524,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3328.3047635552366,
-            "endpoint_force_max_n": 12643.73836171678,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 114.18863571909839,
+            "endpoint_force_max_n": 2348.7261848941816,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.799158763746767
           }
         },
         {
@@ -3549,10 +3549,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3585.2766572549804,
-            "endpoint_force_max_n": 14762.33623833615,
-            "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 121.62888443895747,
+            "endpoint_force_max_n": 2397.471946579076,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9608508173777464
           }
         },
         {
@@ -3574,10 +3574,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3930.23818576227,
-            "endpoint_force_max_n": 16455.088986791056,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 85.13071634091328,
+            "endpoint_force_max_n": 2425.8413402135698,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8434591480621365
           }
         },
         {
@@ -3599,10 +3599,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4110.8377146586345,
-            "endpoint_force_max_n": 18646.889925697127,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 98.58732409093264,
+            "endpoint_force_max_n": 2439.076642574233,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7889517871081677
           }
         },
         {
@@ -3624,10 +3624,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4373.840054851369,
-            "endpoint_force_max_n": 20727.390114258847,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 123.55465681005414,
+            "endpoint_force_max_n": 2454.9184867081326,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9072796231389602
           }
         },
         {
@@ -3649,10 +3649,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4743.511494198871,
-            "endpoint_force_max_n": 23174.33017335557,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 185.4874838590879,
+            "endpoint_force_max_n": 2483.8221912586614,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9043777401394422
           }
         },
         {
@@ -3674,10 +3674,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5038.675135314725,
-            "endpoint_force_max_n": 25577.194216886342,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 197.56089495373251,
+            "endpoint_force_max_n": 2516.2308786105123,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8988774535094863
           }
         },
         {
@@ -3699,10 +3699,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5246.262624396295,
-            "endpoint_force_max_n": 27755.141761629537,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 221.87361020595333,
+            "endpoint_force_max_n": 2544.939326885093,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0793285667131345
           }
         },
         {
@@ -3724,10 +3724,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5477.106247427996,
-            "endpoint_force_max_n": 29725.925966315273,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 228.59043239962324,
+            "endpoint_force_max_n": 2566.9083148832106,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1629316719325167
           }
         },
         {
@@ -3749,10 +3749,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5669.37788881147,
-            "endpoint_force_max_n": 31528.178177887206,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 232.01026354063072,
+            "endpoint_force_max_n": 2579.5627597902853,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.2134313579287572
           }
         },
         {
@@ -3774,10 +3774,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5818.961993799696,
-            "endpoint_force_max_n": 33166.30648255269,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 235.50557753126785,
+            "endpoint_force_max_n": 2584.553845368157,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.244687311343223
           }
         },
         {
@@ -3799,10 +3799,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5955.113000129557,
-            "endpoint_force_max_n": 34623.352389033986,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 200.70071989951882,
+            "endpoint_force_max_n": 2586.3632272068335,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8668403887769216
           }
         },
         {
@@ -3824,10 +3824,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6039.793999362072,
-            "endpoint_force_max_n": 35885.506436106174,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 208.16499133354515,
+            "endpoint_force_max_n": 2587.0865000704907,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.86159536048635
           }
         },
         {
@@ -3849,10 +3849,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6105.686641154603,
-            "endpoint_force_max_n": 36942.91004398824,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 212.56594930902176,
+            "endpoint_force_max_n": 2587.4081243106475,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8572532320150485
           }
         },
         {
@@ -3874,10 +3874,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6125.320638478174,
-            "endpoint_force_max_n": 37789.09262024039,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 214.52373536354392,
+            "endpoint_force_max_n": 2587.5613677219235,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9831171152303415
           }
         },
         {
@@ -3899,10 +3899,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6156.57567100204,
-            "endpoint_force_max_n": 38418.29035379187,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 205.47120146744564,
+            "endpoint_force_max_n": 2587.6299197113085,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.003059801766806
           }
         },
         {
@@ -3924,10 +3924,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6175.604653407195,
-            "endpoint_force_max_n": 38822.26720913054,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 186.69715522660735,
+            "endpoint_force_max_n": 2587.6410870941318,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.005659155606809
           }
         },
         {
@@ -3949,10 +3949,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6189.130281256739,
-            "endpoint_force_max_n": 38987.240567026114,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 162.75600745776106,
+            "endpoint_force_max_n": 2587.5941870469765,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9983473816672317
           }
         },
         {
@@ -3974,10 +3974,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6208.755390950855,
-            "endpoint_force_max_n": 38889.47934735873,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 139.569715320451,
+            "endpoint_force_max_n": 2587.4568467815366,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9639345634033027
           }
         },
         {
@@ -3999,10 +3999,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6276.9267705180455,
-            "endpoint_force_max_n": 38490.38109638775,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 135.47504442635082,
+            "endpoint_force_max_n": 2587.112551618352,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8585872595435247
           }
         },
         {
@@ -4024,10 +4024,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6352.045603588474,
-            "endpoint_force_max_n": 37731.39582317832,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 134.01728292051217,
+            "endpoint_force_max_n": 2586.1336501502924,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8645101702976474
           }
         },
         {
@@ -4049,10 +4049,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6461.031524022897,
-            "endpoint_force_max_n": 36524.91401619145,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 146.37144641191603,
+            "endpoint_force_max_n": 2582.656641158272,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8722585948729091
           }
         },
         {
@@ -4074,10 +4074,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6523.217514598717,
-            "endpoint_force_max_n": 34738.906537887844,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 203.54093803180683,
+            "endpoint_force_max_n": 2568.64264571228,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.188506903650985
           }
         },
         {
@@ -4099,10 +4099,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6578.320763134357,
-            "endpoint_force_max_n": 32301.97991817309,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 286.9997786678815,
+            "endpoint_force_max_n": 2535.963683234668,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.102424509330575
           }
         },
         {
@@ -4124,10 +4124,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6583.216261358741,
-            "endpoint_force_max_n": 29392.995504829418,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 363.5110724759653,
+            "endpoint_force_max_n": 2491.442927656796,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9026418536481366
           }
         },
         {
@@ -4149,10 +4149,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6325.1752233489515,
-            "endpoint_force_max_n": 29917.15332013121,
+            "residual_norm_nm": 461.02985098395965,
+            "endpoint_force_max_n": 2656.0411993238586,
             "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "normalized_fiber_length_max": 2.438541475132728
           }
         },
         {
@@ -4174,10 +4174,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6208.733285561484,
-            "endpoint_force_max_n": 23039.925514174,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 515.0441290223082,
+            "endpoint_force_max_n": 2371.8328097654744,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.109668364837603
           }
         },
         {
@@ -4199,10 +4199,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5944.89560498623,
-            "endpoint_force_max_n": 19952.08237784733,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 755.7886669935023,
+            "endpoint_force_max_n": 2293.1536657613783,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0080851811032328
           }
         }
       ]
@@ -4212,7 +4212,7 @@
       "frames": 53,
       "projected_demand_rms_nm": 535.6664616121468,
       "hill_success_frames": 53,
-      "hill_residual_rms_nm": 4703.399101807657,
+      "hill_residual_rms_nm": 488.9748189628111,
       "envelopes": {
         "1.0": {
           "residual_rms_nm": 458.0009033190828,
@@ -4243,10 +4243,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3393.535675958265,
-            "endpoint_force_max_n": 18387.344029303422,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 767.7379736656026,
+            "endpoint_force_max_n": 2445.256155788195,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5049652312420863
           }
         },
         {
@@ -4268,10 +4268,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3452.5397568037333,
-            "endpoint_force_max_n": 20863.50037327375,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 280.1823700954986,
+            "endpoint_force_max_n": 2489.154981536193,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.556152192710155
           }
         },
         {
@@ -4293,10 +4293,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3263.7420574116304,
-            "endpoint_force_max_n": 23536.960011434065,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 15.668343161082918,
+            "endpoint_force_max_n": 2523.6709757635604,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5729479585590171
           }
         },
         {
@@ -4318,10 +4318,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3182.504926229213,
-            "endpoint_force_max_n": 26253.51689171626,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 78.05611080630048,
+            "endpoint_force_max_n": 2546.6974677810476,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6156931017140632
           }
         },
         {
@@ -4343,10 +4343,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3223.100138227176,
-            "endpoint_force_max_n": 29035.297549414096,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 132.8496960243878,
+            "endpoint_force_max_n": 2559.2471041539375,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7151627832614815
           }
         },
         {
@@ -4368,10 +4368,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3405.3535576174354,
-            "endpoint_force_max_n": 31788.44373321201,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 87.33495486147633,
+            "endpoint_force_max_n": 2563.3803593460775,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.78583885227548
           }
         },
         {
@@ -4393,10 +4393,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3531.2439645981776,
-            "endpoint_force_max_n": 34272.04682534222,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 114.76690360086478,
+            "endpoint_force_max_n": 2561.980516086864,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8482386023577835
           }
         },
         {
@@ -4418,10 +4418,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3670.172632002013,
-            "endpoint_force_max_n": 36193.964851667755,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 124.13213729192094,
+            "endpoint_force_max_n": 2558.632306870709,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.886133447291821
           }
         },
         {
@@ -4443,10 +4443,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3801.25427485527,
-            "endpoint_force_max_n": 37313.442026797304,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 110.73785021626041,
+            "endpoint_force_max_n": 2557.813413051116,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8941206066723437
           }
         },
         {
@@ -4468,10 +4468,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3891.718017585485,
-            "endpoint_force_max_n": 37474.76621945177,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 51.82608234616295,
+            "endpoint_force_max_n": 2562.4976453384375,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.866295989334051
           }
         },
         {
@@ -4493,10 +4493,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3998.876323597166,
-            "endpoint_force_max_n": 36597.86786977336,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 40.44689983366998,
+            "endpoint_force_max_n": 2571.1037425051777,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.801396451298928
           }
         },
         {
@@ -4518,10 +4518,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4049.599489780479,
-            "endpoint_force_max_n": 34692.972776312075,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 52.22359495837921,
+            "endpoint_force_max_n": 2578.3121554181803,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7043456116855313
           }
         },
         {
@@ -4543,10 +4543,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4016.283860875047,
-            "endpoint_force_max_n": 31890.82216975641,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 101.33388465866649,
+            "endpoint_force_max_n": 2581.342499375629,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5889137541945482
           }
         },
         {
@@ -4568,10 +4568,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3903.5169276645374,
-            "endpoint_force_max_n": 28410.549326596127,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 148.28412904743283,
+            "endpoint_force_max_n": 2580.4048674380447,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5416689948439994
           }
         },
         {
@@ -4593,10 +4593,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3773.2949668481806,
-            "endpoint_force_max_n": 24404.680473489872,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 95.87448576661487,
+            "endpoint_force_max_n": 2571.0973035543298,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.533151286732654
           }
         },
         {
@@ -4618,10 +4618,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3622.0301644235683,
-            "endpoint_force_max_n": 19793.427302211447,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 74.17338064003822,
+            "endpoint_force_max_n": 2538.325675407614,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6066443839604
           }
         },
         {
@@ -4643,10 +4643,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3304.7289776302605,
-            "endpoint_force_max_n": 14289.374019713036,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 131.66944913073257,
+            "endpoint_force_max_n": 2474.111868871086,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.670891765954982
           }
         },
         {
@@ -4668,10 +4668,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3137.4682696722475,
-            "endpoint_force_max_n": 13155.595024651348,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 117.30836911674912,
+            "endpoint_force_max_n": 2377.23170994536,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7370084948749898
           }
         },
         {
@@ -4693,10 +4693,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3568.033536076064,
-            "endpoint_force_max_n": 13027.566388439733,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 83.62331943685895,
+            "endpoint_force_max_n": 2250.606878323541,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7873300013075013
           }
         },
         {
@@ -4718,10 +4718,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3292.9743627682365,
-            "endpoint_force_max_n": 12872.293453171384,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 245.46962390721103,
+            "endpoint_force_max_n": 2103.167874311697,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6953736764218108
           }
         },
         {
@@ -4743,10 +4743,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3816.1395544665606,
-            "endpoint_force_max_n": 12737.1901677883,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 197.966213724676,
+            "endpoint_force_max_n": 1879.5651761042097,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7027384139559414
           }
         },
         {
@@ -4768,10 +4768,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3694.9311166120942,
-            "endpoint_force_max_n": 12283.493920072118,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 311.43230099396567,
+            "endpoint_force_max_n": 1795.1686915244443,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7137575341658613
           }
         },
         {
@@ -4793,10 +4793,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3251.324308056325,
-            "endpoint_force_max_n": 11981.840332359801,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 255.7576677198571,
+            "endpoint_force_max_n": 1997.554855165416,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7406090406002428
           }
         },
         {
@@ -4818,10 +4818,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3294.6499509177556,
-            "endpoint_force_max_n": 12099.566964415042,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 209.09003203513186,
+            "endpoint_force_max_n": 2144.950400061736,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7664205794902261
           }
         },
         {
@@ -4843,10 +4843,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3248.7513801575346,
-            "endpoint_force_max_n": 12366.854401086708,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 135.46975575879787,
+            "endpoint_force_max_n": 2255.0337129150907,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7844358470551702
           }
         },
         {
@@ -4868,10 +4868,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3317.606627746325,
-            "endpoint_force_max_n": 12544.95162529551,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 129.95896685366066,
+            "endpoint_force_max_n": 2338.45940533796,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.798232680506237
           }
         },
         {
@@ -4893,10 +4893,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3594.84897002792,
-            "endpoint_force_max_n": 14738.532503831082,
-            "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 141.4698419980449,
+            "endpoint_force_max_n": 2395.389183320915,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9601005066658865
           }
         },
         {
@@ -4918,10 +4918,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3902.891874370781,
-            "endpoint_force_max_n": 16983.92487296317,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 113.68617167977564,
+            "endpoint_force_max_n": 2429.4991287392686,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9890006477184579
           }
         },
         {
@@ -4943,10 +4943,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4062.652671280762,
-            "endpoint_force_max_n": 25182.28315375277,
-            "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 107.33405285451123,
+            "endpoint_force_max_n": 2446.433398738886,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.2892949859171785
           }
         },
         {
@@ -4968,10 +4968,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4339.7317015346025,
-            "endpoint_force_max_n": 20959.279603993036,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 125.15393069924649,
+            "endpoint_force_max_n": 2464.3030345567076,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9056248081616578
           }
         },
         {
@@ -4993,10 +4993,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4715.840548268237,
-            "endpoint_force_max_n": 23348.85555663021,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 192.41268727523396,
+            "endpoint_force_max_n": 2496.5071282920626,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.90205882614945
           }
         },
         {
@@ -5018,10 +5018,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4965.207783373223,
-            "endpoint_force_max_n": 25727.13030306833,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 229.02343522639498,
+            "endpoint_force_max_n": 2531.8638131429298,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9692946239873284
           }
         },
         {
@@ -5043,10 +5043,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5213.099802076691,
-            "endpoint_force_max_n": 27865.85704950743,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 247.9882470939592,
+            "endpoint_force_max_n": 2560.9779510231006,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.1236315623381357
           }
         },
         {
@@ -5068,10 +5068,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5447.688661563644,
-            "endpoint_force_max_n": 29782.711974405473,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 259.2583294164011,
+            "endpoint_force_max_n": 2578.3919405986003,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.199377396919137
           }
         },
         {
@@ -5093,10 +5093,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5636.357222000158,
-            "endpoint_force_max_n": 31525.544480878394,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 260.0527125426515,
+            "endpoint_force_max_n": 2584.7191308102533,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.244225989956039
           }
         },
         {
@@ -5118,10 +5118,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5787.413021406257,
-            "endpoint_force_max_n": 33102.732117052445,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 207.95284184835657,
+            "endpoint_force_max_n": 2586.6675314017575,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.867945321060349
           }
         },
         {
@@ -5143,10 +5143,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5883.422030225387,
-            "endpoint_force_max_n": 34498.55978781093,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 202.63120856288893,
+            "endpoint_force_max_n": 2587.341484769306,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8618126463536067
           }
         },
         {
@@ -5168,10 +5168,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5963.8277598412615,
-            "endpoint_force_max_n": 35703.93579211661,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 200.43264570198886,
+            "endpoint_force_max_n": 2587.6120096786753,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8565715438495298
           }
         },
         {
@@ -5193,10 +5193,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6007.718076982345,
-            "endpoint_force_max_n": 36715.66799247802,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 205.09234270269528,
+            "endpoint_force_max_n": 2587.737416698891,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0172564562073942
           }
         },
         {
@@ -5218,10 +5218,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6064.804353425215,
-            "endpoint_force_max_n": 37531.94385145042,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 204.42026962437944,
+            "endpoint_force_max_n": 2587.797075082109,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0305710682517115
           }
         },
         {
@@ -5243,10 +5243,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6111.339686889949,
-            "endpoint_force_max_n": 38145.73311455619,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 198.86971083402975,
+            "endpoint_force_max_n": 2587.813905668471,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0324762749273013
           }
         },
         {
@@ -5268,10 +5268,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6150.240069865416,
-            "endpoint_force_max_n": 38540.553102883685,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 187.528733324881,
+            "endpoint_force_max_n": 2587.792184528806,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.028485240778483
           }
         },
         {
@@ -5293,10 +5293,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6181.6595909503185,
-            "endpoint_force_max_n": 38688.59626594138,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 169.27113244557992,
+            "endpoint_force_max_n": 2587.725483565904,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0187003337138525
           }
         },
         {
@@ -5318,10 +5318,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6209.864753638422,
-            "endpoint_force_max_n": 38549.282512272606,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 146.74032226886234,
+            "endpoint_force_max_n": 2587.5834452876375,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9909949807527711
           }
         },
         {
@@ -5343,10 +5343,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6275.48449949274,
-            "endpoint_force_max_n": 38066.502418140124,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 138.00985622287672,
+            "endpoint_force_max_n": 2587.25412478983,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.858346530876869
           }
         },
         {
@@ -5368,10 +5368,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6334.9044539737615,
-            "endpoint_force_max_n": 37161.81298275443,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 136.85212572708105,
+            "endpoint_force_max_n": 2586.3133803987866,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8649121272885856
           }
         },
         {
@@ -5393,10 +5393,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6379.4029082819425,
-            "endpoint_force_max_n": 35720.64080710881,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 142.60557791368055,
+            "endpoint_force_max_n": 2582.871401164575,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.005356554510828
           }
         },
         {
@@ -5418,10 +5418,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6372.731846735588,
-            "endpoint_force_max_n": 33573.006877337386,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 193.816170301248,
+            "endpoint_force_max_n": 2568.484457555397,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.183776308447382
           }
         },
         {
@@ -5443,10 +5443,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6298.240052406475,
-            "endpoint_force_max_n": 30743.105038553567,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 215.6113764632028,
+            "endpoint_force_max_n": 2536.3953430993474,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0848649658656626
           }
         },
         {
@@ -5468,10 +5468,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6163.0033295513185,
-            "endpoint_force_max_n": 27377.884632316724,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 223.5963474604511,
+            "endpoint_force_max_n": 2493.9776575498354,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9011433408581544
           }
         },
         {
@@ -5493,10 +5493,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 6011.804218697247,
-            "endpoint_force_max_n": 28473.51446693919,
+            "residual_norm_nm": 343.5313711223644,
+            "endpoint_force_max_n": 2545.0101517914054,
             "largest_force_muscle": "Subscapularis_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "normalized_fiber_length_max": 2.3930369474554958
           }
         },
         {
@@ -5518,10 +5518,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5262.779874894814,
-            "endpoint_force_max_n": 18979.166028332773,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 979.5842990384233,
+            "endpoint_force_max_n": 2384.9347010085476,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0533947046960206
           }
         },
         {
@@ -5543,10 +5543,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3775.238989545027,
-            "endpoint_force_max_n": 15187.967524371283,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 3090.2916101910487,
+            "endpoint_force_max_n": 2315.342851426626,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.920419899496005
           }
         }
       ]
@@ -5556,7 +5556,7 @@
       "frames": 62,
       "projected_demand_rms_nm": 304.59466652077907,
       "hill_success_frames": 62,
-      "hill_residual_rms_nm": 4328.207626484838,
+      "hill_residual_rms_nm": 263.5756850744787,
       "envelopes": {
         "1.0": {
           "residual_rms_nm": 202.648732818679,
@@ -5587,10 +5587,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3430.7895963683823,
-            "endpoint_force_max_n": 16886.64863765958,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 520.0275822448134,
+            "endpoint_force_max_n": 2333.0344282359392,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.4452267727624792
           }
         },
         {
@@ -5612,10 +5612,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3532.1186182023484,
-            "endpoint_force_max_n": 16941.303867545193,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 436.6304855910168,
+            "endpoint_force_max_n": 2376.1786675889393,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.471024025925632
           }
         },
         {
@@ -5637,10 +5637,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3410.360200403786,
-            "endpoint_force_max_n": 16860.6583812508,
-            "largest_force_muscle": "LatissimusDorsi_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 454.441848315089,
+            "endpoint_force_max_n": 2422.850293002344,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5270052909871281
           }
         },
         {
@@ -5662,10 +5662,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3091.1634454027926,
-            "endpoint_force_max_n": 20187.73387501948,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 281.33912609537316,
+            "endpoint_force_max_n": 2463.6887281330473,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5516950498811841
           }
         },
         {
@@ -5687,10 +5687,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 2818.702305542212,
-            "endpoint_force_max_n": 24281.108940012702,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 298.2434602087388,
+            "endpoint_force_max_n": 2493.9339004884796,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.5509215100344387
           }
         },
         {
@@ -5712,10 +5712,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 2871.2587863818208,
-            "endpoint_force_max_n": 28503.60502375899,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 145.27551210302792,
+            "endpoint_force_max_n": 2509.2544266939017,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7161750780357017
           }
         },
         {
@@ -5737,10 +5737,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3229.2886463796467,
-            "endpoint_force_max_n": 32614.523733661998,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 61.019950803772005,
+            "endpoint_force_max_n": 2504.089192406241,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.6824361291802161
           }
         },
         {
@@ -5762,10 +5762,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3120.5926204566485,
-            "endpoint_force_max_n": 36475.6217913502,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 158.17310931426852,
+            "endpoint_force_max_n": 2474.4896434663833,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7436624421511553
           }
         },
         {
@@ -5787,10 +5787,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3129.114944721081,
-            "endpoint_force_max_n": 40021.40759452089,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 121.55379430486103,
+            "endpoint_force_max_n": 2424.44047916524,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.760667558021508
           }
         },
         {
@@ -5812,10 +5812,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3160.142557414155,
-            "endpoint_force_max_n": 42665.80927590456,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 51.760277836650914,
+            "endpoint_force_max_n": 2367.178918878811,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7909309098691428
           }
         },
         {
@@ -5837,10 +5837,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3164.6588673153024,
-            "endpoint_force_max_n": 44186.41280203753,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 82.04254710903963,
+            "endpoint_force_max_n": 2321.1766144509998,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8129662190780325
           }
         },
         {
@@ -5862,10 +5862,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3170.7130054357863,
-            "endpoint_force_max_n": 44756.08389851696,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 121.61794268100667,
+            "endpoint_force_max_n": 2297.5003727863414,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8233312797269174
           }
         },
         {
@@ -5887,10 +5887,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3192.103877424316,
-            "endpoint_force_max_n": 44678.14002413263,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 152.5138478528827,
+            "endpoint_force_max_n": 2295.655673673738,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8253860433131
           }
         },
         {
@@ -5912,10 +5912,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3227.043660019303,
-            "endpoint_force_max_n": 44268.40622303202,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 163.2067438311833,
+            "endpoint_force_max_n": 2305.6993793123725,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.822443813826808
           }
         },
         {
@@ -5937,10 +5937,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3265.437974966565,
-            "endpoint_force_max_n": 43837.570832381854,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 153.6914925771074,
+            "endpoint_force_max_n": 2314.5656724435325,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8182021292319561
           }
         },
         {
@@ -5962,10 +5962,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3305.151771219642,
-            "endpoint_force_max_n": 43629.51692870519,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 138.9810370544541,
+            "endpoint_force_max_n": 2312.5545534789876,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8159181583303894
           }
         },
         {
@@ -5987,10 +5987,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3348.4505222361518,
-            "endpoint_force_max_n": 43728.878680034635,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 129.08721718571985,
+            "endpoint_force_max_n": 2296.3227538352685,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8169055921924386
           }
         },
         {
@@ -6012,10 +6012,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3406.777797944287,
-            "endpoint_force_max_n": 44038.95905756195,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 123.45830629882114,
+            "endpoint_force_max_n": 2268.24951137277,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.819996467066909
           }
         },
         {
@@ -6037,10 +6037,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3477.2553410089363,
-            "endpoint_force_max_n": 44372.03886150453,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 123.9687020861799,
+            "endpoint_force_max_n": 2234.003939775075,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8225499211310892
           }
         },
         {
@@ -6062,10 +6062,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3570.6687024092025,
-            "endpoint_force_max_n": 44578.36441113094,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 128.9472041439975,
+            "endpoint_force_max_n": 2199.9172450580095,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8221997538226709
           }
         },
         {
@@ -6087,10 +6087,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3686.2472839827783,
-            "endpoint_force_max_n": 44609.10570582048,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 135.2017341275771,
+            "endpoint_force_max_n": 2171.0021865089375,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8182905027473681
           }
         },
         {
@@ -6112,10 +6112,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3857.9671802100056,
-            "endpoint_force_max_n": 44493.43166651063,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 157.55716839516808,
+            "endpoint_force_max_n": 2149.7967140295855,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8112868183517299
           }
         },
         {
@@ -6137,10 +6137,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3994.988373154994,
-            "endpoint_force_max_n": 44287.15968863279,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 175.2628075183355,
+            "endpoint_force_max_n": 2136.0078381901712,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.802050109286396
           }
         },
         {
@@ -6162,10 +6162,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4034.7766902998337,
-            "endpoint_force_max_n": 44239.583512413294,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7444884123539295
+            "residual_norm_nm": 149.91815191704987,
+            "endpoint_force_max_n": 2116.1804344637526,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.79480398295263
           }
         },
         {
@@ -6187,10 +6187,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4015.297965051553,
-            "endpoint_force_max_n": 44311.091944331354,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7651896195385863
+            "residual_norm_nm": 128.66080020630378,
+            "endpoint_force_max_n": 2098.9062854765257,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.791540085858645
           }
         },
         {
@@ -6212,10 +6212,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4058.9000536858925,
-            "endpoint_force_max_n": 44318.132612973466,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.7874826830251562
+            "residual_norm_nm": 125.69313180410565,
+            "endpoint_force_max_n": 2089.4644672028144,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.7881650413935426
           }
         },
         {
@@ -6237,9 +6237,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4108.093110852853,
-            "endpoint_force_max_n": 44266.87782898617,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 142.1903121601663,
+            "endpoint_force_max_n": 2083.250974116649,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.8082876333041515
           }
         },
@@ -6262,9 +6262,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4143.621099079866,
-            "endpoint_force_max_n": 44170.072274504564,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 159.35003053385276,
+            "endpoint_force_max_n": 2076.625353459965,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.8270393249889778
           }
         },
@@ -6287,9 +6287,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4178.40193189476,
-            "endpoint_force_max_n": 44037.39088471281,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 168.23283987226077,
+            "endpoint_force_max_n": 2069.8107907335366,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.843879008948485
           }
         },
@@ -6312,9 +6312,9 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4214.225173050362,
-            "endpoint_force_max_n": 43874.96793942262,
-            "largest_force_muscle": "Rhomboideus_I",
+            "residual_norm_nm": 172.68247475289365,
+            "endpoint_force_max_n": 2064.4457660793855,
+            "largest_force_muscle": "DeltoideusScapula_M",
             "normalized_fiber_length_max": 1.8591166025030907
           }
         },
@@ -6337,10 +6337,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4250.555716100237,
-            "endpoint_force_max_n": 43687.577105321754,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.8730052517743239
+            "residual_norm_nm": 175.50533077934273,
+            "endpoint_force_max_n": 2061.494270154456,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8740982560523336
           }
         },
         {
@@ -6362,10 +6362,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4287.467807788106,
-            "endpoint_force_max_n": 43479.36635370269,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.8857198961379789
+            "residual_norm_nm": 177.22277096587325,
+            "endpoint_force_max_n": 2060.9239480476044,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.8927209497909636
           }
         },
         {
@@ -6387,10 +6387,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4325.761873269695,
-            "endpoint_force_max_n": 43253.40053513225,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.8973957672220176
+            "residual_norm_nm": 178.91245700710357,
+            "endpoint_force_max_n": 2062.227878388838,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9107358152270408
           }
         },
         {
@@ -6412,10 +6412,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4363.115779660869,
-            "endpoint_force_max_n": 43011.46158847633,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.908139334926436
+            "residual_norm_nm": 185.94231351932822,
+            "endpoint_force_max_n": 2064.9393409370864,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9279423394604391
           }
         },
         {
@@ -6437,10 +6437,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4410.139214746609,
-            "endpoint_force_max_n": 42754.46515657625,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9179896675280057
+            "residual_norm_nm": 210.09172691896032,
+            "endpoint_force_max_n": 2068.887490570894,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.944242176632355
           }
         },
         {
@@ -6462,10 +6462,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4461.624061547375,
-            "endpoint_force_max_n": 42486.78596124353,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.926905681345926
+            "residual_norm_nm": 229.27403303706362,
+            "endpoint_force_max_n": 2074.2014462950665,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9597114713338242
           }
         },
         {
@@ -6487,10 +6487,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4497.337346362618,
-            "endpoint_force_max_n": 42216.12664675733,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9347922292181325
+            "residual_norm_nm": 213.6297742925231,
+            "endpoint_force_max_n": 2081.1818669973636,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.9745630572250064
           }
         },
         {
@@ -6512,10 +6512,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4530.822433105614,
-            "endpoint_force_max_n": 41953.43308332344,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9415463695244177
+            "residual_norm_nm": 208.59312394384867,
+            "endpoint_force_max_n": 2090.2651967638817,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 1.988751643177961
           }
         },
         {
@@ -6537,10 +6537,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4575.069214958313,
-            "endpoint_force_max_n": 41710.22714025616,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9471158177568808
+            "residual_norm_nm": 215.55291699580752,
+            "endpoint_force_max_n": 2101.487041284376,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0021830828445015
           }
         },
         {
@@ -6562,10 +6562,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4620.853951826326,
-            "endpoint_force_max_n": 41495.478312097,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9515369386468788
+            "residual_norm_nm": 217.67749408899746,
+            "endpoint_force_max_n": 2114.672653327399,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0144891907368145
           }
         },
         {
@@ -6587,10 +6587,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4668.69678984642,
-            "endpoint_force_max_n": 41313.92833233286,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9549266568543815
+            "residual_norm_nm": 214.77655903074543,
+            "endpoint_force_max_n": 2129.3779037613876,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.024965505739067
           }
         },
         {
@@ -6612,10 +6612,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4718.386737188453,
-            "endpoint_force_max_n": 41165.95110935085,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.957449617150096
+            "residual_norm_nm": 210.93607887046133,
+            "endpoint_force_max_n": 2144.9648628064183,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0327435667918934
           }
         },
         {
@@ -6637,10 +6637,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4770.549805365757,
-            "endpoint_force_max_n": 41049.43559000177,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9597137704376493
+            "residual_norm_nm": 210.32296729174357,
+            "endpoint_force_max_n": 2160.7226273300985,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0371780213724677
           }
         },
         {
@@ -6662,10 +6662,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4824.996967322098,
-            "endpoint_force_max_n": 40961.318653944225,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9763795578910714
+            "residual_norm_nm": 214.4571920044738,
+            "endpoint_force_max_n": 2176.063852581241,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.038224490416253
           }
         },
         {
@@ -6687,10 +6687,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4880.415425903637,
-            "endpoint_force_max_n": 40899.47343495033,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9911912710007982
+            "residual_norm_nm": 220.94358192441265,
+            "endpoint_force_max_n": 2190.6067379019473,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0365410571722817
           }
         },
         {
@@ -6712,10 +6712,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4935.111126251136,
-            "endpoint_force_max_n": 40863.403768152144,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.003816621216112
+            "residual_norm_nm": 225.4735247510971,
+            "endpoint_force_max_n": 2204.154180186441,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0332386039499486
           }
         },
         {
@@ -6737,10 +6737,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4988.0014628218605,
-            "endpoint_force_max_n": 40853.805372229304,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.01310183142782
+            "residual_norm_nm": 223.9322446035201,
+            "endpoint_force_max_n": 2216.6060121578,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.02952625331724
           }
         },
         {
@@ -6762,10 +6762,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5038.875728545936,
-            "endpoint_force_max_n": 40871.65959159599,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.0189482210664678
+            "residual_norm_nm": 213.30289080426692,
+            "endpoint_force_max_n": 2227.860194510041,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.026501561400689
           }
         },
         {
@@ -6787,10 +6787,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5088.6987950810835,
-            "endpoint_force_max_n": 40917.252003731846,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.021300284995559
+            "residual_norm_nm": 191.43811231664222,
+            "endpoint_force_max_n": 2237.747112971004,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0250877889408745
           }
         },
         {
@@ -6812,10 +6812,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5140.649648179022,
-            "endpoint_force_max_n": 40989.5523028568,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.0219311994954863
+            "residual_norm_nm": 159.52774539585238,
+            "endpoint_force_max_n": 2245.9890427555815,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0260782654058422
           }
         },
         {
@@ -6837,10 +6837,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5201.453503585934,
-            "endpoint_force_max_n": 41085.9198883284,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.021639857132887
+            "residual_norm_nm": 123.54902014156372,
+            "endpoint_force_max_n": 2252.184076858451,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0302318227389518
           }
         },
         {
@@ -6862,10 +6862,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5276.210031397884,
-            "endpoint_force_max_n": 41202.51651899312,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.0218553762883076
+            "residual_norm_nm": 92.08461533014291,
+            "endpoint_force_max_n": 2255.80384291074,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0383384022744
           }
         },
         {
@@ -6887,10 +6887,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5380.656137948419,
-            "endpoint_force_max_n": 41345.8829029494,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.022856744807176
+            "residual_norm_nm": 85.88885376802119,
+            "endpoint_force_max_n": 2256.164666471944,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.051340820548711
           }
         },
         {
@@ -6912,10 +6912,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5509.4686961740035,
-            "endpoint_force_max_n": 41492.17093038626,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.027279665844751
+            "residual_norm_nm": 100.79784477814682,
+            "endpoint_force_max_n": 2253.0094266575434,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0698023756543127
           }
         },
         {
@@ -6937,10 +6937,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5620.232008471752,
-            "endpoint_force_max_n": 41639.934816191206,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.033410224315064
+            "residual_norm_nm": 115.07180108954395,
+            "endpoint_force_max_n": 2244.905996358475,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0932728916265098
           }
         },
         {
@@ -6962,10 +6962,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5691.148111526524,
-            "endpoint_force_max_n": 41725.98524011359,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.041176264683464
+            "residual_norm_nm": 142.0387728427985,
+            "endpoint_force_max_n": 2231.3169406737666,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.115271031229614
           }
         },
         {
@@ -6987,10 +6987,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5731.537543266721,
-            "endpoint_force_max_n": 41648.2475213151,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.0480387937253193
+            "residual_norm_nm": 188.3460015588133,
+            "endpoint_force_max_n": 2212.4536566446345,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.127214314783258
           }
         },
         {
@@ -7012,10 +7012,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5804.992724076129,
-            "endpoint_force_max_n": 41272.93581772016,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.04864698485799
+            "residual_norm_nm": 174.6930156875189,
+            "endpoint_force_max_n": 2186.2848713856056,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.122534516953093
           }
         },
         {
@@ -7037,10 +7037,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5966.915899806231,
-            "endpoint_force_max_n": 40499.73719819686,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 2.032202757707021
+            "residual_norm_nm": 413.668017146829,
+            "endpoint_force_max_n": 2146.257795065235,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.103548914952183
           }
         },
         {
@@ -7062,10 +7062,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 5835.440373638748,
-            "endpoint_force_max_n": 39452.2998494143,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9562899046858395
+            "residual_norm_nm": 649.9124933626882,
+            "endpoint_force_max_n": 2082.2308625059723,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.0791776414203564
           }
         },
         {
@@ -7087,10 +7087,10 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 4687.177362712397,
-            "endpoint_force_max_n": 38630.68571180376,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9490729269667542
+            "residual_norm_nm": 421.45190288375517,
+            "endpoint_force_max_n": 1977.8050309879613,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.058572353165835
           }
         },
         {
@@ -7112,14 +7112,14 @@
           },
           "hill_equilibrium_interval": {
             "status": "success",
-            "residual_norm_nm": 3688.6786107454836,
-            "endpoint_force_max_n": 38811.14510015746,
-            "largest_force_muscle": "Rhomboideus_I",
-            "normalized_fiber_length_max": 1.9509323972324755
+            "residual_norm_nm": 1111.341955121831,
+            "endpoint_force_max_n": 1812.897037522415,
+            "largest_force_muscle": "DeltoideusScapula_M",
+            "normalized_fiber_length_max": 2.039138309814255
           }
         }
       ]
     }
   ],
-  "scope": "Constrained generalized-force screen using source muscle moment arms.\n\nFmax and 1.4 Fmax envelopes are diagnostics, NOT full Hill-muscle feasibility.\nNo ball payload, tendon state, activation dynamics or glenohumeral stability gate.\n"
+  "scope": "Constrained generalized-force screen using source muscle moment arms.\n\nSource Fmax and source eccentric active-force envelopes are diagnostics.\nMillard equilibrium endpoints are evaluated separately, but no continuous\ntendon/activation dynamics, ball payload or glenohumeral stability gate is solved.\n"
 }

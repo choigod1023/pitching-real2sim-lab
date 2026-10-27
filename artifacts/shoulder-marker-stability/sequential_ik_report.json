@@ -1,0 +1,125 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "arm_rmse_mm": 10.74997996822513,
+      "wrist_rmse_mm": 5.6499830499848995,
+      "torso_rmse_mm": 19.33287908293139,
+      "ac_closure_max_mm": 0.014181007150321006,
+      "orientation_rmse_deg": {
+        "humerus": 41.387534989220285,
+        "radius": 13.112513546655354,
+        "hand": 18.206610047211615
+      },
+      "max_coordinate_step_rad_or_m": 0.22921507144540154,
+      "bound_hit_frames": {
+        "scapula_upward_rot": 30,
+        "axial_rot": 10
+      },
+      "frames": 62,
+      "max_nfev": 25,
+      "before_orientation_rmse_deg": {
+        "humerus": 43.519977923284614,
+        "radius": 38.89455025720873,
+        "hand": 62.64027057827215
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "arm_rmse_mm": 10.400581929980813,
+      "wrist_rmse_mm": 7.592275808876383,
+      "torso_rmse_mm": 18.388141730507567,
+      "ac_closure_max_mm": 0.011220709869921859,
+      "orientation_rmse_deg": {
+        "humerus": 39.06531899396894,
+        "radius": 16.809971594558604,
+        "hand": 22.13747879440307
+      },
+      "max_coordinate_step_rad_or_m": 0.2584735066330879,
+      "bound_hit_frames": {
+        "axial_rot": 23
+      },
+      "frames": 58,
+      "max_nfev": 26,
+      "before_orientation_rmse_deg": {
+        "humerus": 39.87855293653682,
+        "radius": 27.62011690476359,
+        "hand": 30.109303497644277
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "arm_rmse_mm": 10.475781534445609,
+      "wrist_rmse_mm": 7.167477612355306,
+      "torso_rmse_mm": 18.432671128529194,
+      "ac_closure_max_mm": 0.01129526081581018,
+      "orientation_rmse_deg": {
+        "humerus": 38.159030306200236,
+        "radius": 17.135755421531968,
+        "hand": 22.301017833089986
+      },
+      "max_coordinate_step_rad_or_m": 0.2637746650288306,
+      "bound_hit_frames": {
+        "axial_rot": 22
+      },
+      "frames": 58,
+      "max_nfev": 23,
+      "before_orientation_rmse_deg": {
+        "humerus": 38.94725048247713,
+        "radius": 26.784546759756196,
+        "hand": 28.66227884294128
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "arm_rmse_mm": 10.354482095050631,
+      "wrist_rmse_mm": 7.249837603471436,
+      "torso_rmse_mm": 17.780336070440033,
+      "ac_closure_max_mm": 0.01132071513390177,
+      "orientation_rmse_deg": {
+        "humerus": 39.35372725587572,
+        "radius": 17.059169094859822,
+        "hand": 22.72979622590931
+      },
+      "max_coordinate_step_rad_or_m": 0.26348126627762647,
+      "bound_hit_frames": {
+        "axial_rot": 22
+      },
+      "frames": 57,
+      "max_nfev": 25,
+      "before_orientation_rmse_deg": {
+        "humerus": 40.212235302036795,
+        "radius": 25.34484616276611,
+        "hand": 28.709393563921715
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "arm_rmse_mm": 10.297972718252023,
+      "wrist_rmse_mm": 6.725973908674827,
+      "torso_rmse_mm": 19.3765720974111,
+      "ac_closure_max_mm": 0.01473097608472145,
+      "orientation_rmse_deg": {
+        "humerus": 41.72189186558648,
+        "radius": 16.10742227720055,
+        "hand": 22.09448859937422
+      },
+      "max_coordinate_step_rad_or_m": 0.24104201354004684,
+      "bound_hit_frames": {
+        "scapula_upward_rot": 30,
+        "axial_rot": 17
+      },
+      "frames": 66,
+      "max_nfev": 23,
+      "before_orientation_rmse_deg": {
+        "humerus": 44.19871975171506,
+        "radius": 44.57500661833234,
+        "hand": 74.87281397015117
+      }
+    }
+  ],
+  "orientation_weight_deg": 10.0,
+  "training_registration_pitch": "3034_1",
+  "training_registration_sample": 0,
+  "scope": "Skin-frame temporal orientation transfer, not independent anatomical calibration. Source wrist remains welded; all original ranges/Fmax/geometry/muscle lengths retained."
+}
