@@ -1,0 +1,751 @@
+{
+  "data": {
+    "metadata_pitches": 411,
+    "metadata_athletes": 100,
+    "checked_pitches": [
+      {
+        "pitch": "3034_1",
+        "user": 2,
+        "mass_kg": 93.8952,
+        "height_m": 1.8542,
+        "filename": "000002_003034_73_207_002_FF_809.c3d",
+        "c3d_sha256": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1",
+        "observed_speed_kmh": 130.19592960000003,
+        "c3d_rate_hz": 360.0,
+        "c3d_units": "m",
+        "frames": 62,
+        "dt_min": 0.0027770491803278397,
+        "rotation_orthogonality_max": 2.1094237467877974e-15,
+        "rotation_det_min": 0.999999999999998,
+        "scapular_landmarks_present": {
+          "AA": false,
+          "TS": false,
+          "AI": false
+        },
+        "scope": "Marker/metadata identity is verified; BR detector and radar location/time remain unconfirmed."
+      },
+      {
+        "pitch": "3034_2",
+        "user": 2,
+        "mass_kg": 93.8952,
+        "height_m": 1.8542,
+        "filename": "000002_003034_73_207_005_FF_814.c3d",
+        "c3d_sha256": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c",
+        "observed_speed_kmh": 131.0006016,
+        "c3d_rate_hz": 360.0,
+        "c3d_units": "m",
+        "frames": 58,
+        "dt_min": 0.002777192982456045,
+        "rotation_orthogonality_max": 2.1094237467877974e-15,
+        "rotation_det_min": 0.999999999999998,
+        "scapular_landmarks_present": {
+          "AA": false,
+          "TS": false,
+          "AI": false
+        },
+        "scope": "Marker/metadata identity is verified; BR detector and radar location/time remain unconfirmed."
+      },
+      {
+        "pitch": "3034_3",
+        "user": 2,
+        "mass_kg": 93.8952,
+        "height_m": 1.8542,
+        "filename": "000002_003034_73_207_006_FF_803.c3d",
+        "c3d_sha256": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757",
+        "observed_speed_kmh": 129.23032320000002,
+        "c3d_rate_hz": 360.0,
+        "c3d_units": "m",
+        "frames": 58,
+        "dt_min": 0.002777192982456045,
+        "rotation_orthogonality_max": 2.1094237467877974e-15,
+        "rotation_det_min": 0.999999999999998,
+        "scapular_landmarks_present": {
+          "AA": false,
+          "TS": false,
+          "AI": false
+        },
+        "scope": "Marker/metadata identity is verified; BR detector and radar location/time remain unconfirmed."
+      },
+      {
+        "pitch": "3034_4",
+        "user": 2,
+        "mass_kg": 93.8952,
+        "height_m": 1.8542,
+        "filename": "000002_003034_73_207_008_FF_798.c3d",
+        "c3d_sha256": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053",
+        "observed_speed_kmh": 128.4256512,
+        "c3d_rate_hz": 360.0,
+        "c3d_units": "m",
+        "frames": 57,
+        "dt_min": 0.002778571428571297,
+        "rotation_orthogonality_max": 2.1094237467877974e-15,
+        "rotation_det_min": 0.999999999999998,
+        "scapular_landmarks_present": {
+          "AA": false,
+          "TS": false,
+          "AI": false
+        },
+        "scope": "Marker/metadata identity is verified; BR detector and radar location/time remain unconfirmed."
+      },
+      {
+        "pitch": "3034_5",
+        "user": 2,
+        "mass_kg": 93.8952,
+        "height_m": 1.8542,
+        "filename": "000002_003034_73_207_011_FF_799.c3d",
+        "c3d_sha256": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1",
+        "observed_speed_kmh": 128.5865856,
+        "c3d_rate_hz": 360.0,
+        "c3d_units": "m",
+        "frames": 66,
+        "dt_min": 0.0027784615384613964,
+        "rotation_orthogonality_max": 1.9984014443252818e-15,
+        "rotation_det_min": 0.9999999999999979,
+        "scapular_landmarks_present": {
+          "AA": false,
+          "TS": false,
+          "AI": false
+        },
+        "scope": "Marker/metadata identity is verified; BR detector and radar location/time remain unconfirmed."
+      }
+    ],
+    "body_count": 8,
+    "muscle_count": 64,
+    "missing_body_references": [],
+    "units": {
+      "mph_to_kmh": 1.609344,
+      "m_s_to_kmh": 3.6,
+      "ft_to_m": 0.3048,
+      "degree_to_rad": 0.017453292519943295
+    },
+    "performance_validation": "No athlete intervention or independently validated joint-change-to-ball-performance prediction."
+  },
+  "formula_checks": {
+    "reports": [
+      {
+        "pitch": "3034_1",
+        "sample": 2,
+        "muscles": 47,
+        "constraint_velocity_norm": 2.3379582398587953e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.004784719803521362,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.004781109020570948,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.004781108909826201,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.004781109044440743,
+            "largest_error_muscle": "Supraspinatus_A"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.004781109044440743,
+        "largest_error_muscle": "Supraspinatus_A",
+        "generalized_power_w": 0.8540004946549671,
+        "path_contraction_power_w": 0.854000494654967,
+        "power_difference_w": 1.1102230246251565e-16,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_1",
+        "sample": 31,
+        "muscles": 47,
+        "constraint_velocity_norm": 7.099661806259485e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0018679171365052743,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.0018679171981781633,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0018679172199662902,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0018679168896749403,
+            "largest_error_muscle": "Infraspinatus_S"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0018679168896749403,
+        "largest_error_muscle": "Infraspinatus_S",
+        "generalized_power_w": 4.760982467933452,
+        "path_contraction_power_w": 4.76098246793344,
+        "power_difference_w": 1.2434497875801753e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_1",
+        "sample": 59,
+        "muscles": 47,
+        "constraint_velocity_norm": 1.3986208025063007e-17,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0013932423442604548,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.0013932423252478855,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.001393242323027439,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0013932422175562521,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0013932422175562521,
+        "largest_error_muscle": "TrapeziusScapula_I",
+        "generalized_power_w": 0.9144835411005329,
+        "path_contraction_power_w": 0.914483541100531,
+        "power_difference_w": 1.887379141862766e-15,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_2",
+        "sample": 2,
+        "muscles": 47,
+        "constraint_velocity_norm": 1.399274637905953e-17,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0015537923529601776,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.017496083085736264,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0008980223627717532,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0008980221990138571,
+            "largest_error_muscle": "SUP"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0008980221990138571,
+        "largest_error_muscle": "SUP",
+        "generalized_power_w": 1.1397203032545384,
+        "path_contraction_power_w": 1.1397203032545542,
+        "power_difference_w": 1.5765166949677223e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_2",
+        "sample": 29,
+        "muscles": 47,
+        "constraint_velocity_norm": 1.9027670904586946e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.007642300376980743,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.007642300277615782,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0076422999756351195,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.007642300124127449,
+            "largest_error_muscle": "Subscapularis_I"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.007642300124127449,
+        "largest_error_muscle": "Subscapularis_I",
+        "generalized_power_w": 3.2681718942855613,
+        "path_contraction_power_w": 3.2681718942855937,
+        "power_difference_w": 3.241851231905457e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_2",
+        "sample": 55,
+        "muscles": 47,
+        "constraint_velocity_norm": 7.217888169571747e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0011995904169230629,
+            "largest_error_muscle": "Subscapularis_M"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.0011995904182969639,
+            "largest_error_muscle": "Subscapularis_M"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0011995904570159918,
+            "largest_error_muscle": "Subscapularis_M"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0011995900531723666,
+            "largest_error_muscle": "Subscapularis_M"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0011995900531723666,
+        "largest_error_muscle": "Subscapularis_M",
+        "generalized_power_w": 1.49509801530404,
+        "path_contraction_power_w": 1.4950980153040703,
+        "power_difference_w": 3.019806626980426e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_3",
+        "sample": 2,
+        "muscles": 47,
+        "constraint_velocity_norm": 1.5630218348294603e-17,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0018908653286542655,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.001890863910774563,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0018908638977294424,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0018908639171583454,
+            "largest_error_muscle": "Supraspinatus_A"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0018908639171583454,
+        "largest_error_muscle": "Supraspinatus_A",
+        "generalized_power_w": 1.2737921624331565,
+        "path_contraction_power_w": 1.2737921624331663,
+        "power_difference_w": 9.769962616701378e-15,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_3",
+        "sample": 29,
+        "muscles": 47,
+        "constraint_velocity_norm": 7.788164642740293e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.008768432971559489,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.00876843166174612,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.008768431580144726,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.008768428969732841,
+            "largest_error_muscle": "Subscapularis_I"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.008768428969732841,
+        "largest_error_muscle": "Subscapularis_I",
+        "generalized_power_w": 3.3015695445052087,
+        "path_contraction_power_w": 3.3015695445051914,
+        "power_difference_w": 1.7319479184152442e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_3",
+        "sample": 55,
+        "muscles": 47,
+        "constraint_velocity_norm": 8.687159335639635e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0014232564382594703,
+            "largest_error_muscle": "Subscapularis_M"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.0014232564409517611,
+            "largest_error_muscle": "Subscapularis_M"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0014232563433909128,
+            "largest_error_muscle": "Subscapularis_M"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0014232558382394366,
+            "largest_error_muscle": "Subscapularis_M"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0014232558382394366,
+        "largest_error_muscle": "Subscapularis_M",
+        "generalized_power_w": 1.5905634124981536,
+        "path_contraction_power_w": 1.5905634124981407,
+        "power_difference_w": 1.2878587085651816e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_4",
+        "sample": 2,
+        "muscles": 47,
+        "constraint_velocity_norm": 1.4014335379724142e-17,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0008946105643437682,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.0008946105630670117,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0008946106103208792,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0008946106901181591,
+            "largest_error_muscle": "SUP"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0008946106901181591,
+        "largest_error_muscle": "SUP",
+        "generalized_power_w": 1.3558411529617223,
+        "path_contraction_power_w": 1.3558411529616834,
+        "power_difference_w": 3.885780586188048e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_4",
+        "sample": 28,
+        "muscles": 47,
+        "constraint_velocity_norm": 7.536569977896638e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.009837223595660586,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.00983721944144195,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.009837219009426416,
+            "largest_error_muscle": "Subscapularis_I"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0098372249227518,
+            "largest_error_muscle": "Subscapularis_I"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0098372249227518,
+        "largest_error_muscle": "Subscapularis_I",
+        "generalized_power_w": 3.2486941046903346,
+        "path_contraction_power_w": 3.2486941046903115,
+        "power_difference_w": 2.3092638912203256e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_4",
+        "sample": 54,
+        "muscles": 47,
+        "constraint_velocity_norm": 7.181969932691308e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0011149925526845127,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.0011149925534061577,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0011149925620103861,
+            "largest_error_muscle": "SUP"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0011149924565391988,
+            "largest_error_muscle": "SUP"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0011149924565391988,
+        "largest_error_muscle": "SUP",
+        "generalized_power_w": 1.2965988446561352,
+        "path_contraction_power_w": 1.296598844656137,
+        "power_difference_w": 1.7763568394002505e-15,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_5",
+        "sample": 2,
+        "muscles": 47,
+        "constraint_velocity_norm": 2.016700286963973e-17,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0011765613106110451,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.001176561321678581,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0011765613231357486,
+            "largest_error_muscle": "Supraspinatus_A"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0011765612232156764,
+            "largest_error_muscle": "Supraspinatus_A"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0011765612232156764,
+        "largest_error_muscle": "Supraspinatus_A",
+        "generalized_power_w": 0.5747461137800858,
+        "path_contraction_power_w": 0.5747461137800776,
+        "power_difference_w": 8.215650382226158e-15,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_5",
+        "sample": 33,
+        "muscles": 47,
+        "constraint_velocity_norm": 1.4247258139726136e-17,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.001990860569716896,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.001990860859401839,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.0019908608836879675,
+            "largest_error_muscle": "Infraspinatus_S"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.001990860685235602,
+            "largest_error_muscle": "Infraspinatus_S"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.001990860685235602,
+        "largest_error_muscle": "Infraspinatus_S",
+        "generalized_power_w": 4.791177645690131,
+        "path_contraction_power_w": 4.791177645690113,
+        "power_difference_w": 1.7763568394002505e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      },
+      {
+        "pitch": "3034_5",
+        "sample": 63,
+        "muscles": 47,
+        "constraint_velocity_norm": 7.28596766964653e-18,
+        "epsilon_sweep": [
+          {
+            "epsilon_s": 0.001,
+            "max_error_m_s": 0.0026623322732966933,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          },
+          {
+            "epsilon_s": 0.0001,
+            "max_error_m_s": 0.002662332211124204,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          },
+          {
+            "epsilon_s": 1e-05,
+            "max_error_m_s": 0.00266233220418531,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          },
+          {
+            "epsilon_s": 1e-06,
+            "max_error_m_s": 0.0026623321431230437,
+            "largest_error_muscle": "TrapeziusScapula_I"
+          }
+        ],
+        "max_path_derivative_error_m_s": 0.0026623321431230437,
+        "largest_error_muscle": "TrapeziusScapula_I",
+        "generalized_power_w": 1.870227905622891,
+        "path_contraction_power_w": 1.8702279056229107,
+        "power_difference_w": 1.9761969838327786e-14,
+        "scope": "Synthetic small tangent test velocity and test force, not actual athlete effort."
+      }
+    ]
+  },
+  "wrapping_control": {
+    "scope": "One-state numerical control; disabling wraps is NOT an anatomical correction and is not adopted.",
+    "rows": [
+      {
+        "condition": "wrapped",
+        "path_speed_m_s": 0.002517632962432074,
+        "finite_difference_speed_m_s": -0.007319586479009876,
+        "body_station_velocity_error_m_s": 1.6538422986775533e-12,
+        "constraint_velocity_norm": 7.536569977896638e-18
+      },
+      {
+        "condition": "wrapping_disabled_diagnostic",
+        "path_speed_m_s": -0.0006124537743722749,
+        "finite_difference_speed_m_s": -0.0006124537742235869,
+        "body_station_velocity_error_m_s": 1.6538422986775533e-12,
+        "constraint_velocity_norm": 7.536569977896638e-18
+      }
+    ]
+  },
+  "path_derivative_gate": {
+    "passed": false,
+    "missing_evidence": false,
+    "engineering_tolerance_m_s": 0.0001,
+    "failed_states": [
+      {
+        "pitch": "3034_1",
+        "sample": 2,
+        "max_error_m_s": 0.004784719803521362
+      },
+      {
+        "pitch": "3034_1",
+        "sample": 31,
+        "max_error_m_s": 0.0018679172199662902
+      },
+      {
+        "pitch": "3034_1",
+        "sample": 59,
+        "max_error_m_s": 0.0013932423442604548
+      },
+      {
+        "pitch": "3034_2",
+        "sample": 2,
+        "max_error_m_s": 0.017496083085736264
+      },
+      {
+        "pitch": "3034_2",
+        "sample": 29,
+        "max_error_m_s": 0.007642300376980743
+      },
+      {
+        "pitch": "3034_2",
+        "sample": 55,
+        "max_error_m_s": 0.0011995904570159918
+      },
+      {
+        "pitch": "3034_3",
+        "sample": 2,
+        "max_error_m_s": 0.0018908653286542655
+      },
+      {
+        "pitch": "3034_3",
+        "sample": 29,
+        "max_error_m_s": 0.008768432971559489
+      },
+      {
+        "pitch": "3034_3",
+        "sample": 55,
+        "max_error_m_s": 0.0014232564409517611
+      },
+      {
+        "pitch": "3034_4",
+        "sample": 2,
+        "max_error_m_s": 0.0008946106901181591
+      },
+      {
+        "pitch": "3034_4",
+        "sample": 28,
+        "max_error_m_s": 0.0098372249227518
+      },
+      {
+        "pitch": "3034_4",
+        "sample": 54,
+        "max_error_m_s": 0.0011149925620103861
+      },
+      {
+        "pitch": "3034_5",
+        "sample": 2,
+        "max_error_m_s": 0.0011765613231357486
+      },
+      {
+        "pitch": "3034_5",
+        "sample": 33,
+        "max_error_m_s": 0.0019908608836879675
+      },
+      {
+        "pitch": "3034_5",
+        "sample": 63,
+        "max_error_m_s": 0.0026623322732966933
+      }
+    ],
+    "scope": "Derivative consistency for synthetic tangent velocities; not athlete measurement precision."
+  },
+  "constraint_mean": {
+    "original": 134.3640862602844,
+    "consistent": 136.23744271941916
+  },
+  "optimization_eligible": false,
+  "athlete_performance_improvement_demonstrated": false,
+  "reasons": [
+    "Wrapped path length/velocity disagreement",
+    "Large internal force-allocation residual",
+    "Unvalidated continuous muscle and hand-ball release dynamics",
+    "No athlete intervention validation"
+  ]
+}
