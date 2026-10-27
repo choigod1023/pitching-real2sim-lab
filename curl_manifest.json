@@ -1,0 +1,44 @@
+{
+  "initial_state_checks": [
+    {
+      "aligned": false,
+      "curl_deg": 0,
+      "initial_q_difference": 0.0,
+      "initial_v_difference": 0.0
+    },
+    {
+      "aligned": true,
+      "curl_deg": 0,
+      "initial_q_difference": 0.0,
+      "initial_v_difference": 0.0
+    },
+    {
+      "aligned": true,
+      "curl_deg": -10,
+      "initial_q_difference": 0.0,
+      "initial_v_difference": 0.0
+    },
+    {
+      "aligned": true,
+      "curl_deg": -5,
+      "initial_q_difference": 0.0,
+      "initial_v_difference": 0.0
+    },
+    {
+      "aligned": true,
+      "curl_deg": 5,
+      "initial_q_difference": 0.0,
+      "initial_v_difference": 0.0
+    },
+    {
+      "aligned": true,
+      "curl_deg": 10,
+      "initial_q_difference": 0.0,
+      "initial_v_difference": 0.0
+    }
+  ],
+  "sha256": {
+    "CONTACT_CURL_PROTOCOL.md": "a158307d8aaf07b12bb865781f74ab0f77fdedcba4d1a4990f504a44deb08cb9",
+    "curl_pitch_results.json": "7eb8bb171ddbb561aebd87d6bed3844a0b133089f7feea8ffc027d72392ff7b5"
+  }
+}
