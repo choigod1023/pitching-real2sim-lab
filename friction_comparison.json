@@ -1,0 +1,227 @@
+{
+  "old_range_kmh": [
+    119.97266753633238,
+    135.29288771390821
+  ],
+  "new_matched_mu06_range_kmh": [
+    84.13072760676764,
+    87.64512981343175
+  ],
+  "new_all_mu_range_kmh": [
+    83.53900401842132,
+    89.61432591431142
+  ],
+  "original_nominal_speed_kmh": 127.8867816625341,
+  "new_nominal_speed_kmh": 85.71893290616093,
+  "original_nominal_record_gap_kmh": 0.5388695374658994,
+  "new_nominal_record_gap_kmh": 42.706718293839074,
+  "record_speed_kmh": 128.4256512,
+  "nominal": {
+    "stiffness": 10000.0,
+    "release_ms": 2.0,
+    "mu": 0.6,
+    "substeps": 4,
+    "no_contact": false,
+    "speed_kmh": 85.71893290616093,
+    "spin_rpm": 399.43901520354655,
+    "ball_velocity_m_s": [
+      14.539016285573215,
+      -11.216652032340756,
+      15.157790707352193
+    ],
+    "initial_ball_velocity_m_s": [
+      13.839259152625122,
+      -11.352017820255941,
+      14.321799037567178
+    ],
+    "linear_impulse_residual_ns": [
+      1.4606845799569612e-07,
+      -1.727070046142476e-07,
+      9.531828649433916e-07
+    ],
+    "angular_impulse_residual_nms": [
+      5.8738485256282225e-09,
+      -1.7007720847124486e-08,
+      -4.102280653898744e-09
+    ],
+    "initial_spin_rpm": 610.3820909962246,
+    "spin_vector_rad_s": [
+      30.41634703628341,
+      11.467746425575065,
+      26.32517625061323
+    ],
+    "contact_fraction": 0.32514450867052025,
+    "last_contact_ms": 9.762967094262276,
+    "max_penetration_mm": 7.017581191695155,
+    "peak_net_force_n": 38.05038151297958,
+    "peak_pad_force_n": 27.364546169757975,
+    "impulse_ns": [
+      0.10146463820901554,
+      0.019628211954706543,
+      0.16392910169115107
+    ],
+    "angular_impulse_nms": [
+      0.001112095130930334,
+      -0.0033115086785636383,
+      -0.00022354271711543726
+    ],
+    "loss_j": 0.5344057578388816,
+    "work_positive_j": [
+      2.4197154105560124,
+      36.55769575996461,
+      0.21004144529170027,
+      0.0908432103618293,
+      9.31810495146907,
+      98.87823201139213,
+      8.207289035561658,
+      1.735542564158041,
+      0.24315470379837642,
+      0.014260081529319485,
+      6.604862561255241
+    ],
+    "work_negative_j": [
+      23.09331790193065,
+      0.0,
+      3.1550327544728143,
+      15.829389165572177,
+      1.4102561235986515,
+      3.2739301874367523,
+      28.74522033365503,
+      3.944250299982557,
+      0.10144501834707727,
+      5.921936274629985,
+      0.4738227203264543
+    ],
+    "initial_energy_j": 359.04168742195884,
+    "final_energy_j": 436.8384338359424,
+    "energy_balance_residual_j": 1.1216436603178614e-05
+  },
+  "new_spin_range_rpm": [
+    399.4277250921319,
+    843.6835969200107
+  ],
+  "new_contact_fraction_range": [
+    0.29263005780346824,
+    0.33815028901734107
+  ],
+  "new_penetration_range_mm": [
+    5.180167110808445,
+    8.359390889672525
+  ],
+  "new_energy_residual_range_j": [
+    1.0525571340069817e-05,
+    1.4250971689167002e-05
+  ],
+  "convergence": [
+    {
+      "stiffness": 10000.0,
+      "release_ms": 2.0,
+      "mu": 0.6,
+      "speed_difference_kmh": -1.681027157474091e-07,
+      "energy_residual_j": 3.376226850315689e-06
+    },
+    {
+      "stiffness": 5000.0,
+      "release_ms": 1.0,
+      "mu": 0.2,
+      "speed_difference_kmh": 8.90820231802536e-07,
+      "energy_residual_j": 2.9558742279944816e-06
+    },
+    {
+      "stiffness": 20000.0,
+      "release_ms": 1.0,
+      "mu": 1.0,
+      "speed_difference_kmh": 5.283797307242821e-06,
+      "energy_residual_j": 3.7624649414924605e-06
+    }
+  ],
+  "no_contact": {
+    "stiffness": 10000.0,
+    "release_ms": 2.0,
+    "mu": 0.6,
+    "substeps": 8,
+    "no_contact": true,
+    "speed_kmh": 81.86789637377287,
+    "spin_rpm": 610.3820909962249,
+    "ball_velocity_m_s": [
+      13.839259152625122,
+      -11.352017820255941,
+      14.027238604770606
+    ],
+    "initial_ball_velocity_m_s": [
+      13.839259152625122,
+      -11.352017820255941,
+      14.321799037567178
+    ],
+    "linear_impulse_residual_ns": [
+      0.0,
+      0.0,
+      -3.1414898460369045e-13
+    ],
+    "angular_impulse_residual_nms": [
+      1.119372996072343e-17,
+      1.638106823520502e-18,
+      -3.8222492548811714e-18
+    ],
+    "initial_spin_rpm": 610.3820909962246,
+    "spin_vector_rad_s": [
+      15.944849591222628,
+      54.5598174716299,
+      29.234136148896265
+    ],
+    "contact_fraction": 0.0,
+    "last_contact_ms": null,
+    "max_penetration_mm": 0.0,
+    "peak_net_force_n": 0.0,
+    "peak_pad_force_n": 0.0,
+    "impulse_ns": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "angular_impulse_nms": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "loss_j": 0.0,
+    "work_positive_j": [
+      2.4191316676955754,
+      35.44416933731379,
+      0.22623463492488344,
+      0.09073458680664076,
+      9.30547618845091,
+      98.88697798075773,
+      8.327647498007437,
+      1.8018385557061394,
+      0.18788669590036317,
+      0.014262132431195463,
+      4.427869722477091
+    ],
+    "work_negative_j": [
+      23.150275274243604,
+      0.0,
+      2.8870464614135183,
+      16.044831913820214,
+      1.7850905966696475,
+      3.351532321849377,
+      28.879837825954926,
+      3.039367259126816,
+      0.09065949820713277,
+      5.826793473320119,
+      0.3428214942766799
+    ],
+    "initial_energy_j": 359.04168742195884,
+    "final_energy_j": 434.7756629176688,
+    "energy_balance_residual_j": 2.6141202482676817e-06
+  },
+  "all_active_normal_stiffness_eigenvalues_per_total_k": [
+    0.0019953058297044607,
+    0.13535191497894528,
+    0.8626527791913502
+  ],
+  "new_results_sha256": "8d69bea67716869d58002ce23506bf1a8e79efe562964c5a6d7337cda255bfa1",
+  "old_results_sha256": "dd46215002154fdf987159691e6d07b1cb31b811ad14f6dcf5723b09fa3b748f",
+  "source_sha256": "9f8e36b53f596ed264af1d1e50225f64a0a9bea0181e8c6e292f4fbda27c4260",
+  "interpretation": "Same total stiffness label does not imply same directional compliance. Normal eigenvalues assume all pads active, omit friction and are not measured stiffness. No athlete improvement or independent validation."
+}
