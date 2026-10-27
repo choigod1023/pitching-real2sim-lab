@@ -1,0 +1,70 @@
+{
+  "stiffness_levels": [
+    5000.0,
+    10000.0,
+    20000.0
+  ],
+  "release_ms_levels": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "speed_kmh": [
+    [
+      135.29288771390821,
+      135.04587291753896,
+      134.33377500307134
+    ],
+    [
+      128.6882150695075,
+      127.8867816625341,
+      125.96866214131079
+    ],
+    [
+      119.97266753633238,
+      120.83576588344282,
+      121.85572689323268
+    ]
+  ],
+  "squared_deviation_components": [
+    294.39836076383557,
+    0.6501646940885939,
+    5.528706917299284
+  ],
+  "grid_variation_percent": [
+    97.94433145765527,
+    0.21630536982154572,
+    1.8393631725231812
+  ],
+  "stiffness_range_at_fixed_release_kmh": [
+    15.320220177575834,
+    14.21010703409614,
+    12.478048109838653
+  ],
+  "release_range_at_fixed_stiffness_kmh": [
+    0.9591127108368767,
+    2.7195529281967055,
+    1.8830593569003042
+  ],
+  "range_kmh": [
+    119.97266753633238,
+    135.29288771390821
+  ],
+  "source_sha256": "dd46215002154fdf987159691e6d07b1cb31b811ad14f6dcf5723b09fa3b748f",
+  "recorded_speed_kmh": 128.4256512,
+  "nominal_speed_kmh": 127.8867816625341,
+  "nominal_record_gap_kmh": 0.5388695374658994,
+  "extension_range_mm": [
+    21.796411158308395,
+    78.73508740580496
+  ],
+  "loss_range_j": [
+    3.5132266211672416,
+    13.180001371819056
+  ],
+  "model_changed": false,
+  "heldout_before_mae_kmh": null,
+  "heldout_after_mae_kmh": null,
+  "independently_validated_error_reduction_kmh": null,
+  "scope": "Reanalysis of previous frozen runs, not new measured trials. Equal-weight engineering grid, not causal/population variance or confidence bounds."
+}
