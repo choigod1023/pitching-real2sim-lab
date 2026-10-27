@@ -1,0 +1,219 @@
+{
+  "rows": [
+    {
+      "coarse": {
+        "kind": "static",
+        "dt": 2e-05,
+        "max_relative_offset_mm": 0.09841414632977274,
+        "final_speed_m_s": 0.0004963780755801142,
+        "last_contact_s": 0.2,
+        "lost_before_open": false,
+        "force_after_135ms_n": 3.36759087420271,
+        "peak_force_per_pad_n": [
+          3.36759087420271,
+          3.3675908742027096,
+          3.3675908742027096
+        ],
+        "max_penetration_mm": 0.9999999999999662,
+        "work_positive_per_pad_j": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "work_negative_per_pad_j": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loss_j": 0.0001410871111594715,
+        "initial_elastic_j": 0.004999999999999986,
+        "energy_residual_j": 1.2697304443759147e-11,
+        "final_position_m": [
+          -9.736181209910716e-19,
+          -3.469468492832503e-18,
+          0.4999015858536702
+        ]
+      },
+      "fine": {
+        "kind": "static",
+        "dt": 1e-05,
+        "max_relative_offset_mm": 0.09841414617633992,
+        "final_speed_m_s": 0.0004963780755670322,
+        "last_contact_s": 0.2,
+        "lost_before_open": false,
+        "force_after_135ms_n": 3.367590874202193,
+        "peak_force_per_pad_n": [
+          3.367590874202193,
+          3.367590874202169,
+          3.3675908742021927
+        ],
+        "max_penetration_mm": 1.0000000000000009,
+        "work_positive_per_pad_j": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "work_negative_per_pad_j": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loss_j": 0.00014108709893470147,
+        "initial_elastic_j": 0.004999999999999986,
+        "energy_residual_j": 6.94245957380199e-13,
+        "final_position_m": [
+          -9.76639867318058e-19,
+          -3.4694701773088644e-18,
+          0.49990158585382366
+        ]
+      },
+      "position_resolution_mm": 1.5343282200319666e-10,
+      "speed_resolution_kmh": 4.709514028755635e-14,
+      "passed": true
+    },
+    {
+      "coarse": {
+        "kind": "motion",
+        "dt": 2e-05,
+        "max_relative_offset_mm": 0.09866643237385789,
+        "final_speed_m_s": 0.03888708012012661,
+        "last_contact_s": 0.2,
+        "lost_before_open": false,
+        "force_after_135ms_n": 3.390250246839895,
+        "peak_force_per_pad_n": [
+          3.390250246839895,
+          3.366903698360409,
+          3.3669043861726147
+        ],
+        "max_penetration_mm": 1.0067467326533852,
+        "work_positive_per_pad_j": [
+          0.0,
+          0.03586284337784115,
+          0.026301719282880172
+        ],
+        "work_negative_per_pad_j": [
+          0.06324106934481856,
+          0.0,
+          0.0
+        ],
+        "loss_j": 0.00014152678033417244,
+        "initial_elastic_j": 0.004999999999999986,
+        "energy_residual_j": 1.2692427675282253e-11,
+        "final_position_m": [
+          0.019028039072915438,
+          2.69782674857462e-07,
+          0.4999015761141317
+        ]
+      },
+      "fine": {
+        "kind": "motion",
+        "dt": 1e-05,
+        "max_relative_offset_mm": 0.09866643221967654,
+        "final_speed_m_s": 0.03888708012082882,
+        "last_contact_s": 0.2,
+        "lost_before_open": false,
+        "force_after_135ms_n": 3.3902502468937885,
+        "peak_force_per_pad_n": [
+          3.3902502468937885,
+          3.3669036983512326,
+          3.3669043861778016
+        ],
+        "max_penetration_mm": 1.0067467326534754,
+        "work_positive_per_pad_j": [
+          0.0,
+          0.035862843377828475,
+          0.026301719282874746
+        ],
+        "work_negative_per_pad_j": [
+          0.06324106934479493,
+          0.0,
+          0.0
+        ],
+        "loss_j": 0.00014152676810926844,
+        "initial_elastic_j": 0.004999999999999986,
+        "energy_residual_j": 6.915805547593606e-13,
+        "final_position_m": [
+          0.019028039072915177,
+          2.697826748578898e-07,
+          0.49990157611428626
+        ]
+      },
+      "position_resolution_mm": 1.5454326408850348e-10,
+      "speed_resolution_kmh": 2.5279528470534275e-12,
+      "passed": true
+    },
+    {
+      "coarse": {
+        "kind": "release",
+        "dt": 2e-05,
+        "max_relative_offset_mm": 0.058828814154809894,
+        "final_speed_m_s": 0.9695929499921756,
+        "last_contact_s": 0.12158000000000001,
+        "lost_before_open": false,
+        "force_after_135ms_n": 0.0,
+        "peak_force_per_pad_n": [
+          3.3673942822880463,
+          3.36739428228807,
+          3.367394282288024
+        ],
+        "max_penetration_mm": 0.9999999999999662,
+        "work_positive_per_pad_j": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "work_negative_per_pad_j": [
+          0.0012494568235346577,
+          0.0012494568235346761,
+          0.0012494568235346501
+        ],
+        "loss_j": 0.0013376786852814474,
+        "initial_elastic_j": 0.004999999999999986,
+        "energy_residual_j": 4.5433140395461855e-08,
+        "final_position_m": [
+          2.0131702220013363e-18,
+          -1.3024615540786095e-17,
+          0.45202361126813007
+        ]
+      },
+      "fine": {
+        "kind": "release",
+        "dt": 1e-05,
+        "max_relative_offset_mm": 0.05883374416143505,
+        "final_speed_m_s": 0.9695931920238331,
+        "last_contact_s": 0.12158000000000001,
+        "lost_before_open": false,
+        "force_after_135ms_n": 0.0,
+        "peak_force_per_pad_n": [
+          3.3673942822870786,
+          3.367394282287078,
+          3.3673942822870555
+        ],
+        "max_penetration_mm": 1.0000000000000009,
+        "work_positive_per_pad_j": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "work_negative_per_pad_j": [
+          0.0012494336904920896,
+          0.0012494336904920987,
+          0.0012494336904920803
+        ],
+        "loss_j": 0.0013376582793789842,
+        "initial_elastic_j": 0.004999999999999986,
+        "energy_residual_j": -4.4228142880280846e-08,
+        "final_position_m": [
+          3.2989040518291756e-19,
+          -1.1463156867298722e-17,
+          0.4520235874474512
+        ],
+        "freefall_acceleration_error_m_s2": 2.227551476607914e-12
+      },
+      "position_resolution_mm": 2.382067887385375e-05,
+      "speed_resolution_kmh": 8.713139669769276e-07,
+      "passed": true
+    }
+  ],
+  "passed": true
+}
