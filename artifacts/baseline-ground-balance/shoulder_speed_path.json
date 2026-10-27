@@ -1,0 +1,44 @@
+{
+  "pitch": "3034_4",
+  "rows": [
+    {
+      "folder": "baseline-calibration",
+      "mode": "nominal",
+      "milliseconds_before_BR": 0.5209821428571182,
+      "reference_proxy_kmh": 112.92756035886585,
+      "observed_shoulder_replacement_proxy_kmh": 114.36707354709463,
+      "proxy_change_kmh": 1.439513188228787,
+      "shoulder_velocity_difference_kmh": 3.6261894952091427
+    },
+    {
+      "folder": "baseline-calibration",
+      "mode": "frozen_geometry_mass",
+      "milliseconds_before_BR": 0.5209821428571182,
+      "reference_proxy_kmh": 113.99175002586665,
+      "observed_shoulder_replacement_proxy_kmh": 115.6882609472705,
+      "proxy_change_kmh": 1.6965109214038563,
+      "shoulder_velocity_difference_kmh": 3.736014740531786
+    },
+    {
+      "folder": "baseline-dequantized",
+      "mode": "nominal",
+      "milliseconds_before_BR": 0.5209821428571182,
+      "reference_proxy_kmh": 112.95364655965462,
+      "observed_shoulder_replacement_proxy_kmh": 114.40085565988105,
+      "proxy_change_kmh": 1.4472091002264307,
+      "shoulder_velocity_difference_kmh": 3.6238208090331185
+    },
+    {
+      "folder": "baseline-dequantized",
+      "mode": "frozen_geometry_mass",
+      "milliseconds_before_BR": 0.5209821428571182,
+      "reference_proxy_kmh": 114.02271322775361,
+      "observed_shoulder_replacement_proxy_kmh": 115.72589619632932,
+      "proxy_change_kmh": 1.7031829685757032,
+      "shoulder_velocity_difference_kmh": 3.733466007151901
+    }
+  ],
+  "actual_ball_speed_prediction": false,
+  "force_constraints_checked": false,
+  "scope": "Replace shoulder translation velocity only using observed shoulder; relative arm/hand velocity fixed. Interior pre-release sample, not BR speed or new forward simulation."
+}

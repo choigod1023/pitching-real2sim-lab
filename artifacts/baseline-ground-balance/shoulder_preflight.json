@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "anchor": "thorax_prox",
+      "fixed_training_length_mm": 152.305612814078,
+      "rmse_mm": 11.833537104777692,
+      "max_error_mm": 24.89501670841662
+    },
+    {
+      "pitch": "3034_1",
+      "anchor": "CLAV",
+      "fixed_training_length_mm": 194.71203983586784,
+      "rmse_mm": 6.396324613694612,
+      "max_error_mm": 16.537827747881032
+    },
+    {
+      "pitch": "3034_2",
+      "anchor": "thorax_prox",
+      "fixed_training_length_mm": 152.305612814078,
+      "rmse_mm": 12.034958376562797,
+      "max_error_mm": 22.936180566734446
+    },
+    {
+      "pitch": "3034_2",
+      "anchor": "CLAV",
+      "fixed_training_length_mm": 194.71203983586784,
+      "rmse_mm": 4.967313594214444,
+      "max_error_mm": 12.857193808776437
+    },
+    {
+      "pitch": "3034_3",
+      "anchor": "thorax_prox",
+      "fixed_training_length_mm": 152.305612814078,
+      "rmse_mm": 13.050276675167076,
+      "max_error_mm": 23.712105979557002
+    },
+    {
+      "pitch": "3034_3",
+      "anchor": "CLAV",
+      "fixed_training_length_mm": 194.71203983586784,
+      "rmse_mm": 5.214927478114268,
+      "max_error_mm": 12.178158453097366
+    },
+    {
+      "pitch": "3034_4",
+      "anchor": "thorax_prox",
+      "fixed_training_length_mm": 152.305612814078,
+      "rmse_mm": 12.86814023373095,
+      "max_error_mm": 25.459840318499687
+    },
+    {
+      "pitch": "3034_4",
+      "anchor": "CLAV",
+      "fixed_training_length_mm": 194.71203983586784,
+      "rmse_mm": 5.6675313826966285,
+      "max_error_mm": 14.598940484528104
+    },
+    {
+      "pitch": "3034_5",
+      "anchor": "thorax_prox",
+      "fixed_training_length_mm": 152.305612814078,
+      "rmse_mm": 15.137761856823596,
+      "max_error_mm": 28.486995474034995
+    },
+    {
+      "pitch": "3034_5",
+      "anchor": "CLAV",
+      "fixed_training_length_mm": 194.71203983586784,
+      "rmse_mm": 7.652013782245179,
+      "max_error_mm": 18.030711399678598
+    }
+  ],
+  "speed_used": false,
+  "observed_target_direction_used": true,
+  "joint_center_identified": false,
+  "dynamics_validated": false,
+  "scope": "Geometry feasibility only; CLAV is a skin marker, not a confirmed sternoclavicular center"
+}
