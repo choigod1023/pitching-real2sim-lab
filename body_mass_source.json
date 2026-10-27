@@ -1,0 +1,29 @@
+{
+  "url": "https://raw.githubusercontent.com/opensim-org/opensim-models/master/Models/Rajagopal_OpenSense/Rajagopal2015_opensense.osim",
+  "sha256": "89822dfe7a98a491b63249dcb43233d26174337c2710385e0d50d81c607e63f8",
+  "mass_kg": {
+    "pelvis": 12.4088157200313,
+    "femur_r": 9.80040405351952,
+    "tibia_r": 3.90640097495255,
+    "patella_r": 0.0908244811978178,
+    "talus_r": 0.105364827375659,
+    "calcn_r": 1.31706034219573,
+    "toes_r": 0.228220216095677,
+    "femur_l": 9.80040405351952,
+    "tibia_l": 3.90640097495255,
+    "patella_l": 0.0908244811978178,
+    "talus_l": 0.105364827375659,
+    "calcn_l": 1.31706034219573,
+    "toes_l": 0.228220216095677,
+    "torso": 28.2658007807585,
+    "humerus_r": 2.14154011641026,
+    "ulna_r": 0.640091326307127,
+    "radius_r": 0.640091326307127,
+    "hand_r": 0.482044085243639,
+    "humerus_l": 2.14154011641026,
+    "ulna_l": 0.640091326307127,
+    "radius_l": 0.640091326307127,
+    "hand_l": 0.482044085243639
+  },
+  "scope": "Only masses reused; cylinders and fitted joint frames are new engineering approximations, not an OpenSim conversion"
+}

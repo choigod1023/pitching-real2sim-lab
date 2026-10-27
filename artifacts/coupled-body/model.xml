@@ -1,0 +1,29 @@
+<mujoco model="MuJoCo Model">
+  <compiler angle="radian" />
+
+  <option timestep="0.000347321" integrator="RK4" />
+
+  <default>
+    <geom contype="0" conaffinity="0" />
+  </default>
+
+  <worldbody>
+    <body name="pelvis"><freejoint name="root_support" /><geom type="box" size=".12 .10 .09" mass="12.4088157200313" /><body name="torso"><joint name="torso_rotation" type="ball" /><geom type="capsule" fromto="0 0 0 0 0 0.5416856892786017" size=".13" mass="28.2658007807585" /><body name="upper" pos="0.1548463512647295 0 0.5416856892786017">
+      <inertial pos="0 0 -0.181613" mass="2.14154" diaginertia="0.0244016 0.0244016 0.00171323" />
+      <body name="forearm" pos="0 0 -0.363226">
+        <inertial pos="0 0 -0.149984" mass="1.28018" diaginertia="0.00988732 0.00988732 0.000576082" />
+        <joint name="elbow" axis="0 1 0" />
+        <joint name="marker_roll" />
+        <body name="hand" pos="0 0 -0.299967">
+          <inertial pos="0.08 0 0" mass="0.482044" diaginertia="0.000293243 0.00106451 0.00128545" />
+          <joint name="wrist_marker_rotation" type="ball" />
+          <site name="wrist" />
+          <body name="ball_payload">
+            <geom size="0.0364" pos="0.15 0 0" mass="0.145" />
+            <site name="ball_center" pos="0.15 0 0" />
+          </body>
+        </body>
+      <site name="elbow_jc" pos="0 0 0" /></body>
+    <joint name="pitch_shoulder" type="ball" /><site name="shoulder_jc" pos="0 0 0" /></body>
+  <body name="glove_upper" pos="-0.1548463512647295 0 0.5416856892786017"><joint name="glove_shoulder" type="ball" /><geom type="capsule" fromto="0 0 0 0 0 -0.3517404440777319" size=".04" mass="2.14154011641026" /><body name="glove_forearm" pos="0 0 -0.3517404440777319"><joint name="glove_elbow" axis="0 1 0" /><geom type="capsule" fromto="0 0 0 0 0 -0.2765713852994801" size=".03" mass="1.7622267378578929" /><site name="glove_elbow_jc" pos="0 0 0" /><site name="glove_wrist_jc" pos="0 0 -0.2765713852994801" /></body><site name="glove_shoulder_jc" pos="0 0 0" /></body></body><body name="rear_thigh" pos="0.1357401959689718 0.0 0.01869033448855939"><joint name="rear_hip" type="ball" /><geom type="capsule" fromto="0 0 0 0 0 -0.5072993730076314" size=".06" mass="9.891228534717337" /><body name="rear_shank" pos="0 0 -0.5072993730076314"><joint name="rear_knee" type="hinge" axis="0 1 0" /><geom type="capsule" fromto="0 0 0 0 0 -0.42640973987352493" size=".04" mass="3.90640097495255" /><geom type="sphere" pos="0 0 -0.42640973987352493" size=".05" mass="1.6506453856670662" /><site name="rear_knee_jc" pos="0 0 0" /><site name="rear_ankle_jc" pos="0 0 -0.42640973987352493" /></body><site name="rear_hip" pos="0 0 0" /></body><body name="lead_thigh" pos="-0.1357401959689717 0.0 -0.01869033448855928"><joint name="lead_hip" type="ball" /><geom type="capsule" fromto="0 0 0 0 0 -0.4641219451825135" size=".06" mass="9.891228534717337" /><body name="lead_shank" pos="0 0 -0.4641219451825135"><joint name="lead_knee" type="hinge" axis="0 1 0" /><geom type="capsule" fromto="0 0 0 0 0 -0.4152269495396041" size=".04" mass="3.90640097495255" /><geom type="sphere" pos="0 0 -0.4152269495396041" size=".05" mass="1.6506453856670662" /><site name="lead_knee_jc" pos="0 0 0" /><site name="lead_ankle_jc" pos="0 0 -0.4152269495396041" /></body><site name="lead_hip" pos="0 0 0" /></body></body></worldbody>
+</mujoco>
