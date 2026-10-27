@@ -1,0 +1,30 @@
+[
+  {
+    "noise": "original",
+    "structure": "fixed_origin",
+    "substeps": 4,
+    "speed_kmh": 113.27557013701276,
+    "arm_rmse_mm": 38.55647563796412
+  },
+  {
+    "noise": "original",
+    "structure": "measured_mobile_origin",
+    "substeps": 4,
+    "speed_kmh": 114.93274053772429,
+    "arm_rmse_mm": 15.01901301635022
+  },
+  {
+    "noise": "rounding_bins",
+    "structure": "fixed_origin",
+    "substeps": 4,
+    "speed_kmh": 113.326208166045,
+    "arm_rmse_mm": 38.55317995603258
+  },
+  {
+    "noise": "rounding_bins",
+    "structure": "measured_mobile_origin",
+    "substeps": 4,
+    "speed_kmh": 114.94920034706023,
+    "arm_rmse_mm": 15.021688781049903
+  }
+]
