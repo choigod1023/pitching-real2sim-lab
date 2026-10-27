@@ -67,3 +67,10 @@ CSV의 관절 좌표는0.0001m 단위다. 이 양자화가 두 번 미분될 때
 - baseline_force_audit.py, baseline_ground_balance.py, audit_rounding_force.py: force channels, raw global wrench, rounding audit.
 - 각 artifacts/baseline-* 폴더report.json에 전체 결과 보존. 기본 전후 영상은 artifacts/baseline-final-video/baseline_calibration_overlay.mp4.
 - 전체243개 중241개 테스트 통과, 기존2개skip. 영상 전체 FFmpeg 디코딩 및 프레임 육안 검사 완료. 원시 선수 데이터와 영상은 새로 Git에 업로드하지 않는다. 파생 보고서와 시뮬레이션 영상만 저장한다.
+
+
+## 저장된 기준 궤적의 힘 균형 재검사
+
+`audit_saved_root_balance.py`로 3034_4의 저장된 5760Hz 기준 궤적을 비교했다. 양 끝 3표본을 제외하고 같은 40Hz 원시 지면 반력을 적용했다. 질량·기하 보정 모델의 반올림 처리 전후 힘 잔차 RMS는 1754.006→1359.617N, 토크 잔차는 480.618→417.269N·m였다. 명목 모델에서도 1530.800→1208.401N, 391.799→336.660N·m로 감소했다. 따라서 제공 COM만의 수치 효과는 아니지만, 여전히 큰 잔차가 남아 발 접촉과 근력 제약 검증을 통과하지 못한다. 구속 오차 감소나 능력 향상으로 해석하지 않는다. 결과는 artifacts/baseline-ground-balance/rounding_comparison.json에 저장했다.
+
+다음은 어깨를 몸통에 고정한 구조를 검토하는 것이다. CLAV 마커를 실제 관절 중심이라고 단정하지 않고, 첫 투구에서 정한 길이의 관찰 어깨 방향 링크가 나머지 투구의 어깨 위치를 어느 정도 재현하는지부터 확인한다. 이는 관측 방향을 입력하는 기하 진단이며 독립 예측이나 검증된 어깨띠 동역학이 아니다.

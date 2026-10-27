@@ -1,0 +1,36 @@
+{
+  "pitch": "3034_4",
+  "filter_hz": 40,
+  "excluded_boundary_samples": 3,
+  "rows": [
+    {
+      "folder": "baseline-calibration",
+      "mode": "nominal",
+      "required_force_n": 1838.594012251359,
+      "residual_force_n": 1530.8003751962428,
+      "residual_torque_nm": 391.79912760548984
+    },
+    {
+      "folder": "baseline-calibration",
+      "mode": "frozen_geometry_mass",
+      "required_force_n": 2176.322697252854,
+      "residual_force_n": 1754.0057754081174,
+      "residual_torque_nm": 480.61767618939166
+    },
+    {
+      "folder": "baseline-dequantized",
+      "mode": "nominal",
+      "required_force_n": 1583.9928354526494,
+      "residual_force_n": 1208.4010273683807,
+      "residual_torque_nm": 336.65988107927717
+    },
+    {
+      "folder": "baseline-dequantized",
+      "mode": "frozen_geometry_mass",
+      "required_force_n": 1876.7300358730456,
+      "residual_force_n": 1359.6168118004907,
+      "residual_torque_nm": 417.26946172905883
+    }
+  ],
+  "scope": "Saved reference inverse dynamics; no foot contact validation or speed correction"
+}
