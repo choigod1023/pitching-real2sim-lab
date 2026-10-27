@@ -1,0 +1,482 @@
+{
+  "mass_correction": {
+    "bodies": [
+      {
+        "body": "thorax",
+        "before_kg": 27.520255169671437,
+        "after_kg": 20.866630055554726,
+        "source_kg": 20.866630055554726
+      },
+      {
+        "body": "clavicle",
+        "before_kg": 0.3037004607685744,
+        "after_kg": 0.23027421524576702,
+        "source_kg": 0.23027421524576702
+      },
+      {
+        "body": "scapula",
+        "before_kg": 0.4693977929465934,
+        "after_kg": 0.3559105841832708,
+        "source_kg": 0.3559105841832708
+      },
+      {
+        "body": "humerus",
+        "before_kg": 5.313277842628,
+        "after_kg": 1.7650184258291826,
+        "source_kg": 1.7650184258291826
+      },
+      {
+        "body": "ulna",
+        "before_kg": 1.4522260179152808,
+        "after_kg": 0.8663223850962932,
+        "source_kg": 0.8663223850962932
+      },
+      {
+        "body": "radius",
+        "before_kg": 0.306921195860861,
+        "after_kg": 0.1830931956559252,
+        "source_kg": 0.1830931956559252
+      },
+      {
+        "body": "hand",
+        "before_kg": 0.6897843656975686,
+        "after_kg": 0.41148941660685245,
+        "source_kg": 0.41148941660685245
+      }
+    ],
+    "scope": "Fix previously intended source mass preservation; these generic masses are NOT athlete-specific measurements. Geometry, trajectory, muscle Fmax and paths unchanged."
+  },
+  "before": [
+    {
+      "pitch": "3034_1",
+      "rms": {
+        "residual": 225.30848139916594,
+        "no_passive_bound": 186.29327362553713,
+        "static_fmax": 171.17551115550296,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 4.0419223547194655e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 167.68388753186008,
+          "demand": 184.45599084057744,
+          "acceleration": 279.7052076017502,
+          "velocity": 301.73806528904237,
+          "gravity": 19.37631672570526
+        },
+        "shoulder": {
+          "residual": 145.12184636585317,
+          "demand": 195.1417190559807,
+          "acceleration": 234.61983428634326,
+          "velocity": 300.65849802120897,
+          "gravity": 16.68700189406141
+        },
+        "elbow_forearm": {
+          "residual": 30.05366888884823,
+          "demand": 51.697968088843645,
+          "acceleration": 108.84076831456414,
+          "velocity": 100.92376208214648,
+          "gravity": 1.547337221247922
+        },
+        "wrist": {
+          "residual": 26.12378889606195,
+          "demand": 30.284925698203978,
+          "acceleration": 21.9203710471902,
+          "velocity": 20.381259203450217,
+          "gravity": 0.43016099644097017
+        }
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "rms": {
+        "residual": 236.48629286019928,
+        "no_passive_bound": 215.10540195033494,
+        "static_fmax": 178.07657030793953,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 3.6465691976854895e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 142.42307667346742,
+          "demand": 193.5681428164154,
+          "acceleration": 819.0488439074608,
+          "velocity": 965.4619321571405,
+          "gravity": 19.365740933164147
+        },
+        "shoulder": {
+          "residual": 185.16961812553873,
+          "demand": 209.79770138462717,
+          "acceleration": 824.72843849522,
+          "velocity": 926.0820799678768,
+          "gravity": 15.267590654196228
+        },
+        "elbow_forearm": {
+          "residual": 25.791002382597604,
+          "demand": 46.328094302001105,
+          "acceleration": 219.15836477031746,
+          "velocity": 211.59733795985414,
+          "gravity": 1.7755318169133638
+        },
+        "wrist": {
+          "residual": 26.23872445387907,
+          "demand": 30.747373061547478,
+          "acceleration": 43.11062651277024,
+          "velocity": 33.45345058663845,
+          "gravity": 0.39573744505720543
+        }
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "rms": {
+        "residual": 238.70426836332925,
+        "no_passive_bound": 217.41128780631922,
+        "static_fmax": 181.19676718155748,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 3.989880732619798e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 145.19145629339687,
+          "demand": 197.19899639455662,
+          "acceleration": 824.566191769592,
+          "velocity": 966.8188089924516,
+          "gravity": 19.589301276150117
+        },
+        "shoulder": {
+          "residual": 186.06954451878917,
+          "demand": 213.0928925457883,
+          "acceleration": 826.3973560847694,
+          "velocity": 927.3537660781192,
+          "gravity": 15.560252402999254
+        },
+        "elbow_forearm": {
+          "residual": 25.388766640859835,
+          "demand": 44.92474457031482,
+          "acceleration": 231.14525705651494,
+          "velocity": 225.91561605704092,
+          "gravity": 1.6466268044596928
+        },
+        "wrist": {
+          "residual": 25.1536058111204,
+          "demand": 29.850398863094863,
+          "acceleration": 44.14315400894166,
+          "velocity": 34.920897253509594,
+          "gravity": 0.39722275283154734
+        }
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "rms": {
+        "residual": 246.25770700625634,
+        "no_passive_bound": 225.08421342540552,
+        "static_fmax": 187.8321642558446,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 3.789106210381135e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 149.10935040061653,
+          "demand": 202.75628844211147,
+          "acceleration": 756.9372775795072,
+          "velocity": 907.5638283371184,
+          "gravity": 19.169765540188425
+        },
+        "shoulder": {
+          "residual": 191.68826787047982,
+          "demand": 215.05460584486337,
+          "acceleration": 762.2533799000167,
+          "velocity": 859.4488628087918,
+          "gravity": 15.191920629253808
+        },
+        "elbow_forearm": {
+          "residual": 30.342211620503715,
+          "demand": 51.755116001874285,
+          "acceleration": 201.52226031835298,
+          "velocity": 196.86770683680555,
+          "gravity": 1.8292855824624896
+        },
+        "wrist": {
+          "residual": 27.28035992939108,
+          "demand": 31.715476213570813,
+          "acceleration": 44.92429667114981,
+          "velocity": 34.80726536317688,
+          "gravity": 0.3937945834466317
+        }
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "rms": {
+        "residual": 253.53026951142058,
+        "no_passive_bound": 220.08831386717102,
+        "static_fmax": 207.05465914158736,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 5.258529124276469e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 196.80867693026937,
+          "demand": 216.33426977943964,
+          "acceleration": 412.5434628407113,
+          "velocity": 539.8780159590342,
+          "gravity": 18.982371254283876
+        },
+        "shoulder": {
+          "residual": 155.95023319835875,
+          "demand": 205.72176954452485,
+          "acceleration": 428.5310617779423,
+          "velocity": 537.819719090588,
+          "gravity": 16.95031956021542
+        },
+        "elbow_forearm": {
+          "residual": 25.204687315403362,
+          "demand": 42.30266846190475,
+          "acceleration": 140.8146626481382,
+          "velocity": 148.0903496600506,
+          "gravity": 1.511607074668719
+        },
+        "wrist": {
+          "residual": 24.252644107410067,
+          "demand": 28.27666024268146,
+          "acceleration": 30.49636196327253,
+          "velocity": 31.06034721348706,
+          "gravity": 0.44046329521396244
+        }
+      }
+    }
+  ],
+  "after": [
+    {
+      "pitch": "3034_1",
+      "rms": {
+        "residual": 134.45151544371646,
+        "no_passive_bound": 89.15772701914698,
+        "static_fmax": 81.5118061271868,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 1.9428429980600756e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 111.05241947960441,
+          "demand": 104.0333632405148,
+          "acceleration": 138.81042218924424,
+          "velocity": 168.87714832577214,
+          "gravity": 8.859479268634512
+        },
+        "shoulder": {
+          "residual": 72.81673070304248,
+          "demand": 111.29505707062717,
+          "acceleration": 128.75893799437722,
+          "velocity": 178.0586485417238,
+          "gravity": 7.664489644661179
+        },
+        "elbow_forearm": {
+          "residual": 16.05063912504508,
+          "demand": 30.84031443235845,
+          "acceleration": 64.92873205600904,
+          "velocity": 60.20585859314674,
+          "gravity": 0.9230607739586523
+        },
+        "wrist": {
+          "residual": 13.589365188855453,
+          "demand": 18.06640890582271,
+          "acceleration": 13.076551372532542,
+          "velocity": 12.158397430274398,
+          "gravity": 0.25661164020949156
+        }
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "rms": {
+        "residual": 130.38989383203912,
+        "no_passive_bound": 105.12061506434303,
+        "static_fmax": 72.40615359110214,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 1.6090259219232584e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 68.16147107197284,
+          "demand": 109.70762347172237,
+          "acceleration": 433.55793681593303,
+          "velocity": 520.2400606432308,
+          "gravity": 8.696816694096546
+        },
+        "shoulder": {
+          "residual": 109.41336192667288,
+          "demand": 126.46072528094054,
+          "acceleration": 447.3049013285941,
+          "velocity": 511.41615669498646,
+          "gravity": 7.0874713229560005
+        },
+        "elbow_forearm": {
+          "residual": 13.948796578749294,
+          "demand": 27.636927487562033,
+          "acceleration": 130.73846284215307,
+          "velocity": 126.22794815682829,
+          "gravity": 1.059189781388749
+        },
+        "wrist": {
+          "residual": 13.772638844557331,
+          "demand": 18.342280910490665,
+          "acceleration": 25.717553826196056,
+          "velocity": 19.95658578237118,
+          "gravity": 0.2360763428312816
+        }
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "rms": {
+        "residual": 129.83021652094624,
+        "no_passive_bound": 104.75120874418968,
+        "static_fmax": 72.1876734626641,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 1.840251339817569e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 68.40967034645352,
+          "demand": 110.69044600532456,
+          "acceleration": 435.5987524911949,
+          "velocity": 520.2932229297735,
+          "gravity": 8.82769698308476
+        },
+        "shoulder": {
+          "residual": 108.70901193137387,
+          "demand": 127.38175639716071,
+          "acceleration": 447.0285891720038,
+          "velocity": 510.94254838058686,
+          "gravity": 7.246516793002798
+        },
+        "elbow_forearm": {
+          "residual": 13.618949966741301,
+          "demand": 26.799762148502793,
+          "acceleration": 137.88921829424055,
+          "velocity": 134.7694869246253,
+          "gravity": 0.9822917665741936
+        },
+        "wrist": {
+          "residual": 13.148271813175823,
+          "demand": 17.807192833712637,
+          "acceleration": 26.333505938419478,
+          "velocity": 20.831988013678384,
+          "gravity": 0.23696240006878658
+        }
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "rms": {
+        "residual": 132.3592168389336,
+        "no_passive_bound": 107.31124257123263,
+        "static_fmax": 72.87772772911771,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 2.597249403718629e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 67.59297609537492,
+          "demand": 113.99857948948535,
+          "acceleration": 403.54283589600294,
+          "velocity": 493.57661355602164,
+          "gravity": 8.61010776154667
+        },
+        "shoulder": {
+          "residual": 111.8334560692558,
+          "demand": 128.41339782735471,
+          "acceleration": 414.8348286422515,
+          "velocity": 477.4857995929429,
+          "gravity": 7.0578986153685355
+        },
+        "elbow_forearm": {
+          "residual": 15.262462795343708,
+          "demand": 30.874405900015155,
+          "acceleration": 120.21768172120463,
+          "velocity": 117.44101760422303,
+          "gravity": 1.0912564774842202
+        },
+        "wrist": {
+          "residual": 14.5081769293217,
+          "demand": 18.919800815335822,
+          "acceleration": 26.79949495519533,
+          "velocity": 20.76420114783132,
+          "gravity": 0.23491733281244032
+        }
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "rms": {
+        "residual": 144.78958865875973,
+        "no_passive_bound": 105.5997869488142,
+        "static_fmax": 98.22985172348527,
+        "positive_unbounded": 0.0,
+        "signed_unbounded": 3.114495650291069e-13
+      },
+      "groups": {
+        "girdle": {
+          "residual": 120.613361239242,
+          "demand": 122.28487588173112,
+          "acceleration": 229.80141890635767,
+          "velocity": 304.76208966289465,
+          "gravity": 8.68054320364124
+        },
+        "shoulder": {
+          "residual": 77.71349191742135,
+          "demand": 118.28664256693051,
+          "acceleration": 243.2366057158516,
+          "velocity": 309.11532597576524,
+          "gravity": 7.801078902722672
+        },
+        "elbow_forearm": {
+          "residual": 14.581194070896414,
+          "demand": 25.235568145559146,
+          "acceleration": 84.00269165882803,
+          "velocity": 88.3429874857974,
+          "gravity": 0.9017460299570467
+        },
+        "wrist": {
+          "residual": 12.823573137495824,
+          "demand": 16.868382360455954,
+          "acceleration": 18.192540766284072,
+          "velocity": 18.528984984399898,
+          "gravity": 0.26275745493453445
+        }
+      }
+    }
+  ],
+  "candidate_search_executed": false,
+  "before_mean": {
+    "residual": 240.05740382807426,
+    "no_passive_bound": 212.79649813495357,
+    "static_fmax": 185.0671344084864,
+    "positive_unbounded": 0.0,
+    "signed_unbounded": 4.1452015239364715e-13
+  },
+  "before_group_mean": {
+    "girdle": 160.24328956592205,
+    "shoulder": 172.79990201580395,
+    "elbow_forearm": 27.356067369642552,
+    "wrist": 25.809824639572515
+  },
+  "before_unbounded_max_force_n": 42786.25383755084,
+  "after_mean": {
+    "residual": 134.36408625887904,
+    "no_passive_bound": 102.3881160695453,
+    "static_fmax": 79.44264252671121,
+    "positive_unbounded": 0.0,
+    "signed_unbounded": 2.2207730627621203e-13
+  },
+  "after_group_mean": {
+    "girdle": 87.16597964652955,
+    "shoulder": 96.09721050955326,
+    "elbow_forearm": 14.69240850735516,
+    "wrist": 13.568405182681227
+  },
+  "after_unbounded_max_force_n": 20709.831603352617
+}

@@ -26,7 +26,7 @@ def build():
     for name in ['humerus','ulna','radius','proximal_row','hand']:
         sc=o.Scale();sc.setSegmentName(name);sc.setApply(True)
         sc.setScaleFactors(o.Vec3(manifest['upper_scale'] if name=='humerus' else manifest['forearm_scale']));scales.cloneAndAppend(sc)
-    donor.scale(s,scales,False);donor.printToXML(str(OUT/'donor_scaled.osim'))
+    donor.scale(s,scales,True);donor.printToXML(str(OUT/'donor_scaled.osim'))
     src=E.parse(OUT/'donor_scaled.osim');dst=E.parse(BASE/'scaled_source.osim')
     joints=dst.find('.//JointSet/objects');old=joints.find("*[@name='rc']");joints.remove(old)
     for name in ['radiocarpal','wrist_hand']:
