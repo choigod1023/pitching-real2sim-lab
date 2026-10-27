@@ -1,0 +1,30 @@
+[
+  {
+    "mode": "before",
+    "policy": "residual_assisted",
+    "substeps": 4,
+    "speed_kmh": 113.27557013701276,
+    "original_pose_rmse_mm": 0.029168493964930646
+  },
+  {
+    "mode": "before",
+    "policy": "ground_only",
+    "substeps": 4,
+    "speed_kmh": 116.90168516636314,
+    "original_pose_rmse_mm": 69.98655399247153
+  },
+  {
+    "mode": "after",
+    "policy": "residual_assisted",
+    "substeps": 4,
+    "speed_kmh": 110.69085670369256,
+    "original_pose_rmse_mm": 4.504414092392949
+  },
+  {
+    "mode": "after",
+    "policy": "ground_only",
+    "substeps": 4,
+    "speed_kmh": 112.40800534067245,
+    "original_pose_rmse_mm": 69.50939737756892
+  }
+]
