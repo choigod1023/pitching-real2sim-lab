@@ -1,0 +1,127 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "policy": "segment_axes",
+      "required_force_rms_n": 1959.1454536552094,
+      "residual_force_rms_n": 1536.142395102253,
+      "required_torque_rms_nm": 456.63533200280045,
+      "residual_torque_rms_nm": 439.1517179206948,
+      "wrench_equivalence_max_nm": 3.0212691549237007e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_2",
+      "policy": "segment_axes",
+      "required_force_rms_n": 2061.447457326269,
+      "residual_force_rms_n": 1686.6197292916647,
+      "required_torque_rms_nm": 443.6762707881936,
+      "residual_torque_rms_nm": 447.77663032992024,
+      "wrench_equivalence_max_nm": 2.898457019905882e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_3",
+      "policy": "segment_axes",
+      "required_force_rms_n": 2090.7607702048845,
+      "residual_force_rms_n": 1669.3030177017008,
+      "required_torque_rms_nm": 466.9694037669797,
+      "residual_torque_rms_nm": 459.1617392454274,
+      "wrench_equivalence_max_nm": 2.8421709430404007e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_4",
+      "policy": "segment_axes",
+      "required_force_rms_n": 2164.935654577638,
+      "residual_force_rms_n": 1735.4735785075884,
+      "required_torque_rms_nm": 494.4668955747801,
+      "residual_torque_rms_nm": 476.0919007460588,
+      "wrench_equivalence_max_nm": 2.7408903977723625e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_5",
+      "policy": "segment_axes",
+      "required_force_rms_n": 1963.0846268567852,
+      "residual_force_rms_n": 1548.0574120021138,
+      "required_torque_rms_nm": 411.74586066600045,
+      "residual_torque_rms_nm": 390.3830626579066,
+      "wrench_equivalence_max_nm": 2.666192676669783e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_1",
+      "policy": "segmented_trunk",
+      "required_force_rms_n": 2054.089802979519,
+      "residual_force_rms_n": 1522.180847369222,
+      "required_torque_rms_nm": 522.64446741291,
+      "residual_torque_rms_nm": 483.34730525225444,
+      "wrench_equivalence_max_nm": 3.0212691549237007e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_2",
+      "policy": "segmented_trunk",
+      "required_force_rms_n": 2136.2885704896244,
+      "residual_force_rms_n": 1561.819021187368,
+      "required_torque_rms_nm": 473.80641633349194,
+      "residual_torque_rms_nm": 428.93416695326874,
+      "wrench_equivalence_max_nm": 2.898457019905882e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_3",
+      "policy": "segmented_trunk",
+      "required_force_rms_n": 2138.2985000124927,
+      "residual_force_rms_n": 1504.8945315847402,
+      "required_torque_rms_nm": 528.1225812312149,
+      "residual_torque_rms_nm": 484.88865570477134,
+      "wrench_equivalence_max_nm": 2.8421709430404007e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_4",
+      "policy": "segmented_trunk",
+      "required_force_rms_n": 2329.328228750443,
+      "residual_force_rms_n": 1738.3248059427392,
+      "required_torque_rms_nm": 537.6002209105493,
+      "residual_torque_rms_nm": 482.10386494524715,
+      "wrench_equivalence_max_nm": 2.7408903977723625e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    },
+    {
+      "pitch": "3034_5",
+      "policy": "segmented_trunk",
+      "required_force_rms_n": 2072.200511430862,
+      "residual_force_rms_n": 1505.4472665416038,
+      "required_torque_rms_nm": 466.03499271539977,
+      "residual_torque_rms_nm": 413.61544055106555,
+      "wrench_equivalence_max_nm": 2.666192676669783e-13,
+      "body_mass_kg": 93.89524900000002,
+      "ground_contact_model_validated": false,
+      "ball_speed_improvement_claim": false
+    }
+  ],
+  "scope": "Compare whole-body inverse root demand with measured external resultant wrench; no foot assignment/contact constraint or new forward prediction. Moments applied at plate center, equivalent to COP force plus free moment.",
+  "filter_hz": 40,
+  "source": "https://raw.githubusercontent.com/pyomeca/ezc3d/dev/src/modules/ForcePlatforms.cpp"
+}

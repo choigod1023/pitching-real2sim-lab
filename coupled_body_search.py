@@ -21,36 +21,85 @@ def frame(x,z):
     return R.from_matrix(np.stack([x,y,z],axis=-1))
 def txt(a):return ' '.join(map(str,a))
 
-def build(dt_target=1/2880):
-    meta,poi,tables=load();g=tables['landmarks'].query("session_pitch == '3034_4'").reset_index(drop=True)
-    native=regular_time(g);fp=float(g.fp_10_time.iloc[0]);br=float(g.BR_time.iloc[0]);n=round((br-fp)/dt_target);t=np.linspace(fp,br,n+1);dt=t[1]-t[0]
+def build(dt_target=1/2880,pitch="3034_4",observed_pitch=None,padding=0,output_dir=None,frame_policy="segment_axes",reconstruct_rounding=False):
+    output=OUT if output_dir is None else Path(output_dir)
+    meta,poi,tables=load();g=tables['landmarks'].query('session_pitch == @pitch').reset_index(drop=True)
+    if reconstruct_rounding:
+        from quantization_reconstruction import reconstruct_landmarks
+        g,_=reconstruct_landmarks(g)
+    native=regular_time(g);fp=float(g.fp_10_time.iloc[0]);br=float(g.BR_time.iloc[0]);n=round((br-fp)/dt_target);dt=(br-fp)/n;t=fp+np.arange(-padding,n+padding+1)*dt
     pts={name:CubicSpline(native,vector(g,name))(t) for name in ['rear_hip','lead_hip','rear_knee_jc','lead_knee_jc','rear_ankle_jc','lead_ankle_jc','shoulder_jc','glove_shoulder_jc','glove_elbow_jc','glove_wrist_jc']}
     center=(pts['rear_hip']+pts['lead_hip'])/2;top=(pts['shoulder_jc']+pts['glove_shoulder_jc'])/2
     pelvis=frame(pts['rear_hip']-pts['lead_hip'],np.tile([0.,0.,1.],(len(t),1)))
     torso=frame(pts['shoulder_jc']-pts['glove_shoulder_jc'],top-center)
+    if frame_policy in ('marker_axes','marker_axes_lumbar','segmented_trunk'):
+        if observed_pitch is None:raise ValueError('Marker frames require source observation')
+        import ezc3d
+        from scipy.signal import butter,sosfiltfilt
+        c=ezc3d.c3d(observed_pitch.ledger['source_paths']['c3d']);labels=[x.strip() for x in c['parameters']['POINT']['LABELS']['value']]
+        rate=float(c['parameters']['POINT']['RATE']['value'][0]);scale={'mm':.001,'cm':.01,'m':1.}[c['parameters']['POINT']['UNITS']['value'][0].strip().lower()]
+        markers={}
+        for name in ['RASI','LASI','RPSI','LPSI']:
+            raw=c['data']['points'][:,labels.index(name),:].T
+            if not np.isfinite(raw).all() or np.any(raw[:,3]<0):raise ValueError('Missing pelvis markers')
+            filtered=sosfiltfilt(butter(4,20,fs=rate,output='sos'),raw[:,:3]*scale,axis=0)
+            markers[name]=CubicSpline(np.arange(len(filtered))/rate,filtered)(t)
+        px=markers['RASI']-markers['LASI'];py=(markers['RASI']+markers['LASI']-markers['RPSI']-markers['LPSI'])/2
+        pz=np.cross(px,py)
+        if np.mean(pz[:,2])<0:pz=-pz
+        pelvis=frame(px,pz)
+        proximal=CubicSpline(native,vector(g,'thorax_prox'))(t);distal=CubicSpline(native,vector(g,'thorax_dist'))(t)
+        torso=frame(pts['shoulder_jc']-pts['glove_shoulder_jc'],proximal-distal)
+    elif frame_policy!='segment_axes':raise ValueError('Unknown frame policy')
+    lumbar=np.zeros(3)
+    if frame_policy=='marker_axes_lumbar':
+        lumbar=np.mean(pelvis.inv().apply(distal-center),axis=0)
+    trunk_origin=center+pelvis.apply(np.tile(lumbar,(len(t),1)))
+    if frame_policy=='segmented_trunk':
+        lumbar_length=float(np.median(np.linalg.norm(distal-center,axis=1)))
+        lumbar_rotation=frame(pelvis.as_matrix()[:,:,0],distal-center)
+        trunk_origin=center+lumbar_rotation.apply(np.tile([0,0,lumbar_length],(len(t),1)))
+    shoulder_local=np.median(torso.inv().apply(pts['shoulder_jc']-trunk_origin),axis=0)
+    glove_local=np.median(torso.inv().apply(pts['glove_shoulder_jc']-trunk_origin),axis=0)
+    capsule_start=np.median(torso.inv().apply(center-trunk_origin),axis=0)
+    capsule_end=np.median(torso.inv().apply(top-trunk_origin),axis=0)
+    if frame_policy=='segmented_trunk':capsule_start=np.zeros(3)
     height=float(np.median(np.linalg.norm(top-center,axis=1)));width=float(np.median(np.linalg.norm(pts['shoulder_jc']-pts['glove_shoulder_jc'],axis=1)))
-    source=ROOT.parent/'trace-error-audit/artifacts/trace-error/3034_4-46080-pad1-foh-sub1.npz'
-    z=np.load(source);at=np.linspace(fp,br,len(z['qreference']));aq=np.zeros((len(t),13));aq[:,:3]=CubicSpline(at,z['qreference'][:,:3])(t)
-    for sl in [slice(3,7),slice(9,13)]:aq[:,sl]=quat(RotationSpline(at,rot(z['qreference'][:,sl]))(t))
-    aq[:,7:9]=CubicSpline(at,z['qreference'][:,7:9])(t)
+    if observed_pitch is not None:
+        aq=observed_pitch.sample(t);arm_lengths=observed_pitch.lengths
+    else:
+        if pitch!='3034_4' or padding:raise ValueError('ObservedPitch required for other pitches or padding')
+        source=ROOT.parent/'trace-error-audit/artifacts/trace-error/3034_4-46080-pad1-foh-sub1.npz'
+        z=np.load(source);at=np.linspace(fp,br,len(z['qreference']));aq=np.zeros((len(t),13));aq[:,:3]=CubicSpline(at,z['qreference'][:,:3])(t)
+        for sl in [slice(3,7),slice(9,13)]:aq[:,sl]=quat(RotationSpline(at,rot(z['qreference'][:,sl]))(t))
+        aq[:,7:9]=CubicSpline(at,z['qreference'][:,7:9])(t)
+        arm_lengths=z['lengths']
     # Serialize inherited arm model so mass/grip and all hand DOFs remain unchanged.
-    OUT.mkdir(parents=True,exist_ok=True)
+    output.mkdir(parents=True,exist_ok=True)
     knee_native=arm_poses(vector(g,'rear_hip'),vector(g,'rear_knee_jc'),vector(g,'rear_ankle_jc'))[:,7]
-    np.savez(OUT/'knee_source.npz',t=native-fp,angle=knee_native)
-    marm=model_for(z['lengths'],dt);mujoco.mj_saveLastXML(str(OUT/'arm.xml'),marm)
-    tree=ET.parse(OUT/'arm.xml');xml=tree.getroot();world=xml.find('worldbody');upper=world.find('body');world.remove(upper)
+    np.savez(output/'knee_source.npz',t=native-fp,angle=knee_native)
+    marm=model_for(arm_lengths,dt);mujoco.mj_saveLastXML(str(output/'arm.xml'),marm)
+    tree=ET.parse(output/'arm.xml');xml=tree.getroot();world=xml.find('worldbody');upper=world.find('body');world.remove(upper)
     free=upper.find('freejoint')
     if free is None:free=upper.find("joint[@type='free']")
     upper.remove(free);ET.SubElement(upper,'joint',name='pitch_shoulder',type='ball')
-    upper.set('pos',txt([width/2,0,height]));upper.set('name','upper')
+    upper.set('pos',txt(shoulder_local if frame_policy in ('marker_axes_lumbar','segmented_trunk') else [width/2,0,height]));upper.set('name','upper')
     masses=json.loads((ROOT/'body_mass_source.json').read_text())['mass_kg']
     root=ET.SubElement(world,'body',name='pelvis');ET.SubElement(root,'freejoint',name='root_support')
     ET.SubElement(root,'geom',type='box',size='.12 .10 .09',mass=str(masses['pelvis']))
-    trunk=ET.SubElement(root,'body',name='torso');ET.SubElement(trunk,'joint',name='torso_rotation',type='ball')
-    ET.SubElement(trunk,'geom',type='capsule',fromto=txt([0,0,0,0,0,height]),size='.13',mass=str(masses['torso']))
+    trunk_parent=root;trunk_offset=lumbar;trunk_mass=masses['torso']
+    if frame_policy=='segmented_trunk':
+        lower_mass=trunk_mass*lumbar_length/(lumbar_length+np.linalg.norm(capsule_end));trunk_mass-=lower_mass
+        trunk_parent=ET.SubElement(root,'body',name='lower_trunk');ET.SubElement(trunk_parent,'joint',name='lower_trunk_rotation',type='ball')
+        ET.SubElement(trunk_parent,'geom',type='capsule',fromto=txt([0,0,0,0,0,lumbar_length]),size='.13',mass=str(lower_mass))
+        trunk_offset=[0,0,lumbar_length]
+    trunk=ET.SubElement(trunk_parent,'body',name='torso',pos=txt(trunk_offset));ET.SubElement(trunk,'joint',name='torso_rotation',type='ball')
+    ET.SubElement(trunk,'geom',type='capsule',fromto=txt(np.r_[capsule_start,capsule_end] if frame_policy in ('marker_axes_lumbar','segmented_trunk') else [0,0,0,0,0,height]),size='.13',mass=str(trunk_mass))
     trunk.append(upper)
     qmap={'root_support':np.c_[center,quat(pelvis)],'torso_rotation':quat(pelvis.inv()*torso),
           'pitch_shoulder':quat(torso.inv()*rot(aq[:,3:7])),'elbow':aq[:,7:8],'marker_roll':aq[:,8:9],'wrist_marker_rotation':aq[:,9:13]}
+    if frame_policy=='segmented_trunk':
+        qmap['lower_trunk_rotation']=quat(pelvis.inv()*lumbar_rotation);qmap['torso_rotation']=quat(lumbar_rotation.inv()*torso)
     sites={}
     for side,sidecode in [('rear','r'),('lead','l')]:
         hip=pts[side+'_hip'];knee=pts[side+'_knee_jc'];ankle=pts[side+'_ankle_jc'];p=arm_poses(hip,knee,ankle)
@@ -66,14 +115,14 @@ def build(dt_target=1/2880):
     # Glove forearm and hand are a single rigid load, retaining observed elbow motion.
     gp=arm_poses(pts['glove_shoulder_jc'],pts['glove_elbow_jc'],pts['glove_wrist_jc'])
     lengths=[float(np.median(np.linalg.norm(pts[b]-pts[a],axis=1))) for a,b in [('glove_shoulder_jc','glove_elbow_jc'),('glove_elbow_jc','glove_wrist_jc')]]
-    gu=ET.SubElement(trunk,'body',name='glove_upper',pos=txt([-width/2,0,height]));ET.SubElement(gu,'joint',name='glove_shoulder',type='ball')
+    gu=ET.SubElement(trunk,'body',name='glove_upper',pos=txt(glove_local if frame_policy in ('marker_axes_lumbar','segmented_trunk') else [-width/2,0,height]));ET.SubElement(gu,'joint',name='glove_shoulder',type='ball')
     ET.SubElement(gu,'geom',type='capsule',fromto=txt([0,0,0,0,0,-lengths[0]]),size='.04',mass=str(masses['humerus_l']))
     gf=ET.SubElement(gu,'body',name='glove_forearm',pos=txt([0,0,-lengths[0]]));ET.SubElement(gf,'joint',name='glove_elbow',axis='0 1 0')
     ET.SubElement(gf,'geom',type='capsule',fromto=txt([0,0,0,0,0,-lengths[1]]),size='.03',mass=str(masses['ulna_l']+masses['radius_l']+masses['hand_l']))
     qmap['glove_shoulder']=quat(torso.inv()*rot(gp[:,3:7]));qmap['glove_elbow']=gp[:,7:8]
     for body,name,pos in [(upper,'shoulder_jc',[0,0,0]),(upper.find('body'),'elbow_jc',[0,0,0]),(gu,'glove_shoulder_jc',[0,0,0]),(gf,'glove_elbow_jc',[0,0,0]),(gf,'glove_wrist_jc',[0,0,-lengths[1]])]:ET.SubElement(body,'site',name=name,pos=txt(pos))
-    xml.find('option').set('integrator','RK4');tree.write(OUT/'model.xml')
-    m=mujoco.MjModel.from_xml_path(str(OUT/'model.xml'));q=np.zeros((len(t),m.nq))
+    xml.find('option').set('integrator','RK4');tree.write(output/'model.xml')
+    m=mujoco.MjModel.from_xml_path(str(output/'model.xml'));q=np.zeros((len(t),m.nq))
     for name,value in qmap.items():
         adr=int(m.joint(name).qposadr[0]);q[:,adr:adr+value.shape[1]]=value
     return m,q,dt,t,pts
