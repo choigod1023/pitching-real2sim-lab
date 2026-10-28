@@ -1,0 +1,1689 @@
+{
+  "protocol": "SAME_PITCH_PROTOCOL.md",
+  "source_ledgers": [
+    {
+      "rounding_reconstruction": null,
+      "pitch": "3034_1",
+      "user": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 130.19592960000003,
+      "rate_hz": 360.0,
+      "raw_point_units": "m",
+      "processed_position_units": "m",
+      "frame_count": 726,
+      "fp10_s": 1.4306,
+      "br_s": 1.6,
+      "point_processing": "4th-order zero-phase 20Hz Butterworth on hand/forearm markers; supplied processed joint centers unchanged",
+      "source_paths": {
+        "c3d": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_002_FF_809.c3d",
+        "landmarks": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv"
+      },
+      "source_sha256": {
+        "c3d": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1",
+        "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+        "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+        "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+        "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+        "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+      },
+      "lengths_m": [
+        0.35626962154046415,
+        0.30600300598665986
+      ],
+      "arm_masses_kg": [
+        2.14154,
+        1.280182
+      ],
+      "hand_mass_kg": 0.482044,
+      "ball_mass_kg": 0.145,
+      "grip_m": [
+        0.15,
+        0,
+        0
+      ],
+      "coordinates": "laboratory coordinates retained; marker-frame rotations not anatomical angles",
+      "br_detection": "unconfirmed",
+      "radar_measurement_position_and_time": "unconfirmed",
+      "capacity": "not measured; generic inertias"
+    },
+    {
+      "rounding_reconstruction": null,
+      "pitch": "3034_2",
+      "user": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 131.0006016,
+      "rate_hz": 360.0,
+      "raw_point_units": "m",
+      "processed_position_units": "m",
+      "frame_count": 719,
+      "fp10_s": 1.4,
+      "br_s": 1.5583,
+      "point_processing": "4th-order zero-phase 20Hz Butterworth on hand/forearm markers; supplied processed joint centers unchanged",
+      "source_paths": {
+        "c3d": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_005_FF_814.c3d",
+        "landmarks": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv"
+      },
+      "source_sha256": {
+        "c3d": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c",
+        "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+        "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+        "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+        "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+        "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+      },
+      "lengths_m": [
+        0.3637799956152826,
+        0.2988906430453653
+      ],
+      "arm_masses_kg": [
+        2.14154,
+        1.280182
+      ],
+      "hand_mass_kg": 0.482044,
+      "ball_mass_kg": 0.145,
+      "grip_m": [
+        0.15,
+        0,
+        0
+      ],
+      "coordinates": "laboratory coordinates retained; marker-frame rotations not anatomical angles",
+      "br_detection": "unconfirmed",
+      "radar_measurement_position_and_time": "unconfirmed",
+      "capacity": "not measured; generic inertias"
+    },
+    {
+      "rounding_reconstruction": null,
+      "pitch": "3034_3",
+      "user": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 129.23032320000002,
+      "rate_hz": 360.0,
+      "raw_point_units": "m",
+      "processed_position_units": "m",
+      "frame_count": 672,
+      "fp10_s": 1.3,
+      "br_s": 1.4583,
+      "point_processing": "4th-order zero-phase 20Hz Butterworth on hand/forearm markers; supplied processed joint centers unchanged",
+      "source_paths": {
+        "c3d": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_006_FF_803.c3d",
+        "landmarks": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv"
+      },
+      "source_sha256": {
+        "c3d": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757",
+        "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+        "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+        "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+        "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+        "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+      },
+      "lengths_m": [
+        0.3616876863748521,
+        0.298982871135121
+      ],
+      "arm_masses_kg": [
+        2.14154,
+        1.280182
+      ],
+      "hand_mass_kg": 0.482044,
+      "ball_mass_kg": 0.145,
+      "grip_m": [
+        0.15,
+        0,
+        0
+      ],
+      "coordinates": "laboratory coordinates retained; marker-frame rotations not anatomical angles",
+      "br_detection": "unconfirmed",
+      "radar_measurement_position_and_time": "unconfirmed",
+      "capacity": "not measured; generic inertias"
+    },
+    {
+      "rounding_reconstruction": null,
+      "pitch": "3034_4",
+      "user": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 128.4256512,
+      "rate_hz": 360.0,
+      "raw_point_units": "m",
+      "processed_position_units": "m",
+      "frame_count": 673,
+      "fp10_s": 1.2972,
+      "br_s": 1.4528,
+      "point_processing": "4th-order zero-phase 20Hz Butterworth on hand/forearm markers; supplied processed joint centers unchanged",
+      "source_paths": {
+        "c3d": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_008_FF_798.c3d",
+        "landmarks": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv"
+      },
+      "source_sha256": {
+        "c3d": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053",
+        "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+        "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+        "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+        "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+        "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+      },
+      "lengths_m": [
+        0.3632259232246646,
+        0.2999674777640511
+      ],
+      "arm_masses_kg": [
+        2.14154,
+        1.280182
+      ],
+      "hand_mass_kg": 0.482044,
+      "ball_mass_kg": 0.145,
+      "grip_m": [
+        0.15,
+        0,
+        0
+      ],
+      "coordinates": "laboratory coordinates retained; marker-frame rotations not anatomical angles",
+      "br_detection": "unconfirmed",
+      "radar_measurement_position_and_time": "unconfirmed",
+      "capacity": "not measured; generic inertias"
+    },
+    {
+      "rounding_reconstruction": null,
+      "pitch": "3034_5",
+      "user": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 128.5865856,
+      "rate_hz": 360.0,
+      "raw_point_units": "m",
+      "processed_position_units": "m",
+      "frame_count": 669,
+      "fp10_s": 1.2333,
+      "br_s": 1.4139,
+      "point_processing": "4th-order zero-phase 20Hz Butterworth on hand/forearm markers; supplied processed joint centers unchanged",
+      "source_paths": {
+        "c3d": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_011_FF_799.c3d",
+        "landmarks": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv"
+      },
+      "source_sha256": {
+        "c3d": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1",
+        "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+        "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+        "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+        "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+        "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+      },
+      "lengths_m": [
+        0.3569225554704957,
+        0.30000204131424324
+      ],
+      "arm_masses_kg": [
+        2.14154,
+        1.280182
+      ],
+      "hand_mass_kg": 0.482044,
+      "ball_mass_kg": 0.145,
+      "grip_m": [
+        0.15,
+        0,
+        0
+      ],
+      "coordinates": "laboratory coordinates retained; marker-frame rotations not anatomical angles",
+      "br_detection": "unconfirmed",
+      "radar_measurement_position_and_time": "unconfirmed",
+      "capacity": "not measured; generic inertias"
+    }
+  ],
+  "records": [
+    {
+      "dataset": "OBP/baseball_pitching",
+      "pitch": "3034_1",
+      "athlete": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 130.19592960000003,
+      "split": "geometry_calibration",
+      "ladder": {
+        "direct_ball_velocity_mps": null,
+        "direct_ball_speed_kmh": null,
+        "direct_ball_missing_reason": "No identified direct ball trajectory for this same pitch; hand markers are not ball observations.",
+        "vectors_mps": {
+          "processed_hand_landmark": [
+            21.766507663509433,
+            6.980046751872554,
+            -6.923212330397896
+          ],
+          "RFIN_marker": [
+            22.969263545801297,
+            7.212935637629534,
+            -6.34150821445766
+          ],
+          "processed_wrist": [
+            17.091390674733816,
+            6.031567766326461,
+            -4.478568079908454
+          ],
+          "fixed_length_wrist": [
+            16.554470323062,
+            5.78673830950584,
+            -4.365304368929977
+          ],
+          "hand_rotation_component": [
+            12.19633786383803,
+            3.2136346211967397,
+            -4.848965880532852
+          ],
+          "continuous_assumed_ball": [
+            28.75080818690003,
+            9.00037293070258,
+            -9.214270249462828
+          ],
+          "free_shoulder_arm_reference": [
+            28.74938088327079,
+            8.999724283742497,
+            -9.21351650985485
+          ]
+        },
+        "speeds_kmh": {
+          "processed_hand_landmark": 85.9814444885899,
+          "RFIN_marker": 89.62685938260323,
+          "processed_wrist": 67.21046867739085,
+          "fixed_length_wrist": 65.05875439819931,
+          "hand_rotation_component": 48.64538878885724,
+          "continuous_assumed_ball": 113.41533956375669,
+          "free_shoulder_arm_reference": 113.40918961805689
+        },
+        "step_speed_differences_kmh": {
+          "fixed_length_wrist_minus_processed_wrist": -2.1517142791915376,
+          "assumed_ball_minus_fixed_wrist": 48.35658516555738
+        },
+        "warning": "Marker/landmark speeds are proxies; vector norms do not add."
+      },
+      "models": {
+        "nominal": {
+          "reference_speed_kmh": 112.07918820077825,
+          "reference_velocity_mps": [
+            28.252397773058405,
+            8.536172135598434,
+            -9.909903567630684
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471311475409836,
+              "speed_kmh": 112.06932642980689,
+              "velocity_mps": [
+                28.25106015181898,
+                8.534007889417333,
+                -9.906974797789214
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_1",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.126603170193135,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.0098617709713551,
+              "reference_site_rmse_mm": 0.021521717276360278,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 32.02589854194019,
+                "elbow_jc": 44.898591613239695,
+                "wrist": 47.5294593513962
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001735655737704918,
+              "speed_kmh": 112.07044426303486,
+              "velocity_mps": [
+                28.25128180111009,
+                8.534004414861366,
+                -9.907321427795
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_1",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.12548533696517,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008743937743389552,
+              "reference_site_rmse_mm": 0.011448890456181842,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 32.007517364386395,
+                "elbow_jc": 44.881911256468086,
+                "wrist": 47.5142563558025
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0011178332279655478
+        },
+        "frozen_attachment": {
+          "reference_speed_kmh": 111.7520342128873,
+          "reference_velocity_mps": [
+            28.16693879506196,
+            8.520016150110491,
+            -9.881954980441865
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471311475409836,
+              "speed_kmh": 111.74222009658929,
+              "velocity_mps": [
+                28.165627287864666,
+                8.517801717731661,
+                -9.879038423726634
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_1",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.453709503410735,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.009814116298002773,
+              "reference_site_rmse_mm": 0.021593329430500807,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.583092420352173,
+                "elbow_jc": 43.59176919515911,
+                "wrist": 46.390014448408266
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001735655737704918,
+              "speed_kmh": 111.74330942236624,
+              "velocity_mps": [
+                28.16583474139488,
+                8.51782300844866,
+                -9.879379329003083
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_1",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.45262017763379,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008724790521057457,
+              "reference_site_rmse_mm": 0.011469110399842677,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.558215736054272,
+                "elbow_jc": 43.574065839712475,
+                "wrist": 46.37335962932997
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0010893257769453157
+        },
+        "frozen_skeleton": {
+          "reference_speed_kmh": 111.75203555437076,
+          "reference_velocity_mps": [
+            28.16693924444435,
+            8.520016087280384,
+            -9.881954924277608
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471311475409836,
+              "speed_kmh": 111.7422214393467,
+              "velocity_mps": [
+                28.165627737501843,
+                8.51780165442762,
+                -9.879038368282604
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_1",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.453708160653335,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.009814115024070702,
+              "reference_site_rmse_mm": 0.02159334440763295,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.583092678726118,
+                "elbow_jc": 43.591778369719485,
+                "wrist": 46.39001626603887
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001735655737704918,
+              "speed_kmh": 111.74331076456917,
+              "velocity_mps": [
+                28.165835190893166,
+                8.517822945454512,
+                -9.879379273207975
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_1",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.452618835430854,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008724789801590305,
+              "reference_site_rmse_mm": 0.011469118241820423,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.558215729579757,
+                "elbow_jc": 43.57407474808509,
+                "wrist": 46.37336117812764
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0010893252224803973
+        }
+      },
+      "geometry_calibration_record_gap_change_kmh": 0.3271334984656846,
+      "attribution_kmh": {
+        "continuous_assumption_minus_record": -16.78059003624334,
+        "free_arm_minus_continuous_assumption": -0.0061499456998035384,
+        "body_reference_minus_free_arm": -1.3300014172786376,
+        "forward_minus_body_reference": -0.008743937743389552
+      },
+      "attribution_closure_kmh": 0.0
+    },
+    {
+      "dataset": "OBP/baseball_pitching",
+      "pitch": "3034_2",
+      "athlete": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 131.0006016,
+      "split": "reused_development_check",
+      "ladder": {
+        "direct_ball_velocity_mps": null,
+        "direct_ball_speed_kmh": null,
+        "direct_ball_missing_reason": "No identified direct ball trajectory for this same pitch; hand markers are not ball observations.",
+        "vectors_mps": {
+          "processed_hand_landmark": [
+            21.551485364212642,
+            7.5498184814545315,
+            -7.7357442781260595
+          ],
+          "RFIN_marker": [
+            22.85683755310506,
+            7.9683891329969,
+            -7.492286264352321
+          ],
+          "processed_wrist": [
+            16.902467931284956,
+            6.371406657259019,
+            -5.5020383372497115
+          ],
+          "fixed_length_wrist": [
+            16.90741003775932,
+            6.5238313260001135,
+            -5.481468973624729
+          ],
+          "hand_rotation_component": [
+            10.986001504122155,
+            3.982534837618234,
+            -5.09637577462349
+          ],
+          "continuous_assumed_ball": [
+            27.893411541881477,
+            10.506366163618347,
+            -10.577844748248218
+          ],
+          "free_shoulder_arm_reference": [
+            27.89252914935153,
+            10.505432612724189,
+            -10.577437166095548
+          ]
+        },
+        "speeds_kmh": {
+          "processed_hand_landmark": 86.79718854756611,
+          "RFIN_marker": 91.22037732300198,
+          "processed_wrist": 67.97813099732892,
+          "fixed_length_wrist": 68.15964637064448,
+          "hand_rotation_component": 45.89482683566764,
+          "continuous_assumed_ball": 113.86003470301493,
+          "free_shoulder_arm_reference": 113.85562603380102
+        },
+        "step_speed_differences_kmh": {
+          "fixed_length_wrist_minus_processed_wrist": 0.18151537331556256,
+          "assumed_ball_minus_fixed_wrist": 45.70038833237045
+        },
+        "warning": "Marker/landmark speeds are proxies; vector norms do not add."
+      },
+      "models": {
+        "nominal": {
+          "reference_speed_kmh": 112.19324001907545,
+          "reference_velocity_mps": [
+            27.311464182462572,
+            9.944412909195858,
+            -11.244404960724383
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471491228070178,
+              "speed_kmh": 112.18657097893325,
+              "velocity_mps": [
+                27.311132622033476,
+                9.941998791669628,
+                -11.242210589619397
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_2",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.814030621066763,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006669040142199378,
+              "reference_site_rmse_mm": 0.014455099921020679,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.178198422838133,
+                "elbow_jc": 39.05283407760182,
+                "wrist": 40.498469682211145
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001735745614035089,
+              "speed_kmh": 112.18654233150261,
+              "velocity_mps": [
+                27.311214855285556,
+                9.941810645406589,
+                -11.242155143343163
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_2",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.814059268497402,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006697687572838618,
+              "reference_site_rmse_mm": 0.00756588772838808,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.151421559750517,
+                "elbow_jc": 39.02160490358395,
+                "wrist": 40.47002446315453
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 2.8647430639239246e-05
+        },
+        "frozen_attachment": {
+          "reference_speed_kmh": 111.87560472535472,
+          "reference_velocity_mps": [
+            27.22743182246648,
+            9.933101849099573,
+            -11.213956963889657
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471491228070178,
+              "speed_kmh": 111.86885123443521,
+              "velocity_mps": [
+                27.227081440051943,
+                9.930723802374786,
+                -11.211715031986937
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_2",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 19.1317503655648,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006753490919507499,
+              "reference_site_rmse_mm": 0.014568210436588193,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.424439963821285,
+                "elbow_jc": 38.086405634639526,
+                "wrist": 39.72891885360746
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001735745614035089,
+              "speed_kmh": 111.86886225108098,
+              "velocity_mps": [
+                27.22717406415602,
+                9.93051488089187,
+                -11.211683629566775
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_2",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 19.131739348919027,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006742474273735866,
+              "reference_site_rmse_mm": 0.007611552437733865,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.39271444027534,
+                "elbow_jc": 38.05609152714941,
+                "wrist": 39.702235157520384
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 1.1016645771633193e-05
+        },
+        "frozen_skeleton": {
+          "reference_speed_kmh": 113.43708145201916,
+          "reference_velocity_mps": [
+            27.58065756264103,
+            10.033118834821188,
+            -11.469214723220265
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471491228070178,
+              "speed_kmh": 113.43021512635148,
+              "velocity_mps": [
+                27.580241230031557,
+                10.030742501047998,
+                -11.467054274139384
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_2",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 17.570386473648526,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006866325667672868,
+              "reference_site_rmse_mm": 0.01452629374219876,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.424461030807095,
+                "elbow_jc": 39.05422215884145,
+                "wrist": 41.800971221990274
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001735745614035089,
+              "speed_kmh": 113.43020509538182,
+              "velocity_mps": [
+                27.5803598373602,
+                10.030480574473106,
+                -11.466990461896863
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_2",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 17.570396504618188,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.0068763566373348795,
+              "reference_site_rmse_mm": 0.00757797531556619,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.39272190204783,
+                "elbow_jc": 39.02945124510497,
+                "wrist": 41.78695043860383
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 1.0030969662011557e-05
+        }
+      },
+      "geometry_calibration_record_gap_change_kmh": -1.2436627638792146,
+      "attribution_kmh": {
+        "continuous_assumption_minus_record": -17.140566896985078,
+        "free_arm_minus_continuous_assumption": -0.004408669213916028,
+        "body_reference_minus_free_arm": -1.6623860147255698,
+        "forward_minus_body_reference": -0.006697687572838618
+      },
+      "attribution_closure_kmh": 0.0
+    },
+    {
+      "dataset": "OBP/baseball_pitching",
+      "pitch": "3034_3",
+      "athlete": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 129.23032320000002,
+      "split": "reused_development_check",
+      "ladder": {
+        "direct_ball_velocity_mps": null,
+        "direct_ball_speed_kmh": null,
+        "direct_ball_missing_reason": "No identified direct ball trajectory for this same pitch; hand markers are not ball observations.",
+        "vectors_mps": {
+          "processed_hand_landmark": [
+            22.208241011938384,
+            7.330823670218052,
+            -6.972361622870229
+          ],
+          "RFIN_marker": [
+            23.79023776945937,
+            7.674590379383409,
+            -6.497371215244929
+          ],
+          "processed_wrist": [
+            16.745784829066185,
+            6.605905387129549,
+            -5.040077626339135
+          ],
+          "fixed_length_wrist": [
+            16.758715211536526,
+            6.735581856389382,
+            -4.9662416239073
+          ],
+          "hand_rotation_component": [
+            11.283726575358337,
+            3.314855090302132,
+            -4.510566983419173
+          ],
+          "continuous_assumed_ball": [
+            28.042441786894862,
+            10.050436946691514,
+            -9.476808607326472
+          ],
+          "free_shoulder_arm_reference": [
+            28.041459943537973,
+            10.049684229012055,
+            -9.476498027916291
+          ]
+        },
+        "speeds_kmh": {
+          "processed_hand_landmark": 87.85480973641712,
+          "RFIN_marker": 92.98114841151124,
+          "processed_wrist": 67.29801889312796,
+          "fixed_length_wrist": 67.43503955963013,
+          "hand_rotation_component": 45.34513530853593,
+          "continuous_assumed_ball": 112.5366982072797,
+          "free_shoulder_arm_reference": 112.53231723768668
+        },
+        "step_speed_differences_kmh": {
+          "fixed_length_wrist_minus_processed_wrist": 0.13702066650216693,
+          "assumed_ball_minus_fixed_wrist": 45.10165864764957
+        },
+        "warning": "Marker/landmark speeds are proxies; vector norms do not add."
+      },
+      "models": {
+        "nominal": {
+          "reference_speed_kmh": 111.08160643187054,
+          "reference_velocity_mps": [
+            27.546517290930474,
+            9.562810175066094,
+            -10.09132761100729
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471491228070173,
+              "speed_kmh": 111.07366168956611,
+              "velocity_mps": [
+                27.545880565457917,
+                9.56020591476401,
+                -10.08878522527452
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_3",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.156661510433906,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.00794474230443143,
+              "reference_site_rmse_mm": 0.011148713969815939,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.61779290437558,
+                "elbow_jc": 40.066072815534724,
+                "wrist": 41.501326685255485
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.00017357456140350866,
+              "speed_kmh": 111.07462642313835,
+              "velocity_mps": [
+                27.546116682272253,
+                9.559979697758397,
+                -10.08917444854721
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_3",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.15569677686166,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006980008732185183,
+              "reference_site_rmse_mm": 0.005930373303142252,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.598217104048747,
+                "elbow_jc": 40.04248894684048,
+                "wrist": 41.480029226792226
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0009647335722462458
+        },
+        "frozen_attachment": {
+          "reference_speed_kmh": 110.73178354680303,
+          "reference_velocity_mps": [
+            27.454936121156752,
+            9.547768210096415,
+            -10.058436839841594
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471491228070173,
+              "speed_kmh": 110.7238983932224,
+              "velocity_mps": [
+                27.454289814673043,
+                9.545236290845128,
+                -10.055905887106446
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_3",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.506424806777616,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.0078851535806308,
+              "reference_site_rmse_mm": 0.011130148079210185,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.307562273937716,
+                "elbow_jc": 38.992713808057076,
+                "wrist": 40.61124230578331
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.00017357456140350866,
+              "speed_kmh": 110.7248288876397,
+              "velocity_mps": [
+                27.45453070289726,
+                9.544971416494416,
+                -10.056290184418579
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_3",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 18.505494312360312,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.006954659163326937,
+              "reference_site_rmse_mm": 0.005908903146979392,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.278086941539748,
+                "elbow_jc": 38.9655169450394,
+                "wrist": 40.58689944069842
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0009304944173038621
+        },
+        "frozen_skeleton": {
+          "reference_speed_kmh": 112.21432782142024,
+          "reference_velocity_mps": [
+            27.79586304368184,
+            9.65819471874867,
+            -10.281949375353134
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.0003471491228070173,
+              "speed_kmh": 112.20625919937189,
+              "velocity_mps": [
+                27.79514102699744,
+                9.655700758124157,
+                -10.2794488748653
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_3",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 17.02406400062813,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008068622048355678,
+              "reference_site_rmse_mm": 0.011142677637963493,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.30758280395629,
+                "elbow_jc": 39.47115539132419,
+                "wrist": 42.265287548015564
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.00017357456140350866,
+              "speed_kmh": 112.20720049739876,
+              "velocity_mps": [
+                27.795408244183733,
+                9.655369631955201,
+                -10.279830163975372
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_3",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 17.023122702601256,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.007127324021482195,
+              "reference_site_rmse_mm": 0.005905087616352392,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 29.278093660863306,
+                "elbow_jc": 39.44776073847779,
+                "wrist": 42.250564920734945
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0009412980268734827
+        }
+      },
+      "geometry_calibration_record_gap_change_kmh": -1.132574074260404,
+      "attribution_kmh": {
+        "continuous_assumption_minus_record": -16.693624992720316,
+        "free_arm_minus_continuous_assumption": -0.004380969593015038,
+        "body_reference_minus_free_arm": -1.4507108058161435,
+        "forward_minus_body_reference": -0.006980008732185183
+      },
+      "attribution_closure_kmh": 0.0
+    },
+    {
+      "dataset": "OBP/baseball_pitching",
+      "pitch": "3034_4",
+      "athlete": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 128.4256512,
+      "split": "reused_development_check",
+      "ladder": {
+        "direct_ball_velocity_mps": null,
+        "direct_ball_speed_kmh": null,
+        "direct_ball_missing_reason": "No identified direct ball trajectory for this same pitch; hand markers are not ball observations.",
+        "vectors_mps": {
+          "processed_hand_landmark": [
+            21.160238084865018,
+            8.012975154955972,
+            -8.475855852858325
+          ],
+          "RFIN_marker": [
+            22.388279896696826,
+            8.439247582369878,
+            -8.112605597267164
+          ],
+          "processed_wrist": [
+            16.34961538135793,
+            6.794990410382076,
+            -5.8253029940342715
+          ],
+          "fixed_length_wrist": [
+            16.41817321593716,
+            6.957943576280998,
+            -5.767701048639468
+          ],
+          "hand_rotation_component": [
+            10.684027599038025,
+            4.269957810425217,
+            -5.893232581636459
+          ],
+          "continuous_assumed_ball": [
+            27.102200814975184,
+            11.227901386706215,
+            -11.660933630275927
+          ],
+          "free_shoulder_arm_reference": [
+            27.10156579387488,
+            11.226878448761882,
+            -11.660718190069922
+          ]
+        },
+        "speeds_kmh": {
+          "processed_hand_landmark": 86.98329945963123,
+          "RFIN_marker": 90.95044631566007,
+          "processed_wrist": 67.10075265651652,
+          "fixed_length_wrist": 67.46862623958127,
+          "hand_rotation_component": 46.5377356248237,
+          "continuous_assumed_ball": 113.6467276905114,
+          "free_shoulder_arm_reference": 113.64316881762117
+        },
+        "step_speed_differences_kmh": {
+          "fixed_length_wrist_minus_processed_wrist": 0.3678735830647497,
+          "assumed_ball_minus_fixed_wrist": 46.17810145093013
+        },
+        "warning": "Marker/landmark speeds are proxies; vector norms do not add."
+      },
+      "models": {
+        "nominal": {
+          "reference_speed_kmh": 112.31654266846425,
+          "reference_velocity_mps": [
+            26.59683735542209,
+            10.689388952052965,
+            -12.317681614788938
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.000347321428571429,
+              "speed_kmh": 112.30510416040111,
+              "velocity_mps": [
+                26.597232593558502,
+                10.683418232350277,
+                -12.31396019989604
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_4",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 16.12054703959889,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.01143850806313651,
+              "reference_site_rmse_mm": 0.0137968666688817,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 32.32686063378731,
+                "elbow_jc": 41.42915262713361,
+                "wrist": 42.94663260145625
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001736607142857145,
+              "speed_kmh": 112.3082526662753,
+              "velocity_mps": [
+                26.59729583986757,
+                10.6848165660138,
+                -12.314825989599223
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_4",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 16.11739853372471,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008290002188957146,
+              "reference_site_rmse_mm": 0.007893163945730463,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 32.30593867017214,
+                "elbow_jc": 41.40148270814786,
+                "wrist": 42.919696793143416
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.0031485058741793637
+        },
+        "frozen_attachment": {
+          "reference_speed_kmh": 112.00656410836696,
+          "reference_velocity_mps": [
+            26.514755221689263,
+            10.675678541092667,
+            -12.288707614658755
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.000347321428571429,
+              "speed_kmh": 111.99508549571149,
+              "velocity_mps": [
+                26.515108568127665,
+                10.669814189440654,
+                -12.284965493044385
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_4",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 16.43056570428851,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.011478612655466236,
+              "reference_site_rmse_mm": 0.013757393694478127,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.85916575054508,
+                "elbow_jc": 39.923433776970995,
+                "wrist": 41.600783753256714
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001736607142857145,
+              "speed_kmh": 111.99825103683212,
+              "velocity_mps": [
+                26.515195112119343,
+                10.671155402043526,
+                -12.28584048254656
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_4",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 16.42740016316789,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008313071534843175,
+              "reference_site_rmse_mm": 0.007881685775592043,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.82969239826165,
+                "elbow_jc": 39.89325143484309,
+                "wrist": 41.57176559644061
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.003165541120623061
+        },
+        "frozen_skeleton": {
+          "reference_speed_kmh": 113.32092252104634,
+          "reference_velocity_mps": [
+            26.80367839845698,
+            10.755202579573277,
+            -12.520186436567977
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.000347321428571429,
+              "speed_kmh": 113.3094165933035,
+              "velocity_mps": [
+                26.80396936250739,
+                10.749429302247815,
+                -12.516485912654783
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_4",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 15.116234606696509,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.011505927742845756,
+              "reference_site_rmse_mm": 0.013809016190978577,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.8591109859185,
+                "elbow_jc": 40.41321751473748,
+                "wrist": 43.29115585066207
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.0001736607142857145,
+              "speed_kmh": 113.31254481181286,
+              "velocity_mps": [
+                26.804085217975537,
+                10.750668285421924,
+                -12.517358803123825
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_4",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 15.113106388187148,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.008377709233485575,
+              "reference_site_rmse_mm": 0.00792244083656861,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 30.82966012656803,
+                "elbow_jc": 40.38831339085122,
+                "wrist": 43.27195338076064
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.003128218509360181
+        }
+      },
+      "geometry_calibration_record_gap_change_kmh": -1.004292145537562,
+      "attribution_kmh": {
+        "continuous_assumption_minus_record": -14.778923509488607,
+        "free_arm_minus_continuous_assumption": -0.003558872890224052,
+        "body_reference_minus_free_arm": -1.3266261491569225,
+        "forward_minus_body_reference": -0.008290002188957146
+      },
+      "attribution_closure_kmh": 0.0
+    },
+    {
+      "dataset": "OBP/baseball_pitching",
+      "pitch": "3034_5",
+      "athlete": 2,
+      "session": 3034,
+      "recorded_speed_kmh": 128.5865856,
+      "split": "reused_development_check",
+      "ladder": {
+        "direct_ball_velocity_mps": null,
+        "direct_ball_speed_kmh": null,
+        "direct_ball_missing_reason": "No identified direct ball trajectory for this same pitch; hand markers are not ball observations.",
+        "vectors_mps": {
+          "processed_hand_landmark": [
+            22.281946536106535,
+            7.817905865234481,
+            -8.145719323341346
+          ],
+          "RFIN_marker": [
+            23.677757619316548,
+            8.091693231026932,
+            -7.942616258199458
+          ],
+          "processed_wrist": [
+            16.257006370014903,
+            6.866927462251415,
+            -5.103657117773437
+          ],
+          "fixed_length_wrist": [
+            16.358753474688,
+            7.0156586249166555,
+            -5.04508259847689
+          ],
+          "hand_rotation_component": [
+            9.95024306163078,
+            3.1881225348841244,
+            -5.722993716179153
+          ],
+          "continuous_assumed_ball": [
+            26.30899653631878,
+            10.20378115980078,
+            -10.768076314656042
+          ],
+          "free_shoulder_arm_reference": [
+            26.30822653581481,
+            10.202856236621775,
+            -10.767817384699864
+          ]
+        },
+        "speeds_kmh": {
+          "processed_hand_landmark": 89.92491132928093,
+          "RFIN_marker": 94.50921268801878,
+          "processed_wrist": 66.13546516518774,
+          "fixed_length_wrist": 66.60302973121571,
+          "hand_rotation_component": 42.88748753290149,
+          "continuous_assumed_ball": 108.73143811361645,
+          "free_shoulder_arm_reference": 108.72756629748577
+        },
+        "step_speed_differences_kmh": {
+          "fixed_length_wrist_minus_processed_wrist": 0.46756456602797414,
+          "assumed_ball_minus_fixed_wrist": 42.128408382400735
+        },
+        "warning": "Marker/landmark speeds are proxies; vector norms do not add."
+      },
+      "models": {
+        "nominal": {
+          "reference_speed_kmh": 107.3266495640893,
+          "reference_velocity_mps": [
+            25.748419197033023,
+            9.56398320857473,
+            -11.591445613259348
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.00034730769230769206,
+              "speed_kmh": 107.31737490412787,
+              "velocity_mps": [
+                25.749240503422328,
+                9.557483179921247,
+                -11.588356175417099
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_5",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 21.269210695872133,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.009274659961420184,
+              "reference_site_rmse_mm": 0.02207454252313457,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 33.4289905368163,
+                "elbow_jc": 44.35282461066161,
+                "wrist": 45.86801724306489
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.00017365384615384603,
+              "speed_kmh": 107.3193505899848,
+              "velocity_mps": [
+                25.748909858928414,
+                9.559175506644163,
+                -11.589106741643974
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_5",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 21.267235010015213,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.007298974104500644,
+              "reference_site_rmse_mm": 0.011850354040574003,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 33.4084825173745,
+                "elbow_jc": 44.33799422891362,
+                "wrist": 45.85210112442706
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.00197568585691954
+        },
+        "frozen_attachment": {
+          "reference_speed_kmh": 107.0517983194287,
+          "reference_velocity_mps": [
+            25.67929744582843,
+            9.546713429112309,
+            -11.56286979953181
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.00034730769230769206,
+              "speed_kmh": 107.04247669783513,
+              "velocity_mps": [
+                25.680096286965274,
+                9.54025629078523,
+                -11.559765895631092
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_5",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 21.54410890216488,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.009321621593571194,
+              "reference_site_rmse_mm": 0.021838747188319223,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 33.49077832050904,
+                "elbow_jc": 44.47110775491692,
+                "wrist": 45.948262990997954
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.00017365384615384603,
+              "speed_kmh": 107.04447289095835,
+              "velocity_mps": [
+                25.67977746697523,
+                9.541924134364411,
+                -11.560523831022278
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_5",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 21.54211270904166,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.007325428470352335,
+              "reference_site_rmse_mm": 0.01173841149428218,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 33.45977206056976,
+                "elbow_jc": 44.449560349949564,
+                "wrist": 45.926175164894566
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.001996193123218859
+        },
+        "frozen_skeleton": {
+          "reference_speed_kmh": 108.22829927930492,
+          "reference_velocity_mps": [
+            25.946113975127695,
+            9.64599077353147,
+            -11.728727178311559
+          ],
+          "resolutions": {
+            "2": {
+              "dt_s": 0.00034730769230769206,
+              "speed_kmh": 108.21904173986067,
+              "velocity_mps": [
+                25.94691837136426,
+                9.639592924915572,
+                -11.725616104975195
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_5",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 20.367543860139335,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.009257539444249119,
+              "reference_site_rmse_mm": 0.022022528735177273,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 33.490861046344314,
+                "elbow_jc": 44.443870775983086,
+                "wrist": 46.87993913776657
+              },
+              "state_resets": 0
+            },
+            "1": {
+              "dt_s": 0.00017365384615384603,
+              "speed_kmh": 108.22097278161002,
+              "velocity_mps": [
+                25.946593970954112,
+                9.641198782712339,
+                -11.726388817518751
+              ],
+              "record_gap": {
+                "dataset": "OBP/baseball_pitching",
+                "pitch": "3034_5",
+                "athlete": 2,
+                "session": 3034,
+                "target": "recorded_radar_scalar",
+                "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+                "metric": "absolute_record_gap",
+                "units": "km/h",
+                "value": 20.36561281838999,
+                "validated_release_error": false
+              },
+              "integration_speed_difference_kmh": -0.007326497694904788,
+              "reference_site_rmse_mm": 0.011840608201339732,
+              "observed_joint_rmse_mm": {
+                "shoulder_jc": 33.459836697432955,
+                "elbow_jc": 44.42249811582189,
+                "wrist": 46.859072814135835
+              },
+              "state_resets": 0
+            }
+          },
+          "coarse_fine_speed_difference_kmh": 0.001931041749344331
+        }
+      },
+      "geometry_calibration_record_gap_change_kmh": -0.9016221916252221,
+      "attribution_kmh": {
+        "continuous_assumption_minus_record": -19.855147486383558,
+        "free_arm_minus_continuous_assumption": -0.0038718161306832144,
+        "body_reference_minus_free_arm": -1.4009167333964712,
+        "forward_minus_body_reference": -0.007298974104500644
+      },
+      "attribution_closure_kmh": 0.0
+    }
+  ],
+  "aggregate": {
+    "nominal": {
+      "reused_four_pitch_record_gap_mae_kmh": 18.588597397274746,
+      "reused_four_pitch_change_mae_kmh": 1.4671554619298064,
+      "fast_3034_2_minus_slow_3034_3_predicted_kmh": 1.111915908364253,
+      "fast_3034_2_minus_slow_3034_3_recorded_kmh": 1.7702783999999951
+    },
+    "frozen_attachment": {
+      "reused_four_pitch_record_gap_mae_kmh": 18.901686633372222,
+      "reused_four_pitch_change_mae_kmh": 1.4616764629713828,
+      "fast_3034_2_minus_slow_3034_3_predicted_kmh": 1.144033363441281,
+      "fast_3034_2_minus_slow_3034_3_recorded_kmh": 1.7702783999999951
+    },
+    "frozen_skeleton": {
+      "reused_four_pitch_record_gap_mae_kmh": 17.518059603449146,
+      "reused_four_pitch_change_mae_kmh": 1.8910562234612769,
+      "fast_3034_2_minus_slow_3034_3_predicted_kmh": 1.2230045979830635,
+      "fast_3034_2_minus_slow_3034_3_recorded_kmh": 1.7702783999999951
+    },
+    "no_change_mae_kmh": 1.28747520000001
+  },
+  "calibration": {
+    "pitch": "3034_1",
+    "features_used": "source landmark geometry plus shoulder/glove shoulder positions; no recorded speed",
+    "recorded_speed_used": false,
+    "mass_or_grip_changed": false,
+    "frozen_skeleton_inertias": "training geometry inertias, not rescaled to improve speed",
+    "frozen_offsets_m": {
+      "shoulder_jc": [
+        0.14665384261008577,
+        -6.20345226706452e-20,
+        0.5390971707937353
+      ],
+      "glove_shoulder_jc": [
+        -0.14665384261008582,
+        -1.1316767116127498e-18,
+        0.5607782460686703
+      ]
+    }
+  },
+  "adopt_as_performance_model": false,
+  "adoption_checks": {
+    "absolute_gap_improved": true,
+    "change_beats_nominal_and_no_change": false,
+    "all_observed_joint_errors_nonincreasing": false,
+    "actual_ball_release_validated": false,
+    "effort_capacity_validated": false
+  },
+  "actual_athlete_improvement_demonstrated": false,
+  "same_force_work_intervention_test": false,
+  "direct_ball_prediction_error": null,
+  "limitation": "Geometry calibration recomputes reference demand per model; radar gap is not verified same-instant release error. All five pitches are reused development data."
+}
