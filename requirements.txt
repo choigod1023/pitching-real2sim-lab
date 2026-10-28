@@ -4,3 +4,4 @@ pandas>=2.0
 ezc3d>=1.5
 mujoco>=3.3
 pillow>=10
+opencv-python-headless>=4.9
