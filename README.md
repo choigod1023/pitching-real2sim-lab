@@ -73,6 +73,7 @@ To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D file
 | `pitch_outcomes.py` | Ball flight (gravity, drag, constant lift) |
 | `marker_audit/` | Marker quality checks, finger-marker gating, and hand-offset cross-validation (see its findings files) |
 | `video_track/` | Eight-camera ball tracking, hand-to-ball distance, error budget and five-pitch simulation (see `video_track/README.md`) |
+| `video_track/relative_motion.py` | Observed 3D hand-relative ball motion and frozen-grip diagnostic; [findings](video_track/RELATIVE_MOTION_FINDINGS.md), not intervention prediction |
 | `RESEARCH_LOG.md` | Chronological research log and links to every stage |
 
 ## Contact
