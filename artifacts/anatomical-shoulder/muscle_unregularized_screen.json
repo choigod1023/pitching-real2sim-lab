@@ -1,0 +1,5148 @@
+{
+  "reports": [
+    {
+      "pitch": "3034_1",
+      "frames": 58,
+      "projected_demand_rms_nm": 1227.3827839487958,
+      "envelopes": {
+        "1.0": {
+          "residual_rms_nm": 1125.1503267830278,
+          "frames_residual_over_1nm": 58
+        },
+        "1.4": {
+          "residual_rms_nm": 1089.2846284582185,
+          "frames_residual_over_1nm": 58
+        }
+      },
+      "rows": [
+        {
+          "sample": 2,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 32.32779660475627,
+              "demand_norm_nm": 136.53108568292083,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 884.8344236043419
+            },
+            "1.4": {
+              "residual_norm_nm": 15.647248806149543,
+              "demand_norm_nm": 136.53108568292083,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1221.9800011600105
+            }
+          }
+        },
+        {
+          "sample": 3,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 35.78947126298562,
+              "demand_norm_nm": 142.4849746146281,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 983.2262620386416
+            },
+            "1.4": {
+              "residual_norm_nm": 19.5675794365342,
+              "demand_norm_nm": 142.4849746146281,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1341.70746436475
+            }
+          }
+        },
+        {
+          "sample": 4,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 38.25290786334882,
+              "demand_norm_nm": 146.84962149566488,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1002.2281368342686
+            },
+            "1.4": {
+              "residual_norm_nm": 22.324211549716324,
+              "demand_norm_nm": 146.84962149566488,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1409.6074405492222
+            }
+          }
+        },
+        {
+          "sample": 5,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 39.901850155286155,
+              "demand_norm_nm": 150.13275440249325,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1097.7017967295117
+            },
+            "1.4": {
+              "residual_norm_nm": 23.856850224808706,
+              "demand_norm_nm": 150.13275440249325,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1507.9732462813442
+            }
+          }
+        },
+        {
+          "sample": 6,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 38.830960371135,
+              "demand_norm_nm": 150.52945462991124,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1157.3814517677847
+            },
+            "1.4": {
+              "residual_norm_nm": 22.643055565924396,
+              "demand_norm_nm": 150.52945462991124,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1484.1898390908088
+            }
+          }
+        },
+        {
+          "sample": 7,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 34.632973376654505,
+              "demand_norm_nm": 148.05986896131506,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1143.5013156670004
+            },
+            "1.4": {
+              "residual_norm_nm": 18.123362409429337,
+              "demand_norm_nm": 148.05986896131506,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1512.0733403486458
+            }
+          }
+        },
+        {
+          "sample": 8,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 28.780045200671484,
+              "demand_norm_nm": 144.82485562374475,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1149.597577550697
+            },
+            "1.4": {
+              "residual_norm_nm": 11.319650115639835,
+              "demand_norm_nm": 144.82485562374475,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1544.7108845383943
+            }
+          }
+        },
+        {
+          "sample": 9,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 22.84082550644375,
+              "demand_norm_nm": 142.1029627183606,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1133.6254332748076
+            },
+            "1.4": {
+              "residual_norm_nm": 3.1606708347549324,
+              "demand_norm_nm": 142.1029627183606,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1603.4395243800548
+            }
+          }
+        },
+        {
+          "sample": 10,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 17.24740370150384,
+              "demand_norm_nm": 141.85807134983463,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1184.8572674188772
+            },
+            "1.4": {
+              "residual_norm_nm": 1.0430070310103303,
+              "demand_norm_nm": 141.85807134983463,
+              "max_fraction": 0.9943049527197779,
+              "muscle_tendon_positive_power_w": 1459.0082457850258
+            }
+          }
+        },
+        {
+          "sample": 11,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 13.663246210915553,
+              "demand_norm_nm": 145.20684213395612,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1206.32108246795
+            },
+            "1.4": {
+              "residual_norm_nm": 1.280112440709872,
+              "demand_norm_nm": 145.20684213395612,
+              "max_fraction": 0.9741715657207961,
+              "muscle_tendon_positive_power_w": 1527.0391424450982
+            }
+          }
+        },
+        {
+          "sample": 12,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 10.657283809521452,
+              "demand_norm_nm": 147.02914231978426,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1215.291452028589
+            },
+            "1.4": {
+              "residual_norm_nm": 1.6850257679383225,
+              "demand_norm_nm": 147.02914231978426,
+              "max_fraction": 0.9725200905430654,
+              "muscle_tendon_positive_power_w": 1640.8512313326596
+            }
+          }
+        },
+        {
+          "sample": 13,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 9.315170689759485,
+              "demand_norm_nm": 146.11017811033682,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1173.1816219934785
+            },
+            "1.4": {
+              "residual_norm_nm": 2.6045892669877015,
+              "demand_norm_nm": 146.11017811033682,
+              "max_fraction": 0.971958949420328,
+              "muscle_tendon_positive_power_w": 1610.7000936543293
+            }
+          }
+        },
+        {
+          "sample": 14,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 11.079100719152574,
+              "demand_norm_nm": 144.6329799881557,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1454.7634986875678
+            },
+            "1.4": {
+              "residual_norm_nm": 3.603190166071649,
+              "demand_norm_nm": 144.6329799881557,
+              "max_fraction": 0.9811014930106833,
+              "muscle_tendon_positive_power_w": 1765.8581834645565
+            }
+          }
+        },
+        {
+          "sample": 15,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 12.444576365940591,
+              "demand_norm_nm": 139.32328719137428,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1728.4602670789714
+            },
+            "1.4": {
+              "residual_norm_nm": 5.069134068116255,
+              "demand_norm_nm": 139.32328719137428,
+              "max_fraction": 0.9931697015645123,
+              "muscle_tendon_positive_power_w": 1912.6327366665432
+            }
+          }
+        },
+        {
+          "sample": 16,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 12.426515246766984,
+              "demand_norm_nm": 131.71797020526674,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1893.4788497891366
+            },
+            "1.4": {
+              "residual_norm_nm": 7.076471321324317,
+              "demand_norm_nm": 131.71797020526674,
+              "max_fraction": 0.9945125267263975,
+              "muscle_tendon_positive_power_w": 2353.6668796836775
+            }
+          }
+        },
+        {
+          "sample": 17,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 13.36201935181436,
+              "demand_norm_nm": 125.84513051465318,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2163.4494693888314
+            },
+            "1.4": {
+              "residual_norm_nm": 9.222009003993332,
+              "demand_norm_nm": 125.84513051465318,
+              "max_fraction": 0.9780454035865999,
+              "muscle_tendon_positive_power_w": 2670.7413052479815
+            }
+          }
+        },
+        {
+          "sample": 18,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 14.866728954923454,
+              "demand_norm_nm": 124.06505124173916,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2549.073861964497
+            },
+            "1.4": {
+              "residual_norm_nm": 10.912244132152097,
+              "demand_norm_nm": 124.06505124173916,
+              "max_fraction": 0.9999984420425039,
+              "muscle_tendon_positive_power_w": 3262.1857868540683
+            }
+          }
+        },
+        {
+          "sample": 19,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 15.348368602748293,
+              "demand_norm_nm": 120.5886540271712,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2862.350647544763
+            },
+            "1.4": {
+              "residual_norm_nm": 12.254963068467514,
+              "demand_norm_nm": 120.5886540271712,
+              "max_fraction": 0.9987846851276548,
+              "muscle_tendon_positive_power_w": 3516.455318120719
+            }
+          }
+        },
+        {
+          "sample": 20,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 294.6042033330317,
+              "demand_norm_nm": 467.0614848912135,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3192.2133161148195
+            },
+            "1.4": {
+              "residual_norm_nm": 247.91762490447726,
+              "demand_norm_nm": 467.0614848912135,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4663.7879663468475
+            }
+          }
+        },
+        {
+          "sample": 21,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 831.4575522816737,
+              "demand_norm_nm": 1015.8983508351166,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2423.206619783902
+            },
+            "1.4": {
+              "residual_norm_nm": 771.4059604246037,
+              "demand_norm_nm": 1015.8983508351166,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5255.605166412991
+            }
+          }
+        },
+        {
+          "sample": 22,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 2358.6143216095484,
+              "demand_norm_nm": 2484.0921632164373,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7245.500535464395
+            },
+            "1.4": {
+              "residual_norm_nm": 2314.076195935652,
+              "demand_norm_nm": 2484.0921632164373,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 10143.70074965096
+            }
+          }
+        },
+        {
+          "sample": 23,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 3674.187262504493,
+              "demand_norm_nm": 3868.225890065901,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 12180.477108223382
+            },
+            "1.4": {
+              "residual_norm_nm": 3598.3430459239867,
+              "demand_norm_nm": 3868.225890065901,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 17052.667951511758
+            }
+          }
+        },
+        {
+          "sample": 24,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 2343.299244393709,
+              "demand_norm_nm": 2593.6512132198422,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2963.689974917178
+            },
+            "1.4": {
+              "residual_norm_nm": 2244.5202093489224,
+              "demand_norm_nm": 2593.6512132198422,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4151.473558320092
+            }
+          }
+        },
+        {
+          "sample": 25,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 986.2982572176521,
+              "demand_norm_nm": 1223.896508084483,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1997.3370393404232
+            },
+            "1.4": {
+              "residual_norm_nm": 893.1924491093372,
+              "demand_norm_nm": 1223.896508084483,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2804.5101830632693
+            }
+          }
+        },
+        {
+          "sample": 26,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 33.27285925308817,
+              "demand_norm_nm": 73.77474232692691,
+              "max_fraction": 0.9999999999999623,
+              "muscle_tendon_positive_power_w": 2022.6695389978295
+            },
+            "1.4": {
+              "residual_norm_nm": 31.98767761850101,
+              "demand_norm_nm": 73.77474232692691,
+              "max_fraction": 0.9998791403654723,
+              "muscle_tendon_positive_power_w": 2342.3863970711163
+            }
+          }
+        },
+        {
+          "sample": 27,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 29.940744826081808,
+              "demand_norm_nm": 109.99680084807663,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1510.594832315685
+            },
+            "1.4": {
+              "residual_norm_nm": 29.92400178180085,
+              "demand_norm_nm": 109.99680084807663,
+              "max_fraction": 0.9871756589245987,
+              "muscle_tendon_positive_power_w": 1729.8353628940567
+            }
+          }
+        },
+        {
+          "sample": 28,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 28.44959726636439,
+              "demand_norm_nm": 147.00277780511945,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1454.2399998377114
+            },
+            "1.4": {
+              "residual_norm_nm": 28.051382207509835,
+              "demand_norm_nm": 147.00277780511945,
+              "max_fraction": 0.9926201867378502,
+              "muscle_tendon_positive_power_w": 1689.7581564292318
+            }
+          }
+        },
+        {
+          "sample": 29,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 31.765883525114855,
+              "demand_norm_nm": 177.45147112207513,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1426.7285541308313
+            },
+            "1.4": {
+              "residual_norm_nm": 28.238937533762044,
+              "demand_norm_nm": 177.45147112207513,
+              "max_fraction": 0.9863158373525465,
+              "muscle_tendon_positive_power_w": 1840.9084188209881
+            }
+          }
+        },
+        {
+          "sample": 30,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 53.13728041523736,
+              "demand_norm_nm": 198.55905967041596,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1377.821407692775
+            },
+            "1.4": {
+              "residual_norm_nm": 30.055279320103658,
+              "demand_norm_nm": 198.55905967041596,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1928.9499707695181
+            }
+          }
+        },
+        {
+          "sample": 31,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 45.624562182372664,
+              "demand_norm_nm": 174.68962719338455,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1443.0743757254513
+            },
+            "1.4": {
+              "residual_norm_nm": 33.85366427338909,
+              "demand_norm_nm": 174.68962719338455,
+              "max_fraction": 0.9999999230478397,
+              "muscle_tendon_positive_power_w": 1979.9426574656673
+            }
+          }
+        },
+        {
+          "sample": 32,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 55.22686952503777,
+              "demand_norm_nm": 183.5055277179259,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2806.238447730366
+            },
+            "1.4": {
+              "residual_norm_nm": 27.67134448729624,
+              "demand_norm_nm": 183.5055277179259,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3973.1323951073414
+            }
+          }
+        },
+        {
+          "sample": 33,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 254.9359542846446,
+              "demand_norm_nm": 399.80171744524125,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4578.012856953474
+            },
+            "1.4": {
+              "residual_norm_nm": 204.31802548274365,
+              "demand_norm_nm": 399.80171744524125,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6354.61233382433
+            }
+          }
+        },
+        {
+          "sample": 34,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 612.291133140174,
+              "demand_norm_nm": 782.8469813772749,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4968.109288645973
+            },
+            "1.4": {
+              "residual_norm_nm": 548.1056694537385,
+              "demand_norm_nm": 782.8469813772749,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6955.35300410453
+            }
+          }
+        },
+        {
+          "sample": 35,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1135.283287670165,
+              "demand_norm_nm": 1308.2528974111494,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4745.889721355715
+            },
+            "1.4": {
+              "residual_norm_nm": 1068.539392224745,
+              "demand_norm_nm": 1308.2528974111494,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6457.629138534494
+            }
+          }
+        },
+        {
+          "sample": 36,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1440.2199218674582,
+              "demand_norm_nm": 1637.409676706256,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5172.735126836744
+            },
+            "1.4": {
+              "residual_norm_nm": 1363.2407802047774,
+              "demand_norm_nm": 1637.409676706256,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7398.72556598271
+            }
+          }
+        },
+        {
+          "sample": 37,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1500.4780073928516,
+              "demand_norm_nm": 1632.9069430551779,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1274.1989303753649
+            },
+            "1.4": {
+              "residual_norm_nm": 1453.7293753067897,
+              "demand_norm_nm": 1632.9069430551779,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1783.8785002511029
+            }
+          }
+        },
+        {
+          "sample": 38,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1380.7710462970904,
+              "demand_norm_nm": 1487.5937223835103,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1873.5335225120223
+            },
+            "1.4": {
+              "residual_norm_nm": 1345.282271348363,
+              "demand_norm_nm": 1487.5937223835103,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2622.9469315169017
+            }
+          }
+        },
+        {
+          "sample": 39,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 741.3164231575951,
+              "demand_norm_nm": 866.1482325860857,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2332.435856359238
+            },
+            "1.4": {
+              "residual_norm_nm": 693.3074889139873,
+              "demand_norm_nm": 866.1482325860857,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3265.4101991213856
+            }
+          }
+        },
+        {
+          "sample": 40,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 364.5037169758066,
+              "demand_norm_nm": 491.7539405101639,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2214.1905737606876
+            },
+            "1.4": {
+              "residual_norm_nm": 315.72026351275343,
+              "demand_norm_nm": 491.7539405101639,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3099.8668032347477
+            }
+          }
+        },
+        {
+          "sample": 41,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 128.45314612713608,
+              "demand_norm_nm": 254.11286219442425,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1829.184982681706
+            },
+            "1.4": {
+              "residual_norm_nm": 92.09268092942152,
+              "demand_norm_nm": 254.11286219442425,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2159.1316977181887
+            }
+          }
+        },
+        {
+          "sample": 42,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 93.59525063362445,
+              "demand_norm_nm": 218.50155416766867,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1324.1534224978138
+            },
+            "1.4": {
+              "residual_norm_nm": 66.79570710038873,
+              "demand_norm_nm": 218.50155416766867,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1662.2428772148833
+            }
+          }
+        },
+        {
+          "sample": 43,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 87.98153955071268,
+              "demand_norm_nm": 216.8701810194016,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1047.508054592956
+            },
+            "1.4": {
+              "residual_norm_nm": 58.385174630410084,
+              "demand_norm_nm": 216.8701810194016,
+              "max_fraction": 0.9999999999999994,
+              "muscle_tendon_positive_power_w": 1476.8160121868173
+            }
+          }
+        },
+        {
+          "sample": 44,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 91.53623426825612,
+              "demand_norm_nm": 225.7428734292442,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1209.7832777419449
+            },
+            "1.4": {
+              "residual_norm_nm": 53.34051004308364,
+              "demand_norm_nm": 225.7428734292442,
+              "max_fraction": 0.9999999999999964,
+              "muscle_tendon_positive_power_w": 1666.1628413700644
+            }
+          }
+        },
+        {
+          "sample": 45,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 121.16042822142963,
+              "demand_norm_nm": 275.85717837878525,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1152.8519120437995
+            },
+            "1.4": {
+              "residual_norm_nm": 68.81635653448518,
+              "demand_norm_nm": 275.85717837878525,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1668.1854327676083
+            }
+          }
+        },
+        {
+          "sample": 46,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 298.2250048002196,
+              "demand_norm_nm": 476.0959933420811,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 810.9111191044881
+            },
+            "1.4": {
+              "residual_norm_nm": 230.90718190496867,
+              "demand_norm_nm": 476.0959933420811,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1135.2755667462907
+            }
+          }
+        },
+        {
+          "sample": 47,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 128.78992359064964,
+              "demand_norm_nm": 328.4958183763043,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 494.3870988007196
+            },
+            "1.4": {
+              "residual_norm_nm": 61.57535383909291,
+              "demand_norm_nm": 328.4958183763043,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 715.4136707217885
+            }
+          }
+        },
+        {
+          "sample": 48,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1269.2236596379084,
+              "demand_norm_nm": 1527.9960752519778,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 434.22230188999555
+            },
+            "1.4": {
+              "residual_norm_nm": 1169.2423839143676,
+              "demand_norm_nm": 1527.9960752519778,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 613.2057593461573
+            }
+          }
+        },
+        {
+          "sample": 49,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 935.186705864784,
+              "demand_norm_nm": 1090.090666638826,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 200.36698775359542
+            },
+            "1.4": {
+              "residual_norm_nm": 882.0261972984906,
+              "demand_norm_nm": 1090.090666638826,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 280.5137828578452
+            }
+          }
+        },
+        {
+          "sample": 50,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 985.9000387463838,
+              "demand_norm_nm": 1145.4048781402728,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 390.50605070760173
+            },
+            "1.4": {
+              "residual_norm_nm": 930.6795685514214,
+              "demand_norm_nm": 1145.4048781402728,
+              "max_fraction": 0.9999999999999988,
+              "muscle_tendon_positive_power_w": 545.5562805992756
+            }
+          }
+        },
+        {
+          "sample": 51,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 457.3537855228276,
+              "demand_norm_nm": 644.6517630771958,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1844.4307092307251
+            },
+            "1.4": {
+              "residual_norm_nm": 387.8631749107325,
+              "demand_norm_nm": 644.6517630771958,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2376.3935519767856
+            }
+          }
+        },
+        {
+          "sample": 52,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 214.81986836112367,
+              "demand_norm_nm": 407.80487293435374,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3060.2375234605443
+            },
+            "1.4": {
+              "residual_norm_nm": 144.3336261526512,
+              "demand_norm_nm": 407.80487293435374,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3798.5023840339036
+            }
+          }
+        },
+        {
+          "sample": 53,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 123.72327288480734,
+              "demand_norm_nm": 305.4831067164931,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4574.832245975013
+            },
+            "1.4": {
+              "residual_norm_nm": 63.358700189173526,
+              "demand_norm_nm": 305.4831067164931,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6006.340532458273
+            }
+          }
+        },
+        {
+          "sample": 54,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 123.70727078749081,
+              "demand_norm_nm": 286.51977970786385,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5968.727903295184
+            },
+            "1.4": {
+              "residual_norm_nm": 73.19923939305916,
+              "demand_norm_nm": 286.51977970786385,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7639.302727937623
+            }
+          }
+        },
+        {
+          "sample": 55,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1656.6444837077245,
+              "demand_norm_nm": 1821.1052813923172,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2735.1848179298077
+            },
+            "1.4": {
+              "residual_norm_nm": 1593.0256145059518,
+              "demand_norm_nm": 1821.1052813923172,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4817.135406917241
+            }
+          }
+        },
+        {
+          "sample": 56,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1316.5907966073187,
+              "demand_norm_nm": 1461.1891053184827,
+              "max_fraction": 0.9999999999999964,
+              "muscle_tendon_positive_power_w": 4081.45140069466
+            },
+            "1.4": {
+              "residual_norm_nm": 1260.3918356421523,
+              "demand_norm_nm": 1461.1891053184827,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5714.031960975508
+            }
+          }
+        },
+        {
+          "sample": 57,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 4814.137347216422,
+              "demand_norm_nm": 5019.270794396575,
+              "max_fraction": 0.9999999999999926,
+              "muscle_tendon_positive_power_w": 13348.940475692698
+            },
+            "1.4": {
+              "residual_norm_nm": 4733.236328005587,
+              "demand_norm_nm": 5019.270794396575,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 18688.516572606633
+            }
+          }
+        },
+        {
+          "sample": 58,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1971.487651371442,
+              "demand_norm_nm": 2191.6411225157767,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 9259.74463099486
+            },
+            "1.4": {
+              "residual_norm_nm": 1885.0545251560807,
+              "demand_norm_nm": 2191.6411225157767,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 12963.642483389485
+            }
+          }
+        },
+        {
+          "sample": 59,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1734.7296468854875,
+              "demand_norm_nm": 1880.855058111048,
+              "max_fraction": 0.9999999999998549,
+              "muscle_tendon_positive_power_w": 8858.072985157538
+            },
+            "1.4": {
+              "residual_norm_nm": 1677.0978655616552,
+              "demand_norm_nm": 1880.855058111048,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 12401.302178249769
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pitch": "3034_2",
+      "frames": 54,
+      "projected_demand_rms_nm": 1919.041070660584,
+      "envelopes": {
+        "1.0": {
+          "residual_rms_nm": 1850.499243286191,
+          "frames_residual_over_1nm": 54
+        },
+        "1.4": {
+          "residual_rms_nm": 1826.5031830857738,
+          "frames_residual_over_1nm": 54
+        }
+      },
+      "rows": [
+        {
+          "sample": 2,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 80.08738774571344,
+              "demand_norm_nm": 95.11715858013234,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1145.9582457139145
+            },
+            "1.4": {
+              "residual_norm_nm": 79.26770248808538,
+              "demand_norm_nm": 95.11715858013234,
+              "max_fraction": 0.9999999999820056,
+              "muscle_tendon_positive_power_w": 1674.75747051902
+            }
+          }
+        },
+        {
+          "sample": 3,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 108.0682917895713,
+              "demand_norm_nm": 114.42053441081654,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1409.1793989616162
+            },
+            "1.4": {
+              "residual_norm_nm": 107.11837622235109,
+              "demand_norm_nm": 114.42053441081654,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1929.0640844764534
+            }
+          }
+        },
+        {
+          "sample": 4,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 140.25882885607513,
+              "demand_norm_nm": 150.85921679514334,
+              "max_fraction": 0.9999999999999992,
+              "muscle_tendon_positive_power_w": 1585.501953454127
+            },
+            "1.4": {
+              "residual_norm_nm": 138.38562608572764,
+              "demand_norm_nm": 150.85921679514334,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2157.7173006934845
+            }
+          }
+        },
+        {
+          "sample": 5,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 194.20800517063992,
+              "demand_norm_nm": 227.83537387985695,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1749.2020835366916
+            },
+            "1.4": {
+              "residual_norm_nm": 191.1010958565471,
+              "demand_norm_nm": 227.83537387985695,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2095.5613885767752
+            }
+          }
+        },
+        {
+          "sample": 6,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 266.53039637723,
+              "demand_norm_nm": 355.18293257218994,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1963.5792831344418
+            },
+            "1.4": {
+              "residual_norm_nm": 257.7296758383297,
+              "demand_norm_nm": 355.18293257218994,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2772.9324550481697
+            }
+          }
+        },
+        {
+          "sample": 7,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 299.2977152721803,
+              "demand_norm_nm": 452.34162900578247,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3419.315347252132
+            },
+            "1.4": {
+              "residual_norm_nm": 268.73597833849885,
+              "demand_norm_nm": 452.34162900578247,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4670.158380696903
+            }
+          }
+        },
+        {
+          "sample": 8,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 490.02963706157465,
+              "demand_norm_nm": 715.4353001954573,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2069.528379958734
+            },
+            "1.4": {
+              "residual_norm_nm": 419.50162350024584,
+              "demand_norm_nm": 715.4353001954573,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2930.6520924397087
+            }
+          }
+        },
+        {
+          "sample": 9,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 392.1080775556736,
+              "demand_norm_nm": 594.481889668323,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1644.7917970754288
+            },
+            "1.4": {
+              "residual_norm_nm": 330.98084068306105,
+              "demand_norm_nm": 594.481889668323,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2478.9323613835654
+            }
+          }
+        },
+        {
+          "sample": 10,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 20.029038307242242,
+              "demand_norm_nm": 168.60082560209477,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1891.1574775586703
+            },
+            "1.4": {
+              "residual_norm_nm": 5.736808098864523,
+              "demand_norm_nm": 168.60082560209477,
+              "max_fraction": 0.9996005494845893,
+              "muscle_tendon_positive_power_w": 2537.7752294461343
+            }
+          }
+        },
+        {
+          "sample": 11,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 20.1378590346003,
+              "demand_norm_nm": 112.98929285799427,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2248.0008303710947
+            },
+            "1.4": {
+              "residual_norm_nm": 13.85148373531814,
+              "demand_norm_nm": 112.98929285799427,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2510.243516219385
+            }
+          }
+        },
+        {
+          "sample": 12,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 20.200545814794886,
+              "demand_norm_nm": 112.31678274227204,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2425.375628130484
+            },
+            "1.4": {
+              "residual_norm_nm": 14.501658314964718,
+              "demand_norm_nm": 112.31678274227204,
+              "max_fraction": 0.9999999999999929,
+              "muscle_tendon_positive_power_w": 2812.937786336988
+            }
+          }
+        },
+        {
+          "sample": 13,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 16.416821599723157,
+              "demand_norm_nm": 122.42152625718623,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2069.0208266253962
+            },
+            "1.4": {
+              "residual_norm_nm": 11.023195179544814,
+              "demand_norm_nm": 122.42152625718623,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3071.4276154619656
+            }
+          }
+        },
+        {
+          "sample": 14,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 15.370801201747598,
+              "demand_norm_nm": 108.34566330403631,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2243.889921179173
+            },
+            "1.4": {
+              "residual_norm_nm": 12.31093457363062,
+              "demand_norm_nm": 108.34566330403631,
+              "max_fraction": 0.9983622136415474,
+              "muscle_tendon_positive_power_w": 3532.9467666162404
+            }
+          }
+        },
+        {
+          "sample": 15,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 26.065296561586276,
+              "demand_norm_nm": 117.47993038515796,
+              "max_fraction": 0.9999999999999997,
+              "muscle_tendon_positive_power_w": 5154.049011465513
+            },
+            "1.4": {
+              "residual_norm_nm": 15.07406226765802,
+              "demand_norm_nm": 117.47993038515796,
+              "max_fraction": 0.999954031859047,
+              "muscle_tendon_positive_power_w": 6799.751590657779
+            }
+          }
+        },
+        {
+          "sample": 16,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 276.27048278834735,
+              "demand_norm_nm": 497.35272597647366,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4648.610865740959
+            },
+            "1.4": {
+              "residual_norm_nm": 215.37560483936718,
+              "demand_norm_nm": 497.35272597647366,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6483.224115168629
+            }
+          }
+        },
+        {
+          "sample": 17,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 37.84936997678185,
+              "demand_norm_nm": 116.4900410268429,
+              "max_fraction": 0.999358191895617,
+              "muscle_tendon_positive_power_w": 4466.339134023478
+            },
+            "1.4": {
+              "residual_norm_nm": 37.84936997678185,
+              "demand_norm_nm": 116.4900410268429,
+              "max_fraction": 0.9903764303031194,
+              "muscle_tendon_positive_power_w": 5894.457316253864
+            }
+          }
+        },
+        {
+          "sample": 18,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 22.325772210307242,
+              "demand_norm_nm": 84.48838037129667,
+              "max_fraction": 0.6453568724857308,
+              "muscle_tendon_positive_power_w": 863.0186712897548
+            },
+            "1.4": {
+              "residual_norm_nm": 22.325772210307242,
+              "demand_norm_nm": 84.48838037129667,
+              "max_fraction": 0.5105949693439357,
+              "muscle_tendon_positive_power_w": 959.5008979976901
+            }
+          }
+        },
+        {
+          "sample": 19,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 18.71470136130771,
+              "demand_norm_nm": 120.11250882593069,
+              "max_fraction": 0.9849341201215466,
+              "muscle_tendon_positive_power_w": 1336.8747424681228
+            },
+            "1.4": {
+              "residual_norm_nm": 18.71470136130771,
+              "demand_norm_nm": 120.11250882593069,
+              "max_fraction": 0.9759271692215012,
+              "muscle_tendon_positive_power_w": 1429.9551227586185
+            }
+          }
+        },
+        {
+          "sample": 20,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 19.286830188718085,
+              "demand_norm_nm": 125.32382885026932,
+              "max_fraction": 0.9939241248801319,
+              "muscle_tendon_positive_power_w": 1475.0296212342105
+            },
+            "1.4": {
+              "residual_norm_nm": 19.286830188723734,
+              "demand_norm_nm": 125.32382885026932,
+              "max_fraction": 0.9975033927675518,
+              "muscle_tendon_positive_power_w": 1483.0760229311027
+            }
+          }
+        },
+        {
+          "sample": 21,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 25.037524137543375,
+              "demand_norm_nm": 110.23282732847832,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1573.9231887888182
+            },
+            "1.4": {
+              "residual_norm_nm": 24.99317280275557,
+              "demand_norm_nm": 110.23282732847832,
+              "max_fraction": 0.9910375761325629,
+              "muscle_tendon_positive_power_w": 1813.109584196579
+            }
+          }
+        },
+        {
+          "sample": 22,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 29.882050318766375,
+              "demand_norm_nm": 123.6049479602022,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1415.6931566634935
+            },
+            "1.4": {
+              "residual_norm_nm": 29.249695896635924,
+              "demand_norm_nm": 123.6049479602022,
+              "max_fraction": 0.999784831005267,
+              "muscle_tendon_positive_power_w": 1673.331907759648
+            }
+          }
+        },
+        {
+          "sample": 23,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 31.438319365265315,
+              "demand_norm_nm": 185.44971434307257,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1362.496605473169
+            },
+            "1.4": {
+              "residual_norm_nm": 24.871580791709683,
+              "demand_norm_nm": 185.44971434307257,
+              "max_fraction": 0.9960070833474636,
+              "muscle_tendon_positive_power_w": 1770.6217225355435
+            }
+          }
+        },
+        {
+          "sample": 24,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 38.84876616384117,
+              "demand_norm_nm": 177.9357663849284,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1338.450461659646
+            },
+            "1.4": {
+              "residual_norm_nm": 24.058772299828107,
+              "demand_norm_nm": 177.9357663849284,
+              "max_fraction": 0.9925234828797342,
+              "muscle_tendon_positive_power_w": 1833.9715131085527
+            }
+          }
+        },
+        {
+          "sample": 25,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 42.903767775098345,
+              "demand_norm_nm": 138.470039234937,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1321.053064093196
+            },
+            "1.4": {
+              "residual_norm_nm": 38.2048933865869,
+              "demand_norm_nm": 138.470039234937,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1780.5497196390188
+            }
+          }
+        },
+        {
+          "sample": 26,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 29.22599456989159,
+              "demand_norm_nm": 130.80843094335623,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2507.1460272050836
+            },
+            "1.4": {
+              "residual_norm_nm": 28.39786473022928,
+              "demand_norm_nm": 130.80843094335623,
+              "max_fraction": 0.9644194152074498,
+              "muscle_tendon_positive_power_w": 2896.4374075185046
+            }
+          }
+        },
+        {
+          "sample": 27,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 179.1556602101935,
+              "demand_norm_nm": 325.01514498668354,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4279.674618220784
+            },
+            "1.4": {
+              "residual_norm_nm": 129.03949807321555,
+              "demand_norm_nm": 325.01514498668354,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6000.191191078703
+            }
+          }
+        },
+        {
+          "sample": 28,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 146.54302328968348,
+              "demand_norm_nm": 269.4836706388806,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4623.379253142028
+            },
+            "1.4": {
+              "residual_norm_nm": 107.69523178620412,
+              "demand_norm_nm": 269.4836706388806,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6152.0004276448535
+            }
+          }
+        },
+        {
+          "sample": 29,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 636.2256929580299,
+              "demand_norm_nm": 784.6493291127146,
+              "max_fraction": 0.9999999999999997,
+              "muscle_tendon_positive_power_w": 4701.2069343237745
+            },
+            "1.4": {
+              "residual_norm_nm": 580.7454242733107,
+              "demand_norm_nm": 784.6493291127146,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6512.195591366862
+            }
+          }
+        },
+        {
+          "sample": 30,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1080.627010049845,
+              "demand_norm_nm": 1259.0906078154612,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4411.699981589406
+            },
+            "1.4": {
+              "residual_norm_nm": 1011.3892960253489,
+              "demand_norm_nm": 1259.0906078154612,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6176.379974225553
+            }
+          }
+        },
+        {
+          "sample": 31,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1397.319951793467,
+              "demand_norm_nm": 1592.695873178364,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5941.676134937676
+            },
+            "1.4": {
+              "residual_norm_nm": 1321.7178088559538,
+              "demand_norm_nm": 1592.695873178364,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 8558.385234288264
+            }
+          }
+        },
+        {
+          "sample": 32,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1449.7098860057574,
+              "demand_norm_nm": 1569.4407007712914,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1812.737586206124
+            },
+            "1.4": {
+              "residual_norm_nm": 1409.583017673133,
+              "demand_norm_nm": 1569.4407007712914,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2537.8326199657135
+            }
+          }
+        },
+        {
+          "sample": 33,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1401.4127313409442,
+              "demand_norm_nm": 1500.1514478736194,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1443.4109200271
+            },
+            "1.4": {
+              "residual_norm_nm": 1367.5636870379608,
+              "demand_norm_nm": 1500.1514478736194,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2334.397020612408
+            }
+          }
+        },
+        {
+          "sample": 34,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 669.3621398826394,
+              "demand_norm_nm": 789.6166735688187,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2295.6089283089213
+            },
+            "1.4": {
+              "residual_norm_nm": 622.7538189985644,
+              "demand_norm_nm": 789.6166735688187,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3208.3609112539825
+            }
+          }
+        },
+        {
+          "sample": 35,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 319.0911200356435,
+              "demand_norm_nm": 444.36142377782454,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2260.149473824865
+            },
+            "1.4": {
+              "residual_norm_nm": 271.463454211319,
+              "demand_norm_nm": 444.36142377782454,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3164.2092633548104
+            }
+          }
+        },
+        {
+          "sample": 36,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 99.26089663292001,
+              "demand_norm_nm": 213.2515113479485,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1671.1182197511434
+            },
+            "1.4": {
+              "residual_norm_nm": 74.8170622170446,
+              "demand_norm_nm": 213.2515113479485,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2083.7048290139
+            }
+          }
+        },
+        {
+          "sample": 37,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 81.39978009241845,
+              "demand_norm_nm": 194.6883962526075,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1164.2422174694034
+            },
+            "1.4": {
+              "residual_norm_nm": 63.64437409860533,
+              "demand_norm_nm": 194.6883962526075,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1796.637750299668
+            }
+          }
+        },
+        {
+          "sample": 38,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 78.34318544122497,
+              "demand_norm_nm": 196.80265967972073,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 898.2576573238813
+            },
+            "1.4": {
+              "residual_norm_nm": 57.19470560347072,
+              "demand_norm_nm": 196.80265967972073,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1504.434150074966
+            }
+          }
+        },
+        {
+          "sample": 39,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 82.51275339565663,
+              "demand_norm_nm": 207.58062150681928,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 912.8467579599514
+            },
+            "1.4": {
+              "residual_norm_nm": 51.86755314897792,
+              "demand_norm_nm": 207.58062150681928,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1270.318845453924
+            }
+          }
+        },
+        {
+          "sample": 40,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 97.09150274420028,
+              "demand_norm_nm": 229.0704880531781,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1095.4884818151954
+            },
+            "1.4": {
+              "residual_norm_nm": 54.81371849776558,
+              "demand_norm_nm": 229.0704880531781,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1385.9656353094629
+            }
+          }
+        },
+        {
+          "sample": 41,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 121.31878218758334,
+              "demand_norm_nm": 262.0380288091006,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1068.7030427432894
+            },
+            "1.4": {
+              "residual_norm_nm": 71.35320032725066,
+              "demand_norm_nm": 262.0380288091006,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1494.1994902807337
+            }
+          }
+        },
+        {
+          "sample": 42,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 127.78846465374316,
+              "demand_norm_nm": 276.97623316115204,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 796.184475667126
+            },
+            "1.4": {
+              "residual_norm_nm": 75.8515906376834,
+              "demand_norm_nm": 276.97623316115204,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1134.9251968345611
+            }
+          }
+        },
+        {
+          "sample": 43,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 49.43011209137722,
+              "demand_norm_nm": 236.36834459275798,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 424.62969331100334
+            },
+            "1.4": {
+              "residual_norm_nm": 19.584978731675648,
+              "demand_norm_nm": 236.36834459275798,
+              "max_fraction": 0.9962136973515501,
+              "muscle_tendon_positive_power_w": 535.5643264321786
+            }
+          }
+        },
+        {
+          "sample": 44,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 301.2232467430472,
+              "demand_norm_nm": 531.6863543019656,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 194.24720692051966
+            },
+            "1.4": {
+              "residual_norm_nm": 215.1641120413976,
+              "demand_norm_nm": 531.6863543019656,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 271.9460896887275
+            }
+          }
+        },
+        {
+          "sample": 45,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 293.8406027330526,
+              "demand_norm_nm": 423.7916177544625,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 439.1288127234472
+            },
+            "1.4": {
+              "residual_norm_nm": 251.08143540521976,
+              "demand_norm_nm": 423.7916177544625,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 614.780662598719
+            }
+          }
+        },
+        {
+          "sample": 46,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 551.730478615854,
+              "demand_norm_nm": 688.4434868404093,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 525.0171576076557
+            },
+            "1.4": {
+              "residual_norm_nm": 507.814596065658,
+              "demand_norm_nm": 688.4434868404093,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 810.8154939187799
+            }
+          }
+        },
+        {
+          "sample": 47,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 115.30200023610115,
+              "demand_norm_nm": 266.36986806709984,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2005.9730303323022
+            },
+            "1.4": {
+              "residual_norm_nm": 64.83958591862365,
+              "demand_norm_nm": 266.36986806709984,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2677.449469288218
+            }
+          }
+        },
+        {
+          "sample": 48,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 136.50815718604406,
+              "demand_norm_nm": 324.05301521313004,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3263.761515203656
+            },
+            "1.4": {
+              "residual_norm_nm": 71.52016506526478,
+              "demand_norm_nm": 324.05301521313004,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4430.373036373367
+            }
+          }
+        },
+        {
+          "sample": 49,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 133.5454924222071,
+              "demand_norm_nm": 312.86917205288563,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4695.4953028320915
+            },
+            "1.4": {
+              "residual_norm_nm": 72.63841146450501,
+              "demand_norm_nm": 312.86917205288563,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6092.443843337564
+            }
+          }
+        },
+        {
+          "sample": 50,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 825.6822675816609,
+              "demand_norm_nm": 982.7908215426729,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3513.264366397806
+            },
+            "1.4": {
+              "residual_norm_nm": 763.382251039143,
+              "demand_norm_nm": 982.7908215426729,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4936.8380296215855
+            }
+          }
+        },
+        {
+          "sample": 51,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 3595.430213841826,
+              "demand_norm_nm": 3740.4404177946612,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1016.0189654186524
+            },
+            "1.4": {
+              "residual_norm_nm": 3538.6822187202424,
+              "demand_norm_nm": 3740.4404177946612,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1481.4386106401807
+            }
+          }
+        },
+        {
+          "sample": 52,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 10315.513411292617,
+              "demand_norm_nm": 10544.208434154885,
+              "max_fraction": 0.9999999999999926,
+              "muscle_tendon_positive_power_w": 4064.176013055244
+            },
+            "1.4": {
+              "residual_norm_nm": 10224.407080016508,
+              "demand_norm_nm": 10544.208434154885,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5689.846454531166
+            }
+          }
+        },
+        {
+          "sample": 53,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 7138.256244184911,
+              "demand_norm_nm": 7297.688269843855,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2400.2643902377613
+            },
+            "1.4": {
+              "residual_norm_nm": 7074.820480419653,
+              "demand_norm_nm": 7297.688269843855,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3360.370140467925
+            }
+          }
+        },
+        {
+          "sample": 54,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1924.4293525016587,
+              "demand_norm_nm": 2115.8893658664006,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 15110.824173374254
+            },
+            "1.4": {
+              "residual_norm_nm": 1853.935866917144,
+              "demand_norm_nm": 2115.8893658664006,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 20275.249072650786
+            }
+          }
+        },
+        {
+          "sample": 55,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 849.8191511106326,
+              "demand_norm_nm": 1049.6844760374092,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4723.910220787034
+            },
+            "1.4": {
+              "residual_norm_nm": 773.4725452723784,
+              "demand_norm_nm": 1049.6844760374092,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6953.45311281138
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pitch": "3034_3",
+      "frames": 54,
+      "projected_demand_rms_nm": 2115.0882435081257,
+      "envelopes": {
+        "1.0": {
+          "residual_rms_nm": 2050.8824888736135,
+          "frames_residual_over_1nm": 54
+        },
+        "1.4": {
+          "residual_rms_nm": 2028.2156298329867,
+          "frames_residual_over_1nm": 54
+        }
+      },
+      "rows": [
+        {
+          "sample": 2,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 99.50216186837329,
+              "demand_norm_nm": 111.95855894090818,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1322.9629324376872
+            },
+            "1.4": {
+              "residual_norm_nm": 98.76915179067821,
+              "demand_norm_nm": 111.95855894090818,
+              "max_fraction": 0.9999990099733216,
+              "muscle_tendon_positive_power_w": 1935.22463468427
+            }
+          }
+        },
+        {
+          "sample": 3,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 108.16971622685325,
+              "demand_norm_nm": 117.21975166319395,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1412.556788258523
+            },
+            "1.4": {
+              "residual_norm_nm": 107.1801882238674,
+              "demand_norm_nm": 117.21975166319395,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1894.6886343872184
+            }
+          }
+        },
+        {
+          "sample": 4,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 128.05918432623594,
+              "demand_norm_nm": 142.00764681968045,
+              "max_fraction": 0.9999999999999979,
+              "muscle_tendon_positive_power_w": 1482.2569810286882
+            },
+            "1.4": {
+              "residual_norm_nm": 125.69792106999084,
+              "demand_norm_nm": 142.00764681968045,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2036.9474601370935
+            }
+          }
+        },
+        {
+          "sample": 5,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 178.39929320163685,
+              "demand_norm_nm": 217.5994203039027,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1657.7708201089195
+            },
+            "1.4": {
+              "residual_norm_nm": 174.3840444268745,
+              "demand_norm_nm": 217.5994203039027,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2077.3066761675773
+            }
+          }
+        },
+        {
+          "sample": 6,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 225.8656495764619,
+              "demand_norm_nm": 318.828300060963,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2280.766948425287
+            },
+            "1.4": {
+              "residual_norm_nm": 213.16020172138002,
+              "demand_norm_nm": 318.828300060963,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2761.555540012311
+            }
+          }
+        },
+        {
+          "sample": 7,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 146.45440893206913,
+              "demand_norm_nm": 316.63448769178177,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2661.7237951846923
+            },
+            "1.4": {
+              "residual_norm_nm": 119.1837763584181,
+              "demand_norm_nm": 316.63448769178177,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2761.6736483436994
+            }
+          }
+        },
+        {
+          "sample": 8,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 407.63717440426325,
+              "demand_norm_nm": 614.5345239284496,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1877.4750838744392
+            },
+            "1.4": {
+              "residual_norm_nm": 345.3911741602263,
+              "demand_norm_nm": 614.5345239284496,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2174.5095695881196
+            }
+          }
+        },
+        {
+          "sample": 9,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 306.7671291908935,
+              "demand_norm_nm": 495.5216374059483,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1323.5156556415068
+            },
+            "1.4": {
+              "residual_norm_nm": 252.72198313510194,
+              "demand_norm_nm": 495.5216374059483,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1858.3362028810018
+            }
+          }
+        },
+        {
+          "sample": 10,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 26.47520381700469,
+              "demand_norm_nm": 177.6773695898162,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1570.1528008744244
+            },
+            "1.4": {
+              "residual_norm_nm": 5.801993334398639,
+              "demand_norm_nm": 177.6773695898162,
+              "max_fraction": 0.9998704998832089,
+              "muscle_tendon_positive_power_w": 2091.182853750936
+            }
+          }
+        },
+        {
+          "sample": 11,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 18.34679371259826,
+              "demand_norm_nm": 122.47098958913985,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1768.6233275091085
+            },
+            "1.4": {
+              "residual_norm_nm": 11.202578473464362,
+              "demand_norm_nm": 122.47098958913985,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2070.393236922161
+            }
+          }
+        },
+        {
+          "sample": 12,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 19.830518359795583,
+              "demand_norm_nm": 134.13140446554613,
+              "max_fraction": 0.9999999999999994,
+              "muscle_tendon_positive_power_w": 2052.494980527602
+            },
+            "1.4": {
+              "residual_norm_nm": 8.588641713281444,
+              "demand_norm_nm": 134.13140446554613,
+              "max_fraction": 0.9999999999998278,
+              "muscle_tendon_positive_power_w": 2908.442218152759
+            }
+          }
+        },
+        {
+          "sample": 13,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 23.634683681297187,
+              "demand_norm_nm": 121.22131543285164,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2283.21904825052
+            },
+            "1.4": {
+              "residual_norm_nm": 14.115637552763856,
+              "demand_norm_nm": 121.22131543285164,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2872.385591838548
+            }
+          }
+        },
+        {
+          "sample": 14,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 24.06256685210048,
+              "demand_norm_nm": 119.1245759813307,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1910.849125795878
+            },
+            "1.4": {
+              "residual_norm_nm": 15.946942679742369,
+              "demand_norm_nm": 119.1245759813307,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3168.0250591155536
+            }
+          }
+        },
+        {
+          "sample": 15,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 20.903178294849393,
+              "demand_norm_nm": 134.64415364672942,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2114.5221294820158
+            },
+            "1.4": {
+              "residual_norm_nm": 9.853746156077134,
+              "demand_norm_nm": 134.64415364672942,
+              "max_fraction": 0.9999999999999988,
+              "muscle_tendon_positive_power_w": 3168.3276041324243
+            }
+          }
+        },
+        {
+          "sample": 16,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 14.19643522056001,
+              "demand_norm_nm": 101.92551069488938,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2335.7960962671254
+            },
+            "1.4": {
+              "residual_norm_nm": 12.421124733439136,
+              "demand_norm_nm": 101.92551069488938,
+              "max_fraction": 0.999427930339349,
+              "muscle_tendon_positive_power_w": 3778.770249077995
+            }
+          }
+        },
+        {
+          "sample": 17,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 7.1857126313556545,
+              "demand_norm_nm": 123.36287560081466,
+              "max_fraction": 0.9979886487789923,
+              "muscle_tendon_positive_power_w": 3259.8880004627504
+            },
+            "1.4": {
+              "residual_norm_nm": 7.1857126313556545,
+              "demand_norm_nm": 123.36287560081466,
+              "max_fraction": 0.8684621236256412,
+              "muscle_tendon_positive_power_w": 4333.67612790344
+            }
+          }
+        },
+        {
+          "sample": 18,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 372.0973995640141,
+              "demand_norm_nm": 601.3415437237096,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5439.168651695552
+            },
+            "1.4": {
+              "residual_norm_nm": 294.48758540795205,
+              "demand_norm_nm": 601.3415437237096,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7612.953567602903
+            }
+          }
+        },
+        {
+          "sample": 19,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 128.45595707814664,
+              "demand_norm_nm": 293.3547821569836,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4418.513510993084
+            },
+            "1.4": {
+              "residual_norm_nm": 91.57540530955633,
+              "demand_norm_nm": 293.3547821569836,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4828.769092392342
+            }
+          }
+        },
+        {
+          "sample": 20,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 23.028806935607466,
+              "demand_norm_nm": 83.79033234689025,
+              "max_fraction": 0.9302081122244757,
+              "muscle_tendon_positive_power_w": 1465.4259717431862
+            },
+            "1.4": {
+              "residual_norm_nm": 23.02880693571864,
+              "demand_norm_nm": 83.79033234689025,
+              "max_fraction": 0.8333964302359241,
+              "muscle_tendon_positive_power_w": 1634.185885145744
+            }
+          }
+        },
+        {
+          "sample": 21,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 29.806949721163363,
+              "demand_norm_nm": 87.59318996341207,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1886.8048745653607
+            },
+            "1.4": {
+              "residual_norm_nm": 29.2844410045454,
+              "demand_norm_nm": 87.59318996341207,
+              "max_fraction": 0.9998825488376643,
+              "muscle_tendon_positive_power_w": 2336.106034239252
+            }
+          }
+        },
+        {
+          "sample": 22,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 22.539762475792713,
+              "demand_norm_nm": 162.63770026249833,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1471.7857119474866
+            },
+            "1.4": {
+              "residual_norm_nm": 21.55953675937937,
+              "demand_norm_nm": 162.63770026249833,
+              "max_fraction": 0.9999981368960753,
+              "muscle_tendon_positive_power_w": 1828.0867219929073
+            }
+          }
+        },
+        {
+          "sample": 23,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 26.028966584406053,
+              "demand_norm_nm": 196.91226289658977,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1431.3695735018382
+            },
+            "1.4": {
+              "residual_norm_nm": 16.92221207541684,
+              "demand_norm_nm": 196.91226289658977,
+              "max_fraction": 0.9998104008706858,
+              "muscle_tendon_positive_power_w": 1896.143837238073
+            }
+          }
+        },
+        {
+          "sample": 24,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 25.66904477922739,
+              "demand_norm_nm": 161.3144428879001,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1393.3450415140887
+            },
+            "1.4": {
+              "residual_norm_nm": 21.088394235111277,
+              "demand_norm_nm": 161.3144428879001,
+              "max_fraction": 0.9999944584265666,
+              "muscle_tendon_positive_power_w": 1791.9763550553603
+            }
+          }
+        },
+        {
+          "sample": 25,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 40.453872694493334,
+              "demand_norm_nm": 131.66184065112975,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1360.097717878129
+            },
+            "1.4": {
+              "residual_norm_nm": 35.583768938218284,
+              "demand_norm_nm": 131.66184065112975,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1867.9714959641622
+            }
+          }
+        },
+        {
+          "sample": 26,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 39.432096163887564,
+              "demand_norm_nm": 132.2160619500127,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1554.053366509028
+            },
+            "1.4": {
+              "residual_norm_nm": 37.04965384134072,
+              "demand_norm_nm": 132.2160619500127,
+              "max_fraction": 0.9999543454120039,
+              "muscle_tendon_positive_power_w": 1939.871169361819
+            }
+          }
+        },
+        {
+          "sample": 27,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 50.6132567285269,
+              "demand_norm_nm": 173.91981216703735,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2897.929306073853
+            },
+            "1.4": {
+              "residual_norm_nm": 26.683192336510672,
+              "demand_norm_nm": 173.91981216703735,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4091.0451763713
+            }
+          }
+        },
+        {
+          "sample": 28,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 180.83230127121215,
+              "demand_norm_nm": 322.81637390845424,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4448.674128174265
+            },
+            "1.4": {
+              "residual_norm_nm": 131.37257031790324,
+              "demand_norm_nm": 322.81637390845424,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6188.73259245273
+            }
+          }
+        },
+        {
+          "sample": 29,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 226.23545684097638,
+              "demand_norm_nm": 356.5523942928691,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4902.634893628904
+            },
+            "1.4": {
+              "residual_norm_nm": 182.90026225945937,
+              "demand_norm_nm": 356.5523942928691,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6694.179052577585
+            }
+          }
+        },
+        {
+          "sample": 30,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 949.7889596504882,
+              "demand_norm_nm": 1104.6969940930303,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4586.803615250248
+            },
+            "1.4": {
+              "residual_norm_nm": 890.3868276157306,
+              "demand_norm_nm": 1104.6969940930303,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6385.002767927492
+            }
+          }
+        },
+        {
+          "sample": 31,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1311.610072290271,
+              "demand_norm_nm": 1494.5131929849551,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4873.609091002622
+            },
+            "1.4": {
+              "residual_norm_nm": 1240.078886016892,
+              "demand_norm_nm": 1494.5131929849551,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6823.052732304477
+            }
+          }
+        },
+        {
+          "sample": 32,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1937.8917496325735,
+              "demand_norm_nm": 2111.1118979684607,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6865.98421709027
+            },
+            "1.4": {
+              "residual_norm_nm": 1872.4667461888032,
+              "demand_norm_nm": 2111.1118979684607,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7250.8116418116
+            }
+          }
+        },
+        {
+          "sample": 33,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1843.3657152519988,
+              "demand_norm_nm": 1936.5621534885781,
+              "max_fraction": 0.9999999999999997,
+              "muscle_tendon_positive_power_w": 1126.4917205126808
+            },
+            "1.4": {
+              "residual_norm_nm": 1810.9542133648447,
+              "demand_norm_nm": 1936.5621534885781,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1576.353610307351
+            }
+          }
+        },
+        {
+          "sample": 34,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1154.68993760503,
+              "demand_norm_nm": 1269.3520325121553,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2322.202870974912
+            },
+            "1.4": {
+              "residual_norm_nm": 1110.9336825679152,
+              "demand_norm_nm": 1269.3520325121553,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3251.084019391262
+            }
+          }
+        },
+        {
+          "sample": 35,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 476.41806862976495,
+              "demand_norm_nm": 602.1989766155335,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2442.9179451394975
+            },
+            "1.4": {
+              "residual_norm_nm": 428.2088299600382,
+              "demand_norm_nm": 602.1989766155335,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3420.085123194868
+            }
+          }
+        },
+        {
+          "sample": 36,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 182.62221945579503,
+              "demand_norm_nm": 303.24245705233596,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2231.053029326997
+            },
+            "1.4": {
+              "residual_norm_nm": 140.52939146345858,
+              "demand_norm_nm": 303.24245705233596,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2805.0375035965635
+            }
+          }
+        },
+        {
+          "sample": 37,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 84.0884945892807,
+              "demand_norm_nm": 196.441170868621,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1375.7519109820105
+            },
+            "1.4": {
+              "residual_norm_nm": 64.52454752200467,
+              "demand_norm_nm": 196.441170868621,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2050.4763259926167
+            }
+          }
+        },
+        {
+          "sample": 38,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 81.60518382545312,
+              "demand_norm_nm": 199.6834153768182,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1084.0098631318658
+            },
+            "1.4": {
+              "residual_norm_nm": 58.168586272382356,
+              "demand_norm_nm": 199.6834153768182,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1578.8275543423372
+            }
+          }
+        },
+        {
+          "sample": 39,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 83.6979891208159,
+              "demand_norm_nm": 208.03009063331814,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 931.0067150851152
+            },
+            "1.4": {
+              "residual_norm_nm": 53.05673923724681,
+              "demand_norm_nm": 208.03009063331814,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1364.6972566945287
+            }
+          }
+        },
+        {
+          "sample": 40,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 92.16064027617836,
+              "demand_norm_nm": 221.99736104000843,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 943.1149334157267
+            },
+            "1.4": {
+              "residual_norm_nm": 52.32341027240077,
+              "demand_norm_nm": 221.99736104000843,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1251.8498524004553
+            }
+          }
+        },
+        {
+          "sample": 41,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 105.6054522233631,
+              "demand_norm_nm": 240.57017478797346,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1018.8870773509777
+            },
+            "1.4": {
+              "residual_norm_nm": 58.72110048097618,
+              "demand_norm_nm": 240.57017478797346,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1276.8666584119596
+            }
+          }
+        },
+        {
+          "sample": 42,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 118.12482077865843,
+              "demand_norm_nm": 258.8954020251829,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 971.3970152790672
+            },
+            "1.4": {
+              "residual_norm_nm": 67.82052893686303,
+              "demand_norm_nm": 258.8954020251829,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1215.526230162751
+            }
+          }
+        },
+        {
+          "sample": 43,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 111.52741760658665,
+              "demand_norm_nm": 256.34945615849983,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 644.4246974380292
+            },
+            "1.4": {
+              "residual_norm_nm": 61.43855981902244,
+              "demand_norm_nm": 256.34945615849983,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 887.0369421538235
+            }
+          }
+        },
+        {
+          "sample": 44,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 47.856786778654126,
+              "demand_norm_nm": 206.59186676087245,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 243.40339129724094
+            },
+            "1.4": {
+              "residual_norm_nm": 20.80412820445978,
+              "demand_norm_nm": 206.59186676087245,
+              "max_fraction": 0.99007762624643,
+              "muscle_tendon_positive_power_w": 349.7774921785413
+            }
+          }
+        },
+        {
+          "sample": 45,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 204.06391499327506,
+              "demand_norm_nm": 428.83905764567174,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 398.81830579393335
+            },
+            "1.4": {
+              "residual_norm_nm": 128.70017437525098,
+              "demand_norm_nm": 428.83905764567174,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 554.684675078694
+            }
+          }
+        },
+        {
+          "sample": 46,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 78.72455636147669,
+              "demand_norm_nm": 215.0181946369613,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 854.5467237189873
+            },
+            "1.4": {
+              "residual_norm_nm": 32.53518486505594,
+              "demand_norm_nm": 215.0181946369613,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1121.5052936212705
+            }
+          }
+        },
+        {
+          "sample": 47,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 459.8426307676569,
+              "demand_norm_nm": 601.6350073334386,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 737.7359216594602
+            },
+            "1.4": {
+              "residual_norm_nm": 412.84992927067395,
+              "demand_norm_nm": 601.6350073334386,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1256.9184134012148
+            }
+          }
+        },
+        {
+          "sample": 48,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 163.99567011998172,
+              "demand_norm_nm": 313.6630252644185,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1947.944918524243
+            },
+            "1.4": {
+              "residual_norm_nm": 107.81474257729916,
+              "demand_norm_nm": 313.6630252644185,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2740.113081885397
+            }
+          }
+        },
+        {
+          "sample": 49,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 143.00494365641634,
+              "demand_norm_nm": 324.97853354581815,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4231.906706025354
+            },
+            "1.4": {
+              "residual_norm_nm": 79.46388312389631,
+              "demand_norm_nm": 324.97853354581815,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5790.287246721925
+            }
+          }
+        },
+        {
+          "sample": 50,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 699.3264188664946,
+              "demand_norm_nm": 858.0514730493861,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3222.6870723743054
+            },
+            "1.4": {
+              "residual_norm_nm": 636.7942871373432,
+              "demand_norm_nm": 858.0514730493861,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4683.002570463861
+            }
+          }
+        },
+        {
+          "sample": 51,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 2667.7247651688062,
+              "demand_norm_nm": 2820.7602055297857,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2869.0100140807717
+            },
+            "1.4": {
+              "residual_norm_nm": 2608.0882262603645,
+              "demand_norm_nm": 2820.7602055297857,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4016.614019380556
+            }
+          }
+        },
+        {
+          "sample": 52,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 10921.604941386326,
+              "demand_norm_nm": 11118.224594717325,
+              "max_fraction": 0.9999999999999997,
+              "muscle_tendon_positive_power_w": 3291.2367257196797
+            },
+            "1.4": {
+              "residual_norm_nm": 10843.560660097019,
+              "demand_norm_nm": 11118.224594717325,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4607.731416144877
+            }
+          }
+        },
+        {
+          "sample": 53,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 9028.961162589614,
+              "demand_norm_nm": 9207.228517676971,
+              "max_fraction": 0.9999999999996154,
+              "muscle_tendon_positive_power_w": 3718.2651852265203
+            },
+            "1.4": {
+              "residual_norm_nm": 8957.9779551874,
+              "demand_norm_nm": 9207.228517676971,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5205.571259241789
+            }
+          }
+        },
+        {
+          "sample": 54,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 2336.188379852713,
+              "demand_norm_nm": 2524.8541291185015,
+              "max_fraction": 0.9999999999999769,
+              "muscle_tendon_positive_power_w": 13690.242287136556
+            },
+            "1.4": {
+              "residual_norm_nm": 2264.5739308143757,
+              "demand_norm_nm": 2524.8541291185015,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 19166.33920199643
+            }
+          }
+        },
+        {
+          "sample": 55,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 929.7216985888748,
+              "demand_norm_nm": 1133.6463720045213,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4594.78096396883
+            },
+            "1.4": {
+              "residual_norm_nm": 851.7885880728486,
+              "demand_norm_nm": 1133.6463720045213,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6191.88555958269
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pitch": "3034_4",
+      "frames": 53,
+      "projected_demand_rms_nm": 2216.469303967002,
+      "envelopes": {
+        "1.0": {
+          "residual_rms_nm": 2147.812010823121,
+          "frames_residual_over_1nm": 53
+        },
+        "1.4": {
+          "residual_rms_nm": 2123.266169963543,
+          "frames_residual_over_1nm": 53
+        }
+      },
+      "rows": [
+        {
+          "sample": 2,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 44.56343868343668,
+              "demand_norm_nm": 97.9322480227026,
+              "max_fraction": 0.9999999999999923,
+              "muscle_tendon_positive_power_w": 1427.1825279166057
+            },
+            "1.4": {
+              "residual_norm_nm": 44.18145402133982,
+              "demand_norm_nm": 97.9322480227026,
+              "max_fraction": 0.9904316651990394,
+              "muscle_tendon_positive_power_w": 1717.1549986743698
+            }
+          }
+        },
+        {
+          "sample": 3,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 63.47749895875614,
+              "demand_norm_nm": 92.50720933537973,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1243.4752427094213
+            },
+            "1.4": {
+              "residual_norm_nm": 63.47718406669947,
+              "demand_norm_nm": 92.50720933537973,
+              "max_fraction": 0.993957548691734,
+              "muscle_tendon_positive_power_w": 1624.5790483216535
+            }
+          }
+        },
+        {
+          "sample": 4,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 91.41256593860308,
+              "demand_norm_nm": 102.09376295970304,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1441.610757828976
+            },
+            "1.4": {
+              "residual_norm_nm": 90.89538176914874,
+              "demand_norm_nm": 102.09376295970304,
+              "max_fraction": 0.999999918502398,
+              "muscle_tendon_positive_power_w": 1969.458088160389
+            }
+          }
+        },
+        {
+          "sample": 5,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 127.25203771371002,
+              "demand_norm_nm": 134.79578535891144,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1745.8324825460186
+            },
+            "1.4": {
+              "residual_norm_nm": 125.43755840114503,
+              "demand_norm_nm": 134.79578535891144,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2428.4350154058725
+            }
+          }
+        },
+        {
+          "sample": 6,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 189.4706478253877,
+              "demand_norm_nm": 218.87945166445704,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2054.666435486652
+            },
+            "1.4": {
+              "residual_norm_nm": 186.35938468347922,
+              "demand_norm_nm": 218.87945166445704,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2340.160393620573
+            }
+          }
+        },
+        {
+          "sample": 7,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 266.2248410701322,
+              "demand_norm_nm": 353.4706284197637,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2519.489659069035
+            },
+            "1.4": {
+              "residual_norm_nm": 257.7544740095359,
+              "demand_norm_nm": 353.4706284197637,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3076.9203609765545
+            }
+          }
+        },
+        {
+          "sample": 8,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 292.0290967423464,
+              "demand_norm_nm": 447.020791147924,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3968.0557681760197
+            },
+            "1.4": {
+              "residual_norm_nm": 260.89346597354705,
+              "demand_norm_nm": 447.020791147924,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5375.19618488054
+            }
+          }
+        },
+        {
+          "sample": 9,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 558.6682518078503,
+              "demand_norm_nm": 792.1359352910554,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2334.1426047813698
+            },
+            "1.4": {
+              "residual_norm_nm": 482.1725183560115,
+              "demand_norm_nm": 792.1359352910554,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3362.8177422088775
+            }
+          }
+        },
+        {
+          "sample": 10,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 383.4732470617159,
+              "demand_norm_nm": 600.9990019280328,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2370.9887080931444
+            },
+            "1.4": {
+              "residual_norm_nm": 317.6140232038251,
+              "demand_norm_nm": 600.9990019280328,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3319.384191333363
+            }
+          }
+        },
+        {
+          "sample": 11,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 11.645887346195797,
+              "demand_norm_nm": 156.48762059914424,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2182.395077626084
+            },
+            "1.4": {
+              "residual_norm_nm": 4.241343073692423,
+              "demand_norm_nm": 156.48762059914424,
+              "max_fraction": 0.9881759363247431,
+              "muscle_tendon_positive_power_w": 3260.730478178087
+            }
+          }
+        },
+        {
+          "sample": 12,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 23.82419742284163,
+              "demand_norm_nm": 107.88232621786982,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2708.3477224135795
+            },
+            "1.4": {
+              "residual_norm_nm": 17.730700816058654,
+              "demand_norm_nm": 107.88232621786982,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4441.641970004261
+            }
+          }
+        },
+        {
+          "sample": 13,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 29.505190568049567,
+              "demand_norm_nm": 82.58470073299394,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4008.5487934256107
+            },
+            "1.4": {
+              "residual_norm_nm": 24.753323621645976,
+              "demand_norm_nm": 82.58470073299394,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5833.1033898283295
+            }
+          }
+        },
+        {
+          "sample": 14,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 17.597330127463305,
+              "demand_norm_nm": 81.3350771530443,
+              "max_fraction": 0.9613513048676735,
+              "muscle_tendon_positive_power_w": 3237.041939433171
+            },
+            "1.4": {
+              "residual_norm_nm": 17.597330127463305,
+              "demand_norm_nm": 81.3350771530443,
+              "max_fraction": 0.8010961948179458,
+              "muscle_tendon_positive_power_w": 3955.542016208509
+            }
+          }
+        },
+        {
+          "sample": 15,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 46.66273849396215,
+              "demand_norm_nm": 205.47508803735843,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3532.5691511567516
+            },
+            "1.4": {
+              "residual_norm_nm": 15.129227316159284,
+              "demand_norm_nm": 205.47508803735843,
+              "max_fraction": 0.999999999999999,
+              "muscle_tendon_positive_power_w": 5121.643893120374
+            }
+          }
+        },
+        {
+          "sample": 16,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 352.25386197122083,
+              "demand_norm_nm": 589.2540983040698,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5187.527971971644
+            },
+            "1.4": {
+              "residual_norm_nm": 273.44229733437044,
+              "demand_norm_nm": 589.2540983040698,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7212.228872130132
+            }
+          }
+        },
+        {
+          "sample": 17,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 183.22393191464258,
+              "demand_norm_nm": 346.2473870025425,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4505.866281628705
+            },
+            "1.4": {
+              "residual_norm_nm": 149.06975440036805,
+              "demand_norm_nm": 346.2473870025425,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5438.782672261663
+            }
+          }
+        },
+        {
+          "sample": 18,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 15.235995111145312,
+              "demand_norm_nm": 106.66457115205868,
+              "max_fraction": 0.9573709351613804,
+              "muscle_tendon_positive_power_w": 1536.1535336090315
+            },
+            "1.4": {
+              "residual_norm_nm": 15.235995111145312,
+              "demand_norm_nm": 106.66457115205868,
+              "max_fraction": 0.7418458860289463,
+              "muscle_tendon_positive_power_w": 1669.7277927934597
+            }
+          }
+        },
+        {
+          "sample": 19,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 23.587099921071395,
+              "demand_norm_nm": 85.60353906475582,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2104.9294963524544
+            },
+            "1.4": {
+              "residual_norm_nm": 23.50426313992863,
+              "demand_norm_nm": 85.60353906475582,
+              "max_fraction": 0.9943641945723353,
+              "muscle_tendon_positive_power_w": 2299.1701114626458
+            }
+          }
+        },
+        {
+          "sample": 20,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 23.165153214826525,
+              "demand_norm_nm": 121.60628569840345,
+              "max_fraction": 0.9998534637225321,
+              "muscle_tendon_positive_power_w": 1647.3391651566446
+            },
+            "1.4": {
+              "residual_norm_nm": 23.165153214826532,
+              "demand_norm_nm": 121.60628569840345,
+              "max_fraction": 0.9574110878121611,
+              "muscle_tendon_positive_power_w": 1904.4594284183977
+            }
+          }
+        },
+        {
+          "sample": 21,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 22.516103629879098,
+              "demand_norm_nm": 140.1383895234206,
+              "max_fraction": 0.9998742741971577,
+              "muscle_tendon_positive_power_w": 1684.3702685303099
+            },
+            "1.4": {
+              "residual_norm_nm": 22.516103629879108,
+              "demand_norm_nm": 140.1383895234206,
+              "max_fraction": 0.8432657912730767,
+              "muscle_tendon_positive_power_w": 1819.5823715156648
+            }
+          }
+        },
+        {
+          "sample": 22,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 30.809762612637485,
+              "demand_norm_nm": 121.37435511771852,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1695.66264086866
+            },
+            "1.4": {
+              "residual_norm_nm": 30.487038950174842,
+              "demand_norm_nm": 121.37435511771852,
+              "max_fraction": 0.9984974522504118,
+              "muscle_tendon_positive_power_w": 2081.6009781622706
+            }
+          }
+        },
+        {
+          "sample": 23,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 32.578351510358026,
+              "demand_norm_nm": 163.69027791274686,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1617.4661771193314
+            },
+            "1.4": {
+              "residual_norm_nm": 30.81417516023777,
+              "demand_norm_nm": 163.69027791274686,
+              "max_fraction": 0.996990805995279,
+              "muscle_tendon_positive_power_w": 1908.641624861653
+            }
+          }
+        },
+        {
+          "sample": 24,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 47.05548679232099,
+              "demand_norm_nm": 184.55938272337062,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1530.5373095283621
+            },
+            "1.4": {
+              "residual_norm_nm": 30.00051300441294,
+              "demand_norm_nm": 184.55938272337062,
+              "max_fraction": 0.9999999999999991,
+              "muscle_tendon_positive_power_w": 2142.752233339406
+            }
+          }
+        },
+        {
+          "sample": 25,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 43.5173951274419,
+              "demand_norm_nm": 139.23829404446764,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1547.0253826113153
+            },
+            "1.4": {
+              "residual_norm_nm": 40.560703638890004,
+              "demand_norm_nm": 139.23829404446764,
+              "max_fraction": 0.9984237951467398,
+              "muscle_tendon_positive_power_w": 1979.9730138863001
+            }
+          }
+        },
+        {
+          "sample": 26,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 38.806603920970964,
+              "demand_norm_nm": 131.9375465874346,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2789.2132914892454
+            },
+            "1.4": {
+              "residual_norm_nm": 38.44726393557866,
+              "demand_norm_nm": 131.9375465874346,
+              "max_fraction": 0.9714434700352657,
+              "muscle_tendon_positive_power_w": 3423.4139187224
+            }
+          }
+        },
+        {
+          "sample": 27,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 210.68713816687634,
+              "demand_norm_nm": 357.4483052217738,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4565.770037065608
+            },
+            "1.4": {
+              "residual_norm_nm": 159.55370111806127,
+              "demand_norm_nm": 357.4483052217738,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6382.210580001896
+            }
+          }
+        },
+        {
+          "sample": 28,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 309.9470387394796,
+              "demand_norm_nm": 445.4732730979231,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5095.487331357431
+            },
+            "1.4": {
+              "residual_norm_nm": 263.61886876415764,
+              "demand_norm_nm": 445.4732730979231,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7083.854639964512
+            }
+          }
+        },
+        {
+          "sample": 29,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 924.4180131695003,
+              "demand_norm_nm": 1081.7449587735068,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4747.645107962891
+            },
+            "1.4": {
+              "residual_norm_nm": 864.0485494673909,
+              "demand_norm_nm": 1081.7449587735068,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6592.648947242022
+            }
+          }
+        },
+        {
+          "sample": 30,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1086.0686626445881,
+              "demand_norm_nm": 1284.790379977939,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5179.039885189819
+            },
+            "1.4": {
+              "residual_norm_nm": 1007.4916519419003,
+              "demand_norm_nm": 1284.790379977939,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7350.233281155442
+            }
+          }
+        },
+        {
+          "sample": 31,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1476.1269108359247,
+              "demand_norm_nm": 1635.5283631911714,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3924.706190782057
+            },
+            "1.4": {
+              "residual_norm_nm": 1417.6887667202814,
+              "demand_norm_nm": 1635.5283631911714,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5494.588667096472
+            }
+          }
+        },
+        {
+          "sample": 32,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1384.564420657292,
+              "demand_norm_nm": 1470.5591521070564,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 880.1222859043048
+            },
+            "1.4": {
+              "residual_norm_nm": 1356.347843506361,
+              "demand_norm_nm": 1470.5591521070564,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1347.8628060098097
+            }
+          }
+        },
+        {
+          "sample": 33,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1104.8759119730507,
+              "demand_norm_nm": 1213.2128604085124,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2556.155425647341
+            },
+            "1.4": {
+              "residual_norm_nm": 1064.6307759445685,
+              "demand_norm_nm": 1213.2128604085124,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3260.3208835646246
+            }
+          }
+        },
+        {
+          "sample": 34,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 498.36731658477794,
+              "demand_norm_nm": 625.1134789079849,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2244.710793727581
+            },
+            "1.4": {
+              "residual_norm_nm": 449.3191446445962,
+              "demand_norm_nm": 625.1134789079849,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3142.5951111201557
+            }
+          }
+        },
+        {
+          "sample": 35,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 236.06428178558588,
+              "demand_norm_nm": 362.71432471341893,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2038.2964208007002
+            },
+            "1.4": {
+              "residual_norm_nm": 189.8279003156103,
+              "demand_norm_nm": 362.71432471341893,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2806.600047547449
+            }
+          }
+        },
+        {
+          "sample": 36,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 99.48228717733258,
+              "demand_norm_nm": 218.69619991884778,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1501.4178032800796
+            },
+            "1.4": {
+              "residual_norm_nm": 74.23692914770268,
+              "demand_norm_nm": 218.69619991884778,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1889.0807274465355
+            }
+          }
+        },
+        {
+          "sample": 37,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 89.3153127002491,
+              "demand_norm_nm": 211.74092022431617,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1013.8251801126762
+            },
+            "1.4": {
+              "residual_norm_nm": 63.87467122123184,
+              "demand_norm_nm": 211.74092022431617,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1447.0488862720388
+            }
+          }
+        },
+        {
+          "sample": 38,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 77.12902065016831,
+              "demand_norm_nm": 200.87114586374278,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 767.9496402781695
+            },
+            "1.4": {
+              "residual_norm_nm": 54.302768002528815,
+              "demand_norm_nm": 200.87114586374278,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1290.8898540085415
+            }
+          }
+        },
+        {
+          "sample": 39,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 62.79202500003788,
+              "demand_norm_nm": 186.14216794149388,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 828.8633240829456
+            },
+            "1.4": {
+              "residual_norm_nm": 43.25587157394979,
+              "demand_norm_nm": 186.14216794149388,
+              "max_fraction": 0.9995316105073038,
+              "muscle_tendon_positive_power_w": 1239.0885552301288
+            }
+          }
+        },
+        {
+          "sample": 40,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 48.01150853217629,
+              "demand_norm_nm": 190.07553249472844,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 763.8038397351966
+            },
+            "1.4": {
+              "residual_norm_nm": 32.43453440746429,
+              "demand_norm_nm": 190.07553249472844,
+              "max_fraction": 0.9874784793702374,
+              "muscle_tendon_positive_power_w": 1099.7020964240423
+            }
+          }
+        },
+        {
+          "sample": 41,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 52.69914736089435,
+              "demand_norm_nm": 193.06358179692722,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 580.0153214091092
+            },
+            "1.4": {
+              "residual_norm_nm": 27.922044271851924,
+              "demand_norm_nm": 193.06358179692722,
+              "max_fraction": 0.9999860390338129,
+              "muscle_tendon_positive_power_w": 771.4559513474763
+            }
+          }
+        },
+        {
+          "sample": 42,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 109.48192766964065,
+              "demand_norm_nm": 250.3488995479925,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 343.4518770423008
+            },
+            "1.4": {
+              "residual_norm_nm": 59.66859870596085,
+              "demand_norm_nm": 250.3488995479925,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 480.8326278592368
+            }
+          }
+        },
+        {
+          "sample": 43,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 179.498734966103,
+              "demand_norm_nm": 324.2696511962737,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 318.30327597465333
+            },
+            "1.4": {
+              "residual_norm_nm": 129.74982504530345,
+              "demand_norm_nm": 324.2696511962737,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 445.62458636417347
+            }
+          }
+        },
+        {
+          "sample": 44,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 129.79785127506963,
+              "demand_norm_nm": 277.9054919107058,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 502.28547563905556
+            },
+            "1.4": {
+              "residual_norm_nm": 74.92251062881772,
+              "demand_norm_nm": 277.9054919107058,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 703.3011230695797
+            }
+          }
+        },
+        {
+          "sample": 45,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 92.69298264654164,
+              "demand_norm_nm": 236.899655735486,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1201.416007761141
+            },
+            "1.4": {
+              "residual_norm_nm": 45.81221768681803,
+              "demand_norm_nm": 236.899655735486,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1543.3165853347514
+            }
+          }
+        },
+        {
+          "sample": 46,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 81.82988328274276,
+              "demand_norm_nm": 234.1444057853441,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2218.7019983379796
+            },
+            "1.4": {
+              "residual_norm_nm": 38.14844688463917,
+              "demand_norm_nm": 234.1444057853441,
+              "max_fraction": 0.999999999999999,
+              "muscle_tendon_positive_power_w": 2992.959248366104
+            }
+          }
+        },
+        {
+          "sample": 47,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 87.00843847996526,
+              "demand_norm_nm": 248.85931361654517,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3431.1146548610195
+            },
+            "1.4": {
+              "residual_norm_nm": 38.81732101001828,
+              "demand_norm_nm": 248.85931361654517,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4922.943167728003
+            }
+          }
+        },
+        {
+          "sample": 48,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 111.24706542993019,
+              "demand_norm_nm": 277.65200017406517,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4940.279590176612
+            },
+            "1.4": {
+              "residual_norm_nm": 59.377385892052516,
+              "demand_norm_nm": 277.65200017406517,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6512.136377845991
+            }
+          }
+        },
+        {
+          "sample": 49,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1217.1997892910542,
+              "demand_norm_nm": 1380.2664962934446,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4793.7527045352235
+            },
+            "1.4": {
+              "residual_norm_nm": 1152.6627861955355,
+              "demand_norm_nm": 1380.2664962934446,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6711.253786265812
+            }
+          }
+        },
+        {
+          "sample": 50,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 6959.0973070261025,
+              "demand_norm_nm": 7121.408540974129,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 301.4257522611898
+            },
+            "1.4": {
+              "residual_norm_nm": 6895.546955722358,
+              "demand_norm_nm": 7121.408540974129,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 421.9960530378421
+            }
+          }
+        },
+        {
+          "sample": 51,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 12492.131998346493,
+              "demand_norm_nm": 12751.914752056502,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3191.4956570063423
+            },
+            "1.4": {
+              "residual_norm_nm": 12388.404692175303,
+              "demand_norm_nm": 12751.914752056502,
+              "max_fraction": 0.9999999999999996,
+              "muscle_tendon_positive_power_w": 4468.0939194843995
+            }
+          }
+        },
+        {
+          "sample": 52,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 5235.863976106261,
+              "demand_norm_nm": 5384.175232592939,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5700.933997616647
+            },
+            "1.4": {
+              "residual_norm_nm": 5177.221968351645,
+              "demand_norm_nm": 5384.175232592939,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7981.307596982394
+            }
+          }
+        },
+        {
+          "sample": 53,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1293.9886023960992,
+              "demand_norm_nm": 1523.29796474304,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 15064.393875163441
+            },
+            "1.4": {
+              "residual_norm_nm": 1206.464501381019,
+              "demand_norm_nm": 1523.29796474304,
+              "max_fraction": 0.9999999999999996,
+              "muscle_tendon_positive_power_w": 20615.41909765423
+            }
+          }
+        },
+        {
+          "sample": 54,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 814.8645816318034,
+              "demand_norm_nm": 993.4473639987342,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4323.4652741332575
+            },
+            "1.4": {
+              "residual_norm_nm": 749.4714709891178,
+              "demand_norm_nm": 993.4473639987342,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6052.851383794948
+            }
+          }
+        }
+      ]
+    },
+    {
+      "pitch": "3034_5",
+      "frames": 62,
+      "projected_demand_rms_nm": 2140.901837360061,
+      "envelopes": {
+        "1.0": {
+          "residual_rms_nm": 2073.4385787250603,
+          "frames_residual_over_1nm": 62
+        },
+        "1.4": {
+          "residual_rms_nm": 2049.8061940303114,
+          "frames_residual_over_1nm": 62
+        }
+      },
+      "rows": [
+        {
+          "sample": 2,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 28.501246679034324,
+              "demand_norm_nm": 127.78753074677616,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 856.2887339754695
+            },
+            "1.4": {
+              "residual_norm_nm": 14.46495644406716,
+              "demand_norm_nm": 127.78753074677616,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 945.533994798818
+            }
+          }
+        },
+        {
+          "sample": 3,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 411.95852375531763,
+              "demand_norm_nm": 541.0211642868568,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 466.92523797591747
+            },
+            "1.4": {
+              "residual_norm_nm": 368.912542934746,
+              "demand_norm_nm": 541.0211642868568,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 355.64301079075403
+            }
+          }
+        },
+        {
+          "sample": 4,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 794.425389244927,
+              "demand_norm_nm": 962.8535135970176,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1433.7751218567519
+            },
+            "1.4": {
+              "residual_norm_nm": 733.5872313669804,
+              "demand_norm_nm": 962.8535135970176,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1814.56533486443
+            }
+          }
+        },
+        {
+          "sample": 5,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 798.9360291788855,
+              "demand_norm_nm": 973.4701034374189,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4869.561132781496
+            },
+            "1.4": {
+              "residual_norm_nm": 738.383381551188,
+              "demand_norm_nm": 973.4701034374189,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6423.658148335514
+            }
+          }
+        },
+        {
+          "sample": 6,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 307.3083000286281,
+              "demand_norm_nm": 426.6125885318486,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3207.0528996911244
+            },
+            "1.4": {
+              "residual_norm_nm": 280.0135667847752,
+              "demand_norm_nm": 426.6125885318486,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3893.729271507734
+            }
+          }
+        },
+        {
+          "sample": 7,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 132.61495943637874,
+              "demand_norm_nm": 198.07047918598272,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2338.359056948542
+            },
+            "1.4": {
+              "residual_norm_nm": 120.11054120639183,
+              "demand_norm_nm": 198.07047918598272,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2987.0922919644527
+            }
+          }
+        },
+        {
+          "sample": 8,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 77.95448398250002,
+              "demand_norm_nm": 130.86633181461372,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1864.435483230778
+            },
+            "1.4": {
+              "residual_norm_nm": 68.66576080758463,
+              "demand_norm_nm": 130.86633181461372,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2355.0920249467986
+            }
+          }
+        },
+        {
+          "sample": 9,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 82.9374071156638,
+              "demand_norm_nm": 100.74056983038854,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1425.070048719763
+            },
+            "1.4": {
+              "residual_norm_nm": 82.33633523667986,
+              "demand_norm_nm": 100.74056983038854,
+              "max_fraction": 0.9979569429743492,
+              "muscle_tendon_positive_power_w": 1864.5999354888413
+            }
+          }
+        },
+        {
+          "sample": 10,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 104.14636587641141,
+              "demand_norm_nm": 107.27308177392044,
+              "max_fraction": 0.9993519033132121,
+              "muscle_tendon_positive_power_w": 1049.7062809909671
+            },
+            "1.4": {
+              "residual_norm_nm": 104.14636587641094,
+              "demand_norm_nm": 107.27308177392044,
+              "max_fraction": 0.8836033936179685,
+              "muscle_tendon_positive_power_w": 1071.7843466269717
+            }
+          }
+        },
+        {
+          "sample": 11,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 119.62363813966924,
+              "demand_norm_nm": 130.3434471200892,
+              "max_fraction": 0.9999672895405123,
+              "muscle_tendon_positive_power_w": 483.5176022150273
+            },
+            "1.4": {
+              "residual_norm_nm": 119.62363813966938,
+              "demand_norm_nm": 130.3434471200892,
+              "max_fraction": 0.9942829766968667,
+              "muscle_tendon_positive_power_w": 759.0910205531299
+            }
+          }
+        },
+        {
+          "sample": 12,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 128.13260842251967,
+              "demand_norm_nm": 140.3610919484677,
+              "max_fraction": 0.9977721470620224,
+              "muscle_tendon_positive_power_w": 531.260561421522
+            },
+            "1.4": {
+              "residual_norm_nm": 128.13260842247072,
+              "demand_norm_nm": 140.3610919484677,
+              "max_fraction": 0.9374468973488975,
+              "muscle_tendon_positive_power_w": 755.9745230284148
+            }
+          }
+        },
+        {
+          "sample": 13,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 129.5411775561631,
+              "demand_norm_nm": 136.13585367570815,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 934.3398496212923
+            },
+            "1.4": {
+              "residual_norm_nm": 129.48081733196852,
+              "demand_norm_nm": 136.13585367570815,
+              "max_fraction": 0.9988412980066559,
+              "muscle_tendon_positive_power_w": 1217.2375639588122
+            }
+          }
+        },
+        {
+          "sample": 14,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 133.18377599704067,
+              "demand_norm_nm": 144.2903904973664,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1195.0600335447211
+            },
+            "1.4": {
+              "residual_norm_nm": 130.80522643407326,
+              "demand_norm_nm": 144.2903904973664,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1586.6107248501107
+            }
+          }
+        },
+        {
+          "sample": 15,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 156.91650679293164,
+              "demand_norm_nm": 190.8517503575203,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1350.3425564290278
+            },
+            "1.4": {
+              "residual_norm_nm": 151.7614527229833,
+              "demand_norm_nm": 190.8517503575203,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1462.0858843633043
+            }
+          }
+        },
+        {
+          "sample": 16,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 216.19703695052686,
+              "demand_norm_nm": 287.42755207899637,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1663.8663400788653
+            },
+            "1.4": {
+              "residual_norm_nm": 209.9425916517536,
+              "demand_norm_nm": 287.42755207899637,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1876.7303486750652
+            }
+          }
+        },
+        {
+          "sample": 17,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 405.4732111041462,
+              "demand_norm_nm": 567.7544989953487,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3439.831498370629
+            },
+            "1.4": {
+              "residual_norm_nm": 369.65853049564606,
+              "demand_norm_nm": 567.7544989953487,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4824.70373384117
+            }
+          }
+        },
+        {
+          "sample": 18,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 688.9479551139069,
+              "demand_norm_nm": 925.6502828637125,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2453.8593351418517
+            },
+            "1.4": {
+              "residual_norm_nm": 607.7284941548631,
+              "demand_norm_nm": 925.6502828637125,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3435.4030691989706
+            }
+          }
+        },
+        {
+          "sample": 19,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 492.5844349425262,
+              "demand_norm_nm": 713.5052536873427,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1934.8846610345026
+            },
+            "1.4": {
+              "residual_norm_nm": 422.03063409947754,
+              "demand_norm_nm": 713.5052536873427,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3083.0960675567235
+            }
+          }
+        },
+        {
+          "sample": 20,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 39.625071478288675,
+              "demand_norm_nm": 113.67964046733515,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1887.853209072127
+            },
+            "1.4": {
+              "residual_norm_nm": 33.10101506237934,
+              "demand_norm_nm": 113.67964046733515,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2672.5211155585707
+            }
+          }
+        },
+        {
+          "sample": 21,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 25.086459251270423,
+              "demand_norm_nm": 135.76231972509225,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1928.3546413553324
+            },
+            "1.4": {
+              "residual_norm_nm": 15.794241413716275,
+              "demand_norm_nm": 135.76231972509225,
+              "max_fraction": 0.9999999999999998,
+              "muscle_tendon_positive_power_w": 2732.459623498626
+            }
+          }
+        },
+        {
+          "sample": 22,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 28.271075684819664,
+              "demand_norm_nm": 165.50130448777668,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2324.8714818374065
+            },
+            "1.4": {
+              "residual_norm_nm": 7.733032444507881,
+              "demand_norm_nm": 165.50130448777668,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3509.580618696256
+            }
+          }
+        },
+        {
+          "sample": 23,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 22.340168422689995,
+              "demand_norm_nm": 118.38970799119527,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1965.7967173449244
+            },
+            "1.4": {
+              "residual_norm_nm": 14.789101293579256,
+              "demand_norm_nm": 118.38970799119527,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3165.0593684404203
+            }
+          }
+        },
+        {
+          "sample": 24,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 16.53121463170639,
+              "demand_norm_nm": 105.4768191730146,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2251.5329642479614
+            },
+            "1.4": {
+              "residual_norm_nm": 14.444964636129445,
+              "demand_norm_nm": 105.4768191730146,
+              "max_fraction": 0.9470803341344991,
+              "muscle_tendon_positive_power_w": 3437.909990274506
+            }
+          }
+        },
+        {
+          "sample": 25,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 40.216162664112154,
+              "demand_norm_nm": 170.09800792278216,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5141.8188517133085
+            },
+            "1.4": {
+              "residual_norm_nm": 14.002319834472976,
+              "demand_norm_nm": 170.09800792278216,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7320.35591369744
+            }
+          }
+        },
+        {
+          "sample": 26,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 401.7881946826705,
+              "demand_norm_nm": 632.7525843498598,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5469.08629857205
+            },
+            "1.4": {
+              "residual_norm_nm": 329.27840206127763,
+              "demand_norm_nm": 632.7525843498598,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 7647.929406349662
+            }
+          }
+        },
+        {
+          "sample": 27,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 97.67205697646106,
+              "demand_norm_nm": 252.2599690783144,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5209.248301261603
+            },
+            "1.4": {
+              "residual_norm_nm": 66.70188795442077,
+              "demand_norm_nm": 252.2599690783144,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5860.109309780435
+            }
+          }
+        },
+        {
+          "sample": 28,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 16.427159706654045,
+              "demand_norm_nm": 115.83538216491672,
+              "max_fraction": 0.9063188883711777,
+              "muscle_tendon_positive_power_w": 1228.0612963781723
+            },
+            "1.4": {
+              "residual_norm_nm": 16.427159708185723,
+              "demand_norm_nm": 115.83538216491672,
+              "max_fraction": 0.7286409589909387,
+              "muscle_tendon_positive_power_w": 1433.3104400088828
+            }
+          }
+        },
+        {
+          "sample": 29,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 16.920243421486905,
+              "demand_norm_nm": 153.6262333116293,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1590.6184482779968
+            },
+            "1.4": {
+              "residual_norm_nm": 16.264006521512716,
+              "demand_norm_nm": 153.6262333116293,
+              "max_fraction": 0.9030240623492448,
+              "muscle_tendon_positive_power_w": 1995.279210443834
+            }
+          }
+        },
+        {
+          "sample": 30,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 19.413627775976103,
+              "demand_norm_nm": 164.04967588396642,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1550.2988405920019
+            },
+            "1.4": {
+              "residual_norm_nm": 17.06967121079539,
+              "demand_norm_nm": 164.04967588396642,
+              "max_fraction": 0.998547102501993,
+              "muscle_tendon_positive_power_w": 1883.5909262487542
+            }
+          }
+        },
+        {
+          "sample": 31,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 24.126369268822877,
+              "demand_norm_nm": 141.68052097048613,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1501.975709202326
+            },
+            "1.4": {
+              "residual_norm_nm": 21.32723084958394,
+              "demand_norm_nm": 141.68052097048613,
+              "max_fraction": 0.9986924834977038,
+              "muscle_tendon_positive_power_w": 1964.2661453865276
+            }
+          }
+        },
+        {
+          "sample": 32,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 35.45514036046492,
+              "demand_norm_nm": 126.60553043638447,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1487.623314829144
+            },
+            "1.4": {
+              "residual_norm_nm": 33.11741642751776,
+              "demand_norm_nm": 126.60553043638447,
+              "max_fraction": 0.999999999999992,
+              "muscle_tendon_positive_power_w": 2290.1947016976997
+            }
+          }
+        },
+        {
+          "sample": 33,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 53.06028179345172,
+              "demand_norm_nm": 192.72646414125342,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1422.0944377400888
+            },
+            "1.4": {
+              "residual_norm_nm": 31.329028347085348,
+              "demand_norm_nm": 192.72646414125342,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1990.932212835512
+            }
+          }
+        },
+        {
+          "sample": 34,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 42.045453802661875,
+              "demand_norm_nm": 167.8687394504966,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1628.8943189360284
+            },
+            "1.4": {
+              "residual_norm_nm": 27.284358295381697,
+              "demand_norm_nm": 167.8687394504966,
+              "max_fraction": 0.9895862859297835,
+              "muscle_tendon_positive_power_w": 2065.8466252615985
+            }
+          }
+        },
+        {
+          "sample": 35,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 34.495747811224845,
+              "demand_norm_nm": 132.39602115998412,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2862.782497973978
+            },
+            "1.4": {
+              "residual_norm_nm": 33.52023720128494,
+              "demand_norm_nm": 132.39602115998412,
+              "max_fraction": 0.9907271086666131,
+              "muscle_tendon_positive_power_w": 3444.62789184972
+            }
+          }
+        },
+        {
+          "sample": 36,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 128.7311826362646,
+              "demand_norm_nm": 259.6080377892713,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4349.874341459578
+            },
+            "1.4": {
+              "residual_norm_nm": 89.31749646416763,
+              "demand_norm_nm": 259.6080377892713,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5782.14239642288
+            }
+          }
+        },
+        {
+          "sample": 37,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 103.68817700337947,
+              "demand_norm_nm": 233.38376456702304,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4372.05175382541
+            },
+            "1.4": {
+              "residual_norm_nm": 68.67287949088303,
+              "demand_norm_nm": 233.38376456702304,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5971.997639884252
+            }
+          }
+        },
+        {
+          "sample": 38,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 289.5958534241038,
+              "demand_norm_nm": 438.18188604178226,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5374.357402989962
+            },
+            "1.4": {
+              "residual_norm_nm": 236.99094800929322,
+              "demand_norm_nm": 438.18188604178226,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6817.524345849668
+            }
+          }
+        },
+        {
+          "sample": 39,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 930.3700797849972,
+              "demand_norm_nm": 1091.6447074799685,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4233.5319315594525
+            },
+            "1.4": {
+              "residual_norm_nm": 868.1411316959927,
+              "demand_norm_nm": 1091.6447074799685,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5880.598057991848
+            }
+          }
+        },
+        {
+          "sample": 40,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1107.0392157436852,
+              "demand_norm_nm": 1301.4369875603625,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4517.679957906952
+            },
+            "1.4": {
+              "residual_norm_nm": 1031.2967706323193,
+              "demand_norm_nm": 1301.4369875603625,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6324.7519408309145
+            }
+          }
+        },
+        {
+          "sample": 41,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1556.977602300545,
+              "demand_norm_nm": 1731.9514413843767,
+              "max_fraction": 0.999999999999999,
+              "muscle_tendon_positive_power_w": 2980.548639688246
+            },
+            "1.4": {
+              "residual_norm_nm": 1492.5428148807166,
+              "demand_norm_nm": 1731.9514413843767,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4172.768095563885
+            }
+          }
+        },
+        {
+          "sample": 42,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1493.846023723909,
+              "demand_norm_nm": 1584.0826151885178,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 818.9833528105447
+            },
+            "1.4": {
+              "residual_norm_nm": 1463.0254369543075,
+              "demand_norm_nm": 1584.0826151885178,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1146.576694259866
+            }
+          }
+        },
+        {
+          "sample": 43,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1074.1286222683466,
+              "demand_norm_nm": 1188.6131163877271,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1913.3923998996527
+            },
+            "1.4": {
+              "residual_norm_nm": 1030.9081504240382,
+              "demand_norm_nm": 1188.6131163877271,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2669.8311967624777
+            }
+          }
+        },
+        {
+          "sample": 44,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 464.22478032190656,
+              "demand_norm_nm": 594.0554874864819,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1985.302690081942
+            },
+            "1.4": {
+              "residual_norm_nm": 414.39576495483857,
+              "demand_norm_nm": 594.0554874864819,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2752.464094150613
+            }
+          }
+        },
+        {
+          "sample": 45,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 193.10117138792205,
+              "demand_norm_nm": 321.7007270530506,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1573.221360473618
+            },
+            "1.4": {
+              "residual_norm_nm": 145.8483892793645,
+              "demand_norm_nm": 321.7007270530506,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1964.1615851717027
+            }
+          }
+        },
+        {
+          "sample": 46,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 79.88848441597605,
+              "demand_norm_nm": 203.928763074177,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 881.5780174600532
+            },
+            "1.4": {
+              "residual_norm_nm": 54.2176522848667,
+              "demand_norm_nm": 203.928763074177,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1387.296744806175
+            }
+          }
+        },
+        {
+          "sample": 47,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 89.18890253105376,
+              "demand_norm_nm": 219.19238799252025,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1071.4340966278787
+            },
+            "1.4": {
+              "residual_norm_nm": 52.97569369425427,
+              "demand_norm_nm": 219.19238799252025,
+              "max_fraction": 0.9999999999999988,
+              "muscle_tendon_positive_power_w": 1477.4328168074612
+            }
+          }
+        },
+        {
+          "sample": 48,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 114.54567066799974,
+              "demand_norm_nm": 256.37324919423907,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1254.9653286707505
+            },
+            "1.4": {
+              "residual_norm_nm": 66.33832058426106,
+              "demand_norm_nm": 256.37324919423907,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1736.0459996294014
+            }
+          }
+        },
+        {
+          "sample": 49,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 242.40384468889317,
+              "demand_norm_nm": 415.2447072935529,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 925.2854395287513
+            },
+            "1.4": {
+              "residual_norm_nm": 176.3497307445374,
+              "demand_norm_nm": 415.2447072935529,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1317.2343728370893
+            }
+          }
+        },
+        {
+          "sample": 50,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 362.1727913164791,
+              "demand_norm_nm": 547.9722768434079,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 585.9197698159612
+            },
+            "1.4": {
+              "residual_norm_nm": 292.6951845899602,
+              "demand_norm_nm": 547.9722768434079,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 820.287677742044
+            }
+          }
+        },
+        {
+          "sample": 51,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1238.1499631460772,
+              "demand_norm_nm": 1495.9003440566541,
+              "max_fraction": 0.9999999999999949,
+              "muscle_tendon_positive_power_w": 444.5824342309062
+            },
+            "1.4": {
+              "residual_norm_nm": 1138.4004235979392,
+              "demand_norm_nm": 1495.9003440566541,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 622.4154080443419
+            }
+          }
+        },
+        {
+          "sample": 52,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 227.3792475608694,
+              "demand_norm_nm": 361.6625421980894,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 293.9234078208741
+            },
+            "1.4": {
+              "residual_norm_nm": 183.09242298890476,
+              "demand_norm_nm": 361.6625421980894,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 432.2080356461448
+            }
+          }
+        },
+        {
+          "sample": 53,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 1542.4500334313184,
+              "demand_norm_nm": 1701.2699033659997,
+              "max_fraction": 0.9999999999999966,
+              "muscle_tendon_positive_power_w": 316.7277104812913
+            },
+            "1.4": {
+              "residual_norm_nm": 1484.7619829473952,
+              "demand_norm_nm": 1701.2699033659997,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 461.27544218220277
+            }
+          }
+        },
+        {
+          "sample": 54,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 510.8418286161628,
+              "demand_norm_nm": 696.2111405676437,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1229.361228466461
+            },
+            "1.4": {
+              "residual_norm_nm": 441.49565092440247,
+              "demand_norm_nm": 696.2111405676437,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 1649.0301646228907
+            }
+          }
+        },
+        {
+          "sample": 55,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 280.56848991883794,
+              "demand_norm_nm": 471.6986941321217,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2357.8046055543487
+            },
+            "1.4": {
+              "residual_norm_nm": 210.37599386527077,
+              "demand_norm_nm": 471.6986941321217,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3026.863989960148
+            }
+          }
+        },
+        {
+          "sample": 56,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 126.27092160531348,
+              "demand_norm_nm": 304.3233257664648,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3430.275574208967
+            },
+            "1.4": {
+              "residual_norm_nm": 64.32834566330948,
+              "demand_norm_nm": 304.3233257664648,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4446.351605308817
+            }
+          }
+        },
+        {
+          "sample": 57,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 497.0694571225736,
+              "demand_norm_nm": 657.212102562893,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 2733.8603641570926
+            },
+            "1.4": {
+              "residual_norm_nm": 434.50063959696865,
+              "demand_norm_nm": 657.212102562893,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3915.1061711972807
+            }
+          }
+        },
+        {
+          "sample": 58,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 2180.791481437619,
+              "demand_norm_nm": 2338.8793570535386,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3888.553904350544
+            },
+            "1.4": {
+              "residual_norm_nm": 2117.7146713519055,
+              "demand_norm_nm": 2338.8793570535386,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 5443.9754660693725
+            }
+          }
+        },
+        {
+          "sample": 59,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 11125.862295408215,
+              "demand_norm_nm": 11299.587653795461,
+              "max_fraction": 0.9999999999999966,
+              "muscle_tendon_positive_power_w": 1003.3664331013651
+            },
+            "1.4": {
+              "residual_norm_nm": 11057.45160150803,
+              "demand_norm_nm": 11299.587653795461,
+              "max_fraction": 0.9999999999999997,
+              "muscle_tendon_positive_power_w": 1404.7130103215404
+            }
+          }
+        },
+        {
+          "sample": 60,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 10506.53093678602,
+              "demand_norm_nm": 10700.812609935907,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 3323.220074601036
+            },
+            "1.4": {
+              "residual_norm_nm": 10429.275593271366,
+              "demand_norm_nm": 10700.812609935907,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4652.508104441453
+            }
+          }
+        },
+        {
+          "sample": 61,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 3211.238548340311,
+              "demand_norm_nm": 3378.636945670283,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 10627.50007048227
+            },
+            "1.4": {
+              "residual_norm_nm": 3146.6322720619137,
+              "demand_norm_nm": 3378.636945670283,
+              "max_fraction": 0.9999999999998394,
+              "muscle_tendon_positive_power_w": 14878.500093156228
+            }
+          }
+        },
+        {
+          "sample": 62,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 952.1323143836295,
+              "demand_norm_nm": 1200.3883779685993,
+              "max_fraction": 0.9999999999999994,
+              "muscle_tendon_positive_power_w": 8168.485435708597
+            },
+            "1.4": {
+              "residual_norm_nm": 854.3499054257895,
+              "demand_norm_nm": 1200.3883779685993,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 11435.879609992156
+            }
+          }
+        },
+        {
+          "sample": 63,
+          "free_internal_dofs": 8,
+          "envelopes": {
+            "1.0": {
+              "residual_norm_nm": 757.0596137291758,
+              "demand_norm_nm": 934.3792103045187,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 4334.058134848598
+            },
+            "1.4": {
+              "residual_norm_nm": 692.1004776190947,
+              "demand_norm_nm": 934.3792103045187,
+              "max_fraction": 0.9999999999999999,
+              "muscle_tendon_positive_power_w": 6067.681388805762
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Constrained generalized-force screen using source muscle moment arms.\n\nFmax and 1.4 Fmax envelopes are diagnostics, NOT full Hill-muscle feasibility.\nNo ball payload, tendon state, activation dynamics or glenohumeral stability gate.\n"
+}

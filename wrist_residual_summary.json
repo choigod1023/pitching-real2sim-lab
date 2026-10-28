@@ -1,0 +1,685 @@
+{
+  "conditions": [
+    {
+      "model": "scaled_source",
+      "mode": "original",
+      "pitches": 5,
+      "residual_mean_nm": 239.567183730453,
+      "arm_rmse_mean_mm": 10.012210872039532,
+      "hand_rmse_mean_deg": 10.66757896700563
+    },
+    {
+      "model": "scaled_source",
+      "mode": "consistent",
+      "pitches": 5,
+      "residual_mean_nm": 245.47579400536847,
+      "arm_rmse_mean_mm": 10.012210872039532,
+      "hand_rmse_mean_deg": 10.66757896700563
+    },
+    {
+      "model": "scaled_source",
+      "mode": "smooth7",
+      "pitches": 5,
+      "residual_mean_nm": 280.3111113716062,
+      "arm_rmse_mean_mm": 10.033615275564246,
+      "hand_rmse_mean_deg": 10.66942096767185
+    },
+    {
+      "model": "scaled_source",
+      "mode": "smooth11",
+      "pitches": 5,
+      "residual_mean_nm": 328.0542080440538,
+      "arm_rmse_mean_mm": 10.179500136968528,
+      "hand_rmse_mean_deg": 10.685344458330976
+    },
+    {
+      "model": "collapsed_offset",
+      "mode": "original",
+      "pitches": 5,
+      "residual_mean_nm": 228.8476384884926,
+      "arm_rmse_mean_mm": 10.012210872039532,
+      "hand_rmse_mean_deg": 10.66757896700563
+    },
+    {
+      "model": "collapsed_offset",
+      "mode": "smooth7",
+      "pitches": 5,
+      "residual_mean_nm": 269.7623513834754,
+      "arm_rmse_mean_mm": 10.033615275564246,
+      "hand_rmse_mean_deg": 10.66942096767185
+    }
+  ],
+  "per_pitch": [
+    {
+      "pitch": "3034_1",
+      "mode": "original",
+      "model": "scaled_source",
+      "frames": 58,
+      "rms": {
+        "residual": 224.83617515162442,
+        "common_component": 223.44279635356222,
+        "wrist_complement": 24.99244714933799,
+        "common_only_fit": 223.31198085353566,
+        "zero_accel_diagnostic": 382.72411996369794,
+        "acceleration_demand": 381.5865371239406,
+        "u_constraint": 0.02817580776497353,
+        "a_constraint": 17.551146117019748,
+        "zero_passive_bound_diagnostic": 186.22786813184936
+      },
+      "peak_force": 2520.966744809327,
+      "arm_rmse_mm": 10.339383528530599,
+      "hand_rmse_deg": 8.498856109938357,
+      "constraint_position_max": 6.979562101286363e-06
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "consistent",
+      "model": "scaled_source",
+      "frames": 58,
+      "rms": {
+        "residual": 254.12881780657224,
+        "common_component": 252.8863867817336,
+        "wrist_complement": 25.098434617430453,
+        "common_only_fit": 252.77848119239772,
+        "zero_accel_diagnostic": 381.3811997381633,
+        "acceleration_demand": 399.3347740926515,
+        "u_constraint": 5.083298937155316e-16,
+        "a_constraint": 3.6882136158182626e-14,
+        "zero_passive_bound_diagnostic": 218.18286994199238
+      },
+      "peak_force": 2520.966744809327,
+      "arm_rmse_mm": 10.339383528530599,
+      "hand_rmse_deg": 8.498856109938357,
+      "constraint_position_max": 6.979562101286363e-06
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "smooth7",
+      "model": "scaled_source",
+      "frames": 58,
+      "rms": {
+        "residual": 303.06128894352366,
+        "common_component": 301.97049934033816,
+        "wrist_complement": 25.689733051489313,
+        "common_only_fit": 301.884883909744,
+        "zero_accel_diagnostic": 372.1587247832864,
+        "acceleration_demand": 444.66681542960515,
+        "u_constraint": 5.238961859483877e-16,
+        "a_constraint": 4.0543543007711143e-14,
+        "zero_passive_bound_diagnostic": 271.1273437172793
+      },
+      "peak_force": 2521.523615691975,
+      "arm_rmse_mm": 10.36601035949877,
+      "hand_rmse_deg": 8.501079199689931,
+      "constraint_position_max": 0.0003407336825221319
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "smooth11",
+      "model": "scaled_source",
+      "frames": 58,
+      "rms": {
+        "residual": 418.6801522061489,
+        "common_component": 417.8288658742002,
+        "wrist_complement": 26.685364783784152,
+        "common_only_fit": 417.77334229054253,
+        "zero_accel_diagnostic": 394.06783406220194,
+        "acceleration_demand": 570.3526776630973,
+        "u_constraint": 4.818783790838121e-16,
+        "a_constraint": 3.120712077654364e-14,
+        "zero_passive_bound_diagnostic": 391.3287612623202
+      },
+      "peak_force": 2521.994864166573,
+      "arm_rmse_mm": 10.687941229749548,
+      "hand_rmse_deg": 8.519409363145629,
+      "constraint_position_max": 0.0010784165668395185
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "original",
+      "model": "collapsed_offset",
+      "frames": 58,
+      "rms": {
+        "residual": 217.28820873347405,
+        "common_component": 215.7837413764992,
+        "wrist_complement": 25.52533275320605,
+        "common_only_fit": 215.70702604594385,
+        "zero_accel_diagnostic": 365.23684998169915,
+        "acceleration_demand": 373.5631079176637,
+        "u_constraint": 0.02817580776497353,
+        "a_constraint": 17.551146117019748,
+        "zero_passive_bound_diagnostic": 179.1729371032629
+      },
+      "peak_force": 2520.966744809327,
+      "arm_rmse_mm": 10.339383528530599,
+      "hand_rmse_deg": 8.498856109938357,
+      "constraint_position_max": 6.979562101286363e-06
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "smooth7",
+      "model": "collapsed_offset",
+      "frames": 58,
+      "rms": {
+        "residual": 297.1496364549428,
+        "common_component": 295.98934711617164,
+        "wrist_complement": 26.233810989772447,
+        "common_only_fit": 295.9302541231598,
+        "zero_accel_diagnostic": 355.39717959514775,
+        "acceleration_demand": 438.2727134195692,
+        "u_constraint": 5.238961859483877e-16,
+        "a_constraint": 4.0543543007711143e-14,
+        "zero_passive_bound_diagnostic": 266.0814560796043
+      },
+      "peak_force": 2521.523615691975,
+      "arm_rmse_mm": 10.36601035949877,
+      "hand_rmse_deg": 8.501079199689931,
+      "constraint_position_max": 0.0003407336825221319
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "original",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 236.00055038142963,
+        "common_component": 234.54772525013914,
+        "wrist_complement": 26.146211203976737,
+        "common_only_fit": 234.4349780309985,
+        "zero_accel_diagnostic": 1245.4971213478123,
+        "acceleration_demand": 1183.5991386174776,
+        "u_constraint": 0.019984421833519412,
+        "a_constraint": 7.251078407242748,
+        "zero_passive_bound_diagnostic": 214.84756169727683
+      },
+      "peak_force": 3314.5214733972953,
+      "arm_rmse_mm": 9.973301986527899,
+      "hand_rmse_deg": 11.047616065824956,
+      "constraint_position_max": 8.673617672178002e-06
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "consistent",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 235.47263368189854,
+        "common_component": 234.0218593391887,
+        "wrist_complement": 26.098478203116624,
+        "common_only_fit": 233.90936201991963,
+        "zero_accel_diagnostic": 1245.3735141198215,
+        "acceleration_demand": 1183.0165346791614,
+        "u_constraint": 5.592179981390301e-16,
+        "a_constraint": 3.9261316415622694e-14,
+        "zero_passive_bound_diagnostic": 214.26472533699518
+      },
+      "peak_force": 3314.5214733972953,
+      "arm_rmse_mm": 9.973301986527899,
+      "hand_rmse_deg": 11.047616065824956,
+      "constraint_position_max": 8.673617672178002e-06
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "smooth7",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 267.26788608730266,
+        "common_component": 265.8889826394766,
+        "wrist_complement": 27.11405252852264,
+        "common_only_fit": 265.7955968906015,
+        "zero_accel_diagnostic": 1240.2009134162276,
+        "acceleration_demand": 1160.9706654326512,
+        "u_constraint": 4.731171256759983e-16,
+        "a_constraint": 3.398245793949259e-14,
+        "zero_passive_bound_diagnostic": 246.62039013022857
+      },
+      "peak_force": 3317.307721563566,
+      "arm_rmse_mm": 9.99579957557309,
+      "hand_rmse_deg": 11.049472352263153,
+      "constraint_position_max": 5.1008411537246945e-05
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "smooth11",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 302.39195288122175,
+        "common_component": 301.03341648818486,
+        "wrist_complement": 28.63171885811351,
+        "common_only_fit": 300.95936087587586,
+        "zero_accel_diagnostic": 1184.975607110169,
+        "acceleration_demand": 1126.923492959362,
+        "u_constraint": 4.978226678213354e-16,
+        "a_constraint": 4.6001949948867824e-14,
+        "zero_passive_bound_diagnostic": 284.82086361366436
+      },
+      "peak_force": 5435.281847419549,
+      "arm_rmse_mm": 10.108716526690708,
+      "hand_rmse_deg": 11.07089540479091,
+      "constraint_position_max": 0.00016462529431608697
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "original",
+      "model": "collapsed_offset",
+      "frames": 54,
+      "rms": {
+        "residual": 223.92791409924953,
+        "common_component": 222.25693056917177,
+        "wrist_complement": 27.305082435532743,
+        "common_only_fit": 222.16481335755853,
+        "zero_accel_diagnostic": 1212.1933574256009,
+        "acceleration_demand": 1154.8401718233797,
+        "u_constraint": 0.019984421833519412,
+        "a_constraint": 7.251078407242748,
+        "zero_passive_bound_diagnostic": 203.4540782680493
+      },
+      "peak_force": 3314.5214733972953,
+      "arm_rmse_mm": 9.973301986527899,
+      "hand_rmse_deg": 11.047616065824956,
+      "constraint_position_max": 8.673617672178002e-06
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "smooth7",
+      "model": "collapsed_offset",
+      "frames": 54,
+      "rms": {
+        "residual": 254.95209802346906,
+        "common_component": 253.38735494859407,
+        "wrist_complement": 28.203202632392106,
+        "common_only_fit": 253.31916427600424,
+        "zero_accel_diagnostic": 1207.1404929069915,
+        "acceleration_demand": 1132.6612756872635,
+        "u_constraint": 4.731171256759983e-16,
+        "a_constraint": 3.398245793949259e-14,
+        "zero_passive_bound_diagnostic": 234.94002346102874
+      },
+      "peak_force": 3317.307721563566,
+      "arm_rmse_mm": 9.99579957557309,
+      "hand_rmse_deg": 11.049472352263153,
+      "constraint_position_max": 5.1008411537246945e-05
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "original",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 238.24803334499416,
+        "common_component": 236.8817502430869,
+        "wrist_complement": 25.4786537032324,
+        "common_only_fit": 236.75677398281132,
+        "zero_accel_diagnostic": 1248.7488645857586,
+        "acceleration_demand": 1190.8898952711306,
+        "u_constraint": 0.020765664424731423,
+        "a_constraint": 7.860327519275649,
+        "zero_passive_bound_diagnostic": 217.18942688998908
+      },
+      "peak_force": 3316.775496986684,
+      "arm_rmse_mm": 9.988407090710188,
+      "hand_rmse_deg": 11.668808529476367,
+      "constraint_position_max": 8.715749813287266e-06
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "consistent",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 239.08640029505517,
+        "common_component": 237.72146455924957,
+        "wrist_complement": 25.511019067312716,
+        "common_only_fit": 237.60096078652703,
+        "zero_accel_diagnostic": 1248.6906444412978,
+        "acceleration_demand": 1189.4857946301145,
+        "u_constraint": 4.1753269492754733e-16,
+        "a_constraint": 4.064756199349053e-14,
+        "zero_passive_bound_diagnostic": 218.1898248065849
+      },
+      "peak_force": 3316.775496986684,
+      "arm_rmse_mm": 9.988407090710188,
+      "hand_rmse_deg": 11.668808529476367,
+      "constraint_position_max": 8.715749813287266e-06
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "smooth7",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 276.60148761543667,
+        "common_component": 275.3340070040366,
+        "wrist_complement": 26.449339087653595,
+        "common_only_fit": 275.2340335501308,
+        "zero_accel_diagnostic": 1242.265688575162,
+        "acceleration_demand": 1165.8517852092243,
+        "u_constraint": 2.8841785047179365e-16,
+        "a_constraint": 3.7308388699783805e-14,
+        "zero_passive_bound_diagnostic": 255.8352838682817
+      },
+      "peak_force": 3320.5271263662607,
+      "arm_rmse_mm": 10.011054745042207,
+      "hand_rmse_deg": 11.673235860492595,
+      "constraint_position_max": 5.8568942946084224e-05
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "smooth11",
+      "model": "scaled_source",
+      "frames": 54,
+      "rms": {
+        "residual": 328.0809065124664,
+        "common_component": 326.8435040562301,
+        "wrist_complement": 28.467614481843235,
+        "common_only_fit": 326.771058301579,
+        "zero_accel_diagnostic": 1194.5932701524684,
+        "acceleration_demand": 1120.5583485630195,
+        "u_constraint": 4.428707126145749e-16,
+        "a_constraint": 3.620159562168474e-14,
+        "zero_passive_bound_diagnostic": 310.19888540458817
+      },
+      "peak_force": 3344.624067844229,
+      "arm_rmse_mm": 10.120369991957991,
+      "hand_rmse_deg": 11.696233179259456,
+      "constraint_position_max": 0.00018231938030342093
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "original",
+      "model": "collapsed_offset",
+      "frames": 54,
+      "rms": {
+        "residual": 227.1897496975246,
+        "common_component": 224.41370944876837,
+        "wrist_complement": 35.40719388863844,
+        "common_only_fit": 224.32523404509575,
+        "zero_accel_diagnostic": 1215.296949226492,
+        "acceleration_demand": 1161.8938003254925,
+        "u_constraint": 0.020765664424731423,
+        "a_constraint": 7.860327519275649,
+        "zero_passive_bound_diagnostic": 205.89015375764038
+      },
+      "peak_force": 3316.775496986684,
+      "arm_rmse_mm": 9.988407090710188,
+      "hand_rmse_deg": 11.668808529476367,
+      "constraint_position_max": 8.715749813287266e-06
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "smooth7",
+      "model": "collapsed_offset",
+      "frames": 54,
+      "rms": {
+        "residual": 265.2536274199479,
+        "common_component": 262.91503476820566,
+        "wrist_complement": 35.1450046560495,
+        "common_only_fit": 262.8387917715168,
+        "zero_accel_diagnostic": 1209.0517420160143,
+        "acceleration_demand": 1137.2680228260176,
+        "u_constraint": 2.8841785047179365e-16,
+        "a_constraint": 3.7308388699783805e-14,
+        "zero_passive_bound_diagnostic": 244.40357699555932
+      },
+      "peak_force": 3320.5271263662607,
+      "arm_rmse_mm": 10.011054745042207,
+      "hand_rmse_deg": 11.673235860492595,
+      "constraint_position_max": 5.8568942946084224e-05
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "original",
+      "model": "scaled_source",
+      "frames": 53,
+      "rms": {
+        "residual": 245.75523853259176,
+        "common_component": 244.30875309254137,
+        "wrist_complement": 26.62462072178193,
+        "common_only_fit": 244.18732668581885,
+        "zero_accel_diagnostic": 1148.8388170514768,
+        "acceleration_demand": 1093.898382480608,
+        "u_constraint": 0.021657422567093246,
+        "a_constraint": 8.490566283663052,
+        "zero_passive_bound_diagnostic": 224.86398318100433
+      },
+      "peak_force": 2588.983782867154,
+      "arm_rmse_mm": 9.95803912857627,
+      "hand_rmse_deg": 10.872731188758735,
+      "constraint_position_max": 1.558049421955532e-05
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "consistent",
+      "model": "scaled_source",
+      "frames": 53,
+      "rms": {
+        "residual": 247.58090304931324,
+        "common_component": 246.13998527538118,
+        "wrist_complement": 26.67229280261767,
+        "common_only_fit": 246.01990711088183,
+        "zero_accel_diagnostic": 1148.6052166945642,
+        "acceleration_demand": 1091.415256362557,
+        "u_constraint": 5.110432876115112e-16,
+        "a_constraint": 3.658452768532253e-14,
+        "zero_passive_bound_diagnostic": 226.81384917286616
+      },
+      "peak_force": 2588.983782867154,
+      "arm_rmse_mm": 9.95803912857627,
+      "hand_rmse_deg": 10.872731188758735,
+      "constraint_position_max": 1.558049421955532e-05
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "smooth7",
+      "model": "scaled_source",
+      "frames": 53,
+      "rms": {
+        "residual": 285.2340922751545,
+        "common_component": 283.9244152542927,
+        "wrist_complement": 27.302267644636323,
+        "common_only_fit": 283.83183907182746,
+        "zero_accel_diagnostic": 1141.1722443740673,
+        "acceleration_demand": 1068.8390383930641,
+        "u_constraint": 6.368251581541833e-16,
+        "a_constraint": 3.343118381998898e-14,
+        "zero_passive_bound_diagnostic": 264.3101214195538
+      },
+      "peak_force": 2589.0308207389294,
+      "arm_rmse_mm": 9.980730666240218,
+      "hand_rmse_deg": 10.874615616183622,
+      "constraint_position_max": 5.639199887915239e-05
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "smooth11",
+      "model": "scaled_source",
+      "frames": 53,
+      "rms": {
+        "residual": 311.4004865821056,
+        "common_component": 310.0101911694151,
+        "wrist_complement": 29.39293137260731,
+        "common_only_fit": 309.90521829704244,
+        "zero_accel_diagnostic": 1084.7323002389114,
+        "acceleration_demand": 1045.0424682033354,
+        "u_constraint": 5.288810386453519e-16,
+        "a_constraint": 3.6750555635654186e-14,
+        "zero_passive_bound_diagnostic": 291.7583770974561
+      },
+      "peak_force": 2589.1172827178107,
+      "arm_rmse_mm": 10.086966558415382,
+      "hand_rmse_deg": 10.892547815249385,
+      "constraint_position_max": 0.00019769144494129545
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "original",
+      "model": "collapsed_offset",
+      "frames": 53,
+      "rms": {
+        "residual": 233.28666463824294,
+        "common_component": 231.60718235002992,
+        "wrist_complement": 27.942458408594195,
+        "common_only_fit": 231.54362377937915,
+        "zero_accel_diagnostic": 1115.6318644833102,
+        "acceleration_demand": 1066.040286878309,
+        "u_constraint": 0.021657422567093246,
+        "a_constraint": 8.490566283663052,
+        "zero_passive_bound_diagnostic": 212.99885489156853
+      },
+      "peak_force": 2588.983782867154,
+      "arm_rmse_mm": 9.95803912857627,
+      "hand_rmse_deg": 10.872731188758735,
+      "constraint_position_max": 1.558049421955532e-05
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "smooth7",
+      "model": "collapsed_offset",
+      "frames": 53,
+      "rms": {
+        "residual": 272.3588237646498,
+        "common_component": 270.86230430405425,
+        "wrist_complement": 28.51212004677071,
+        "common_only_fit": 270.8026131156191,
+        "zero_accel_diagnostic": 1108.2239757886198,
+        "acceleration_demand": 1041.540245005429,
+        "u_constraint": 6.368251581541833e-16,
+        "a_constraint": 3.343118381998898e-14,
+        "zero_passive_bound_diagnostic": 251.9509238192291
+      },
+      "peak_force": 2589.0308207389294,
+      "arm_rmse_mm": 9.980730666240218,
+      "hand_rmse_deg": 10.874615616183622,
+      "constraint_position_max": 5.639199887915239e-05
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "original",
+      "model": "scaled_source",
+      "frames": 62,
+      "rms": {
+        "residual": 252.99592124162504,
+        "common_component": 251.87002963844773,
+        "wrist_complement": 23.84165126047255,
+        "common_only_fit": 251.74768784577356,
+        "zero_accel_diagnostic": 724.2377025584966,
+        "acceleration_demand": 612.0373983269649,
+        "u_constraint": 0.01888499493907273,
+        "a_constraint": 8.462341506949098,
+        "zero_passive_bound_diagnostic": 219.91632672397606
+      },
+      "peak_force": 2483.2196509115956,
+      "arm_rmse_mm": 9.801922625852695,
+      "hand_rmse_deg": 11.249882941029739,
+      "constraint_position_max": 8.709826916759866e-06
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "consistent",
+      "model": "scaled_source",
+      "frames": 62,
+      "rms": {
+        "residual": 251.11021519400308,
+        "common_component": 249.97181446100015,
+        "wrist_complement": 23.88372144063483,
+        "common_only_fit": 249.8642856239555,
+        "zero_accel_diagnostic": 722.5938053771057,
+        "acceleration_demand": 612.3834012988647,
+        "u_constraint": 3.5943563694911247e-16,
+        "a_constraint": 2.6981354024058583e-14,
+        "zero_passive_bound_diagnostic": 218.22964971137895
+      },
+      "peak_force": 2483.2196509115956,
+      "arm_rmse_mm": 9.801922625852695,
+      "hand_rmse_deg": 11.249882941029739,
+      "constraint_position_max": 8.709826916759866e-06
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "smooth7",
+      "model": "scaled_source",
+      "frames": 62,
+      "rms": {
+        "residual": 269.39080193661374,
+        "common_component": 268.2999767018497,
+        "wrist_complement": 24.21831269594898,
+        "common_only_fit": 268.19197906643063,
+        "zero_accel_diagnostic": 709.7439687337566,
+        "acceleration_demand": 594.4844161756793,
+        "u_constraint": 3.7009166503776273e-16,
+        "a_constraint": 3.4098260256846855e-14,
+        "zero_passive_bound_diagnostic": 236.4589381820719
+      },
+      "peak_force": 2483.374123574384,
+      "arm_rmse_mm": 9.814481031466942,
+      "hand_rmse_deg": 11.248701809729944,
+      "constraint_position_max": 0.0001682685676959797
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "smooth11",
+      "model": "scaled_source",
+      "frames": 62,
+      "rms": {
+        "residual": 279.7175420383259,
+        "common_component": 278.58762772960034,
+        "wrist_complement": 25.116468699962887,
+        "common_only_fit": 278.4914299133816,
+        "zero_accel_diagnostic": 649.7679882745877,
+        "acceleration_demand": 556.7410054267684,
+        "u_constraint": 3.6042003456590374e-16,
+        "a_constraint": 2.5237481472389102e-14,
+        "zero_passive_bound_diagnostic": 244.77504261461806
+      },
+      "peak_force": 2483.4123739653874,
+      "arm_rmse_mm": 9.893506378029011,
+      "hand_rmse_deg": 11.247636529209494,
+      "constraint_position_max": 0.00043814923142582174
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "original",
+      "model": "collapsed_offset",
+      "frames": 62,
+      "rms": {
+        "residual": 242.5456552739721,
+        "common_component": 241.30884785162684,
+        "wrist_complement": 24.46292788692553,
+        "common_only_fit": 241.22107270078428,
+        "zero_accel_diagnostic": 697.7272215967961,
+        "acceleration_demand": 591.1344277656207,
+        "u_constraint": 0.01888499493907273,
+        "a_constraint": 8.462341506949098,
+        "zero_passive_bound_diagnostic": 209.90321394116438
+      },
+      "peak_force": 2483.2196509115956,
+      "arm_rmse_mm": 9.801922625852695,
+      "hand_rmse_deg": 11.249882941029739,
+      "constraint_position_max": 8.709826916759866e-06
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "smooth7",
+      "model": "collapsed_offset",
+      "frames": 62,
+      "rms": {
+        "residual": 259.0975712543674,
+        "common_component": 257.9039575539578,
+        "wrist_complement": 24.841499711536812,
+        "common_only_fit": 257.82394736860107,
+        "zero_accel_diagnostic": 683.4989422781096,
+        "acceleration_demand": 574.1533425034473,
+        "u_constraint": 3.7009166503776273e-16,
+        "a_constraint": 3.4098260256846855e-14,
+        "zero_passive_bound_diagnostic": 226.57980625924645
+      },
+      "peak_force": 2483.374123574384,
+      "arm_rmse_mm": 9.814481031466942,
+      "hand_rmse_deg": 11.248701809729944,
+      "constraint_position_max": 0.0001682685676959797
+    }
+  ],
+  "candidate_search_executed": false
+}

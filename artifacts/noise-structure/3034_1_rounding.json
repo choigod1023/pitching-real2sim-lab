@@ -1,0 +1,9 @@
+{
+  "converged": true,
+  "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+  "iterations": 1676,
+  "max_adjustment_mm": 0.05,
+  "objective_before": 38441.5000000005,
+  "objective_after": 4893.223318552586,
+  "rounding_step_m": 0.0001
+}

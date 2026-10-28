@@ -1,0 +1,278 @@
+{
+  "counts": {
+    "matched_metadata_poi": 411,
+    "max_speed_table_difference_mph": 0.0,
+    "right_fastball_before_complete_case": 319,
+    "eligible_rows": 318,
+    "athletes": 77,
+    "sessions": 77,
+    "invalid_events": [
+      {
+        "pitch": "1370_1",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2857_4",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2918_3",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_2",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_3",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_4",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2919_5",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2923_1",
+        "reason": "missing or invalid FP10/BR interval"
+      },
+      {
+        "pitch": "2923_2",
+        "reason": "missing or invalid FP10/BR interval"
+      }
+    ]
+  },
+  "models": [
+    {
+      "model": "all_six_fixed_ridge",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.0786820599882831,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.09096274454434,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 37
+    },
+    {
+      "model": "lead_knee_extension_from_fp_to_br",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.0819759304665462,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.0862683218675886,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 35
+    },
+    {
+      "model": "max_pelvis_rotational_velo",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.085174690638882,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.0855517956538578,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 38
+    },
+    {
+      "model": "max_torso_rotational_velo",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.073831412281389,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.0882508201192294,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 38
+    },
+    {
+      "model": "rear_knee_peak_br_ms",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.0761630813824847,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.0722259570406378,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 32
+    },
+    {
+      "model": "rotation_hip_shoulder_separation_fp",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.0737982363351946,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.0709198607897208,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 34
+    },
+    {
+      "model": "stride_cm",
+      "test_pitches": 241,
+      "athletes": 77,
+      "mae_kmh": 1.079986460395207,
+      "no_change_mae_kmh": 1.076457480497927,
+      "athlete_macro_mae_kmh": 1.0778727098904923,
+      "athlete_macro_no_change_mae_kmh": 1.073766857142859,
+      "athletes_improved": 34
+    }
+  ],
+  "athlete2": [
+    {
+      "feature": "rear_knee_peak_br_ms",
+      "pearson_r": 0.7694991859252176,
+      "leave_one_pitch_out_mae_kmh": 0.7607723560271836,
+      "training_mean_mae_kmh": 1.110447360000012
+    },
+    {
+      "feature": "rotation_hip_shoulder_separation_fp",
+      "pearson_r": 0.6796229526167978,
+      "leave_one_pitch_out_mae_kmh": 1.4057414743621108,
+      "training_mean_mae_kmh": 1.110447360000012
+    },
+    {
+      "feature": "stride_cm",
+      "pearson_r": -0.5061383269744605,
+      "leave_one_pitch_out_mae_kmh": 0.9466827236166523,
+      "training_mean_mae_kmh": 1.110447360000012
+    },
+    {
+      "feature": "max_pelvis_rotational_velo",
+      "pearson_r": -0.3379098019817334,
+      "leave_one_pitch_out_mae_kmh": 1.81002641463258,
+      "training_mean_mae_kmh": 1.110447360000012
+    },
+    {
+      "feature": "max_torso_rotational_velo",
+      "pearson_r": -0.3444189064744298,
+      "leave_one_pitch_out_mae_kmh": 1.211833303068738,
+      "training_mean_mae_kmh": 1.110447360000012
+    },
+    {
+      "feature": "lead_knee_extension_from_fp_to_br",
+      "pearson_r": -0.27520488023720613,
+      "leave_one_pitch_out_mae_kmh": 1.3493058031825627,
+      "training_mean_mae_kmh": 1.110447360000012
+    }
+  ],
+  "personalized_cohort": [
+    {
+      "feature": "lead_knee_extension_from_fp_to_br",
+      "method": "OLS",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 1.1400562128529914,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 16
+    },
+    {
+      "feature": "lead_knee_extension_from_fp_to_br",
+      "method": "fixed_ridge_10",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 0.9021162666201791,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 25
+    },
+    {
+      "feature": "max_pelvis_rotational_velo",
+      "method": "OLS",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 1.221657896405104,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 10
+    },
+    {
+      "feature": "max_pelvis_rotational_velo",
+      "method": "fixed_ridge_10",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 0.9406064239727326,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 20
+    },
+    {
+      "feature": "max_torso_rotational_velo",
+      "method": "OLS",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 1.2826723872827712,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 12
+    },
+    {
+      "feature": "max_torso_rotational_velo",
+      "method": "fixed_ridge_10",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 0.9589091108823704,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 20
+    },
+    {
+      "feature": "rear_knee_peak_br_ms",
+      "method": "OLS",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 2.884878390629258,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 10
+    },
+    {
+      "feature": "rear_knee_peak_br_ms",
+      "method": "fixed_ridge_10",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 1.3950732134979744,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 17
+    },
+    {
+      "feature": "rotation_hip_shoulder_separation_fp",
+      "method": "OLS",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 1.2278957936258923,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 13
+    },
+    {
+      "feature": "rotation_hip_shoulder_separation_fp",
+      "method": "fixed_ridge_10",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 0.9222993554271702,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 26
+    },
+    {
+      "feature": "stride_cm",
+      "method": "OLS",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 1.2582840366413734,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 15
+    },
+    {
+      "feature": "stride_cm",
+      "method": "fixed_ridge_10",
+      "n_pitches": 252,
+      "athletes": 53,
+      "mae_kmh": 0.9432290348123854,
+      "training_mean_mae_kmh": 0.9051495619047637,
+      "athletes_improved": 21
+    }
+  ],
+  "ridge_alpha": 10,
+  "alpha_tuned": false,
+  "features_previously_selected_on_development_data": true,
+  "scope": "Retrospective development audit, excluded-athlete slopes with measured anchor speed; not blind external validation, causal effect, or Real2Sim result.",
+  "boundary_knee_pitches": 17,
+  "sources": {
+    "metadata.csv": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+    "poi\\poi_metrics.csv": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+    "full_sig\\joint_velos.csv": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+  }
+}

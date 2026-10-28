@@ -1,0 +1,16 @@
+# Same-athlete fast/slow observation protocol
+
+Frozen before outcome computation for this analysis. Source: public OpenBiomechanics baseball pitching metadata, full_sig/joint_velos.csv, and poi/poi_metrics.csv. Existing data were used in previous development; this is a new fixed split, not a previously untouched external test.
+
+- Retain finite same-user, same-session, same-pitch-type records. Athlete identity is metadata `user`; `session` is not athlete identity. Report missing/nonfinite records explicitly.
+- Discovery: even numerical user IDs. Evaluation: odd IDs. This deterministic split is made before associations; do not refit or reverse candidate direction after evaluation.
+- Features fixed: FP10-to-BR duration; relative-to-BR time of maximum absolute pelvis Z, torso Z, elbow X, shoulder Z angular velocity, and wrist vector-norm angular velocity within FP10..BR inclusive; peak torso-minus-pelvis timing; elbow flexion at FP and MER, shoulder external rotation maximum, hip-shoulder separation at FP, torso anterior tilt at BR from supplied POI.
+- Peaks use first maximum; no interpolation/sub-frame precision. Absolute component maxima are explicitly operational definitions, not assumptions that every axis is a calibrated anatomical action. Event times/actual release method remain unverified. CSV rounded times are used with a 0.051 ms inclusion tolerance.
+- Within each session/pitch type, choose slowest and fastest recorded pitch, ties lexicographic; exclude equal-speed extrema and retain an exclusion record. This is label-selected exploratory observation. Also enumerate all unordered distinct-speed pairs within the same group and report their athlete-balanced directional agreement; pairs are dependent and are not treated as independent samples.
+- Candidate ranking on discovery only: absolute mean athlete-level fast-minus-slow difference divided by its athlete-level sample SD. Evaluation reports this fixed discovery direction, sign consistency and mean differences. Deterministic athlete-cluster bootstrap (seed 20261026, 2000 resamples) descriptive 95% intervals are not corrected for multiple comparisons and are not causal confidence intervals.
+- Fixed illustrative case: user 2, session 3034, pitches 3034_1 and 3034_2, irrespective of ranking. Simulation may retime measurable elbow motion toward the observed pair difference; this does not establish that timing caused measured speed difference or that inverse-force changes preserve ability.
+- All outputs are km/h for speed and ms for time. No conclusions about training benefit or comfort. Model simulation and observed radar record are reported separately.
+
+## Logged example amendment
+
+The original illustrative 3034_1/3034_2 wording above was inherited from the prior simulation baseline. Before broad association computation, the coordinating agent supplied all five user-2 speeds and requested actual extrema 3034_4 (79.8 mph) and 3034_2 (81.4 mph). The executed extrema-selection algorithm already follows the original all-session fast/slow rule and therefore produced this pair. This note was added after the first aggregate run; no feature definitions, split, ranking or outcomes were changed. The simulation now uses the actual slow pitch. This known-speed descriptive example must not be described as a blinded test selection.

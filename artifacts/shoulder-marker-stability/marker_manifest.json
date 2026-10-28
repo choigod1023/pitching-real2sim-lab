@@ -1,0 +1,42 @@
+[
+  {
+    "pitch": "3034_1",
+    "n": 62,
+    "determinant_min": 0.9999999999999994,
+    "source_sha256": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1",
+    "filter_hz": 20,
+    "missing_markers": 0
+  },
+  {
+    "pitch": "3034_2",
+    "n": 58,
+    "determinant_min": 0.9999999999999996,
+    "source_sha256": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c",
+    "filter_hz": 20,
+    "missing_markers": 0
+  },
+  {
+    "pitch": "3034_3",
+    "n": 58,
+    "determinant_min": 0.9999999999999994,
+    "source_sha256": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757",
+    "filter_hz": 20,
+    "missing_markers": 0
+  },
+  {
+    "pitch": "3034_4",
+    "n": 57,
+    "determinant_min": 0.9999999999999994,
+    "source_sha256": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053",
+    "filter_hz": 20,
+    "missing_markers": 0
+  },
+  {
+    "pitch": "3034_5",
+    "n": 66,
+    "determinant_min": 0.9999999999999993,
+    "source_sha256": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1",
+    "filter_hz": 20,
+    "missing_markers": 0
+  }
+]

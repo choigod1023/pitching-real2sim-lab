@@ -1,0 +1,6728 @@
+{
+  "scope": "Post-result exploratory overlapping calibration split sensitivity; original tuning frozen.",
+  "combinations": 657,
+  "athletes": 89,
+  "personal_mae": 0.9148686820141508,
+  "baseline_mae": 0.8886954283146083,
+  "athletes_winning_every_split": 10,
+  "athletes_with_mixed_wins": 69,
+  "per_athlete": [
+    {
+      "user": 2,
+      "combinations": 10,
+      "personal_mean": 1.1857627419668146,
+      "baseline_mean": 1.158727680000005,
+      "personal_min": 0.7458793524866655,
+      "personal_max": 2.0989766421301925,
+      "wins": 7
+    },
+    {
+      "user": 72,
+      "combinations": 6,
+      "personal_mean": 1.947636359072531,
+      "baseline_mean": 2.3335488000000066,
+      "personal_min": 0.8276930997689618,
+      "personal_max": 2.6477933145103076,
+      "wins": 5
+    },
+    {
+      "user": 90,
+      "combinations": 10,
+      "personal_mean": 0.5294505013395683,
+      "baseline_mean": 0.5793638400000013,
+      "personal_min": 0.32066812384884247,
+      "personal_max": 0.7765782908862141,
+      "wins": 7
+    },
+    {
+      "user": 283,
+      "combinations": 10,
+      "personal_mean": 0.6199789805732717,
+      "baseline_mean": 0.5364479999999955,
+      "personal_min": 0.33894143016115935,
+      "personal_max": 1.11921620068269,
+      "wins": 3
+    },
+    {
+      "user": 359,
+      "combinations": 10,
+      "personal_mean": 0.950025056704899,
+      "baseline_mean": 0.9816998400000039,
+      "personal_min": 0.20194431447124384,
+      "personal_max": 1.4922295707212374,
+      "wins": 6
+    },
+    {
+      "user": 538,
+      "combinations": 10,
+      "personal_mean": 0.3413218207050839,
+      "baseline_mean": 0.31113984000000294,
+      "personal_min": 0.09398247091808597,
+      "personal_max": 0.5468092067339133,
+      "wins": 3
+    },
+    {
+      "user": 560,
+      "combinations": 3,
+      "personal_mean": 1.676375941091516,
+      "baseline_mean": 1.7166336000000015,
+      "personal_min": 0.9989279888486062,
+      "personal_max": 2.450563045583014,
+      "wins": 2
+    },
+    {
+      "user": 565,
+      "combinations": 10,
+      "personal_mean": 1.1264690405710052,
+      "baseline_mean": 0.9816998400000052,
+      "personal_min": 0.7738662534957698,
+      "personal_max": 1.6225759018575996,
+      "wins": 3
+    },
+    {
+      "user": 572,
+      "combinations": 10,
+      "personal_mean": 0.72806114981313,
+      "baseline_mean": 0.7832140799999998,
+      "personal_min": 0.45188596366777617,
+      "personal_max": 1.2230804693819934,
+      "wins": 10
+    },
+    {
+      "user": 581,
+      "combinations": 10,
+      "personal_mean": 0.4224824697673043,
+      "baseline_mean": 0.4559808000000015,
+      "personal_min": 0.28083009461211644,
+      "personal_max": 0.679228503822963,
+      "wins": 8
+    },
+    {
+      "user": 616,
+      "combinations": 3,
+      "personal_mean": 0.22635022985245667,
+      "baseline_mean": 0.21457920000000308,
+      "personal_min": 0.17287789792099129,
+      "personal_max": 0.29775295725625334,
+      "wins": 1
+    },
+    {
+      "user": 625,
+      "combinations": 3,
+      "personal_mean": 1.5889961672103663,
+      "baseline_mean": 1.6093440000000079,
+      "personal_min": 0.4339061655915686,
+      "personal_max": 2.3585163712956243,
+      "wins": 2
+    },
+    {
+      "user": 628,
+      "combinations": 3,
+      "personal_mean": 0.19777105321733415,
+      "baseline_mean": 0.1609344000000061,
+      "personal_min": 0.14330505142307298,
+      "personal_max": 0.22973182314606327,
+      "wins": 2
+    },
+    {
+      "user": 675,
+      "combinations": 10,
+      "personal_mean": 0.36011097416454074,
+      "baseline_mean": 0.31650432000000106,
+      "personal_min": 0.16235988779515667,
+      "personal_max": 0.5498767977776612,
+      "wins": 0
+    },
+    {
+      "user": 774,
+      "combinations": 3,
+      "personal_mean": 1.411557707916347,
+      "baseline_mean": 1.2874752000000032,
+      "personal_min": 0.19898148230605028,
+      "personal_max": 2.2526810258371723,
+      "wins": 1
+    },
+    {
+      "user": 782,
+      "combinations": 6,
+      "personal_mean": 0.763935474012567,
+      "baseline_mean": 0.9119616000000018,
+      "personal_min": 0.3365665217057583,
+      "personal_max": 1.2282501674438542,
+      "wins": 6
+    },
+    {
+      "user": 787,
+      "combinations": 6,
+      "personal_mean": 0.2718322075611237,
+      "baseline_mean": 0.3218687999999932,
+      "personal_min": 0.14263708743675446,
+      "personal_max": 0.4951903853186246,
+      "wins": 4
+    },
+    {
+      "user": 789,
+      "combinations": 3,
+      "personal_mean": 0.20912732058706976,
+      "baseline_mean": 0.10728960000000916,
+      "personal_min": 0.05169830817000832,
+      "personal_max": 0.3264367885442744,
+      "wins": 1
+    },
+    {
+      "user": 822,
+      "combinations": 3,
+      "personal_mean": 1.5884517499857174,
+      "baseline_mean": 1.6093440000000079,
+      "personal_min": 0.6010625536895784,
+      "personal_max": 2.3141735778948744,
+      "wins": 2
+    },
+    {
+      "user": 870,
+      "combinations": 10,
+      "personal_mean": 1.7096343637764435,
+      "baseline_mean": 1.673717760000001,
+      "personal_min": 1.3593784679786793,
+      "personal_max": 2.7736992905792395,
+      "wins": 5
+    },
+    {
+      "user": 874,
+      "combinations": 3,
+      "personal_mean": 1.8742791315000915,
+      "baseline_mean": 1.4484096000000015,
+      "personal_min": 1.5135434745268745,
+      "personal_max": 2.3058642828294253,
+      "wins": 0
+    },
+    {
+      "user": 884,
+      "combinations": 3,
+      "personal_mean": 0.525297758250942,
+      "baseline_mean": 0.590092799999997,
+      "personal_min": 0.17226306289197685,
+      "personal_max": 0.8353052221197821,
+      "wins": 2
+    },
+    {
+      "user": 890,
+      "combinations": 6,
+      "personal_mean": 0.7353352420453637,
+      "baseline_mean": 0.751027200000003,
+      "personal_min": 0.24550833963045637,
+      "personal_max": 1.1427575344190015,
+      "wins": 3
+    },
+    {
+      "user": 894,
+      "combinations": 3,
+      "personal_mean": 0.33091463797080695,
+      "baseline_mean": 0.268224,
+      "personal_min": 0.09833354779484528,
+      "personal_max": 0.4737442954753564,
+      "wins": 0
+    },
+    {
+      "user": 919,
+      "combinations": 3,
+      "personal_mean": 1.9624331519496938,
+      "baseline_mean": 1.7166335999999938,
+      "personal_min": 1.00409874624961,
+      "personal_max": 2.5458935066935933,
+      "wins": 1
+    },
+    {
+      "user": 920,
+      "combinations": 3,
+      "personal_mean": 0.42734296799055876,
+      "baseline_mean": 0.4828032000000031,
+      "personal_min": 0.24299743654548184,
+      "personal_max": 0.6604031750230197,
+      "wins": 2
+    },
+    {
+      "user": 927,
+      "combinations": 3,
+      "personal_mean": 0.9131312640194746,
+      "baseline_mean": 0.8046719999999925,
+      "personal_min": 0.4669751033677783,
+      "personal_max": 1.2973439149467643,
+      "wins": 1
+    },
+    {
+      "user": 949,
+      "combinations": 3,
+      "personal_mean": 1.37810409465059,
+      "baseline_mean": 1.502054400000006,
+      "personal_min": 0.839818989292395,
+      "personal_max": 2.2505676579406764,
+      "wins": 3
+    },
+    {
+      "user": 952,
+      "combinations": 3,
+      "personal_mean": 0.9755679943713317,
+      "baseline_mean": 1.1265408000000046,
+      "personal_min": 0.31716796458754304,
+      "personal_max": 1.4800751349904222,
+      "wins": 3
+    },
+    {
+      "user": 956,
+      "combinations": 3,
+      "personal_mean": 0.9441931009141097,
+      "baseline_mean": 0.751027200000003,
+      "personal_min": 0.7606038773290642,
+      "personal_max": 1.1400245988262414,
+      "wins": 0
+    },
+    {
+      "user": 964,
+      "combinations": 10,
+      "personal_mean": 0.6099913317656263,
+      "baseline_mean": 0.5686348800000028,
+      "personal_min": 0.38618953401925293,
+      "personal_max": 0.8677978359298564,
+      "wins": 2
+    },
+    {
+      "user": 970,
+      "combinations": 3,
+      "personal_mean": 0.39472930769741515,
+      "baseline_mean": 0.48280320000000304,
+      "personal_min": 0.03825577431685001,
+      "personal_max": 0.6999236763813858,
+      "wins": 3
+    },
+    {
+      "user": 976,
+      "combinations": 6,
+      "personal_mean": 1.1450325255366123,
+      "baseline_mean": 1.0728960000000003,
+      "personal_min": 0.8814577496171174,
+      "personal_max": 1.5359905049867706,
+      "wins": 2
+    },
+    {
+      "user": 986,
+      "combinations": 3,
+      "personal_mean": 0.2043161977197574,
+      "baseline_mean": 0.2682240000000076,
+      "personal_min": 0.03588087836782558,
+      "personal_max": 0.3037512940904587,
+      "wins": 3
+    },
+    {
+      "user": 1000,
+      "combinations": 3,
+      "personal_mean": 0.5454901218093088,
+      "baseline_mean": 0.42915840000000616,
+      "personal_min": 0.42870656117096123,
+      "personal_max": 0.6658853368835767,
+      "wins": 0
+    },
+    {
+      "user": 1002,
+      "combinations": 10,
+      "personal_mean": 0.4553507566916307,
+      "baseline_mean": 0.40233600000000225,
+      "personal_min": 0.14886760155491097,
+      "personal_max": 0.7088306787676176,
+      "wins": 2
+    },
+    {
+      "user": 1003,
+      "combinations": 3,
+      "personal_mean": 0.23505338989910274,
+      "baseline_mean": 0.16093439999999087,
+      "personal_min": 0.08565647306759251,
+      "personal_max": 0.3680109563348558,
+      "wins": 0
+    },
+    {
+      "user": 1005,
+      "combinations": 10,
+      "personal_mean": 0.6222705598305641,
+      "baseline_mean": 0.6759244799999982,
+      "personal_min": 0.4406748755424963,
+      "personal_max": 0.7533063326932279,
+      "wins": 7
+    },
+    {
+      "user": 1017,
+      "combinations": 3,
+      "personal_mean": 0.5982582626056452,
+      "baseline_mean": 0.4828032000000031,
+      "personal_min": 0.4748169923646631,
+      "personal_max": 0.7896134789951534,
+      "wins": 0
+    },
+    {
+      "user": 1027,
+      "combinations": 6,
+      "personal_mean": 1.2153003666052522,
+      "baseline_mean": 1.0460736000000033,
+      "personal_min": 1.0444694814444198,
+      "personal_max": 1.5239370165872514,
+      "wins": 2
+    },
+    {
+      "user": 1029,
+      "combinations": 10,
+      "personal_mean": 0.6140418330861067,
+      "baseline_mean": 0.6115507200000034,
+      "personal_min": 0.39385167500419976,
+      "personal_max": 0.961496962886932,
+      "wins": 7
+    },
+    {
+      "user": 1062,
+      "combinations": 10,
+      "personal_mean": 0.18060143378432217,
+      "baseline_mean": 0.20385023999999757,
+      "personal_min": 0.07330694939626099,
+      "personal_max": 0.26175864099661955,
+      "wins": 7
+    },
+    {
+      "user": 1068,
+      "combinations": 3,
+      "personal_mean": 0.5102231331561558,
+      "baseline_mean": 0.536448,
+      "personal_min": 0.20451600708511872,
+      "personal_max": 0.8080001705760024,
+      "wins": 1
+    },
+    {
+      "user": 1466,
+      "combinations": 10,
+      "personal_mean": 2.397518275962074,
+      "baseline_mean": 2.2048012800000043,
+      "personal_min": 1.3895210617625808,
+      "personal_max": 3.4002666924910954,
+      "wins": 5
+    },
+    {
+      "user": 1539,
+      "combinations": 10,
+      "personal_mean": 1.343503648645504,
+      "baseline_mean": 1.346484480000003,
+      "personal_min": 0.5797740337769013,
+      "personal_max": 2.365417527956346,
+      "wins": 6
+    },
+    {
+      "user": 1540,
+      "combinations": 10,
+      "personal_mean": 0.6001436349753775,
+      "baseline_mean": 0.5900928000000039,
+      "personal_min": 0.22946708595440293,
+      "personal_max": 0.9549076032920304,
+      "wins": 4
+    },
+    {
+      "user": 1543,
+      "combinations": 10,
+      "personal_mean": 0.3765706304115963,
+      "baseline_mean": 0.423793919999995,
+      "personal_min": 0.2132945899410379,
+      "personal_max": 0.6426880868172541,
+      "wins": 5
+    },
+    {
+      "user": 1547,
+      "combinations": 10,
+      "personal_mean": 1.180874725299171,
+      "baseline_mean": 1.0675315200000004,
+      "personal_min": 0.881054523944243,
+      "personal_max": 1.7239333693151986,
+      "wins": 1
+    },
+    {
+      "user": 1552,
+      "combinations": 10,
+      "personal_mean": 0.8019967080265854,
+      "baseline_mean": 0.8046720000000022,
+      "personal_min": 0.3530987299100092,
+      "personal_max": 1.1983050796303105,
+      "wins": 3
+    },
+    {
+      "user": 1557,
+      "combinations": 10,
+      "personal_mean": 0.5600944620417148,
+      "baseline_mean": 0.6437376000000039,
+      "personal_min": 0.2655086171676589,
+      "personal_max": 0.8497735496849739,
+      "wins": 7
+    },
+    {
+      "user": 1558,
+      "combinations": 6,
+      "personal_mean": 0.44580539861982604,
+      "baseline_mean": 0.42915839999999844,
+      "personal_min": 0.2268468499528603,
+      "personal_max": 0.7301367735469386,
+      "wins": 3
+    },
+    {
+      "user": 1562,
+      "combinations": 6,
+      "personal_mean": 0.6366995729928552,
+      "baseline_mean": 0.5632703999999985,
+      "personal_min": 0.3865618922959879,
+      "personal_max": 0.8873139251941086,
+      "wins": 2
+    },
+    {
+      "user": 1584,
+      "combinations": 10,
+      "personal_mean": 0.4997505420424382,
+      "baseline_mean": 0.47743872000000265,
+      "personal_min": 0.24239766057024756,
+      "personal_max": 0.6902664351688287,
+      "wins": 3
+    },
+    {
+      "user": 1587,
+      "combinations": 10,
+      "personal_mean": 0.776058631378606,
+      "baseline_mean": 0.6759244799999982,
+      "personal_min": 0.5994576120550316,
+      "personal_max": 1.0878597214845709,
+      "wins": 1
+    },
+    {
+      "user": 1589,
+      "combinations": 10,
+      "personal_mean": 1.199996366338778,
+      "baseline_mean": 1.1158118399999986,
+      "personal_min": 0.659200072583444,
+      "personal_max": 2.3360886514207957,
+      "wins": 5
+    },
+    {
+      "user": 1590,
+      "combinations": 10,
+      "personal_mean": 1.1186654781844567,
+      "baseline_mean": 1.1050828800000012,
+      "personal_min": 0.7929180232813007,
+      "personal_max": 1.9628138460258606,
+      "wins": 6
+    },
+    {
+      "user": 1592,
+      "combinations": 10,
+      "personal_mean": 1.309372042115716,
+      "baseline_mean": 1.2552883200000042,
+      "personal_min": 0.8629006766562867,
+      "personal_max": 2.142849579135394,
+      "wins": 4
+    },
+    {
+      "user": 1595,
+      "combinations": 10,
+      "personal_mean": 0.7559223740225778,
+      "baseline_mean": 0.6759244800000028,
+      "personal_min": 0.4668245160390077,
+      "personal_max": 1.097847178142284,
+      "wins": 2
+    },
+    {
+      "user": 1596,
+      "combinations": 10,
+      "personal_mean": 0.865672317435956,
+      "baseline_mean": 0.9495129600000032,
+      "personal_min": 0.5420107382879152,
+      "personal_max": 1.6610018638257102,
+      "wins": 7
+    },
+    {
+      "user": 1605,
+      "combinations": 10,
+      "personal_mean": 1.8331019138437346,
+      "baseline_mean": 1.8722035200000036,
+      "personal_min": 1.0147231717483045,
+      "personal_max": 2.7992936727556166,
+      "wins": 7
+    },
+    {
+      "user": 1606,
+      "combinations": 10,
+      "personal_mean": 0.5626103551059725,
+      "baseline_mean": 0.49353215999999867,
+      "personal_min": 0.3264300104371823,
+      "personal_max": 0.9261025829295391,
+      "wins": 1
+    },
+    {
+      "user": 1607,
+      "combinations": 6,
+      "personal_mean": 1.1432002134526733,
+      "baseline_mean": 1.0460735999999977,
+      "personal_min": 0.9866365561360212,
+      "personal_max": 1.2584997206352495,
+      "wins": 1
+    },
+    {
+      "user": 1612,
+      "combinations": 6,
+      "personal_mean": 1.2062322652468074,
+      "baseline_mean": 1.0192511999999956,
+      "personal_min": 0.8403801927079049,
+      "personal_max": 1.6025639608910396,
+      "wins": 1
+    },
+    {
+      "user": 1615,
+      "combinations": 10,
+      "personal_mean": 0.8241351571754771,
+      "baseline_mean": 1.0085222399999962,
+      "personal_min": 0.5246614701444627,
+      "personal_max": 1.474198538287445,
+      "wins": 10
+    },
+    {
+      "user": 1616,
+      "combinations": 6,
+      "personal_mean": 0.8578583454490962,
+      "baseline_mean": 0.6437376000000036,
+      "personal_min": 0.6441040522413546,
+      "personal_max": 1.1193104985805764,
+      "wins": 0
+    },
+    {
+      "user": 1618,
+      "combinations": 10,
+      "personal_mean": 0.4718157638761292,
+      "baseline_mean": 0.6061862400000038,
+      "personal_min": 0.2780078759381314,
+      "personal_max": 0.8297666737046026,
+      "wins": 10
+    },
+    {
+      "user": 1619,
+      "combinations": 6,
+      "personal_mean": 1.1902902614813244,
+      "baseline_mean": 1.1935968000000026,
+      "personal_min": 0.27781326794738903,
+      "personal_max": 1.6467461472135874,
+      "wins": 4
+    },
+    {
+      "user": 1620,
+      "combinations": 10,
+      "personal_mean": 0.9782601323831693,
+      "baseline_mean": 0.9656064000000022,
+      "personal_min": 0.7565616097084159,
+      "personal_max": 1.4459502632095038,
+      "wins": 5
+    },
+    {
+      "user": 1621,
+      "combinations": 10,
+      "personal_mean": 0.7674254116646333,
+      "baseline_mean": 0.7510272000000008,
+      "personal_min": 0.37560435769020084,
+      "personal_max": 1.0850187245234064,
+      "wins": 4
+    },
+    {
+      "user": 1624,
+      "combinations": 10,
+      "personal_mean": 0.7692991458123931,
+      "baseline_mean": 0.7885785600000071,
+      "personal_min": 0.4423293315509697,
+      "personal_max": 1.2521287641439371,
+      "wins": 6
+    },
+    {
+      "user": 1630,
+      "combinations": 6,
+      "personal_mean": 3.14333672131164,
+      "baseline_mean": 3.2589215999999985,
+      "personal_min": 1.5685557668636467,
+      "personal_max": 4.19651260470448,
+      "wins": 5
+    },
+    {
+      "user": 1632,
+      "combinations": 10,
+      "personal_mean": 0.827384662147475,
+      "baseline_mean": 0.675924479999999,
+      "personal_min": 0.5323164044924091,
+      "personal_max": 1.3167755722075976,
+      "wins": 3
+    },
+    {
+      "user": 1633,
+      "combinations": 10,
+      "personal_mean": 0.8780454583410975,
+      "baseline_mean": 0.777849600000003,
+      "personal_min": 0.6939376065505867,
+      "personal_max": 1.3715981276866493,
+      "wins": 0
+    },
+    {
+      "user": 1636,
+      "combinations": 10,
+      "personal_mean": 0.48880463014556935,
+      "baseline_mean": 0.5686348800000051,
+      "personal_min": 0.3339372096740984,
+      "personal_max": 0.8097238550308039,
+      "wins": 8
+    },
+    {
+      "user": 1637,
+      "combinations": 6,
+      "personal_mean": 1.127505143431658,
+      "baseline_mean": 1.2338304000000062,
+      "personal_min": 0.648280080062222,
+      "personal_max": 1.8147368273637898,
+      "wins": 6
+    },
+    {
+      "user": 1641,
+      "combinations": 3,
+      "personal_mean": 0.7284859081989987,
+      "baseline_mean": 0.6437376000000091,
+      "personal_min": 0.5036666014032354,
+      "personal_max": 1.1467237991298935,
+      "wins": 0
+    },
+    {
+      "user": 1644,
+      "combinations": 6,
+      "personal_mean": 0.7603371021892661,
+      "baseline_mean": 0.8314943999999908,
+      "personal_min": 0.2432851719882186,
+      "personal_max": 0.9723771253536586,
+      "wins": 4
+    },
+    {
+      "user": 1659,
+      "combinations": 10,
+      "personal_mean": 0.5368948637957995,
+      "baseline_mean": 0.5096256000000023,
+      "personal_min": 0.44257092565611184,
+      "personal_max": 0.8497780594591303,
+      "wins": 2
+    },
+    {
+      "user": 1663,
+      "combinations": 10,
+      "personal_mean": 2.1399792874290577,
+      "baseline_mean": 1.909754880000009,
+      "personal_min": 1.8790538904781355,
+      "personal_max": 3.0887086459722766,
+      "wins": 2
+    },
+    {
+      "user": 1667,
+      "combinations": 6,
+      "personal_mean": 0.885949987835727,
+      "baseline_mean": 0.7510271999999955,
+      "personal_min": 0.18561014702819356,
+      "personal_max": 1.5127048977205169,
+      "wins": 1
+    },
+    {
+      "user": 1685,
+      "combinations": 6,
+      "personal_mean": 1.3448914903867548,
+      "baseline_mean": 1.2338303999999987,
+      "personal_min": 0.6465975481281916,
+      "personal_max": 2.0540081763153184,
+      "wins": 1
+    },
+    {
+      "user": 1688,
+      "combinations": 10,
+      "personal_mean": 0.8222452883263223,
+      "baseline_mean": 0.7510271999999985,
+      "personal_min": 0.6688397995623546,
+      "personal_max": 1.203856268919491,
+      "wins": 2
+    },
+    {
+      "user": 1689,
+      "combinations": 6,
+      "personal_mean": 0.46694930339369645,
+      "baseline_mean": 0.4291583999999948,
+      "personal_min": 0.1523937437102817,
+      "personal_max": 0.6953219336025118,
+      "wins": 1
+    },
+    {
+      "user": 1691,
+      "combinations": 10,
+      "personal_mean": 0.9326015861011475,
+      "baseline_mean": 1.0192512000000031,
+      "personal_min": 0.25762792551355745,
+      "personal_max": 1.4155195450158615,
+      "wins": 10
+    },
+    {
+      "user": 1692,
+      "combinations": 10,
+      "personal_mean": 1.5353270480463264,
+      "baseline_mean": 1.432316160000001,
+      "personal_min": 0.7403540776130342,
+      "personal_max": 2.43093459961459,
+      "wins": 1
+    },
+    {
+      "user": 1706,
+      "combinations": 10,
+      "personal_mean": 1.0711855887090986,
+      "baseline_mean": 0.9495129600000031,
+      "personal_min": 0.7660379496162202,
+      "personal_max": 1.4976255924682702,
+      "wins": 2
+    },
+    {
+      "user": 1724,
+      "combinations": 10,
+      "personal_mean": 0.8784634968874478,
+      "baseline_mean": 0.8475878400000022,
+      "personal_min": 0.43748938240996105,
+      "personal_max": 1.1868327765321125,
+      "wins": 4
+    },
+    {
+      "user": 1737,
+      "combinations": 10,
+      "personal_mean": 1.0060218050424308,
+      "baseline_mean": 0.9977932799999991,
+      "personal_min": 0.6359118831546308,
+      "personal_max": 1.268489412814646,
+      "wins": 4
+    },
+    {
+      "user": 1756,
+      "combinations": 10,
+      "personal_mean": 1.1234396798157211,
+      "baseline_mean": 1.1211763199999976,
+      "personal_min": 0.43663907392260254,
+      "personal_max": 1.599518009466797,
+      "wins": 5
+    }
+  ],
+  "rows": [
+    {
+      "user": 2,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.0989766421301925,
+      "mean_mae": 1.8507456000000093
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.9492451776631485,
+      "mean_mae": 1.2338304000000024
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.7458793524866655,
+      "mean_mae": 0.8314944000000023
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8675280507410839,
+      "mean_mae": 0.9119616000000091
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.019529929868577,
+      "mean_mae": 1.0997184000000024
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.212221571410955,
+      "mean_mae": 0.6973824000000023
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.2534409577547427,
+      "mean_mae": 0.7778496000000091
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.0020104740936404,
+      "mean_mae": 1.2606528000000046
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.2230669544467612,
+      "mean_mae": 1.287475200000007
+    },
+    {
+      "user": 2,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.4857283090723794,
+      "mean_mae": 1.6361664000000022
+    },
+    {
+      "user": 72,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.5996531958909195,
+      "mean_mae": 2.655417600000009
+    },
+    {
+      "user": 72,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 2.456280095828122,
+      "mean_mae": 2.494483200000007
+    },
+    {
+      "user": 72,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.8380669480116381,
+      "mean_mae": 2.3335488000000044
+    },
+    {
+      "user": 72,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 2.6477933145103076,
+      "mean_mae": 2.333548800000005
+    },
+    {
+      "user": 72,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.8276930997689618,
+      "mean_mae": 1.5288768000000046
+    },
+    {
+      "user": 72,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 2.3163315004252363,
+      "mean_mae": 2.655417600000009
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7765782908862141,
+      "mean_mae": 0.9656064000000022
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.32066812384884247,
+      "mean_mae": 0.45598080000000074
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.44233949964374025,
+      "mean_mae": 0.45598080000000074
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.6201712197551107,
+      "mean_mae": 0.45598080000000074
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.4177534638378164,
+      "mean_mae": 0.5096256000000016
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3621455193269895,
+      "mean_mae": 0.5096256000000016
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.5622284898917301,
+      "mean_mae": 0.5096256000000016
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.6871940937224842,
+      "mean_mae": 0.6437376000000015
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.552267251420309,
+      "mean_mae": 0.6437376000000015
+    },
+    {
+      "user": 90,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.5531590610624456,
+      "mean_mae": 0.6437376000000015
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.47462051455392956,
+      "mean_mae": 0.4291584000000023
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.37554536704708436,
+      "mean_mae": 0.4023359999999923
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.11921620068269,
+      "mean_mae": 0.8314943999999947
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.5929405925893482,
+      "mean_mae": 0.5900927999999931
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9431884837513494,
+      "mean_mae": 0.77784959999999
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.33894143016115935,
+      "mean_mae": 0.3486912000000031
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.7475957353476055,
+      "mean_mae": 0.590092799999997
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.3452696288935342,
+      "mean_mae": 0.26822399999999624
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7170320943395533,
+      "mean_mae": 0.5632703999999947
+    },
+    {
+      "user": 283,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.5454397583664624,
+      "mean_mae": 0.563270399999991
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.9396870571982546,
+      "mean_mae": 0.9656064000000062
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8759068510047981,
+      "mean_mae": 0.9924288000000008
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.1023877179180013,
+      "mean_mae": 0.9387840000000153
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.0082319456431892,
+      "mean_mae": 1.2070079999999963
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9104907271910099,
+      "mean_mae": 0.8851391999999993
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.280512237882899,
+      "mean_mae": 1.2070079999999999
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.4922295707212374,
+      "mean_mae": 0.9387840000000116
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.7424712927905365,
+      "mean_mae": 0.8046720000000039
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.9463888522278211,
+      "mean_mae": 1.3411200000000079
+    },
+    {
+      "user": 359,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.20194431447124384,
+      "mean_mae": 0.5364479999999962
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.5468092067339133,
+      "mean_mae": 0.45598080000000846
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.23213939157542363,
+      "mean_mae": 0.21457920000000685
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.34501653058517595,
+      "mean_mae": 0.2950464000000023
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.2787269208055027,
+      "mean_mae": 0.2950464000000023
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.09398247091808597,
+      "mean_mae": 0.18775680000000458
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3651902130246604,
+      "mean_mae": 0.32186879999999696
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.2751576225959248,
+      "mean_mae": 0.32186879999999696
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.4011846412245954,
+      "mean_mae": 0.3486912000000031
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.48557274884090207,
+      "mean_mae": 0.3486912000000031
+    },
+    {
+      "user": 538,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.3894384607466543,
+      "mean_mae": 0.32186880000000456
+    },
+    {
+      "user": 560,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.5796367888429281,
+      "mean_mae": 1.5288768000000048
+    },
+    {
+      "user": 560,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 2.450563045583014,
+      "mean_mae": 2.5749504000000023
+    },
+    {
+      "user": 560,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9989279888486062,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7738662534957698,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.9797286181941276,
+      "mean_mae": 1.3411200000000039
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.0725056393824632,
+      "mean_mae": 0.3218688000000008
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.3468363158063035,
+      "mean_mae": 1.2070080000000116
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9516836950398485,
+      "mean_mae": 0.9387840000000077
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.44094643997746,
+      "mean_mae": 1.4752320000000079
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.0826273301031135,
+      "mean_mae": 1.0192512000000031
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.9638291201329636,
+      "mean_mae": 0.8046720000000077
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.0300910917204036,
+      "mean_mae": 1.0997184000000062
+    },
+    {
+      "user": 565,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.6225759018575996,
+      "mean_mae": 0.938784
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6249309805532306,
+      "mean_mae": 0.7242048000000008
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8398851967717181,
+      "mean_mae": 0.8851391999999992
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.7113932368007335,
+      "mean_mae": 0.7510272000000032
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8219038557476139,
+      "mean_mae": 0.8851391999999917
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5968426652257042,
+      "mean_mae": 0.6437375999999939
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.2230804693819934,
+      "mean_mae": 1.2606528000000008
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.45188596366777617,
+      "mean_mae": 0.4828032000000031
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.5751570859090435,
+      "mean_mae": 0.6705599999999962
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.9474606190683893,
+      "mean_mae": 1.0192512000000031
+    },
+    {
+      "user": 572,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.4880714250050963,
+      "mean_mae": 0.5096256000000053
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.43150193746113735,
+      "mean_mae": 0.5096255999999978
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.34537455854544546,
+      "mean_mae": 0.4023359999999962
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.530320429104419,
+      "mean_mae": 0.6169152000000031
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.28083009461211644,
+      "mean_mae": 0.32186880000000073
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.4106204366860526,
+      "mean_mae": 0.48280320000000304
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.4631054799387668,
+      "mean_mae": 0.48280319999999927
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.3455379945450178,
+      "mean_mae": 0.4559808000000121
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.39635999860637505,
+      "mean_mae": 0.32186880000000845
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.679228503822963,
+      "mean_mae": 0.7242047999999969
+    },
+    {
+      "user": 581,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.3419452643507488,
+      "mean_mae": 0.24140159999999775
+    },
+    {
+      "user": 616,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.20841983438012546,
+      "mean_mae": 0.1609344000000023
+    },
+    {
+      "user": 616,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.29775295725625334,
+      "mean_mae": 0.1609344000000023
+    },
+    {
+      "user": 616,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.17287789792099129,
+      "mean_mae": 0.3218688000000046
+    },
+    {
+      "user": 625,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.3585163712956243,
+      "mean_mae": 2.4140160000000117
+    },
+    {
+      "user": 625,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.4339061655915686,
+      "mean_mae": 0.48280319999999555
+    },
+    {
+      "user": 625,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.9745659647439064,
+      "mean_mae": 1.9312128000000162
+    },
+    {
+      "user": 628,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.22027628508286623,
+      "mean_mae": 1.1435297153639112e-14
+    },
+    {
+      "user": 628,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.22973182314606327,
+      "mean_mae": 0.24140160000000918
+    },
+    {
+      "user": 628,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.14330505142307298,
+      "mean_mae": 0.24140159999999775
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.3730026136601669,
+      "mean_mae": 0.3218688000000084
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.39553007953475255,
+      "mean_mae": 0.3486911999999916
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.3815381727845241,
+      "mean_mae": 0.3486912000000031
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.39958896110448633,
+      "mean_mae": 0.34869119999999926
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.16235988779515667,
+      "mean_mae": 0.134112
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.5498767977776612,
+      "mean_mae": 0.4559808000000008
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.2901213123088984,
+      "mean_mae": 0.2414015999999939
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.2673947392981811,
+      "mean_mae": 0.21457920000000685
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.4972862230659391,
+      "mean_mae": 0.4828032000000031
+    },
+    {
+      "user": 675,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.28441095431564095,
+      "mean_mae": 0.26822400000000385
+    },
+    {
+      "user": 774,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.2526810258371723,
+      "mean_mae": 1.9312128000000048
+    },
+    {
+      "user": 774,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.19898148230605028,
+      "mean_mae": 0.2414016000000092
+    },
+    {
+      "user": 774,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.783010615605819,
+      "mean_mae": 1.6898111999999954
+    },
+    {
+      "user": 782,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.2282501674438542,
+      "mean_mae": 1.3679424000000024
+    },
+    {
+      "user": 782,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.7766038915792851,
+      "mean_mae": 0.9656064000000024
+    },
+    {
+      "user": 782,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.5859203873697285,
+      "mean_mae": 0.7242048000000045
+    },
+    {
+      "user": 782,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.45408764209621,
+      "mean_mae": 0.6437375999999977
+    },
+    {
+      "user": 782,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3365665217057583,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 782,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.2021842338805664,
+      "mean_mae": 1.3679424000000027
+    },
+    {
+      "user": 787,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.4951903853186246,
+      "mean_mae": 0.48280319999998406
+    },
+    {
+      "user": 787,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.14263708743675446,
+      "mean_mae": 0.1609344000000023
+    },
+    {
+      "user": 787,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.2082673895711194,
+      "mean_mae": 0.1609344000000023
+    },
+    {
+      "user": 787,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.15041382285172475,
+      "mean_mae": 0.3218687999999932
+    },
+    {
+      "user": 787,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.1644661432819049,
+      "mean_mae": 0.3218687999999932
+    },
+    {
+      "user": 787,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.47001841690661417,
+      "mean_mae": 0.48280319999998406
+    },
+    {
+      "user": 789,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.3264367885442744,
+      "mean_mae": 0.08046720000000687
+    },
+    {
+      "user": 789,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.2492468650469266,
+      "mean_mae": 0.16093440000001374
+    },
+    {
+      "user": 789,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.05169830817000832,
+      "mean_mae": 0.08046720000000687
+    },
+    {
+      "user": 822,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.3141735778948744,
+      "mean_mae": 2.4140160000000117
+    },
+    {
+      "user": 822,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6010625536895784,
+      "mean_mae": 0.48280319999999555
+    },
+    {
+      "user": 822,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.8501191183726995,
+      "mean_mae": 1.9312128000000162
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.573219654402042,
+      "mean_mae": 1.5556992000000032
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.5710321726043388,
+      "mean_mae": 1.5556992000000032
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 2.0084189903807834,
+      "mean_mae": 1.797100799999997
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.425311417474954,
+      "mean_mae": 1.4484096000000015
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.5937343689672965,
+      "mean_mae": 1.5556992000000032
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.685572245575238,
+      "mean_mae": 1.797100799999997
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.3593784679786793,
+      "mean_mae": 1.4484096000000015
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.7386927851388616,
+      "mean_mae": 1.797100799999997
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.367284244663004,
+      "mean_mae": 1.4484096000000015
+    },
+    {
+      "user": 870,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 2.7736992905792395,
+      "mean_mae": 2.333548800000005
+    },
+    {
+      "user": 874,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.5135434745268745,
+      "mean_mae": 0.7242048000000045
+    },
+    {
+      "user": 874,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.8034296371439746,
+      "mean_mae": 1.448409599999998
+    },
+    {
+      "user": 874,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 2.3058642828294253,
+      "mean_mae": 2.1726144000000023
+    },
+    {
+      "user": 884,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.17226306289197685,
+      "mean_mae": 0.32186880000000456
+    },
+    {
+      "user": 884,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8353052221197821,
+      "mean_mae": 0.8851391999999955
+    },
+    {
+      "user": 884,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5683249897410672,
+      "mean_mae": 0.5632703999999908
+    },
+    {
+      "user": 890,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.1427575344190015,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 890,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6501021621874293,
+      "mean_mae": 0.6437375999999977
+    },
+    {
+      "user": 890,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.24550833963045637,
+      "mean_mae": 0.32186880000000456
+    },
+    {
+      "user": 890,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7981154128958827,
+      "mean_mae": 0.804672
+    },
+    {
+      "user": 890,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.4449737518631269,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 890,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.1305542512762852,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 894,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.42066607064221906,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 894,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.4737442954753564,
+      "mean_mae": 0.3218687999999932
+    },
+    {
+      "user": 894,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.09833354779484528,
+      "mean_mae": 0.08046720000000687
+    },
+    {
+      "user": 919,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.3373072029058783,
+      "mean_mae": 1.7702784000000023
+    },
+    {
+      "user": 919,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.00409874624961,
+      "mean_mae": 0.8046719999999887
+    },
+    {
+      "user": 919,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 2.5458935066935933,
+      "mean_mae": 2.5749503999999908
+    },
+    {
+      "user": 920,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.37862829240317475,
+      "mean_mae": 0.48280319999999544
+    },
+    {
+      "user": 920,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.24299743654548184,
+      "mean_mae": 0.2414016000000092
+    },
+    {
+      "user": 920,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.6604031750230197,
+      "mean_mae": 0.7242048000000046
+    },
+    {
+      "user": 927,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.2973439149467643,
+      "mean_mae": 1.2070079999999888
+    },
+    {
+      "user": 927,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.4669751033677783,
+      "mean_mae": 0.48280319999998406
+    },
+    {
+      "user": 927,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9750747737438813,
+      "mean_mae": 0.7242048000000046
+    },
+    {
+      "user": 949,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.839818989292395,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 949,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 2.2505676579406764,
+      "mean_mae": 2.253081600000009
+    },
+    {
+      "user": 949,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.0439256367186984,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 952,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.31716796458754304,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 952,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.4800751349904222,
+      "mean_mae": 1.689811200000007
+    },
+    {
+      "user": 952,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.1294608835360296,
+      "mean_mae": 1.207008
+    },
+    {
+      "user": 956,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.1400245988262414,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 956,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.9319508265870236,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 956,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7606038773290642,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.38618953401925293,
+      "mean_mae": 0.5364480000000037
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8008128447257405,
+      "mean_mae": 0.8046720000000077
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.8677978359298564,
+      "mean_mae": 0.6705599999999964
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.5876592530375052,
+      "mean_mae": 0.4023359999999923
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5255233974356108,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.5894724574035318,
+      "mean_mae": 0.5632704000000062
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.6722390345306425,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.5671550588727324,
+      "mean_mae": 0.5632704000000024
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.5515076179787016,
+      "mean_mae": 0.455980799999997
+    },
+    {
+      "user": 964,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.551556283722688,
+      "mean_mae": 0.5364480000000115
+    },
+    {
+      "user": 970,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6999236763813858,
+      "mean_mae": 0.7242048000000046
+    },
+    {
+      "user": 970,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.03825577431685001,
+      "mean_mae": 0.24140160000000915
+    },
+    {
+      "user": 970,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.44600847239400954,
+      "mean_mae": 0.48280319999999544
+    },
+    {
+      "user": 976,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.9857614230153444,
+      "mean_mae": 0.9656064000000024
+    },
+    {
+      "user": 976,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.0369279097329662,
+      "mean_mae": 0.8046720000000002
+    },
+    {
+      "user": 976,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.5359905049867706,
+      "mean_mae": 1.609344
+    },
+    {
+      "user": 976,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.5238099949723338,
+      "mean_mae": 1.6093440000000003
+    },
+    {
+      "user": 976,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9062475708951413,
+      "mean_mae": 0.804672
+    },
+    {
+      "user": 976,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.8814577496171174,
+      "mean_mae": 0.6437375999999978
+    },
+    {
+      "user": 986,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.03588087836782558,
+      "mean_mae": 0.08046719999999541
+    },
+    {
+      "user": 986,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.2733164207009878,
+      "mean_mae": 0.40233600000001146
+    },
+    {
+      "user": 986,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.3037512940904587,
+      "mean_mae": 0.32186880000001605
+    },
+    {
+      "user": 1000,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.5418784673733883,
+      "mean_mae": 0.3218688000000046
+    },
+    {
+      "user": 1000,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.42870656117096123,
+      "mean_mae": 0.3218688000000046
+    },
+    {
+      "user": 1000,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.6658853368835767,
+      "mean_mae": 0.6437376000000092
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6351007164154349,
+      "mean_mae": 0.5900928000000084
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5541859958740346,
+      "mean_mae": 0.45598079999999697
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.14886760155491097,
+      "mean_mae": 0.16093440000000228
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.2391956418451163,
+      "mean_mae": 0.24140160000000913
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5311597288173427,
+      "mean_mae": 0.45598080000000074
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3701536708469968,
+      "mean_mae": 0.321868799999997
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.46102033119586583,
+      "mean_mae": 0.3486911999999993
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.43171156980654984,
+      "mean_mae": 0.4023360000000038
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.47328163179243754,
+      "mean_mae": 0.42915840000000616
+    },
+    {
+      "user": 1002,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.7088306787676176,
+      "mean_mae": 0.6169151999999992
+    },
+    {
+      "user": 1003,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.25149274029485985,
+      "mean_mae": 0.2414015999999863
+    },
+    {
+      "user": 1003,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.08565647306759251,
+      "mean_mae": 0.0
+    },
+    {
+      "user": 1003,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.3680109563348558,
+      "mean_mae": 0.2414015999999863
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.5902834271692623,
+      "mean_mae": 0.5900927999999971
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5820567192625247,
+      "mean_mae": 0.5632703999999947
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6854305631814349,
+      "mean_mae": 0.751027200000003
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.6469694473456858,
+      "mean_mae": 0.6705599999999962
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7533063326932279,
+      "mean_mae": 0.9924287999999931
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.4406748755424963,
+      "mean_mae": 0.5900927999999971
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.6314175175337655,
+      "mean_mae": 0.7242048000000084
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.5147047447885692,
+      "mean_mae": 0.5632703999999947
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7092050581700735,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1005,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.6686569126186015,
+      "mean_mae": 0.6705599999999962
+    },
+    {
+      "user": 1017,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.4748169923646631,
+      "mean_mae": 0.2414016000000092
+    },
+    {
+      "user": 1017,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5303443164571191,
+      "mean_mae": 0.48280319999999544
+    },
+    {
+      "user": 1017,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7896134789951534,
+      "mean_mae": 0.7242048000000046
+    },
+    {
+      "user": 1027,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.2830135452304727,
+      "mean_mae": 1.3679424000000022
+    },
+    {
+      "user": 1027,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.0444694814444198,
+      "mean_mae": 0.9656064000000022
+    },
+    {
+      "user": 1027,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.2512792604329341,
+      "mean_mae": 0.5632704000000022
+    },
+    {
+      "user": 1027,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.0594652388968582,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 1027,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.1296376570395774,
+      "mean_mae": 0.8851392000000069
+    },
+    {
+      "user": 1027,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.5239370165872514,
+      "mean_mae": 1.3679424000000022
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6559401676073183,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5288664589927551,
+      "mean_mae": 0.3755136000000054
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.8181460296078492,
+      "mean_mae": 0.9119616000000016
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.5290750130126841,
+      "mean_mae": 0.4291584000000023
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.6075211399034991,
+      "mean_mae": 0.6169152000000031
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.5963408963925825,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.6299215181688697,
+      "mean_mae": 0.67056
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.39385167500419976,
+      "mean_mae": 0.3755136000000054
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.961496962886932,
+      "mean_mae": 0.9656064000000063
+    },
+    {
+      "user": 1029,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.4192584692843764,
+      "mean_mae": 0.4291584000000023
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.12273088085783772,
+      "mean_mae": 0.18775679999999695
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.16694172469152158,
+      "mean_mae": 0.18775679999999695
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.26175864099661955,
+      "mean_mae": 0.26822399999999624
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.1846654308503215,
+      "mean_mae": 0.21457919999999545
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.22244321467566078,
+      "mean_mae": 0.2682239999999924
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.07330694939626099,
+      "mean_mae": 0.1341120000000038
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.2075675291237078,
+      "mean_mae": 0.18775679999999695
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.17550022061555262,
+      "mean_mae": 0.1341120000000038
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.19084709752828535,
+      "mean_mae": 0.18775679999999695
+    },
+    {
+      "user": 1062,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.20025264910745358,
+      "mean_mae": 0.26822399999999624
+    },
+    {
+      "user": 1068,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.20451600708511872,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1068,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8080001705760024,
+      "mean_mae": 0.804672
+    },
+    {
+      "user": 1068,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5181532218073461,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 3.0872165388690624,
+      "mean_mae": 3.138220800000012
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 2.8573222838805648,
+      "mean_mae": 2.735884799999997
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 2.5620955482040118,
+      "mean_mae": 1.0460736000000053
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.3895210617625808,
+      "mean_mae": 0.9656064000000101
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 2.559294298615361,
+      "mean_mae": 2.494483200000003
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.9422538660413968,
+      "mean_mae": 1.984857599999998
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.8809231518834546,
+      "mean_mae": 1.9580351999999992
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 2.20183340902821,
+      "mean_mae": 2.226259200000007
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 2.094455908845004,
+      "mean_mae": 2.1994368000000084
+    },
+    {
+      "user": 1466,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 3.4002666924910954,
+      "mean_mae": 3.2991552000000026
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.287933356756766,
+      "mean_mae": 1.4484096000000017
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5797740337769013,
+      "mean_mae": 0.7778495999999978
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 2.365417527956346,
+      "mean_mae": 2.0385024000000103
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.58939664391681,
+      "mean_mae": 0.8046720000000039
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.6310246748599357,
+      "mean_mae": 1.4215872000000072
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.4367242648133864,
+      "mean_mae": 1.5020544000000022
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.668756908353286,
+      "mean_mae": 1.4484096000000057
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.8220061947044117,
+      "mean_mae": 0.9387840000000001
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 2.2525747535734464,
+      "mean_mae": 2.1189696000000016
+    },
+    {
+      "user": 1539,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.8014281277437506,
+      "mean_mae": 0.9656063999999986
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.718430620814121,
+      "mean_mae": 0.6973823999999985
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.786703987856774,
+      "mean_mae": 0.8314944000000101
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.22946708595440293,
+      "mean_mae": 0.24140160000000152
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.3238132896421781,
+      "mean_mae": 0.3486912000000069
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7038534236362812,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.5545764310414733,
+      "mean_mae": 0.5632704000000062
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.6240184674306317,
+      "mean_mae": 0.616915200000007
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.5276671773814752,
+      "mean_mae": 0.48280319999999927
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.5779982627044078,
+      "mean_mae": 0.536448
+    },
+    {
+      "user": 1540,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.9549076032920304,
+      "mean_mae": 0.9119616000000054
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.4972181761389411,
+      "mean_mae": 0.42915839999999855
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.4063402446913586,
+      "mean_mae": 0.4828031999999955
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.40708626195991066,
+      "mean_mae": 0.4023359999999962
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.2132945899410379,
+      "mean_mae": 0.45598079999998936
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.2845508026889651,
+      "mean_mae": 0.4828031999999955
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.44188675556762175,
+      "mean_mae": 0.4023359999999962
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.3567569270655342,
+      "mean_mae": 0.45598079999998936
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.2504578569429945,
+      "mean_mae": 0.348691199999984
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.2654266023023449,
+      "mean_mae": 0.18775680000000458
+    },
+    {
+      "user": 1543,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.6426880868172541,
+      "mean_mae": 0.5900928000000008
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.4887514330958915,
+      "mean_mae": 1.367942399999995
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.047185529218969,
+      "mean_mae": 0.8851392000000032
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.0780154732512062,
+      "mean_mae": 0.9387840000000001
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.237157946260688,
+      "mean_mae": 1.207008
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.881054523944243,
+      "mean_mae": 0.6437376000000053
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9342643673662895,
+      "mean_mae": 0.6973824000000023
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.1150796889101358,
+      "mean_mae": 1.2338304000000024
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.7239333693151986,
+      "mean_mae": 1.7166336000000015
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.018671766382619,
+      "mean_mae": 0.9656063999999985
+    },
+    {
+      "user": 1547,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.2846331552464691,
+      "mean_mae": 1.0192511999999956
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.746098326370172,
+      "mean_mae": 0.7242047999999969
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.1983050796303105,
+      "mean_mae": 1.2874751999999992
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6508590805772312,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8362169733145222,
+      "mean_mae": 0.8046720000000039
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.4570278825274306,
+      "mean_mae": 0.6169151999999992
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.0566778723706693,
+      "mean_mae": 0.9924288000000044
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.8874396819718614,
+      "mean_mae": 0.8851391999999993
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.3530987299100092,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.9057669758928876,
+      "mean_mae": 0.7510272000000106
+    },
+    {
+      "user": 1552,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.928476477700761,
+      "mean_mae": 0.8583168000000008
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.760806127481625,
+      "mean_mae": 0.6973824000000101
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.3396067246595857,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.49322078147165427,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.6914041494867768,
+      "mean_mae": 0.7242048000000046
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.2655086171676589,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3484025679088764,
+      "mean_mae": 0.48280319999999927
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.6960155533809093,
+      "mean_mae": 0.8314944000000023
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.8497735496849739,
+      "mean_mae": 1.0460736000000053
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.5661471581906237,
+      "mean_mae": 0.4828032000000069
+    },
+    {
+      "user": 1557,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.5900593909844639,
+      "mean_mae": 0.5632704000000062
+    },
+    {
+      "user": 1558,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.3127117099350246,
+      "mean_mae": 0.24140159999999772
+    },
+    {
+      "user": 1558,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.2268468499528603,
+      "mean_mae": 0.24140159999999772
+    },
+    {
+      "user": 1558,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.7183461119014805,
+      "mean_mae": 0.6437375999999977
+    },
+    {
+      "user": 1558,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7301367735469386,
+      "mean_mae": 0.6437375999999977
+    },
+    {
+      "user": 1558,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3728505275546745,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1558,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.31394041882797785,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1562,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7112453003033421,
+      "mean_mae": 0.8046719999999886
+    },
+    {
+      "user": 1562,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.618860050231731,
+      "mean_mae": 0.6437375999999978
+    },
+    {
+      "user": 1562,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6345844198083694,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1562,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5816318501235919,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1562,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.3865618922959879,
+      "mean_mae": 0.16093440000000225
+    },
+    {
+      "user": 1562,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.8873139251941086,
+      "mean_mae": 0.8046719999999887
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.24239766057024756,
+      "mean_mae": 0.2950463999999947
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6331122115060323,
+      "mean_mae": 0.6973824000000098
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.3226154459151343,
+      "mean_mae": 0.2950463999999947
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.6902664351688287,
+      "mean_mae": 0.5632703999999985
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.48786471968566714,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.6544994948677002,
+      "mean_mae": 0.6437376000000091
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.5130813776432114,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.469163285987386,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.5257376067579927,
+      "mean_mae": 0.5096256000000053
+    },
+    {
+      "user": 1584,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.45876718232218217,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7200029475566844,
+      "mean_mae": 0.5900927999999971
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.7269830441044407,
+      "mean_mae": 0.5632703999999947
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.7298214373022446,
+      "mean_mae": 0.751027200000003
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.7356218169932546,
+      "mean_mae": 0.6705599999999962
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.0878597214845709,
+      "mean_mae": 0.9924287999999931
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.5994576120550316,
+      "mean_mae": 0.5900927999999971
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.9958325702829948,
+      "mean_mae": 0.7242048000000084
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.6186699795486857,
+      "mean_mae": 0.5632703999999947
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.718053186150168,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1587,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.828283998307984,
+      "mean_mae": 0.6705599999999962
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.3360886514207957,
+      "mean_mae": 1.8239231999999994
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.663953723600448,
+      "mean_mae": 0.9387840000000037
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.027070829063444,
+      "mean_mae": 1.0997183999999949
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8598904329142538,
+      "mean_mae": 0.938784000000004
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.659200072583444,
+      "mean_mae": 0.7778496000000015
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.1007589307986911,
+      "mean_mae": 0.9387839999999925
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.7732729988755848,
+      "mean_mae": 0.7778496000000015
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.5040544596998409,
+      "mean_mae": 1.2338303999999984
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.6107982648861086,
+      "mean_mae": 1.3947647999999895
+    },
+    {
+      "user": 1589,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.4648752995451677,
+      "mean_mae": 1.2338303999999984
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7929180232813007,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.9628138460258606,
+      "mean_mae": 1.7434560000000001
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.9095488782308538,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8470117650003909,
+      "mean_mae": 0.6437376000000053
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8519750474125528,
+      "mean_mae": 0.9119615999999976
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.2275832320291722,
+      "mean_mae": 1.2606528000000008
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.242869373977977,
+      "mean_mae": 1.4752320000000074
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.0001665469179202,
+      "mean_mae": 0.9924288000000044
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.2791202221132532,
+      "mean_mae": 0.5096255999999978
+    },
+    {
+      "user": 1590,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.0726478468552856,
+      "mean_mae": 1.3411199999999963
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 2.142849579135394,
+      "mean_mae": 2.092147200000007
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.5799329579384365,
+      "mean_mae": 0.9924288000000047
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.1070408307323032,
+      "mean_mae": 0.9924288000000047
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8629006766562867,
+      "mean_mae": 0.9924288000000047
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.1137554332759143,
+      "mean_mae": 1.0997184000000024
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.1606844442161053,
+      "mean_mae": 1.0997184000000024
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.0279066094043294,
+      "mean_mae": 1.0997184000000024
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.3509515121963382,
+      "mean_mae": 1.3947648000000046
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.4103856928930838,
+      "mean_mae": 1.3947648000000046
+    },
+    {
+      "user": 1592,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.3373126847089711,
+      "mean_mae": 1.3947648000000046
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.5621474753903597,
+      "mean_mae": 0.5096256000000016
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.097847178142284,
+      "mean_mae": 1.1265408000000048
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6660058721171315,
+      "mean_mae": 0.5096256000000016
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.4668245160390077,
+      "mean_mae": 0.5096256000000016
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7718456119379905,
+      "mean_mae": 0.6169152000000031
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.8038177836539834,
+      "mean_mae": 0.7510272000000032
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.8399476446222723,
+      "mean_mae": 0.7510272000000032
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.6921736272361808,
+      "mean_mae": 0.6169152000000031
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7748243205516641,
+      "mean_mae": 0.6169152000000031
+    },
+    {
+      "user": 1595,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.8837897105349036,
+      "mean_mae": 0.7510272000000032
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.6610018638257102,
+      "mean_mae": 1.5288768000000046
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6828338028639417,
+      "mean_mae": 0.8314944000000023
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6391654615001087,
+      "mean_mae": 0.67056
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8042385947349784,
+      "mean_mae": 0.9924288000000047
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.5420107382879152,
+      "mean_mae": 0.6973824000000023
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.6609616258751408,
+      "mean_mae": 0.536448
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.029072790387879,
+      "mean_mae": 0.8583168000000047
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.0363303115474551,
+      "mean_mae": 1.287475200000007
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.9151716993017495,
+      "mean_mae": 1.0728960000000038
+    },
+    {
+      "user": 1596,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.6859362860346804,
+      "mean_mae": 1.0192512000000031
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.554225858251211,
+      "mean_mae": 1.6629888000000008
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 2.3072028661725845,
+      "mean_mae": 2.5749504000000063
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.6496402064425857,
+      "mean_mae": 1.6898112000000032
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 2.072528978250857,
+      "mean_mae": 2.145792000000004
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.2153888234565857,
+      "mean_mae": 0.8583168000000008
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 2.7992936727556166,
+      "mean_mae": 2.923641600000005
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.7233851124067927,
+      "mean_mae": 1.8239232000000032
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.0147231717483045,
+      "mean_mae": 0.885139200000003
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 2.0874234011095436,
+      "mean_mae": 2.3067264000000027
+    },
+    {
+      "user": 1605,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.9072070478432606,
+      "mean_mae": 1.8507456000000053
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.5888562341304874,
+      "mean_mae": 0.4828031999999955
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6084602708289509,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.5571011347462186,
+      "mean_mae": 0.5096255999999978
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.582986327717233,
+      "mean_mae": 0.5632703999999985
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.3264300104371823,
+      "mean_mae": 0.24140159999999775
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9261025829295391,
+      "mean_mae": 0.7778495999999979
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.42135918359346086,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.37443314942677713,
+      "mean_mae": 0.268224
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.8767313323105738,
+      "mean_mae": 0.6973823999999947
+    },
+    {
+      "user": 1606,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.36364332493930124,
+      "mean_mae": 0.4291584000000023
+    },
+    {
+      "user": 1607,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.1737678234270037,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1607,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.0844385524266584,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1607,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.2208635160928174,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1607,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.134995111998289,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1607,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9866365561360212,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1607,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.2584997206352495,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1612,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.8403801927079049,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1612,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.0719470594891336,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1612,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.2690953868131016,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1612,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.3052340764535706,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1612,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.6025639608910396,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1612,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.1481729151260929,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6550291411650445,
+      "mean_mae": 0.8314944000000022
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.7900182683930522,
+      "mean_mae": 0.9924287999999932
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.474198538287445,
+      "mean_mae": 1.636166399999995
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.6109206046536962,
+      "mean_mae": 0.7510271999999955
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9684288672018923,
+      "mean_mae": 1.126540799999997
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.6989124230345082,
+      "mean_mae": 0.751027200000003
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.0601959983426068,
+      "mean_mae": 1.3142975999999902
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.5381011672888122,
+      "mean_mae": 0.911961599999994
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.9208850932432524,
+      "mean_mae": 1.0997183999999947
+    },
+    {
+      "user": 1615,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.5246614701444627,
+      "mean_mae": 0.6705599999999962
+    },
+    {
+      "user": 1616,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7385145694670943,
+      "mean_mae": 0.24140159999999766
+    },
+    {
+      "user": 1616,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.1193104985805764,
+      "mean_mae": 0.8851392000000069
+    },
+    {
+      "user": 1616,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.8948826828487022,
+      "mean_mae": 0.5632704000000024
+    },
+    {
+      "user": 1616,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.6441040522413546,
+      "mean_mae": 0.5632704000000025
+    },
+    {
+      "user": 1616,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9037732148322877,
+      "mean_mae": 0.8851392000000069
+    },
+    {
+      "user": 1616,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.8465650547245631,
+      "mean_mae": 0.7242048000000046
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.42204514613510513,
+      "mean_mae": 0.5364480000000077
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5376334651004898,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.5551618762610263,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.4454076767615716,
+      "mean_mae": 0.563270400000006
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.34922446771928883,
+      "mean_mae": 0.4559808000000008
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.2780078759381314,
+      "mean_mae": 0.4559808000000008
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.8297666737046026,
+      "mean_mae": 0.9924288000000047
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.6310287066113076,
+      "mean_mae": 0.7510272000000106
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.32326362434535166,
+      "mean_mae": 0.48280319999999927
+    },
+    {
+      "user": 1618,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.34661812618441834,
+      "mean_mae": 0.48280319999999927
+    },
+    {
+      "user": 1619,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.3839741478947563,
+      "mean_mae": 1.3679424000000024
+    },
+    {
+      "user": 1619,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.1838631892496476,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1619,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.6467461472135874,
+      "mean_mae": 1.689811200000007
+    },
+    {
+      "user": 1619,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.6055041513663029,
+      "mean_mae": 1.689811200000007
+    },
+    {
+      "user": 1619,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.0438406652162644,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1619,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.27781326794738903,
+      "mean_mae": 0.3218688000000046
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.8608463365698267,
+      "mean_mae": 1.0460735999999937
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8371109058236651,
+      "mean_mae": 0.9387840000000001
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.0744533765361872,
+      "mean_mae": 0.9656064000000061
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.7565616097084159,
+      "mean_mae": 0.8314944000000022
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8284838492877847,
+      "mean_mae": 0.9119616000000015
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.3247002378658224,
+      "mean_mae": 0.8314944000000136
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.7584823972045505,
+      "mean_mae": 0.7510272000000069
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.102883290578499,
+      "mean_mae": 1.0997183999999984
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7931290570474382,
+      "mean_mae": 0.9119615999999976
+    },
+    {
+      "user": 1620,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.4459502632095038,
+      "mean_mae": 1.3679424000000022
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.37560435769020084,
+      "mean_mae": 0.3755136000000015
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5202414360922528,
+      "mean_mae": 0.6169151999999993
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.7878513247528418,
+      "mean_mae": 0.7778496000000015
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.063522800354075,
+      "mean_mae": 1.1801856000000015
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.0850187245234064,
+      "mean_mae": 1.0997184000000022
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9396259181840613,
+      "mean_mae": 0.8314943999999986
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.633471976516941,
+      "mean_mae": 0.3755136000000015
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.810562315607787,
+      "mean_mae": 0.8583168000000008
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.6786756507197381,
+      "mean_mae": 0.6169151999999993
+    },
+    {
+      "user": 1621,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.77967961220503,
+      "mean_mae": 0.7778496000000015
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.0534520894966437,
+      "mean_mae": 0.9924288000000123
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.835474040718346,
+      "mean_mae": 0.885139200000007
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6633708085613466,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.7114508573267951,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8519901439017777,
+      "mean_mae": 0.8583168000000084
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.5981794576691427,
+      "mean_mae": 0.5632704000000062
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.4423293315509697,
+      "mean_mae": 0.5632704000000062
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.6364963099517219,
+      "mean_mae": 0.7242048000000084
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.64811965480325,
+      "mean_mae": 0.7242048000000084
+    },
+    {
+      "user": 1624,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.2521287641439371,
+      "mean_mae": 1.2874752000000107
+    },
+    {
+      "user": 1630,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 3.9065470244832023,
+      "mean_mae": 4.184294400000002
+    },
+    {
+      "user": 1630,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 2.766454484291965,
+      "mean_mae": 2.8968191999999844
+    },
+    {
+      "user": 1630,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.5685557668636467,
+      "mean_mae": 1.7702784000000023
+    },
+    {
+      "user": 1630,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 3.5200634871452166,
+      "mean_mae": 3.5405567999999934
+    },
+    {
+      "user": 1630,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 2.9018869603813315,
+      "mean_mae": 2.9772864000000023
+    },
+    {
+      "user": 1630,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 4.19651260470448,
+      "mean_mae": 4.184294400000002
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.8191540813439889,
+      "mean_mae": 0.7510271999999993
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.7991181705284044,
+      "mean_mae": 0.7242047999999969
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.9013847663778324,
+      "mean_mae": 0.6705599999999999
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.6667726576535484,
+      "mean_mae": 0.7242048000000008
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8548831937761018,
+      "mean_mae": 0.938784000000004
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.6389037883917625,
+      "mean_mae": 0.45598080000000074
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.5323164044924091,
+      "mean_mae": 0.5632703999999985
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.0379573000307067,
+      "mean_mae": 0.3755135999999939
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7065806866723978,
+      "mean_mae": 0.4828031999999993
+    },
+    {
+      "user": 1632,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.3167755722075976,
+      "mean_mae": 1.0728959999999963
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.9026550315506042,
+      "mean_mae": 0.8851392000000032
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.9401228085664304,
+      "mean_mae": 0.9119616000000054
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.7873689914612955,
+      "mean_mae": 0.7510271999999993
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.8082638361875953,
+      "mean_mae": 0.7510271999999993
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.0627480209112183,
+      "mean_mae": 1.0460735999999977
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.7086318206065072,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.6939376065505867,
+      "mean_mae": 0.6705600000000039
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.7643228332264456,
+      "mean_mae": 0.4291584000000061
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7408055066636435,
+      "mean_mae": 0.4291584000000061
+    },
+    {
+      "user": 1633,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.3715981276866493,
+      "mean_mae": 1.233830400000006
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.47298376618958476,
+      "mean_mae": 0.6437376000000053
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.4672561913404385,
+      "mean_mae": 0.5900928000000046
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.51113399879697,
+      "mean_mae": 0.616915200000007
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.553500748675909,
+      "mean_mae": 0.5900928000000046
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.3339372096740984,
+      "mean_mae": 0.4291584000000023
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.38927732780453567,
+      "mean_mae": 0.45598080000000457
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.8097238550308039,
+      "mean_mae": 0.8583168000000084
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.6091543616717507,
+      "mean_mae": 0.885139200000007
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.37869524984592084,
+      "mean_mae": 0.268224
+    },
+    {
+      "user": 1636,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.36238359242568136,
+      "mean_mae": 0.34869120000000686
+    },
+    {
+      "user": 1637,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.740144136551684,
+      "mean_mae": 0.804672
+    },
+    {
+      "user": 1637,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.648280080062222,
+      "mean_mae": 0.885139200000007
+    },
+    {
+      "user": 1637,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.8147368273637898,
+      "mean_mae": 1.850745600000009
+    },
+    {
+      "user": 1637,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.7476507108346886,
+      "mean_mae": 1.8507456000000093
+    },
+    {
+      "user": 1637,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.8474893292956955,
+      "mean_mae": 0.9656064000000023
+    },
+    {
+      "user": 1637,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.9667297764818682,
+      "mean_mae": 1.0460736000000093
+    },
+    {
+      "user": 1641,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.535067324063867,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1641,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.5036666014032354,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1641,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.1467237991298935,
+      "mean_mae": 0.9656064000000137
+    },
+    {
+      "user": 1644,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7255258950586161,
+      "mean_mae": 0.9656063999999909
+    },
+    {
+      "user": 1644,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8411619064048612,
+      "mean_mae": 0.9656063999999909
+    },
+    {
+      "user": 1644,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.823974045161803,
+      "mean_mae": 0.9656063999999909
+    },
+    {
+      "user": 1644,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9723771253536586,
+      "mean_mae": 0.9656063999999909
+    },
+    {
+      "user": 1644,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.2432851719882186,
+      "mean_mae": 0.16093439999999082
+    },
+    {
+      "user": 1644,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.9556984691684396,
+      "mean_mae": 0.9656063999999909
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.44257092565611184,
+      "mean_mae": 0.3755135999999977
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.47674985222334243,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.574100158801569,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.5901171763106451,
+      "mean_mae": 0.6437376000000091
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8497780594591303,
+      "mean_mae": 0.8314944000000023
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.45939568018797655,
+      "mean_mae": 0.45598080000000457
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.4591268461922646,
+      "mean_mae": 0.3755135999999977
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.47798435680850765,
+      "mean_mae": 0.48280320000000687
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.455387683060585,
+      "mean_mae": 0.402336
+    },
+    {
+      "user": 1659,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.5837378992578627,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 3.0887086459722766,
+      "mean_mae": 3.030931200000014
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.89384896108035,
+      "mean_mae": 1.019251200000007
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 2.0638812024463093,
+      "mean_mae": 1.5825216000000093
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 2.044630888593873,
+      "mean_mae": 1.8239232000000072
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.8790538904781355,
+      "mean_mae": 1.099718400000006
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.9234707048435185,
+      "mean_mae": 1.6629888000000086
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 2.0480095802878666,
+      "mean_mae": 1.904390400000006
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 2.23915571975431,
+      "mean_mae": 2.6017728000000084
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 2.0402013089263566,
+      "mean_mae": 2.199436800000012
+    },
+    {
+      "user": 1663,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 2.1788319719075786,
+      "mean_mae": 2.17261440000001
+    },
+    {
+      "user": 1667,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.8156629556886612,
+      "mean_mae": 0.804672
+    },
+    {
+      "user": 1667,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.5127048977205169,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1667,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6502230488111064,
+      "mean_mae": 0.5632703999999908
+    },
+    {
+      "user": 1667,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.7955494707893921,
+      "mean_mae": 0.5632704000000023
+    },
+    {
+      "user": 1667,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.3559494069764915,
+      "mean_mae": 1.1265407999999932
+    },
+    {
+      "user": 1667,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.18561014702819356,
+      "mean_mae": 0.3218687999999932
+    },
+    {
+      "user": 1685,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.8788332571384063,
+      "mean_mae": 1.850745599999998
+    },
+    {
+      "user": 1685,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.1737988462508122,
+      "mean_mae": 0.9656063999999909
+    },
+    {
+      "user": 1685,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6465975481281916,
+      "mean_mae": 0.6437375999999977
+    },
+    {
+      "user": 1685,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.1887095028602643,
+      "mean_mae": 1.207008
+    },
+    {
+      "user": 1685,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.127401611627536,
+      "mean_mae": 0.8851392000000069
+    },
+    {
+      "user": 1685,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 2.0540081763153184,
+      "mean_mae": 1.8507455999999978
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6688397995623546,
+      "mean_mae": 0.536448
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6800188379746359,
+      "mean_mae": 0.6169151999999954
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.203856268919491,
+      "mean_mae": 1.2338303999999984
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.7028489153424208,
+      "mean_mae": 0.536448
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8779682985924503,
+      "mean_mae": 0.8314943999999985
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.8005274287371112,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.9255555914993049,
+      "mean_mae": 0.9119615999999939
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.850765683409716,
+      "mean_mae": 0.7242047999999969
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.8264368583511631,
+      "mean_mae": 0.8314943999999986
+    },
+    {
+      "user": 1688,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.6856352008745766,
+      "mean_mae": 0.6437376000000016
+    },
+    {
+      "user": 1689,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.49835461904545314,
+      "mean_mae": 0.4828031999999955
+    },
+    {
+      "user": 1689,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.34174682678491675,
+      "mean_mae": 0.3218688000000046
+    },
+    {
+      "user": 1689,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.6953219336025118,
+      "mean_mae": 0.6437375999999864
+    },
+    {
+      "user": 1689,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.674609845239262,
+      "mean_mae": 0.6437375999999864
+    },
+    {
+      "user": 1689,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.43926885197975324,
+      "mean_mae": 0.3218688000000046
+    },
+    {
+      "user": 1689,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.1523937437102817,
+      "mean_mae": 0.16093439999999087
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.1606359227634906,
+      "mean_mae": 1.2874752000000067
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.6153703252377404,
+      "mean_mae": 0.616915200000007
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.25762792551355745,
+      "mean_mae": 0.32186880000000073
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.2866460622850755,
+      "mean_mae": 1.4215871999999994
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.975888499792267,
+      "mean_mae": 1.0460736000000015
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.8692137245798239,
+      "mean_mae": 0.9656063999999986
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.068823181996823,
+      "mean_mae": 1.1533632000000031
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.4155195450158615,
+      "mean_mae": 1.5288768000000044
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.8952004569150341,
+      "mean_mae": 0.9656064000000061
+    },
+    {
+      "user": 1691,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.7810902169118016,
+      "mean_mae": 0.8851392000000029
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.5493160840025189,
+      "mean_mae": 1.5288768000000008
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.6720826785687866,
+      "mean_mae": 1.5288768000000008
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.5580423961130954,
+      "mean_mae": 1.475232
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.489629132438286,
+      "mean_mae": 1.475232
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.4112413555212144,
+      "mean_mae": 1.1265408000000048
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.3183505070594825,
+      "mean_mae": 1.2338304000000024
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.999827952549196,
+      "mean_mae": 1.8239231999999994
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 2.43093459961459,
+      "mean_mae": 2.199436800000001
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.7403540776130342,
+      "mean_mae": 0.8583168000000008
+    },
+    {
+      "user": 1692,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.1834916969830593,
+      "mean_mae": 1.072896
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.7660379496162202,
+      "mean_mae": 0.7778496000000015
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 0.8878540441597617,
+      "mean_mae": 0.751027200000003
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.1434008020392321,
+      "mean_mae": 1.1265408000000046
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.9834738239083873,
+      "mean_mae": 0.9656064000000022
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 1.496130667847601,
+      "mean_mae": 1.421587200000003
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 0.9074691093364985,
+      "mean_mae": 0.7778496000000015
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.9299723282160438,
+      "mean_mae": 0.938784000000004
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 1.4976255924682702,
+      "mean_mae": 0.751027200000003
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.1141170841108672,
+      "mean_mae": 1.019251200000007
+    },
+    {
+      "user": 1706,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.9857744853881035,
+      "mean_mae": 0.9656064000000023
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 0.6557136500028298,
+      "mean_mae": 0.6973824000000101
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.067319236178233,
+      "mean_mae": 1.180185599999998
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.9230623481129824,
+      "mean_mae": 0.8046720000000039
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 0.9779742092173134,
+      "mean_mae": 0.9387840000000002
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.43748938240996105,
+      "mean_mae": 0.21457919999999545
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.1868327765321125,
+      "mean_mae": 1.2338303999999987
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.724740929337066,
+      "mean_mae": 0.8314944000000023
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.7632643464285591,
+      "mean_mae": 0.6437376000000091
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.0982373875917546,
+      "mean_mae": 1.0460736000000055
+    },
+    {
+      "user": 1724,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 0.9500007030636667,
+      "mean_mae": 0.8851391999999993
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.0662877230287138,
+      "mean_mae": 0.9656063999999985
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.268489412814646,
+      "mean_mae": 1.5288768000000008
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 1.075160439038526,
+      "mean_mae": 0.8046719999999964
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.0624650259382447,
+      "mean_mae": 0.8851392000000032
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.8705533740506137,
+      "mean_mae": 0.9924287999999931
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.1672108432072348,
+      "mean_mae": 1.0192512000000071
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 1.0966434079074892,
+      "mean_mae": 1.0460736000000017
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.7479292571975641,
+      "mean_mae": 0.7242047999999895
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 0.6359118831546308,
+      "mean_mae": 0.8583168000000008
+    },
+    {
+      "user": 1737,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.0695666840866445,
+      "mean_mae": 1.1533631999999994
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        0,
+        1
+      ],
+      "personal_mae": 1.0520702600572231,
+      "mean_mae": 1.0460735999999942
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        0,
+        2
+      ],
+      "personal_mae": 1.1488445675939756,
+      "mean_mae": 1.260652799999997
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        0,
+        3
+      ],
+      "personal_mae": 0.9999986620652246,
+      "mean_mae": 1.1533631999999956
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        0,
+        4
+      ],
+      "personal_mae": 1.4901689359520855,
+      "mean_mae": 1.4215871999999994
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        1,
+        2
+      ],
+      "personal_mae": 0.9750352043563787,
+      "mean_mae": 0.9656063999999986
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        1,
+        3
+      ],
+      "personal_mae": 1.599518009466797,
+      "mean_mae": 1.6629887999999973
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        1,
+        4
+      ],
+      "personal_mae": 0.43663907392260254,
+      "mean_mae": 0.3218688000000008
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        2,
+        3
+      ],
+      "personal_mae": 0.9475816269110737,
+      "mean_mae": 1.0728960000000003
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        2,
+        4
+      ],
+      "personal_mae": 1.484143669803925,
+      "mean_mae": 1.5556991999999916
+    },
+    {
+      "user": 1756,
+      "calibration_indices": [
+        3,
+        4
+      ],
+      "personal_mae": 1.1003967880279248,
+      "mean_mae": 0.7510271999999993
+    }
+  ],
+  "protocol_sha256": "7a11867eac04a118fec2d37434e2a1888d8a1104ada890c6efdbd15a6ec3a342"
+}

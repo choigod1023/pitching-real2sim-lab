@@ -1,0 +1,178 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "before_arm_rmse_mm": 10.669650732855942,
+      "after_arm_rmse_mm": 10.331828888070218,
+      "before_orientation_rmse_deg": {
+        "humerus": 43.519977923284614,
+        "radius": 38.89455025720873,
+        "hand": 62.64027057827215
+      },
+      "after_orientation_rmse_deg": {
+        "humerus": 41.321316750779374,
+        "radius": 13.365825798437328,
+        "hand": 17.948136149486576
+      },
+      "before_pronation_max_step_deg": 2.5991820244653745,
+      "after_pronation_max_step_deg": 4.113467162977753,
+      "observed_hand_relative_forearm_change_max_deg": 64.04442219889941,
+      "legacy_buggy": {
+        "hill_residual_rms_nm": 4427.4663807802335,
+        "max_endpoint_tendon_force_n": 44949.169046110976,
+        "max_normalized_fiber_length": 1.9706687612647584
+      },
+      "bugfix_only": {
+        "hill_residual_rms_nm": 281.66993665068554,
+        "max_endpoint_tendon_force_n": 2536.2716532485615,
+        "max_normalized_fiber_length": 2.1555887568711785
+      },
+      "direction_markers": {
+        "hill_residual_rms_nm": 182.1735367873589,
+        "max_endpoint_tendon_force_n": 2521.0424918353074,
+        "max_normalized_fiber_length": 2.108483867948599
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "before_arm_rmse_mm": 10.319725040348583,
+      "after_arm_rmse_mm": 9.956917263929997,
+      "before_orientation_rmse_deg": {
+        "humerus": 39.87855293653682,
+        "radius": 27.62011690476359,
+        "hand": 30.109303497644277
+      },
+      "after_orientation_rmse_deg": {
+        "humerus": 38.918712680255865,
+        "radius": 17.01050105262768,
+        "hand": 21.699329299386395
+      },
+      "before_pronation_max_step_deg": 5.005369237513709,
+      "after_pronation_max_step_deg": 3.5002724383178054,
+      "observed_hand_relative_forearm_change_max_deg": 53.364401995112736,
+      "legacy_buggy": {
+        "hill_residual_rms_nm": 4875.273902255555,
+        "max_endpoint_tendon_force_n": 39199.72326763651,
+        "max_normalized_fiber_length": 1.7444884123539295
+      },
+      "bugfix_only": {
+        "hill_residual_rms_nm": 219.98265942438573,
+        "max_endpoint_tendon_force_n": 2587.540641994158,
+        "max_normalized_fiber_length": 2.4102882387355486
+      },
+      "direction_markers": {
+        "hill_residual_rms_nm": 168.0462196376903,
+        "max_endpoint_tendon_force_n": 3292.458846193579,
+        "max_normalized_fiber_length": 2.6993683795875336
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "before_arm_rmse_mm": 10.380040398175039,
+      "after_arm_rmse_mm": 9.96462381739069,
+      "before_orientation_rmse_deg": {
+        "humerus": 38.94725048247713,
+        "radius": 26.784546759756196,
+        "hand": 28.66227884294128
+      },
+      "after_orientation_rmse_deg": {
+        "humerus": 37.998619891211774,
+        "radius": 17.36302207287729,
+        "hand": 21.9092803137028
+      },
+      "before_pronation_max_step_deg": 5.129848115148356,
+      "after_pronation_max_step_deg": 3.7965159564472173,
+      "observed_hand_relative_forearm_change_max_deg": 61.24040186761654,
+      "legacy_buggy": {
+        "hill_residual_rms_nm": 4815.75321095921,
+        "max_endpoint_tendon_force_n": 39028.84283798089,
+        "max_normalized_fiber_length": 1.7444884123539295
+      },
+      "bugfix_only": {
+        "hill_residual_rms_nm": 242.2119889863054,
+        "max_endpoint_tendon_force_n": 2656.0411993238586,
+        "max_normalized_fiber_length": 2.438541475132728
+      },
+      "direction_markers": {
+        "hill_residual_rms_nm": 170.3078970401522,
+        "max_endpoint_tendon_force_n": 3297.0167996581995,
+        "max_normalized_fiber_length": 2.7012363933025405
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "before_arm_rmse_mm": 10.244818120013107,
+      "after_arm_rmse_mm": 9.935719669611315,
+      "before_orientation_rmse_deg": {
+        "humerus": 40.212235302036795,
+        "radius": 25.34484616276611,
+        "hand": 28.709393563921715
+      },
+      "after_orientation_rmse_deg": {
+        "humerus": 39.17237569945485,
+        "radius": 17.308204505005513,
+        "hand": 22.311088999215023
+      },
+      "before_pronation_max_step_deg": 4.677198159138299,
+      "after_pronation_max_step_deg": 3.6074435368760396,
+      "observed_hand_relative_forearm_change_max_deg": 57.430279865753384,
+      "legacy_buggy": {
+        "hill_residual_rms_nm": 4703.399101807657,
+        "max_endpoint_tendon_force_n": 38688.59626594138,
+        "max_normalized_fiber_length": 1.7444884123539295
+      },
+      "bugfix_only": {
+        "hill_residual_rms_nm": 488.9748189628111,
+        "max_endpoint_tendon_force_n": 2587.813905668471,
+        "max_normalized_fiber_length": 2.3930369474554958
+      },
+      "direction_markers": {
+        "hill_residual_rms_nm": 172.52934506332286,
+        "max_endpoint_tendon_force_n": 5497.993894385938,
+        "max_normalized_fiber_length": 3.6032761862237415
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "before_arm_rmse_mm": 10.125357630869043,
+      "after_arm_rmse_mm": 9.811529411766587,
+      "before_orientation_rmse_deg": {
+        "humerus": 44.19871975171506,
+        "radius": 44.57500661833234,
+        "hand": 74.87281397015117
+      },
+      "after_orientation_rmse_deg": {
+        "humerus": 41.57113346821441,
+        "radius": 16.329873974674218,
+        "hand": 21.824305056509342
+      },
+      "before_pronation_max_step_deg": 2.7947305048662434,
+      "after_pronation_max_step_deg": 3.4973151781157865,
+      "observed_hand_relative_forearm_change_max_deg": 65.99796396827514,
+      "legacy_buggy": {
+        "hill_residual_rms_nm": 4328.207626484838,
+        "max_endpoint_tendon_force_n": 44756.08389851696,
+        "max_normalized_fiber_length": 2.04864698485799
+      },
+      "bugfix_only": {
+        "hill_residual_rms_nm": 263.5756850744787,
+        "max_endpoint_tendon_force_n": 2509.2544266939017,
+        "max_normalized_fiber_length": 2.127214314783258
+      },
+      "direction_markers": {
+        "hill_residual_rms_nm": 190.3681243337407,
+        "max_endpoint_tendon_force_n": 2483.0445626135665,
+        "max_normalized_fiber_length": 2.1286371043700467
+      }
+    }
+  ],
+  "mean_before_arm_rmse_mm": 10.347918384452342,
+  "mean_after_arm_rmse_mm": 10.000123810153761,
+  "mean_corrected_before_hill_residual_nm": 299.28301781973335,
+  "mean_after_hill_residual_nm": 176.685024572453,
+  "source_model_unchanged": true,
+  "prerequisite_passed": false,
+  "candidate_search_executed": false,
+  "accepted_candidates": 0,
+  "reason": "Orientation residual, source joint bounds and muscle force-balance residual remain. Source wrist is welded despite varying observed relative hand frames. No ball-contact or full muscle-driven baseline has passed."
+}

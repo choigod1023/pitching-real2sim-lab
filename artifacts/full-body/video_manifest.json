@@ -1,0 +1,14 @@
+[
+  {
+    "anchor": "fp",
+    "start": -0.35,
+    "end": 0.2,
+    "frames": 240
+  },
+  {
+    "anchor": "br",
+    "start": -0.5,
+    "end": 0.05,
+    "frames": 240
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-025-93632-y/MediaObjects/41598_2025_93632_MOESM1_ESM.docx",
+    "status": 200,
+    "bytes": 19506,
+    "sha256": "c70dfe84165825b1c06f811819f5a5a96e6eafcdc7bffad960ed0f21f36c3c7e",
+    "members": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "word/document.xml",
+      "word/_rels/document.xml.rels",
+      "word/footnotes.xml",
+      "word/endnotes.xml",
+      "word/theme/theme1.xml",
+      "word/settings.xml",
+      "word/styles.xml",
+      "word/webSettings.xml",
+      "word/fontTable.xml",
+      "docProps/core.xml",
+      "docProps/app.xml"
+    ],
+    "interpretation": "Coordinate-transform equations, no trial trajectories"
+  },
+  {
+    "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-025-93632-y/MediaObjects/41598_2025_93632_MOESM2_ESM.docx",
+    "status": 200,
+    "bytes": 921428,
+    "sha256": "f6cf84dc2eeb0f85b4c0751af5050718cd7b729ef27a28a9dd0a77f27ab2d4ab",
+    "members": [
+      "[Content_Types].xml",
+      "_rels/.rels",
+      "word/document.xml",
+      "word/_rels/document.xml.rels",
+      "word/footnotes.xml",
+      "word/endnotes.xml",
+      "word/media/image1.emf",
+      "word/media/image2.emf",
+      "word/media/image3.emf",
+      "word/media/image4.emf",
+      "word/theme/theme1.xml",
+      "word/settings.xml",
+      "word/styles.xml",
+      "word/webSettings.xml",
+      "word/fontTable.xml",
+      "docProps/core.xml",
+      "docProps/app.xml"
+    ],
+    "interpretation": "Summary figures, no trial trajectories"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10729979/fullTextXML",
+    "bytes": 87359,
+    "sha256": "3844747497115e2a89b73fded8d4417920df77c1f7f92e874abb2f311678dd55",
+    "type": "article XML, not raw observations"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11175286/fullTextXML",
+    "bytes": 91831,
+    "sha256": "6721ee407c6f4e6ed9e52434add965b03c7df9086d851a8aee6f64a9dfb35ae1",
+    "type": "article XML, not raw observations"
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11950353/fullTextXML",
+    "bytes": 117410,
+    "sha256": "2d886848e569786fa252fd1c51b5cb59d4960d74b2f871cd73f1a0683ea71e76",
+    "type": "article XML, not raw observations"
+  }
+]

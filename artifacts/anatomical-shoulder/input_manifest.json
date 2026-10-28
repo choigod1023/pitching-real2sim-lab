@@ -1,0 +1,62 @@
+{
+  "3034_1": {
+    "measured_speed_kmh": 130.19592960000003,
+    "n_samples": 62,
+    "source_sha256": {
+      "c3d": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1",
+      "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+      "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+      "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+    }
+  },
+  "3034_2": {
+    "measured_speed_kmh": 131.0006016,
+    "n_samples": 58,
+    "source_sha256": {
+      "c3d": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c",
+      "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+      "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+      "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+    }
+  },
+  "3034_3": {
+    "measured_speed_kmh": 129.23032320000002,
+    "n_samples": 58,
+    "source_sha256": {
+      "c3d": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757",
+      "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+      "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+      "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+    }
+  },
+  "3034_4": {
+    "measured_speed_kmh": 128.4256512,
+    "n_samples": 57,
+    "source_sha256": {
+      "c3d": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053",
+      "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+      "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+      "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+    }
+  },
+  "3034_5": {
+    "measured_speed_kmh": 128.5865856,
+    "n_samples": 66,
+    "source_sha256": {
+      "c3d": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1",
+      "metadata": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "poi": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+      "landmarks": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "joint_angles": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+      "joint_velos": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+    }
+  }
+}

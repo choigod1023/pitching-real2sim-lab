@@ -1,0 +1,159 @@
+{
+  "summary": {
+    "original__fixed_origin": {
+      "arm_rmse_mm": 39.18166851199555,
+      "root_force_rms_n": 1635.119226521064,
+      "root_torque_rms_nm": 442.5130101800016,
+      "internal_positive_work_j": 636.7444035209875,
+      "root_residual_positive_work_j": 65.44230659256256,
+      "added_origin_positive_work_j": 0.0,
+      "speed_mae_kmh": 17.7433149522795,
+      "change_from_first_mae_kmh": 1.895155036829589,
+      "no_change_mae_kmh": 1.28747520000001
+    },
+    "original__measured_mobile_origin": {
+      "arm_rmse_mm": 15.685811516638902,
+      "root_force_rms_n": 1531.3147355395624,
+      "root_torque_rms_nm": 442.55406079243784,
+      "internal_positive_work_j": 677.3859438488296,
+      "root_residual_positive_work_j": 76.66618798541484,
+      "added_origin_positive_work_j": 15.077605347249673,
+      "speed_mae_kmh": 15.98700343485633,
+      "change_from_first_mae_kmh": 1.995857111072084,
+      "no_change_mae_kmh": 1.28747520000001
+    },
+    "rounding_bins__fixed_origin": {
+      "arm_rmse_mm": 39.17849350124926,
+      "root_force_rms_n": 1134.663268716999,
+      "root_torque_rms_nm": 365.45027649411884,
+      "internal_positive_work_j": 562.9632097533977,
+      "root_residual_positive_work_j": 15.09647013745446,
+      "added_origin_positive_work_j": 0.0,
+      "speed_mae_kmh": 17.72433177082356,
+      "change_from_first_mae_kmh": 1.953922350414473,
+      "no_change_mae_kmh": 1.28747520000001
+    },
+    "rounding_bins__measured_mobile_origin": {
+      "arm_rmse_mm": 15.682119088067031,
+      "root_force_rms_n": 1053.3726216260259,
+      "root_torque_rms_nm": 367.08658584488586,
+      "internal_positive_work_j": 607.6008103248944,
+      "root_residual_positive_work_j": 25.2841490953436,
+      "added_origin_positive_work_j": 14.58664301687342,
+      "speed_mae_kmh": 15.980966781803891,
+      "change_from_first_mae_kmh": 2.056469710803892,
+      "no_change_mae_kmh": 1.28747520000001
+    }
+  },
+  "factorial": [
+    {
+      "pitch": "3034_1",
+      "speed_kmh": {
+        "rounding_only": -0.03339375313946391,
+        "structure_only": 1.6579307436025914,
+        "interaction": 0.0017686334856534813,
+        "combined": 1.626305623948781
+      },
+      "root_force_rms_n": {
+        "rounding_only": -535.2858773124668,
+        "structure_only": -91.34674545151483,
+        "interaction": 5.286716396869451,
+        "combined": -621.3459063671121
+      },
+      "arm_rmse_mm": {
+        "rounding_only": 0.004864344464593273,
+        "structure_only": -23.301214381676,
+        "interaction": -0.011231165059285786,
+        "combined": -23.307581202270693
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "speed_kmh": {
+        "rounding_only": 0.032833225896638396,
+        "structure_only": 1.9655059603406784,
+        "interaction": 0.0005122150154903693,
+        "combined": 1.9988514012528071
+      },
+      "root_force_rms_n": {
+        "rounding_only": -521.108486536546,
+        "structure_only": -103.74338594564347,
+        "interaction": 20.41187344138848,
+        "combined": -604.439999040801
+      },
+      "arm_rmse_mm": {
+        "rounding_only": -0.004620275353580894,
+        "structure_only": -22.198042044678076,
+        "interaction": -0.004308445065852595,
+        "combined": -22.20697076509751
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "speed_kmh": {
+        "rounding_only": 0.0648244416079109,
+        "structure_only": 1.7984694748060832,
+        "interaction": 0.005874236856143966,
+        "combined": 1.869168153270138
+      },
+      "root_force_rms_n": {
+        "rounding_only": -486.24691567963373,
+        "structure_only": -99.790119054142,
+        "interaction": 23.821866264795517,
+        "combined": -562.2151684689802
+      },
+      "arm_rmse_mm": {
+        "rounding_only": 0.0007668950294004162,
+        "structure_only": -22.387198229185238,
+        "interaction": 0.0017569560203654078,
+        "combined": -22.384674378135472
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "speed_kmh": {
+        "rounding_only": 0.050638036735335845,
+        "structure_only": 1.6571728786974518,
+        "interaction": -0.03417788384371079,
+        "combined": 1.6736330315890768
+      },
+      "root_force_rms_n": {
+        "rounding_only": -377.6089265113826,
+        "structure_only": -123.08970812766847,
+        "interaction": 30.859985328378116,
+        "combined": -469.83864931067296
+      },
+      "arm_rmse_mm": {
+        "rounding_only": -0.0032957639655606386,
+        "structure_only": -23.53743392865834,
+        "interaction": 0.0059718951342730975,
+        "combined": -23.534757797489632
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "speed_kmh": {
+        "rounding_only": -0.019986043820722443,
+        "structure_only": 1.702478529669051,
+        "interaction": -0.03870984353108042,
+        "combined": 1.6437826423172481
+      },
+      "root_force_rms_n": {
+        "rounding_only": -582.0295829802958,
+        "structure_only": -101.05249632853975,
+        "interaction": 32.18877802121051,
+        "combined": -650.8933012876249
+      },
+      "arm_rmse_mm": {
+        "rounding_only": -0.013590253906315297,
+        "structure_only": -26.055396392585568,
+        "interaction": 0.0052236698426142425,
+        "combined": -26.063762976649272
+      }
+    }
+  ],
+  "example_lower_body_change_rmse_mm": 0.06283243170629689,
+  "ability_improvement_demonstrated": false,
+  "ready_for_same_capacity_optimization": false,
+  "reason": "Observed shoulder translation is prescribed and has new unconstrained actuator forces. Ground residual remains. Speed change prediction must also beat no-change. Reconstruction improvement is not an intervention effect."
+}
