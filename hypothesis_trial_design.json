@@ -1,0 +1,196 @@
+{
+  "scope": "Design sensitivity only: synthetic independent normal daily contrasts, not athlete trial results or required sample size",
+  "variance_source": "sqrt(2) times sample SD of five observed 3034 pitches; NOT device error or measured day-level variance",
+  "assumed_daily_contrast_sd": {
+    "speed_kmh": 1.5486539284718057,
+    "elbow_nm": 1.6832588648214568,
+    "shoulder_nm": 2.0712540631221494
+  },
+  "normal_errors_and_independent_endpoints_assumed": true,
+  "criterion": "lower speed bound >1 km/h AND upper elbow/shoulder bounds <=0; one-sided alpha .05/3 each",
+  "repetitions_per_scenario": 10000,
+  "scenarios": [
+    {
+      "independent_days": 8,
+      "assumed_effect": [
+        0,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 8,
+      "assumed_effect": [
+        1,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 8,
+      "assumed_effect": [
+        1.77,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0001
+    },
+    {
+      "independent_days": 8,
+      "assumed_effect": [
+        1.77,
+        -1,
+        -2
+      ],
+      "simulated_joint_pass_fraction": 0.0241
+    },
+    {
+      "independent_days": 8,
+      "assumed_effect": [
+        1.77,
+        -3,
+        -3
+      ],
+      "simulated_joint_pass_fraction": 0.1522
+    },
+    {
+      "independent_days": 12,
+      "assumed_effect": [
+        0,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 12,
+      "assumed_effect": [
+        1,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 12,
+      "assumed_effect": [
+        1.77,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0003
+    },
+    {
+      "independent_days": 12,
+      "assumed_effect": [
+        1.77,
+        -1,
+        -2
+      ],
+      "simulated_joint_pass_fraction": 0.0894
+    },
+    {
+      "independent_days": 12,
+      "assumed_effect": [
+        1.77,
+        -3,
+        -3
+      ],
+      "simulated_joint_pass_fraction": 0.2827
+    },
+    {
+      "independent_days": 16,
+      "assumed_effect": [
+        0,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 16,
+      "assumed_effect": [
+        1,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 16,
+      "assumed_effect": [
+        1.77,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0002
+    },
+    {
+      "independent_days": 16,
+      "assumed_effect": [
+        1.77,
+        -1,
+        -2
+      ],
+      "simulated_joint_pass_fraction": 0.1867
+    },
+    {
+      "independent_days": 16,
+      "assumed_effect": [
+        1.77,
+        -3,
+        -3
+      ],
+      "simulated_joint_pass_fraction": 0.3811
+    },
+    {
+      "independent_days": 24,
+      "assumed_effect": [
+        0,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 24,
+      "assumed_effect": [
+        1,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0
+    },
+    {
+      "independent_days": 24,
+      "assumed_effect": [
+        1.77,
+        0,
+        0
+      ],
+      "simulated_joint_pass_fraction": 0.0004
+    },
+    {
+      "independent_days": 24,
+      "assumed_effect": [
+        1.77,
+        -1,
+        -2
+      ],
+      "simulated_joint_pass_fraction": 0.4165
+    },
+    {
+      "independent_days": 24,
+      "assumed_effect": [
+        1.77,
+        -3,
+        -3
+      ],
+      "simulated_joint_pass_fraction": 0.5666
+    }
+  ],
+  "schedule_is_pitch_volume_recommendation": false,
+  "human_trial_executed": false
+}

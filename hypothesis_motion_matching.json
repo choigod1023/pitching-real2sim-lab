@@ -1,0 +1,498 @@
+{
+  "scope": "Internal exploratory association/falsification, not randomized intervention or pristine external validation",
+  "hypothesis": "Small athlete-specific motion change can improve speed >=1 km/h without increased arm-load proxies",
+  "cohort_rule": "odd athlete user IDs; representative user2 is even; reused internal data",
+  "previously_analyzed_30pair_users": [
+    2,
+    283,
+    359,
+    625,
+    927,
+    976,
+    1027,
+    1466,
+    1539,
+    1589,
+    1590,
+    1605,
+    1615,
+    1621,
+    1630,
+    1632,
+    1633,
+    1663,
+    1685,
+    1691,
+    1692,
+    1724
+  ],
+  "primary_athletes": 43,
+  "primary_pitches": 175,
+  "valid_total": 402,
+  "signal_exclusions": [
+    {
+      "pitch": "1370_1",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2857_4",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2918_3",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2919_2",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2919_3",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2919_4",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2919_5",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2923_1",
+      "reason": "invalid events"
+    },
+    {
+      "pitch": "2923_2",
+      "reason": "invalid events"
+    }
+  ],
+  "target_motion_delta": {
+    "knee_extension": 1.8573,
+    "lateral_tilt": -1.948,
+    "arm_slot": 2.0313,
+    "rear_peak_ms": 5.555555555555555
+  },
+  "matching_range_in_target_units": [
+    0.25,
+    1.5
+  ],
+  "orientation_uses_outcomes": false,
+  "inactive_factors_controlled": false,
+  "pure_factorial_effect_identified": false,
+  "input_sha256": {
+    "openbiomechanics\\baseball_pitching\\data\\metadata.csv": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+    "openbiomechanics\\baseball_pitching\\data\\poi\\poi_metrics.csv": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+    "openbiomechanics\\baseball_pitching\\data\\full_sig\\joint_velos.csv": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297",
+    "pitching-hypothesis-test-20261028\\load_matched_summary.json": "b9e954a198191472ab2011c1db9963adc2b3c2d9ee8e0dc4524599d4826965fa"
+  },
+  "new_physical_velocity_optimization_executed": false,
+  "causal_hypothesis_confirmed": false,
+  "results": [
+    {
+      "mask": "C",
+      "pairs": 101,
+      "athletes": 34,
+      "deltas": [
+        {
+          "feature": "speed_kmh",
+          "n_athletes": 34,
+          "mean_delta": -0.0796783058823534,
+          "median_athlete_delta": 0.04023360000000764,
+          "bootstrap_mean_95": [
+            -0.44947045129412144,
+            0.2945730635294099
+          ],
+          "positive_athletes": 18,
+          "negative_athletes": 16,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "elbow_varus_moment",
+          "n_athletes": 34,
+          "mean_delta": 1.8151883333333323,
+          "median_athlete_delta": 0.6356499999999994,
+          "bootstrap_mean_95": [
+            0.0997710367647049,
+            3.8640749031862733
+          ],
+          "positive_athletes": 18,
+          "negative_athletes": 16,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "shoulder_internal_rotation_moment",
+          "n_athletes": 34,
+          "mean_delta": 1.6460502450980397,
+          "median_athlete_delta": 0.35065833333334007,
+          "bootstrap_mean_95": [
+            0.03833232843137372,
+            3.4780954963235295
+          ],
+          "positive_athletes": 20,
+          "negative_athletes": 14,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "arm_generation_j",
+          "n_athletes": 34,
+          "mean_delta": -1.6831312254901951,
+          "median_athlete_delta": -0.8532500000000033,
+          "bootstrap_mean_95": [
+            -3.957141253676471,
+            0.47241498651960806
+          ],
+          "positive_athletes": 14,
+          "negative_athletes": 20,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        }
+      ],
+      "joint_observational_success_pairs": 5,
+      "joint_success_athlete_balanced_fraction": 0.07352941176470588,
+      "inactive_scaled_change_median": 1.9941851074139887
+    },
+    {
+      "mask": "B",
+      "pairs": 26,
+      "athletes": 17,
+      "deltas": [
+        {
+          "feature": "speed_kmh",
+          "n_athletes": 17,
+          "mean_delta": 0.2556016941176424,
+          "median_athlete_delta": 0.32186879999997586,
+          "bootstrap_mean_95": [
+            -0.23205320470588567,
+            0.7242047999999905
+          ],
+          "positive_athletes": 12,
+          "negative_athletes": 3,
+          "unresolved_athletes": 2,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "elbow_varus_moment",
+          "n_athletes": 17,
+          "mean_delta": -2.4870166666666638,
+          "median_athlete_delta": -2.4224999999999994,
+          "bootstrap_mean_95": [
+            -3.462295441176468,
+            -1.4146254411764692
+          ],
+          "positive_athletes": 2,
+          "negative_athletes": 15,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "shoulder_internal_rotation_moment",
+          "n_athletes": 17,
+          "mean_delta": -2.42531568627451,
+          "median_athlete_delta": -2.715350000000008,
+          "bootstrap_mean_95": [
+            -3.638166078431373,
+            -1.1136420833333354
+          ],
+          "positive_athletes": 3,
+          "negative_athletes": 14,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "arm_generation_j",
+          "n_athletes": 17,
+          "mean_delta": 0.1482147058823534,
+          "median_athlete_delta": 0.07529999999999859,
+          "bootstrap_mean_95": [
+            -2.7559678676470587,
+            3.1303849264705894
+          ],
+          "positive_athletes": 10,
+          "negative_athletes": 7,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        }
+      ],
+      "joint_observational_success_pairs": 2,
+      "joint_success_athlete_balanced_fraction": 0.058823529411764705,
+      "inactive_scaled_change_median": 1.9149263446939004
+    },
+    {
+      "mask": "BC",
+      "pairs": 2,
+      "athletes": 2,
+      "deltas": [
+        {
+          "feature": "speed_kmh",
+          "n_athletes": 2,
+          "mean_delta": 0.643737599999973,
+          "median_athlete_delta": 0.643737599999973,
+          "bootstrap_mean_95": [
+            0.16093439999997372,
+            1.1265407999999724
+          ],
+          "positive_athletes": 2,
+          "negative_athletes": 0,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "elbow_varus_moment",
+          "n_athletes": 2,
+          "mean_delta": -1.2089500000000015,
+          "median_athlete_delta": -1.2089500000000015,
+          "bootstrap_mean_95": [
+            -1.9101,
+            -0.5078000000000031
+          ],
+          "positive_athletes": 0,
+          "negative_athletes": 2,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "shoulder_internal_rotation_moment",
+          "n_athletes": 2,
+          "mean_delta": -0.7896999999999963,
+          "median_athlete_delta": -0.7896999999999963,
+          "bootstrap_mean_95": [
+            -2.2382999999999953,
+            0.6589000000000027
+          ],
+          "positive_athletes": 1,
+          "negative_athletes": 1,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "arm_generation_j",
+          "n_athletes": 2,
+          "mean_delta": -3.8167500000000008,
+          "median_athlete_delta": -3.8167500000000008,
+          "bootstrap_mean_95": [
+            -5.403700000000008,
+            -2.229799999999994
+          ],
+          "positive_athletes": 0,
+          "negative_athletes": 2,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        }
+      ],
+      "joint_observational_success_pairs": 1,
+      "joint_success_athlete_balanced_fraction": 0.5,
+      "inactive_scaled_change_median": 1.3763796909492272
+    },
+    {
+      "mask": "A",
+      "pairs": 120,
+      "athletes": 36,
+      "deltas": [
+        {
+          "feature": "speed_kmh",
+          "n_athletes": 36,
+          "mean_delta": -0.2994139098412684,
+          "median_athlete_delta": -0.20563839999999958,
+          "bootstrap_mean_95": [
+            -0.5954677464126941,
+            -0.0012988108571444206
+          ],
+          "positive_athletes": 13,
+          "negative_athletes": 22,
+          "unresolved_athletes": 1,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "elbow_varus_moment",
+          "n_athletes": 36,
+          "mean_delta": 0.7206914043209871,
+          "median_athlete_delta": 0.3116750000000005,
+          "bootstrap_mean_95": [
+            -0.5098276597222224,
+            2.3886620733024664
+          ],
+          "positive_athletes": 21,
+          "negative_athletes": 15,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "shoulder_internal_rotation_moment",
+          "n_athletes": 36,
+          "mean_delta": 0.787450687830688,
+          "median_athlete_delta": 0.001549999999999347,
+          "bootstrap_mean_95": [
+            -0.26861460400132153,
+            2.157281891203704
+          ],
+          "positive_athletes": 18,
+          "negative_athletes": 18,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "arm_generation_j",
+          "n_athletes": 36,
+          "mean_delta": 0.13681816798941832,
+          "median_athlete_delta": -0.006099999999999994,
+          "bootstrap_mean_95": [
+            -1.1278376099537035,
+            1.5371934290674598
+          ],
+          "positive_athletes": 18,
+          "negative_athletes": 18,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        }
+      ],
+      "joint_observational_success_pairs": 4,
+      "joint_success_athlete_balanced_fraction": 0.03333333333333333,
+      "inactive_scaled_change_median": 1.4989999999999997
+    },
+    {
+      "mask": "AC",
+      "pairs": 26,
+      "athletes": 20,
+      "deltas": [
+        {
+          "feature": "speed_kmh",
+          "n_athletes": 20,
+          "mean_delta": -0.07242048000000087,
+          "median_athlete_delta": 0.0804672000000058,
+          "bootstrap_mean_95": [
+            -0.8368588800000015,
+            0.6880951439999997
+          ],
+          "positive_athletes": 10,
+          "negative_athletes": 7,
+          "unresolved_athletes": 3,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "elbow_varus_moment",
+          "n_athletes": 20,
+          "mean_delta": 2.72568333333333,
+          "median_athlete_delta": 1.1837499999999999,
+          "bootstrap_mean_95": [
+            0.7520388541666635,
+            5.243882541666662
+          ],
+          "positive_athletes": 14,
+          "negative_athletes": 6,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "shoulder_internal_rotation_moment",
+          "n_athletes": 20,
+          "mean_delta": 2.4211066666666676,
+          "median_athlete_delta": 1.815950000000008,
+          "bootstrap_mean_95": [
+            0.5498162083333358,
+            4.520156437499995
+          ],
+          "positive_athletes": 13,
+          "negative_athletes": 7,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "arm_generation_j",
+          "n_athletes": 20,
+          "mean_delta": -1.6028641666666659,
+          "median_athlete_delta": -0.5966500000000021,
+          "bootstrap_mean_95": [
+            -4.859029187499998,
+            1.7655622916666658
+          ],
+          "positive_athletes": 9,
+          "negative_athletes": 11,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        }
+      ],
+      "joint_observational_success_pairs": 0,
+      "joint_success_athlete_balanced_fraction": 0.0,
+      "inactive_scaled_change_median": 1.4891202678087927
+    },
+    {
+      "mask": "AB",
+      "pairs": 5,
+      "athletes": 5,
+      "deltas": [
+        {
+          "feature": "speed_kmh",
+          "n_athletes": 5,
+          "mean_delta": 0.19312127999999973,
+          "median_athlete_delta": 0.0,
+          "bootstrap_mean_95": [
+            -1.4805964800000027,
+            2.253081599999996
+          ],
+          "positive_athletes": 2,
+          "negative_athletes": 2,
+          "unresolved_athletes": 1,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "elbow_varus_moment",
+          "n_athletes": 5,
+          "mean_delta": -1.6002599999999974,
+          "median_athlete_delta": -1.4620999999999924,
+          "bootstrap_mean_95": [
+            -3.5559399999999983,
+            0.6095600000000048
+          ],
+          "positive_athletes": 1,
+          "negative_athletes": 4,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "shoulder_internal_rotation_moment",
+          "n_athletes": 5,
+          "mean_delta": -1.44726,
+          "median_athlete_delta": -2.0626000000000033,
+          "bootstrap_mean_95": [
+            -3.4535200000000033,
+            0.6070400000000035
+          ],
+          "positive_athletes": 2,
+          "negative_athletes": 3,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        },
+        {
+          "feature": "arm_generation_j",
+          "n_athletes": 5,
+          "mean_delta": -4.19328,
+          "median_athlete_delta": -3.9832000000000036,
+          "bootstrap_mean_95": [
+            -9.384840000000004,
+            0.26980000000000415
+          ],
+          "positive_athletes": 2,
+          "negative_athletes": 3,
+          "unresolved_athletes": 0,
+          "direction_tolerance": 1e-08
+        }
+      ],
+      "joint_observational_success_pairs": 0,
+      "joint_success_athlete_balanced_fraction": 0.0,
+      "inactive_scaled_change_median": 1.0040000000000227
+    },
+    {
+      "mask": "ABC",
+      "pairs": 0,
+      "athletes": 0,
+      "deltas": [],
+      "joint_observational_success_pairs": 0,
+      "joint_success_athlete_balanced_fraction": null,
+      "inactive_scaled_change_median": null
+    }
+  ]
+}
