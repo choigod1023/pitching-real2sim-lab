@@ -1,0 +1,79 @@
+{
+ "fixed_15cm_bias_kmh": -17.3,
+ "release_frame_anchor": {
+  "c3d_offset0_frame973": {
+   "distance_cm": 18.0,
+   "bias_kmh": -8.2
+  },
+  "c3d_offset0_frame974": {
+   "distance_cm": 20.5,
+   "bias_kmh": -0.8
+  },
+  "c3d_offset0_frame975": {
+   "distance_cm": 22.5,
+   "bias_kmh": 5.2
+  },
+  "c3d_offset0_frame976": {
+   "distance_cm": 25.3,
+   "bias_kmh": 13.7
+  },
+  "c3d_offset0_frame977": {
+   "distance_cm": 28.9,
+   "bias_kmh": 24.5
+  },
+  "c3d_offset1_frame973": {
+   "distance_cm": 17.4,
+   "bias_kmh": -10.1
+  },
+  "c3d_offset1_frame974": {
+   "distance_cm": 19.3,
+   "bias_kmh": -4.5
+  },
+  "c3d_offset1_frame975": {
+   "distance_cm": 21.1,
+   "bias_kmh": 0.9
+  },
+  "c3d_offset1_frame976": {
+   "distance_cm": 23.7,
+   "bias_kmh": 8.9
+  },
+  "c3d_offset1_frame977": {
+   "distance_cm": 27.2,
+   "bias_kmh": 19.3
+  },
+  "c3d_offset2_frame973": {
+   "distance_cm": 17.9,
+   "bias_kmh": -8.7
+  },
+  "c3d_offset2_frame974": {
+   "distance_cm": 19.1,
+   "bias_kmh": -5.1
+  },
+  "c3d_offset2_frame975": {
+   "distance_cm": 20.6,
+   "bias_kmh": -0.5
+  },
+  "c3d_offset2_frame976": {
+   "distance_cm": 23.0,
+   "bias_kmh": 6.7
+  },
+  "c3d_offset2_frame977": {
+   "distance_cm": 26.2,
+   "bias_kmh": 16.2
+  }
+ },
+ "release_time_shift_at_20cm": {
+  "-3": 0.1,
+  "-2": 1.7,
+  "-1": 0.9,
+  "0": -2.3,
+  "1": -7.4,
+  "2": -13.7,
+  "3": -20.5
+ },
+ "cutoff_at_20cm": {
+  "20": -2.3,
+  "30": 4.3,
+  "50": 5.8
+ }
+}

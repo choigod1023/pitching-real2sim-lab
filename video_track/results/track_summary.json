@@ -1,0 +1,47 @@
+{
+ "frames": [
+  956,
+  1003
+ ],
+ "n_frames": 48,
+ "reprojection_px": {
+  "median": 1.5458030387304365,
+  "p95": 3.9340465798950617,
+  "max": 9.53514108654049
+ },
+ "speed_fits": {
+  "linear_all": {
+   "speed_mid_kmh": 99.11891198741843,
+   "position_rmse_mm": 10.372704489071856,
+   "frames": [
+    974,
+    1003
+   ]
+  },
+  "quadratic_974_990": {
+   "speed_mid_kmh": 101.55153509417764,
+   "position_rmse_mm": 4.828388386529709,
+   "frames": [
+    974,
+    990
+   ]
+  },
+  "quadratic_980_996": {
+   "speed_mid_kmh": 99.32403220642453,
+   "position_rmse_mm": 4.757188735786907,
+   "frames": [
+    980,
+    996
+   ]
+  },
+  "quadratic_986_1002": {
+   "speed_mid_kmh": 97.01767411839604,
+   "position_rmse_mm": 3.6370055682143296,
+   "frames": [
+    986,
+    1002
+   ]
+  }
+ },
+ "scope": "image-derived, provisional calibration, unvalidated synchronization; radar value not used"
+}
