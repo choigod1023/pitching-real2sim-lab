@@ -1,0 +1,66 @@
+{
+  "source_url": "https://docs.google.com/spreadsheets/d/1NhpF8DnfBdio_xsU7B44KNuHghtePDp-d3juvCYNm9Q/edit",
+  "source_sha256": "1c8eb794cf86a6676c993fdc9f9f9f6012d5f3ffb3e46c91bae0562b028a815b",
+  "shot_lists": {
+    "Prime Color - Shot List": {
+      "cell": "H17",
+      "text": "Baseball Throw - 62.7 MPH",
+      "speed_label": {
+        "mph": 62.7,
+        "kmh": 100.90586880000001,
+        "kind": "source label; not instrument accuracy verification"
+      },
+      "capture_rate_cell": "D17",
+      "declared_capture_fps": 360.0
+    },
+    "Edgertronic - Shot List": {
+      "cell": "H16",
+      "text": "Baseball Throw - 69.1 MPH",
+      "speed_label": {
+        "mph": 69.1,
+        "kmh": 111.2056704,
+        "kind": "source label; not instrument accuracy verification"
+      },
+      "capture_rate_cell": "D16",
+      "declared_capture_fps": 360.0
+    },
+    "iPhone - Shot List": {
+      "cell": "H13",
+      "text": "Baseball Throw - 70.3 MPH",
+      "speed_label": {
+        "mph": 70.3,
+        "kmh": 113.1368832,
+        "kind": "source label; not instrument accuracy verification"
+      },
+      "capture_rate_cell": "D13",
+      "declared_capture_fps": 240.0
+    }
+  },
+  "calibration_definition": {
+    "cube_source_cell": "OBP-CV Readme!B14",
+    "cube_source_text": "- Calibration cube is 27.5 inches from red joint center to joint center with the middle joint center being exactly half the distance.",
+    "outer_red_joint_spacing_mm": 698.5,
+    "midpoint_spacing_mm": 349.25,
+    "checkerboard_cell": "OBP-CV Readme!B17",
+    "checkerboard_text": "- Checkerboard is 5x8 with blue squares to denote orientation. Each square is 100mm in size."
+  },
+  "synchronization_cell": "OBP-CV Readme!B20",
+  "synchronization_text": "- Both the OptiTrack and Edgertronic systems are GENLOCKED and SYNCHRONIZED with global shutters.",
+  "timing_caveat_cell": "OBP-CV Readme!B26",
+  "timing_caveat": "Shot List Tabs have the video descriptions, frame rates, and other details - it is possible some frame rates may be slightly inaccurate. Double check!",
+  "edgertronic_filename_labels": [
+    {
+      "file_label_mph": 67,
+      "file_label_kmh": 107.82604800000001,
+      "measured_speed_kmh": null,
+      "worksheet_trial_correspondence": "unresolved"
+    },
+    {
+      "file_label_mph": 70,
+      "file_label_kmh": 112.65408000000001,
+      "measured_speed_kmh": null,
+      "worksheet_trial_correspondence": "unresolved"
+    }
+  ],
+  "files_with_pose": "Only BaseballThrow_001 was found among eight initial C3D folder entries; no new 67/70 Theia assignment established."
+}
