@@ -1,0 +1,55 @@
+{
+  "review_date": "2026-10-28",
+  "scope": "Reviewed accessible sources, not a proof of global data unavailability",
+  "scientific_stage_passed": false,
+  "jstage_2023": {
+    "doi": "10.1299/mej.23-00220",
+    "pdf_bytes": 1478552,
+    "pdf_sha256": "885542e9714f3f5b55cc4a87e10a818c0daed2011cdff09cca683c391c58ff8a",
+    "text_sha256": "c8ac7a25926fa5edaaa33f7e186f6f76e12d1f5209bbe88bcbb0d454e8a42650",
+    "published_supplement_count": 0,
+    "raw_trajectories_obtained": false,
+    "method_relevance": "Synchronized finger and ball measurements at 960Hz; data request would require user authorization"
+  },
+  "prime_folder": {
+    "url": "https://drive.google.com/drive/folders/1YyfaWKE4o3GgYT1IaVgefDGWgYmE0ILz",
+    "http_page_sha256": "e4e2c04cbba676bb50534c354cd52daf8c3d3a195b4e572e57422d7845e3d491",
+    "initial_html_labels": 50,
+    "browser_loaded_rows": 128,
+    "initial_html_is_complete_inventory": false,
+    "observed_baseball_labels": [
+      "OBP_movement_BaseballThrow_001-Camera 15 (#805316985).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 16 (#805316879).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 17 (#805316980).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 18 (#805316986).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 19 (#805317743).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 20 (#805317744).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 21 (#805317745).mp4",
+      "OBP_movement_BaseballThrow_001-Camera 22 (#805317746).mp4"
+    ],
+    "browser_end_observed": "OBP_static_groundplane_001 camera15-22",
+    "full_project_inventory_claim": false
+  },
+  "pitchermotion": {
+    "source": "https://github.com/PitchingBot/PitcherMotion",
+    "declared_video_fps": 60,
+    "body_points": "2D pixels; V1-V51",
+    "statcast_linked": true,
+    "finger_contact_groundtruth_supplied_by_readme": false,
+    "synchronized_3d_ball_groundtruth_supplied_by_readme": false
+  },
+  "vicon_4tu_metadata": {
+    "doi": "10.4121/22134494",
+    "metadata_sha256": "9d11db36a307adbbfc7cf4aac51426e4e24ce4da6e261277546d391983762744",
+    "declared_content": "pelvis/trunk peak angular velocity, separation time, external valgus torque; 11 youth pitchers",
+    "files_inspected": false
+  },
+  "pitchperfect_metadata": {
+    "doi": "10.4121/f86ba220-08a1-4fa0-89a9-d8995790675b",
+    "metadata_sha256": "1b7df2f447c556007ee60863a9a4ab4b61d342b5e67f6f11a6fc88fa2d6ded0d",
+    "files_inspected": false,
+    "access_problem": "4TU connection timeout in previous source audit; not evidence that data do not exist"
+  },
+  "previous_source_review": "../data-observability-20261028/DATA_OBSERVABILITY_PROGRESS.md",
+  "outcome": "Current data insufficient for the frozen data gate; user decision needed for data requests or a narrower observational scope."
+}
