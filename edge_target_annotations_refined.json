@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "frame": 120,
+  "method": "Single analyst visual placement on native frames, enlarged only for inspection. Not independently reviewed; no inferred hidden corner. Round 2: image-only bright PVC centre-line intersections where >=2 incident visible edges exist; full profile/shift logs retained. Rejected as final calibration: held-out checks failed.",
+  "cube_side_mm": 698.5,
+  "local_coordinate_convention": "A=(1,0), B=(0,0), C=(0,1), D=(1,1), z=0 bottom, z=1 top. A left, B far, C right, D near in each camera's local image convention. Camera 4 defines the reference cube frame; horizontal cube symmetry is explicitly enumerated.",
+  "cube_coordinates": {
+    "A0": [
+      1,
+      0,
+      0
+    ],
+    "B0": [
+      0,
+      0,
+      0
+    ],
+    "C0": [
+      0,
+      1,
+      0
+    ],
+    "D0": [
+      1,
+      1,
+      0
+    ],
+    "A1": [
+      1,
+      0,
+      1
+    ],
+    "B1": [
+      0,
+      0,
+      1
+    ],
+    "C1": [
+      0,
+      1,
+      1
+    ],
+    "D1": [
+      1,
+      1,
+      1
+    ],
+    "Am": [
+      1,
+      0,
+      0.5
+    ],
+    "Bm": [
+      0,
+      0,
+      0.5
+    ],
+    "Cm": [
+      0,
+      1,
+      0.5
+    ],
+    "Dm": [
+      1,
+      1,
+      0.5
+    ]
+  },
+  "cameras": {
+    "1": {
+      "fit": {
+        "A0": [
+          626.4290892439815,
+          923.8264176815125
+        ],
+        "B0": [
+          772.7624087295903,
+          888.2500519715596
+        ],
+        "C0": [
+          974.4103851048764,
+          915.8425757523272
+        ],
+        "D0": [
+          847.6976473504143,
+          963.9676971406658
+        ],
+        "A1": [
+          630.9312485338139,
+          673.1542954870365
+        ],
+        "B1": [
+          770.7952336534032,
+          663.6818954048206
+        ],
+        "C1": [
+          978.2168959838511,
+          673.7162806657188
+        ],
+        "D1": [
+          848.0441886742268,
+          682.0233994172864
+        ]
+      },
+      "heldout": {
+        "Am": [
+          630,
+          799
+        ],
+        "Bm": [
+          772,
+          777
+        ],
+        "Cm": [
+          977,
+          798
+        ],
+        "Dm": [
+          848,
+          826
+        ]
+      },
+      "plane": {
+        "O": [
+          778,
+          929
+        ],
+        "L": [
+          855,
+          929
+        ],
+        "S": [
+          777,
+          915
+        ]
+      },
+      "plane_quality": "Mounting centres are small and low contrast; approximate manual locations, not reflective-marker sphere centres."
+    },
+    "2": {
+      "fit": {
+        "A0": [
+          631.8632352406378,
+          772.1702548520659
+        ],
+        "B0": [
+          798.0788404646563,
+          730.5619681729893
+        ],
+        "C0": [
+          1030.271414171371,
+          779.3242585559424
+        ],
+        "D0": [
+          883.7958593471175,
+          829.1566066783548
+        ],
+        "A1": [
+          647.8138303013502,
+          479.0222431248191
+        ],
+        "B1": [
+          815.0323056641504,
+          479.26531450618364
+        ],
+        "C1": [
+          1053.427204046249,
+          496.47900661893374
+        ],
+        "D1": [
+          904.2623926951596,
+          511.9093079360806
+        ]
+      },
+      "heldout": {
+        "Am": [
+          642,
+          635
+        ],
+        "Bm": [
+          811,
+          612
+        ],
+        "Cm": [
+          1040,
+          644
+        ],
+        "Dm": [
+          896,
+          676
+        ]
+      },
+      "plane": {
+        "O": [
+          792,
+          783
+        ],
+        "L": [
+          855,
+          770
+        ],
+        "S": [
+          791,
+          763
+        ]
+      },
+      "plane_quality": "Mounting centres are small and low contrast; approximate manual locations."
+    },
+    "3": {
+      "fit": {
+        "A0": [
+          364.3196479225848,
+          808.3966988152112
+        ],
+        "B0": [
+          507.03055648726945,
+          758.5506545262073
+        ],
+        "C0": [
+          674.0687514611905,
+          770.9424832339184
+        ],
+        "D0": [
+          543.6875367299498,
+          828.5579552904248
+        ],
+        "A1": [
+          350,
+          583
+        ],
+        "C1": [
+          661,
+          557
+        ]
+      },
+      "heldout": {
+        "Am": [
+          358,
+          698
+        ],
+        "Cm": [
+          668,
+          669
+        ],
+        "Dm": [
+          531,
+          705
+        ]
+      },
+      "excluded": {
+        "B1": "Overlapping top rails obscure the joint centre",
+        "D1": "Overlapping top rails obscure the joint centre",
+        "Bm": "Far vertical joint centre unclear"
+      },
+      "plane": {
+        "O": [
+          558,
+          797
+        ],
+        "L": [
+          505,
+          798
+        ],
+        "S": [
+          556,
+          780
+        ]
+      },
+      "plane_quality": "Mounting centres are small and low contrast; approximate manual locations."
+    },
+    "4": {
+      "fit": {
+        "A0": [
+          517.291133255345,
+          490.03970091288255
+        ],
+        "B0": [
+          615.8343417236773,
+          429.85316313339183
+        ],
+        "C0": [
+          735.8434816114434,
+          474.18548751895474
+        ],
+        "D0": [
+          647.4831325645705,
+          547.3938051353163
+        ],
+        "A1": [
+          509.3620105448694,
+          346.5489859043791
+        ],
+        "B1": [
+          612.7242320875317,
+          294.8212322284644
+        ],
+        "C1": [
+          746.7877203119305,
+          335.51381831612713
+        ],
+        "D1": [
+          648.4847711173468,
+          392.94030091102707
+        ]
+      },
+      "heldout": {
+        "Am": [
+          512,
+          421
+        ],
+        "Bm": [
+          616,
+          365
+        ],
+        "Cm": [
+          742,
+          410
+        ],
+        "Dm": [
+          649,
+          473
+        ]
+      },
+      "plane": {
+        "O": [
+          612,
+          495
+        ],
+        "L": [
+          658,
+          496
+        ],
+        "S": [
+          612,
+          478
+        ]
+      },
+      "plane_quality": "Mounting centres are small and low contrast; approximate manual locations."
+    }
+  },
+  "plane_distances_mm": {
+    "O-L": 200,
+    "O-S": 150,
+    "L-S": 250
+  },
+  "annotation_round": 2,
+  "refinement_window_px": 8
+}
