@@ -4,6 +4,8 @@ A personal, self-directed research project by **Jang JunHyeok**, a student in th
 
 ## Goal
 
+Read the [same-pitch model audit](SAME_PITCH_FINDINGS.md) and [Obsidian model guide](obsidian/야구%20Real2Sim/00%20야구%20연구%20지도.md) before comparing error numbers across experiments. Recorded-speed gaps, observed-ball extrapolation errors, integration errors, and athlete improvement are separate claims.
+
 Can a small change in an athlete's joint motion raise pitch speed **without raising the athlete's force capacity**? To answer this I try to turn measured pitching motion into a physics simulation (Real2Sim), predict the speed of the released ball, and test whether the prediction survives held-out checks.
 
 The project is deliberately skeptical. Every step has a stated pass criterion, and results that fail it are kept and reported. **No result here shows that any change improves a real athlete's speed, accuracy, or safety, and nothing here is training or medical advice.**
