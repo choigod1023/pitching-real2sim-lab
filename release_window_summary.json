@@ -1,0 +1,181 @@
+{
+  "scope": "Conditional measurement consistency, not independently measured speed error or improvement",
+  "models": {
+    "M0": {
+      "offset": 1.0,
+      "scale": 0.0010095743123137383,
+      "test_all_rmse_mm": 26.35386819869177,
+      "test_hand_rmse_mm": 15.635369475628883
+    },
+    "M1": {
+      "offset": 0.7200727319305745,
+      "scale": 0.0010095743123137383,
+      "test_all_rmse_mm": 25.929001974530685,
+      "test_hand_rmse_mm": 12.347581371848362
+    },
+    "M2": {
+      "offset": 1.0,
+      "scale": 0.0010104909254028233,
+      "test_all_rmse_mm": 26.802567554238323,
+      "test_hand_rmse_mm": 16.414941603634325
+    },
+    "M3": {
+      "offset": 0.2961151266039331,
+      "scale": 0.0010082306778522458,
+      "test_all_rmse_mm": 26.3200196996071,
+      "test_hand_rmse_mm": 12.281691559476402
+    }
+  },
+  "landmark_subset_stability": [
+    {
+      "source": "lower_six",
+      "offsets": {
+        "M0": 1.0,
+        "M1": -0.10636365268276453,
+        "M2": 1.0,
+        "M3": -1.7173394844622454
+      },
+      "boundary_solutions": {
+        "M0": false,
+        "M1": false,
+        "M2": false,
+        "M3": false
+      }
+    },
+    {
+      "source": "upper_six",
+      "offsets": {
+        "M0": 1.0,
+        "M1": 0.8249585363685634,
+        "M2": 1.0,
+        "M3": 0.0554380572696306
+      },
+      "boundary_solutions": {
+        "M0": false,
+        "M1": false,
+        "M2": false,
+        "M3": false
+      }
+    },
+    {
+      "source": "throwing_elbow_hand",
+      "offsets": {
+        "M0": 1.0,
+        "M1": 0.9505535625703647,
+        "M2": 1.0,
+        "M3": -0.561898256094903
+      },
+      "boundary_solutions": {
+        "M0": false,
+        "M1": false,
+        "M2": false,
+        "M3": false
+      }
+    }
+  ],
+  "third_view": {
+    "total_conditions": 9,
+    "finite_conditions": 6,
+    "failed_conditions": 3,
+    "heldout_mean_error_px_range": [
+      1.0366456547576215,
+      3.4552717365344234
+    ]
+  },
+  "same_frames_977_979": {
+    "two_camera": {
+      "range_kmh": [
+        102.55546326390487,
+        104.05007383675076
+      ],
+      "interpretation": "Processing sensitivity, not measured error or confidence interval"
+    },
+    "three_camera": {
+      "range_kmh": [
+        102.28594510048798,
+        103.92891501381598
+      ],
+      "interpretation": "Processing sensitivity, not measured error or confidence interval"
+    }
+  },
+  "raw_cameras": 8,
+  "raw_frames": 248,
+  "source_files": [
+    {
+      "camera": 15,
+      "drive_id": "1u4-xPnQ3DCG_ocUZn-bTeieqCGm_W4Ka",
+      "sha256": "fa7e90ac413e5fc953ab000955993475d6ee54bfae4c65960f1fab47a04b0b42",
+      "bytes": 15055511
+    },
+    {
+      "camera": 16,
+      "drive_id": "1WHEr9MXDQBv0nrEB1ahEfK6Dd-ObP2JL",
+      "sha256": "5cb5a7e33e3d080169a8743f163fda02f8ba9414b5bead586678e86ca717e844",
+      "bytes": 18009288
+    },
+    {
+      "camera": 17,
+      "drive_id": "1b37Da2tNjqytG3-rRqkgawoeQJktXVsS",
+      "sha256": "2341daf3eb71cde0ef6fdc41a66632c3c640e9b2dfa0bf33cc2ce6d2d8b72143",
+      "bytes": 13862571
+    },
+    {
+      "camera": 18,
+      "drive_id": "1Err5ZMBa_M5npiO437LuLV4HFjE3b-_U",
+      "sha256": "b9e30c63b10c7c066970b01f3564d29faf26a60fcb6e0d8a49347fec61437b7c",
+      "bytes": 13608681
+    },
+    {
+      "camera": 19,
+      "drive_id": "1sa2wrKhEHXsEvM59PQdixIDVa_e5QEDI",
+      "sha256": "fcf893ea4883ebeae1f99e9abf1470e8ace27dd22f1f820f34b2b7cd44488ac4",
+      "bytes": 19679753
+    },
+    {
+      "camera": 20,
+      "drive_id": "1xJDj0xlDX7FHfqPYkfBK3hiJnWhPWsLO",
+      "sha256": "71ceff9056cd39d7f3d727b7696ed8bab5d4c7e084ada94d5f46a3614e58cead",
+      "bytes": 15341265
+    },
+    {
+      "camera": 21,
+      "drive_id": "1vwbuVrvkbo_wFLTEEYFm2mWRH3RshiWV",
+      "sha256": "1bbf95eb85758f2d065649c93e08f7b0cd8e8e0829ac9117c7197cb44b64ded7",
+      "bytes": 19850625
+    },
+    {
+      "camera": 22,
+      "drive_id": "1nE1uRyTCxTriwIQMYXC9DjXI5xKRpOuZ",
+      "sha256": "51f30dea8506a4613cf278a4bd84542c65714ffbcc869a6ec949b2e6eaca8736",
+      "bytes": 17068958
+    }
+  ],
+  "video": {
+    "frames": 264,
+    "fps": 30,
+    "duration_s": 8.8,
+    "size": [
+      1280,
+      848
+    ],
+    "scope": "Same-pitch kinematic alignment overlay, no forward dynamics, no posture intervention, no measured performance gain.",
+    "raw_frames": [
+      970,
+      986
+    ],
+    "cameras": [
+      17,
+      19,
+      20,
+      21
+    ],
+    "original_offset": 1.0,
+    "candidate_offset": 0.7200727319305745
+  },
+  "code_tests": {
+    "relevant": 20,
+    "gate_control": 12,
+    "scientific_validation": false
+  },
+  "scientific_stage_passed": false
+}
