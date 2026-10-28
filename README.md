@@ -1,88 +1,77 @@
-최신 관절 수정 및 힘·일 검사 결과는 [JOINT_ACTION_FINDINGS.md](JOINT_ACTION_FINDINGS.md)를 확인하세요.
+# Pitching Real2Sim Lab
 
-최신 수정 전후 비교 결과는 [BEFORE_AFTER_FINDINGS.md](BEFORE_AFTER_FINDINGS.md)를 확인하세요.
+A personal, self-directed research project by **Jang JunHyeok**, a student in the School of Computer Science and AI at Dongguk University (Seoul, South Korea). It is a learning and portfolio project, not funded research and not affiliated with any team or company.
 
-최신 동일 투구 손·공 연결 실험은 [HAND_BALL_LINK_FINDINGS.md](HAND_BALL_LINK_FINDINGS.md)를 확인하세요.
+## Goal
 
-현재 기준 구속 차이의 원인 진단과 후속 순서는 [SPEED_GAP_FINDINGS.md](SPEED_GAP_FINDINGS.md)를 먼저 확인하세요.
+Can a small change in an athlete's joint motion raise pitch speed **without raising the athlete's force capacity**? To answer this I try to turn measured pitching motion into a physics simulation (Real2Sim), predict the speed of the released ball, and test whether the prediction survives held-out checks.
 
-# 야구 투구 Real2Sim 연구실
+The project is deliberately skeptical. Every step has a stated pass criterion, and results that fail it are kept and reported. **No result here shows that any change improves a real athlete's speed, accuracy, or safety, and nothing here is training or medical advice.**
 
-구속 향상으로 이어지는 단계와 통과 기준은 [SPEED_GAIN_JOURNEY.md](SPEED_GAIN_JOURNEY.md), 구속 표시 영상은 [SPEED_VIDEO_FINDINGS.md](SPEED_VIDEO_FINDINGS.md)를 확인하세요. 손목 입력 변경에서 속력이 늘어도 일·동작 폭 조건을 만족하지 않으면 채택하지 않습니다.
+## Pipeline
 
-현재 연구 상태와 저장 위치는 [CURRENT_STATUS.md](CURRENT_STATUS.md)를 먼저 확인하세요. 목표는 선수의 힘 능력을 늘리지 않고 작은 관절 동작 수정으로 실제 구속을 높일 수 있는지 검증하는 것입니다. **구속 향상 예측은 아직 검증을 통과하지 않았습니다.**
+| Stage | Input | Processing | Output |
+|---|---|---|---|
+| 1. Data alignment | OpenBiomechanics C3D markers (360 Hz), joint signals, force plates (1080 Hz), metadata | Unit, time and coordinate-frame checks | Verified per-pitch tables |
+| 2. Joint reconstruction | Marker positions | Fixed segment lengths, skin-marker frames | Joint trajectories |
+| 3. Inverse dynamics and muscle load | Trajectories, body mass | OpenSim arm model (47 muscles), generalized-force residuals | Torque demand, residuals |
+| 4. Forward integration | Force inputs | RK4 integration of arm, hand and attached ball | Hand and ball states |
+| 5. Hand-to-ball release | Hand frame, assumed grip offset | Rigid-offset release and flight model | Release speed and direction |
+| 6. Candidate search | Small joint or timing changes | Force, work and load constraints | Speed change per candidate |
+| 7. Validation | Held-out pitches | Comparison against a no-change baseline | Pass or fail |
 
-최신 작업은 실제 야구 영상의 공 중심 추적, 카메라 시간·보정 검사, 동일 투구의 Theia3D 관절 재구성입니다. [CENTER_FINDINGS.md](CENTER_FINDINGS.md), [CAMERA_FINDINGS.md](CAMERA_FINDINGS.md), [JOINT_VIDEO_FINDINGS.md](JOINT_VIDEO_FINDINGS.md)에 실제 실행 결과와 한계를 기록합니다.
+## What I found so far
 
-기존 힘 기반 팔·손·공 전방 적분과 실제 관절 좌표를 재생하는 시각화는 구분합니다. 아래 초기 GUI 설명의 `mj_forward` 재생은 물리 동작 예측이 아닙니다.
+These are development results on already-seen data (one athlete, session 3034, five fastballs), not independent validation.
 
-## 초기 도구와 이전 실험 기록
+- **Absolute speed is not reproduced.** The force-based model gives about 113 km/h against recorded 128 to 131 km/h.
+- **Marker-only release is dominated by assumptions.** Moving the assumed wrist-to-ball distance by 5 cm changes the estimate by about 15 km/h, and the filter cutoff changes it by up to about 20 km/h. A single offset calibrated on four pitches predicts the fifth with a mean error of 2.4 km/h, which is worse than simply predicting the mean speed (1.1 km/h).
+- **Speed change between pitches is not predicted.** The recorded difference between a slower and a faster pitch is +2.6 km/h; the model gives +0.16 km/h. A learned model on 89 athletes (203 held-out pitches) has MAE 0.990 km/h versus 0.964 km/h for a per-athlete mean.
+- **Muscle-path consistency fails.** For wrapping paths, path-length derivatives and path velocities disagree in all 15 sampled states. The mean force-distribution residual is about 138 N·m, too large to trust muscle-level conclusions.
+- **Marker quality check.** The C3D residuals and camera masks are empty, so reconstruction quality cannot be assessed. The wrist-to-finger marker distance grows by about 30 to 50 percent after release in two of five trials; real finger motion and marker movement cannot be separated without video.
+- **Candidate speed gains were rejected.** Positive candidates (up to +7.5 km/h in one diagnostic) all violated the force or work constraints.
+- **Video route works in principle.** On a separate public throw (OBP-CV, 62.7 mph), ball tracking from synchronized 360 fps cameras gives about 101 to 103 km/h against 100.9 km/h recorded, and is sensitive to a one-frame sync error (about 1 to 2 km/h).
 
+## What is needed next
 
-이전 실험은 [EXPERIMENT_FINDINGS.md](EXPERIMENT_FINDINGS.md): 관절 제약을 지키는 방향 fitting, 순간 근육 힘 검사, 공 release 보정의 선수 분리 평가와 **같은 선수 내 구속 차이 평가**를 구현했습니다. 현재는 구속 향상 추천에 필요한 검증을 통과하지 않았습니다.
+Direct observation of the ball and fingers at release (synchronized video, release-event definition, independent speed measurement) for the same pitches as the motion data. The public releases do not provide this for the pitching trials.
 
-후속 진행 순서와 실행 근거는 [RESEARCH_PLAN.md](RESEARCH_PLAN.md)에 기록합니다. `release_baseline.py`는 관측 구속 예측의 선수 분리 평가, `muscle_model_check.py`는 공개 팔 근육 모델의 실제 물리 구동 점검입니다. 두 단계 모두 수정 동작의 구속 향상 검증과는 구분합니다.
+## Data and licensing
 
-스포츠 질문, 비교 실험과 필요한 자료는 [SPORTS_RESEARCH.md](SPORTS_RESEARCH.md)에 정리했습니다. `python sport_outcomes.py`는 로컬 자료를 점검합니다. `pilot.py` 출력은 원 투구의 **실측 구속(km/h)**과 후보의 **손 대리점 속도 변화(m/s)**를 분리하며, 아직 없는 후보 구속·제구 예측은 결과 JSON에 null로 표시합니다.
+- This project uses the [OpenBiomechanics Project](https://github.com/drivelineresearch/openbiomechanics) from Driveline Baseball R&D. **Raw C3D files and videos are not included here.** Download them from the OBP repository and respect its terms.
+- OBP data and derived data are licensed **CC BY-NC-SA 4.0**. Anyone who is an employee, contractor, or significant shareholder of a professional sports organization or financial analysis firm may not use that data. See the OBP license.
+- Code in this repository is licensed under MIT (see `LICENSE`). Derived data files are under CC BY-NC-SA 4.0 (see `NOTICE.md`).
+- Please cite OpenBiomechanics and Driveline Baseball Research and Development when you use anything derived from the data.
 
-## 운동학적 예비 실험 (2026-10-25)
+## Setup
 
-`python pilot.py`는 100명·411개 투구에서 각 25개 수학적 수정 후보를 탐색합니다. 선수별 첫 투구로 설정을 고르고 나머지 투구에서 계산합니다. `python show_pilot.py`는 예시를 GUI로 재생하고 GIF를 저장하며, `python write_report.py`는 결과 설명을 생성합니다. 출력은 `artifacts/pilot/`에 있으며 Git에 포함하지 않습니다.
+Python 3.12. Core dependencies are in `requirements.txt` (NumPy, SciPy, pandas, ezc3d, MuJoCo, Pillow). The musculoskeletal modules additionally need the OpenSim 4.6 Python bindings.
 
-이 실험은 **물리 동역학 최적화가 아니며, 손 관절 대리점 속도를 목적값으로 하는 오프라인 운동학 실험**입니다. 임의의 방향/위치/가속도 제한은 안전성이나 편안함을 보장하지 않습니다. 타임스탬프 반올림 검증, 무변경 대조, 동일 수정과 개별 선택, 별도 투구에서의 제한 위반을 포함합니다. 실제 제구·구속·훈련 효과와 새로운 연구 방법의 우월성은 입증하지 않았습니다. 세부 조건과 탐색 중 수정 사항은 생성 보고서에 기록합니다.
-
-실제 C3D 투구와 고정된 분절 길이를 갖는 MuJoCo 관절 모델을 나란히 재생하는 초기 연구 도구입니다.
-
-**아래 초기 preview.py 도구는 운동학적 재생입니다. 이후 별도 모듈의 힘 기반 팔 적분과는 다릅니다. 동작 최적화와 실제 선수 개선 효과는 아직 검증하지 않았습니다.**
-
-## 실행
-
-Python 3.12 환경에서 `pip install -r requirements.txt` 후:
-
-```powershell
-python preview.py --data-root PATH/TO/openbiomechanics/baseball_pitching/data
-python preview.py --trial PATH/TO/TRIAL.c3d
+```bash
+python -m venv .venv
+pip install -r requirements.txt
+python -m unittest discover
 ```
 
-현재 PC에서는 상위 `pitching-lab` 폴더의 `04 - Pitching comparison.lnk`를 실행하세요. MuJoCo 화면과 한글 제어창이 열립니다.
+Tests status: 268 tests run on the core environment, 258 run cleanly (2 skipped). Ten fail there for two reasons, not because of a logic error: nine test modules import `opensim`, which is not part of `requirements.txt`, and one test reads a locally generated file under `artifacts/` (not tracked). They pass in an environment with the OpenSim 4.6 Python bindings and the locally generated artifacts.
 
-- 청록색: 실제 측정 마커 및 마커에서 계산한 연결선
-- 주황색: 길이가 고정된 단순 관절 모델
-- 제어창: 재생/일시정지, 0.1~1배속, 프레임 탐색
-- MuJoCo 화면: 마우스 회전 및 확대
+To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D files, then run for example `python offset_cv.py <path to baseball_pitching/data/c3d/000002>` from inside that folder. The scripts write their JSON and figures next to themselves.
 
-`--check-only`는 검증 JSON과 미리보기 PNG를 `artifacts/`에 저장합니다. `--smoke-seconds 4`는 GUI 재생 후 자동 종료합니다.
+## Key modules
 
-## 데이터 처리와 한계
+| File | Purpose |
+|---|---|
+| `kinematics.py` | Marker and joint kinematics from C3D |
+| `ball_release.py` | Hand frame and rigid-offset release diagnostic |
+| `trace_error_audit.py` | Separates observation, kinematics, input and integration error |
+| `applied_path_forces.py` | Muscle forces applied through the actual path |
+| `anatomical_muscle_screen.py` | Muscle-level force screening |
+| `shoulder_load_audit.py`, `wrist_residual_audit.py` | Load-residual audits |
+| `research_evidence_audit.py` | Data, unit and consistency audit |
+| `pitch_outcomes.py` | Ball flight (gravity, drag, constant lift) |
+| `marker_audit/` | Marker quality checks, finger-marker gating, and hand-offset cross-validation (see its findings files) |
+| `RESEARCH_LOG.md` | Chronological research log and links to every stage |
 
-데이터는 [OpenBiomechanics](https://github.com/drivelineresearch/openbiomechanics)의 외부 자료를 사용하며 이 저장소에 포함하지 않습니다. 해당 데이터의 라이선스와 프로 스포츠 조직 관련 별도 조건을 준수해야 합니다. 의존 패키지 버전은 `requirements-lock.txt`에 기록합니다.
+## Contact
 
-1. C3D 단위를 확인해 미터로 변환합니다. 실험실 Z축은 보존하고 수평 원점만 이동합니다.
-2. 팔꿈치·무릎·손목·발목의 쌍 마커 중점을 사용합니다. 어깨와 고관절도 마커 기반 대리점이며 해부학적으로 보정된 관절 중심이 아닙니다.
-3. 분절 길이는 해당 투구의 중앙값으로 고정합니다. 원본의 분절 방향을 관절 회전으로 옮깁니다.
-4. 매 프레임 관절 상태를 직접 지정하고 `mj_forward`로 위치를 갱신합니다. `mj_step`에 의한 동작 생성은 아닙니다.
-5. 관절은 단순 ball joint입니다. 해부학적 관절 제한, 근육, 인대, 힘, 투구 제어기 및 공 release를 모델링하지 않습니다.
-
-누락된 마커 샘플은 선형 보간하며 개수를 보고합니다. 긴 결측이나 끝부분 결측이 있는 파일은 연구 분석 전에 별도 검토해야 합니다. 기본 예제에는 보간된 샘플이 없습니다.
-
-재현 거리 지표는 마커 기반 대리점과 단순 모델의 거리입니다. 동작 추정 모델의 정확도나 실제 관절 중심의 정확도가 아닙니다. 기본 투구로 모델 길이를 맞추고 같은 투구를 비교하므로 독립적인 검증도 아닙니다.
-
-## 연구 기여의 경계
-
-이 재생 도구 자체에 신규성을 주장하지 않습니다. 투구 모방과 예측 최적화는 기존 연구가 있습니다.
-
-- [Attias et al. 2026, 예측 근골격 시뮬레이션](https://doi.org/10.1007/s11044-026-10143-y)
-- [Templin et al. 2024, 투구 최적제어](https://commons.nmu.edu/isbs/vol42/iss1/94/)
-- [HCI Korea 2026, 강화학습 기반 물리 시뮬레이션에서의 야구 투구 동작 모방](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12745876)
-
-후속 가설은 **기존 폼 변경량과 힘 요구를 제한한 개인별 수정이 보편적 수정이나 무제약 최적화보다 실행 가능한 개선안을 제공하는가**입니다. 비교군은 무변경, 단순 공통 수정, 무제약 최적화, 개인별 제한 최적화입니다. 우선 force-driven 재현과 공 모델을 검증해야 하며, 편안함과 실제 성능 향상은 선수 실험이 필요합니다. 이 가설의 독창성과 효과는 아직 입증되지 않았습니다.
-
-## 검증
-
-```powershell
-python -m unittest -v
-python preview.py --check-only
-python preview.py --smoke-seconds 4
-```
-
-테스트는 회전 좌표계, 퇴화한 분절, 기록 데이터의 분절 방향과 고정 길이, 표시용 평행이동을 확인합니다. C3D가 없으면 기록 데이터 검사는 건너뜁니다. 재현 지표와 이미지에는 원자료에서 유도한 정보가 있으므로 `artifacts/`는 Git에서 제외합니다.
+Jang JunHyeok, Dongguk University. GitHub: https://github.com/choigod1023

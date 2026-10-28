@@ -1,0 +1,117 @@
+{
+ "3034_1": {
+  "V0": {
+   "speed_BR": 114.79705732003112,
+   "x_ang_speed_BR": 5085.452964656317
+  },
+  "G0": {
+   "speed_BR": 113.24365022120857,
+   "x_ang_speed_BR": 4903.220888437783,
+   "x_dir_diff_deg_at_BR": 4.457915856349173,
+   "x_dir_diff_deg_max_BR_pm50ms": 5.4084819392474035,
+   "speed_diff_kmh_at_BR": -1.5534070988225466,
+   "speed_diff_kmh_max_pm50ms": 3.2473623231992192
+  },
+  "G50": {
+   "speed_BR": 111.39351330671138,
+   "x_ang_speed_BR": 4822.947541696618,
+   "x_dir_diff_deg_at_BR": 46.97277499094517,
+   "x_dir_diff_deg_max_BR_pm50ms": 51.10441966463586,
+   "speed_diff_kmh_at_BR": -3.403544013319731,
+   "speed_diff_kmh_max_pm50ms": 14.291886635747971
+  },
+  "filter_smear_mm_at_BR": 19.17747679571447
+ },
+ "3034_2": {
+  "V0": {
+   "speed_BR": 113.14519394069188,
+   "x_ang_speed_BR": 4803.469583296152
+  },
+  "G0": {
+   "speed_BR": 111.98577175430232,
+   "x_ang_speed_BR": 4671.238847295563,
+   "x_dir_diff_deg_at_BR": 3.9562385651412746,
+   "x_dir_diff_deg_max_BR_pm50ms": 9.006665224161392,
+   "speed_diff_kmh_at_BR": -1.1594221863895626,
+   "speed_diff_kmh_max_pm50ms": 1.9954340016839112
+  },
+  "G50": {
+   "speed_BR": 112.14998816883217,
+   "x_ang_speed_BR": 4808.803275839757,
+   "x_dir_diff_deg_at_BR": 50.8020113195165,
+   "x_dir_diff_deg_max_BR_pm50ms": 52.770176082122774,
+   "speed_diff_kmh_at_BR": -0.995205771859716,
+   "speed_diff_kmh_max_pm50ms": 15.200095736433042
+  },
+  "filter_smear_mm_at_BR": 18.29469772886701
+ },
+ "3034_3": {
+  "V0": {
+   "speed_BR": 112.02088184933814,
+   "x_ang_speed_BR": 4741.796252957901
+  },
+  "G0": {
+   "speed_BR": 110.57460161037172,
+   "x_ang_speed_BR": 4570.476639336011,
+   "x_dir_diff_deg_at_BR": 6.057443017779735,
+   "x_dir_diff_deg_max_BR_pm50ms": 12.69510268862823,
+   "speed_diff_kmh_at_BR": -1.4462802389664233,
+   "speed_diff_kmh_max_pm50ms": 2.887807348855297
+  },
+  "G50": {
+   "speed_BR": 110.59789073499928,
+   "x_ang_speed_BR": 4761.216989399053,
+   "x_dir_diff_deg_at_BR": 55.43463846754319,
+   "x_dir_diff_deg_max_BR_pm50ms": 60.51037753045191,
+   "speed_diff_kmh_at_BR": -1.4229911143388563,
+   "speed_diff_kmh_max_pm50ms": 15.444083466623212
+  },
+  "filter_smear_mm_at_BR": 18.036388660516266
+ },
+ "3034_4": {
+  "V0": {
+   "speed_BR": 112.65130501053353,
+   "x_ang_speed_BR": 4871.877429018571
+  },
+  "G0": {
+   "speed_BR": 111.2910620120508,
+   "x_ang_speed_BR": 4715.634463248778,
+   "x_dir_diff_deg_at_BR": 3.52030715948955,
+   "x_dir_diff_deg_max_BR_pm50ms": 10.469565148878042,
+   "speed_diff_kmh_at_BR": -1.3602429984827324,
+   "speed_diff_kmh_max_pm50ms": 2.1417081654631005
+  },
+  "G50": {
+   "speed_BR": 110.50466002788623,
+   "x_ang_speed_BR": 4773.678168816465,
+   "x_dir_diff_deg_at_BR": 54.17253024591504,
+   "x_dir_diff_deg_max_BR_pm50ms": 57.60592874655339,
+   "speed_diff_kmh_at_BR": -2.1466449826473024,
+   "speed_diff_kmh_max_pm50ms": 16.172141719327584
+  },
+  "filter_smear_mm_at_BR": 21.355781460745067
+ },
+ "3034_5": {
+  "V0": {
+   "speed_BR": 108.15618921138501,
+   "x_ang_speed_BR": 4504.972198355879
+  },
+  "G0": {
+   "speed_BR": 104.91651382167647,
+   "x_ang_speed_BR": 4139.592340259538,
+   "x_dir_diff_deg_at_BR": 1.971266288619044,
+   "x_dir_diff_deg_max_BR_pm50ms": 9.438045212258306,
+   "speed_diff_kmh_at_BR": -3.2396753897085375,
+   "speed_diff_kmh_max_pm50ms": 3.5604543999693448
+  },
+  "G50": {
+   "speed_BR": 111.48386502517998,
+   "x_ang_speed_BR": 4897.5884739613975,
+   "x_dir_diff_deg_at_BR": 55.374201348022716,
+   "x_dir_diff_deg_max_BR_pm50ms": 59.73561315608064,
+   "speed_diff_kmh_at_BR": 3.3276758137949685,
+   "speed_diff_kmh_max_pm50ms": 16.916473389997776
+  },
+  "filter_smear_mm_at_BR": 31.651758585820012
+ }
+}
