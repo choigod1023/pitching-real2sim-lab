@@ -36,11 +36,18 @@ def aligned_index(frame, offset, n):
         raise ValueError('Video/C3D correspondence out of range')
     return i
 
-def elbow_angle(points):
-    a = points['r_uarm'] - points['r_larm']
-    b = points['r_hand'] - points['r_larm']
+def elbow_angle(points, side):
+    """Interior angle at the selected elbow; 180 degrees means straight.
+
+    Side is anatomical, not screen-left/right. Never silently choose the
+    right arm for a left-arm throw. Segment origins are estimated joint points.
+    """
+    if side not in ('l', 'r'):
+        raise ValueError('Explicit anatomical side l or r required')
+    a = np.asarray(points[f'{side}_uarm']) - points[f'{side}_larm']
+    b = np.asarray(points[f'{side}_hand']) - points[f'{side}_larm']
     norm = np.linalg.norm(a)*np.linalg.norm(b)
-    if norm <= 0:
+    if not np.isfinite(np.r_[a,b]).all() or norm <= 0:
         raise ValueError('Degenerate segment')
     return float(np.degrees(np.arccos(np.clip(np.dot(a,b)/norm,-1,1))))
 
@@ -123,12 +130,12 @@ def main():
             x,y=skel[name];d.ellipse((x-6,y-6,x+6,y+6),fill='white')
         d.text((24,110),'실제 영상 · 카메라 19',font=F,fill='white')
         d.text((685,110),'3D 관절 · 팔과 손목 강조',font=F,fill='white')
-        angle=elbow_angle(points)
+        angle=elbow_angle(points, side='l')  # Prime BaseballThrow_001 is left-arm throwing.
         d.text((24,676),'관절 동작 재생 · 힘 기반 예측 아님 · 제공된 시간 정렬 사용',font=S,fill='#b0c5d6')
         d.text((24,730),'OpenBiomechanics / Driveline Baseball · CC BY-NC-SA 4.0 + 사용 제한',font=S,fill='#91a5b5')
         writer.send(np.asarray(im));count+=1
         if frame in (820,900,950,980,1040): im.save(OUT/f'preview_{frame}.png')
-        rows.append({'video_frame':frame,'c3d_index':idx,'elbow_interior_deg':angle})
+        rows.append({'video_frame':frame,'c3d_index':idx,'elbow_side':'l','elbow_interior_deg':angle})
     reader.close();writer.close()
     result={'frames':count,'duration_s':count/30,'source_video_metadata':metadata,'c3d_frames':len(xyz),'c3d_rate':rate,'c3d_sha256':hashlib.sha256(c3d.read_bytes()).hexdigest(),'alignment_sha256':hashlib.sha256(alignment_path.read_bytes()).hexdigest(),'alignment_status':'contributor fit; not independently verified','c3d_frame_minus_video_frame':offset,'claim':'kinematic segment-origin replay, no forward dynamics or speed gain','rows':rows}
     (OUT/'manifest.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
