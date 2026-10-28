@@ -74,6 +74,7 @@ To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D file
 | `marker_audit/` | Marker quality checks, finger-marker gating, and hand-offset cross-validation (see its findings files) |
 | `video_track/` | Eight-camera ball tracking, hand-to-ball distance, error budget and five-pitch simulation (see `video_track/README.md`) |
 | `load_matched_pitching.py` | Whole-body and energy-flow comparison of 30 observed pairs screened on arm-load proxies; [findings](LOAD_MATCHED_FINDINGS.md), not causal training gains |
+| `pitching_hypothesis_test.py`, `pitching_trial_design.py` | Outcome-blind motion-pattern checks, eight-condition trial templates and day-level paired analysis; [findings](PITCHING_HYPOTHESIS_FINDINGS.md) |
 | `RESEARCH_LOG.md` | Chronological research log and links to every stage |
 
 ## Contact
