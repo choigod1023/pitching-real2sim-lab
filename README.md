@@ -71,6 +71,7 @@ To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D file
 | `shoulder_load_audit.py`, `wrist_residual_audit.py` | Load-residual audits |
 | `research_evidence_audit.py` | Data, unit and consistency audit |
 | `pitch_outcomes.py` | Ball flight (gravity, drag, constant lift) |
+| `spin_flight.py`, `pitch_performance_frontier.py` | RPM/axis-dependent flight and fixed ball-energy multiobjective scenarios; [scope and results](PERFORMANCE_FRONTIER_FINDINGS.md), not athlete force/work validation |
 | `marker_audit/` | Marker quality checks, finger-marker gating, and hand-offset cross-validation (see its findings files) |
 | `video_track/` | Eight-camera ball tracking, hand-to-ball distance, error budget and five-pitch simulation (see `video_track/README.md`) |
 | `RESEARCH_LOG.md` | Chronological research log and links to every stage |
