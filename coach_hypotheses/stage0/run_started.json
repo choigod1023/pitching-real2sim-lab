@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-10-29T04:57:16.686308+00:00",
+  "argv": [
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage0-20261029"
+}

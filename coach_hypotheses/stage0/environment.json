@@ -1,0 +1,20 @@
+{
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\.venv\\Scripts\\python.exe",
+  "worktree": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage0-20261029",
+  "branch": "codex/coach-hypotheses-stage0-20261029",
+  "base_commit": "63fc06c2c37b9af55c48d341a5c5e39d8a6deb2e",
+  "remote_default": "origin/main",
+  "opensim_import_spec_available": false,
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.1.0",
+    "mujoco": "3.17.0",
+    "ezc3d": "1.7.2",
+    "pillow": "13.0.0",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "automation_status": "PAUSED",
+  "stage_scope": "0 only; no model, data, dependency or existing document changes"
+}

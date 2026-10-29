@@ -1,0 +1,10 @@
+{
+  "path": "artifacts/coupled-body/model.xml",
+  "cause": "test_coupled_body_search.TestCoupledBody.setUpClass calls coupled_body_search.build(output=OUT); build writes model.xml by default",
+  "before_sha256": "abb05e8208c80e33ca31caf37077c05a0642bb82cee3821aab540a09c6782d97",
+  "generated_sha256": "ad5ed58fcdb22ebeb62d875ebd74b7ccb6acf2327ff4ff07610588fe25644ee3",
+  "generated_copy": "coach_hypotheses\\stage0\\generated_by_existing_tests\\model.xml",
+  "restored_sha256": "abb05e8208c80e33ca31caf37077c05a0642bb82cee3821aab540a09c6782d97",
+  "byte_exact_restoration_verified": true,
+  "only_task_owned_test_side_effect_restored": true
+}

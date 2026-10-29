@@ -1,0 +1,24 @@
+{
+  "tracked_files_checked": 586,
+  "tracked_files_differ_after_restoration": [],
+  "original_results_and_documents_preserved": true,
+  "source_documents": {
+    "README.md": {
+      "sha256": "b83592ec9886289d3ec695e06417cdced6447c94c6ec1adcb2d965b394b5cebe",
+      "lines": 80
+    },
+    "RESEARCH_LOG.md": {
+      "sha256": "5fc190e988cf338133c35a8e173269a2f79ae5c193b8823deaf9869f0e47b26e",
+      "lines": 88
+    },
+    "JOINT_INTERVENTION_PROTOCOL.md": {
+      "sha256": "a43ffd401c216bd35d7a035608331c3044305dddcfeb076b7c19445973c63609",
+      "lines": 17
+    },
+    "FORCE_POSE_FINDINGS.md": {
+      "sha256": "ecbc222d59ce848608e3c681147188d0eb9aa01fd20b72a0c4bce6485260d100",
+      "lines": 56
+    }
+  },
+  "restored_test_side_effect": "artifacts/coupled-body/model.xml"
+}
