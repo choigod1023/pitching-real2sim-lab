@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-10-29T04:57:16.686308+00:00",
+  "ended_utc": "2026-10-29T04:57:22.622755+00:00",
+  "elapsed_seconds": 5.936447,
+  "returncode": 1,
+  "tracked_files_count": 586,
+  "tracked_files_changed": [
+    "artifacts/coupled-body/model.xml"
+  ],
+  "argv": [
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-v"
+  ]
+}
