@@ -1,5 +1,7 @@
 # Pitching Real2Sim Lab
 
+고정 15cm 손목–공 모델은 **주 구속 예측·자세 추천 경로에서 제외**했습니다. 기본 GUI 실행기와 이 모델을 사용하는 후보 검색 진입점은 계산을 시작하지 않습니다. 과거 실험과 원본 자료는 삭제하지 않았으며, 명시적인 `--legacy-diagnostic` 옵션으로만 해당 진입점의 진단을 재현할 수 있습니다. 진단 출력은 실제 공 구속이나 선수의 향상 예측이 아닙니다. 대체 예측 모델은 아직 채택하지 않았습니다. 범위와 실행 방법은 [모델 사용 중단 기록](coach_hypotheses/model_retirement/README.md)을 참고하세요.
+
 A personal, self-directed research project by **Jang JunHyeok**, a student in the School of Computer Science and AI at Dongguk University (Seoul, South Korea). It is a learning and portfolio project, not funded research and not affiliated with any team or company.
 
 ## Goal
@@ -10,19 +12,23 @@ The project is deliberately skeptical. Every step has a stated pass criterion, a
 
 ## Pipeline
 
+아래는 기존 연구의 구성입니다. 5·6단계의 고정 그립 방출 및 후보 검색은 현재 예측·추천 기능으로 제공하지 않으며, 과거 진단 경로로만 보존합니다. 다른 단계도 해당 모델의 구속 예측 유효성을 입증한 것은 아닙니다.
+
 | Stage | Input | Processing | Output |
 |---|---|---|---|
 | 1. Data alignment | OpenBiomechanics C3D markers (360 Hz), joint signals, force plates (1080 Hz), metadata | Unit, time and coordinate-frame checks | Verified per-pitch tables |
 | 2. Joint reconstruction | Marker positions | Fixed segment lengths, skin-marker frames | Joint trajectories |
 | 3. Inverse dynamics and muscle load | Trajectories, body mass | OpenSim arm model (47 muscles), generalized-force residuals | Torque demand, residuals |
 | 4. Forward integration | Force inputs | RK4 integration of arm, hand and attached ball | Hand and ball states |
-| 5. Hand-to-ball release | Hand frame, assumed grip offset | Rigid-offset release and flight model | Release speed and direction |
-| 6. Candidate search | Small joint or timing changes | Force, work and load constraints | Speed change per candidate |
+| 5. Historical release diagnostic (retired) | Hand frame, assumed grip offset | Rigid-offset release and conditional flight | Assumed-point diagnostic; unavailable as speed prediction |
+| 6. Historical candidate search (retired) | Small joint or timing changes | Force, work and load diagnostics | Archived conditional comparisons; unavailable as recommendations |
 | 7. Validation | Held-out pitches | Comparison against a no-change baseline | Pass or fail |
 
 ## What I found so far
 
 These are development results on already-seen data (one athlete, session 3034, five fastballs), not independent validation.
+
+이하 수치는 사용 중단 전의 연구 기록입니다. 수치를 보존하되, 거리 가정 변경이나 다른 선수의 관측으로 얻은 근접 결과를 검증된 예측 모델의 성능으로 해석하지 않습니다.
 
 - **Absolute speed depends on one distance.** With an assumed 15 cm wrist-to-ball distance the force-based model gives about 113 km/h against recorded 128 to 131 km/h. With a distance measured from video (about 19 to 21 cm, see `video_track/`) the five pitches come within -3.2 to +2.4 km/h on average (mean bias -1.0 km/h at 20 cm), but one pitch (3034_5) stays 5 to 7 km/h low. The distance comes from one other athlete's throw and was not fitted to the radar speeds.
 - **Marker-only release is dominated by assumptions.** Moving the assumed wrist-to-ball distance by 5 cm changes the estimate by about 15 km/h, and the filter cutoff changes it by up to about 20 km/h. A single offset calibrated on four pitches predicts the fifth with a mean error of 2.4 km/h, which is worse than simply predicting the mean speed (1.1 km/h).
@@ -55,7 +61,7 @@ pip install -r requirements.txt
 python -m unittest discover
 ```
 
-Tests status: 275 tests run on the core environment, 263 pass (2 skipped). Ten fail there for two reasons, not because of a logic error: nine test modules import `opensim`, which is not part of `requirements.txt`, and one test reads a locally generated file under `artifacts/` (not tracked). They pass in an environment with the OpenSim 4.6 Python bindings and the locally generated artifacts.
+사용 중단 변경 후 코어 환경에서 289개를 실행해 277개 통과, 10개 오류, 2개 건너뜀을 확인했습니다. 새 회귀 검사 14개는 모두 통과했습니다. 오류 10개는 기존 기준선과 같은 항목으로, OpenSim 바인딩 부재 9개와 로컬 `artifacts/` 파일 부재 1개입니다. 전체 통과를 뜻하지 않으며, 해당 의존성을 갖춘 환경에서의 재검증은 별도로 필요합니다. 자세한 명령과 판정은 [검증 기록](coach_hypotheses/model_retirement/VALIDATION.md)에 있습니다.
 
 To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D files, then run for example `python offset_cv.py <path to baseball_pitching/data/c3d/000002>` from inside that folder. The scripts write their JSON and figures next to themselves.
 
