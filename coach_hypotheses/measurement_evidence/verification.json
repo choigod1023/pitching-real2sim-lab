@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "revision": "event mapping correction; original result preserved",
+  "checks": {
+    "download_size_and_md5_unchanged": true,
+    "csv_c3d_coordinate_agreement_under_1um": true,
+    "csv_not_used_as_timing_proof": true,
+    "source_event_mapping_unknown": true,
+    "standard_and_legacy_candidates_both_retained": true,
+    "no_candidate_selected_from_speed_or_movement_error": true,
+    "historical_result_and_inventory_hashes_match_old_verification": true,
+    "unit_tests": 7,
+    "changes_restricted_to_measurement_evidence": true
+  },
+  "input_and_code_sha256": {
+    "audit_public_sample.py": "3aa7303c04f1cc6be0f5a1a940ae65cdbfb86829f0bdd4d84577c6bd5d3f0e98",
+    "test_audit_public_sample.py": "1b9cc347c16fd4cf15ec33f82ddb2365a91f5998dae147582d688166cdbad77f",
+    "sample_audit.json": "de22eda73464ec6b386fbdfd817511ed8e241bf5222c24f15c286403c7f4a6c9",
+    "download_manifest.json": "675c3a3fdcb2d62fcbebd2fd7e15a60d44ee94fb4d641de10fef978e5a55a781",
+    "source_inventory.json": "fa5ada7fb18c8079bbf6b461d4f0e9d77dbeccf688bee8ef74c76c9704b6efc2"
+  },
+  "calibration_or_performance_claim": false
+}

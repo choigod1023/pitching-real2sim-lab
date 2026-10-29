@@ -1,0 +1,12 @@
+test_c3d_first_sample_zero_mapping (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_c3d_first_sample_zero_mapping) ... ok
+test_event_off_grid_is_rejected (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_event_off_grid_is_rejected) ... ok
+test_finite_coordinates_with_invalid_residual_are_missing (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_finite_coordinates_with_invalid_residual_are_missing) ... ok
+test_fixed_window_speed_and_translation_invariance (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_fixed_window_speed_and_translation_invariance) ... ok
+test_missing_sample_is_not_bridged (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_missing_sample_is_not_bridged) ... ok
+test_unresolved_mapping_must_not_be_implicitly_selected (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_unresolved_mapping_must_not_be_implicitly_selected) ... ok
+test_unverified_legacy_mapping_retained_as_candidate (coach_hypotheses.measurement_evidence.test_audit_public_sample.AuditTests.test_unverified_legacy_mapping_retained_as_candidate) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.114s
+
+OK

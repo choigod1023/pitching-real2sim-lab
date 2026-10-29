@@ -1,0 +1,189 @@
+{
+  "as_of": "2026-10-29",
+  "statuses": [
+    "TRUE",
+    "FALSE",
+    "UNKNOWN"
+  ],
+  "status_definitions": {
+    "measurement_observation": "the source measures hand/finger and ball in the same throw; does not require bone centers",
+    "public_original": "downloaded usable original research data files; excludes paper graphs; C3D can be processed/gap-filled",
+    "synchronization": "hand and ball share a stated capture clock; not a bound on absolute physical timing error",
+    "calibration": "independently checked camera scale/geometry adequate for ball-center mechanics",
+    "radar_linkage": "same-trial speedgun record with verified units and definition",
+    "release_validation": "physical contact-ending event independently validated beyond a distance/kinematic proxy"
+  },
+  "sources": [
+    {
+      "id": "ozkaya2018",
+      "new_this_audit": true,
+      "primary_url": "https://www.nature.com/articles/sdata2018272",
+      "data_url": "https://doi.org/10.6084/m9.figshare.c.4017808.v1",
+      "measurement_observation": "TRUE",
+      "public_original": "TRUE",
+      "synchronization": "TRUE",
+      "calibration": "UNKNOWN",
+      "radar_linkage": "UNKNOWN",
+      "release_validation": "UNKNOWN",
+      "observed_channels": [
+        "Ball",
+        "R3MC",
+        "R5MC",
+        "L3MC",
+        "L5MC",
+        "RFR1-RFR4",
+        "LFR1-LFR4"
+      ],
+      "frames_hz": 200,
+      "units": "C3D mm; CSV numeric coordinates agree with C3D /1000, CSV unit header absent",
+      "license": "CC0 (downloaded Figshare article metadata), article CC BY 4.0",
+      "source_extent": "one subject archives downloaded; three dynamic and three static C3Ds plus three matching CSVs inspected",
+      "ball_center": "UNKNOWN; companion 2017 paper describes reflective tape on ball; single Ball channel has no center-conversion metadata",
+      "finger_contact_points": "FALSE",
+      "body_and_ball_same_c3d": "TRUE",
+      "camera_parameters_or_raw_video_downloaded": "FALSE",
+      "author_release_event_exists": "TRUE",
+      "release_rule": "paper: hand-ball marker distance increases 10%; actual label Event, context General, generic_flag=1",
+      "release_rule_baseline_and_hand_label_fully_specified": "FALSE",
+      "speedgun_same_trial_ids_exist": "TRUE",
+      "speedgun_unit_verified": "FALSE",
+      "trial_id_mapping": [
+        {
+          "session": "1w2d",
+          "trial": "DP_05",
+          "cells": "S1!D5:F5",
+          "value_original": 44,
+          "unit": "UNKNOWN",
+          "status": "O"
+        },
+        {
+          "session": "1w2d",
+          "trial": "DP_06",
+          "cells": "S1!D6:F6",
+          "value_original": 42,
+          "unit": "UNKNOWN",
+          "status": "O"
+        },
+        {
+          "session": "1w1d",
+          "trial": "NDP_07",
+          "cells": "S1!A26:C26",
+          "value_original": 41,
+          "unit": "UNKNOWN",
+          "status": "M-XIPH",
+          "filename_status": "O",
+          "status_disagrees": true
+        }
+      ],
+      "limitations": [
+        "novice women using baseball at 4m target, not elite pitching or OBP 3034",
+        "only two dynamic metacarpal markers per hand; hand roll needs an additional estimated reference",
+        "processed/gap-filled coordinates cannot separate direct optical samples from interpolation per frame",
+        "Ball validity short around event, not complete flight; no distribution inferred from three samples",
+        "actual event-time origin UNKNOWN; standard and unverified producer-legacy mappings differ by one sample"
+      ],
+      "allowed_now": [
+        "surface hand/ball marker consistency pilot",
+        "author release-proxy coverage and event mapping audit",
+        "same-session static forearm-cluster virtual-wrist feasibility"
+      ],
+      "not_supported_now": [
+        "3034 hand-ball measurement replacement",
+        "independent ball-center speed or finger-force calibration",
+        "empirical probability distribution for Stage2 priors"
+      ],
+      "source_event_mapping": "UNKNOWN",
+      "event_mapping_standard_reference": "https://www.c3d.org/HTML/Documents/eventtimes1.htm",
+      "event_mapping_candidates": {
+        "DP05": {
+          "c3d_standard": 259,
+          "unverified_producer_legacy": 258
+        },
+        "DP06": {
+          "c3d_standard": 309,
+          "unverified_producer_legacy": 308
+        },
+        "NDP07": {
+          "c3d_standard": 311,
+          "unverified_producer_legacy": 310
+        }
+      },
+      "csv_matching_proves": "point numbering and coordinates only; does not establish event time origin"
+    },
+    {
+      "id": "ozkaya2017_measurement_definition",
+      "new_this_audit": true,
+      "primary_url": "https://www.e-kjab.org/archive/detail/56",
+      "doi": "10.5103/KJSB.2017.27.1.19",
+      "measurement_observation": "TRUE",
+      "public_original": "UNKNOWN",
+      "synchronization": "TRUE",
+      "calibration": "UNKNOWN",
+      "radar_linkage": "UNKNOWN",
+      "release_validation": "UNKNOWN",
+      "evidence": "Methods: reflective tape affixed on ball to define release; speedgun 3m behind participants; speed units/model absent in inspected HTML. 2018 explicitly cites this study as based on dataset, but paper reports 3 sessions vs 2018 15 and handedness differs for S2, so do not copy every setting to all downloaded trials."
+    },
+    {
+      "id": "kusafuka2023",
+      "new_this_audit": false,
+      "primary_url": "https://doi.org/10.1371/journal.pone.0290042",
+      "measurement_observation": "TRUE",
+      "public_original": "UNKNOWN",
+      "synchronization": "TRUE",
+      "calibration": "UNKNOWN",
+      "radar_linkage": "UNKNOWN",
+      "release_validation": "TRUE",
+      "release_validation_scope": "paper reports side-video qualitative observation plus middle nail-to-ball distance; not independently revalidated by this audit",
+      "definition": "image-derived nail/joint and ball centers; 960fps two cameras; LED sync; 27 calibration points and DLT; no new raw time-series obtained",
+      "previous_audit": "ball-observability/BALL_DATA_FINDINGS.md; existing S1 inspection not repeated"
+    },
+    {
+      "id": "prime_obp_cv",
+      "new_this_audit": false,
+      "primary_url": "https://github.com/drivelineresearch/openbiomechanics/tree/main/computer_vision",
+      "measurement_observation": "TRUE",
+      "public_original": "TRUE",
+      "synchronization": "UNKNOWN",
+      "calibration": "UNKNOWN",
+      "radar_linkage": "UNKNOWN",
+      "release_validation": "UNKNOWN",
+      "definition": "same Prime video ball candidates and Theia hand-origin frame; no independent finger-contact or raw skin-landmark channels in Theia file",
+      "previous_audits": [
+        "prime-camera-geometry-audit-20261029/PRIME_CAMERA_FINDINGS.md",
+        "prime17-hand-alignment-20261029/PRIME17_HAND_FINDINGS.md",
+        "hand-ball-link/HAND_FRAME_SOURCES.md",
+        "hand-ball-link/HAND_BALL_OBSERVATION.md"
+      ],
+      "same_as_3034": "FALSE"
+    }
+  ],
+  "decision": {
+    "new_public_same_trial_hand_ball_surface_marker_data_obtained": true,
+    "immediate_3034_physical_model_recalibration": "FALSE",
+    "support_auxiliary_observation_pilot": "TRUE",
+    "change_stage2_assumption_probabilities": "FALSE",
+    "routine": "PAUSED"
+  },
+  "access_failures": [
+    {
+      "url": "https://www.nature.com/articles/sdata2018272/tables/2",
+      "tool": "web click",
+      "result": "publisher authentication/cookie redirect; Python direct tables/3 HTTP200 marker table acquired; tables/2 is demographics not marker table"
+    },
+    {
+      "url": "https://doi.org/10.6084/m9.figshare.c.4017808",
+      "tool": "web click",
+      "result": "tool redirect fetch failed; public Figshare REST API and official ndownloader succeeded"
+    },
+    {
+      "target": "S1/1w2d/S1_DP_04_O.c3d",
+      "result": "exact filename not in archive; no guessed substitution; inspected actual DP05/06_O"
+    },
+    {
+      "target": "S1/1w1d/S1_static_02_N.c3d",
+      "result": "exact filename not in archive; inventory identifies actual static_03_N; extracted that exact member"
+    }
+  ],
+  "correction_record": "EVENT_MAPPING_CORRECTION.md",
+  "superseded_inventory": "history_initial_mapping_20261029/source_inventory.json"
+}

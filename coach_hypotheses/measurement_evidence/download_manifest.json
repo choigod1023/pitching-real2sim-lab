@@ -1,0 +1,66 @@
+{
+  "access_date": "2026-10-29",
+  "files": [
+    {
+      "article_id": 5943103,
+      "article_url": "https://api.figshare.com/v2/articles/5943103",
+      "license": {
+        "value": 2,
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "file_id": 10632940,
+      "filename": "S1.rar",
+      "download_url": "https://ndownloader.figshare.com/files/10632940",
+      "bytes": 372116458,
+      "expected_bytes": 372116458,
+      "expected_md5": "7f4357a206fa87d2506e86fd2dbb0c32",
+      "observed_md5": "7f4357a206fa87d2506e86fd2dbb0c32",
+      "sha256": "39c57eaa4656ef95ced063956820bc7089c7ea8e650ea8bbf44e15598b148b7e",
+      "verified": true,
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\public-hand-ball-evidence-20261029\\coach_hypotheses\\measurement_evidence\\artifacts\\S1.rar"
+    },
+    {
+      "article_id": 5943289,
+      "article_url": "https://api.figshare.com/v2/articles/5943289",
+      "license": {
+        "value": 2,
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "file_id": 10633231,
+      "filename": "Trialinfo.xlsx",
+      "download_url": "https://ndownloader.figshare.com/files/10633231",
+      "bytes": 55186,
+      "expected_bytes": 55186,
+      "expected_md5": "9b3b3a8fceed15baf56f65d004098085",
+      "observed_md5": "9b3b3a8fceed15baf56f65d004098085",
+      "sha256": "aee02c7230a5b5c64dfbc95f72172a8277ee6e13b5cc3e37dd4a4274b0de4c55",
+      "verified": true,
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\public-hand-ball-evidence-20261029\\coach_hypotheses\\measurement_evidence\\artifacts\\Trialinfo.xlsx"
+    },
+    {
+      "article_id": 6743120,
+      "article_url": "https://api.figshare.com/v2/articles/6743120",
+      "license": {
+        "value": 2,
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "file_id": 12301955,
+      "filename": "S1_csv.rar",
+      "download_url": "https://ndownloader.figshare.com/files/12301955",
+      "bytes": 275030892,
+      "expected_bytes": 275030892,
+      "expected_md5": "022f99deca947f51e6afdbb0a56651cb",
+      "observed_md5": "022f99deca947f51e6afdbb0a56651cb",
+      "sha256": "21e8233267d83f27ae89881535eb5f6b8ca0ca324913013dec9cedc262208d70",
+      "verified": true,
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\public-hand-ball-evidence-20261029\\coach_hypotheses\\measurement_evidence\\artifacts\\S1_csv.rar"
+    }
+  ],
+  "collection_id": 4017808,
+  "collection_article_count": 15,
+  "download_scope": "one subject C3D and CSV archives plus all-subject trial-information workbook; not all subjects",
+  "originals_ignored": true
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "scope": "three dynamic C3Ds/three matching CSVs/three static C3Ds/three complete downloads",
+  "checks": {
+    "download_size_and_md5": true,
+    "csv_c3d_coordinate_agreement_under_1um": true,
+    "json_status_enum": true,
+    "originals_git_ignored": true,
+    "unit_tests": 5,
+    "preexisting_tracked_files_unchanged_vs_stage2": true
+  },
+  "input_and_code_sha256": {
+    "audit_public_sample.py": "bc0cc2ecc8eb7f150f40bf3f873b9e291fe1aa3c0c36f86ed982b67bd9f5d1cf",
+    "test_audit_public_sample.py": "25dd889d934ed2c5b423c0abe88a399ce5331009733abffaf19616ca634dfee7",
+    "sample_audit.json": "9aded3f3cf9636bf290c1a842cbd5fed1c76234fed445a5f745bde016199c148",
+    "download_manifest.json": "675c3a3fdcb2d62fcbebd2fd7e15a60d44ee94fb4d641de10fef978e5a55a781",
+    "source_inventory.json": "7acc525751d8b7381c9997c5987f521f75632c6af1c153ed5e71b3bc8000e625"
+  },
+  "calibration_or_performance_claim": false
+}
