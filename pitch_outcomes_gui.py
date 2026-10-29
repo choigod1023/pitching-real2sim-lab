@@ -1,15 +1,18 @@
-"""Local desktop interface for conditional joint-to-flight comparisons."""
+"""Explicit replay interface for retired assumed-point flight diagnostics."""
 import json
 import numpy as np
 import tkinter as tk
 from tkinter import ttk, messagebox
 from pitch_outcomes import evaluate
+from coach_hypotheses.model_retirement.policy import require_legacy_diagnostic, diagnostic_result, model_usage_metadata
 
 
-def launch(data, output):
-    root = tk.Tk(); root.title('야구 관절–공 비행 가설 실험'); root.geometry('1160x830')
-    ttk.Label(root, text='관절 수정 → 실제 팔 적분 → 가정한 공 비행 | 선수 향상 검증 전', font=('Malgun Gothic', 16)).pack(pady=8)
-    ttk.Label(root, text='회전·목표점·재현 편차는 가정입니다. 목표점 오차 감소 ≠ 실제 제구 향상. 회전 생성과 근력 능력은 미검증.').pack()
+def launch(data, output, *, legacy_diagnostic=False):
+    require_legacy_diagnostic(legacy_diagnostic)
+    data = dict(data, **model_usage_metadata())
+    root = tk.Tk(); root.title('사용 중단 모델: 과거 진단 재현'); root.geometry('1160x830')
+    ttk.Label(root, text='구속 예측·자세 추천에서 제외된 모델 | 과거 진단 전용', font=('Malgun Gothic', 16)).pack(pady=8)
+    ttk.Label(root, text='표시값은 가정점의 계산입니다. 실제 공 구속·구속 향상·자세 추천이 아닙니다.').pack()
     controls = ttk.Frame(root); controls.pack(pady=8); entries = {}
     for col, (key, label, value) in enumerate([('x','목표 좌우(m)',0),('z','목표 높이(m)',.9),
         ('cl','유효 양력계수',.15),('cd','항력계수',.35),('jitter','방향 편차 SD(도)',.15),('offset','공통 방향 가정(도)',0)]):
@@ -17,12 +20,12 @@ def launch(data, output):
         entry=ttk.Entry(controls,width=15); entry.insert(0,str(value)); entry.grid(row=1,column=col); entries[key]=entry
     columns=('name','speed','gain','error','reduction','spread','work','budget')
     tree=ttk.Treeview(root,columns=columns,show='headings',height=6)
-    for key,label in zip(columns,['후보','구속 km/h','변화 km/h','목표 오차 cm','오차 감소 cm','가정 산포 cm','일 증가 J','일·힘 검사']):
+    for key,label in zip(columns,['진단 조건','가정점 속력 km/h','진단 속력차 km/h','가정 목표차 cm','진단 목표차 변화 cm','가정 산포 cm','일 차이 J','표본 검사']):
         tree.heading(key,text=label); tree.column(key,width=133)
     tree.pack(fill='x',padx=10)
     canvas=tk.Canvas(root,width=1120,height=365,bg='white'); canvas.pack(pady=10)
     detail=tk.StringVar(); ttk.Label(root,textvariable=detail,wraplength=1110).pack()
-    ttk.Label(root,text='회색: 기준 / 파랑: 선택 후보. 전면 좌표는 투수에서 본 +x. 양력 변위는 같은 이탈 상태의 무양력 궤적 대비입니다.').pack(pady=8)
+    ttk.Label(root,text='회색: 기준 / 파랑: 선택 진단 조건. 전면 좌표는 투수에서 본 +x. 양력 변위는 같은 이탈 상태의 무양력 궤적 대비입니다.').pack(pady=8)
     current={}
     def draw(event=None):
         result=current.get('result')
@@ -54,16 +57,16 @@ def launch(data, output):
     def run():
         try:
             values={k:float(e.get()) for k,e in entries.items()}
-            result=evaluate(data['states'],target=(values['x'],values['z']),cl=values['cl'],cd=values['cd'],jitter_deg=values['jitter'],elevation_offset_deg=values['offset'])
+            result=diagnostic_result(evaluate(data['states'],target=(values['x'],values['z']),cl=values['cl'],cd=values['cd'],jitter_deg=values['jitter'],elevation_offset_deg=values['offset']))
             result['provenance']={k:v for k,v in data.items() if k!='states'}
-            (output/'results.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+            (output/'legacy_diagnostic_results.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
             current['result']=result
             for item in tree.get_children():tree.delete(item)
             for i,row in enumerate(result['records']):
                 if row['status']=='ok':
-                    numbers=[row[k] for k in ['release_speed_kmh','speed_change_kmh','target_error_cm','target_error_reduction_cm','perturbation_spread_cm','work_change_j']]
+                    numbers=[row.get(k) for k in ['diagnostic_assumed_point_speed_kmh','diagnostic_speed_difference_kmh','diagnostic_target_error_cm','diagnostic_target_difference_cm','perturbation_spread_cm','work_change_j']]
                     vals=[row['name']]+[f'{n:.3f}' if n is not None else 'N/A' for n in numbers]+['통과(표본 검사)' if row['sampled_budget_pass'] else '초과']
-                else:vals=[row['name'],f"{row['release_speed_kmh']:.3f}",'—','비행 제외','—','—',f"{row['work_change_j']:.3f}",'통과(표본 검사)' if row['sampled_budget_pass'] else '초과']
+                else:vals=[row['name'],f"{row['diagnostic_assumed_point_speed_kmh']:.3f}",'—','비행 제외','—','—',f"{row['work_change_j']:.3f}",'통과(표본 검사)' if row['sampled_budget_pass'] else '초과']
                 tree.insert('', 'end',iid=str(i),values=vals)
             tree.selection_set('0');draw()
         except (ValueError,KeyError) as error:messagebox.showerror('입력 확인',str(error))
