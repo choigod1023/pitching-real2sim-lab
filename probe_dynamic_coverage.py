@@ -8,7 +8,7 @@ def frame_schedule(frame_count,start,stop,stride):
     if stride<=0 or start<0 or stop<start:raise ValueError('Invalid frame interval')
     return list(range(start,min(stop+1,frame_count),stride))
 
-def run(max_new=None,camera_ids=(1,2,3,4),start=0,stop=1320,stride=24):
+def run(max_new=None,camera_ids=(1,2,3,4),start=0,stop=1320,stride=24,input_root=None):
     if not camera_ids or any(i not in [1,2,3,4] for i in camera_ids) or len(set(camera_ids))!=len(camera_ids):raise ValueError('Invalid or duplicate camera IDs')
     cv2.setNumThreads(1);folder=ROOT/'coverage';folder.mkdir(exist_ok=True);manifest=json.loads((ROOT/'dynamic-source-manifest.json').read_text());created=0;code=hashlib.sha256(Path(__file__).read_bytes()+Path('dynamic_camera_recovery.py').read_bytes()).hexdigest()
     # Old observations remain source data, with their original implementation hash retained.
@@ -18,7 +18,7 @@ def run(max_new=None,camera_ids=(1,2,3,4),start=0,stop=1320,stride=24):
         if f.exists():previous[i]=json.loads(f.read_text())
     attempted={};detections={}
     for i in camera_ids:
-        entry=next(e for e in manifest if e['name'].endswith(f'_{i}.mp4'));cap=cv2.VideoCapture(str(ROOT/entry['name']));attempted[i]=[];detections[i]=[]
+        entry=next(e for e in manifest if e['name'].endswith(f'_{i}.mp4'));cap=cv2.VideoCapture(str((Path(input_root) if input_root else ROOT)/entry['name']));attempted[i]=[];detections[i]=[]
         for f in frame_schedule(entry['frame_count'],start,stop,stride):
             path=folder/f'cam{i}_frame{f}.json'
             if path.exists():r=json.loads(path.read_text())
@@ -41,4 +41,4 @@ def run(max_new=None,camera_ids=(1,2,3,4),start=0,stop=1320,stride=24):
     filename='coverage-progress.json' if tuple(camera_ids)==(1,2,3,4) and (start,stop,stride)==(0,1320,24) else f"coverage-{'-'.join(map(str,camera_ids))}-{start}-{stop}-s{stride}.json"
     (ROOT/filename).write_text(json.dumps(result,indent=2));print(json.dumps({k:result[k] for k in ['complete','completed_camera_frames','expected_camera_frames','new_decodes_this_run']}));return result
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--max-new',type=int);p.add_argument('--cameras',type=int,nargs='+',default=[1,2,3,4]);p.add_argument('--start',type=int,default=0);p.add_argument('--stop',type=int,default=1320);p.add_argument('--stride',type=int,default=24);a=p.parse_args();run(a.max_new,a.cameras,a.start,a.stop,a.stride)
+    p=argparse.ArgumentParser();p.add_argument('--max-new',type=int);p.add_argument('--cameras',type=int,nargs='+',default=[1,2,3,4]);p.add_argument('--start',type=int,default=0);p.add_argument('--stop',type=int,default=1320);p.add_argument('--stride',type=int,default=24);p.add_argument('--input-root',type=Path);a=p.parse_args();run(a.max_new,a.cameras,a.start,a.stop,a.stride,a.input_root)
