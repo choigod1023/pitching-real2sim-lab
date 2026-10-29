@@ -1,18 +1,18 @@
-# イベント表本時刻の定義訂正
+# 이벤트 표본 시각의 정의 정정
 
-最初の計画と実行はon-disk first=1を時刻にも適用しarray258を候補eventとしました。
-CSV ITEM259がarray258に一致することは空間値と配列番号の対応を示すだけで、
-event1.295秒がITEM259という時間対応は証明しませんでした。この推定は撤回します。
+첫 계획과 실행은on-disk first=1을 시각에도 적용해array258을 후보event로 뒀습니다.
+CSV ITEM259와array258의 일치는 공간값과 배열 번호의 대응만 보여주며,
+event1.295초가ITEM259라는 시간 대응은 입증하지 못했습니다. 이 추정을 철회합니다.
 
-[C3D公式 EVENT:TIMES](https://www.c3d.org/HTML/Documents/eventtimes1.htm)は
-first3Dsample(frame1)=0.0秒と定義します。この規約ならarray259/sourceframe260です。
-元のproducerがlegacyなframe/rate時刻を使った可能性はこの資料だけでは排除できません。
-実際の接触解放を画面から独立確認していないためsource_event_mapping=UNKNOWNを維持します。
+[C3D 공식 EVENT:TIMES](https://www.c3d.org/HTML/Documents/eventtimes1.htm)는
+first3Dsample(frame1)=0.0초로 정의합니다. 이 규약이면array259/sourceframe260입니다.
+원래producer가legacy frame/rate 시각을 썼을 가능성은 이 자료만으로 배제하지 못합니다.
+실제 접촉 해제를 독립적으로 확인하지 못했으므로source_event_mapping=UNKNOWN입니다.
 
-この訂正を計算前に別途commitし、標準規約のarray259をspec nominal、array258を
-legacy alternativeとして両方の結果を残します。元の計画/実行summaryとcodehashは
-initial_mapping/に保持します。規約は予測誤差で選びません。元のshift0/1と新しい
-shift-1/0は同じ二つの物理標本窓です。数値のよいほうを採用しません。
+이 정정을 계산 전에 별도커밋하고 표준 규약의array259를spec nominal,array258을
+legacy alternative로 모두 보존합니다. 첫 계획/실행summary와codehash는
+initial_mapping/에 둡니다. 규약을 예측 오차로 고르지 않습니다. 기존shift0/1과 새
+shift-1/0은 같은 두 물리 표본 창입니다. 수치가 좋은 쪽을 채택하지 않습니다.
 
-これは時刻定義の訂正で、真の離脱時刻を検証したことではありません。既存OBPや
-Primeの時刻対応に自動適用せず、当該資料のsourceと規約だけを扱います。
+이는 시각 정의 정정이며 실제 이탈 시점을 검증한 것이 아닙니다. 기존OBP나
+Prime의 시각 대응에 자동 적용하지 않고 이 자료의 출처와 규약만 다룹니다.

@@ -15,7 +15,7 @@ CASES = [('1w2d/S1_DP_05_O.c3d','1w2d/S1_static_01_D.c3d','R'),
 
 
 def load_c3d(path):
-    """Preserve source frame numbers; ezc3d's frame convention differs by one here."""
+    """Keep source labels separate from C3D EVENT:TIMES (first sample is zero)."""
     with Path(path).open('rb') as handle:
         header = handle.read(512)
         handle.seek((header[0]-1)*512+3)
@@ -43,10 +43,11 @@ def load_c3d(path):
         event = source['parameters']['EVENT']
         for i,label in enumerate(event['LABELS']['value']):
             seconds = float(60*event['TIMES']['value'][0,i]+event['TIMES']['value'][1,i])
-            events.append({'label':label.strip(),'time':seconds,'source_frame':int(round(seconds*rate)),
-                           'array_index':int(round(seconds*rate))-first})
+            index=int(round(seconds*rate))
+            events.append({'label':label.strip(),'time':seconds,'source_frame':first+index,
+                           'array_index':index,'legacy_alternative_array_index':index-first})
     return {'markers':markers,'valid':validity,'rate':rate,'first':first,'last':last,
-            'time':(first+np.arange(points.shape[2]))/rate,'events':events,
+            'time':np.arange(points.shape[2])/rate,'events':events,
             'ezc3d_first':source['header']['points']['first_frame']}
 
 
@@ -172,7 +173,7 @@ def run(data, output):
         source=load_c3d(data/dynamic)
         try:
             calibration=calibrate_wrist(load_c3d(data/static),side)
-            for shift in (0,1):
+            for shift in (0,-1):
                 metrics,points=evaluate(source,calibration,side,shift)
                 rows.extend(dict(row,trial=dynamic,side=side) for row in metrics)
                 predictions.extend(dict(row,trial=dynamic) for row in points)
@@ -183,10 +184,13 @@ def run(data, output):
     summary={'inputs_sha256':inputs,'exclusions':exclusions,'rows':rows,
              'ball_marker_is_confirmed_center':False,'actual_release_time_validated':False,
              'radar_comparison_performed':False,'athlete_performance_effect_tested':False}
+    summary['source_event_mapping']='UNKNOWN; spec nominal and legacy alternative both reported'
     (output/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
     package=Path(__file__).parent
     (output/'manifest.json').write_text(json.dumps({'protocol_commit':'6a3c38d',
         'protocol_sha256':hashlib.sha256((package/'PROTOCOL.md').read_bytes()).hexdigest(),
+        'event_correction_plan_commit':'2bf585c',
+        'event_correction_sha256':hashlib.sha256((package/'EVENT_MAPPING_CORRECTION.md').read_bytes()).hexdigest(),
         'code_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in package.glob('*.py')}},indent=2),encoding='utf-8')
     return summary
 

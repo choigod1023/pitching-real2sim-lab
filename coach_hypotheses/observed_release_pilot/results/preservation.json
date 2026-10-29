@@ -1,0 +1,8 @@
+{
+  "tracked_checked": 666,
+  "original_changes": [],
+  "existing_errors_unchanged": true,
+  "test_owned_restored": [
+    "artifacts/coupled-body/model.xml"
+  ]
+}

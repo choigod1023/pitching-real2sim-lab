@@ -13,14 +13,14 @@ from .pilot import (load_c3d,rigid_transform,calibrate_wrist,dynamic_hand,fit_of
 
 
 def source_fixture():
-    n=401;time=(np.arange(n)+1)/200;translation=np.column_stack([.3*time,np.zeros((n,2))])
+    n=401;time=np.arange(n)/200;translation=np.column_stack([.3*time,np.zeros((n,2))])
     locations={'RFR1':[-.05,0,1],'RFR2':[-.03,.04,1],'RFR3':[-.1,.01,1.03],
                'RFR4':[-.08,-.02,.98],'RWRL':[0,-.02,1],'RWRM':[0,.02,1],
                'R3MC':[.08,0,1],'R5MC':[.06,.03,1]}
     markers={label:np.array(point)+translation for label,point in locations.items()}
     markers['Ball']=translation+np.column_stack([.12+.15*(time-1.5),np.full(n,.02),np.ones(n)])
     return {'markers':markers,'valid':{label:np.ones(n,bool) for label in markers},'time':time,
-            'rate':200.,'first':1,'last':n,'events':[{'label':'Event','time':1.5,'source_frame':300,'array_index':299}]}
+            'rate':200.,'first':1,'last':n,'events':[{'label':'Event','time':1.5,'source_frame':301,'array_index':300}]}
 
 
 def write_fixture(path):
@@ -37,7 +37,9 @@ class ObservationTests(unittest.TestCase):
     def test_load_units_and_on_disk_event_index(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'trial.c3d';write_fixture(path);source=load_c3d(path)
-            self.assertEqual(source['events'][0]['array_index'],300-source['first'])
+            self.assertEqual(source['events'][0]['array_index'],300)
+            self.assertEqual(source['events'][0]['source_frame'],300+source['first'])
+            self.assertEqual(source['time'][0],0.)
             np.testing.assert_allclose(source['markers']['Ball'],source_fixture()['markers']['Ball'],atol=1e-6)
             self.assertEqual(source['rate'],200.)
             with path.open('r+b') as f:f.seek(1);f.write(b'X')
@@ -87,8 +89,8 @@ class ObservationTests(unittest.TestCase):
             for key in ['marker_position_rmse_mm','marker_speed_mae_kmh','marker_velocity_vector_rmse_kmh']:self.assertAlmostEqual(a[key],b[key],places=8)
 
     def test_missing_observation_rejected_and_shift_kept_separate(self):
-        source=source_fixture();cal=calibrate_wrist(source,'R');shifted,_=evaluate(source,cal,'R',1)
-        self.assertEqual(shifted[0]['event_shift_frames'],1)
+        source=source_fixture();cal=calibrate_wrist(source,'R');shifted,_=evaluate(source,cal,'R',-1)
+        self.assertEqual(shifted[0]['event_shift_frames'],-1)
         source['valid']['Ball'][295]=False
         with self.assertRaisesRegex(ValueError,'missing_observations'):evaluate(source,cal,'R')
 
