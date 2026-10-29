@@ -4,6 +4,8 @@
 
 이후 [설계 확정과 실제 자료 검증](coach_hypotheses/research_reset/README.md)을 진행했습니다. 98선수/399투구의 관측 투구쌍 진단도 0변화 기준을 넘지 못해 추천 모델로 채택하지 않았습니다. 회고적 평균 제거 오차와 투구쌍 차이 오차는 서로 다른 평가값입니다. 다음 작업은 [전신 관측/손–공 연결의 병렬 검증 계획](coach_hypotheses/research_reset/NEXT_STEPS.md)에 있습니다.
 
+후속으로 [전신 파워·지면반력의 새 입력과 손–공 미분 지지 구간 분리](coach_hypotheses/new_signal/README.md)를 실제 시험했습니다. 새 선형/비선형 입력도 기준을 넘지 못했고, 손–공 표식 모델도 위치·속력의 일관된 개선 기준을 통과하지 못했습니다. 현재 채택된 대체 예측 모델이나 실제 성능 향상은 없습니다.
+
 A personal, self-directed research project by **Jang JunHyeok**, a student in the School of Computer Science and AI at Dongguk University (Seoul, South Korea). It is a learning and portfolio project, not funded research and not affiliated with any team or company.
 
 ## Goal

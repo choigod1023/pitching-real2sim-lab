@@ -1,0 +1,599 @@
+{
+  "protocol_commit": "c3f0698",
+  "protocol_sha256": "9f339cdf21e560b0c8394864b64753853fed871741b69ef9f0022f7116b2a83d",
+  "cohort": {
+    "players": 98,
+    "pitches": 399,
+    "candidate_pitches": 399,
+    "exclusions": [],
+    "common_excluded_pitches": [],
+    "sources": {
+      "metadata.csv": {
+        "sha256": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+        "verified": true
+      },
+      "poi/poi_metrics.csv": {
+        "sha256": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+        "verified": true
+      },
+      "data_dictionary.csv": {
+        "sha256": "3a87194c690b8118bc2175a688668ca996d699e5b35eafd1155b94e1f9efb817",
+        "verified": true
+      },
+      "full_sig/joint_velos.csv": {
+        "sha256": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297",
+        "verified": true
+      },
+      "full_sig/joint_angles.csv": {
+        "sha256": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+        "verified": true
+      },
+      "full_sig/forces_moments.csv": {
+        "sha256": "23920e256fbc42ba25278ba95086db297457e7c8054c98c66f27fa03874c1f9f",
+        "verified": true
+      },
+      "full_sig/landmarks.csv": {
+        "sha256": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+        "verified": true
+      },
+      "full_sig/energy_flow.csv": {
+        "sha256": "e68e0def4b35900064240f7c93a33df7a58e07ccd75b36628d6fff91236f766e"
+      },
+      "full_sig/force_plate.csv": {
+        "sha256": "2e7bd243b08fc1876c1f5db805c2bc920876fdc651323f13ce03869aed690d19"
+      }
+    },
+    "source_power_units_independently_validated": false,
+    "physical_contact_or_work_budget_validated": false
+  },
+  "summaries": {
+    "10": {
+      "null": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0152004702040824,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0,
+        "player_bootstrap_95_difference_kmh": [
+          0.0,
+          0.0
+        ],
+        "absolute_error_p95_kmh": 2.5749504000000343,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "stable7": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0299842684781437,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.014783798274061302,
+        "player_bootstrap_95_difference_kmh": [
+          -0.005088105987174669,
+          0.03581176446991885
+        ],
+        "absolute_error_p95_kmh": 2.6391161789885986,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "new48_linear": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.099175199946595,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.08397472974251254,
+        "player_bootstrap_95_difference_kmh": [
+          0.023832536652136718,
+          0.1506751062837953
+        ],
+        "absolute_error_p95_kmh": 2.788644052646732,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "new48_rff": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0960841337450138,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.08088366354093132,
+        "player_bootstrap_95_difference_kmh": [
+          0.013951734030365454,
+          0.15199498549998167
+        ],
+        "absolute_error_p95_kmh": 2.7958588585813424,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "selector": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0152004702040824,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0,
+        "player_bootstrap_95_difference_kmh": [
+          0.0,
+          0.0
+        ],
+        "absolute_error_p95_kmh": 2.5749504000000343,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      }
+    },
+    "20": {
+      "null": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0152004702040824,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0,
+        "player_bootstrap_95_difference_kmh": [
+          0.0,
+          0.0
+        ],
+        "absolute_error_p95_kmh": 2.5749504000000343,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "stable7": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0320530033814976,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.016852533177415356,
+        "player_bootstrap_95_difference_kmh": [
+          -0.004531000693010535,
+          0.04039977461450454
+        ],
+        "absolute_error_p95_kmh": 2.633098111005651,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "new48_linear": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.1204261921828365,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.10522572197875416,
+        "player_bootstrap_95_difference_kmh": [
+          0.04441878522704697,
+          0.17575575523496292
+        ],
+        "absolute_error_p95_kmh": 2.8196584606355333,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "new48_rff": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.1164049119408042,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.10120444173672206,
+        "player_bootstrap_95_difference_kmh": [
+          0.03328694159210396,
+          0.1707695317371654
+        ],
+        "absolute_error_p95_kmh": 2.8165215953576865,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "selector": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0152004702040824,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0,
+        "player_bootstrap_95_difference_kmh": [
+          0.0,
+          0.0
+        ],
+        "absolute_error_p95_kmh": 2.5749504000000343,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      }
+    },
+    "30": {
+      "null": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0152004702040824,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0,
+        "player_bootstrap_95_difference_kmh": [
+          0.0,
+          0.0
+        ],
+        "absolute_error_p95_kmh": 2.5749504000000343,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "stable7": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0316959070904566,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.01649543688637415,
+        "player_bootstrap_95_difference_kmh": [
+          -0.005060561317814529,
+          0.04035816647816369
+        ],
+        "absolute_error_p95_kmh": 2.6275263993369933,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "new48_linear": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.126728717142771,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.11152824693868865,
+        "player_bootstrap_95_difference_kmh": [
+          0.048538526927281986,
+          0.1865687519558079
+        ],
+        "absolute_error_p95_kmh": 2.899042723741841,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "new48_rff": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.1167265998063236,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.10152612960224136,
+        "player_bootstrap_95_difference_kmh": [
+          0.03308167607256057,
+          0.17034260661506578
+        ],
+        "absolute_error_p95_kmh": 2.7960913457020267,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      },
+      "selector": {
+        "players": 98,
+        "pairs": 666,
+        "model_mae_kmh": 1.0152004702040824,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0,
+        "player_bootstrap_95_difference_kmh": [
+          0.0,
+          0.0
+        ],
+        "absolute_error_p95_kmh": 2.5749504000000343,
+        "retrospective_observed_pair": true,
+        "prospective_validated": false,
+        "coaching_recommendation_ready": false
+      }
+    }
+  },
+  "invariance": {
+    "10": {
+      "heldout_labels_unused": true,
+      "all_outer_splits_disjoint": true
+    },
+    "20": {
+      "heldout_labels_unused": true,
+      "all_outer_splits_disjoint": true
+    },
+    "30": {
+      "heldout_labels_unused": true,
+      "all_outer_splits_disjoint": true
+    }
+  },
+  "verdict": {
+    "checks": {
+      "minimum_players": true,
+      "minimum_pitches": true,
+      "integrity_verified": true,
+      "primary_better": false,
+      "player_bootstrap_upper_negative": false,
+      "other_cutoffs_not_worse": true
+    },
+    "one_kmh_development_screen": false,
+    "original_scientific_gate_changed": false,
+    "physical_constraints_validated": false,
+    "actual_athlete_effect_validated": false,
+    "coaching_recommendation_ready": false,
+    "development_new_signal_pass": false
+  },
+  "selector_counts": {
+    "10": {
+      "null": 98,
+      "stable7": 0,
+      "new48_linear": 0,
+      "new48_rff": 0
+    },
+    "20": {
+      "null": 98,
+      "stable7": 0,
+      "new48_linear": 0,
+      "new48_rff": 0
+    },
+    "30": {
+      "null": 98,
+      "stable7": 0,
+      "new48_linear": 0,
+      "new48_rff": 0
+    }
+  },
+  "guard": {
+    "pilot_code_sha256": "7c7c6b1183c5c9a38ddd16f6dac598e15fec50030d7232a08a7ffe5917747acc",
+    "inputs_sha256": {
+      "1w2d/S1_DP_05_O.c3d": "0e14030f1b1baf5d5dc64dbec84a1946640fe8cef7a04a1ec9986313cd37b14d",
+      "1w2d/S1_static_01_D.c3d": "72aab183d578d34aa898e0faf432e53e67ec837fffa601767e9260f5927c1c03",
+      "1w2d/S1_DP_06_O.c3d": "c2f3830c6e7ee38c175785a248ed29c791e68bb916514dfa3ec489e009c652b1",
+      "1w1d/S1_NDP_07_O.c3d": "5303939060d3973deab71f087e1df2fc0850af0e4fdaf4f8846a989ec39adaed",
+      "1w1d/S1_static_03_N.c3d": "36a429dc440c7449dfeeeb747a6fa96fb14489428c54d0a7fe52c96fe41c49b5"
+    },
+    "rows": [
+      {
+        "model": "rigid_offset",
+        "event_shift_frames": 0,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 15.225165328662214,
+        "marker_speed_mae_kmh": 2.518731174846118,
+        "marker_vector_rmse_kmh": 3.6019418048068728,
+        "trial": "1w2d/S1_DP_05_O.c3d"
+      },
+      {
+        "model": "linear_relative_offset",
+        "event_shift_frames": 0,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 22.70256678717974,
+        "marker_speed_mae_kmh": 1.9877608450453952,
+        "marker_vector_rmse_kmh": 4.003553628911362,
+        "trial": "1w2d/S1_DP_05_O.c3d"
+      },
+      {
+        "model": "rigid_offset",
+        "event_shift_frames": -1,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 13.455969947164759,
+        "marker_speed_mae_kmh": 2.214704739910059,
+        "marker_vector_rmse_kmh": 2.908894827767806,
+        "trial": "1w2d/S1_DP_05_O.c3d"
+      },
+      {
+        "model": "linear_relative_offset",
+        "event_shift_frames": -1,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 19.127321200425953,
+        "marker_speed_mae_kmh": 1.77465014194116,
+        "marker_vector_rmse_kmh": 3.3088661928494885,
+        "trial": "1w2d/S1_DP_05_O.c3d"
+      },
+      {
+        "model": "rigid_offset",
+        "event_shift_frames": 0,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 20.722680122186283,
+        "marker_speed_mae_kmh": 2.7924551963470385,
+        "marker_vector_rmse_kmh": 3.7392177424779574,
+        "trial": "1w2d/S1_DP_06_O.c3d"
+      },
+      {
+        "model": "linear_relative_offset",
+        "event_shift_frames": 0,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 17.849536694207664,
+        "marker_speed_mae_kmh": 3.0453444129843152,
+        "marker_vector_rmse_kmh": 3.848703625487034,
+        "trial": "1w2d/S1_DP_06_O.c3d"
+      },
+      {
+        "model": "rigid_offset",
+        "event_shift_frames": -1,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 18.485358494988645,
+        "marker_speed_mae_kmh": 2.2983313857718386,
+        "marker_vector_rmse_kmh": 3.394426865981404,
+        "trial": "1w2d/S1_DP_06_O.c3d"
+      },
+      {
+        "model": "linear_relative_offset",
+        "event_shift_frames": -1,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 14.03878008442169,
+        "marker_speed_mae_kmh": 2.5671500111626475,
+        "marker_vector_rmse_kmh": 3.3498322224102495,
+        "trial": "1w2d/S1_DP_06_O.c3d"
+      },
+      {
+        "model": "rigid_offset",
+        "event_shift_frames": 0,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 26.745662645320664,
+        "marker_speed_mae_kmh": 2.1763967543629046,
+        "marker_vector_rmse_kmh": 5.356143984902693,
+        "trial": "1w1d/S1_NDP_07_O.c3d"
+      },
+      {
+        "model": "linear_relative_offset",
+        "event_shift_frames": 0,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 26.287614108572523,
+        "marker_speed_mae_kmh": 1.7725210757373173,
+        "marker_vector_rmse_kmh": 5.103425292852657,
+        "trial": "1w1d/S1_NDP_07_O.c3d"
+      },
+      {
+        "model": "rigid_offset",
+        "event_shift_frames": -1,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 21.76151629840793,
+        "marker_speed_mae_kmh": 2.1140959020023495,
+        "marker_vector_rmse_kmh": 3.976278555325333,
+        "trial": "1w1d/S1_NDP_07_O.c3d"
+      },
+      {
+        "model": "linear_relative_offset",
+        "event_shift_frames": -1,
+        "old_train_derivative_shared_samples": 1,
+        "strict_train_derivative_shared_samples": 0,
+        "train_samples": 10,
+        "test_samples": 7,
+        "marker_position_rmse_mm": 22.404420050181333,
+        "marker_speed_mae_kmh": 1.603474410181083,
+        "marker_vector_rmse_kmh": 3.7898351192814164,
+        "trial": "1w1d/S1_NDP_07_O.c3d"
+      }
+    ],
+    "verdict": {
+      "pilot_joint_improvement": false,
+      "nominal_differences": [
+        {
+          "trial": "1w1d/S1_NDP_07_O.c3d",
+          "position_difference_mm": -0.45804853674814083,
+          "speed_difference_kmh": -0.40387567862558726
+        },
+        {
+          "trial": "1w2d/S1_DP_05_O.c3d",
+          "position_difference_mm": 7.477401458517527,
+          "speed_difference_kmh": -0.5309703298007227
+        },
+        {
+          "trial": "1w2d/S1_DP_06_O.c3d",
+          "position_difference_mm": -2.8731434279786185,
+          "speed_difference_kmh": 0.2528892166372767
+        }
+      ],
+      "center_speed_validated": false,
+      "source_filter_support_verified": false,
+      "coaching_recommendation_ready": false
+    },
+    "purpose": "same_trial_surface_marker_reconstruction_not_ball_center_or_intervention"
+  },
+  "tests": {
+    "tests_run": 318,
+    "passed": 306,
+    "assertion_failures": 0,
+    "errors": [
+      "test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)",
+      "test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)",
+      "test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)",
+      "test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)",
+      "test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)",
+      "test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)",
+      "test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)",
+      "test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)",
+      "test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)",
+      "test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)"
+    ],
+    "skips": [
+      [
+        "test_synthetic_recovery_and_constraints (test_pitch_fit.ArmFitTests.test_synthetic_recovery_and_constraints)",
+        "install pinned model to run integration checks"
+      ],
+      [
+        "test_temporal_solver_preserves_constant_feasible_motion (test_pitch_fit.ArmFitTests.test_temporal_solver_preserves_constant_feasible_motion)",
+        "install pinned model to run integration checks"
+      ]
+    ],
+    "new_errors": [],
+    "baseline_error_set_identical": true,
+    "elapsed_s": 20.369406400015578,
+    "model_xml_before": "abb05e8208c80e33ca31caf37077c05a0642bb82cee3821aab540a09c6782d97"
+  },
+  "serialization_fix_preserved_predictions": {
+    "new48_linear_10_predictions.csv": true,
+    "new48_linear_20_predictions.csv": true,
+    "new48_linear_30_predictions.csv": true,
+    "new48_rff_10_predictions.csv": true,
+    "new48_rff_20_predictions.csv": true,
+    "new48_rff_30_predictions.csv": true,
+    "null_10_predictions.csv": true,
+    "null_20_predictions.csv": true,
+    "null_30_predictions.csv": true,
+    "selector_10_predictions.csv": true,
+    "selector_20_predictions.csv": true,
+    "selector_30_predictions.csv": true,
+    "stable7_10_predictions.csv": true,
+    "stable7_20_predictions.csv": true,
+    "stable7_30_predictions.csv": true
+  },
+  "external_imu_access": {
+    "article_id": 16691947,
+    "doi": "10.4121/16691947",
+    "title": "Kinematics and ball velocity of baseball pitchers",
+    "license": "CC BY 4.0",
+    "files": [
+      {
+        "name": "Data.csv",
+        "id": 30919798,
+        "size": 13467,
+        "supplied_md5": "4cb1f9b2f17f9e8f391df85161e07291"
+      },
+      {
+        "name": "README.txt",
+        "id": 30920326,
+        "size": 1988,
+        "supplied_md5": "c74ca774ed24f3ebd4b7554394e65d5d"
+      }
+    ],
+    "source_api": "https://api.figshare.com/v2/articles/16691947",
+    "download_checksums_verified": false,
+    "analysis_performed": false,
+    "access_results": [
+      {
+        "name": "Data.csv",
+        "status": 202,
+        "bytes": 0,
+        "checksum_verified": false,
+        "final_host": "figshare.com"
+      },
+      {
+        "name": "README.txt",
+        "status": 202,
+        "bytes": 0,
+        "checksum_verified": false,
+        "final_host": "figshare.com"
+      }
+    ]
+  }
+}
