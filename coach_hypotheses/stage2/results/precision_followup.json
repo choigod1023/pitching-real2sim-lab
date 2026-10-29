@@ -1,0 +1,1611 @@
+{
+  "followup_protocol_commit": "e9fb983",
+  "heading_correction_commit": "938cc8c",
+  "original_results_sha256": {
+    "scenario_results.json": "126b0598e1bbf95273e313fc30fcd9170547d7a02d7511ebd09349b7a8144af0",
+    "mc_designs.json": "cf54371db8e77a49bcac6f3de4450e0f2f1c3a95ad330f11966df7a899e788cb",
+    "recorded_comparison.json": "b2adf342728a3e2c58400908667af751af71fa293dd4a6028dcb3ecd5d2b6495",
+    "manifest.json": "248e6ea23af97d90e0f270791a5f4c465c5ff1e063830eab25fe3d5c0f9ecb7f"
+  },
+  "original_results_preserved": true,
+  "followups": [
+    {
+      "pitch": "3034_1",
+      "mode": "primary",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 115.61900758974771,
+          "sd_kmh": 10.36464499755364,
+          "variance_kmh2": 107.42586592531369,
+          "scenario_quantiles_025_50_975_kmh": [
+            98.04985410220884,
+            115.43098184523213,
+            134.7897308787478
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8774891622253697,
+            "release_frame": 0.06903645205507696,
+            "hand_orientation_filter": 0.03571388301234141,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8848480231864471,
+            "release_frame": 0.07909777714000424,
+            "hand_orientation_filter": 0.04559176318143869,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.017760502707211967
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 115.57413635787138,
+          "sd_kmh": 10.363445865331077,
+          "variance_kmh2": 107.40101020364777,
+          "scenario_quantiles_025_50_975_kmh": [
+            98.03647026137763,
+            115.3470905050042,
+            134.746803807282
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8853159538721365,
+            "release_frame": 0.06785748809346084,
+            "hand_orientation_filter": 0.03732758516214553,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8898689216903203,
+            "release_frame": 0.07867514202646561,
+            "hand_orientation_filter": 0.04543030620513142,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.009498972872257205
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.03346847871613079,
+          "max_quantile_difference_kmh": 0.0632463225111195,
+          "max_index_difference": 0.004025929584357241,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.002790028664250599,
+          "max_quantile_difference_kmh": 0.14356329713220362,
+          "max_index_difference": 0.005482869248109368,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.044871231876328466,
+            "max_quantile_difference_kmh": 0.04292707146581165,
+            "max_index_difference": 0.007826791646766806,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "relative_offset_stress",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 115.64083445951803,
+          "sd_kmh": 10.588236753488099,
+          "variance_kmh2": 112.11075754791618,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.44687243005043,
+            115.47685874437141,
+            135.33357849678384
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8411719641979979,
+            "release_frame": 0.06588923021852773,
+            "hand_orientation_filter": 0.03408130268208315,
+            "relative_local_offset": 0.041123430995271916
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8475664761494462,
+            "release_frame": 0.07668629542537038,
+            "hand_orientation_filter": 0.044011591485784804,
+            "relative_local_offset": 0.04200120558970364
+          },
+          "interaction_residual": 0.01773407190611931
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 115.59491194434258,
+          "sd_kmh": 10.589571480271049,
+          "variance_kmh2": 112.13902413576996,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.39281721305522,
+            115.36337248255587,
+            135.26394879444456
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8485321953129678,
+            "release_frame": 0.06479138447172339,
+            "hand_orientation_filter": 0.035795507617281924,
+            "relative_local_offset": 0.042347862937368703
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8519892399890462,
+            "release_frame": 0.07629282394574273,
+            "hand_orientation_filter": 0.04387944113283455,
+            "relative_local_offset": 0.04227819608212128
+          },
+          "interaction_residual": 0.008533049660658265
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.026690078328840627,
+          "max_quantile_difference_kmh": 0.13554592994347558,
+          "max_index_difference": 0.004756996748339751,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 6.8677125852900645e-06,
+          "max_quantile_difference_kmh": 0.10097597521954071,
+          "max_index_difference": 0.003977331708341469,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.0459225151754481,
+            "max_quantile_difference_kmh": 0.06962970233928445,
+            "max_index_difference": 0.007360231114969862,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "constant_distance_companion",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 115.61397413835357,
+          "sd_kmh": 10.36036716709522,
+          "variance_kmh2": 107.33720783702462,
+          "scenario_quantiles_025_50_975_kmh": [
+            98.0665847866618,
+            115.41701123545599,
+            134.79731693731966
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8784668477639248,
+            "release_frame": 0.06919509514676273,
+            "hand_orientation_filter": 0.03573484159587228,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8847067409426779,
+            "release_frame": 0.07840668955151814,
+            "hand_orientation_filter": 0.04561994401728818,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.016603215493440238
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 115.56941377825952,
+          "sd_kmh": 10.359790463562664,
+          "variance_kmh2": 107.3252584489239,
+          "scenario_quantiles_025_50_975_kmh": [
+            98.04049931884782,
+            115.33444763201635,
+            134.74780282628865
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8861950120866504,
+            "release_frame": 0.06793935506604909,
+            "hand_orientation_filter": 0.03732402880041412,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8898425234919217,
+            "release_frame": 0.07788065945985224,
+            "hand_orientation_filter": 0.04545233606302702,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.00854160404688642
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.03294028141536387,
+          "max_quantile_difference_kmh": 0.030047426591323756,
+          "max_index_difference": 0.0036544000706154323,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.003662565869163359,
+          "max_quantile_difference_kmh": 0.11762564782803508,
+          "max_index_difference": 0.0051749149893886015,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.04456036009405295,
+            "max_quantile_difference_kmh": 0.04951411103101577,
+            "max_index_difference": 0.007728164322725606,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "primary",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 114.42198209040588,
+          "sd_kmh": 9.764570188092142,
+          "variance_kmh2": 95.34683095817779,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.9047262519774,
+            114.1186636299908,
+            132.68450469243837
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8292682732243348,
+            "release_frame": 0.1001794299641697,
+            "hand_orientation_filter": 0.054841967537966656,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8373122951598337,
+            "release_frame": 0.1073793094163193,
+            "hand_orientation_filter": 0.06156813745026958,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.015710329273528778
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 114.38368378331721,
+          "sd_kmh": 9.762541035793374,
+          "variance_kmh2": 95.30720747554956,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.88601159154267,
+            114.085987648931,
+            132.66292136318023
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8378690814702502,
+            "release_frame": 0.09958528074676387,
+            "hand_orientation_filter": 0.057286536108429514,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8430692051772548,
+            "release_frame": 0.10709392262397156,
+            "hand_orientation_filter": 0.061642991735888046,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.0052591016745564545
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.037981449850477134,
+          "max_quantile_difference_kmh": 0.03746713326464146,
+          "max_index_difference": 0.006401503938153141,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0013115740162987777,
+          "max_quantile_difference_kmh": 0.08425698518249192,
+          "max_index_difference": 0.004604487648069866,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03829830708866666,
+            "max_quantile_difference_kmh": 0.02158332925813511,
+            "max_index_difference": 0.008600808245915359,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "relative_offset_stress",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 114.442481576798,
+          "sd_kmh": 9.99004559181708,
+          "variance_kmh2": 99.80101092658386,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.16786055288878,
+            114.14257708468986,
+            133.335268329257
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7926319901462336,
+            "release_frame": 0.09543586193254643,
+            "hand_orientation_filter": 0.05218966536488799,
+            "relative_local_offset": 0.043660397230926844
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.799666057191167,
+            "release_frame": 0.10353253037467743,
+            "hand_orientation_filter": 0.0592253658979781,
+            "relative_local_offset": 0.044669353493775765
+          },
+          "interaction_residual": 0.016082085325405115
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 114.40330826042296,
+          "sd_kmh": 9.989850554232683,
+          "variance_kmh2": 99.79711409590304,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.15934831022032,
+            114.10266420263282,
+            133.3071605307919
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8006885800822675,
+            "release_frame": 0.09491368796517415,
+            "hand_orientation_filter": 0.05466018677469692,
+            "relative_local_offset": 0.04506426558242272
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8048832489685317,
+            "release_frame": 0.10332118492487408,
+            "hand_orientation_filter": 0.059304222161561164,
+            "relative_local_offset": 0.04501086076398153
+          },
+          "interaction_residual": 0.0046732795954387285
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.03175595148857724,
+          "max_quantile_difference_kmh": 0.05240249429786559,
+          "max_index_difference": 0.007279334809160931,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0012102284621278159,
+          "max_quantile_difference_kmh": 0.1361527409379022,
+          "max_index_difference": 0.005848584107327137,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03917331637504162,
+            "max_quantile_difference_kmh": 0.028107798465100586,
+            "max_index_difference": 0.008056589936033864,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "constant_distance_companion",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 114.41695857397958,
+          "sd_kmh": 9.761070399512693,
+          "variance_kmh2": 95.2784953442429,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.91061430815391,
+            114.12171505807588,
+            132.63578369111562
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8301303308256794,
+            "release_frame": 0.10036991380115147,
+            "hand_orientation_filter": 0.05492716538423804,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8371112285302944,
+            "release_frame": 0.10678839404907542,
+            "hand_orientation_filter": 0.06160479360300127,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.014572589988931073
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 114.37889867367669,
+          "sd_kmh": 9.759374167419503,
+          "variance_kmh2": 95.24538413969513,
+          "scenario_quantiles_025_50_975_kmh": [
+            97.89297728989719,
+            114.07707488856047,
+            132.62371294084554
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.8386616196675366,
+            "release_frame": 0.09970336465651418,
+            "hand_orientation_filter": 0.05729893209271863,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.8430019185738917,
+            "release_frame": 0.1063859876287877,
+            "hand_orientation_filter": 0.061669658590011715,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.0043360835832305655
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.0375005452257966,
+          "max_quantile_difference_kmh": 0.020887740689687462,
+          "max_index_difference": 0.006124947894239771,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0020457496182046953,
+          "max_quantile_difference_kmh": 0.0921279052467554,
+          "max_index_difference": 0.00419784553309277,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03805990030289763,
+            "max_quantile_difference_kmh": 0.01763701825672115,
+            "max_index_difference": 0.008531288841857165,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "primary",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 111.1187374256566,
+          "sd_kmh": 9.773838738575288,
+          "variance_kmh2": 95.52792368767498,
+          "scenario_quantiles_025_50_975_kmh": [
+            94.23802752214058,
+            110.54054071537135,
+            130.1094590427455
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7362120102874535,
+            "release_frame": 0.08961451366192971,
+            "hand_orientation_filter": 0.15379436996318352,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7472700647735084,
+            "release_frame": 0.0971356841108694,
+            "hand_orientation_filter": 0.16445475593423375,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.020379106087433208
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 111.08408571506752,
+          "sd_kmh": 9.769856882265382,
+          "variance_kmh2": 95.45010349994823,
+          "scenario_quantiles_025_50_975_kmh": [
+            94.26595286727353,
+            110.50223999388527,
+            130.09432327542982
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7455858661574909,
+            "release_frame": 0.0896966447782615,
+            "hand_orientation_filter": 0.15664142538986056,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7533695573022507,
+            "release_frame": 0.09707774626314701,
+            "hand_orientation_filter": 0.16481859018385406,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.008076063674387068
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.042236419246009405,
+          "max_quantile_difference_kmh": 0.04750050678876505,
+          "max_index_difference": 0.006685182517556704,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0002727150753685237,
+          "max_quantile_difference_kmh": 0.11896582531768729,
+          "max_index_difference": 0.006853166708521319,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.034651710589088225,
+            "max_quantile_difference_kmh": 0.027925345132942425,
+            "max_index_difference": 0.009373855870037362,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "relative_offset_stress",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 111.1391961395874,
+          "sd_kmh": 9.994847455038533,
+          "variance_kmh2": 99.89697564949024,
+          "scenario_quantiles_025_50_975_kmh": [
+            93.73449510710664,
+            110.57693120557153,
+            130.47064813332554
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7043547600274136,
+            "release_frame": 0.08542285191550128,
+            "hand_orientation_filter": 0.14702897588592787,
+            "relative_local_offset": 0.042548804276815795
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.714332137780054,
+            "release_frame": 0.09384958104928942,
+            "hand_orientation_filter": 0.15772646367416973,
+            "relative_local_offset": 0.04356726179668445
+          },
+          "interaction_residual": 0.020644607894341416
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 111.10339631165672,
+          "sd_kmh": 9.993034584818444,
+          "variance_kmh2": 99.86074021337753,
+          "scenario_quantiles_025_50_975_kmh": [
+            93.71249338162163,
+            110.54034115425023,
+            130.48387006805868
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7131732008493394,
+            "release_frame": 0.08549993952150632,
+            "hand_orientation_filter": 0.1496398469697244,
+            "relative_local_offset": 0.044000402787656025
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7198609755458923,
+            "release_frame": 0.093859675396369,
+            "hand_orientation_filter": 0.1580462655440689,
+            "relative_local_offset": 0.043922374485522865
+          },
+          "interaction_residual": 0.007686609871773831
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.036124061056398205,
+          "max_quantile_difference_kmh": 0.02335717813843985,
+          "max_index_difference": 0.007486685057764814,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.002524338403020465,
+          "max_quantile_difference_kmh": 0.11315181000252039,
+          "max_index_difference": 0.00864853283647704,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.035799827930674155,
+            "max_quantile_difference_kmh": 0.022001725485012003,
+            "max_index_difference": 0.008818440821925844,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "constant_distance_companion",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 111.11367870971637,
+          "sd_kmh": 9.771154831180223,
+          "variance_kmh2": 95.4754667348966,
+          "scenario_quantiles_025_50_975_kmh": [
+            94.2297853123278,
+            110.53051041810707,
+            130.10782011075406
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7368578003162481,
+            "release_frame": 0.08978821196043589,
+            "hand_orientation_filter": 0.1539671516835229,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.746989766911937,
+            "release_frame": 0.0966172291293763,
+            "hand_orientation_filter": 0.16454980327587837,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.019386836039793076
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 111.07920145445388,
+          "sd_kmh": 9.767288596789054,
+          "variance_kmh2": 95.39992653296548,
+          "scenario_quantiles_025_50_975_kmh": [
+            94.26422009719988,
+            110.51001315374313,
+            130.09096374357185
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7462189009393091,
+            "release_frame": 0.08980941068743112,
+            "hand_orientation_filter": 0.15670636274389066,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7532644245039127,
+            "release_frame": 0.09646045539093473,
+            "hand_orientation_filter": 0.16489861542867182,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.0072653256293691015
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.04166470643357911,
+          "max_quantile_difference_kmh": 0.06750392974780084,
+          "max_index_difference": 0.006492016536920178,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.00045394293019285215,
+          "max_quantile_difference_kmh": 0.13735911509296272,
+          "max_index_difference": 0.0065138916041564965,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03447725526248746,
+            "max_quantile_difference_kmh": 0.03443478487207585,
+            "max_index_difference": 0.009361100623060947,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "primary",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 113.7840532949547,
+          "sd_kmh": 10.19825268933891,
+          "variance_kmh2": 104.00435791560831,
+          "scenario_quantiles_025_50_975_kmh": [
+            96.49205849529412,
+            113.29043232385746,
+            133.8378686319211
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7646398657564457,
+            "release_frame": 0.1245083460590872,
+            "hand_orientation_filter": 0.09325402797040115,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.775065393150599,
+            "release_frame": 0.1323358731645635,
+            "hand_orientation_filter": 0.10070030974794623,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.017597760214065894
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 113.74734042981467,
+          "sd_kmh": 10.195873733483888,
+          "variance_kmh2": 103.95584118914668,
+          "scenario_quantiles_025_50_975_kmh": [
+            96.49948638004022,
+            113.26385803602574,
+            133.8197440229795
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.773085474415365,
+            "release_frame": 0.12423749955636182,
+            "hand_orientation_filter": 0.09621053523834527,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7808416771033535,
+            "release_frame": 0.1320538450304281,
+            "hand_orientation_filter": 0.10091501678925996,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.006466490789927892
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.04132395784276355,
+          "max_quantile_difference_kmh": 0.04564214287336199,
+          "max_index_difference": 0.0077344473612956655,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0005877914601910561,
+          "max_quantile_difference_kmh": 0.08825452223069874,
+          "max_index_difference": 0.004969104639664379,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.036712865140032136,
+            "max_quantile_difference_kmh": 0.018124608941604947,
+            "max_index_difference": 0.008445608658919301,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "relative_offset_stress",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 113.80472375794588,
+          "sd_kmh": 10.417842893549643,
+          "variance_kmh2": 108.5314505546828,
+          "scenario_quantiles_025_50_975_kmh": [
+            95.9003550471393,
+            113.31730048323004,
+            134.26312482183076
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7330917692203157,
+            "release_frame": 0.11907184850836725,
+            "hand_orientation_filter": 0.0891699210357896,
+            "relative_local_offset": 0.04075115858967298
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7424734823178372,
+            "release_frame": 0.12775810273576557,
+            "hand_orientation_filter": 0.09697380095129184,
+            "relative_local_offset": 0.041684250893439974
+          },
+          "interaction_residual": 0.017915302645854503
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 113.76719562827898,
+          "sd_kmh": 10.41728948678604,
+          "variance_kmh2": 108.51992025150292,
+          "scenario_quantiles_025_50_975_kmh": [
+            95.89043048475736,
+            113.2735799663908,
+            134.26692244224694
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7410181166880978,
+            "release_frame": 0.11886958347427558,
+            "hand_orientation_filter": 0.09210491821999725,
+            "relative_local_offset": 0.04193592133796662
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7477625873936156,
+            "release_frame": 0.12756920765309143,
+            "hand_orientation_filter": 0.09717385584126406,
+            "relative_local_offset": 0.04199794531125792
+          },
+          "interaction_residual": 0.006071460279662766
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.03495003215351744,
+          "max_quantile_difference_kmh": 0.02917072692028455,
+          "max_index_difference": 0.008685357996885495,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0017210227296686753,
+          "max_quantile_difference_kmh": 0.1275330112599704,
+          "max_index_difference": 0.006278988951376907,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03752812966689589,
+            "max_quantile_difference_kmh": 0.00992456238193995,
+            "max_index_difference": 0.007926347467782091,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "constant_distance_companion",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 113.7790207412159,
+          "sd_kmh": 10.194921625495809,
+          "variance_kmh2": 103.93642695000209,
+          "scenario_quantiles_025_50_975_kmh": [
+            96.49543865735274,
+            113.28988865996214,
+            133.84307239072268
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7653918620754163,
+            "release_frame": 0.12471569565244828,
+            "hand_orientation_filter": 0.09337985742891841,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7748253537974749,
+            "release_frame": 0.13182373066041939,
+            "hand_orientation_filter": 0.100761085986998,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.01651258484321705
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 113.7425244650589,
+          "sd_kmh": 10.192764551155287,
+          "variance_kmh2": 103.89244919528785,
+          "scenario_quantiles_025_50_975_kmh": [
+            96.491640111225,
+            113.24916784958057,
+            133.81156995716327
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7737817968920389,
+            "release_frame": 0.12436844145859946,
+            "hand_orientation_filter": 0.09624564097931902,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.780732772551186,
+            "release_frame": 0.13141746609361044,
+            "hand_orientation_filter": 0.10096200750423089,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.005604120670042678
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.04083896024630462,
+          "max_quantile_difference_kmh": 0.030677148560187106,
+          "max_index_difference": 0.0075032096363219225,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0013124912524062893,
+          "max_quantile_difference_kmh": 0.1045055097819727,
+          "max_index_difference": 0.004529024935785109,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03649627615699558,
+            "max_quantile_difference_kmh": 0.03150243355941029,
+            "max_index_difference": 0.008389934816622535,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "primary",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 108.11992355167685,
+          "sd_kmh": 9.262468045385418,
+          "variance_kmh2": 85.79331429178596,
+          "scenario_quantiles_025_50_975_kmh": [
+            92.18137015189241,
+            107.58875646777787,
+            125.85322061069304
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7505051943458192,
+            "release_frame": 0.08286629076250757,
+            "hand_orientation_filter": 0.14315853411306168,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7615861852469715,
+            "release_frame": 0.09364837272763255,
+            "hand_orientation_filter": 0.1567411384444903,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.02346998077861162
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 108.08589449159419,
+          "sd_kmh": 9.259295900764252,
+          "variance_kmh2": 85.73456057790969,
+          "scenario_quantiles_025_50_975_kmh": [
+            92.21278103873253,
+            107.5552216812935,
+            125.83050885221999
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7600330691723782,
+            "release_frame": 0.08287440999006272,
+            "hand_orientation_filter": 0.1461619967387267,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7674764131176267,
+            "release_frame": 0.0933026803835302,
+            "hand_orientation_filter": 0.15703504141744068,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.010930524098832328
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.03964796959301964,
+          "max_quantile_difference_kmh": 0.06335365280240524,
+          "max_index_difference": 0.0064604386958632964,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0025843080114498207,
+          "max_quantile_difference_kmh": 0.09859457708377306,
+          "max_index_difference": 0.006847972878988862,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.03402906008265916,
+            "max_quantile_difference_kmh": 0.03141088684012061,
+            "max_index_difference": 0.009527874826559035,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "relative_offset_stress",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 108.14168014949809,
+          "sd_kmh": 9.510622679811307,
+          "variance_kmh2": 90.45194375774122,
+          "scenario_quantiles_025_50_975_kmh": [
+            91.54776271290743,
+            107.64346279344203,
+            126.43437818733267
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7122161620446029,
+            "release_frame": 0.078272006802589,
+            "hand_orientation_filter": 0.13560048378994102,
+            "relative_local_offset": 0.04976792923482365
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.722080200989906,
+            "release_frame": 0.09020546738238927,
+            "hand_orientation_filter": 0.14922727890904283,
+            "relative_local_offset": 0.05136032628742941
+          },
+          "interaction_residual": 0.024143418128043437
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 108.10661042684028,
+          "sd_kmh": 9.509728907179264,
+          "variance_kmh2": 90.43494388804093,
+          "scenario_quantiles_025_50_975_kmh": [
+            91.52648739817123,
+            107.58819579737974,
+            126.44035588502506
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7209429655531532,
+            "release_frame": 0.07836515100209183,
+            "hand_orientation_filter": 0.13840990832617517,
+            "relative_local_offset": 0.051668158790841266
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7273393625790702,
+            "release_frame": 0.09001292282368183,
+            "hand_orientation_filter": 0.14949023731866873,
+            "relative_local_offset": 0.05179506547047955
+          },
+          "interaction_residual": 0.010613816327738501
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.033697398340379436,
+          "max_quantile_difference_kmh": 0.007818585484898222,
+          "max_index_difference": 0.007365173508445219,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.004697001203297191,
+          "max_quantile_difference_kmh": 0.10798370438595839,
+          "max_index_difference": 0.008931235289396544,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.035069722657809166,
+            "max_quantile_difference_kmh": 0.021275314736200812,
+            "max_index_difference": 0.008726803508550263,
+            "pass": true
+          }
+        ]
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "constant_distance_companion",
+      "original_verdict_retained": "FAIL",
+      "additional_results": [
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261029,
+          "mean_kmh": 108.11471555282776,
+          "sd_kmh": 9.259466511620218,
+          "variance_kmh2": 85.73772007981628,
+          "scenario_quantiles_025_50_975_kmh": [
+            92.19967512330224,
+            107.58791208500745,
+            125.83856604916335
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7511708493299437,
+            "release_frame": 0.08303540360901542,
+            "hand_orientation_filter": 0.14332709967862006,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7613320604198793,
+            "release_frame": 0.09311261697077758,
+            "hand_orientation_filter": 0.15684977941430459,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.022466647382420768
+        },
+        {
+          "n_per_matrix": 131072,
+          "seed": 20261030,
+          "mean_kmh": 108.08086219872301,
+          "sd_kmh": 9.256436120042705,
+          "variance_kmh2": 85.68160964443126,
+          "scenario_quantiles_025_50_975_kmh": [
+            92.23217097541132,
+            107.55864742688001,
+            125.82159483073713
+          ],
+          "first_order": {
+            "distance_and_relative_motion": 0.7606709360841001,
+            "release_frame": 0.08296366930389477,
+            "hand_orientation_filter": 0.14621960898948716,
+            "relative_local_offset": 0.0
+          },
+          "total_order": {
+            "distance_and_relative_motion": 0.7673769164311182,
+            "release_frame": 0.09266651904948497,
+            "hand_orientation_filter": 0.1571257357405927,
+            "relative_local_offset": 0.0
+          },
+          "interaction_residual": 0.010145785622518
+        }
+      ],
+      "same_seed_32768_to_131072": [
+        {
+          "a": [
+            32768,
+            20261029
+          ],
+          "b": [
+            131072,
+            20261029
+          ],
+          "mean_difference_kmh": 0.03906063622672207,
+          "max_quantile_difference_kmh": 0.06670161586411893,
+          "max_index_difference": 0.0062921167216258705,
+          "pass": true
+        },
+        {
+          "a": [
+            32768,
+            20261030
+          ],
+          "b": [
+            131072,
+            20261030
+          ],
+          "mean_difference_kmh": 0.0017645250077151786,
+          "max_quantile_difference_kmh": 0.13046248076511802,
+          "max_index_difference": 0.00639216316232083,
+          "pass": true
+        }
+      ],
+      "seed_comparison_131072": {
+        "verdict": "PASS",
+        "comparisons": [
+          {
+            "a": [
+              131072,
+              20261029
+            ],
+            "b": [
+              131072,
+              20261030
+            ],
+            "mean_difference_kmh": 0.033853354104749656,
+            "max_quantile_difference_kmh": 0.03249585210907924,
+            "max_index_difference": 0.009500086754156367,
+            "pass": true
+          }
+        ]
+      }
+    }
+  ],
+  "current_code_sha256": {
+    "precision.py": "bccfaebdec37a7313a9244e551a256c0f9209112fbef0578ced8608271ecee48",
+    "run.py": "b01a3f9fff3d8525d20a13339f8a75b1f1ab0a698fe299015fc8852ba7bed39d",
+    "test_uncertainty.py": "eb45b8d0c8b52a9989306f8cbf3f62af7c6a10f81cc14e62a4836e2ed5ef8981",
+    "uncertainty.py": "7d876fb171a55a8ba82d7c4479d1d64b3a5a64a96ea395cdb573117935124288",
+    "__init__.py": "fdbe71a18aa890f98d1d2508a2f4af24b6a08fa91c0c0654e886b78675889ac5"
+  },
+  "followup_protocol_sha256": "3d33e828c9ca7de3c04d10694bf75baa43b31f833fe75b24f1895771599760d2"
+}

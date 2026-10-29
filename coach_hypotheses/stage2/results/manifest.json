@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_002_FF_809.c3d": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\metadata.csv": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_005_FF_814.c3d": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_006_FF_803.c3d": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_008_FF_798.c3d": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_011_FF_799.c3d": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1"
+  },
+  "protocol_sha256": "d57140302f44954c3f1212479c931d06faeda0408a4a5850ab60000aead282a9",
+  "code_sha256": {
+    "run.py": "b01a3f9fff3d8525d20a13339f8a75b1f1ab0a698fe299015fc8852ba7bed39d",
+    "test_uncertainty.py": "0bc6027c3e79116d2b1d073f5d0c256e9aa34fb76fde866d2569cc1836f660c6",
+    "uncertainty.py": "7d876fb171a55a8ba82d7c4479d1d64b3a5a64a96ea395cdb573117935124288",
+    "__init__.py": "fdbe71a18aa890f98d1d2508a2f4af24b6a08fa91c0c0654e886b78675889ac5"
+  },
+  "reused_source_code_sha256": {
+    "ball_release.py": "c01bda2cee32df4c03a1087c9e7948c8eea047472f2cd3b28ae5362bc8bb2499",
+    "pilot.py": "afcfc8da4f36806ec827731bf822782aeaaa1f10cdba93db7c5294556a84d181",
+    "speed_path.py": "f819f79b0ab25487cd56704418c3cc980b9f54c4e6cc33752c073ac6908ced40",
+    "release_vector_audit.py": "d88a3e16b43c5d9925936354fde235ca224185144bfbc6295bce0743d41c0d20"
+  },
+  "head_at_execution": "45069cac47d9bf93d2f18f330724cb1b8f7be253"
+}
