@@ -1,0 +1,642 @@
+{
+  "protocol_sha256": "fed22508c1d74f0a55b0751b249c8ed6846278e0c991c748eb503e2ae2468f96",
+  "input_hashes": {
+    "S1.rar": "39c57eaa4656ef95ced063956820bc7089c7ea8e650ea8bbf44e15598b148b7e",
+    "Trialinfo.xlsx": "aee02c7230a5b5c64dfbc95f72172a8277ee6e13b5cc3e37dd4a4274b0de4c55"
+  },
+  "ozkaya_summary": {
+    "subjects_locally_archived": 1,
+    "sessions": 15,
+    "dynamic_c3d": 450,
+    "static_c3d": 30,
+    "workbook_trial_rows": 450,
+    "archive_unique_trial_keys": 450,
+    "unique_workbook_links": 448,
+    "missing_workbook_links": 2,
+    "ambiguous_workbook_links": 0,
+    "linked_speed_record_present": 358,
+    "status_disagreements": [
+      "S1/1w1d/S1_DP_01_WM.c3d",
+      "S1/1w1d/S1_DP_02_WM.c3d",
+      "S1/1w1d/S1_DP_03_WM.c3d",
+      "S1/1w1d/S1_DP_04_M.c3d",
+      "S1/1w1d/S1_DP_05_M.c3d",
+      "S1/1w1d/S1_DP_06_M.c3d",
+      "S1/1w1d/S1_DP_07_M.c3d",
+      "S1/1w1d/S1_DP_08_M.c3d",
+      "S1/1w1d/S1_DP_09_M.c3d",
+      "S1/1w1d/S1_DP_10_M.c3d",
+      "S1/1w1d/S1_DP_11_M.c3d",
+      "S1/1w1d/S1_DP_12_M.c3d",
+      "S1/1w1d/S1_DP_13_M.c3d",
+      "S1/1w1d/S1_DP_14_M.c3d",
+      "S1/1w1d/S1_DP_15_M.c3d",
+      "S1/1w1d/S1_NDP_02_WM.c3d",
+      "S1/1w1d/S1_NDP_03_WM.c3d",
+      "S1/1w1d/S1_NDP_04_M.c3d",
+      "S1/1w1d/S1_NDP_05_M.c3d",
+      "S1/1w1d/S1_NDP_06_M.c3d",
+      "S1/1w1d/S1_NDP_07_O.c3d",
+      "S1/1w1d/S1_NDP_08_M.c3d",
+      "S1/1w1d/S1_NDP_09_M.c3d",
+      "S1/1w1d/S1_NDP_10_M.c3d",
+      "S1/1w1d/S1_NDP_11_O.c3d",
+      "S1/1w1d/S1_NDP_12_M.c3d",
+      "S1/1w1d/S1_NDP_13_O.c3d",
+      "S1/1w1d/S1_NDP_14_O.c3d",
+      "S1/1w1d/S1_NDP_15_M.c3d",
+      "S1/1w2d/S1_DP_01_WM.c3d",
+      "S1/1w2d/S1_DP_03_WM.c3d",
+      "S1/1w2d/S1_DP_13_M.c3d",
+      "S1/1w2d/S1_DP_17_M.c3d",
+      "S1/1w3d/S1_NDP_02_WM.c3d",
+      "S1/1w3d/S1_NDP_03_WM.c3d",
+      "S1/1w3d/S1_NDP_04_M.c3d",
+      "S1/1w3d/S1_NDP_05_M.c3d",
+      "S1/1w3d/S1_NDP_06_M.c3d",
+      "S1/1w3d/S1_NDP_07_M.c3d",
+      "S1/1w3d/S1_NDP_08_M.c3d",
+      "S1/1w3d/S1_NDP_09_M.c3d",
+      "S1/1w3d/S1_NDP_10_M.c3d",
+      "S1/1w3d/S1_NDP_12_M.c3d",
+      "S1/1w3d/S1_NDP_13_M.c3d",
+      "S1/1w3d/S1_NDP_14_M.c3d",
+      "S1/1w3d/S1_NDP_15_M.c3d",
+      "S1/1w3d/S1_NDP_16_M.c3d",
+      "S1/2w1d/S1_DP_01_WFM.c3d"
+    ],
+    "status_code_disagreements": [
+      "S1/1w1d/S1_NDP_07_O.c3d",
+      "S1/1w1d/S1_NDP_11_O.c3d",
+      "S1/1w1d/S1_NDP_13_O.c3d",
+      "S1/1w1d/S1_NDP_14_O.c3d"
+    ],
+    "speed_unit": "UNKNOWN",
+    "ball_center_validated": false
+  },
+  "new_c3d_inspections": [
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\same-pitch-data-readiness-20261029\\coach_hypotheses\\data_readiness\\artifacts\\audit\\extracted\\S1\\1w2d\\S1_DP_07_O.c3d",
+      "sha256": "f397d2fc9f4c977728ed66a8b61bf3665d1aed3f3c1d88922fc7aa142ba49bee",
+      "frames": 1001,
+      "point_rate_hz": 200.0,
+      "units": [
+        "mm"
+      ],
+      "point_count": 76,
+      "label_checks": {
+        "ball_marker": {
+          "expected": [
+            "Ball"
+          ],
+          "present": [
+            "Ball"
+          ]
+        },
+        "throwing_hand": {
+          "expected": [
+            "R3MC",
+            "R5MC"
+          ],
+          "present": [
+            "R3MC",
+            "R5MC"
+          ]
+        },
+        "throwing_forearm": {
+          "expected": [
+            "RFR1",
+            "RFR2",
+            "RFR3",
+            "RFR4"
+          ],
+          "present": [
+            "RFR1",
+            "RFR2",
+            "RFR3",
+            "RFR4"
+          ]
+        },
+        "pelvis": {
+          "expected": [
+            "LASI",
+            "RASI",
+            "LPSI",
+            "RPSI"
+          ],
+          "present": [
+            "LASI",
+            "RASI",
+            "LPSI",
+            "RPSI"
+          ]
+        },
+        "torso": {
+          "expected": [
+            "C7",
+            "T8",
+            "STRN",
+            "XIPH"
+          ],
+          "present": [
+            "C7",
+            "T8",
+            "STRN",
+            "XIPH"
+          ]
+        }
+      },
+      "ball_valid_frames": 28,
+      "events": [
+        {
+          "label": "Foot Strike",
+          "seconds": 0.824999988079071
+        },
+        {
+          "label": "Foot Off",
+          "seconds": 2.2300000190734863
+        },
+        {
+          "label": "Event",
+          "seconds": 1.8650000095367432
+        }
+      ],
+      "candidate_windows": [
+        {
+          "event_shift_frames": 0,
+          "sample_count": 18,
+          "all_group_markers_valid": {
+            "ball_marker": true,
+            "throwing_hand": true,
+            "throwing_forearm": true,
+            "pelvis": true,
+            "torso": true
+          }
+        },
+        {
+          "event_shift_frames": -1,
+          "sample_count": 18,
+          "all_group_markers_valid": {
+            "ball_marker": true,
+            "throwing_hand": true,
+            "throwing_forearm": true,
+            "pelvis": true,
+            "torso": true
+          }
+        }
+      ],
+      "force_platform_count": 2,
+      "ball_center_validated": false,
+      "physical_release_validated": false,
+      "source_event_mapping": "UNKNOWN; both standard/legacy indices inspected"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\same-pitch-data-readiness-20261029\\coach_hypotheses\\data_readiness\\artifacts\\audit\\extracted\\S1\\1w2d\\S1_DP_08_O.c3d",
+      "sha256": "9eb54ae7f2f1c406d138661f983c57dbfc05be90ffbefdd634204504ed1bad4d",
+      "frames": 927,
+      "point_rate_hz": 200.0,
+      "units": [
+        "mm"
+      ],
+      "point_count": 74,
+      "label_checks": {
+        "ball_marker": {
+          "expected": [
+            "Ball"
+          ],
+          "present": [
+            "Ball"
+          ]
+        },
+        "throwing_hand": {
+          "expected": [
+            "R3MC",
+            "R5MC"
+          ],
+          "present": [
+            "R3MC",
+            "R5MC"
+          ]
+        },
+        "throwing_forearm": {
+          "expected": [
+            "RFR1",
+            "RFR2",
+            "RFR3",
+            "RFR4"
+          ],
+          "present": [
+            "RFR1",
+            "RFR2",
+            "RFR3",
+            "RFR4"
+          ]
+        },
+        "pelvis": {
+          "expected": [
+            "LASI",
+            "RASI",
+            "LPSI",
+            "RPSI"
+          ],
+          "present": [
+            "LASI",
+            "RASI",
+            "LPSI",
+            "RPSI"
+          ]
+        },
+        "torso": {
+          "expected": [
+            "C7",
+            "T8",
+            "STRN",
+            "XIPH"
+          ],
+          "present": [
+            "C7",
+            "T8",
+            "STRN",
+            "XIPH"
+          ]
+        }
+      },
+      "ball_valid_frames": 35,
+      "events": [
+        {
+          "label": "Foot Strike",
+          "seconds": 0.9100000262260437
+        },
+        {
+          "label": "Foot Off",
+          "seconds": 2.390000104904175
+        },
+        {
+          "label": "Event",
+          "seconds": 1.9249999523162842
+        }
+      ],
+      "candidate_windows": [
+        {
+          "event_shift_frames": 0,
+          "sample_count": 18,
+          "all_group_markers_valid": {
+            "ball_marker": true,
+            "throwing_hand": true,
+            "throwing_forearm": true,
+            "pelvis": true,
+            "torso": true
+          }
+        },
+        {
+          "event_shift_frames": -1,
+          "sample_count": 18,
+          "all_group_markers_valid": {
+            "ball_marker": true,
+            "throwing_hand": true,
+            "throwing_forearm": true,
+            "pelvis": true,
+            "torso": true
+          }
+        }
+      ],
+      "force_platform_count": 2,
+      "ball_center_validated": false,
+      "physical_release_validated": false,
+      "source_event_mapping": "UNKNOWN; both standard/legacy indices inspected"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\same-pitch-data-readiness-20261029\\coach_hypotheses\\data_readiness\\artifacts\\audit\\extracted\\S1\\1w2d\\S1_DP_09_O.c3d",
+      "sha256": "76ab3ed5f159fa5c5d2e8e1eed58f5f639474a8d1efcc7cb9cb3cd9eff54b70d",
+      "frames": 1011,
+      "point_rate_hz": 200.0,
+      "units": [
+        "mm"
+      ],
+      "point_count": 78,
+      "label_checks": {
+        "ball_marker": {
+          "expected": [
+            "Ball"
+          ],
+          "present": [
+            "Ball"
+          ]
+        },
+        "throwing_hand": {
+          "expected": [
+            "R3MC",
+            "R5MC"
+          ],
+          "present": [
+            "R3MC",
+            "R5MC"
+          ]
+        },
+        "throwing_forearm": {
+          "expected": [
+            "RFR1",
+            "RFR2",
+            "RFR3",
+            "RFR4"
+          ],
+          "present": [
+            "RFR1",
+            "RFR2",
+            "RFR3",
+            "RFR4"
+          ]
+        },
+        "pelvis": {
+          "expected": [
+            "LASI",
+            "RASI",
+            "LPSI",
+            "RPSI"
+          ],
+          "present": [
+            "LASI",
+            "RASI",
+            "LPSI",
+            "RPSI"
+          ]
+        },
+        "torso": {
+          "expected": [
+            "C7",
+            "T8",
+            "STRN",
+            "XIPH"
+          ],
+          "present": [
+            "C7",
+            "T8",
+            "STRN",
+            "XIPH"
+          ]
+        }
+      },
+      "ball_valid_frames": 39,
+      "events": [
+        {
+          "label": "Foot Strike",
+          "seconds": 1.1100000143051147
+        },
+        {
+          "label": "Foot Off",
+          "seconds": 2.484999895095825
+        },
+        {
+          "label": "Event",
+          "seconds": 2.0899999141693115
+        }
+      ],
+      "candidate_windows": [
+        {
+          "event_shift_frames": 0,
+          "sample_count": 18,
+          "all_group_markers_valid": {
+            "ball_marker": true,
+            "throwing_hand": true,
+            "throwing_forearm": true,
+            "pelvis": true,
+            "torso": true
+          }
+        },
+        {
+          "event_shift_frames": -1,
+          "sample_count": 18,
+          "all_group_markers_valid": {
+            "ball_marker": true,
+            "throwing_hand": true,
+            "throwing_forearm": true,
+            "pelvis": true,
+            "torso": true
+          }
+        }
+      ],
+      "force_platform_count": 2,
+      "ball_center_validated": false,
+      "physical_release_validated": false,
+      "source_event_mapping": "UNKNOWN; both standard/legacy indices inspected"
+    }
+  ],
+  "mat_summary": {
+    "subjects": 50,
+    "trials": 250,
+    "trials_per_subject": {
+      "Sub001": 5,
+      "Sub002": 5,
+      "Sub003": 5,
+      "Sub004": 5,
+      "Sub005": 5,
+      "Sub006": 5,
+      "Sub007": 5,
+      "Sub008": 5,
+      "Sub009": 5,
+      "Sub010": 5,
+      "Sub011": 5,
+      "Sub012": 5,
+      "Sub013": 5,
+      "Sub014": 5,
+      "Sub015": 5,
+      "Sub016": 5,
+      "Sub017": 5,
+      "Sub018": 5,
+      "Sub019": 5,
+      "Sub020": 5,
+      "Sub021": 5,
+      "Sub022": 5,
+      "Sub023": 5,
+      "Sub024": 5,
+      "Sub025": 5,
+      "Sub026": 5,
+      "Sub027": 5,
+      "Sub028": 5,
+      "Sub029": 5,
+      "Sub030": 5,
+      "Sub031": 5,
+      "Sub032": 5,
+      "Sub033": 5,
+      "Sub034": 5,
+      "Sub035": 5,
+      "Sub036": 5,
+      "Sub037": 5,
+      "Sub038": 5,
+      "Sub039": 5,
+      "Sub040": 5,
+      "Sub041": 5,
+      "Sub042": 5,
+      "Sub043": 5,
+      "Sub044": 5,
+      "Sub045": 5,
+      "Sub046": 5,
+      "Sub047": 5,
+      "Sub048": 5,
+      "Sub049": 5,
+      "Sub050": 5
+    },
+    "fields": [
+      "X",
+      "Y"
+    ],
+    "motion_shape": [
+      101,
+      15,
+      3
+    ],
+    "explicit_ball_trajectory_field_present": false,
+    "explicit_raw_time_axis_present": false,
+    "individual_input_manifest_sha256": "9740f66abe217258397bd7be3d1e732419ab05828b545e010ce6c011f966c629"
+  },
+  "engineering_scenarios": {
+    "position_sd_mm": 0.5,
+    "fps": 1000,
+    "samples": 11,
+    "ideal_slope_noise_sd_kmh": 0.17162326606420664,
+    "scale_1percent_at_150kmh_bias_kmh": 1.5,
+    "scale_point2percent_at_150kmh_bias_kmh": 0.3,
+    "example_acceleration_mps2": 1000.0,
+    "example_speed_budget_kmh": 0.3,
+    "conditional_sync_budget_ms": 0.08333333333333333
+  },
+  "speed_model_fitted": false,
+  "athlete_intervention_performed": false,
+  "reviewed_source_readiness": {
+    "ozkaya_s1_local": {
+      "body_speed_observational_ready": false,
+      "hand_ball_validation_ready": false,
+      "blocking_items": {
+        "independent_speed_link_units": "UNKNOWN",
+        "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN",
+        "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "scientific_gate_passed": false,
+      "athlete_effect_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "takamido50_local": {
+      "body_speed_observational_ready": false,
+      "hand_ball_validation_ready": false,
+      "blocking_items": {
+        "research_use_allowed": "UNKNOWN",
+        "hand_observation": "UNKNOWN",
+        "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN",
+        "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "scientific_gate_passed": false,
+      "athlete_effect_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "obp411_local": {
+      "body_speed_observational_ready": false,
+      "hand_ball_validation_ready": false,
+      "blocking_items": {
+        "independent_speed_link_units": "UNKNOWN",
+        "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN",
+        "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "scientific_gate_passed": false,
+      "athlete_effect_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "prime001_local": {
+      "body_speed_observational_ready": false,
+      "hand_ball_validation_ready": false,
+      "blocking_items": {
+        "repeated_pitcher": "FALSE",
+        "trial_link": "UNKNOWN",
+        "independent_speed_link_units": "UNKNOWN",
+        "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN",
+        "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "scientific_gate_passed": false,
+      "athlete_effect_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "gomaz2021_access_blocked": {
+      "body_speed_observational_ready": false,
+      "hand_ball_validation_ready": false,
+      "blocking_items": {
+        "raw_access": "FALSE",
+        "repeated_pitcher": "UNKNOWN",
+        "trial_link": "UNKNOWN",
+        "body_motion": "UNKNOWN",
+        "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "UNKNOWN",
+        "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN",
+        "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "scientific_gate_passed": false,
+      "athlete_effect_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "mycpuorg_video_radar_code_only": {
+      "body_speed_observational_ready": false,
+      "hand_ball_validation_ready": false,
+      "blocking_items": {
+        "raw_access": "FALSE",
+        "research_use_allowed": "UNKNOWN",
+        "repeated_pitcher": "UNKNOWN",
+        "trial_link": "UNKNOWN",
+        "body_motion": "UNKNOWN",
+        "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "UNKNOWN",
+        "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN",
+        "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "scientific_gate_passed": false,
+      "athlete_effect_validated": false,
+      "coaching_recommendation_ready": false
+    }
+  },
+  "registry_sha256": "abfd9a28b71a77896f380d5b156861b3cf2db8f5ed4732ee2c08590fcb5c1710",
+  "protocol_commit": "cbffe4b",
+  "imu_access": {
+    "url": "https://ndownloader.figshare.com/articles/16691947/versions/1",
+    "verified_files": [],
+    "status": 502,
+    "bytes": 122
+  },
+  "tests": {
+    "tests_run": 302,
+    "passed": 290,
+    "assertion_failures": 0,
+    "errors": [
+      "test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)",
+      "test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)",
+      "test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)",
+      "test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)",
+      "test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)",
+      "test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)",
+      "test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)",
+      "test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)",
+      "test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)",
+      "test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)"
+    ],
+    "skipped": [
+      [
+        "test_synthetic_recovery_and_constraints (test_pitch_fit.ArmFitTests.test_synthetic_recovery_and_constraints)",
+        "install pinned model to run integration checks"
+      ],
+      [
+        "test_temporal_solver_preserves_constant_feasible_motion (test_pitch_fit.ArmFitTests.test_temporal_solver_preserves_constant_feasible_motion)",
+        "install pinned model to run integration checks"
+      ]
+    ],
+    "new_errors": [],
+    "baseline_error_set_identical": true
+  }
+}

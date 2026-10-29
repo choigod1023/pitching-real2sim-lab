@@ -2,6 +2,8 @@
 
 고정 15cm 손목–공 모델은 **주 구속 예측·자세 추천 경로에서 제외**했습니다. 기본 GUI 실행기와 이 모델을 사용하는 후보 검색 진입점은 계산을 시작하지 않습니다. 과거 실험과 원본 자료는 삭제하지 않았으며, 명시적인 `--legacy-diagnostic` 옵션으로만 해당 진입점의 진단을 재현할 수 있습니다. 진단 출력은 실제 공 구속이나 선수의 향상 예측이 아닙니다. 대체 예측 모델은 아직 채택하지 않았습니다. 범위와 실행 방법은 [모델 사용 중단 기록](coach_hypotheses/model_retirement/README.md)을 참고하세요.
 
+[같은 투구 자료 확보·적격성 감사](coach_hypotheses/data_readiness/README.md)에서 기존 원자료의450투구 목록과358개 속도 원값 연결을 확인하고 추가3개 동적C3D를 검사했습니다. 구속 단위·공 중심·시계 등의 미확인이 남아 추천 모델을 채택하지 않았습니다. [실험실 전달용 동시 측정 명세](coach_hypotheses/data_readiness/COLLECTION_SPEC.md)도 작성했습니다.
+
 A personal, self-directed research project by **Jang JunHyeok**, a student in the School of Computer Science and AI at Dongguk University (Seoul, South Korea). It is a learning and portfolio project, not funded research and not affiliated with any team or company.
 
 ## Goal
