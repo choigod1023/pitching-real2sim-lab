@@ -1,0 +1,196 @@
+{
+  "protocol_sha256": "0211b784e75099627b2237cd5b27ec424afa3353e6a0f29027711cb909024750",
+  "code_sha256": "f66d6dbefe785e9f58c4c8e39f05c6e6cd8a87559d0d595adc13aabe37f14a76",
+  "models": {
+    "joint_origin": {
+      "training": {
+        "count": 12,
+        "mean_outside_px": 3.319747164174553,
+        "max_outside_px": 19.06224203793596,
+        "per_camera": {
+          "20": 4.562722714340964,
+          "21": 2.0767716140081425
+        }
+      },
+      "evaluation": {
+        "count": 40,
+        "mean_outside_px": 2.645282900989824,
+        "max_outside_px": 26.32033861181469,
+        "per_camera": {
+          "17": 3.8205600094471994,
+          "19": 0.18018921777768546,
+          "20": 0.22272713522543577,
+          "21": 3.2235829522893056
+        }
+      },
+      "boundary_sensitivity": {
+        "-3": {
+          "count": 40,
+          "mean_outside_px": 3.6166789039283556,
+          "max_outside_px": 29.32033861181469,
+          "per_camera": {
+            "17": 4.682914154990916,
+            "19": 0.7125278813099764,
+            "20": 1.0995957090623278,
+            "21": 5.12838386751671
+          }
+        },
+        "0": {
+          "count": 40,
+          "mean_outside_px": 2.645282900989824,
+          "max_outside_px": 26.32033861181469,
+          "per_camera": {
+            "17": 3.8205600094471994,
+            "19": 0.18018921777768546,
+            "20": 0.22272713522543577,
+            "21": 3.2235829522893056
+          }
+        },
+        "3": {
+          "count": 40,
+          "mean_outside_px": 2.0003292396194468,
+          "max_outside_px": 23.32033861181469,
+          "per_camera": {
+            "17": 3.089151563903693,
+            "19": 0.0,
+            "20": 0.0,
+            "21": 2.0086391964827706
+          }
+        }
+      }
+    },
+    "local_surface_map": {
+      "training": {
+        "count": 12,
+        "mean_outside_px": 0.3295616437832318,
+        "max_outside_px": 3.12654320116917,
+        "per_camera": {
+          "20": 0.5232850920065459,
+          "21": 0.13583819555991758
+        }
+      },
+      "evaluation": {
+        "count": 40,
+        "mean_outside_px": 3.0551474800126,
+        "max_outside_px": 25.792246735335254,
+        "per_camera": {
+          "17": 2.3548414004139704,
+          "19": 1.2106630568860623,
+          "20": 0.0,
+          "21": 10.522568341680048
+        }
+      },
+      "boundary_sensitivity": {
+        "-3": {
+          "count": 40,
+          "mean_outside_px": 3.9391926189326583,
+          "max_outside_px": 28.844403380550624,
+          "per_camera": {
+            "17": 3.175176951828895,
+            "19": 2.3487676242086954,
+            "20": 0.2389398960871366,
+            "21": 12.031261115882609
+          }
+        },
+        "0": {
+          "count": 40,
+          "mean_outside_px": 3.0551474800126,
+          "max_outside_px": 25.792246735335254,
+          "per_camera": {
+            "17": 2.3548414004139704,
+            "19": 1.2106630568860623,
+            "20": 0.0,
+            "21": 10.522568341680048
+          }
+        },
+        "3": {
+          "count": 40,
+          "mean_outside_px": 2.3761589294635357,
+          "max_outside_px": 22.792246735335254,
+          "per_camera": {
+            "17": 1.6657713085065806,
+            "19": 0.7106630568860623,
+            "20": 0.0,
+            "21": 9.022568341680048
+          }
+        }
+      }
+    }
+  },
+  "checks": {
+    "solver_success": true,
+    "offset_not_at_bound": false,
+    "evaluation_mean_improved": false,
+    "each_camera_nonworsening": false,
+    "boundary_nonworsening": false
+  },
+  "diagnostic_accepted": false,
+  "local_offsets_mm": [
+    [
+      -29.999999999999996,
+      29.999999999999996,
+      29.999999999999996
+    ],
+    [
+      -26.482195215877663,
+      11.239074765939762,
+      -25.501376538748044
+    ]
+  ],
+  "offset_order": [
+    "l_larm",
+    "l_hand"
+  ],
+  "source_B_ball_evaluation_unchanged": {
+    "predicted_interval_speed_kmh": [
+      101.55775414249348,
+      101.53363589570083
+    ],
+    "candidate_interval_speed_kmh": [
+      103.67987204317426,
+      102.05979686325371
+    ],
+    "mean_predicted_speed_kmh": 101.54569501909715,
+    "mean_candidate_speed_kmh": 102.86983445321398,
+    "mean_absolute_speed_discrepancy_kmh": 1.3241394341168302,
+    "mean_velocity_vector_discrepancy_kmh": 12.245415437803645,
+    "position_rmse_mm": 18.975054644708027,
+    "mean_absolute_radar_scalar_discrepancy_kmh": 0.6398262190971451,
+    "predicted_positions_m": [
+      [
+        0.5554530017910806,
+        0.7076212455966902,
+        4.228132159325108
+      ],
+      [
+        0.48786130098613634,
+        0.7136117668617176,
+        4.18893839071349
+      ],
+      [
+        0.42027916367206525,
+        0.719670577430667,
+        4.149775843241056
+      ]
+    ],
+    "launch_position_m": [
+      0.623054266086898,
+      0.7016990136355847,
+      4.26735714907591
+    ],
+    "launch_velocity_m_s": [
+      -24.338176574851435,
+      2.119711431292011,
+      -14.126616115341763
+    ],
+    "launch_speed_kmh": 101.59409838865822,
+    "coarse_fine_position_max_m": 1.2412670766236366e-16,
+    "coarse_fine_velocity_max_m_s": 1.199040866595169e-14,
+    "analytic_position_max_m": 5.551115123125783e-17
+  },
+  "body_motion_changed": false,
+  "hand_rotation_changed": false,
+  "identified_anatomical_skin_offset": false,
+  "scientific_stage_passed": false,
+  "actual_athlete_gain_kmh": null
+}

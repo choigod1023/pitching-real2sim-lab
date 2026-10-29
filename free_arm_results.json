@@ -1,0 +1,1133 @@
+{
+  "reference": "OBP_movement_BaseballThrow_001",
+  "protocol": "FREE_ARM_REGION_PROTOCOL.md",
+  "solver": {
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "iterations": 285,
+    "objective_before": 42.51721381881815,
+    "objective_after": 0.0889497721725373,
+    "max_constraint_error_mm": 4.796163466380676e-11,
+    "root_translation_mm": [
+      -28.467611426658472,
+      -30.0,
+      -0.8012080636222334
+    ],
+    "segment_lengths_mm": [
+      337.0154986976338,
+      283.4657989430139
+    ],
+    "knot_displacements_mm": [
+      [
+        [
+          4.508052173662125,
+          -20.874518646534792,
+          -53.7491141949884
+        ],
+        [
+          6.56427349504729,
+          -49.652290627213766,
+          0.258412827708554
+        ]
+      ],
+      [
+        [
+          15.205611687095999,
+          -44.41170928868206,
+          -65.92904763875218
+        ],
+        [
+          2.4812433635257314,
+          -50.78648128989999,
+          0.9867275864170466
+        ]
+      ],
+      [
+        [
+          19.096725930731306,
+          -55.801410468321265,
+          -51.2343191334077
+        ],
+        [
+          0.5227872263280364,
+          -55.97147316497936,
+          2.354916011383601
+        ]
+      ]
+    ],
+    "knots": [
+      940.0,
+      950.0,
+      960.0
+    ]
+  },
+  "models": {
+    "source": {
+      "training": {
+        "count": 12,
+        "mean_outside_px": 3.319747164174553,
+        "max_outside_px": 19.06224203793596,
+        "inside": 8,
+        "per_camera": {
+          "20": {
+            "count": 6,
+            "mean_outside_px": 4.562722714340964,
+            "max_outside_px": 19.06224203793596,
+            "inside": 4
+          },
+          "21": {
+            "count": 6,
+            "mean_outside_px": 2.0767716140081425,
+            "max_outside_px": 6.429920810138697,
+            "inside": 4
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "evaluation": {
+        "count": 40,
+        "mean_outside_px": 2.645282900989824,
+        "max_outside_px": 26.32033861181469,
+        "inside": 30,
+        "per_camera": {
+          "17": {
+            "count": 22,
+            "mean_outside_px": 3.8205600094471994,
+            "max_outside_px": 26.32033861181469,
+            "inside": 17
+          },
+          "19": {
+            "count": 6,
+            "mean_outside_px": 0.18018921777768546,
+            "max_outside_px": 1.0811353066661127,
+            "inside": 5
+          },
+          "20": {
+            "count": 6,
+            "mean_outside_px": 0.22272713522543577,
+            "max_outside_px": 1.3363628113526147,
+            "inside": 5
+          },
+          "21": {
+            "count": 6,
+            "mean_outside_px": 3.2235829522893056,
+            "max_outside_px": 9.818985674790753,
+            "inside": 3
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "boundary_sensitivity": {
+        "-3": {
+          "count": 40,
+          "mean_outside_px": 3.6166789039283556,
+          "max_outside_px": 29.32033861181469,
+          "inside": 25,
+          "per_camera": {
+            "17": {
+              "count": 22,
+              "mean_outside_px": 4.682914154990916,
+              "max_outside_px": 29.32033861181469,
+              "inside": 15
+            },
+            "19": {
+              "count": 6,
+              "mean_outside_px": 0.7125278813099764,
+              "max_outside_px": 4.081135306666113,
+              "inside": 4
+            },
+            "20": {
+              "count": 6,
+              "mean_outside_px": 1.0995957090623278,
+              "max_outside_px": 4.336362811352615,
+              "inside": 4
+            },
+            "21": {
+              "count": 6,
+              "mean_outside_px": 5.1283838675167095,
+              "max_outside_px": 13.372511185712689,
+              "inside": 2
+            }
+          },
+          "region_not_point_accuracy": true
+        },
+        "0": {
+          "count": 40,
+          "mean_outside_px": 2.645282900989824,
+          "max_outside_px": 26.32033861181469,
+          "inside": 30,
+          "per_camera": {
+            "17": {
+              "count": 22,
+              "mean_outside_px": 3.8205600094471994,
+              "max_outside_px": 26.32033861181469,
+              "inside": 17
+            },
+            "19": {
+              "count": 6,
+              "mean_outside_px": 0.18018921777768546,
+              "max_outside_px": 1.0811353066661127,
+              "inside": 5
+            },
+            "20": {
+              "count": 6,
+              "mean_outside_px": 0.22272713522543577,
+              "max_outside_px": 1.3363628113526147,
+              "inside": 5
+            },
+            "21": {
+              "count": 6,
+              "mean_outside_px": 3.2235829522893056,
+              "max_outside_px": 9.818985674790753,
+              "inside": 3
+            }
+          },
+          "region_not_point_accuracy": true
+        },
+        "3": {
+          "count": 40,
+          "mean_outside_px": 2.0003292396194468,
+          "max_outside_px": 23.32033861181469,
+          "inside": 33,
+          "per_camera": {
+            "17": {
+              "count": 22,
+              "mean_outside_px": 3.089151563903693,
+              "max_outside_px": 23.32033861181469,
+              "inside": 17
+            },
+            "19": {
+              "count": 6,
+              "mean_outside_px": 0.0,
+              "max_outside_px": 0.0,
+              "inside": 6
+            },
+            "20": {
+              "count": 6,
+              "mean_outside_px": 0.0,
+              "max_outside_px": 0.0,
+              "inside": 6
+            },
+            "21": {
+              "count": 6,
+              "mean_outside_px": 2.0086391964827706,
+              "max_outside_px": 6.771581123421129,
+              "inside": 4
+            }
+          },
+          "region_not_point_accuracy": true
+        }
+      },
+      "B_ball_evaluation": {
+        "predicted_interval_speed_kmh": [
+          101.55775414249348,
+          101.53363589570083
+        ],
+        "candidate_interval_speed_kmh": [
+          103.67987204317426,
+          102.05979686325371
+        ],
+        "mean_predicted_speed_kmh": 101.54569501909715,
+        "mean_candidate_speed_kmh": 102.86983445321398,
+        "mean_absolute_speed_discrepancy_kmh": 1.3241394341168302,
+        "mean_velocity_vector_discrepancy_kmh": 12.245415437803645,
+        "position_rmse_mm": 18.975054644708027,
+        "mean_absolute_radar_scalar_discrepancy_kmh": 0.6398262190971451,
+        "predicted_positions_m": [
+          [
+            0.5554530017910806,
+            0.7076212455966902,
+            4.228132159325108
+          ],
+          [
+            0.48786130098613634,
+            0.7136117668617176,
+            4.18893839071349
+          ],
+          [
+            0.42027916367206525,
+            0.719670577430667,
+            4.149775843241056
+          ]
+        ],
+        "launch_position_m": [
+          0.623054266086898,
+          0.7016990136355847,
+          4.26735714907591
+        ],
+        "launch_velocity_m_s": [
+          -24.338176574851435,
+          2.119711431292011,
+          -14.126616115341763
+        ],
+        "launch_speed_kmh": 101.59409838865822,
+        "coarse_fine_position_max_m": 1.2412670766236366e-16,
+        "coarse_fine_velocity_max_m_s": 1.199040866595169e-14,
+        "analytic_position_max_m": 5.551115123125783e-17
+      }
+    },
+    "region_reconstruction": {
+      "training": {
+        "count": 12,
+        "mean_outside_px": 0.011826145724271727,
+        "max_outside_px": 0.08408038517849015,
+        "inside": 8,
+        "per_camera": {
+          "20": {
+            "count": 6,
+            "mean_outside_px": 0.02122640391670109,
+            "max_outside_px": 0.08408038517849015,
+            "inside": 3
+          },
+          "21": {
+            "count": 6,
+            "mean_outside_px": 0.0024258875318423634,
+            "max_outside_px": 0.01455532519105418,
+            "inside": 5
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "evaluation": {
+        "count": 40,
+        "mean_outside_px": 4.2258559560394415,
+        "max_outside_px": 20.612457339643868,
+        "inside": 20,
+        "per_camera": {
+          "17": {
+            "count": 22,
+            "mean_outside_px": 2.3791132147874494,
+            "max_outside_px": 15.544916672107604,
+            "inside": 15
+          },
+          "19": {
+            "count": 6,
+            "mean_outside_px": 4.056833538969499,
+            "max_outside_px": 12.48563729423637,
+            "inside": 3
+          },
+          "20": {
+            "count": 6,
+            "mean_outside_px": 3.3461957173544916,
+            "max_outside_px": 12.184351077598583,
+            "inside": 2
+          },
+          "21": {
+            "count": 6,
+            "mean_outside_px": 12.04592866305164,
+            "max_outside_px": 20.612457339643868,
+            "inside": 0
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "boundary_sensitivity": {
+        "-3": {
+          "count": 40,
+          "mean_outside_px": 6.01572661661678,
+          "max_outside_px": 23.79094496081053,
+          "inside": 14,
+          "per_camera": {
+            "17": {
+              "count": 22,
+              "mean_outside_px": 3.4965413758877215,
+              "max_outside_px": 18.544916672107604,
+              "inside": 11
+            },
+            "19": {
+              "count": 6,
+              "mean_outside_px": 5.556833538969499,
+              "max_outside_px": 15.48563729423637,
+              "inside": 3
+            },
+            "20": {
+              "count": 6,
+              "mean_outside_px": 6.535538834764349,
+              "max_outside_px": 15.782458139279049,
+              "inside": 0
+            },
+            "21": {
+              "count": 6,
+              "mean_outside_px": 15.191820025456373,
+              "max_outside_px": 23.79094496081053,
+              "inside": 0
+            }
+          },
+          "region_not_point_accuracy": true
+        },
+        "0": {
+          "count": 40,
+          "mean_outside_px": 4.2258559560394415,
+          "max_outside_px": 20.612457339643868,
+          "inside": 20,
+          "per_camera": {
+            "17": {
+              "count": 22,
+              "mean_outside_px": 2.3791132147874494,
+              "max_outside_px": 15.544916672107604,
+              "inside": 15
+            },
+            "19": {
+              "count": 6,
+              "mean_outside_px": 4.056833538969499,
+              "max_outside_px": 12.48563729423637,
+              "inside": 3
+            },
+            "20": {
+              "count": 6,
+              "mean_outside_px": 3.3461957173544916,
+              "max_outside_px": 12.184351077598583,
+              "inside": 2
+            },
+            "21": {
+              "count": 6,
+              "mean_outside_px": 12.04592866305164,
+              "max_outside_px": 20.612457339643868,
+              "inside": 0
+            }
+          },
+          "region_not_point_accuracy": true
+        },
+        "3": {
+          "count": 40,
+          "mean_outside_px": 2.7906879516271985,
+          "max_outside_px": 17.612457339643868,
+          "inside": 25,
+          "per_camera": {
+            "17": {
+              "count": 22,
+              "mean_outside_px": 1.5027337638091518,
+              "max_outside_px": 12.544916672107604,
+              "inside": 17
+            },
+            "19": {
+              "count": 6,
+              "mean_outside_px": 2.5568335389694994,
+              "max_outside_px": 9.48563729423637,
+              "inside": 3
+            },
+            "20": {
+              "count": 6,
+              "mean_outside_px": 1.5106953967416719,
+              "max_outside_px": 9.064172380450032,
+              "inside": 5
+            },
+            "21": {
+              "count": 6,
+              "mean_outside_px": 9.027033607836595,
+              "max_outside_px": 17.612457339643868,
+              "inside": 0
+            }
+          },
+          "region_not_point_accuracy": true
+        }
+      },
+      "B_ball_evaluation": {
+        "predicted_interval_speed_kmh": [
+          103.08727721623023,
+          103.06067991531754
+        ],
+        "candidate_interval_speed_kmh": [
+          103.67987204317426,
+          102.05979686325371
+        ],
+        "mean_predicted_speed_kmh": 103.07397856577388,
+        "mean_candidate_speed_kmh": 102.86983445321398,
+        "mean_absolute_speed_discrepancy_kmh": 0.7967389395039248,
+        "mean_velocity_vector_discrepancy_kmh": 10.955725732341389,
+        "position_rmse_mm": 16.55242349641256,
+        "mean_absolute_radar_scalar_discrepancy_kmh": 2.1681097657738775,
+        "predicted_positions_m": [
+          [
+            0.5554649919851224,
+            0.7055277909805183,
+            4.2242832758317075
+          ],
+          [
+            0.4879291931382777,
+            0.7101389203518094,
+            4.18251382677193
+          ],
+          [
+            0.4204029577823062,
+            0.7148183390270224,
+            4.140775598851336
+          ]
+        ],
+        "launch_position_m": [
+          0.6230103543228402,
+          0.7009849509131493,
+          4.266083946030669
+        ],
+        "launch_velocity_m_s": [
+          -24.31805186993559,
+          1.6231303495469176,
+          -15.053861076679135
+        ],
+        "launch_speed_kmh": 103.12733527666674,
+        "coarse_fine_position_max_m": 1.1102230246251565e-16,
+        "coarse_fine_velocity_max_m_s": 1.1916163935586911e-14,
+        "analytic_position_max_m": 0.0
+      }
+    }
+  },
+  "training_rows": [
+    {
+      "camera": 20,
+      "frame": 940,
+      "segment": "l_hand",
+      "box": [
+        555,
+        372,
+        588,
+        403
+      ]
+    },
+    {
+      "camera": 20,
+      "frame": 940,
+      "segment": "l_larm",
+      "box": [
+        592,
+        367,
+        631,
+        405
+      ]
+    },
+    {
+      "camera": 20,
+      "frame": 960,
+      "segment": "l_hand",
+      "box": [
+        448,
+        420,
+        480,
+        451
+      ]
+    },
+    {
+      "camera": 20,
+      "frame": 960,
+      "segment": "l_larm",
+      "box": [
+        474,
+        326,
+        512,
+        366
+      ]
+    },
+    {
+      "camera": 21,
+      "frame": 940,
+      "segment": "l_hand",
+      "box": [
+        968,
+        333,
+        997,
+        365
+      ]
+    },
+    {
+      "camera": 21,
+      "frame": 940,
+      "segment": "l_larm",
+      "box": [
+        877,
+        326,
+        919,
+        365
+      ]
+    },
+    {
+      "camera": 21,
+      "frame": 960,
+      "segment": "l_hand",
+      "box": [
+        850,
+        476,
+        884,
+        511
+      ]
+    },
+    {
+      "camera": 21,
+      "frame": 960,
+      "segment": "l_larm",
+      "box": [
+        744,
+        420,
+        792,
+        465
+      ]
+    },
+    {
+      "camera": 20,
+      "frame": 950,
+      "segment": "l_hand",
+      "box": [
+        520,
+        383,
+        549,
+        410
+      ]
+    },
+    {
+      "camera": 20,
+      "frame": 950,
+      "segment": "l_larm",
+      "box": [
+        533,
+        332,
+        570,
+        368
+      ]
+    },
+    {
+      "camera": 21,
+      "frame": 950,
+      "segment": "l_hand",
+      "box": [
+        935,
+        396,
+        967,
+        428
+      ]
+    },
+    {
+      "camera": 21,
+      "frame": 950,
+      "segment": "l_larm",
+      "box": [
+        805,
+        389,
+        842,
+        429
+      ]
+    }
+  ],
+  "evaluation_rows": [
+    {
+      "camera": 17,
+      "frame": 971,
+      "segment": "l_hand",
+      "box": [
+        505,
+        406,
+        534,
+        437
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 971,
+      "segment": "l_larm",
+      "box": [
+        544,
+        337,
+        583,
+        375
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 973,
+      "segment": "l_hand",
+      "box": [
+        493,
+        394,
+        521,
+        424
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 973,
+      "segment": "l_larm",
+      "box": [
+        541,
+        330,
+        580,
+        365
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 975,
+      "segment": "l_hand",
+      "box": [
+        482,
+        380,
+        510,
+        408
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 975,
+      "segment": "l_larm",
+      "box": [
+        539,
+        320,
+        579,
+        355
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 977,
+      "segment": "l_hand",
+      "box": [
+        474,
+        363,
+        504,
+        393
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 977,
+      "segment": "l_larm",
+      "box": [
+        532,
+        310,
+        574,
+        347
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 979,
+      "segment": "l_hand",
+      "box": [
+        473,
+        345,
+        503,
+        376
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 979,
+      "segment": "l_larm",
+      "box": [
+        527,
+        300,
+        570,
+        338
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 19,
+      "frame": 974,
+      "segment": "l_hand",
+      "box": [
+        835,
+        449,
+        855,
+        475
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 19,
+      "frame": 974,
+      "segment": "l_larm",
+      "box": [
+        815,
+        350,
+        840,
+        380
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 19,
+      "frame": 977,
+      "segment": "l_hand",
+      "box": [
+        803,
+        439,
+        830,
+        466
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 19,
+      "frame": 977,
+      "segment": "l_larm",
+      "box": [
+        800,
+        345,
+        829,
+        379
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 19,
+      "frame": 979,
+      "segment": "l_hand",
+      "box": [
+        781,
+        437,
+        809,
+        461
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 19,
+      "frame": 979,
+      "segment": "l_larm",
+      "box": [
+        802,
+        348,
+        823,
+        377
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 20,
+      "frame": 974,
+      "segment": "l_hand",
+      "box": [
+        365,
+        345,
+        392,
+        369
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 20,
+      "frame": 974,
+      "segment": "l_larm",
+      "box": [
+        434,
+        302,
+        464,
+        330
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 20,
+      "frame": 977,
+      "segment": "l_hand",
+      "box": [
+        379,
+        322,
+        410,
+        347
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 20,
+      "frame": 977,
+      "segment": "l_larm",
+      "box": [
+        439,
+        289,
+        472,
+        319
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 20,
+      "frame": 979,
+      "segment": "l_hand",
+      "box": [
+        381,
+        302,
+        414,
+        329
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 20,
+      "frame": 979,
+      "segment": "l_larm",
+      "box": [
+        447,
+        279,
+        477,
+        306
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 21,
+      "frame": 974,
+      "segment": "l_hand",
+      "box": [
+        628,
+        542,
+        654,
+        568
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 21,
+      "frame": 974,
+      "segment": "l_larm",
+      "box": [
+        653,
+        445,
+        682,
+        479
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 21,
+      "frame": 977,
+      "segment": "l_hand",
+      "box": [
+        588,
+        523,
+        617,
+        551
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 21,
+      "frame": 977,
+      "segment": "l_larm",
+      "box": [
+        636,
+        451,
+        665,
+        482
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 21,
+      "frame": 979,
+      "segment": "l_hand",
+      "box": [
+        563,
+        508,
+        590,
+        535
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 21,
+      "frame": 979,
+      "segment": "l_larm",
+      "box": [
+        619,
+        447,
+        649,
+        479
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 940,
+      "segment": "l_hand",
+      "box": [
+        724,
+        328,
+        756,
+        355
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 945,
+      "segment": "l_hand",
+      "box": [
+        698,
+        341,
+        730,
+        369
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 950,
+      "segment": "l_hand",
+      "box": [
+        655,
+        380,
+        687,
+        408
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 950,
+      "segment": "l_larm",
+      "box": [
+        645,
+        336,
+        686,
+        369
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 955,
+      "segment": "l_hand",
+      "box": [
+        631,
+        405,
+        660,
+        433
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 955,
+      "segment": "l_larm",
+      "box": [
+        621,
+        337,
+        659,
+        374
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 960,
+      "segment": "l_hand",
+      "box": [
+        616,
+        430,
+        645,
+        458
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 960,
+      "segment": "l_larm",
+      "box": [
+        599,
+        344,
+        638,
+        382
+      ],
+      "split": "fit"
+    },
+    {
+      "camera": 17,
+      "frame": 965,
+      "segment": "l_hand",
+      "box": [
+        568,
+        434,
+        598,
+        464
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 965,
+      "segment": "l_larm",
+      "box": [
+        572,
+        344,
+        614,
+        382
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 970,
+      "segment": "l_hand",
+      "box": [
+        520,
+        413,
+        550,
+        443
+      ],
+      "split": "eval"
+    },
+    {
+      "camera": 17,
+      "frame": 970,
+      "segment": "l_larm",
+      "box": [
+        550,
+        340,
+        590,
+        379
+      ],
+      "split": "eval"
+    }
+  ],
+  "engineering_checks": {
+    "solver_success": true,
+    "root_not_at_boundary": false,
+    "lengths_preserved": true,
+    "evaluation_mean_nonworsening": false,
+    "all_evaluation_cameras_nonworsening": false,
+    "boundary_sensitivity_nonworsening": false,
+    "ball_three_metrics_nonworsening": true
+  },
+  "engineering_candidate_accepted": false,
+  "length_error_max_mm": 2.220446049250313e-13,
+  "source_position_difference_max_mm": [
+    41.364801881556595,
+    82.61246001463397,
+    56.07762097228526
+  ],
+  "source_position_rmse_mm": [
+    41.36480188155663,
+    76.60593734675598,
+    48.45490126837309
+  ],
+  "freeze": {
+    "frozen_utc": "2026-10-29T04:01:36.055107+00:00",
+    "status": "frozen before new-frame projection or optimization",
+    "sha256": {
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\FREE_ARM_REGION_PROTOCOL.md": "0d62c164f412e8900f3e821b3b5067701b64b8b744ecc991b50cd29c37101eab",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\free_arm_new_regions.json": "e117cd1fd209e98bbc3cce6f4badf54e1c04d56b2820ca2722c560c44cd4f5f2",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\counterview_regions.json": "b30677b5fe100504edc059721f606612a1d2ecfdb05427875d6ce2cef3ef545b",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\long_hand_regions.json": "68b4e0c2dd760c0767349d24f40715c20eec94644f0cf42866ebc6b6e3d60fbb",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\prime17_regions.json": "fe4c7187e6b430bbb1f665f32efb231a754d32a48994b91b58960d08345037b3",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\hand_image_regions.json": "2e3a20415d268380ede08c2da03e86e87a55e5e4124460310985d42bc122bf25",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop20_940.png": "adfe02ced9a72069abd5dc0ae2c689fabf042d8908d142d184e07c60bca645e1",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop20_960.png": "8e3fdb199de5547a8c66d2985dd6a09aeb9e0d8f4128d94a775bef99601bcf99",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop21_940.png": "780f8a63cc75b2ba5bf6e1bec3dad57c9924693bcfb7596f0a6c64537a306aaf",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop21_960.png": "683caf83e48b32321f9426f35f2640987aee324a90afb2ce0ce733f96bbcda1e"
+    }
+  },
+  "code_sha256": "dceeaa12235d2cf89ee10f9c2e9bd12ad7a09418daf1a9cdfb91e32aa3dc6418",
+  "actual_athlete_gain_kmh": null,
+  "force_work_change": null,
+  "anatomical_accuracy_verified": false,
+  "scientific_stage_passed": false,
+  "interpretation": "Development-only approximate visible-region reconstruction. B includes train-observed ball positions; not body-only launch prediction or a posture intervention."
+}

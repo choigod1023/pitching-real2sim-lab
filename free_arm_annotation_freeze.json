@@ -1,0 +1,16 @@
+{
+  "frozen_utc": "2026-10-29T04:01:36.055107+00:00",
+  "status": "frozen before new-frame projection or optimization",
+  "sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\FREE_ARM_REGION_PROTOCOL.md": "0d62c164f412e8900f3e821b3b5067701b64b8b744ecc991b50cd29c37101eab",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\free_arm_new_regions.json": "e117cd1fd209e98bbc3cce6f4badf54e1c04d56b2820ca2722c560c44cd4f5f2",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\counterview_regions.json": "b30677b5fe100504edc059721f606612a1d2ecfdb05427875d6ce2cef3ef545b",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\long_hand_regions.json": "68b4e0c2dd760c0767349d24f40715c20eec94644f0cf42866ebc6b6e3d60fbb",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\prime17_regions.json": "fe4c7187e6b430bbb1f665f32efb231a754d32a48994b91b58960d08345037b3",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\hand_image_regions.json": "2e3a20415d268380ede08c2da03e86e87a55e5e4124460310985d42bc122bf25",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop20_940.png": "adfe02ced9a72069abd5dc0ae2c689fabf042d8908d142d184e07c60bca645e1",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop20_960.png": "8e3fdb199de5547a8c66d2985dd6a09aeb9e0d8f4128d94a775bef99601bcf99",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop21_940.png": "780f8a63cc75b2ba5bf6e1bec3dad57c9924693bcfb7596f0a6c64537a306aaf",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\blindcrop21_960.png": "683caf83e48b32321f9426f35f2640987aee324a90afb2ce0ce733f96bbcda1e"
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "protocol_sha256": "f922a22d8c36008a05a7ea8630464409b51f4f01ec60a24e0789b092bfd72eb5",
+  "input_results_sha256": "d94e77aeb88839ca3d13e87ece1a739d023d175b4963cdef9be09a87c751e1bf",
+  "groups": {
+    "camera17_at_fit_times": {
+      "source": {
+        "count": 5,
+        "mean_outside_px": 9.549525866748608,
+        "max_outside_px": 21.22243278468028,
+        "inside": 2,
+        "per_camera": {
+          "17": {
+            "count": 5,
+            "mean_outside_px": 9.549525866748608,
+            "max_outside_px": 21.22243278468028,
+            "inside": 2
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "reconstructed": {
+        "count": 5,
+        "mean_outside_px": 5.660223863300928,
+        "max_outside_px": 10.531684839621107,
+        "inside": 1,
+        "per_camera": {
+          "17": {
+            "count": 5,
+            "mean_outside_px": 5.660223863300928,
+            "max_outside_px": 10.531684839621107,
+            "inside": 1
+          }
+        },
+        "region_not_point_accuracy": true
+      }
+    },
+    "early_other_times": {
+      "source": {
+        "count": 7,
+        "mean_outside_px": 5.186384410585049,
+        "max_outside_px": 26.32033861181469,
+        "inside": 5,
+        "per_camera": {
+          "17": {
+            "count": 7,
+            "mean_outside_px": 5.186384410585049,
+            "max_outside_px": 26.32033861181469,
+            "inside": 5
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "reconstructed": {
+        "count": 7,
+        "mean_outside_px": 3.434195915545607,
+        "max_outside_px": 15.544916672107604,
+        "inside": 4,
+        "per_camera": {
+          "17": {
+            "count": 7,
+            "mean_outside_px": 3.434195915545607,
+            "max_outside_px": 15.544916672107604,
+            "inside": 4
+          }
+        },
+        "region_not_point_accuracy": true
+      }
+    },
+    "release_window": {
+      "source": {
+        "count": 28,
+        "mean_outside_px": 0.7771069939912343,
+        "max_outside_px": 9.818985674790753,
+        "inside": 23,
+        "per_camera": {
+          "17": {
+            "count": 10,
+            "mean_outside_px": 0.0,
+            "max_outside_px": 0.0,
+            "inside": 10
+          },
+          "19": {
+            "count": 6,
+            "mean_outside_px": 0.18018921777768546,
+            "max_outside_px": 1.0811353066661127,
+            "inside": 5
+          },
+          "20": {
+            "count": 6,
+            "mean_outside_px": 0.22272713522543577,
+            "max_outside_px": 1.3363628113526147,
+            "inside": 5
+          },
+          "21": {
+            "count": 6,
+            "mean_outside_px": 3.2235829522893056,
+            "max_outside_px": 9.818985674790753,
+            "inside": 3
+          }
+        },
+        "region_not_point_accuracy": true
+      },
+      "reconstructed": {
+        "count": 28,
+        "mean_outside_px": 4.167633839866207,
+        "max_outside_px": 20.612457339643868,
+        "inside": 15,
+        "per_camera": {
+          "17": {
+            "count": 10,
+            "mean_outside_px": 0.0,
+            "max_outside_px": 0.0,
+            "inside": 10
+          },
+          "19": {
+            "count": 6,
+            "mean_outside_px": 4.056833538969499,
+            "max_outside_px": 12.48563729423637,
+            "inside": 3
+          },
+          "20": {
+            "count": 6,
+            "mean_outside_px": 3.3461957173544916,
+            "max_outside_px": 12.184351077598583,
+            "inside": 2
+          },
+          "21": {
+            "count": 6,
+            "mean_outside_px": 12.04592866305164,
+            "max_outside_px": 20.612457339643868,
+            "inside": 0
+          }
+        },
+        "region_not_point_accuracy": true
+      }
+    }
+  },
+  "region_lp": {
+    "940_l_hand": {
+      "cameras": [
+        20,
+        21,
+        17
+      ],
+      "feasibility": {
+        "feasible": false,
+        "exact_joint_reconstructed": false
+      },
+      "minimum_common_padding_px": 4.0020751953125
+    },
+    "940_l_larm": {
+      "cameras": [
+        20,
+        21
+      ],
+      "feasibility": {
+        "feasible": true,
+        "conditional_example_point_m": [
+          0.8907465593608389,
+          0.0,
+          5.215141533043231
+        ],
+        "max_inequality_violation": 0.0,
+        "exact_joint_reconstructed": false
+      },
+      "minimum_common_padding_px": 0.0
+    },
+    "960_l_hand": {
+      "cameras": [
+        20,
+        21,
+        17
+      ],
+      "feasibility": {
+        "feasible": true,
+        "conditional_example_point_m": [
+          1.1633909474812798,
+          0.2191317335821709,
+          4.7958812577858305
+        ],
+        "max_inequality_violation": 0.0,
+        "exact_joint_reconstructed": false
+      },
+      "minimum_common_padding_px": 0.0
+    },
+    "960_l_larm": {
+      "cameras": [
+        20,
+        21,
+        17
+      ],
+      "feasibility": {
+        "feasible": true,
+        "conditional_example_point_m": [
+          0.8268278330370696,
+          0.13933886539141183,
+          4.684106331870994
+        ],
+        "max_inequality_violation": 0.0,
+        "exact_joint_reconstructed": false
+      },
+      "minimum_common_padding_px": 0.0
+    }
+  },
+  "attribution_controls": {
+    "source": {
+      "predicted_interval_speed_kmh": [
+        101.55775414249348,
+        101.53363589570083
+      ],
+      "candidate_interval_speed_kmh": [
+        103.67987204317426,
+        102.05979686325371
+      ],
+      "mean_predicted_speed_kmh": 101.54569501909715,
+      "mean_candidate_speed_kmh": 102.86983445321398,
+      "mean_absolute_speed_discrepancy_kmh": 1.3241394341168302,
+      "mean_velocity_vector_discrepancy_kmh": 12.245415437803645,
+      "position_rmse_mm": 18.975054644708027,
+      "mean_absolute_radar_scalar_discrepancy_kmh": 0.6398262190971451,
+      "predicted_positions_m": [
+        [
+          0.5554530017910806,
+          0.7076212455966902,
+          4.228132159325108
+        ],
+        [
+          0.48786130098613634,
+          0.7136117668617176,
+          4.18893839071349
+        ],
+        [
+          0.42027916367206525,
+          0.719670577430667,
+          4.149775843241056
+        ]
+      ],
+      "launch_position_m": [
+        0.623054266086898,
+        0.7016990136355847,
+        4.26735714907591
+      ],
+      "launch_velocity_m_s": [
+        -24.338176574851435,
+        2.119711431292011,
+        -14.126616115341763
+      ],
+      "launch_speed_kmh": 101.59409838865822,
+      "coarse_fine_position_max_m": 1.2412670766236366e-16,
+      "coarse_fine_velocity_max_m_s": 1.199040866595169e-14,
+      "analytic_position_max_m": 5.551115123125783e-17
+    },
+    "wrist_only": {
+      "predicted_interval_speed_kmh": [
+        101.99932453685763,
+        101.97491625017777
+      ],
+      "candidate_interval_speed_kmh": [
+        103.67987204317426,
+        102.05979686325371
+      ],
+      "mean_predicted_speed_kmh": 101.9871203935177,
+      "mean_candidate_speed_kmh": 102.86983445321398,
+      "mean_absolute_speed_discrepancy_kmh": 0.8827140596962835,
+      "mean_velocity_vector_discrepancy_kmh": 11.109102785084056,
+      "position_rmse_mm": 16.398953044988787,
+      "mean_absolute_radar_scalar_discrepancy_kmh": 1.0812515935176918,
+      "predicted_positions_m": [
+        [
+          0.5557544102785779,
+          0.7077777050124764,
+          4.226499620742616
+        ],
+        [
+          0.48840797893097365,
+          0.7138741267314871,
+          4.186231981568682
+        ],
+        [
+          0.4210711110742426,
+          0.7200388377544197,
+          4.145995563533931
+        ]
+      ],
+      "launch_position_m": [
+        0.6231104051170553,
+        0.7017495725973876,
+        4.2667984810557344
+      ],
+      "launch_velocity_m_s": [
+        -24.249879570209018,
+        2.1578355947259946,
+        -14.513209517775644
+      ],
+      "launch_speed_kmh": 102.03610286133764,
+      "coarse_fine_position_max_m": 1.5700924586837752e-16,
+      "coarse_fine_velocity_max_m_s": 1.199040866595169e-14,
+      "analytic_position_max_m": 1.5700924586837752e-16
+    },
+    "rotation_only": {
+      "predicted_interval_speed_kmh": [
+        102.73131347402871,
+        102.70493258150472
+      ],
+      "candidate_interval_speed_kmh": [
+        103.67987204317426,
+        102.05979686325371
+      ],
+      "mean_predicted_speed_kmh": 102.71812302776672,
+      "mean_candidate_speed_kmh": 102.86983445321398,
+      "mean_absolute_speed_discrepancy_kmh": 0.7968471436982796,
+      "mean_velocity_vector_discrepancy_kmh": 12.403288216915133,
+      "position_rmse_mm": 19.590917829662374,
+      "mean_absolute_radar_scalar_discrepancy_kmh": 1.812254227766708,
+      "predicted_positions_m": [
+        [
+          0.5547723504247106,
+          0.7051223781244959,
+          4.226366972058211
+        ],
+        [
+          0.4867156108190889,
+          0.7094607187733518,
+          4.185958148247732
+        ],
+        [
+          0.4186684347043403,
+          0.7138673487261297,
+          4.145580545576435
+        ]
+      ],
+      "launch_position_m": [
+        0.6228386535212055,
+        0.7008523267795618,
+        4.266807017007875
+      ],
+      "launch_velocity_m_s": [
+        -24.505590543095334,
+        1.5249264094702888,
+        -14.564035986931964
+      ],
+      "launch_speed_kmh": 102.77104769305582,
+      "coarse_fine_position_max_m": 1.2412670766236366e-16,
+      "coarse_fine_velocity_max_m_s": 1.1916163935586911e-14,
+      "analytic_position_max_m": 1.2412670766236366e-16
+    },
+    "both": {
+      "predicted_interval_speed_kmh": [
+        103.08727721623023,
+        103.06067991531754
+      ],
+      "candidate_interval_speed_kmh": [
+        103.67987204317426,
+        102.05979686325371
+      ],
+      "mean_predicted_speed_kmh": 103.07397856577388,
+      "mean_candidate_speed_kmh": 102.86983445321398,
+      "mean_absolute_speed_discrepancy_kmh": 0.7967389395039248,
+      "mean_velocity_vector_discrepancy_kmh": 10.955725732341389,
+      "position_rmse_mm": 16.55242349641256,
+      "mean_absolute_radar_scalar_discrepancy_kmh": 2.1681097657738775,
+      "predicted_positions_m": [
+        [
+          0.5554649919851224,
+          0.7055277909805183,
+          4.2242832758317075
+        ],
+        [
+          0.4879291931382777,
+          0.7101389203518094,
+          4.18251382677193
+        ],
+        [
+          0.4204029577823062,
+          0.7148183390270224,
+          4.140775598851336
+        ]
+      ],
+      "launch_position_m": [
+        0.6230103543228402,
+        0.7009849509131493,
+        4.266083946030669
+      ],
+      "launch_velocity_m_s": [
+        -24.31805186993559,
+        1.6231303495469176,
+        -15.053861076679135
+      ],
+      "launch_speed_kmh": 103.12733527666674,
+      "coarse_fine_position_max_m": 1.1102230246251565e-16,
+      "coarse_fine_velocity_max_m_s": 1.1916163935586911e-14,
+      "analytic_position_max_m": 0.0
+    }
+  },
+  "refitted": false,
+  "rejection_reversed": false,
+  "maximum_hand_transport_angle_deg": 11.136756433605477,
+  "actual_athlete_gain_kmh": null,
+  "force_work_change": null
+}
