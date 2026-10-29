@@ -1,0 +1,5 @@
+# Secondary image-quality-conditioned diagnostic
+
+After fixed-order, order-recovery and all three frame shifts failed, inspect per-view planar homography residuals. Camera1 native median/max were0.505/4.994px, source0.414/3.367px; camera3 native0.286/0.413px, source0.276/2.648px. This is evidence that some image grids are inconsistent with a planar target, not proof of a unique hardware/shape cause.
+
+Before this secondary fit, require homography RMS<=2px in both cameras and both detector methods, on the same0-shift common frame IDs. This uses the pre-existing engineering pixel threshold, not cube length or speed. Preserve every excluded frame and residual, and report the original unfiltered failed result. Keep modulo5 split and >=8/5/2 counts. No passing result may be generalized to excluded frames. Use the same training-only per-frame association model and unchanged static observations, with phase1 primary and phase3 explicitly provisional. All metric thresholds remain unchanged; do not accept a rig solely because training residual drops.
