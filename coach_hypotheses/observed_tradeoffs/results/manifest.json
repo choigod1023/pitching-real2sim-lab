@@ -1,0 +1,148 @@
+{
+  "protocol_commit": "2cab00c9474dbc84950292668e76efd60cf3ea81",
+  "sign_amendment_commit": "5175773c38e4fac7e41392cb1c652d30f5446542",
+  "sign_amendment_sha256": "03991ebe552a7895a94668b8cbaf41078ca2405008b26bf386773b2bb119d467",
+  "protocol_sha256": "42a09beb1703246d7fc6efa24b6308913d83b639205488fb8b8e9d46f0f1de2d",
+  "code_sha256": "e7d35cd56aba7a421694b865e861792f62b29d55c7e73a76003fc8ba847bc525",
+  "sources": {
+    "derived_metrics": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-stage1-diagnostics-20261029\\coach_hypotheses\\stage1\\results\\pitch_metrics.csv",
+      "sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4"
+    },
+    "metadata.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\metadata.csv",
+      "sha256": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0"
+    },
+    "poi/poi_metrics.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\poi\\poi_metrics.csv",
+      "sha256": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6"
+    }
+  },
+  "upstream_manifest": {
+    "sources": {
+      "metadata.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\metadata.csv",
+        "sha256": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0"
+      },
+      "poi/poi_metrics.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\poi\\poi_metrics.csv",
+        "sha256": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6"
+      },
+      "data_dictionary.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\data_dictionary.csv",
+        "sha256": "3a87194c690b8118bc2175a688668ca996d699e5b35eafd1155b94e1f9efb817"
+      },
+      "full_sig/joint_velos.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\joint_velos.csv",
+        "sha256": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+      },
+      "full_sig/joint_angles.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\joint_angles.csv",
+        "sha256": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce"
+      },
+      "full_sig/forces_moments.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\forces_moments.csv",
+        "sha256": "23920e256fbc42ba25278ba95086db297457e7c8054c98c66f27fa03874c1f9f"
+      },
+      "full_sig/landmarks.csv": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv",
+        "sha256": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370"
+      }
+    },
+    "code": {
+      "__init__.py": "c6e6c7eaa5533dcda13f832b3af702f4d10aefa0bd639b8ff60e0885e91dd77b",
+      "audit.py": "4dd9f48452611bb883c86d5879fa1b449fb70ea801e62447f33567363c649cc5",
+      "metrics.py": "21b2921dc381fd6ac6d52d01052c1dcb2d4da8f50a275bd93589e4baafb01cec",
+      "modeling.py": "656c69e20bfc3048a7894f4aff27658c9d9908d41fe3e100245f3548573f6338",
+      "run.py": "bf86860bd1dbd4422cb63265059cf125bc613d8e86997f494ff527049890cbe9",
+      "test_audit.py": "d60366bc3343bb69d5c4e84718866de0d632d5a0788f4013877d52e244dbba0e",
+      "test_metrics.py": "53492595d51a2f1a2523542719f8d68f9e76754a3c7bd8e0bbfedd2ba071ee3e",
+      "test_modeling.py": "e22f2d1ec965ca461e17d38a47d24ea3e1067be4955295e0c5f99b58eb6ffce3",
+      "test_run.py": "4b93db6a07773c66ee0fca148c23d1a207031e718fc0642226a42ef6606ad5c4"
+    },
+    "protocol_sha256": "115e54896dce5885136f07391ca7a15c5719baef25b3c644ab0dddc29e89e6eb",
+    "preregistration_commit": "053c22251e62a1ac42489bc1dbe4a62918b41393",
+    "sign_amendment_commit": "e327e92",
+    "sign_amendment_sha256": "ce7c9b9d727ccc8862800455c784602b99d46888ea7fbdd03ee6b232782e85b2",
+    "head_at_execution": "e327e922cde644a93525d79329ce8259a3e2a755"
+  },
+  "upstream_files_sha256": {
+    "results/manifest.json": "b3fc4e648354c71ea02de434793707bf11fb69624730dbb9363c29a01e4162b5",
+    "results/exclusions.json": "3c183997620802973a269ec735eca5e714420b50ceba2c131a652cc0382d846f",
+    "PROTOCOL.md": "df6f1b1b8c61510f2dea351909066d90ea9e64cd2c35a35921c6bfd765e2eb99",
+    "AMENDMENT_01_KNEE_SIGN.md": "36d6090156d87d5a7f10b76102c7ff8ee95434284da6b0dc00528210a62714c8"
+  },
+  "upstream_exclusions": [
+    {
+      "session_pitch": "1370_1",
+      "user": "905",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "1371_2",
+      "user": "906",
+      "reason": "nonfinite_analysis_window"
+    },
+    {
+      "session_pitch": "1371_3",
+      "user": "906",
+      "reason": "insufficient_filter_padding"
+    },
+    {
+      "session_pitch": "2919_2",
+      "user": "917",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2919_3",
+      "user": "917",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2919_4",
+      "user": "917",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2919_5",
+      "user": "917",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2857_4",
+      "user": "1616",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2918_3",
+      "user": "1637",
+      "reason": "invalid_event_order"
+    },
+    {
+      "session_pitch": "2923_1",
+      "user": "1641",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2923_2",
+      "user": "1641",
+      "reason": "missing_or_nonconstant_event:fp_10_time"
+    },
+    {
+      "session_pitch": "2919_1",
+      "user": "917",
+      "reason": "fewer_than_two_valid_pitches"
+    }
+  ],
+  "new_exclusions": [],
+  "source_documentation": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\README.md",
+    "sha256": "1993d60a63dd751b1eab5138f5698edcdaa0a1a15e30699e2dc767ee45e49587",
+    "shoulder_z_convention": "Compression positive / Distraction negative"
+  },
+  "upstream_metrics_directory": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-stage1-diagnostics-20261029\\coach_hypotheses\\stage1",
+  "filtering": "Provided full_sig 20Hz + additional zero-phase 10/20/30Hz",
+  "epsilon_scope": "floating comparison only, not measurement uncertainty",
+  "data_license": "CC BY-NC-SA 4.0",
+  "source_url": "https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_pitching"
+}
