@@ -1,0 +1,628 @@
+{
+  "reviewed_at": "2026-10-29",
+  "scope": "read-only physics-model research; no new predictive result",
+  "git_base": "ff2847f",
+  "repositories": {
+    "MyoHub/myosuite": "2d08f42dfec85278566c95b1d09f5bd67662b3d6",
+    "MyoHub/myo_sim": "93b0ca8f4ec90c9899ee7f05fee561e9911da91b",
+    "stanfordnmbl/shoulder-personalization": "dfcb9dcda9fc86288cc2df849e04a77612a6b1ce",
+    "opensim-org/opensim-core": "dbf701f56caa59bef126938f5c24829f19559d9a"
+  },
+  "code_sources": [
+    {
+      "id": "myosuite_license",
+      "url": "https://raw.githubusercontent.com/MyoHub/myosuite/2d08f42dfec85278566c95b1d09f5bd67662b3d6/LICENSE",
+      "repository": "MyoHub/myosuite",
+      "commit": "2d08f42dfec85278566c95b1d09f5bd67662b3d6",
+      "status": "file_downloaded_and_read",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "lines": 201,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\myosuite_license",
+      "read_evidence": [
+        {
+          "line": 1,
+          "text": "                                 Apache License"
+        },
+        {
+          "line": 178,
+          "text": "   APPENDIX: How to apply the Apache License to your work."
+        },
+        {
+          "line": 180,
+          "text": "      To apply the Apache License to your work, attach the following"
+        },
+        {
+          "line": 191,
+          "text": "   Licensed under the Apache License, Version 2.0 (the \"License\");"
+        }
+      ]
+    },
+    {
+      "id": "myosuite_project",
+      "url": "https://raw.githubusercontent.com/MyoHub/myosuite/2d08f42dfec85278566c95b1d09f5bd67662b3d6/pyproject.toml",
+      "repository": "MyoHub/myosuite",
+      "commit": "2d08f42dfec85278566c95b1d09f5bd67662b3d6",
+      "status": "file_downloaded_and_read",
+      "sha256": "f238dff38f4a9bc27822a33907cb3fcd8f97606df6618a98c320a53dd4d51d26",
+      "bytes": 9491,
+      "lines": 234,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\myosuite_project.toml",
+      "read_evidence": [
+        {
+          "line": 7,
+          "text": "requires-python = \">=3.10\""
+        }
+      ]
+    },
+    {
+      "id": "myosuite_relocate",
+      "url": "https://raw.githubusercontent.com/MyoHub/myosuite/2d08f42dfec85278566c95b1d09f5bd67662b3d6/myosuite/envs/myo/tasks/challenge/relocate.py",
+      "repository": "MyoHub/myosuite",
+      "commit": "2d08f42dfec85278566c95b1d09f5bd67662b3d6",
+      "status": "file_downloaded_and_read",
+      "sha256": "6936c4425bfd2c0f01bc9e18761f1509d47af648cbea6656e610c2114fd08bdf",
+      "bytes": 14859,
+      "lines": 359,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\myosuite_relocate.py",
+      "read_evidence": [
+        {
+          "line": 21,
+          "text": "    mean_effort,"
+        },
+        {
+          "line": 36,
+          "text": "        \"goal_pos\","
+        },
+        {
+          "line": 39,
+          "text": "        \"goal_rot\","
+        },
+        {
+          "line": 56,
+          "text": "        obj_mass_range: dict | None = None,"
+        },
+        {
+          "line": 80,
+          "text": "            obj_mass_range=obj_mass_range,"
+        },
+        {
+          "line": 111,
+          "text": "        self.goal_sid = self.model.site(\"target_o\").id"
+        },
+        {
+          "line": 113,
+          "text": "        self.goal_bid = self.model.body(\"target\").id"
+        },
+        {
+          "line": 114,
+          "text": "        self.goal_mocap_id = self.model.body_mocapid[self.goal_bid]"
+        },
+        {
+          "line": 118,
+          "text": "        self.obj_mass_range = obj_mass_range"
+        },
+        {
+          "line": 176,
+          "text": "        goal_pos = accessor.site_xpos(self.goal_sid).ravel()"
+        },
+        {
+          "line": 179,
+          "text": "        goal_xmat = self.data.site_xmat[self.goal_sid].reshape(3, 3)"
+        },
+        {
+          "line": 181,
+          "text": "        goal_rot = mat2euler(goal_xmat)"
+        }
+      ]
+    },
+    {
+      "id": "myosuite_relocate_xml",
+      "url": "https://raw.githubusercontent.com/MyoHub/myosuite/2d08f42dfec85278566c95b1d09f5bd67662b3d6/myosuite/envs/myo/assets/arm/myoarm_relocate.xml",
+      "repository": "MyoHub/myosuite",
+      "commit": "2d08f42dfec85278566c95b1d09f5bd67662b3d6",
+      "status": "file_downloaded_and_read",
+      "sha256": "d3d7d384b75a7854b1e81ad0028a4dc3f34ce91d3fd4191c3f3dcd039147b3d8",
+      "bytes": 8683,
+      "lines": 108,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\myosuite_relocate_xml.xml",
+      "read_evidence": [
+        {
+          "line": 82,
+          "text": "            <site name=\"object_o\" type=\"sphere\" size=\"0.005\" rgba=\"0.8 0.8 0.8 0.8\" group=\"4\" pos=\"0 0 0\" />"
+        },
+        {
+          "line": 83,
+          "text": "            <site name=\"object_x\" type=\"sphere\" size=\"0.005\" rgba=\"0.8 0.2 0.2 0.8\" group=\"4\" pos=\"0.028 0 0\" />"
+        },
+        {
+          "line": 84,
+          "text": "            <site name=\"object_y\" type=\"sphere\" size=\"0.005\" rgba=\"0.2 0.8 0.2 0.8\" group=\"4\" pos=\"0 .028 0\" />"
+        },
+        {
+          "line": 85,
+          "text": "            <site name=\"object_z\" type=\"sphere\" size=\"0.005\" rgba=\"0.2 0.2 0.8 0.8\" group=\"4\" pos=\"0 0 .028\" />"
+        }
+      ]
+    },
+    {
+      "id": "myosim_license",
+      "url": "https://raw.githubusercontent.com/MyoHub/myo_sim/93b0ca8f4ec90c9899ee7f05fee561e9911da91b/LICENSE",
+      "repository": "MyoHub/myo_sim",
+      "commit": "93b0ca8f4ec90c9899ee7f05fee561e9911da91b",
+      "status": "file_downloaded_and_read",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "lines": 201,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\myosim_license",
+      "read_evidence": [
+        {
+          "line": 1,
+          "text": "                                 Apache License"
+        },
+        {
+          "line": 178,
+          "text": "   APPENDIX: How to apply the Apache License to your work."
+        },
+        {
+          "line": 180,
+          "text": "      To apply the Apache License to your work, attach the following"
+        },
+        {
+          "line": 191,
+          "text": "   Licensed under the Apache License, Version 2.0 (the \"License\");"
+        }
+      ]
+    },
+    {
+      "id": "myoarm_readme",
+      "url": "https://raw.githubusercontent.com/MyoHub/myo_sim/93b0ca8f4ec90c9899ee7f05fee561e9911da91b/myo_sim/models/arm/README.md",
+      "repository": "MyoHub/myo_sim",
+      "commit": "93b0ca8f4ec90c9899ee7f05fee561e9911da91b",
+      "status": "file_downloaded_and_read",
+      "sha256": "80125cbcd13f591c7c1b4b9d4ca139da2b1c4cc3642a4187b4d497fb7e049b27",
+      "bytes": 2769,
+      "lines": 52,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\myoarm_readme.md",
+      "read_evidence": []
+    },
+    {
+      "id": "shoulder_readme",
+      "url": "https://raw.githubusercontent.com/stanfordnmbl/shoulder-personalization/dfcb9dcda9fc86288cc2df849e04a77612a6b1ce/README.md",
+      "repository": "stanfordnmbl/shoulder-personalization",
+      "commit": "dfcb9dcda9fc86288cc2df849e04a77612a6b1ce",
+      "status": "file_downloaded_and_read",
+      "sha256": "45340bf73ff8b0e51545f2f9457ebbfa4692cdf8f028c2f989614f410769b734",
+      "bytes": 5896,
+      "lines": 46,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\shoulder_readme.md",
+      "read_evidence": []
+    },
+    {
+      "id": "shoulder_environment",
+      "url": "https://raw.githubusercontent.com/stanfordnmbl/shoulder-personalization/dfcb9dcda9fc86288cc2df849e04a77612a6b1ce/environment.yaml",
+      "repository": "stanfordnmbl/shoulder-personalization",
+      "commit": "dfcb9dcda9fc86288cc2df849e04a77612a6b1ce",
+      "status": "file_downloaded_and_read",
+      "sha256": "48deacac08794c03cdd5aad2942b212d0e8aa4a68cb37df24fb66e0c937af2c9",
+      "bytes": 164,
+      "lines": 11,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\shoulder_environment.yaml",
+      "read_evidence": [
+        {
+          "line": 6,
+          "text": "  - opensim-org"
+        },
+        {
+          "line": 8,
+          "text": "  - numpy==1.23.5"
+        },
+        {
+          "line": 9,
+          "text": "  - opensim==4.5"
+        },
+        {
+          "line": 10,
+          "text": "  - scipy==1.11.4"
+        }
+      ]
+    },
+    {
+      "id": "shoulder_code",
+      "url": "https://raw.githubusercontent.com/stanfordnmbl/shoulder-personalization/dfcb9dcda9fc86288cc2df849e04a77612a6b1ce/ModelPersonalization.py",
+      "repository": "stanfordnmbl/shoulder-personalization",
+      "commit": "dfcb9dcda9fc86288cc2df849e04a77612a6b1ce",
+      "status": "file_downloaded_and_read",
+      "sha256": "e3f48cea82eba6fe9819397af97c48dc19c7fa9a2822c9f7713aa9d80ab0c5e3",
+      "bytes": 7551,
+      "lines": 147,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\shoulder_code.py",
+      "read_evidence": [
+        {
+          "line": 3,
+          "text": "import opensim as osim"
+        },
+        {
+          "line": 46,
+          "text": "# constraint names"
+        },
+        {
+          "line": 47,
+          "text": "constraints = ['sternoclavicular_r2_con_',"
+        },
+        {
+          "line": 53,
+          "text": "# constraint names"
+        },
+        {
+          "line": 92,
+          "text": "# Personalization: use calibration poses left/right to adapt constraint slopes"
+        },
+        {
+          "line": 117,
+          "text": "    coordinates = personalization.compute_constraint_angles(path_model_input, folder_trc, filenames_calibration,"
+        },
+        {
+          "line": 122,
+          "text": "    # fit bilinear surface to all data points per constraint and update constraint slopes"
+        },
+        {
+          "line": 123,
+          "text": "    for i, constraint in enumerate(constraints):"
+        },
+        {
+          "line": 124,
+          "text": "        # get constraint and pointer to linear function"
+        },
+        {
+          "line": 125,
+          "text": "        con = osim.CoordinateCouplerConstraint.safeDownCast(model.getConstraintSet().get(constraint + lr))"
+        },
+        {
+          "line": 131,
+          "text": "        # update constraint coefficients"
+        },
+        {
+          "line": 142,
+          "text": "# create models with clavicle elevation constraints turned off and ac marker added"
+        }
+      ]
+    },
+    {
+      "id": "opensim_license",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-core/dbf701f56caa59bef126938f5c24829f19559d9a/LICENSE.txt",
+      "repository": "opensim-org/opensim-core",
+      "commit": "dbf701f56caa59bef126938f5c24829f19559d9a",
+      "status": "file_downloaded_and_read",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358,
+      "lines": 202,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\opensim_license.txt",
+      "read_evidence": [
+        {
+          "line": 2,
+          "text": "                                 Apache License"
+        },
+        {
+          "line": 179,
+          "text": "   APPENDIX: How to apply the Apache License to your work."
+        },
+        {
+          "line": 181,
+          "text": "      To apply the Apache License to your work, attach the following"
+        },
+        {
+          "line": 192,
+          "text": "   Licensed under the Apache License, Version 2.0 (the \"License\");"
+        }
+      ]
+    },
+    {
+      "id": "moco_control_goal",
+      "url": "https://raw.githubusercontent.com/opensim-org/opensim-core/dbf701f56caa59bef126938f5c24829f19559d9a/OpenSim/Moco/MocoGoal/MocoControlGoal.h",
+      "repository": "opensim-org/opensim-core",
+      "commit": "dbf701f56caa59bef126938f5c24829f19559d9a",
+      "status": "file_downloaded_and_read",
+      "sha256": "f30a747d0574f3ed9bad6ac12f46612cffe36ef8b4fe201e4c8f1399dede4264",
+      "bytes": 6959,
+      "lines": 151,
+      "local_ignored_path": "artifacts\\replacement-physics-review\\moco_control_goal.h",
+      "read_evidence": [
+        {
+          "line": 26,
+          "text": "/** Minimize the sum of the absolute value of the controls (including Input "
+        },
+        {
+          "line": 27,
+          "text": "controls) raised to a given exponent, integrated over the phase. The default "
+        },
+        {
+          "line": 28,
+          "text": "weight for each control is 1.0; this can be changed by calling "
+        },
+        {
+          "line": 29,
+          "text": "setWeightForControl() or editing the `control_weights` property in XML."
+        },
+        {
+          "line": 30,
+          "text": "The exponent must be an integer greater than or equal to 2,"
+        },
+        {
+          "line": 45,
+          "text": "- \\f$ C \\f$: the set of control signals."
+        },
+        {
+          "line": 46,
+          "text": "- \\f$ w_c \\f$: the weight for control \\f$ c \\f$."
+        },
+        {
+          "line": 47,
+          "text": "- \\f$ x_c(t) \\f$: control signal \\f$ c \\f$."
+        },
+        {
+          "line": 48,
+          "text": "- \\f$ p \\f$: the `exponent`."
+        },
+        {
+          "line": 50,
+          "text": "If `p > 2`, we first take the absolute value of the control; this is to properly"
+        },
+        {
+          "line": 51,
+          "text": "handle odd exponents."
+        },
+        {
+          "line": 53,
+          "text": "If you wish to minimize all control signals except those associated with a"
+        }
+      ]
+    }
+  ],
+  "pypi_compatibility_metadata": {
+    "opensim": {
+      "latest_pypi_version": "4.6",
+      "requires_python": null,
+      "files_for_python312_windows_or_universal": [
+        "opensim-4.6-1-cp312-cp312-win_amd64.whl",
+        "opensim-4.6-2-cp312-cp312-win_amd64.whl"
+      ]
+    },
+    "myosuite": {
+      "latest_pypi_version": "3.0.0",
+      "requires_python": ">=3.10",
+      "files_for_python312_windows_or_universal": [
+        "myosuite-3.0.0-py3-none-any.whl"
+      ]
+    },
+    "mujoco": {
+      "latest_pypi_version": "3.17.0",
+      "requires_python": ">=3.10",
+      "files_for_python312_windows_or_universal": [
+        "mujoco-3.17.0-cp312-cp312-win_amd64.whl"
+      ]
+    }
+  },
+  "environment_read_only": {
+    "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\.venv\\Scripts\\python.exe",
+    "installed": {
+      "opensim": null,
+      "mujoco": "3.17.0",
+      "myosuite": null
+    },
+    "packages_modified": false
+  },
+  "executed_arithmetic_checks": {
+    "illustrative_only_not_measured_pitching": true,
+    "offset_velocity_error_kmh": [
+      {
+        "angular_speed_deg_s": 3000,
+        "offset_error_m": 0.005,
+        "max_velocity_error_kmh": 0.9424777960769379
+      },
+      {
+        "angular_speed_deg_s": 3000,
+        "offset_error_m": 0.01,
+        "max_velocity_error_kmh": 1.8849555921538759
+      },
+      {
+        "angular_speed_deg_s": 7000,
+        "offset_error_m": 0.005,
+        "max_velocity_error_kmh": 2.1991148575128556
+      },
+      {
+        "angular_speed_deg_s": 7000,
+        "offset_error_m": 0.01,
+        "max_velocity_error_kmh": 4.398229715025711
+      }
+    ],
+    "same_torque_different_work_J": {
+      "torque_Nm": 100,
+      "baseline_angle_rad": 1,
+      "changed_angle_rad": 1.2,
+      "baseline_work_J": 100,
+      "changed_work_J": 120
+    },
+    "existing_within_baseline_mae_kmh": 0.6297415986938782
+  },
+  "manual_primary_sources": [
+    {
+      "id": "attias2026",
+      "doi": "10.1007/s11044-026-10143-y",
+      "url": "https://uwaterloo.ca/motion-research-group/sites/default/files/2026-01/mbsd_pub_baseball_fd_cattias_final.pdf",
+      "access": "author-hosted full text; methods, validation, data availability read",
+      "pages_read": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        12,
+        17,
+        23,
+        27
+      ],
+      "model_public": false,
+      "code_license": "not obtained; model explicitly confidential",
+      "key_evidence": "Data Availability explicitly includes OpenSim model among withheld data; rigid ball and peak hand-speed release proxy"
+    },
+    {
+      "id": "templin2024",
+      "doi": null,
+      "url": "https://commons.nmu.edu/isbs/vol42/iss1/94/",
+      "access": "official abstract and bibliography read; PDF download link returns 403",
+      "fulltext_url": "https://commons.nmu.edu/cgi/viewcontent.cgi?article=2805&context=isbs",
+      "code_public": "not confirmed",
+      "code_license": "not confirmed",
+      "key_evidence": "1.7% concerns maintained peak hand velocity, not real ball-speed MAE"
+    },
+    {
+      "id": "moco2020",
+      "doi": "10.1371/journal.pcbi.1008493",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008493",
+      "access": "publisher full text read",
+      "code_public": true,
+      "code_license": "Apache-2.0; official LICENSE directly read",
+      "baseball_validation": false
+    },
+    {
+      "id": "maier2024",
+      "doi": "10.1016/j.jbiomech.2024.112365",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39426356/",
+      "access": "official abstract; author code README, environment and personalizer read; author PDF downloaded but not text-extracted/read",
+      "fulltext_url": "https://biomechanics.stanford.edu/paper/JBIOM24.pdf",
+      "code_public": true,
+      "code_license": "not found in repository tree/API; not an open-license confirmation",
+      "model_access": "SimTK403; file/license not inspected",
+      "baseball_validation": false
+    },
+    {
+      "id": "hammond2025",
+      "doi": "10.3389/fbioe.2025.1547373",
+      "url": "https://www.frontiersin.org/journals/bioengineering-and-biotechnology/articles/10.3389/fbioe.2025.1547373/full",
+      "access": "publisher full text; methods, data availability and limitations read",
+      "model_url": "https://simtk.org/projects/shoulder-model",
+      "model_access": "403; files/license not inspected",
+      "article_license": "CC BY; does not establish model-license terms",
+      "baseball_validation": false
+    },
+    {
+      "id": "myosuite2022",
+      "doi": "10.48550/arXiv.2205.13600",
+      "url": "https://arxiv.org/abs/2205.13600",
+      "access": "primary abstract"
+    },
+    {
+      "id": "myochallenge2025",
+      "doi": "10.48550/arXiv.2605.15650",
+      "url": "https://arxiv.org/html/2605.15650v1",
+      "access": "primary HTML full text; task definitions, models and discussion read",
+      "date": "2026-05-15",
+      "publication_status": "arXiv preprint",
+      "baseball_validation": false
+    },
+    {
+      "id": "opensim_python",
+      "url": "https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53085346/Scripting%20in%20Python",
+      "access": "official package compatibility table read",
+      "key_evidence": "4.6 Python3.12 supported with Moco; package metadata is not runtime validation"
+    },
+    {
+      "id": "myochallenge_docs",
+      "url": "https://myosuite.readthedocs.io/en/latest/challenge-doc2025.html",
+      "access": "official task definitions read",
+      "key_evidence": "table tennis and soccer, effort ranking, no baseball intervention validation"
+    }
+  ],
+  "attias_crossref": {
+    "DOI": "10.1007/s11044-026-10143-y",
+    "title": [
+      "Musculoskeletal modelling and predictive simulation of baseball pitching to improve performance and mitigate injury using forward dynamics and optimal control"
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          22
+        ]
+      ]
+    },
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              22
+            ]
+          ],
+          "date-time": "2026-01-22T00:00:00Z",
+          "timestamp": 1769040000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              22
+            ]
+          ],
+          "date-time": "2026-01-22T00:00:00Z",
+          "timestamp": 1769040000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "URL": "https://doi.org/10.1007/s11044-026-10143-y"
+  },
+  "shoulder_repository_license_audit": {
+    "tree_commit": "dfcb9dcda9fc86288cc2df849e04a77612a6b1ce",
+    "license_like_files": [],
+    "github_license_metadata": null,
+    "conclusion": "no repository license file or API license detected; not an open-license confirmation"
+  },
+  "maier_pdf_download": {
+    "url": "https://biomechanics.stanford.edu/paper/JBIOM24.pdf",
+    "bytes": 8694915,
+    "sha256": "d4a616712061513f033e32edc0a91712cafb25f5bf8e46459ce2cd4e2dbf458d",
+    "downloaded": true,
+    "fulltext_read": false
+  },
+  "document_checks": {
+    "json_parse": true,
+    "source_hashes_match": true,
+    "source_python_xml_toml_parse": true,
+    "arithmetic_recomputed": true,
+    "markdown_link_format": true,
+    "full_existing_test_suite": "not rerun: document-only change",
+    "new_predictive_simulation": "not run",
+    "runtime_install_or_candidate_model_smoke_test": "not run",
+    "checks": [
+      "sha256:myosuite_license",
+      "sha256:myosuite_project",
+      "toml_parse:myosuite_project",
+      "sha256:myosuite_relocate",
+      "python_parse:myosuite_relocate",
+      "sha256:myosuite_relocate_xml",
+      "xml_parse:myosuite_relocate_xml",
+      "sha256:myosim_license",
+      "sha256:myoarm_readme",
+      "sha256:shoulder_readme",
+      "sha256:shoulder_environment",
+      "sha256:shoulder_code",
+      "python_parse:shoulder_code",
+      "sha256:opensim_license",
+      "sha256:moco_control_goal"
+    ]
+  }
+}
