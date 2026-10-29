@@ -1,0 +1,29 @@
+{
+  "new": {
+    "run": 12,
+    "passed": 12,
+    "failures": 0,
+    "errors": 0
+  },
+  "full": {
+    "run": 311,
+    "passed": 299,
+    "errors": 10,
+    "skipped": 2,
+    "assertion_failures": 0
+  },
+  "existing_error_names": [
+    "test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)",
+    "test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)",
+    "test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)",
+    "test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)",
+    "test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)",
+    "test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)",
+    "test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)",
+    "test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)",
+    "test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)",
+    "test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)"
+  ],
+  "existing_error_names_match_stage1": true,
+  "all_new_functions_exercised": true
+}

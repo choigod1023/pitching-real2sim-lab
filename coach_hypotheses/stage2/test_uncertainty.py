@@ -11,6 +11,7 @@ from scipy.spatial.transform import Rotation
 from .uncertainty import (FACTOR_NAMES, file_hash, prepare_case, velocities, speeds,
                           rigid_transform_velocity, grouped_mc, convergence, recorded_comparison)
 from .run import main, run
+from .precision import refine, main as precision_main
 
 
 def synthetic_case():
@@ -148,6 +149,22 @@ class ScenarioTests(unittest.TestCase):
                 result=run(Path('unused'),output)
             self.assertEqual(len(result['summaries']),1)
             self.assertIsInstance(json.loads((output/'manifest.json').read_text()),dict)
+
+    def test_precision_followup_preserves_original_and_cli(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output=Path(tmp)
+            fake=grouped_mc(lambda u:u[:,0],32768,20261029)
+            other=dict(fake,seed=20261030)
+            original=[{'pitch':'3034_1','mode':mode,'results':[fake,other],'convergence':{'verdict':'FAIL'}} for mode in ('primary','relative_offset_stress','constant_distance_companion')]
+            for name in ('scenario_results.json','recorded_comparison.json','manifest.json'):
+                (output/name).write_text('{}',encoding='utf-8')
+            (output/'mc_designs.json').write_text(json.dumps(original),encoding='utf-8')
+            with patch('coach_hypotheses.stage2.precision.PITCHES',('3034_1',)),patch('coach_hypotheses.stage2.precision.prepare_case',return_value=synthetic_case()),patch('coach_hypotheses.stage2.precision.grouped_mc',side_effect=lambda model,n,seed:dict(fake,n_per_matrix=n,seed=seed)):
+                result=refine(Path('unused'),output)
+            self.assertTrue(result['original_results_preserved'])
+            self.assertTrue(all(r['original_verdict_retained']=='FAIL' for r in result['followups']))
+        with patch('sys.argv',['precision','--data','unused']),patch('coach_hypotheses.stage2.precision.refine',return_value={'followups':[],'original_results_preserved':True}) as mocked,patch('builtins.print'):
+            precision_main();mocked.assert_called_once()
 
 
 if __name__=='__main__':unittest.main()
