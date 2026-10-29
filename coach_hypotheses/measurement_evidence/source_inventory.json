@@ -79,8 +79,8 @@
         "novice women using baseball at 4m target, not elite pitching or OBP 3034",
         "only two dynamic metacarpal markers per hand; hand roll needs an additional estimated reference",
         "processed/gap-filled coordinates cannot separate direct optical samples from interpolation per frame",
-        "event time uses original first frame: array_index=round(t*Hz)-raw_header_first",
-        "Ball validity short around event, not complete flight; no distribution inferred from three samples"
+        "Ball validity short around event, not complete flight; no distribution inferred from three samples",
+        "actual event-time origin UNKNOWN; standard and unverified producer-legacy mappings differ by one sample"
       ],
       "allowed_now": [
         "surface hand/ball marker consistency pilot",
@@ -91,7 +91,24 @@
         "3034 hand-ball measurement replacement",
         "independent ball-center speed or finger-force calibration",
         "empirical probability distribution for Stage2 priors"
-      ]
+      ],
+      "source_event_mapping": "UNKNOWN",
+      "event_mapping_standard_reference": "https://www.c3d.org/HTML/Documents/eventtimes1.htm",
+      "event_mapping_candidates": {
+        "DP05": {
+          "c3d_standard": 259,
+          "unverified_producer_legacy": 258
+        },
+        "DP06": {
+          "c3d_standard": 309,
+          "unverified_producer_legacy": 308
+        },
+        "NDP07": {
+          "c3d_standard": 311,
+          "unverified_producer_legacy": 310
+        }
+      },
+      "csv_matching_proves": "point numbering and coordinates only; does not establish event time origin"
     },
     {
       "id": "ozkaya2017_measurement_definition",
@@ -166,5 +183,7 @@
       "target": "S1/1w1d/S1_static_02_N.c3d",
       "result": "exact filename not in archive; inventory identifies actual static_03_N; extracted that exact member"
     }
-  ]
+  ],
+  "correction_record": "EVENT_MAPPING_CORRECTION.md",
+  "superseded_inventory": "history_initial_mapping_20261029/source_inventory.json"
 }

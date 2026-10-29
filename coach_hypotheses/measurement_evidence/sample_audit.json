@@ -1,5 +1,7 @@
 {
   "purpose": "source feasibility audit; no calibration or athlete intervention",
+  "revision": "C3D-standard and unverified producer-legacy timing candidates both retained",
+  "supersedes": "history_initial_mapping_20261029/sample_audit.json",
   "selection": "three exploratory samples listed before audit script, not population evidence",
   "trials": [
     {
@@ -41,64 +43,126 @@
           "seconds": 1.2949999570846558
         }
       ],
-      "author_release_proxy_array_index": 258,
-      "author_release_proxy_raw_frame": 259,
-      "event_mapping": "raw_frame=round(seconds*Hz); array_index=raw_frame-raw_first_frame",
+      "source_event_mapping": "UNKNOWN",
+      "standard_reference_convention": "c3d_first_sample_zero",
+      "selected_source_mapping": null,
+      "release_proxy_candidates": [
+        {
+          "convention": "c3d_first_sample_zero",
+          "array_index": 259,
+          "raw_frame": 260,
+          "pm5_offsets": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ball_to_3MC_distance_mm": [
+            107.96372116223577,
+            109.74850268157576,
+            110.9850773790384,
+            112.99434142079173,
+            115.61754402613941,
+            119.35883412300696,
+            125.73745831279156,
+            130.92650734050366,
+            139.37591672377624,
+            149.75602626684346,
+            null
+          ],
+          "markers": {
+            "Ball": {
+              "event_pm5_valid_count": 10,
+              "fixed_after_proxy_5_sample_speed_m_s": null
+            },
+            "R3MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 10.41466346527713
+            },
+            "R5MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.62827796222343
+            }
+          }
+        },
+        {
+          "convention": "legacy_first_frame_at_1_over_rate",
+          "array_index": 258,
+          "raw_frame": 259,
+          "pm5_offsets": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ball_to_3MC_distance_mm": [
+            106.80665576995227,
+            107.96372116223577,
+            109.74850268157576,
+            110.9850773790384,
+            112.99434142079173,
+            115.61754402613941,
+            119.35883412300696,
+            125.73745831279156,
+            130.92650734050366,
+            139.37591672377624,
+            149.75602626684346
+          ],
+          "markers": {
+            "Ball": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 11.772339145184699
+            },
+            "R3MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.920726685537447
+            },
+            "R5MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.589420177250787
+            }
+          }
+        }
+      ],
+      "event_mapping_source": "https://www.c3d.org/HTML/Documents/eventtimes1.htm",
+      "csv_matching_proves": "point numbering and coordinate agreement only, not event-time origin",
       "markers": {
         "Ball": {
           "valid_count": 26,
           "total_count": 647,
           "valid_ratio": 0.0401854714064915,
           "first_valid_array_index": 238,
-          "last_valid_array_index": 263,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 11.772339145184699
+          "last_valid_array_index": 263
         },
         "R3MC": {
           "valid_count": 647,
           "total_count": 647,
           "valid_ratio": 1.0,
           "first_valid_array_index": 0,
-          "last_valid_array_index": 646,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 9.920726685537447
+          "last_valid_array_index": 646
         },
         "R5MC": {
           "valid_count": 647,
           "total_count": 647,
           "valid_ratio": 1.0,
           "first_valid_array_index": 0,
-          "last_valid_array_index": 646,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 9.589420177250787
+          "last_valid_array_index": 646
         }
       },
-      "pm5_offsets": [
-        -5,
-        -4,
-        -3,
-        -2,
-        -1,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "ball_to_3MC_distance_mm": [
-        106.80665576995227,
-        107.96372116223577,
-        109.74850268157576,
-        110.9850773790384,
-        112.99434142079173,
-        115.61754402613941,
-        119.35883412300696,
-        125.73745831279156,
-        130.92650734050366,
-        139.37591672377624,
-        149.75602626684346
-      ],
       "csv_ball_m_vs_c3d_mm_max_difference_m": 4.5751953123285283e-07,
       "csv_event_seconds": "1.295000",
       "csv_unit_header_present": false,
@@ -145,64 +209,126 @@
           "seconds": 1.5449999570846558
         }
       ],
-      "author_release_proxy_array_index": 308,
-      "author_release_proxy_raw_frame": 309,
-      "event_mapping": "raw_frame=round(seconds*Hz); array_index=raw_frame-raw_first_frame",
+      "source_event_mapping": "UNKNOWN",
+      "standard_reference_convention": "c3d_first_sample_zero",
+      "selected_source_mapping": null,
+      "release_proxy_candidates": [
+        {
+          "convention": "c3d_first_sample_zero",
+          "array_index": 309,
+          "raw_frame": 310,
+          "pm5_offsets": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ball_to_3MC_distance_mm": [
+            112.95058964315291,
+            113.71492801391774,
+            114.61391346405838,
+            116.42641549565698,
+            118.61277843004076,
+            120.08552521128638,
+            122.17557664803795,
+            126.17660606885012,
+            130.80879389688099,
+            138.94187336772168,
+            149.6332083710301
+          ],
+          "markers": {
+            "Ball": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 11.24217427717163
+            },
+            "R3MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 10.149951573152775
+            },
+            "R5MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.926367074006015
+            }
+          }
+        },
+        {
+          "convention": "legacy_first_frame_at_1_over_rate",
+          "array_index": 308,
+          "raw_frame": 309,
+          "pm5_offsets": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ball_to_3MC_distance_mm": [
+            112.09995191399669,
+            112.95058964315291,
+            113.71492801391774,
+            114.61391346405838,
+            116.42641549565698,
+            118.61277843004076,
+            120.08552521128638,
+            122.17557664803795,
+            126.17660606885012,
+            130.80879389688099,
+            138.94187336772168
+          ],
+          "markers": {
+            "Ball": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 10.884677884444308
+            },
+            "R3MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.885454579805305
+            },
+            "R5MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.864648392142152
+            }
+          }
+        }
+      ],
+      "event_mapping_source": "https://www.c3d.org/HTML/Documents/eventtimes1.htm",
+      "csv_matching_proves": "point numbering and coordinate agreement only, not event-time origin",
       "markers": {
         "Ball": {
           "valid_count": 51,
           "total_count": 931,
           "valid_ratio": 0.05477980665950591,
           "first_valid_array_index": 267,
-          "last_valid_array_index": 317,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 10.884677884444308
+          "last_valid_array_index": 317
         },
         "R3MC": {
           "valid_count": 931,
           "total_count": 931,
           "valid_ratio": 1.0,
           "first_valid_array_index": 0,
-          "last_valid_array_index": 930,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 9.885454579805305
+          "last_valid_array_index": 930
         },
         "R5MC": {
           "valid_count": 931,
           "total_count": 931,
           "valid_ratio": 1.0,
           "first_valid_array_index": 0,
-          "last_valid_array_index": 930,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 9.864648392142152
+          "last_valid_array_index": 930
         }
       },
-      "pm5_offsets": [
-        -5,
-        -4,
-        -3,
-        -2,
-        -1,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "ball_to_3MC_distance_mm": [
-        112.09995191399669,
-        112.95058964315291,
-        113.71492801391774,
-        114.61391346405838,
-        116.42641549565698,
-        118.61277843004076,
-        120.08552521128638,
-        122.17557664803795,
-        126.17660606885012,
-        130.80879389688099,
-        138.94187336772168
-      ],
       "csv_ball_m_vs_c3d_mm_max_difference_m": 5.08789062658721e-07,
       "csv_event_seconds": "1.545000",
       "csv_unit_header_present": false,
@@ -249,64 +375,126 @@
           "seconds": 1.5549999475479126
         }
       ],
-      "author_release_proxy_array_index": 310,
-      "author_release_proxy_raw_frame": 311,
-      "event_mapping": "raw_frame=round(seconds*Hz); array_index=raw_frame-raw_first_frame",
+      "source_event_mapping": "UNKNOWN",
+      "standard_reference_convention": "c3d_first_sample_zero",
+      "selected_source_mapping": null,
+      "release_proxy_candidates": [
+        {
+          "convention": "c3d_first_sample_zero",
+          "array_index": 311,
+          "raw_frame": 312,
+          "pm5_offsets": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ball_to_3MC_distance_mm": [
+            109.05160054553157,
+            110.82688194242508,
+            112.48428557023495,
+            111.68817898538418,
+            116.76916264518319,
+            126.55926231994455,
+            139.20383742150264,
+            null,
+            null,
+            null,
+            null
+          ],
+          "markers": {
+            "Ball": {
+              "event_pm5_valid_count": 7,
+              "fixed_after_proxy_5_sample_speed_m_s": null
+            },
+            "L3MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 10.322014941813054
+            },
+            "L5MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.059136561982653
+            }
+          }
+        },
+        {
+          "convention": "legacy_first_frame_at_1_over_rate",
+          "array_index": 310,
+          "raw_frame": 311,
+          "pm5_offsets": [
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "ball_to_3MC_distance_mm": [
+            106.91796461249558,
+            109.05160054553157,
+            110.82688194242508,
+            112.48428557023495,
+            111.68817898538418,
+            116.76916264518319,
+            126.55926231994455,
+            139.20383742150264,
+            null,
+            null,
+            null
+          ],
+          "markers": {
+            "Ball": {
+              "event_pm5_valid_count": 8,
+              "fixed_after_proxy_5_sample_speed_m_s": null
+            },
+            "L3MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 10.358730519603606
+            },
+            "L5MC": {
+              "event_pm5_valid_count": 11,
+              "fixed_after_proxy_5_sample_speed_m_s": 9.34253018564803
+            }
+          }
+        }
+      ],
+      "event_mapping_source": "https://www.c3d.org/HTML/Documents/eventtimes1.htm",
+      "csv_matching_proves": "point numbering and coordinate agreement only, not event-time origin",
       "markers": {
         "Ball": {
           "valid_count": 143,
           "total_count": 1031,
           "valid_ratio": 0.13870029097963144,
           "first_valid_array_index": 170,
-          "last_valid_array_index": 312,
-          "event_pm5_valid_count": 8,
-          "fixed_postrelease_5_sample_speed_m_s": null
+          "last_valid_array_index": 312
         },
         "L3MC": {
           "valid_count": 1031,
           "total_count": 1031,
           "valid_ratio": 1.0,
           "first_valid_array_index": 0,
-          "last_valid_array_index": 1030,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 10.358730519603606
+          "last_valid_array_index": 1030
         },
         "L5MC": {
           "valid_count": 1031,
           "total_count": 1031,
           "valid_ratio": 1.0,
           "first_valid_array_index": 0,
-          "last_valid_array_index": 1030,
-          "event_pm5_valid_count": 11,
-          "fixed_postrelease_5_sample_speed_m_s": 9.34253018564803
+          "last_valid_array_index": 1030
         }
       },
-      "pm5_offsets": [
-        -5,
-        -4,
-        -3,
-        -2,
-        -1,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "ball_to_3MC_distance_mm": [
-        106.91796461249558,
-        109.05160054553157,
-        110.82688194242508,
-        112.48428557023495,
-        111.68817898538418,
-        116.76916264518319,
-        126.55926231994455,
-        139.20383742150264,
-        null,
-        null,
-        null
-      ],
       "csv_ball_m_vs_c3d_mm_max_difference_m": 4.6728515626370815e-07,
       "csv_event_seconds": "1.555000",
       "csv_unit_header_present": false,

@@ -20,12 +20,18 @@ def valid_points(xyz, residual):
     return np.isfinite(xyz).all(axis=0) & np.isfinite(residual) & (residual >= 0)
 
 
-def event_index(seconds, rate, raw_first_frame):
-    """Vicon absolute event frame minus original C3D first frame."""
+def event_index(seconds, rate, raw_first_frame, convention):
+    """Return a declared candidate; neither convention proves producer timing."""
     frame_float = seconds * rate
     if abs(frame_float - round(frame_float)) > 1e-3:
         raise ValueError("Event is not on the declared sampling grid")
-    return int(round(frame_float)) - raw_first_frame
+    if convention == "c3d_first_sample_zero":
+        raw_frame = int(round(frame_float)) + 1
+    elif convention == "legacy_first_frame_at_1_over_rate":
+        raw_frame = int(round(frame_float))
+    else:
+        raise ValueError("Explicit C3D-standard or producer-legacy convention required")
+    return raw_frame - raw_first_frame
 
 
 def fixed_window_speed(xyz_m, valid, index, rate, count=5):
@@ -64,7 +70,8 @@ def inspect_trial(stem):
                and e["generic_flag"] == 1]
     if len(generic) != 1:
         raise ValueError("Expected exactly one author generic release proxy")
-    index = event_index(generic[0]["seconds"], rate, first)
+    indices = {name: event_index(generic[0]["seconds"], rate, first, name) for name in
+               ["c3d_first_sample_zero", "legacy_first_frame_at_1_over_rate"]}
     side = "L" if "_NDP_" in stem else "R"  # S1 is right dominant in author Table 1.
     selected = ["Ball", side + "3MC", side + "5MC"]
     markers = {}
@@ -72,19 +79,29 @@ def inspect_trial(stem):
         i = labels.index(name)
         valid = valid_points(xyz[:, i], residual[i])
         idx = np.flatnonzero(valid)
-        window = np.arange(max(0, index - 5), min(xyz.shape[2], index + 6))
         markers[name] = {"valid_count": int(valid.sum()), "total_count": len(valid),
                          "valid_ratio": float(valid.mean()),
                          "first_valid_array_index": int(idx[0]) if len(idx) else None,
-                         "last_valid_array_index": int(idx[-1]) if len(idx) else None,
-                         "event_pm5_valid_count": int(valid[window].sum()),
-                         "fixed_postrelease_5_sample_speed_m_s": fixed_window_speed(xyz[:, i], valid, index, rate)}
+                         "last_valid_array_index": int(idx[-1]) if len(idx) else None}
     ball = labels.index("Ball")
     hand = labels.index(side + "3MC")
-    window = np.arange(max(0, index - 5), min(xyz.shape[2], index + 6))
     pair_valid = valid_points(xyz[:, ball], residual[ball]) & valid_points(xyz[:, hand], residual[hand])
-    distances = [float(np.linalg.norm(xyz[:, ball, i] - xyz[:, hand, i]) * 1000)
-                 if pair_valid[i] else None for i in window]
+    candidates = []
+    compare_indices = set()
+    for convention, index in indices.items():
+        window = np.arange(max(0, index - 5), min(xyz.shape[2], index + 6))
+        compare_indices.update(window.tolist())
+        distances = [float(np.linalg.norm(xyz[:, ball, i] - xyz[:, hand, i]) * 1000)
+                     if pair_valid[i] else None for i in window]
+        event_markers = {}
+        for name in selected:
+            i = labels.index(name)
+            valid = valid_points(xyz[:, i], residual[i])
+            event_markers[name] = {"event_pm5_valid_count": int(valid[window].sum()),
+                                   "fixed_after_proxy_5_sample_speed_m_s": fixed_window_speed(xyz[:, i], valid, index, rate)}
+        candidates.append({"convention": convention, "array_index": index, "raw_frame": first + index,
+                           "pm5_offsets": (window-index).tolist(), "ball_to_3MC_distance_mm": distances,
+                           "markers": event_markers})
     csv_path = RAW / (stem + ".csv")
     with csv_path.open(newline="") as f:
         rows = list(csv.reader(f, delimiter="\t"))
@@ -92,18 +109,19 @@ def inspect_trial(stem):
     assert len(cols) == 3
     numeric_rows = {int(row[0]): row for row in rows[5:] if row and row[0].isdigit()}
     compare = []
-    for i in window:
+    for i in sorted(compare_indices):
         row = numeric_rows[first + int(i)]
         if pair_valid[i] and all(row[j] for j in cols):
             compare.append(float(np.max(np.abs(np.array([float(row[j]) for j in cols]) - xyz[:, ball, i]))))
     return {"input": digest(path), "csv_input": digest(csv_path), "raw_first_frame": first,
             "raw_last_frame": last, "ezc3d_first_frame": c["header"]["points"]["first_frame"],
             "frame_rate_hz": rate, "point_units": "mm", "point_channels": len(labels),
-            "events": events, "author_release_proxy_array_index": index,
-            "author_release_proxy_raw_frame": first + index,
-            "event_mapping": "raw_frame=round(seconds*Hz); array_index=raw_frame-raw_first_frame",
-            "markers": markers, "pm5_offsets": (window-index).tolist(),
-            "ball_to_3MC_distance_mm": distances,
+            "events": events, "source_event_mapping": "UNKNOWN",
+            "standard_reference_convention": "c3d_first_sample_zero",
+            "selected_source_mapping": None, "release_proxy_candidates": candidates,
+            "event_mapping_source": "https://www.c3d.org/HTML/Documents/eventtimes1.htm",
+            "csv_matching_proves": "point numbering and coordinate agreement only, not event-time origin",
+            "markers": markers,
             "csv_ball_m_vs_c3d_mm_max_difference_m": max(compare) if compare else None,
             "csv_event_seconds": rows[5][rows[1].index("Event")],
             "csv_unit_header_present": False,
@@ -134,6 +152,8 @@ def inspect_static(path):
 
 def main():
     result = {"purpose": "source feasibility audit; no calibration or athlete intervention",
+              "revision": "C3D-standard and unverified producer-legacy timing candidates both retained",
+              "supersedes": "history_initial_mapping_20261029/sample_audit.json",
               "selection": "three exploratory samples listed before audit script, not population evidence",
               "trials": [inspect_trial(s) for s in SAMPLES],
               "statics": [inspect_static(RAW / name) for name in
@@ -142,8 +162,10 @@ def main():
               "downloads": [digest(RAW / n) for n in ["S1.rar", "S1_csv.rar", "Trialinfo.xlsx"]],
               "unchanged": {"stage2_distributions": True, "scientific_gate": True, "routine_paused": True}}
     (HERE / "sample_audit.json").write_text(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
-    print(json.dumps([{ "file": Path(t["input"]["path"]).name, "event_index": t["author_release_proxy_array_index"],
-                        "ball": t["markers"]["Ball"]} for t in result["trials"]], indent=2))
+    print(json.dumps([{ "file": Path(t["input"]["path"]).name, "mapping": t["source_event_mapping"],
+                        "candidates": [{"convention": c["convention"], "index": c["array_index"],
+                                        "ball": c["markers"]["Ball"]} for c in t["release_proxy_candidates"]]}
+                      for t in result["trials"]], indent=2))
 
 
 if __name__ == "__main__":
