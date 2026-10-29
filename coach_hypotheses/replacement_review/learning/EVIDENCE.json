@@ -1,0 +1,324 @@
+{
+  "review_date": "2026-10-29",
+  "base_commit": "ff2847f",
+  "scope": "원문·공개 코드·자료 실체 검토. 새 DL 학습·개입 효과 검증 아님. 기존 scientific_gate 보존.",
+  "sources": [
+    {
+      "id": "takamido2026",
+      "title": "Cross-individual generalizability of machine learning models for ball speed prediction in baseball pitching",
+      "status": "preprint",
+      "paper_url": "https://arxiv.org/pdf/2605.05487",
+      "paper_receipt": {
+        "local_ignored_path": "artifacts/cross2026.pdf",
+        "bytes": 1172821,
+        "sha256": "0a0ddd9190e9294c1b1b43ae75aad074d051f9aff40b6a12e0152a8dd4e7d568"
+      },
+      "repo": "https://github.com/takamido/Ball_speed_pred_cross_ind",
+      "repo_commit": "29aa44eee86eff5c1fc6f5e221cb9b16a0381f16",
+      "paper_cohort": {
+        "athletes": 50,
+        "pitches_per_athlete": 5,
+        "selection": "선수별 구속 상위 5구",
+        "groups": {
+          "high_school": 4,
+          "college": 10,
+          "industrial": 20,
+          "independent": 3,
+          "professional": 13
+        }
+      },
+      "target": {
+        "measurement": "TrackMan Baseball initial ball speed",
+        "unit": "mph",
+        "not_hand_speed_proxy": true
+      },
+      "motion": {
+        "raw_sampling_rate_paper_hz": "200–500",
+        "published_array_shape": [
+          101,
+          15,
+          3
+        ],
+        "segment_seconds_relative_to_wrist_peak": [
+          -1.0,
+          0.2
+        ],
+        "coordinates_unit": "미확인",
+        "coordinate_frame": "미확인",
+        "per_file_raw_sampling_rate": "미확인",
+        "raw_filter_replay_possible": false
+      },
+      "split": {
+        "outer": "leave-one-subject-out",
+        "scaling": "훈련 선수만으로 X/Y mean 및 std 계산, 코드 직접 확인",
+        "model_selection": "12설정의 outer test 선수평균 R2가 높은 모델 선택, 독립 nested 최종평가 아님",
+        "reported_cross_individual_r2": 0.38,
+        "reported_cross_individual_score_unit": "선수별 5구 예측 평균과 실제 평균",
+        "reported_within_r2": 0.91,
+        "reported_within_split": "선수당 4구 train,1구 test; target/input 개인 내 중심화 점수 아님",
+        "selected_model": {
+          "type": "Transformer",
+          "heads": 4,
+          "d_model": 64,
+          "feedforward": 128
+        },
+        "public_inter_notebook_default": {
+          "heads": 2,
+          "d_model": 64,
+          "feedforward": 128
+        }
+      },
+      "code": {
+        "readme_verified": true,
+        "notebooks_verified": [
+          "ball_speed_pred_colab/program/base_model_inter.ipynb",
+          "ball_speed_pred_colab/program/base_model_intra.ipynb"
+        ],
+        "other_notebook": "ball_speed_pred_colab/program/spatiotemporal_analysis.ipynb",
+        "dependencies_observed": [
+          "torch",
+          "torch_geometric",
+          "scipy",
+          "pandas",
+          "tqdm",
+          "google.colab"
+        ],
+        "pyg_wheel_target": "torch-2.5.1+cpu",
+        "fully_pinned_environment": false,
+        "checkpoint_files": [],
+        "training_executed": false,
+        "mat_parsing_executed": true
+      },
+      "license": {
+        "github_api_license": null,
+        "license_file_found": false,
+        "readme_license_found": false,
+        "reuse_permission": "미확인, 공개 열람·다운로드가 포괄적 재사용 허가를 의미하지 않음"
+      }
+    },
+    {
+      "id": "takamido2025_pmgf",
+      "title": "Personalized Motion Guidance Framework for Athlete-Centric Coaching",
+      "status": "preprint",
+      "paper_url": "https://arxiv.org/pdf/2510.10496",
+      "paper_receipt": {
+        "local_ignored_path": "artifacts/pmgf_paper.pdf",
+        "bytes": 3431870,
+        "sha256": "0b3aff7cb98d75ca7207353ad34b2f7cd50c71fbe58240bf9e9ec05883c77e50"
+      },
+      "repo": "https://github.com/takamido/PMGF",
+      "repo_commit": "ea8fc81207c9c2a28c616bc98bb65ee74aa597a6",
+      "cohort": {
+        "athletes": 51,
+        "pitches_per_athlete": 5,
+        "overlap": "2026 원문은 PMGF2025와 동일 자료라고 기술. 두 코호트를 독립 표본으로 합치면 안 됨. 전수파일 대응은 미수행."
+      },
+      "objective": "8개 문헌기반 동작 특징의 가중 Nash product. 실측 공 구속 변화 loss 아님.",
+      "evaluation": "재구성·DTW·생성 특징 변화. 실제 수정 전후 구속 실험 없음.",
+      "train_test": "공개 notebook에 전체255구 train_data=test_data 명시",
+      "checkpoint_files": [
+        {
+          "path": "Transformer_VAE/pretrained_model/VAE_model_01.pt",
+          "bytes": 24062880
+        },
+        {
+          "path": "Transformer_VAE/pretrained_model/VAE_model_02.pt",
+          "bytes": 24062012
+        },
+        {
+          "path": "Transformer_VAE/pretrained_model/VAE_model_03.pt",
+          "bytes": 24062012
+        },
+        {
+          "path": "Transformer_VAE/pretrained_model/VAE_model_04.pt",
+          "bytes": 24062012
+        },
+        {
+          "path": "Transformer_VAE/pretrained_model/VAE_model_05.pt",
+          "bytes": 24061901
+        }
+      ],
+      "checkpoint_purpose": "motion VAE; ball speed counterfactual predictor 아님",
+      "readme_and_main_notebook_verified": true,
+      "checkpoint_download_or_execution": false,
+      "license": "README: source/analysis academic research; data academic/non-commercial research, no separate redistribution; broader reuse author permission. GitHub API license:null.",
+      "limitations_paper": [
+        "신체 치수 변화",
+        "근골격적 실행 가능성 미보장",
+        "근력/일 제약 없음",
+        "최고 수준 선수 OOD 문제"
+      ]
+    },
+    {
+      "id": "gomaz2021",
+      "title": "Individualised Ball Speed Prediction in Baseball Pitching Based on IMU Data",
+      "doi": "10.3390/s21227442",
+      "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8622425/",
+      "xml_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8622425/fullTextXML",
+      "xml_receipt": {
+        "local_ignored_path": "artifacts/individual2021xml.txt",
+        "bytes": 77360,
+        "sha256": "0cb2e1991a5f9733ecd94baab7072b8380126f6528019a3e0d25414e4344d549"
+      },
+      "athletes": 25,
+      "valid_pitches": 224,
+      "target": "Stalker pro 2 radar ball speed, mph",
+      "inputs": "pelvis/trunk IMU peak angular velocities and height",
+      "model": "Bayesian multilevel regression, R4.0.3/rstanarm",
+      "split": "224投球 단위 LOO. 선수 분리 아님.",
+      "r2_personal": 0.973,
+      "r2_full": 0.975,
+      "rmse_table3": {
+        "value": 0.014,
+        "unit": "표에 mph로 명시되지 않음; 현 km/h MAE와 직접비교 금지"
+      },
+      "dataset": {
+        "doi": "10.4121/16691947",
+        "url": "https://data.4tu.nl/articles/dataset/Kinematics_and_ball_velocity_of_baseball_pitchers/16691947",
+        "datacite_api": "https://api.datacite.org/dois/10.4121/16691947",
+        "datacite_receipt": {
+          "local_ignored_path": "artifacts/datacite2021.txt",
+          "bytes": 6390,
+          "sha256": "194e31b8fa85ea0c9979455b08e4272aefb3457ed67bfc974637998478579961"
+        },
+        "metadata_format": "csv",
+        "metadata_license": "CC BY 4.0",
+        "landing_access": "Python requests ConnectTimeout",
+        "csv_download_verified": false,
+        "code_download_verified": false
+      }
+    },
+    {
+      "id": "bright2024",
+      "title": "PitcherNet: Powering the Moneyball Evolution in Baseball Video Analytics",
+      "venue": "CVPR Workshops 2024",
+      "paper_url": "https://arxiv.org/html/2405.07407v1",
+      "pdf_receipt": {
+        "local_ignored_path": "artifacts/pitchernet2024.pdf",
+        "bytes": 3519437,
+        "sha256": "5a6cb232381daede7f5cfa34a9cedf182741fc74f28f6c35c8c3d66cfb87d9a9"
+      },
+      "velocity_method": "release 근방 손목 각도 차분 × 전완 길이 (3.3.4 식2)",
+      "reference_target": "MLBPitchDB pitch velocity; radar device/label generation not specified in this paper",
+      "metrics": {
+        "within_1percent_accuracy": 43.4,
+        "within_2percent_accuracy": 68.6,
+        "within_5percent_accuracy": 94.9,
+        "within_athlete_centered_mae": "보고되지 않음"
+      },
+      "baseball_subject_disjoint_split": "명시 확인 못함; Human3.6M subject split와 구분",
+      "public_executable_implementation": "검색 및 원문/저자자료에서 확인 못함. 부존재를 단정하지 않음.",
+      "small_kinematic_intervention_effect": "검증 없음"
+    }
+  ],
+  "download_audit": {
+    "all_mat_count": 250,
+    "all_mat_bytes": 8683840,
+    "all_http_ok": true,
+    "all_finite": true,
+    "shape_set": [
+      "{'X': [101, 15, 3], 'Y': [1, 1]}"
+    ],
+    "all_subjects_exactly_five": true,
+    "sample_url": "https://raw.githubusercontent.com/takamido/Ball_speed_pred_cross_ind/29aa44eee86eff5c1fc6f5e221cb9b16a0381f16/ball_speed_pred_colab/data/Sub001/001.mat",
+    "sample_receipt": {
+      "local_ignored_path": "artifacts/cross_sample.mat",
+      "bytes": 34670,
+      "sha256": "9b81dce847b230765e96537f3fe141a6c1810552c0fe2280b0aad92f8c81cf4e"
+    },
+    "file_receipt_manifest": {
+      "local_ignored_path": "artifacts/cross_data_receipts.json",
+      "bytes": 87156,
+      "sha256": "c0113841795b0e0a87280dfb6ed5bcb42364b5ea50c56739d13c86db00f78aea"
+    },
+    "descriptive_audit": {
+      "athletes": 50,
+      "pitches": 250,
+      "pitches_per_athlete": {
+        "Sub001": 5,
+        "Sub002": 5,
+        "Sub003": 5,
+        "Sub004": 5,
+        "Sub005": 5,
+        "Sub006": 5,
+        "Sub007": 5,
+        "Sub008": 5,
+        "Sub009": 5,
+        "Sub010": 5,
+        "Sub011": 5,
+        "Sub012": 5,
+        "Sub013": 5,
+        "Sub014": 5,
+        "Sub015": 5,
+        "Sub016": 5,
+        "Sub017": 5,
+        "Sub018": 5,
+        "Sub019": 5,
+        "Sub020": 5,
+        "Sub021": 5,
+        "Sub022": 5,
+        "Sub023": 5,
+        "Sub024": 5,
+        "Sub025": 5,
+        "Sub026": 5,
+        "Sub027": 5,
+        "Sub028": 5,
+        "Sub029": 5,
+        "Sub030": 5,
+        "Sub031": 5,
+        "Sub032": 5,
+        "Sub033": 5,
+        "Sub034": 5,
+        "Sub035": 5,
+        "Sub036": 5,
+        "Sub037": 5,
+        "Sub038": 5,
+        "Sub039": 5,
+        "Sub040": 5,
+        "Sub041": 5,
+        "Sub042": 5,
+        "Sub043": 5,
+        "Sub044": 5,
+        "Sub045": 5,
+        "Sub046": 5,
+        "Sub047": 5,
+        "Sub048": 5,
+        "Sub049": 5,
+        "Sub050": 5
+      },
+      "unit": "mph, original paper section 2.1 and related PMGF dataset paper",
+      "target_min_mph": 68.4792855540837,
+      "target_max_mph": 94.17526287,
+      "within_centered_null_athlete_equal_MAE_mph": 0.40001091414207574,
+      "between_athlete_mean_SD_mph_ddof1": 5.377025745911997,
+      "within_athlete_SD_mph_mean_ddof1": 0.5237512759983042,
+      "within_athlete_ranges_mph_percentiles_0_25_50_75_100": [
+        0.18648822999999481,
+        0.664559280803747,
+        1.015534361860304,
+        1.7187777538923719,
+        5.047269446340692
+      ],
+      "all_finite": true,
+      "within_centered_null_athlete_equal_MAE_kmh": 0.6437551646090648,
+      "existing_OBP_null_MAE_kmh": 0.629742,
+      "comparison": "원자료 목표 단위 mph, 기존 OBP 평가는 km/h. 단위를 맞추면 null MAE 유사 규모; 표본분포·selection 달라 모델 우열 판정 불가."
+    },
+    "obp_identity_overlap": "기관/코호트 설명은 다르나 익명 ID로 중복 부재를 증명하지 못함",
+    "new_session_or_intervention_data": "미확인"
+  },
+  "recommendation": {
+    "adopt_dl_now": false,
+    "new_data_gate_promotion": false,
+    "one_possible_cpu_exploratory_baseline": "4채널 전체101점 파형, train-only 선수균등 PCA 고정5PC + ridge; 기존nested LOAO와gate 그대로. 미실행. 진행 중 parent의 waveform20 nonlinear 대조와 사후선별 금지.",
+    "causal_claim": false,
+    "safety_or_comfort_claim": false
+  },
+  "verification": {
+    "existing_files_modified": false,
+    "new_model_training": false,
+    "data_download_and_parsing": true,
+    "full_application_tests": "문서만 추가하므로 미실행",
+    "third_party_artifacts_tracked": false
+  }
+}
