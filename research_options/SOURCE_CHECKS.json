@@ -1,0 +1,125 @@
+{
+  "review_date": "2026-10-29",
+  "sources": [
+    {
+      "id": "within",
+      "doi": "10.1016/j.smhs.2024.10.001",
+      "primary_url": "https://pubmed.ncbi.nlm.nih.gov/41496804/",
+      "access_reviewed": "full_text",
+      "raw_data_status": "raw_download_not_acquired",
+      "local_evidence_file": "within_fulltext.xml",
+      "local_evidence_sha256": "d57f0d88e7eaf300573b8d1a960ccc42f4f00fb5852b5ea04f2284548eb12c1b",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "early_trunk",
+      "doi": "10.1016/j.jse.2026.05.042",
+      "primary_url": "https://pubmed.ncbi.nlm.nih.gov/42276517/",
+      "access_reviewed": "author_abstract",
+      "raw_data_status": "not_established",
+      "local_evidence_file": "early_trunk_metadata.json",
+      "local_evidence_sha256": "ddf69e8df4649d492db41fc343038113b600a3c1fdfbdc115a7bac954be535fe",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "knee",
+      "doi": "10.1177/23259671241257539",
+      "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11329978/",
+      "access_reviewed": "full_text",
+      "raw_data_status": "raw_download_not_acquired",
+      "local_evidence_file": "knee_fulltext.xml",
+      "local_evidence_sha256": "13da9bfa9275c1dd7ba2bdeddc0ca3aaf4ccd666611c769d973ed84d85a80576",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "stride",
+      "doi": "10.3389/fspor.2025.1534596",
+      "primary_url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1534596/full",
+      "access_reviewed": "full_text",
+      "raw_data_status": "author_offer_no_download_acquired",
+      "local_evidence_file": "stride_fulltext.xml",
+      "local_evidence_sha256": "784c0688480cee21d584cb669c08c1bd01e4340d6ba308e501fbd6392a7f0aaa",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "rct",
+      "doi": "10.1016/j.jsams.2026.10.007",
+      "primary_url": "https://pubmed.ncbi.nlm.nih.gov/42907284/",
+      "access_reviewed": "author_abstract",
+      "raw_data_status": "not_established",
+      "local_evidence_file": "rct_metadata.json",
+      "local_evidence_sha256": "c93ea18cda5d2afd2d009329ec62ee3e66e0db1a934a4745db3235b589631165",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "trial_error",
+      "doi": "10.1038/s41598-025-97146-5",
+      "primary_url": "https://doi.org/10.1038/s41598-025-97146-5",
+      "access_reviewed": "full_text",
+      "raw_data_status": "reasonable_request_not_public_download",
+      "local_evidence_file": "trial_error_fulltext.xml",
+      "local_evidence_sha256": "29ce67053dd6d61d88c1c17fd1001298e7de9935034b260b8bd2a7f85e86e2b5",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "sensor_command",
+      "doi": "10.3390/s22218488",
+      "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9655623/",
+      "access_reviewed": "full_text",
+      "raw_data_status": "request_only_supplement_is_manual",
+      "local_evidence_file": "sensor_command_fulltext.xml",
+      "local_evidence_sha256": "4d1f7df00a7e1e54b49f95fbb31cc3cb54fc0345638f9ea985998634ca3b2ad6",
+      "identifier_check": "PASS"
+    },
+    {
+      "id": "attias",
+      "doi": "10.1007/s11044-026-10143-y",
+      "primary_url": "https://link.springer.com/article/10.1007/s11044-026-10143-y",
+      "access_reviewed": "publisher_abstract_and_data_availability",
+      "raw_data_status": "raw_motion_and_opensim_model_nonpublic",
+      "local_evidence_sha256": null,
+      "identifier_check": "publisher_page_review_no_fulltext_download"
+    }
+  ],
+  "additional_dataset": {
+    "doi": "10.17632/xfnz6mkdzm.2",
+    "url": "https://data.mendeley.com/datasets/xfnz6mkdzm/2",
+    "access_reviewed": "author_landing_description_only",
+    "described_pitches": 3334,
+    "described_games": 21,
+    "declared_license": "CC BY 4.0",
+    "csv_downloaded_and_audited_this_review": false
+  },
+  "local_feasibility": {
+    "artifact_sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4",
+    "cutoffs": [
+      10,
+      20,
+      30
+    ],
+    "players": 98,
+    "pitches": 399,
+    "repeats_min": 2,
+    "repeats_max": 5,
+    "required_columns_present": {
+      "elbow_varus_peak_nm": true,
+      "shoulder_resultant_peak_n": true,
+      "sequence_lag_ms": true,
+      "lead_knee_extension_deg": true,
+      "hip_shoulder_sep_fp10_deg": true
+    },
+    "all_required_cells_finite": true,
+    "new_model_fitted": false,
+    "new_hypothesis_outcome_tested": false
+  },
+  "unit_conversion_checks": {
+    "knee_between_group_difference_kmh": 1.8,
+    "early_trunk_mean_difference_kmh": 1.8,
+    "early_trunk_upper_ci_kmh": 3.96
+  },
+  "scientific_gate_changed": false,
+  "new_model_fitted": false,
+  "new_hypothesis_outcome_tested": false,
+  "application_code_changed": false,
+  "raw_media_or_fulltext_committed": false
+}
