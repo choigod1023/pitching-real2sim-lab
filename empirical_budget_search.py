@@ -7,6 +7,7 @@ from coupled_payload import run as prepare, model_for
 from joint_intervention import inverse_controls
 from capacity_budget_gate import rollout, split_linear_power
 from constrained_motion_search import modify, annotate, budget_vector
+from coach_hypotheses.model_retirement.policy import legacy_diagnostic_only, model_usage_metadata, RetiredPredictionModelError
 
 OUT=Path('artifacts/empirical-budget'); OUT.mkdir(parents=True,exist_ok=True)
 DATA=Path('../openbiomechanics/baseball_pitching/data')
@@ -34,6 +35,7 @@ def margins(r,observed,weights,base,policy):
         c=np.r_[c,[(base[k]-r[k])/max(abs(base[k]),1.) for k in keys]]
     return np.r_[c,(3-r['max_rotation_deg'])/3,(20-r['max_ball_displacement_mm'])/20,1-r['release_direction_deg']]
 
+@legacy_diagnostic_only
 def run():
     s=np.load(SOURCE); q=s['qpos']; lengths=s['lengths'];dt=float(s['dt']);model=model_for(lengths,dt)
     refs={}; obs={1:[],2:[]}; source_hashes={}
@@ -90,5 +92,10 @@ def run():
         print(policy,'candidate',r['speed_gain_kmh'],'margin',fine_margin.min(),'accepted',accepted,flush=True)
     meta=pd.read_csv(DATA/'poi/poi_metrics.csv');actual=meta[meta.session_pitch.str.startswith('3034_')][['session_pitch','elbow_varus_moment','shoulder_internal_rotation_moment']]
     report=dict(observed=obs,records=records,policies=results,source_hashes=source_hashes,common_lengths=lengths.tolist(),actual_poi=actual.to_dict('records'),protocol_sha256=hashlib.sha256(Path('EMPIRICAL_BUDGET_PROTOCOL.md').read_bytes()).hexdigest(),code_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),scope='Observed model-demand interpolation, not physiological capacity or safety threshold')
+    report.update(model_usage_metadata())
     (OUT/'report.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf8')
-if __name__=='__main__':run()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--legacy-diagnostic',action='store_true');args=parser.parse_args()
+    try:run(legacy_diagnostic=args.legacy_diagnostic)
+    except RetiredPredictionModelError as error:parser.error(str(error))

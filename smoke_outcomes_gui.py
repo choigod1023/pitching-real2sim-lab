@@ -28,4 +28,4 @@ def check(root):
 if __name__=='__main__':
     out=Path('artifacts/outcome-simulator')
     with patch.object(tk.Tk,'mainloop',check):
-        launch(json.loads((out/'states.json').read_text()),out)
+        launch(json.loads((out/'states.json').read_text()),out,legacy_diagnostic=True)

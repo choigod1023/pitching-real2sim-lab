@@ -11,6 +11,7 @@ from pilot import regular_time,vector
 from torque_arm import arm_poses,derivatives,unit
 from coupled_payload import model_for,wxyz
 from capacity_budget_gate import split_linear_power
+from coach_hypotheses.model_retirement.policy import legacy_diagnostic_only, model_usage_metadata, RetiredPredictionModelError
 
 ROOT=Path(__file__).resolve().parent;OUT=ROOT/'artifacts/coupled-body'
 
@@ -188,6 +189,7 @@ def compare(m,base,result,bq,cq):
     ball=np.linalg.norm(c[:,names.index('ball_center')]-b[:,names.index('ball_center')],axis=1).max()*1000
     return dict(gain_kmh=result['speed_kmh']-base['speed_kmh'],violations=violations,budget_pass=not violations,max_joint_change_deg=float(maxangle),max_ankle_change_mm=float(ankle),max_ball_change_mm=float(ball),pose_pass=bool(maxangle<=3 and ankle<=20 and ball<=20),athlete_candidate_validated=False)
 
+@legacy_diagnostic_only
 def run():
     m,q,dt,t,observed=build();f,v=inverse(m,q,dt);bases={};runs=[];saved={}
     for sub in [1,2]:bases[sub]=simulate(m,q,f,v[0],dt,sub)
@@ -220,8 +222,13 @@ def run():
                 subdivision_check=dict(coarse_gain=coarse['gain_kmh'],fine_gain=best['gain_kmh'],four_sub_gain=fine4['speed_kmh']-base4['speed_kmh']),
                 runs=runs,ground_support_validated=False,muscles_validated=False,
                 note='Nominal mass rigid-body demand test with floating pelvis external wrench; no ground contact model. Post-FP separation perturbation only, not FP-angle intervention. No physiological or athlete gain claim.')
+    report.update(model_usage_metadata())
     (OUT/'report.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in ['runs','baseline','best_diagnostic','input_sampling_refinement']},indent=2))
     print('best',key,best['speed_kmh'],best['gain_kmh'],'failures',best['violations']);return report
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--legacy-diagnostic',action='store_true');args=parser.parse_args()
+    try:run(legacy_diagnostic=args.legacy_diagnostic)
+    except RetiredPredictionModelError as error:parser.error(str(error))

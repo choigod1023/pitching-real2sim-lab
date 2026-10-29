@@ -8,6 +8,7 @@ import mujoco
 import numpy as np
 from capacity_budget_gate import shift_applied_intervals, rollout, gate
 from coupled_payload import model_for
+from coach_hypotheses.model_retirement.policy import legacy_diagnostic_only, model_usage_metadata, RetiredPredictionModelError
 
 GROUPS = [('shoulder',slice(3,6)),('elbow',slice(6,7)),('wrist',slice(8,11))]
 ROTATIONS = GROUPS[:2]+[('marker_roll',slice(7,8)),GROUPS[2]]
@@ -55,6 +56,7 @@ def select_case(runs):
     return selected['case_id'],('accepted_model_candidate' if eligible else 'rejected_diagnostic'),len(eligible)
 
 
+@legacy_diagnostic_only
 def run(source,out):
     source,out=Path(source),Path(out); out.mkdir(parents=True,exist_ok=True)
     data=np.load(source); q=data['qpos']; lengths=data['lengths']; loads=data['required_loads']; dt=float(data['dt'])
@@ -103,6 +105,7 @@ def run(source,out):
           'Mechanical component work is coordinate dependent, not muscle work.',
           'No calibrated actual release/radar comparison and no zero-error claim.',
           'Zero-padding clips waveform boundaries; unchanged peaks do not guarantee unchanged work.'])
+    report.update(model_usage_metadata())
     (out/'report.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in ('runs','resolution_comparison')},indent=2),flush=True)
     return report
@@ -112,4 +115,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source',default='../grip-identifiability/artifacts/grip-identifiability/fine-reference/reference-0.npz')
     p.add_argument('--out',default='artifacts/multi-joint-timing')
-    a=p.parse_args();run(a.source,a.out)
+    p.add_argument('--legacy-diagnostic',action='store_true')
+    a=p.parse_args()
+    try:run(a.source,a.out,legacy_diagnostic=a.legacy_diagnostic)
+    except RetiredPredictionModelError as error:p.error(str(error))
