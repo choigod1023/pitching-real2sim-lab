@@ -1,0 +1,44 @@
+{
+  "sources": {
+    "metadata.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\metadata.csv",
+      "sha256": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0"
+    },
+    "poi/poi_metrics.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\poi\\poi_metrics.csv",
+      "sha256": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6"
+    },
+    "data_dictionary.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\data_dictionary.csv",
+      "sha256": "3a87194c690b8118bc2175a688668ca996d699e5b35eafd1155b94e1f9efb817"
+    },
+    "full_sig/joint_velos.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\joint_velos.csv",
+      "sha256": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297"
+    },
+    "full_sig/joint_angles.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\joint_angles.csv",
+      "sha256": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce"
+    },
+    "full_sig/forces_moments.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\forces_moments.csv",
+      "sha256": "23920e256fbc42ba25278ba95086db297457e7c8054c98c66f27fa03874c1f9f"
+    },
+    "full_sig/landmarks.csv": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv",
+      "sha256": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370"
+    }
+  },
+  "code": {
+    "__init__.py": "c6e6c7eaa5533dcda13f832b3af702f4d10aefa0bd639b8ff60e0885e91dd77b",
+    "metrics.py": "87cf9cbf779be9c6c8c8e8bb5f39d234a5f1fce1da209c1e6813273264ec3a82",
+    "modeling.py": "656c69e20bfc3048a7894f4aff27658c9d9908d41fe3e100245f3548573f6338",
+    "run.py": "ec6c460cfd7391c6d683ce903df14f77812b2ab2333074b24f0944730f6256c5",
+    "test_metrics.py": "32e39010f4e16c2c205fbe595265abc95ac6d26db9815b30caec2e6672832e4f",
+    "test_modeling.py": "e22f2d1ec965ca461e17d38a47d24ea3e1067be4955295e0c5f99b58eb6ffce3",
+    "test_run.py": "4b93db6a07773c66ee0fca148c23d1a207031e718fc0642226a42ef6606ad5c4"
+  },
+  "protocol_sha256": "115e54896dce5885136f07391ca7a15c5719baef25b3c644ab0dddc29e89e6eb",
+  "preregistration_commit": "053c22251e62a1ac42489bc1dbe4a62918b41393",
+  "head_at_execution": "053c22251e62a1ac42489bc1dbe4a62918b41393"
+}

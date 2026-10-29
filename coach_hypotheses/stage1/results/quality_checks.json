@@ -1,0 +1,47 @@
+{
+  "window_boundary_peak_counts": {
+    "pelvis": 0,
+    "torso": 0,
+    "knee": 193,
+    "separation": 0
+  },
+  "pitch_count_per_player": {
+    "2": 9,
+    "3": 23,
+    "4": 18,
+    "5": 48
+  },
+  "provided_poi_comparisons": [
+    {
+      "extracted": "lead_knee_extension_deg",
+      "poi": "lead_knee_extension_from_fp_to_br",
+      "r": 0.9099518939525086,
+      "median_absolute_difference": 1.8229248564951668
+    },
+    {
+      "extracted": "lead_knee_peak_extension_dps",
+      "poi": "lead_knee_extension_angular_velo_max",
+      "r": 0.9084165408806965,
+      "median_absolute_difference": 18.988897876334875
+    },
+    {
+      "extracted": "lead_knee_extension_at_br_dps",
+      "poi": "lead_knee_extension_angular_velo_br",
+      "r": 0.999636390215213,
+      "median_absolute_difference": 3.2080255278797836
+    },
+    {
+      "extracted": "elbow_varus_peak_nm",
+      "poi": "elbow_varus_moment",
+      "r": 0.9943962313062297,
+      "median_absolute_difference": 3.578852158850495
+    },
+    {
+      "extracted": "hip_shoulder_sep_fp10_deg",
+      "poi": "rotation_hip_shoulder_separation_fp",
+      "r": 0.7990680672120015,
+      "median_absolute_difference": 1.293880508694219
+    }
+  ],
+  "note": "Additional filtering and event/window definitions differ from POI; no values were forced to agree."
+}

@@ -1,0 +1,31 @@
+test_nonincreasing_audit_time_rejected (coach_hypotheses.stage1.test_audit.AuditTests.test_nonincreasing_audit_time_rejected) ... ok
+test_outcome_free_sign_comparison_and_reversed_input (coach_hypotheses.stage1.test_audit.AuditTests.test_outcome_free_sign_comparison_and_reversed_input) ... ok
+test_angle_unwrap (coach_hypotheses.stage1.test_metrics.MetricTests.test_angle_unwrap) ... ok
+test_bad_anthropometrics_and_poi (coach_hypotheses.stage1.test_metrics.MetricTests.test_bad_anthropometrics_and_poi) ... ok
+test_event_constant_required (coach_hypotheses.stage1.test_metrics.MetricTests.test_event_constant_required) ... ok
+test_interpolation_and_no_extrapolation (coach_hypotheses.stage1.test_metrics.MetricTests.test_interpolation_and_no_extrapolation) ... ok
+test_known_timing_units_knee_and_force_signs (coach_hypotheses.stage1.test_metrics.MetricTests.test_known_timing_units_knee_and_force_signs) ... ok
+test_outer_nans_trimmed_inner_nan_rejected (coach_hypotheses.stage1.test_metrics.MetricTests.test_outer_nans_trimmed_inner_nan_rejected) ... ok
+test_peak_ties_and_boundary (coach_hypotheses.stage1.test_metrics.MetricTests.test_peak_ties_and_boundary) ... ok
+test_poi_not_refiltered_and_input_immutable (coach_hypotheses.stage1.test_metrics.MetricTests.test_poi_not_refiltered_and_input_immutable) ... ok
+test_read_cohort_identity_common_filters_and_exclusion (coach_hypotheses.stage1.test_metrics.MetricTests.test_read_cohort_identity_common_filters_and_exclusion) ... ok
+test_time_cross_table_and_padding_checks (coach_hypotheses.stage1.test_metrics.MetricTests.test_time_cross_table_and_padding_checks) ... ok
+test_alpha_tie_prefers_larger_and_small_group_error (coach_hypotheses.stage1.test_modeling.ModelingTests.test_alpha_tie_prefers_larger_and_small_group_error) ... ok
+test_between_predictions_use_train_mean_baseline (coach_hypotheses.stage1.test_modeling.ModelingTests.test_between_predictions_use_train_mean_baseline) ... ok
+test_between_within_opposite_sign_and_constant_not_zero (coach_hypotheses.stage1.test_modeling.ModelingTests.test_between_within_opposite_sign_and_constant_not_zero) ... ok
+test_bootstrap_reproducible_cluster_and_invalid (coach_hypotheses.stage1.test_modeling.ModelingTests.test_bootstrap_reproducible_cluster_and_invalid) ... ok
+test_demean_and_equal_player_weights (coach_hypotheses.stage1.test_modeling.ModelingTests.test_demean_and_equal_player_weights) ... ok
+test_filter_sensitivity_common_support_and_sign (coach_hypotheses.stage1.test_modeling.ModelingTests.test_filter_sensitivity_common_support_and_sign) ... ok
+test_gate_requires_all_preregistered_conditions (coach_hypotheses.stage1.test_modeling.ModelingTests.test_gate_requires_all_preregistered_conditions) ... ok
+test_outer_held_outcomes_cannot_change_own_prediction (coach_hypotheses.stage1.test_modeling.ModelingTests.test_outer_held_outcomes_cannot_change_own_prediction) ... ok
+test_ridge_constant_rank_deficient_and_train_only_scale (coach_hypotheses.stage1.test_modeling.ModelingTests.test_ridge_constant_rank_deficient_and_train_only_scale) ... ok
+test_cli_dispatch_and_reject_external_output (coach_hypotheses.stage1.test_run.EntryTests.test_cli_dispatch_and_reject_external_output) ... usage: stage1 [-h] --data DATA [--output OUTPUT]
+stage1: error: output must stay inside coach_hypotheses/stage1
+ok
+test_real_csv_pipeline_preserves_sources_and_fails_sample_gate (coach_hypotheses.stage1.test_run.EntryTests.test_real_csv_pipeline_preserves_sources_and_fails_sample_gate) ... ok
+test_streaming_hash (coach_hypotheses.stage1.test_run.EntryTests.test_streaming_hash) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.122s
+
+OK

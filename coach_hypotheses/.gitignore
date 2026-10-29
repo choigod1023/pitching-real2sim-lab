@@ -1,1 +1,4 @@
 stage0/generated_by_existing_tests/
+stage1/artifacts/
+!stage1/results_initial_protocol/*.csv
+!stage1/results/*.csv

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "frontiers_2025",
+    "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1534596/full",
+    "http_status": 200,
+    "bytes": 776388,
+    "sha256": "e75dc9edb1a5869e328c4be4d2919ea9116ac2785ef717ecf755545125111087",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\frontiers_2025.response",
+    "content_type": "text/html;charset=utf-8"
+  },
+  {
+    "id": "ojssm_2024",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11329978/fullTextXML",
+    "http_status": 200,
+    "bytes": 94919,
+    "sha256": "13da9bfa9275c1dd7ba2bdeddc0ca3aaf4ccd666611c769d973ed84d85a80576",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\ojssm_2024.response",
+    "content_type": "application/xml"
+  },
+  {
+    "id": "jat_2019",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6485842/fullTextXML",
+    "http_status": 500,
+    "bytes": 150,
+    "sha256": "26457a554a543c874c2a19b541fc7b3f4fd2413904f16cf793f60fd0e0eb617b",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\jat_2019.response",
+    "content_type": "application/json"
+  },
+  {
+    "id": "isbs_2022_pdf",
+    "url": "https://commons.nmu.edu/cgi/viewcontent.cgi?article=2479&context=isbs",
+    "http_status": 403,
+    "bytes": 5645,
+    "sha256": "758e873446f2a700ce1acd21dc605f79ae5ab942d3e5a00e1158fd479efac4f4",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\isbs_2022_pdf.response",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "id": "sequence_2020_full",
+    "url": "https://www.tandfonline.com/doi/full/10.1080/14763141.2018.1503321",
+    "http_status": 403,
+    "bytes": 5598,
+    "sha256": "481459511f80bb9e19c2a481f038c8d39ddaa35a16c65d4cde3d690364998e50",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\sequence_2020_full.response",
+    "content_type": "text/html; charset=UTF-8"
+  },
+  {
+    "id": "ncaa335_abstract",
+    "url": "https://southeast.acsm.org/wp-content/uploads/2026/02/SEACSM-2026-program-ABSTRACTS-2-21-26.pdf",
+    "http_status": 200,
+    "bytes": 2722457,
+    "sha256": "4b84698c75c924aefac4d3543045e3c865c8f79770fff9004f446ee9c52f72a0",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\ncaa335_abstract.response",
+    "content_type": "application/pdf"
+  },
+  {
+    "id": "stage_load_abstract",
+    "url": "https://texas.acsm.org/wp-content/uploads/2026/02/2026-TACSM-Research-Abstract-Booklet-1.pdf",
+    "http_status": 200,
+    "bytes": 1352659,
+    "sha256": "72b96853adcd7743c5c14c4f32145255c7521ce19894fc7b121cafb7a4ca4bfe",
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-hypotheses-stage1-20261029\\coach_hypotheses\\stage1\\artifacts\\sources\\stage_load_abstract.response",
+    "content_type": "application/pdf"
+  }
+]
