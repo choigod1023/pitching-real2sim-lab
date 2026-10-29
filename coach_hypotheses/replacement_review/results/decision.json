@@ -1,0 +1,12 @@
+{
+  "integrated_agent_commits": {
+    "physics": "6161610feb58db7d9fd0d75e91cd6538affcb09e",
+    "learning": "b28a3b9ab6cf374179bc928acbd7a3a2bb51188e",
+    "hybrid": "7749866a7015fb23224809ad0dbb51e8acedf669"
+  },
+  "experimental_replacement_accepted": false,
+  "existing_app_predictor_changed": false,
+  "recommendation_role_for_legacy": "diagnostics_only_recommendation_not_enforced_in_app",
+  "physical_model_error_reduced": false,
+  "new_dataset_redistributed": false
+}
