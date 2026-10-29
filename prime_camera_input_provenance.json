@@ -1,0 +1,84 @@
+{
+  "public_source": "https://docs.google.com/spreadsheets/d/1NhpF8DnfBdio_xsU7B44KNuHghtePDp-d3juvCYNm9Q/edit",
+  "collection_cells": {
+    "B14": "- Calibration cube is 27.5 inches from red joint center to joint center with the middle joint center being exactly half the distance.",
+    "B17": "- Checkerboard is 5x8 with blue squares to denote orientation. Each square is 100mm in size.",
+    "B20": "- Both the OptiTrack and Edgertronic systems are GENLOCKED and SYNCHRONIZED with global shutters.",
+    "B26": "Shot List Tabs have the video descriptions, frame rates, and other details - it is possible some frame rates may be slightly inaccurate. Double check!"
+  },
+  "source_hashes": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\collection.xlsx": "d5e6ce64e9578ffed47824c6cf68da4f6942a602679b41ba2cc1a391dc016d95",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\results\\calibration_results.json": "cd8c23e67736b152ee0a7ad7c72d86b8aa0a904f712892329cc664754ab5e01a",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\results\\optitrack_rig_provisional.json": "b463bd47e8c02344ff4fd1e0354788b78f0207a6bf80103bca7865a842ed75b5",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\scripts\\analyze_calibration.py": "e13701cbb5e790e6bab8e0193958ef20b20e83579ebf8bd2ab186c1c7cb9261e"
+  },
+  "download_sources": [
+    {
+      "camera": 17,
+      "file_id": "1mQkWUrm2Hqj3NddB641LkkPJYW4hGzqm",
+      "original_name": "OBP_dynamic_calibration_checkerboard_001-Camera 17 (#805316980).mp4 Video",
+      "url": "https://drive.usercontent.google.com/download?id=1mQkWUrm2Hqj3NddB641LkkPJYW4hGzqm&export=download",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\opti_dynamic_checkerboard_cam17.mp4",
+      "expected_sha256": "716f9420917db77b4641e3700f89f058cbe21ad166198ea8b8e5ded985cc605c",
+      "bytes": 79037722,
+      "observed_sha256": "716f9420917db77b4641e3700f89f058cbe21ad166198ea8b8e5ded985cc605c",
+      "hash_matches_upstream": true
+    },
+    {
+      "camera": 20,
+      "file_id": "1kkMI-hwAJvxI8Q0kBPVgtS5ZGJdCtjTo",
+      "original_name": "OBP_dynamic_calibration_checkerboard_001-Camera 20 (#805317744).mp4 Video",
+      "url": "https://drive.usercontent.google.com/download?id=1kkMI-hwAJvxI8Q0kBPVgtS5ZGJdCtjTo&export=download",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\opti_dynamic_checkerboard_cam20.mp4",
+      "expected_sha256": "05af5eb11309c61aa5a26dd7264a799b0ea2e29eb94a02263e172fe1d2990c3d",
+      "bytes": 93013998,
+      "observed_sha256": "05af5eb11309c61aa5a26dd7264a799b0ea2e29eb94a02263e172fe1d2990c3d",
+      "hash_matches_upstream": true
+    },
+    {
+      "camera": 21,
+      "file_id": "1holuNR3Z5czh4AXXEettbHWEqcb22pi-",
+      "original_name": "OBP_dynamic_calibration_checkerboard_001-Camera 21 (#805317745).mp4 Video",
+      "url": "https://drive.usercontent.google.com/download?id=1holuNR3Z5czh4AXXEettbHWEqcb22pi-&export=download",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\opti_dynamic_checkerboard_cam21.mp4",
+      "expected_sha256": "68608d2aec66b8aefb7fb9555a155c1c2c121029eb5747557bb13ff50e9aca94",
+      "public_large_file_confirmation_followed": true,
+      "bytes": 116762112,
+      "observed_sha256": "68608d2aec66b8aefb7fb9555a155c1c2c121029eb5747557bb13ff50e9aca94",
+      "hash_matches_upstream": true
+    }
+  ],
+  "cube_downloads": [
+    {
+      "id": "1tb1tiobmyU5fTRIFvHGEjAZCLzVtslq7",
+      "name": "OBP_static_cube_001-Camera 17 (#805316980).mp4",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\opti_cube_cam17.mp4",
+      "url": "https://drive.usercontent.google.com/download?id=1tb1tiobmyU5fTRIFvHGEjAZCLzVtslq7&export=download",
+      "bytes": 3043892,
+      "sha256": "d3cbcc65539354253889d9a395c39c5b25305fc5324ac6671b6d558b41fdf885"
+    },
+    {
+      "id": "1raWh8l32TbXpPh0rIbdQAYtto7mF52dU",
+      "name": "OBP_static_cube_001-Camera 20 (#805317744).mp4",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\opti_cube_cam20.mp4",
+      "url": "https://drive.usercontent.google.com/download?id=1raWh8l32TbXpPh0rIbdQAYtto7mF52dU&export=download",
+      "bytes": 3554757,
+      "sha256": "d60197d9ef68a9b36c8c57bca82ceb26553245ae55622870de230555a5900908"
+    },
+    {
+      "id": "1oRouPsQoEcDtb2JRQDW1_x0NWlJ_jTlo",
+      "name": "OBP_static_cube_001-Camera 21 (#805317745).mp4",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\artifacts\\prime-camera\\opti_cube_cam21.mp4",
+      "url": "https://drive.usercontent.google.com/download?id=1oRouPsQoEcDtb2JRQDW1_x0NWlJ_jTlo&export=download",
+      "bytes": 4447367,
+      "sha256": "502062430d98ddd6d53c7f14483f293c4cd4ae3b9e5b864d4f4ea1b599b90f3b"
+    }
+  ],
+  "access_notes": [
+    "Google Drive connector fetch returned403. Public CSV/XLSX and publisher folder pages downloaded200.",
+    "No openpyxl in research venv; read source XML with existing stdlib parser instead of installing it.",
+    "Folder initial listing showed50 items; embedded public listing showed128.",
+    "Camera21 public virus-scan-size warning confirmed using its own form; final SHA matches upstream. No auth/quota bypass.",
+    "No publisher cube-video checksum; observed SHA only."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "command": "python -m unittest test_prime_camera_audit -v",
+  "tests_run": 9,
+  "result": "OK",
+  "actual_scientific_adoption": false,
+  "calculation_validator": "validate_prime_camera_audit.py passed artifact integrity and rejected calibration adoption"
+}

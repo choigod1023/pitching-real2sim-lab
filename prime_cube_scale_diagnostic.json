@@ -1,0 +1,23 @@
+{
+  "scope": "Post-failure shape/scale attribution, not another correction or selected physical calibration",
+  "pairs": {
+    "17_20": {
+      "diagnostic_similarity_scale_expected_to_triangulated": 0.9649972282904727,
+      "rigid_shape_rmse_mm": 32.59229006868747,
+      "similarity_shape_rmse_mm": 24.777533774545834,
+      "applied_to_speed_or_cameras": false
+    },
+    "17_21": {
+      "diagnostic_similarity_scale_expected_to_triangulated": 0.9492754848865904,
+      "rigid_shape_rmse_mm": 34.20238650900517,
+      "similarity_shape_rmse_mm": 15.109020470851938,
+      "applied_to_speed_or_cameras": false
+    },
+    "20_21": {
+      "diagnostic_similarity_scale_expected_to_triangulated": 0.9558736804900585,
+      "rigid_shape_rmse_mm": 30.3386041826321,
+      "similarity_shape_rmse_mm": 14.419546247090716,
+      "applied_to_speed_or_cameras": false
+    }
+  }
+}

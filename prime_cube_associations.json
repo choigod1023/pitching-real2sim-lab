@@ -1,0 +1,22 @@
+{
+  "frame": 0,
+  "observation": "Raw red-component centres and visible pipe topology, frozen before camera projection/triangulation",
+  "chart": "A,B,C,D run cyclically around the top face; z0 floor,z1 top. Camera17/20 chart association is a single-reader visual hypothesis. Camera21 alternatives are explicitly reported.",
+  "outer_edge_mm": 698.5,
+  "midpoint_spacing_mm": 349.25,
+  "source": "OBP-CV Readme!B14 from public collection.xlsx",
+  "cameras": {
+    "17": {"A1":4,"B1":8,"C1":3,"D1":0,"A0":18,"B0":21,"C0":17,"D0":13,"Am":11,"Bm":15,"Cm":10,"Dm":7},
+    "20": {"A1":3,"B1":10,"C1":4,"D1":0,"A0":19,"B0":25,"C0":21,"D0":14,"Am":12,"Bm":18,"Cm":13,"Dm":7},
+    "21": {"A1":5,"B1":16,"C1":9,"D1":0,"A0":20,"B0":28,"C0":26,"D0":15,"Am":11,"Bm":25,"Cm":19,"Dm":6}
+  },
+  "notes": [
+    "Several tiny red mask components are unrelated noise or disconnected edge pixels, not additional markers; the large principal component is used without post-projection adjustment.",
+    "Camera21 some projected pipes/markers overlap; exact red joint physical centre is not established by colour centroid.",
+    "No source supplies a statistical annotation interval; +/-1px coordinate perturbations will be engineering sensitivity only.",
+    "Camera21 mapping is checked under all four cyclic rotations and both windings using outer top pixels only; all hypotheses are retained, known lengths are not the selection objective.",
+    "Camera21 mid-level markers are excluded from choosing its correspondence and serve as a development observation check. Cube top/floor corners are not independent if subsequently used for a corrective fit."
+  ],
+  "force_work_verified": false,
+  "anatomical_ground_truth": false
+}
