@@ -1,0 +1,19 @@
+{
+  "artifact_integrity_passed": true,
+  "calibration_accepted": false,
+  "scientific_stage_passed": false,
+  "independent_cube_target_checked": true,
+  "actual_joint_accuracy_established": false,
+  "actual_athlete_gain_verified": false,
+  "physical_capture_to_export_clock_verified": false,
+  "population_uncertainty_interval_available": false,
+  "reason": "Cube-only extrinsic correction improves cube midpoints but worsens all excluded checkerboard pairs. Do not apply to pitching.",
+  "source_original_B_speed_mae_kmh": 1.3241394341168302,
+  "new_speed_mae_kmh": null,
+  "source_sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\prime_board_results.json": "082a9cd69dcc49a3decc2cdb6cbed81324406d70e618dea55dfe82ed94688340",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\prime_cube_results.json": "8e32876f1d07ac890ad745b01f80ef7c02d09e2ef1fc09b24d0762195250b18b",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\prime_cube_correction_results.json": "1108272ed540ae2f7a011f690a973e4068f9df5e981055217feba1210055c31a",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\prime_background_results.json": "d6f40a2e0cb2f621e8f3297814e7878e2e25f0446f49a42c6b2a94d20c758d65"
+  }
+}

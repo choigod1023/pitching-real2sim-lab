@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-10-29T04:21:13.543421+00:00",
+  "frozen_before_cube_geometry_evaluation": true,
+  "sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\PRIME_CAMERA_PROTOCOL.md": "54be00e999192844b64d372df1437b4bce5b8dc63b544f4e7a29272096465bb1",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\prime_cube_associations.json": "23033c1230948fdbd57140752591a125ba4babea6518aec1fb0ea78564155ac1",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime-camera-geometry-audit-20261029\\prime_cube_observations.json": "2ac0da6af483f0270b3ded4730eb4501ac780549cde963a770f0d43d50878559"
+  }
+}
