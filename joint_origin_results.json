@@ -1,0 +1,192 @@
+{
+  "protocol": "JOINT_ORIGIN_PROTOCOL.md",
+  "reference": "OBP_movement_BaseballThrow_001",
+  "source_sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\hand-ball-link\\artifacts\\hand-ball\\observation.json": "c2d57d036bb9846869ff820ccaea2114888a85e9a42571f80e03fa1754ca5071",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\tracking-calibration\\artifacts\\joint-video\\OBP_movement_BaseballThrow_001.c3d": "6b9edc5c2195ae717f9aa18a1a34476ca70fa3f2f46860192c0a4eb9440eca72",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\4d_reconstruction\\theia_alignment.json": "0fc0709f68c50d3451e01d8eaf19c1b8a59b508c5f008fa5bce5ea1dbd844a73",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\4d_reconstruction\\release_keypoints.csv": "13efbe37f16806e58d01ddc6752dcda5048c3fdf4270436ac01760340d35ade2"
+  },
+  "file_metadata": {
+    "THEIA3D:THEIA3D_VERSION": [
+      2023,
+      1,
+      0,
+      3161
+    ],
+    "THEIA3D:MODEL_VERSION": [
+      10,
+      0,
+      1
+    ],
+    "THEIA3D:FREE_ARMS": [
+      1
+    ],
+    "THEIA3D:FILT_FREQ": [
+      30.0
+    ]
+  },
+  "source_body_units": [
+    "mm"
+  ],
+  "matrix_frame_count": 1406,
+  "source_to_rig_scale": 0.0010095743123137383,
+  "internal_parent_child_geometry": {
+    "l_uarm->l_larm": {
+      "all_frames": {
+        "mean_local_m": [
+          1.6705256197753685e-10,
+          -5.537935738548918e-10,
+          -0.3370154617504451
+        ],
+        "axis_peak_to_peak_mm": [
+          0.00037899214241766466,
+          0.0003302555017503043,
+          0.0004415751353170957
+        ],
+        "max_distance_from_mean_mm": 0.00027107222127142644
+      },
+      "video940_979": {
+        "mean_local_m": [
+          9.291318320461762e-10,
+          6.714920399487922e-09,
+          -0.3370154634109827
+        ],
+        "axis_peak_to_peak_mm": [
+          0.00011675606611347326,
+          0.0001408801383013718,
+          0.00013789709187133657
+        ],
+        "max_distance_from_mean_mm": 0.0001098951459320828
+      }
+    },
+    "l_larm->l_hand": {
+      "all_frames": {
+        "mean_local_m": [
+          1.4991548738749333e-09,
+          -6.852611398502708e-10,
+          -0.2834658297754857
+        ],
+        "axis_peak_to_peak_mm": [
+          0.00041694120138479517,
+          0.00035220933679219296,
+          0.00036463789795683515
+        ],
+        "max_distance_from_mean_mm": 0.0002450627081017676
+      },
+      "video940_979": {
+        "mean_local_m": [
+          1.7224183017637565e-09,
+          -1.0556295263029752e-09,
+          -0.283465824023541
+        ],
+        "axis_peak_to_peak_mm": [
+          0.00010792671686857444,
+          0.00010758738868298754,
+          0.00012240820387902394
+        ],
+        "max_distance_from_mean_mm": 9.889069774838832e-05
+      }
+    },
+    "torso->l_uarm": {
+      "all_frames": {
+        "mean_local_m": [
+          -0.2086893327825527,
+          -0.017029323228800193,
+          -0.07851414415004163
+        ],
+        "axis_peak_to_peak_mm": [
+          113.77226027300829,
+          209.7712328954153,
+          65.26372070417099
+        ],
+        "max_distance_from_mean_mm": 160.0150732987838
+      },
+      "video940_979": {
+        "mean_local_m": [
+          -0.2114891803973708,
+          0.042219140864374345,
+          -0.07607466262658512
+        ],
+        "axis_peak_to_peak_mm": [
+          13.677946652557488,
+          128.37795834865443,
+          22.214815024234962
+        ],
+        "max_distance_from_mean_mm": 65.28188059026645
+      }
+    }
+  },
+  "fixed_torso_attachment_sensitivity": {
+    "training_video_frames": [
+      940,
+      950,
+      960
+    ],
+    "evaluation_video_frames": [
+      945,
+      955,
+      965,
+      970,
+      977,
+      979
+    ],
+    "fitted_torso_local_point_raw_mm": [
+      -205.92435996433233,
+      9.131738012534962,
+      -79.9676318046802
+    ],
+    "discrepancy_from_source_mm": [
+      10.131319017503797,
+      17.609489596555104,
+      37.2003567205057,
+      73.21485604883412,
+      98.73574373318023,
+      98.54697486180649
+    ],
+    "rmse_mm": 66.60489569121746,
+    "maximum_mm": 98.73574373318023,
+    "scope": "Source-estimate disagreement after imposing fixed local attachment; not actual shoulder error or a new correction."
+  },
+  "original_reference_table": {
+    "columns": [
+      "video_frame",
+      "segment",
+      "x_m",
+      "y_m",
+      "z_m"
+    ],
+    "rows": 360,
+    "video_frames": [
+      935,
+      964
+    ],
+    "segments": [
+      "l_foot",
+      "l_hand",
+      "l_larm",
+      "l_shank",
+      "l_thigh",
+      "l_uarm",
+      "r_foot",
+      "r_hand",
+      "r_larm",
+      "r_shank",
+      "r_thigh",
+      "r_uarm"
+    ],
+    "original_2d_labels_and_anatomical_protocol_available": false,
+    "fit_code_available": false
+  },
+  "current_documented_origins": {
+    "upper_arm": "shoulder",
+    "lower_arm": "elbow",
+    "hand": "wrist"
+  },
+  "exact_clinical_point_and_2023_model_equivalence_verified": false,
+  "point_name_equivalence_to_original_COCO_reference_verified": false,
+  "new_shoulder_correction_applied": false,
+  "actual_speed_gain_kmh": null,
+  "actual_force_or_work_capacity_measured": false,
+  "scientific_stage_passed": false
+}

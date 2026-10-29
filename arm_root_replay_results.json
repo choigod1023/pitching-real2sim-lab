@@ -1,0 +1,139 @@
+{
+  "reference": "OBP_movement_BaseballThrow_001",
+  "models": {
+    "F_source_free_root": {
+      "source_estimate_rmse_mm": {
+        "shoulder": 0.0,
+        "elbow": 8.180218932073124e-05,
+        "wrist": 8.173012075211255e-05
+      },
+      "source_estimate_max_mm": 0.00011395365318163173,
+      "B_ball_evaluation": {
+        "predicted_interval_speed_kmh": [
+          101.55771799398737,
+          101.5335998578128
+        ],
+        "candidate_interval_speed_kmh": [
+          103.67987204317426,
+          102.05979686325371
+        ],
+        "mean_predicted_speed_kmh": 101.54565892590009,
+        "mean_candidate_speed_kmh": 102.86983445321398,
+        "mean_absolute_speed_discrepancy_kmh": 1.3241755273138978,
+        "mean_velocity_vector_discrepancy_kmh": 12.245419153564445,
+        "position_rmse_mm": 18.975051640958,
+        "mean_absolute_radar_scalar_discrepancy_kmh": 0.6397901259000776,
+        "predicted_positions_m": [
+          [
+            0.5554530174124771,
+            0.7076213506071538,
+            4.2281322209061685
+          ],
+          [
+            0.48786132648893127,
+            0.7136119526594592,
+            4.188938503368387
+          ],
+          [
+            0.42027919905625866,
+            0.7196708440156866,
+            4.149776006969789
+          ]
+        ],
+        "launch_position_m": [
+          0.623054271826896,
+          0.7016990378587704,
+          4.267357159583134
+        ],
+        "launch_velocity_m_s": [
+          -24.338173017547984,
+          2.1197405147120834,
+          -14.126597728760546
+        ],
+        "launch_speed_kmh": 101.59406207438295,
+        "coarse_fine_position_max_m": 1.1102230246251565e-16,
+        "coarse_fine_velocity_max_m_s": 1.199040866595169e-14,
+        "analytic_position_max_m": 0.0
+      },
+      "actual_joint_error_mm": null,
+      "required_external_work_j": null,
+      "force_capacity_verified": false
+    },
+    "T_imposed_fixed_torso": {
+      "source_estimate_rmse_mm": {
+        "shoulder": 66.60489569121746,
+        "elbow": 66.60488456199067,
+        "wrist": 66.60489488751955
+      },
+      "source_estimate_max_mm": 98.73574373318024,
+      "B_ball_evaluation": {
+        "predicted_interval_speed_kmh": [
+          105.0387650314065,
+          105.01366949495241
+        ],
+        "candidate_interval_speed_kmh": [
+          103.67987204317426,
+          102.05979686325371
+        ],
+        "mean_predicted_speed_kmh": 105.02621726317946,
+        "mean_candidate_speed_kmh": 102.86983445321398,
+        "mean_absolute_speed_discrepancy_kmh": 2.1563828099654714,
+        "mean_velocity_vector_discrepancy_kmh": 10.04523980766473,
+        "position_rmse_mm": 13.316730232075868,
+        "mean_absolute_radar_scalar_discrepancy_kmh": 4.120348463179447,
+        "predicted_positions_m": [
+          [
+            0.5537951063514654,
+            0.7078526788530142,
+            4.222717514290143
+          ],
+          [
+            0.4852569944750358,
+            0.7140066295950127,
+            4.179898078457204
+          ],
+          [
+            0.4167284460894793,
+            0.7202288696409331,
+            4.137109863763448
+          ]
+        ],
+        "launch_position_m": [
+          0.6223427817187683,
+          0.7017670174149375,
+          4.265568171262267
+        ],
+        "launch_velocity_m_s": [
+          -24.67888456058618,
+          2.178546043001615,
+          -15.431856315017429
+        ],
+        "launch_speed_kmh": 105.07656882318028,
+        "coarse_fine_position_max_m": 1.5700924586837752e-16,
+        "coarse_fine_velocity_max_m_s": 1.199040866595169e-14,
+        "analytic_position_max_m": 1.5700924586837752e-16
+      },
+      "actual_joint_error_mm": null,
+      "required_external_work_j": null,
+      "force_capacity_verified": false
+    }
+  },
+  "training_video_frames": [
+    940,
+    950,
+    960
+  ],
+  "evaluation_video_frames": [
+    945,
+    955,
+    965,
+    970,
+    977,
+    979
+  ],
+  "baseline_replaced": false,
+  "new_shoulder_observation_correction_applied": false,
+  "scientific_stage_passed": false,
+  "actual_performance_gain_kmh": null,
+  "interpretation": "Kinematic source reproduction and structural sensitivity, not ground truth anatomical accuracy, muscle validation or intervention."
+}

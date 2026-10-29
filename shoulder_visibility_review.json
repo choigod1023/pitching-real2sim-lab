@@ -1,0 +1,9 @@
+{
+  "scope": "Raw-only visibility review of new frames, no anatomical joint centre coordinates invented",
+  "observations": [
+    {"camera":20,"frame":945,"visible":"upper arm and clothing/skin boundary","bone_joint_centre_directly_observed":false,"exact_joint_pixel":null,"reason":"internal shoulder centre cannot be located from the clothing boundary"},
+    {"camera":21,"frame":955,"visible":"upper arm surface, axillary and clothing boundaries","bone_joint_centre_directly_observed":false,"exact_joint_pixel":null,"reason":"surface silhouette is not the manufacturer-defined internal shoulder point"}
+  ],
+  "new_shoulder_correction_fit": false,
+  "free_shoulder_performance_optimization": false
+}
