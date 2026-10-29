@@ -1,0 +1,40 @@
+{
+  "independent_comparison_rows_checked": 1998,
+  "technical_validation": "PASS",
+  "new_tests_passed": 14,
+  "full_suite": {
+    "tests_run": 289,
+    "passed": 277,
+    "errors": 10,
+    "skipped": 2,
+    "new_error_ids": [],
+    "existing_error_ids": [
+      "test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)",
+      "test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)",
+      "test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)",
+      "test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)",
+      "test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)",
+      "test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)",
+      "test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)",
+      "test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)",
+      "test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)",
+      "test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)"
+    ]
+  },
+  "upstream_metrics_unchanged": true,
+  "first_execution_failure": {
+    "stage": "input_validation_before_pair_calculation",
+    "error": "negative_speed_or_peak_load",
+    "signed_negative_rows": 523,
+    "amendment_commit": "5175773c38e4fac7e41392cb1c652d30f5446542"
+  },
+  "test_side_effect": {
+    "file": "artifacts/coupled-body/model.xml",
+    "scope": "own dedicated worktree only",
+    "restored_to_clean_initial_HEAD": true
+  },
+  "raw_media_uploaded": false,
+  "measurement_robustness_validated": false,
+  "same_capacity_validated": false,
+  "intervention_effect_validated": false
+}
