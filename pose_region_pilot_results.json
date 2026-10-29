@@ -1,0 +1,101 @@
+{
+  "frame": 950,
+  "clock_offset": 1.0,
+  "fitted_cameras": [
+    20,
+    21
+  ],
+  "heldout_camera": 17,
+  "source_sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\POSE_RECONSTRUCTION_PILOT_PROTOCOL.md": "0714228f668c0156c21dfd6fa642ad82924ee9735fa73347258dc7fb0d71f60e",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\counterview_regions.json": "a38a561b159560cdd41c453dd65c7bb1af72c54355ba0f9ff3edcca971395e71"
+  },
+  "shoulder_m": [
+    0.718422508734744,
+    -0.12418208979043388,
+    4.858274065497468
+  ],
+  "original_elbow_m": [
+    0.9150805365963365,
+    0.11823880237036499,
+    4.985306256236533
+  ],
+  "original_wrist_m": [
+    1.1864548001698125,
+    0.03681337764022807,
+    4.994181089344823
+  ],
+  "fitted_elbow_m": [
+    0.9679097059716507,
+    0.09226218402320742,
+    4.925262580263607
+  ],
+  "fitted_wrist_m": [
+    1.221961807870072,
+    -0.018583671863032475,
+    4.9846223236892255
+  ],
+  "lengths_m": [
+    0.3370154986976338,
+    0.2834657887386583
+  ],
+  "joint_shift_mm": {
+    "elbow": 84.08893424215367,
+    "wrist": 66.4902300368379
+  },
+  "solver": {
+    "solver_success": true,
+    "iterations": 41,
+    "length_squared_residual_m2": [
+      1.6653345369377348e-16,
+      4.845152057342261e-13
+    ]
+  },
+  "metrics": {
+    "fit": {
+      "before": {
+        "count": 4,
+        "mean_outside_px": 8.351761289988985,
+        "per_observation_px": [
+          8.314094248109825,
+          19.06224203793596,
+          6.030708873910157,
+          0.0
+        ]
+      },
+      "after": {
+        "count": 4,
+        "mean_outside_px": 3.907490831393803,
+        "per_observation_px": [
+          0.004919536201100527,
+          12.877039859825011,
+          0.0,
+          2.7480039295490997
+        ]
+      }
+    },
+    "heldout": {
+      "before": {
+        "count": 2,
+        "mean_outside_px": 13.262598274531381,
+        "per_observation_px": [
+          6.864776372843231,
+          19.66042017621953
+        ]
+      },
+      "after": {
+        "count": 2,
+        "mean_outside_px": 12.255575860929696,
+        "per_observation_px": [
+          8.463698114348745,
+          16.047453607510647
+        ]
+      }
+    }
+  },
+  "scientific_stage_passed": false,
+  "baseline_model_replaced": false,
+  "actual_performance_gain_kmh": null,
+  "force_work_verified": false,
+  "wrist_orientation_verified": false
+}

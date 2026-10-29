@@ -1,0 +1,21 @@
+{
+  "scientific_stage_passed": false,
+  "unknown_count": 5,
+  "state_unchanged": true,
+  "global_calibration_adopted": false,
+  "pilot_baseline_replaced": false,
+  "commands": [
+    {
+      "command": "verify",
+      "exit_code": 2,
+      "stdout": "{\n  \"stage\": \"data\",\n  \"passed\": false,\n  \"errors\": [\n    \"check_not_passed:units_coordinates_time_verified\",\n    \"check_not_passed:body_hand_ball_observed\",\n    \"check_not_passed:release_window_usable\",\n    \"check_not_passed:alignment_uncertainty_quantified\",\n    \"check_not_passed:speed_reference_definition_documented\"\n  ],\n  \"scope\": \"Evidence integrity and progression guard; scientific claims require the referenced source/measurement/calculation review.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "advance",
+      "exit_code": 2,
+      "stdout": "{\n  \"stage\": \"data\",\n  \"passed\": false,\n  \"errors\": [\n    \"check_not_passed:units_coordinates_time_verified\",\n    \"check_not_passed:body_hand_ball_observed\",\n    \"check_not_passed:release_window_usable\",\n    \"check_not_passed:alignment_uncertainty_quantified\",\n    \"check_not_passed:speed_reference_definition_documented\"\n  ],\n  \"scope\": \"Evidence integrity and progression guard; scientific claims require the referenced source/measurement/calculation review.\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}
