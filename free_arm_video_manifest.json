@@ -1,0 +1,19 @@
+{
+  "video": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\artifacts\\free-arm-regions\\baseball_reconstruction_rejected_overlay.mp4",
+  "sha256": "8afcc079fbe93e88965c28b2dc27d7830e7c2d3d104a12a9ae45f74b6d2fe1c9",
+  "frames": 220,
+  "fps": 30,
+  "size": [
+    1280,
+    912
+  ],
+  "all_frames_decoded": true,
+  "source_sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\release-window-validation-20261028\\artifacts\\release-window\\camera17.mp4": "2341daf3eb71cde0ef6fdc41a66632c3c640e9b2dfa0bf33cc2ce6d2d8b72143",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\camera21.mp4": "1bbf95eb85758f2d065649c93e08f7b0cd8e8e0829ac9117c7197cb44b64ded7"
+  },
+  "result_sha256": "d94e77aeb88839ca3d13e87ece1a739d023d175b4963cdef9be09a87c751e1bf",
+  "scientific_stage_passed": false,
+  "adopted": false,
+  "actual_athlete_improvement": false
+}

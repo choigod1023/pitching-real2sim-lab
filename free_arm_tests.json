@@ -1,0 +1,7 @@
+{
+  "command": "python -m unittest test_free_arm_regions test_joint_origin_audit test_heldout_speed_comparison test_physical_release_comparison -v",
+  "tests_run": 17,
+  "result": "OK",
+  "initial_command_error": "Two nonexistent module names caused import errors, corrected before final successful17-test execution",
+  "scientific_pass": false
+}

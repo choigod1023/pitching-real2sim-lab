@@ -1,0 +1,12 @@
+{
+  "stage": "data",
+  "passed": false,
+  "errors": [
+    "check_not_passed:units_coordinates_time_verified",
+    "check_not_passed:body_hand_ball_observed",
+    "check_not_passed:release_window_usable",
+    "check_not_passed:alignment_uncertainty_quantified",
+    "check_not_passed:speed_reference_definition_documented"
+  ],
+  "scope": "Evidence integrity and progression guard; scientific claims require the referenced source/measurement/calculation review."
+}

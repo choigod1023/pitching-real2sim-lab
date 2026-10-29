@@ -1,0 +1,10 @@
+{
+  "timing": "post-computation provenance audit, not a new blind pre-registration",
+  "files": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\camera20.mp4": "71ceff9056cd39d7f3d727b7696ed8bab5d4c7e084ada94d5f46a3614e58cead",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\results\\optitrack_rig_provisional.json": "b463bd47e8c02344ff4fd1e0354788b78f0207a6bf80103bca7865a842ed75b5",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\results\\calibration_results.json": "cd8c23e67736b152ee0a7ad7c72d86b8aa0a904f712892329cc664754ab5e01a",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\README.md": "51074c0c4d7f325e0bfcff0b7b9a75d7e969f455c418d4c7140e57dd4a298b18",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\ROADMAP.md": "a971b09eea9557820500981435bafc3fcf66f07f3eb74ca6b5c7ba7fb6bf864e"
+  }
+}

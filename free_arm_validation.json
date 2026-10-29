@@ -1,0 +1,24 @@
+{
+  "artifact_integrity_passed": true,
+  "engineering_reconstruction_accepted": false,
+  "surface_mapping_accepted": false,
+  "scientific_stage_passed": false,
+  "actual_athlete_gain_verified": false,
+  "ball_evaluation_points": 3,
+  "ball_speed_intervals": 2,
+  "two_interval_algebraic_mae_lower_bound_kmh": 0.7967389395039248,
+  "primary_mae_above_this_bound_kmh": 0.0,
+  "population_confidence_interval_available": false,
+  "code_tests_establish_science_pass": false,
+  "rejection_reasons": [
+    "root_not_at_boundary",
+    "evaluation_mean_nonworsening",
+    "all_evaluation_cameras_nonworsening",
+    "boundary_sensitivity_nonworsening"
+  ],
+  "sources": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\free_arm_results.json": "d94e77aeb88839ca3d13e87ece1a739d023d175b4963cdef9be09a87c751e1bf",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\free_arm_diagnostics.json": "0e3b59d1f70b3d7b5005eb14ced6e576c8d7c12911b769fa1e60ee989f0f2776",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\free-arm-region-reconstruction-20261029\\surface_point_map_results.json": "1b4b9a81282cc16804de3a5b3a7b27b527e9db50f8ba7236c7f98c7c3be86be4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "reference": "OBP_movement_BaseballThrow_001",
+  "reader": "single AI raw-image reader before new frame projections",
+  "coordinate_space": "native zero-based decoded 1280x720 pixels",
+  "anatomical_centres_verified": false,
+  "visibility": "Blurred visible elbow/wrist surface, no exact skeletal point or shoulder centre",
+  "observations": [
+    {"camera":20,"frame":940,"segment":"l_hand","box":[555,372,588,403]},
+    {"camera":20,"frame":940,"segment":"l_larm","box":[592,367,631,405]},
+    {"camera":20,"frame":960,"segment":"l_hand","box":[448,420,480,451]},
+    {"camera":20,"frame":960,"segment":"l_larm","box":[474,326,512,366]},
+    {"camera":21,"frame":940,"segment":"l_hand","box":[968,333,997,365]},
+    {"camera":21,"frame":940,"segment":"l_larm","box":[877,326,919,365]},
+    {"camera":21,"frame":960,"segment":"l_hand","box":[850,476,884,511]},
+    {"camera":21,"frame":960,"segment":"l_larm","box":[744,420,792,465]}
+  ],
+  "exclusions": [],
+  "limits": "A visible surface can differ from the Theia anatomical origin. Bounds are engineering annotations, not probabilistic uncertainty. Regions will not be changed to fit projections."
+}
