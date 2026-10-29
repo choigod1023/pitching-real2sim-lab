@@ -1,0 +1,33 @@
+{
+  "primary_dataset": "OBP/baseball_pitching",
+  "primary_pitch": "3034_1",
+  "athlete": 2,
+  "session": 3034,
+  "original_video": "..\\speed-journey\\artifacts\\speed-video\\baseball_speed_journey_3034_1.mp4",
+  "original_video_record_kmh": 130.19592960000003,
+  "original_video_model_kmh": 113.46658063527904,
+  "original_video_gap_kmh": 16.729348964720984,
+  "video_manifest_sha256": "2c393454c5926fb7c48dd8ef2d7333e3e2fd959a7827ff423313261ca2c59923",
+  "separate_whole_body_model_3034_1": {
+    "dataset": "OBP/baseball_pitching",
+    "pitch": "3034_1",
+    "athlete": 2,
+    "session": 3034,
+    "target": "recorded_radar_scalar",
+    "event_or_window": "provided_BR_vs_recorded_unspecified_measurement",
+    "metric": "absolute_record_gap",
+    "units": "km/h",
+    "value": 18.12548533696517,
+    "validated_release_error": false
+  },
+  "separate_diagnostic_attribution_3034_1": {
+    "continuous_assumption_minus_record": -16.78059003624334,
+    "free_arm_minus_continuous_assumption": -0.0061499456998035384,
+    "body_reference_minus_free_arm": -1.3300014172786376,
+    "forward_minus_body_reference": -0.008743937743389552
+  },
+  "same_pitch_results_sha256": "0ad6ec903faec82607592cdcc4640c55662bda820df98315de1d051b0c781455",
+  "small_Prime_results_are_not_primary_accuracy": true,
+  "physics_improved_this_redirect": false,
+  "scientific_stage_passed": false
+}
