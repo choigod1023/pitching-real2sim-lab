@@ -1,0 +1,192 @@
+{
+  "protocol_sha256": "685cc5e789a816525260525ddfb963c2b5463c8a846fb4c391555c8950098139",
+  "metrics_sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4",
+  "sources": {
+    "metadata.csv": {
+      "sha256": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "verified": true
+    },
+    "poi/poi_metrics.csv": {
+      "sha256": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+      "verified": true
+    },
+    "data_dictionary.csv": {
+      "sha256": "3a87194c690b8118bc2175a688668ca996d699e5b35eafd1155b94e1f9efb817",
+      "verified": true
+    },
+    "full_sig/joint_velos.csv": {
+      "sha256": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297",
+      "verified": true
+    },
+    "full_sig/joint_angles.csv": {
+      "sha256": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+      "verified": true
+    },
+    "full_sig/forces_moments.csv": {
+      "sha256": "23920e256fbc42ba25278ba95086db297457e7c8054c98c66f27fa03874c1f9f",
+      "verified": true
+    },
+    "full_sig/landmarks.csv": {
+      "sha256": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "verified": true
+    },
+    "full_sig/force_plate.csv": {
+      "sha256": "2e7bd243b08fc1876c1f5db805c2bc920876fdc651323f13ce03869aed690d19",
+      "role": "availability_audit_only"
+    }
+  },
+  "cohort": {
+    "players": 98,
+    "pitches": 399,
+    "sessions": 98,
+    "cutoff_cohort_identical": true,
+    "speed_unit_and_player_link_verified": true
+  },
+  "c3d": {
+    "files": 511,
+    "matched_dynamic_files": 411,
+    "missing_or_ambiguous": 0,
+    "direct_ball_observation_validated": false
+  },
+  "summaries": {
+    "10": {
+      "players": 98,
+      "pairs": 666,
+      "model_mae_kmh": 1.0299842684781437,
+      "zero_delta_mae_kmh": 1.0152004702040824,
+      "paired_mae_difference_kmh": 0.014783798274061318,
+      "player_bootstrap_95_difference_kmh": [
+        -0.00508810598717469,
+        0.03581176446991888
+      ],
+      "absolute_error_p95_kmh": 2.6391161789885986,
+      "retrospective_observed_pair": true,
+      "prospective_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "20": {
+      "players": 98,
+      "pairs": 666,
+      "model_mae_kmh": 1.0320530033814976,
+      "zero_delta_mae_kmh": 1.0152004702040824,
+      "paired_mae_difference_kmh": 0.016852533177415346,
+      "player_bootstrap_95_difference_kmh": [
+        -0.00453100069301057,
+        0.04039977461450451
+      ],
+      "absolute_error_p95_kmh": 2.633098111005651,
+      "retrospective_observed_pair": true,
+      "prospective_validated": false,
+      "coaching_recommendation_ready": false
+    },
+    "30": {
+      "players": 98,
+      "pairs": 666,
+      "model_mae_kmh": 1.0316959070904566,
+      "zero_delta_mae_kmh": 1.0152004702040824,
+      "paired_mae_difference_kmh": 0.016495436886374157,
+      "player_bootstrap_95_difference_kmh": [
+        -0.005060561317814532,
+        0.04035816647816371
+      ],
+      "absolute_error_p95_kmh": 2.6275263993369933,
+      "retrospective_observed_pair": true,
+      "prospective_validated": false,
+      "coaching_recommendation_ready": false
+    }
+  },
+  "invariance_checks": {
+    "10": {
+      "heldout_outcomes_replaced_unchanged": true,
+      "direction_antisymmetric": true,
+      "all_splits_disjoint": true
+    },
+    "20": {
+      "heldout_outcomes_replaced_unchanged": true,
+      "direction_antisymmetric": true,
+      "all_splits_disjoint": true
+    },
+    "30": {
+      "heldout_outcomes_replaced_unchanged": true,
+      "direction_antisymmetric": true,
+      "all_splits_disjoint": true
+    }
+  },
+  "verdict": {
+    "development_pairwise_criteria_pass": false,
+    "checks": {
+      "minimum_players": true,
+      "minimum_pitches": true,
+      "integrity_verified": true,
+      "primary_better": false,
+      "player_bootstrap_upper_negative": false,
+      "other_cutoffs_not_worse": false
+    },
+    "one_kmh_development_screen": false,
+    "original_scientific_gate_changed": false,
+    "physical_constraints_validated": false,
+    "actual_athlete_effect_validated": false,
+    "coaching_recommendation_ready": false
+  },
+  "data_role": "already_seen_development",
+  "hypothesis_intervention_performed": false,
+  "grf": {
+    "present_pitches": 403,
+    "all_rows_finite_pitches": 401,
+    "pkh_br_finite_pitches": 403,
+    "missing_metadata_pitches": [
+      "1370_1",
+      "2857_4",
+      "2919_2",
+      "2919_3",
+      "2919_4",
+      "2919_5",
+      "2923_1",
+      "2923_2"
+    ],
+    "selected_with_grf": 399,
+    "selected_all_rows_finite": 397,
+    "selected_pkh_br_finite": 399,
+    "selected_not_all_finite": [
+      "2981_3",
+      "3233_1"
+    ],
+    "missing_rows": 12,
+    "physical_contact_validated": false
+  },
+  "tests": {
+    "tests_run": 303,
+    "passed": 291,
+    "assertion_failures": 0,
+    "errors": [
+      "test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)",
+      "test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)",
+      "test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)",
+      "test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)",
+      "test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)",
+      "test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)",
+      "test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)",
+      "test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)",
+      "test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)",
+      "test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)"
+    ],
+    "skips": [
+      [
+        "test_synthetic_recovery_and_constraints (test_pitch_fit.ArmFitTests.test_synthetic_recovery_and_constraints)",
+        "install pinned model to run integration checks"
+      ],
+      [
+        "test_temporal_solver_preserves_constant_feasible_motion (test_pitch_fit.ArmFitTests.test_temporal_solver_preserves_constant_feasible_motion)",
+        "install pinned model to run integration checks"
+      ]
+    ],
+    "new_errors": [],
+    "baseline_error_set_identical": true,
+    "elapsed_s": 20.399811199866235,
+    "artifact_sha256_before": "abb05e8208c80e33ca31caf37077c05a0642bb82cee3821aab540a09c6782d97",
+    "artifact_changed": true
+  },
+  "prerequisite_original_commit": "e9abea8",
+  "protocol_commit": "9e70bc8",
+  "derived_data_license": "CC BY-NC-SA 4.0; OpenBiomechanics Project / Driveline Baseball R&D; see NOTICE.md"
+}
