@@ -8,6 +8,7 @@ import numpy as np
 from coupled_payload import model_for
 from torque_arm import derivatives
 from capacity_budget_gate import rollout, gate
+from coach_hypotheses.model_retirement.policy import legacy_diagnostic_only, model_usage_metadata, RetiredPredictionModelError
 
 JOINTS = {'shoulder':slice(3,6),'elbow':slice(6,7),'marker_roll':slice(7,8),'wrist_marker':slice(8,11)}
 
@@ -48,6 +49,7 @@ def initial_energy(model,q,v):
     return float(d.energy.sum())
 
 
+@legacy_diagnostic_only
 def run(source,out):
     source,out=Path(source),Path(out); out.mkdir(parents=True,exist_ok=True)
     state=np.load(source); q=state['qpos']; dt=float(state['dt']); lengths=state['lengths']
@@ -94,6 +96,7 @@ def run(source,out):
         protocol='JOINT_INTERVENTION_PROTOCOL.md',protocol_sha256=hashlib.sha256(Path('JOINT_INTERVENTION_PROTOCOL.md').read_bytes()).hexdigest(),
         scope='Prescribed joint movement, recalculated inverse forces, actual RK4 rollout. Not equal ability, not intervention truth, not prior speed-gap correction.',
         initial_energy_baseline_j=initial_energy(model,q[0],baseline_v[0]),runs=runs,resolution_comparison=resolution)
+    report.update(model_usage_metadata())
     (out/'report.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf-8')
     return report
 
@@ -102,4 +105,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source',default='../grip-identifiability/artifacts/grip-identifiability/fine-reference/reference-0.npz')
     p.add_argument('--out',default='artifacts/joint-intervention')
-    args=p.parse_args(); run(args.source,args.out)
+    p.add_argument('--legacy-diagnostic',action='store_true')
+    args=p.parse_args()
+    try:run(args.source,args.out,legacy_diagnostic=args.legacy_diagnostic)
+    except RetiredPredictionModelError as error:p.error(str(error))

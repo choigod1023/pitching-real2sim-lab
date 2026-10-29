@@ -1,0 +1,104 @@
+{
+  "as_of": "2026-10-29",
+  "scope": "Reviewed public/local sources; UNKNOWN never passes; not a model validation receipt",
+  "sources": [
+    {
+      "id": "ozkaya_s1_local",
+      "primary_url": "https://doi.org/10.1038/sdata.2018.272",
+      "data_url": "https://api.figshare.com/v2/articles/5943103",
+      "evidence": {
+        "raw_access": "TRUE", "research_use_allowed": "TRUE", "repeated_pitcher": "TRUE",
+        "trial_link": "TRUE", "body_motion": "TRUE", "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "TRUE", "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN", "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "notes": [
+        "S1:450 dynamic C3D/15 sessions;448 unique workbook links,358 linked nonempty raw speed records. Unmatched2 preserved.",
+        "New DP07/08/09 confirm simultaneous body,forearm,hand and Ball surface-marker windows; only3 additional dynamics were opened.",
+        "The linked subset is available; units and radar measurement definition are not verified. Subject is a novice baseball overarm thrower, not a trained mound pitcher.",
+        "Same C3D stream is not an independent physical timing bound. A reflective Ball surface point is not a verified center. Archive license CC0."
+      ]
+    },
+    {
+      "id": "takamido50_local",
+      "primary_url": "https://arxiv.org/abs/2605.05487",
+      "data_url": "https://github.com/takamido/Ball_speed_pred_cross_ind/tree/29aa44eee86eff5c1fc6f5e221cb9b16a0381f16",
+      "evidence": {
+        "raw_access": "TRUE", "research_use_allowed": "UNKNOWN", "repeated_pitcher": "TRUE",
+        "trial_link": "TRUE", "body_motion": "TRUE", "independent_speed_link_units": "TRUE",
+        "hand_observation": "UNKNOWN", "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN", "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "notes": [
+        "All250 actual MAT files checked:50 subjects x5; only X(101,15,3) and scalarY fields. TrackMan/mph definition supported by source paper; no new fitting.",
+        "No explicit ball trajectory or raw time axis field in supplied MAT; hand frame/finger contact cannot be established from the supplied metadata.",
+        "Pinned README has no explicit dataset reuse license. Public-file inspection only; no training or redistribution in this task."
+      ]
+    },
+    {
+      "id": "obp411_local",
+      "primary_url": "https://github.com/drivelineresearch/openbiomechanics",
+      "data_url": "https://github.com/drivelineresearch/openbiomechanics/tree/44b98dae05cceb016f080ab39d105c85b8639084/baseball_pitching",
+      "evidence": {
+        "raw_access": "TRUE", "research_use_allowed": "TRUE", "repeated_pitcher": "TRUE",
+        "trial_link": "TRUE", "body_motion": "TRUE", "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "TRUE", "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN", "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "notes": [
+        "Existing audit411 pitches/100 subjects and correct mph conversion reused. Record units are known; actual device/time/location and BR detector are not fully verified.",
+        "Same-pitch hand/body/GRF do not establish direct ball-center tracking. No raw-data re-download or new model trial.",
+        "Academic use subject to OBP CC BY-NC-SA4.0 and NOTICE; not authorization for professional-team commercial use."
+      ]
+    },
+    {
+      "id": "prime001_local",
+      "primary_url": "https://github.com/drivelineresearch/openbiomechanics/tree/main/computer_vision",
+      "evidence": {
+        "raw_access": "TRUE", "research_use_allowed": "TRUE", "repeated_pitcher": "FALSE",
+        "trial_link": "UNKNOWN", "body_motion": "TRUE", "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "TRUE", "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN", "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "notes": [
+        "Existing8-view video/rotation data and image-derived ball tracks available for one identified trial; not an independent repeated-pitch set.",
+        "Rig is provisional; hardware timing and body/hand origins remain unverified. Do not substitute this trial for3034 records."
+      ]
+    },
+    {
+      "id": "gomaz2021_access_blocked",
+      "primary_url": "https://doi.org/10.3390/s21227442",
+      "data_url": "https://api.figshare.com/v2/articles/16691947",
+      "evidence": {
+        "raw_access": "FALSE", "research_use_allowed": "TRUE", "repeated_pitcher": "UNKNOWN",
+        "trial_link": "UNKNOWN", "body_motion": "UNKNOWN", "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "UNKNOWN", "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN", "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "notes": [
+        "Official API lists Data.csv30919798 and README30920326,CC BY4.0. Existing metadata reused; current individual-file504 and version1 archive502.",
+        "No checksummed original acquired. Paper-reported25 subjects224 pitches is not a new locally verified cohort. IMU pelvis/trunk observations would not supply hand/ball centers even if accessed."
+      ]
+    },
+    {
+      "id": "mycpuorg_video_radar_code_only",
+      "primary_url": "https://github.com/mycpuorg/baseball",
+      "evidence": {
+        "raw_access": "FALSE", "research_use_allowed": "UNKNOWN", "repeated_pitcher": "UNKNOWN",
+        "trial_link": "UNKNOWN", "body_motion": "UNKNOWN", "independent_speed_link_units": "UNKNOWN",
+        "hand_observation": "UNKNOWN", "ball_center_observation": "UNKNOWN",
+        "physical_release_evidence": "UNKNOWN", "physical_sync_checked": "UNKNOWN",
+        "heldout_geometry_checked": "UNKNOWN"
+      },
+      "notes": [
+        "New primary README/data directory inspected: published metadata/results CSV and code; videos are referenced as a local symlink, not published in that directory.",
+        "README states side view20/30/40fps and spoken radar labels; this is not calibrated synchronized multiview hand/ball ground truth. No third-party accuracy claim was adopted."
+      ]
+    }
+  ]
+}
