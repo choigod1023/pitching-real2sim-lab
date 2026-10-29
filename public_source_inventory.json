@@ -1,0 +1,111 @@
+{
+  "checked_utc": "2026-10-29T02:26:27.441208+00:00",
+  "upstream_commit": "44b98dae05cceb016f080ab39d105c85b8639084",
+  "release_url": "https://api.github.com/repos/drivelineresearch/openbiomechanics/releases?per_page=20",
+  "release_snapshot_sha256": "78711e72e6bae1c8be729576590cdf78dd883ce58f6cbfdff60fc60c5fd0954b",
+  "releases": [
+    {
+      "tag": "tools-mokka-0.6.2",
+      "assets": [
+        {
+          "name": "Mokka-0.6.2-Windows.64.zip",
+          "size": 14489063,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/tools-mokka-0.6.2/Mokka-0.6.2-Windows.64.zip"
+        },
+        {
+          "name": "Mokka-0.6.2_MacOSX.dmg",
+          "size": 19746379,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/tools-mokka-0.6.2/Mokka-0.6.2_MacOSX.dmg"
+        }
+      ]
+    },
+    {
+      "tag": "dataset-v1",
+      "assets": [
+        {
+          "name": "hitting_c3d.zip",
+          "size": 432315558,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_c3d.zip"
+        },
+        {
+          "name": "hitting_force_plate.zip",
+          "size": 36330244,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_force_plate.zip"
+        },
+        {
+          "name": "hitting_joint_angles.zip",
+          "size": 65702274,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_joint_angles.zip"
+        },
+        {
+          "name": "hitting_joint_velos.zip",
+          "size": 88658689,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_joint_velos.zip"
+        },
+        {
+          "name": "hitting_landmarks.zip",
+          "size": 65801815,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_landmarks.zip"
+        },
+        {
+          "name": "pitching_c3d.zip",
+          "size": 184602895,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_c3d.zip"
+        },
+        {
+          "name": "pitching_energy_flow.zip",
+          "size": 42445860,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_energy_flow.zip"
+        },
+        {
+          "name": "pitching_forces_moments.zip",
+          "size": 87265297,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_forces_moments.zip"
+        },
+        {
+          "name": "pitching_force_plate.zip",
+          "size": 18531766,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_force_plate.zip"
+        },
+        {
+          "name": "pitching_joint_angles.zip",
+          "size": 35646848,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_joint_angles.zip"
+        },
+        {
+          "name": "pitching_joint_velos.zip",
+          "size": 37316141,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_joint_velos.zip"
+        },
+        {
+          "name": "pitching_landmarks.zip",
+          "size": 33006696,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/pitching_landmarks.zip"
+        }
+      ]
+    },
+    {
+      "tag": "cv-media-v1",
+      "assets": [
+        {
+          "name": "cv_media.zip",
+          "size": 276836053,
+          "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/cv-media-v1/cv_media.zip"
+        }
+      ]
+    }
+  ],
+  "tracked_cv_data_filenames": [
+    "computer_vision/4d_reconstruction/release_keypoints.csv",
+    "computer_vision/calibration/results/extrinsics_summary.csv",
+    "computer_vision/calibration/results/intrinsics_summary.csv",
+    "computer_vision/checkerboard_calibrate/output/camera_matrix.csv",
+    "computer_vision/checkerboard_calibrate/output/distortion_coefficients.csv"
+  ],
+  "local_source_hashes": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\code\\v3d\\model\\v6_model_hybrid_lm.mdh": "3336f188691ad1aa84ac4869324980efe5f7f5fd6ac139a6012550d9c59a1514",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\code\\py\\copy_anonymize_c3ds_pull_db_csvs.ipynb": "37632e9304b6d7304acd5c541b15c459efa08027bbc3ce533b52b3bf969b262d"
+  },
+  "same_pitch_direct_ball_observation_confirmed": false,
+  "scope": "Public release inventory and extraction provenance. An absent asset name is not proof that no original3034 video exists anywhere."
+}

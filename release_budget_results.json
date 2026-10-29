@@ -1,0 +1,203 @@
+{
+  "protocol": "RELEASE_BUDGET_PROTOCOL.md",
+  "original_video_identity": {
+    "dataset": "OBP/baseball_pitching",
+    "pitch": "3034_1",
+    "athlete": 2,
+    "session": 3034,
+    "model_series": "original_speed_journey_arm_hand_rigid_ball_RK4"
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\speed-video\\video_manifest.json",
+      "sha256": "2c393454c5926fb7c48dd8ef2d7333e3e2fd959a7827ff423313261ca2c59923"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\speed-video\\rollout.npz",
+      "sha256": "321c4c7c7bacdb4873232791856e17a4c13ac4cf64d57c9c8eec868a5b9eb01d"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\grip-identifiability\\artifacts\\grip-identifiability\\fine-reference\\reference-0.npz",
+      "sha256": "85ac33f74967e35101ea87aefa17d8cd2d7681585fcccea10f69912cf7e952c2"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\main-release-budget-20261029\\same_pitch_results.json",
+      "sha256": "0ad6ec903faec82607592cdcc4640c55662bda820df98315de1d051b0c781455"
+    }
+  ],
+  "original_video_terminal_discrepancy": {
+    "model_speed_kmh": 113.46658063527904,
+    "recorded_scalar_kmh": 130.19592960000003,
+    "signed_record_minus_model_kmh": 16.729348964720987,
+    "minimum_velocity_vector_difference_mps": 4.647041379089163,
+    "minimum_terminal_momentum_difference_ns": 0.6738209999679287,
+    "terminal_ball_translational_energy_difference_j": 22.80346059742103,
+    "equivalent_average_force_n": {
+      "7": 96.26014285256123,
+      "8": 84.22762499599108,
+      "9": 74.86899999643653
+    },
+    "actual_contact_force_n": null,
+    "actual_release_velocity_error_kmh": null,
+    "corrected_speed_kmh": null,
+    "scope": "Conditional terminal comparison; recorded direction/time/position unverified. Not an applied force, work allowance, or correction."
+  },
+  "original_saved_trajectory_energy_audit": {
+    "release_velocity_mps": [
+      28.800560460445098,
+      8.932653533699272,
+      -9.173381120367912
+    ],
+    "ball_translational_ke_at_release_j": 72.02262397970799,
+    "other_kinetic_energy_at_release_j": 266.81143405702704,
+    "other_kinetic_energy_scope": "Includes rigid ball rotational kinetic energy; not available/recoverable energy capacity.",
+    "input_force_max_per_dof": [
+      434.50606214902433,
+      1293.5291999502,
+      1711.8499130715425,
+      547.115442911677,
+      993.3737845628546,
+      139.9445201505817,
+      462.3027679766582,
+      12.606981974144773,
+      0.7184230475087554,
+      44.524043481353075,
+      66.15185448710433
+    ],
+    "input_wrist_torque_norm_peak_nm": 79.74092451230703,
+    "state_changes": 0,
+    "input_changes": 0,
+    "windows": {
+      "whole_saved_throw": {
+        "start_s": 1.4306,
+        "stop_s": 1.600000000000188,
+        "generalized_net_work_j": 303.3322405941875,
+        "mechanical_energy_change_j": 303.90477523295215,
+        "net_work_minus_energy_change_j": -0.5725346387646368,
+        "shoulder_translation_work_j": 106.35712056002238,
+        "shoulder_rotation_work_j": 215.52786655663658,
+        "elbow_and_forearm_work_j": -10.144219333341713,
+        "wrist_marker_rotation_work_j": -8.408527189129819,
+        "ball_translational_ke_change_j": 66.00115178983307,
+        "other_kinetic_energy_change_j": 229.49881427878546,
+        "work_quadrature": "Trapezoid of saved endpoint force*velocity; original simulation uses held interval force. Residual includes quadrature/time-discretization."
+      },
+      "last_8ms_diagnostic": {
+        "start_s": 1.592000000000188,
+        "stop_s": 1.600000000000188,
+        "generalized_net_work_j": -7.142107492035818,
+        "mechanical_energy_change_j": -7.0559069043739555,
+        "net_work_minus_energy_change_j": -0.08620058766186212,
+        "shoulder_translation_work_j": -2.5321502431166536,
+        "shoulder_rotation_work_j": 9.011127186745746,
+        "elbow_and_forearm_work_j": -9.821265211758416,
+        "wrist_marker_rotation_work_j": -3.7998192239064954,
+        "ball_translational_ke_change_j": -2.135010210658592,
+        "other_kinetic_energy_change_j": -4.94301827357242,
+        "work_quadrature": "Trapezoid of saved endpoint force*velocity; original simulation uses held interval force. Residual includes quadrature/time-discretization."
+      }
+    }
+  },
+  "five_pitch_kinematic_diagnostics": [
+    {
+      "model_speed_kmh": 113.41533956375669,
+      "recorded_scalar_kmh": 130.19592960000003,
+      "signed_record_minus_model_kmh": 16.780590036243353,
+      "minimum_velocity_vector_difference_mps": 4.661275010067598,
+      "minimum_terminal_momentum_difference_ns": 0.6758848764598017,
+      "terminal_ball_translational_energy_difference_j": 22.868496189300167,
+      "equivalent_average_force_n": {
+        "7": 96.55498235140024,
+        "8": 84.4856095574752,
+        "9": 75.09831960664464
+      },
+      "actual_contact_force_n": null,
+      "actual_release_velocity_error_kmh": null,
+      "corrected_speed_kmh": null,
+      "scope": "Conditional terminal comparison; recorded direction/time/position unverified. Not an applied force, work allowance, or correction.",
+      "pitch": "3034_1",
+      "model_series": "continuous_fixed_grip_kinematics"
+    },
+    {
+      "model_speed_kmh": 113.86003470301493,
+      "recorded_scalar_kmh": 131.0006016,
+      "signed_record_minus_model_kmh": 17.14056689698508,
+      "minimum_velocity_vector_difference_mps": 4.761268582495855,
+      "minimum_terminal_momentum_difference_ns": 0.690383944461899,
+      "terminal_ball_translational_energy_difference_j": 23.47886832421193,
+      "equivalent_average_force_n": {
+        "7": 98.62627778027128,
+        "8": 86.29799305773737,
+        "9": 76.70932716243323
+      },
+      "actual_contact_force_n": null,
+      "actual_release_velocity_error_kmh": null,
+      "corrected_speed_kmh": null,
+      "scope": "Conditional terminal comparison; recorded direction/time/position unverified. Not an applied force, work allowance, or correction.",
+      "pitch": "3034_2",
+      "model_series": "continuous_fixed_grip_kinematics"
+    },
+    {
+      "model_speed_kmh": 112.5366982072797,
+      "recorded_scalar_kmh": 129.23032320000002,
+      "signed_record_minus_model_kmh": 16.693624992720327,
+      "minimum_velocity_vector_difference_mps": 4.637118053533424,
+      "minimum_terminal_momentum_difference_ns": 0.6723821177623465,
+      "terminal_ball_translational_energy_difference_j": 22.577753035961297,
+      "equivalent_average_force_n": {
+        "7": 96.05458825176378,
+        "8": 84.0477647202933,
+        "9": 74.70912419581627
+      },
+      "actual_contact_force_n": null,
+      "actual_release_velocity_error_kmh": null,
+      "corrected_speed_kmh": null,
+      "scope": "Conditional terminal comparison; recorded direction/time/position unverified. Not an applied force, work allowance, or correction.",
+      "pitch": "3034_3",
+      "model_series": "continuous_fixed_grip_kinematics"
+    },
+    {
+      "model_speed_kmh": 113.6467276905114,
+      "recorded_scalar_kmh": 128.4256512,
+      "signed_record_minus_model_kmh": 14.778923509488596,
+      "minimum_velocity_vector_difference_mps": 4.105256530413499,
+      "minimum_terminal_momentum_difference_ns": 0.5952621969099573,
+      "terminal_ball_translational_energy_difference_j": 20.013407787442414,
+      "equivalent_average_force_n": {
+        "7": 85.03745670142247,
+        "8": 74.40777461374466,
+        "9": 66.14024410110638
+      },
+      "actual_contact_force_n": null,
+      "actual_release_velocity_error_kmh": null,
+      "corrected_speed_kmh": null,
+      "scope": "Conditional terminal comparison; recorded direction/time/position unverified. Not an applied force, work allowance, or correction.",
+      "pitch": "3034_4",
+      "model_series": "continuous_fixed_grip_kinematics"
+    },
+    {
+      "model_speed_kmh": 108.73143811361645,
+      "recorded_scalar_kmh": 128.5865856,
+      "signed_record_minus_model_kmh": 19.85514748638356,
+      "minimum_velocity_vector_difference_mps": 5.515318746217655,
+      "minimum_terminal_momentum_difference_ns": 0.79972121820156,
+      "terminal_ball_translational_energy_difference_j": 26.359480420200008,
+      "equivalent_average_force_n": {
+        "7": 114.24588831450856,
+        "8": 99.965152275195,
+        "9": 88.85791313350667
+      },
+      "actual_contact_force_n": null,
+      "actual_release_velocity_error_kmh": null,
+      "corrected_speed_kmh": null,
+      "scope": "Conditional terminal comparison; recorded direction/time/position unverified. Not an applied force, work allowance, or correction.",
+      "pitch": "3034_5",
+      "model_series": "continuous_fixed_grip_kinematics"
+    }
+  ],
+  "new_physical_correction_adopted": false,
+  "speed_gap_reduction_kmh": 0.0,
+  "actual_contact_relative_motion_observed": false,
+  "scientific_stage_passed": false,
+  "interpretation": "Missing terminal ball energy must be accounted for by redistribution, reduced absorption, or changed input work. This diagnostic does not show whether same-budget redistribution is feasible. No added finger force or corrected speed is simulated."
+}
