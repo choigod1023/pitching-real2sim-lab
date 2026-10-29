@@ -122,7 +122,7 @@ def fit_grid(source, training, allow_translation):
 
 def run():
     OUT.mkdir(parents=True, exist_ok=True)
-    freeze = json.loads((OUT/'blind_annotation_freeze.json').read_text(encoding='utf-8'))
+    freeze = json.loads((ROOT/'prime17_annotation_freeze.json').read_text(encoding='utf-8'))
     for path, digest in freeze['sha256'].items():
         if sha(path) != digest:
             raise ValueError('Annotation/protocol changed after blind freeze')
