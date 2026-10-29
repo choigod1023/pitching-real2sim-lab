@@ -10,6 +10,7 @@ from torque_arm import derivatives
 from joint_intervention import inverse_controls, rotation_differences
 from observed_candidate_simulation import warp_elbow
 from capacity_budget_gate import rollout, gate
+from coach_hypotheses.model_retirement.policy import legacy_diagnostic_only, model_usage_metadata, RetiredPredictionModelError
 
 PARAMETER_NAMES=['shoulder_x_deg','shoulder_y_deg','elbow_deg','wrist_marker_y_deg','wrist_marker_z_deg','elbow_delay_ms']
 SCALES=np.array([1.,1.,1.,1.,1.,.7])
@@ -69,6 +70,7 @@ def select_resolved_candidate(replays):
     return max(resolved,key=lambda r:r['speed_gain_kmh'])
 
 
+@legacy_diagnostic_only
 def run(source,out,max_evaluations=500):
     source=Path(source);out=Path(out);out.mkdir(parents=True,exist_ok=True)
     z=np.load(source);q=z['qpos'];dt=float(z['dt']);lengths=z['lengths'];model=model_for(lengths,dt)
@@ -130,9 +132,13 @@ def run(source,out,max_evaluations=500):
             changed,controls,pos,vel=states[(index,sub)]
             np.savez_compressed(out/f'state-{label}-sub{sub}.npz',qreference=q,candidate_q=changed,controls=controls,qpos=pos,qvel=vel,dt=dt,lengths=lengths,parameters=np.array(records[index]['parameters']))
     report=dict(source=str(source.resolve()),source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),protocol_sha256=hashlib.sha256(Path('MOTION_SEARCH_PROTOCOL.md').read_bytes()).hexdigest(),code_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),seed=20261026,evaluation_budget=max_evaluations,parameter_names=PARAMETER_NAMES,records=records,optimizer_runs=optimizer_runs,replays=replay,baseline_fine=baseline_states[2][0],selected_fine=selected,diagnostic_fine=diagnostic_fine,coarse_feasible_count=len(coarse_feasible),coarse_positive_feasible_count=sum(r['speed_gain_kmh']>1e-6 for r in coarse_feasible),recorded_speed_kmh=79.8*1.609344,interpretation='Conditional model search; neither athlete gain nor global optimum established.')
+    report.update(model_usage_metadata())
     (out/'report.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf8')
     print(json.dumps({k:report[k] for k in ['coarse_feasible_count','coarse_positive_feasible_count','selected_fine','diagnostic_fine']},indent=2),flush=True)
     return report
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--source',default='../within-athlete-candidates/artifacts/observed-candidate/reference-3034_4/reference-0.npz');p.add_argument('--out',default='artifacts/constrained-motion-search');a=p.parse_args();run(a.source,a.out)
+    p=argparse.ArgumentParser();p.add_argument('--source',default='../within-athlete-candidates/artifacts/observed-candidate/reference-3034_4/reference-0.npz');p.add_argument('--out',default='artifacts/constrained-motion-search')
+    p.add_argument('--legacy-diagnostic',action='store_true');a=p.parse_args()
+    try:run(a.source,a.out,legacy_diagnostic=a.legacy_diagnostic)
+    except RetiredPredictionModelError as error:p.error(str(error))

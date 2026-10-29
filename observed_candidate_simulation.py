@@ -9,6 +9,7 @@ from coupled_payload import model_for
 from torque_arm import derivatives
 from capacity_budget_gate import rollout, gate
 from joint_intervention import inverse_controls, rotation_differences, initial_energy
+from coach_hypotheses.model_retirement.policy import legacy_diagnostic_only, model_usage_metadata, RetiredPredictionModelError
 
 
 def elbow_peak(q, dt):
@@ -29,6 +30,7 @@ def warp_elbow(q,dt,delay):
     return changed,mapped
 
 
+@legacy_diagnostic_only
 def run(out='artifacts/observed-candidate',data='../openbiomechanics/baseball_pitching/data'):
     out=Path(out); out.mkdir(parents=True,exist_ok=True)
     from coupled_payload import run as prepare
@@ -80,8 +82,12 @@ def run(out='artifacts/observed-candidate',data='../openbiomechanics/baseball_pi
     report=dict(protocol='OBSERVED_CANDIDATE_SIMULATION.md',measured_fast_minus_slow_kmh=(81.4-79.8)*1.609344,
         source_hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in [Path('OBSERVED_CANDIDATE_SIMULATION.md'),*[out/f'reference-{pitch}'/'reference-0.npz' for pitch in ('3034_4','3034_2')]]},
         scope='Inverse-demand trajectory interpolation, actual RK4; NOT equal force inputs or intervention truth.',runs=records)
+    report.update(model_usage_metadata())
     (out/'report.json').write_text(json.dumps(report,indent=2,allow_nan=False),encoding='utf8')
     return report
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__); p.add_argument('--out',default='artifacts/observed-candidate'); p.add_argument('--data',default='../openbiomechanics/baseball_pitching/data'); args=p.parse_args(); run(args.out,args.data)
+    p=argparse.ArgumentParser(description=__doc__); p.add_argument('--out',default='artifacts/observed-candidate'); p.add_argument('--data',default='../openbiomechanics/baseball_pitching/data')
+    p.add_argument('--legacy-diagnostic',action='store_true');args=p.parse_args()
+    try:run(args.out,args.data,legacy_diagnostic=args.legacy_diagnostic)
+    except RetiredPredictionModelError as error:p.error(str(error))
