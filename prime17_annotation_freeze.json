@@ -1,0 +1,13 @@
+{
+  "projection_computed": false,
+  "annotations_frozen_before_projection": true,
+  "sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-hand-alignment-20261029\\prime17_regions.json": "8cef63d3ab8d30eb3968ee579c1ab0eb5f958c9537f41d546d6f679776cd425b",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-hand-alignment-20261029\\PRIME17_HAND_PROTOCOL.md": "bc19d529affef1047502ef2e22b5a7a48de6c55db9ecead94023914f9b60defc",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\multiview-reference-reset-20261029\\artifacts\\multiview-reset\\camera17_hand_raw_971.png": "a17a93e20b15066db6dea3777cab59da4d11e021408bb71c43ac4fc0d4837fac",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\multiview-reference-reset-20261029\\artifacts\\multiview-reset\\camera17_hand_raw_973.png": "d00dac3a41fc3dd4107b3a0274b4836f61c20c32ae6fcc086878e97439685de2",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\multiview-reference-reset-20261029\\artifacts\\multiview-reset\\camera17_hand_raw_975.png": "078e63a37b0614a14b6df4a3f530ce8a214d438fac89398c0f9046d5accb4292",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\multiview-reference-reset-20261029\\artifacts\\multiview-reset\\camera17_hand_raw_977.png": "b9212bf5bac6831e88cdfc0a646f774048a07ed0a5f7a1d70e08a068f529c0a9",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\multiview-reference-reset-20261029\\artifacts\\multiview-reset\\camera17_hand_raw_979.png": "f3f9399ed25b42dbb6e031aa4eace29c8a2aaa04ede94d3d65d34619bd939d16"
+  }
+}
