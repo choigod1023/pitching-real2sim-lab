@@ -111,7 +111,8 @@ def pitch_metrics(prepared, meta, poi, cutoff):
         raise ValueError('nonfinite_poi_predictor')
     pt, pv, pb = window_peak(time, signal['pelvis_velo_z'], pkh, br)
     tt, tv, tb = window_peak(time, signal['torso_velo_z'], pkh, br)
-    extension = -signal['lead_knee_velo_x']
+    # Actual CSV uses extension positive; see AMENDMENT_01_KNEE_SIGN.md.
+    extension = signal['lead_knee_velo_x']
     _, peak_knee, kb = window_peak(time, extension, fp, br)
     _, separation, sb = window_peak(time, signal['torso_pelvis_angle_z'], pkh, br)
     _, varus, _ = window_peak(time, signal['elbow_moment_y'], pkh, br)
@@ -160,12 +161,16 @@ def read_cohort(data):
     poi = pd.read_csv(data / 'poi/poi_metrics.csv')
     if meta.session_pitch.duplicated().any() or poi.session_pitch.duplicated().any():
         raise ValueError('duplicate_pitch_key')
+    if meta[['user', 'session', 'session_pitch']].isna().any().any() or meta.groupby('session').user.nunique().max() != 1 or meta.groupby('user').session.nunique().max() != 1:
+        raise ValueError('ambiguous_player_session_identity')
     check = meta.merge(poi[['session_pitch', 'pitch_speed_mph']], on='session_pitch', validate='one_to_one', suffixes=('', '_poi'))
     if len(check) != len(meta) or len(poi) != len(meta) or not np.allclose(check.pitch_speed_mph, check.pitch_speed_mph_poi, atol=1e-8, rtol=0):
         raise ValueError('metadata_poi_identity_or_speed_conflict')
     groups = {}
     for name, cols in COLUMNS.items():
         frame = pd.read_csv(data / f'full_sig/{name}.csv', usecols=['session_pitch', 'time', *EVENTS, 'fp_100_time', *cols])
+        if set(frame.session_pitch) != set(meta.session_pitch):
+            raise ValueError('full_signal_pitch_key_mismatch:' + name)
         groups[name] = dict(tuple(frame.groupby('session_pitch', sort=False)))
     poi = poi.set_index('session_pitch')
     rows, exclusions = [], []

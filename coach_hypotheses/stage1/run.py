@@ -8,6 +8,7 @@ import subprocess
 import pandas as pd
 
 from .metrics import read_cohort, CUTOFFS, COLUMNS
+from .audit import knee_sign_audit
 from .modeling import (nested_predictions, prediction_summary, associations,
                        filter_sensitivity, scientific_gate)
 
@@ -25,6 +26,7 @@ def file_hash(path):
 def analyze(data, output):
     output.mkdir(parents=True, exist_ok=True)
     derived, excluded, total = read_cohort(data)
+    knee_sign_audit(data).to_csv(output / 'knee_sign_audit.csv', index=False)
     derived.to_csv(output / 'pitch_metrics.csv', index=False)
     (output / 'exclusions.json').write_text(json.dumps(excluded, ensure_ascii=False, indent=2), encoding='utf-8')
     summaries, audits, correlations, individual_errors = {}, {}, [], []
@@ -55,6 +57,8 @@ def analyze(data, output):
                 'code': {p.name: file_hash(p) for p in sorted(package.glob('*.py'))},
                 'protocol_sha256': file_hash(package / 'PROTOCOL.md'),
                 'preregistration_commit': PREREGISTRATION_COMMIT,
+                'sign_amendment_commit': 'e327e92',
+                'sign_amendment_sha256': file_hash(package / 'AMENDMENT_01_KNEE_SIGN.md'),
                 'head_at_execution': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=package, text=True).strip()}
     (output / 'manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
     (output / 'split_audit.json').write_text(json.dumps(audits, indent=2), encoding='utf-8')
@@ -65,6 +69,7 @@ def analyze(data, output):
                'historical_reference': {'players': 89, 'evaluation_pitches': 203, 'model_mae_kmh': .990, 'mean_baseline_mae_kmh': .964, 'comparable_before_after': False},
                'actual_ball_release_height_available': False,
                'raw_filter_reprocessing': False, 'retrospective_oracle_baseline': True}
+    summary['post_preregistration_definition_correction'] = 'AMENDMENT_01_KNEE_SIGN.md'
     (output / 'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2, allow_nan=False), encoding='utf-8')
     return summary
 

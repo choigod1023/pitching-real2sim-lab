@@ -1,0 +1,62 @@
+[
+  {
+    "session_pitch": "1370_1",
+    "user": "905",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "1371_2",
+    "user": "906",
+    "reason": "nonfinite_analysis_window"
+  },
+  {
+    "session_pitch": "1371_3",
+    "user": "906",
+    "reason": "insufficient_filter_padding"
+  },
+  {
+    "session_pitch": "2919_2",
+    "user": "917",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2919_3",
+    "user": "917",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2919_4",
+    "user": "917",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2919_5",
+    "user": "917",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2857_4",
+    "user": "1616",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2918_3",
+    "user": "1637",
+    "reason": "invalid_event_order"
+  },
+  {
+    "session_pitch": "2923_1",
+    "user": "1641",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2923_2",
+    "user": "1641",
+    "reason": "missing_or_nonconstant_event:fp_10_time"
+  },
+  {
+    "session_pitch": "2919_1",
+    "user": "917",
+    "reason": "fewer_than_two_valid_pitches"
+  }
+]

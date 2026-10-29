@@ -1,0 +1,120 @@
+{
+  "source_pitches": 411,
+  "included_pitches": 399,
+  "included_players": 98,
+  "excluded_pitches": 12,
+  "conditions": {
+    "10": {
+      "within": {
+        "players": 98,
+        "pitches": 399,
+        "player_balanced_model_mae_kmh": 0.646535289508196,
+        "player_balanced_baseline_mae_kmh": 0.6297415986938782,
+        "pooled_model_mae_kmh": 0.6533003606506715,
+        "pooled_baseline_mae_kmh": 0.6415460956390986,
+        "paired_mae_difference_kmh": 0.016793690814317884,
+        "paired_difference_cluster_ci95": [
+          0.0017776825960910314,
+          0.0318706248800522
+        ],
+        "players_model_better": 47
+      },
+      "between": {
+        "players": 98,
+        "pitches": 98,
+        "player_balanced_model_mae_kmh": 5.33817805881246,
+        "player_balanced_baseline_mae_kmh": 6.1660944834167895,
+        "pooled_model_mae_kmh": 5.33817805881246,
+        "pooled_baseline_mae_kmh": 6.1660944834167895,
+        "paired_mae_difference_kmh": -0.8279164246043298,
+        "paired_difference_cluster_ci95": [
+          -1.6933568195282875,
+          0.0073802528399903216
+        ],
+        "players_model_better": 57
+      }
+    },
+    "20": {
+      "within": {
+        "players": 98,
+        "pitches": 399,
+        "player_balanced_model_mae_kmh": 0.6395171629932996,
+        "player_balanced_baseline_mae_kmh": 0.6297415986938782,
+        "pooled_model_mae_kmh": 0.649315746773782,
+        "pooled_baseline_mae_kmh": 0.6415460956390986,
+        "paired_mae_difference_kmh": 0.009775564299421518,
+        "paired_difference_cluster_ci95": [
+          -0.00018055054646682838,
+          0.02096642255392198
+        ],
+        "players_model_better": 45
+      },
+      "between": {
+        "players": 98,
+        "pitches": 98,
+        "player_balanced_model_mae_kmh": 5.970336682437533,
+        "player_balanced_baseline_mae_kmh": 6.1660944834167895,
+        "pooled_model_mae_kmh": 5.970336682437533,
+        "pooled_baseline_mae_kmh": 6.1660944834167895,
+        "paired_mae_difference_kmh": -0.19575780097925596,
+        "paired_difference_cluster_ci95": [
+          -0.9656251267363836,
+          0.5444036554474291
+        ],
+        "players_model_better": 53
+      }
+    },
+    "30": {
+      "within": {
+        "players": 98,
+        "pitches": 399,
+        "player_balanced_model_mae_kmh": 0.6397112313568701,
+        "player_balanced_baseline_mae_kmh": 0.6297415986938782,
+        "pooled_model_mae_kmh": 0.6495282257410248,
+        "pooled_baseline_mae_kmh": 0.6415460956390986,
+        "paired_mae_difference_kmh": 0.009969632662991825,
+        "paired_difference_cluster_ci95": [
+          -0.001452966011349625,
+          0.023191617514188353
+        ],
+        "players_model_better": 47
+      },
+      "between": {
+        "players": 98,
+        "pitches": 98,
+        "player_balanced_model_mae_kmh": 6.141184045649431,
+        "player_balanced_baseline_mae_kmh": 6.1660944834167895,
+        "pooled_model_mae_kmh": 6.141184045649431,
+        "pooled_baseline_mae_kmh": 6.1660944834167895,
+        "paired_mae_difference_kmh": -0.02491043776735774,
+        "paired_difference_cluster_ci95": [
+          -0.7574573185454856,
+          0.7065682612956335
+        ],
+        "players_model_better": 53
+      }
+    }
+  },
+  "filter_lag_sign_reversals": 54,
+  "gate": {
+    "verdict": "FAIL",
+    "criteria": {
+      "sample_size": true,
+      "split_and_preprocessing_integrity": true,
+      "primary_mae_better": false,
+      "primary_ci_upper_negative": false,
+      "other_filters_noninferior": false
+    }
+  },
+  "historical_reference": {
+    "players": 89,
+    "evaluation_pitches": 203,
+    "model_mae_kmh": 0.99,
+    "mean_baseline_mae_kmh": 0.964,
+    "comparable_before_after": false
+  },
+  "actual_ball_release_height_available": false,
+  "raw_filter_reprocessing": false,
+  "retrospective_oracle_baseline": true,
+  "post_preregistration_definition_correction": "AMENDMENT_01_KNEE_SIGN.md"
+}

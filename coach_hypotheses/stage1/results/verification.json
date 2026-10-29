@@ -1,0 +1,15 @@
+{
+  "code_hashes_match": true,
+  "protocol_hash_matches": true,
+  "protocol_identical_to_preregistration": true,
+  "source_hashes_match": true,
+  "zero_mean_pred_10": true,
+  "zero_mean_truth_10": true,
+  "disjoint_players_10": true,
+  "zero_mean_pred_20": true,
+  "zero_mean_truth_20": true,
+  "disjoint_players_20": true,
+  "zero_mean_pred_30": true,
+  "zero_mean_truth_30": true,
+  "disjoint_players_30": true
+}

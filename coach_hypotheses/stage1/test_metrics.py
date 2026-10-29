@@ -14,7 +14,7 @@ def fixture_tables():
     events = dict(zip(EVENTS, (.4, 1., 1.5)))
     values = {'pelvis_velo_z': 100*np.exp(-((t-1.1)/.08)**2),
               'torso_velo_z': 150*np.exp(-((t-1.2)/.08)**2),
-              'lead_knee_velo_x': np.full(len(t), -20.),
+              'lead_knee_velo_x': np.full(len(t), 20.),
               'lead_knee_angle_x': 60-20*t, 'torso_pelvis_angle_z': 30+2*t,
               'elbow_moment_y': np.full(len(t), 60.),
               'shoulder_upper_arm_force_x': np.full(len(t), 30.),
@@ -136,7 +136,7 @@ class MetricTests(unittest.TestCase):
             meta, poi, tables = [], [], {k: [] for k in COLUMNS}
             for i in range(4):
                 key = f'10_{i}'
-                meta.append(dict(fixture_metadata(), session_pitch=key, user=1 if i < 3 else 2))
+                meta.append(dict(fixture_metadata(), session_pitch=key, user=1 if i < 3 else 2, session=10 if i < 3 else 20))
                 poi.append(dict(fixture_poi(), session_pitch=key))
                 for name, frame in fixture_tables().items():
                     frame['session_pitch'] = key
@@ -154,6 +154,17 @@ class MetricTests(unittest.TestCase):
             poi[0]['pitch_speed_mph'] = 81
             pd.DataFrame(poi).to_csv(path/'poi/poi_metrics.csv', index=False)
             with self.assertRaisesRegex(ValueError, 'identity_or_speed_conflict'):
+                read_cohort(path)
+            poi[0]['pitch_speed_mph'] = 80
+            pd.DataFrame(poi).to_csv(path/'poi/poi_metrics.csv', index=False)
+            meta[3]['session'] = 10
+            pd.DataFrame(meta).to_csv(path/'metadata.csv', index=False)
+            with self.assertRaisesRegex(ValueError, 'ambiguous_player_session'):
+                read_cohort(path)
+            meta[3]['session'] = 20
+            pd.DataFrame(meta).to_csv(path/'metadata.csv', index=False)
+            pd.concat(tables['landmarks']).query("session_pitch != '10_0'").to_csv(path/'full_sig/landmarks.csv', index=False)
+            with self.assertRaisesRegex(ValueError, 'pitch_key_mismatch'):
                 read_cohort(path)
 
 
