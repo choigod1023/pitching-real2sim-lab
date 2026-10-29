@@ -1,0 +1,13 @@
+test_held_player_labels_cannot_change_predictions_or_selection (coach_hypotheses.replacement_review.test_benchmark.ReplacementTests.test_held_player_labels_cannot_change_predictions_or_selection) ... ok
+test_linear_grid_matches_existing_weighted_ridge (coach_hypotheses.replacement_review.test_benchmark.ReplacementTests.test_linear_grid_matches_existing_weighted_ridge) ... ok
+test_mapping_is_train_only_and_fixed_random_features (coach_hypotheses.replacement_review.test_benchmark.ReplacementTests.test_mapping_is_train_only_and_fixed_random_features) ... ok
+test_nonlinear_control_recovers_known_quadratic_signal (coach_hypotheses.replacement_review.test_benchmark.ReplacementTests.test_nonlinear_control_recovers_known_quadratic_signal) ... ok
+test_null_selection_when_no_target_signal (coach_hypotheses.replacement_review.test_benchmark.ReplacementTests.test_null_selection_when_no_target_signal) ... ok
+test_run_orchestration_and_output_guard (coach_hypotheses.replacement_review.test_benchmark.ReplacementTests.test_run_orchestration_and_output_guard) ... usage: benchmark [-h] [--output OUTPUT]
+benchmark: error: output must stay inside replacement_review
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.472s
+
+OK

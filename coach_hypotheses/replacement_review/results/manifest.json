@@ -1,0 +1,10 @@
+{
+  "preregistration_commit": "93c95a8",
+  "sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\model-replacement-review-20261029\\coach_hypotheses\\replacement_review\\BENCHMARK_PROTOCOL.md": "de107a25d37216d035d98071290273d04133fd350832619fbbf08ff5fe289a25",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\model-replacement-review-20261029\\coach_hypotheses\\stage1\\PROTOCOL.md": "df6f1b1b8c61510f2dea351909066d90ea9e64cd2c35a35921c6bfd765e2eb99",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\model-replacement-review-20261029\\coach_hypotheses\\stage1_diagnostics\\results\\waveform_features.csv": "c491ea366904757af4642a6d0c6776e01805267c00236940e20ea810af83af35",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\model-replacement-review-20261029\\coach_hypotheses\\stage1\\results\\pitch_metrics.csv": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\model-replacement-review-20261029\\coach_hypotheses\\replacement_review\\benchmark.py": "22429164f1e61c6d13760f8d27aa9ad9611651990b10f200c40205813abc05ee"
+  }
+}
