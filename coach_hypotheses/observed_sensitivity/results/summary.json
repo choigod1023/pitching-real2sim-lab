@@ -1,0 +1,4842 @@
+{
+  "selected_pairs": 59,
+  "selected_players": 38,
+  "event_filter_pair_rows": 14337,
+  "nominal_reproduction_max_absolute_difference": 0.0,
+  "common_event_stable_pairs": 52,
+  "independent_event_stable_pairs": 35,
+  "independent_event_stable_gap_at_least_1_pairs": 14,
+  "raw_signed_independent_event_stable_pairs": 31,
+  "per_reading_margin_min_median_max": {
+    "speed_order_error_limit_kmh": [
+      0.08046719999998686,
+      0.40233599999999825,
+      1.367942400000004
+    ],
+    "gap_at_least_1_error_limit_kmh": [
+      -0.41953280000001314,
+      -0.09766400000000175,
+      0.867942400000004
+    ],
+    "elbow_peak_error_limit_nm": [
+      0.018911592851566184,
+      0.9964309301514547,
+      8.638787353490876
+    ],
+    "shoulder_resultant_error_limit_n": [
+      0.19086777679069655,
+      7.6194033860635955,
+      39.89489905991991
+    ],
+    "signed_tension_error_limit_n": [
+      0.3790971880418501,
+      4.351552947514131,
+      30.514915446200067
+    ],
+    "joint_shoulder_error_limit_n": [
+      0.19086777679069655,
+      2.77136294465717,
+      20.398452412604364
+    ]
+  },
+  "engineering_profiles": [
+    {
+      "per_reading_bounds": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nominal_pairs": 59,
+      "common_event_pairs": 52,
+      "independent_event_pairs": 35,
+      "independent_event_gap_at_least_1_pairs": 14,
+      "original_gap_at_least_1_and_independent_event_pairs": 14
+    },
+    {
+      "per_reading_bounds": [
+        0.25,
+        0.5,
+        5.0
+      ],
+      "nominal_pairs": 11,
+      "common_event_pairs": 11,
+      "independent_event_pairs": 7,
+      "independent_event_gap_at_least_1_pairs": 1,
+      "original_gap_at_least_1_and_independent_event_pairs": 5
+    },
+    {
+      "per_reading_bounds": [
+        0.5,
+        1.0,
+        10.0
+      ],
+      "nominal_pairs": 2,
+      "common_event_pairs": 2,
+      "independent_event_pairs": 1,
+      "independent_event_gap_at_least_1_pairs": 0,
+      "original_gap_at_least_1_and_independent_event_pairs": 1
+    },
+    {
+      "per_reading_bounds": [
+        1.0,
+        2.0,
+        20.0
+      ],
+      "nominal_pairs": 0,
+      "common_event_pairs": 0,
+      "independent_event_pairs": 0,
+      "independent_event_gap_at_least_1_pairs": 0,
+      "original_gap_at_least_1_and_independent_event_pairs": 0
+    },
+    {
+      "per_reading_bounds": [
+        2.0,
+        5.0,
+        50.0
+      ],
+      "nominal_pairs": 0,
+      "common_event_pairs": 0,
+      "independent_event_pairs": 0,
+      "independent_event_gap_at_least_1_pairs": 0,
+      "original_gap_at_least_1_and_independent_event_pairs": 0
+    }
+  ],
+  "knee_audit": {
+    "pitch_filter_cases": 288,
+    "finite_correlations": 288,
+    "extension_correlation_min_median_max": [
+      0.9996426821045494,
+      0.9999438066222128,
+      0.9999582227198764
+    ],
+    "same_direction_mae_median_dps": 1.4597736670806087,
+    "opposite_direction_mae_median_dps": 312.22826732600316
+  },
+  "pair_records": [
+    {
+      "user": "2",
+      "pitch_i": "3034_1",
+      "pitch_j": "3034_3",
+      "faster_pitch": "3034_1",
+      "slower_pitch": "3034_3",
+      "recorded_speed_gap_kmh": 0.9656064000000129,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.106069212158701,
+      "worst_shoulder_resultant_delta_n": -4.8025230714049485,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.4828032000000064,
+        "gap_at_least_1_error_limit_kmh": -0.017196799999993573,
+        "elbow_peak_error_limit_nm": 0.5530346060793505,
+        "shoulder_resultant_error_limit_n": 10.688748732127635,
+        "signed_tension_error_limit_n": 6.0711035879301365,
+        "joint_shoulder_error_limit_n": 6.0711035879301365
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "72",
+      "pitch_i": "2996_1",
+      "pitch_j": "2996_3",
+      "faster_pitch": "2996_1",
+      "slower_pitch": "2996_3",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -5.97107488802402,
+      "worst_shoulder_resultant_delta_n": -9.092863712555527,
+      "worst_tension_magnitude_delta_n": -0.830911644151044,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 2.98553744401201,
+        "shoulder_resultant_error_limit_n": 10.176758530333132,
+        "signed_tension_error_limit_n": 0.415455822075522,
+        "joint_shoulder_error_limit_n": 0.415455822075522
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "283",
+      "pitch_i": "1826_1",
+      "pitch_j": "1826_2",
+      "faster_pitch": "1826_1",
+      "slower_pitch": "1826_2",
+      "recorded_speed_gap_kmh": 0.6437375999999801,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -2.973924655848876,
+      "worst_shoulder_resultant_delta_n": -11.824483509923311,
+      "worst_tension_magnitude_delta_n": -2.7948408962135716,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218687999999901,
+        "gap_at_least_1_error_limit_kmh": -0.17813120000000993,
+        "elbow_peak_error_limit_nm": 1.486962327924438,
+        "shoulder_resultant_error_limit_n": 17.53198276280159,
+        "signed_tension_error_limit_n": 1.3974204481067858,
+        "joint_shoulder_error_limit_n": 1.3974204481067858
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "283",
+      "pitch_i": "1826_1",
+      "pitch_j": "1826_5",
+      "faster_pitch": "1826_1",
+      "slower_pitch": "1826_5",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -3.1939430700894462,
+      "worst_shoulder_resultant_delta_n": -41.207289584126784,
+      "worst_tension_magnitude_delta_n": -6.301458175293691,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 1.5969715350447231,
+        "shoulder_resultant_error_limit_n": 33.09265800804826,
+        "signed_tension_error_limit_n": 3.1507290876468454,
+        "joint_shoulder_error_limit_n": 3.1507290876468454
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "359",
+      "pitch_i": "2734_1",
+      "pitch_j": "2734_3",
+      "faster_pitch": "2734_1",
+      "slower_pitch": "2734_3",
+      "recorded_speed_gap_kmh": 0.16093440000000214,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -2.1945052486406667,
+      "worst_shoulder_resultant_delta_n": 6.4403887110875075,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046720000000107,
+        "gap_at_least_1_error_limit_kmh": -0.41953279999999893,
+        "elbow_peak_error_limit_nm": 1.0972526243203333,
+        "shoulder_resultant_error_limit_n": 7.248135887761293,
+        "signed_tension_error_limit_n": 1.8487397506870993,
+        "joint_shoulder_error_limit_n": 1.8487397506870993
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "359",
+      "pitch_i": "2734_2",
+      "pitch_j": "2734_4",
+      "faster_pitch": "2734_4",
+      "slower_pitch": "2734_2",
+      "recorded_speed_gap_kmh": 0.4828032000000064,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -0.479947249216778,
+      "worst_shoulder_resultant_delta_n": 7.688299005171757,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.2414016000000032,
+        "gap_at_least_1_error_limit_kmh": -0.2585983999999968,
+        "elbow_peak_error_limit_nm": 0.239973624608389,
+        "shoulder_resultant_error_limit_n": 0.28384125609301236,
+        "signed_tension_error_limit_n": 3.0296973690509903,
+        "joint_shoulder_error_limit_n": 0.28384125609301236
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "572",
+      "pitch_i": "3222_1",
+      "pitch_j": "3222_5",
+      "faster_pitch": "3222_5",
+      "slower_pitch": "3222_1",
+      "recorded_speed_gap_kmh": 0.4828031999999922,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -2.2392970700631736,
+      "worst_shoulder_resultant_delta_n": 22.93392694439865,
+      "worst_tension_magnitude_delta_n": -1.2447775751019794,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.2414015999999961,
+        "gap_at_least_1_error_limit_kmh": -0.2585984000000039,
+        "elbow_peak_error_limit_nm": 1.1196485350315868,
+        "shoulder_resultant_error_limit_n": 2.313155536264503,
+        "signed_tension_error_limit_n": 0.6223887875509897,
+        "joint_shoulder_error_limit_n": 0.6223887875509897
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "675",
+      "pitch_i": "3065_2",
+      "pitch_j": "3065_4",
+      "faster_pitch": "3065_2",
+      "slower_pitch": "3065_4",
+      "recorded_speed_gap_kmh": 0.16093440000000214,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.0432583632011045,
+      "worst_shoulder_resultant_delta_n": 22.221386541266156,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046720000000107,
+        "gap_at_least_1_error_limit_kmh": -0.41953279999999893,
+        "elbow_peak_error_limit_nm": 0.5216291816005523,
+        "shoulder_resultant_error_limit_n": 16.963494593983683,
+        "signed_tension_error_limit_n": 11.612073782789924,
+        "joint_shoulder_error_limit_n": 11.612073782789924
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "774",
+      "pitch_i": "1097_2",
+      "pitch_j": "1097_3",
+      "faster_pitch": "1097_2",
+      "slower_pitch": "1097_3",
+      "recorded_speed_gap_kmh": 1.448409600000005,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.7093633485269635,
+      "worst_shoulder_resultant_delta_n": -27.74695843001348,
+      "worst_tension_magnitude_delta_n": -2.975841461357703,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.7242048000000025,
+        "gap_at_least_1_error_limit_kmh": 0.22420480000000254,
+        "elbow_peak_error_limit_nm": 0.8546816742634817,
+        "shoulder_resultant_error_limit_n": 15.35275173702172,
+        "signed_tension_error_limit_n": 1.4879207306788516,
+        "joint_shoulder_error_limit_n": 1.4879207306788516
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "782",
+      "pitch_i": "3250_1",
+      "pitch_j": "3250_2",
+      "faster_pitch": "3250_2",
+      "slower_pitch": "3250_1",
+      "recorded_speed_gap_kmh": 0.643737600000037,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.03782318570313237,
+      "worst_shoulder_resultant_delta_n": -6.0244010201724905,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218688000000185,
+        "gap_at_least_1_error_limit_kmh": -0.1781311999999815,
+        "elbow_peak_error_limit_nm": 0.018911592851566184,
+        "shoulder_resultant_error_limit_n": 14.876679042014075,
+        "signed_tension_error_limit_n": 1.4446270429147179,
+        "joint_shoulder_error_limit_n": 1.4446270429147179
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "787",
+      "pitch_i": "2990_2",
+      "pitch_j": "2990_4",
+      "faster_pitch": "2990_2",
+      "slower_pitch": "2990_4",
+      "recorded_speed_gap_kmh": 0.6437375999999801,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -3.80898087101005,
+      "worst_shoulder_resultant_delta_n": 1.1081932568013144,
+      "worst_tension_magnitude_delta_n": -3.372270989049987,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218687999999901,
+        "gap_at_least_1_error_limit_kmh": -0.17813120000000993,
+        "elbow_peak_error_limit_nm": 1.904490435505025,
+        "shoulder_resultant_error_limit_n": 32.51625111907845,
+        "signed_tension_error_limit_n": 1.6861354945249936,
+        "joint_shoulder_error_limit_n": 1.6861354945249936
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "787",
+      "pitch_i": "2990_3",
+      "pitch_j": "2990_4",
+      "faster_pitch": "2990_3",
+      "slower_pitch": "2990_4",
+      "recorded_speed_gap_kmh": 0.32186879999997586,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -3.7157906700186203,
+      "worst_shoulder_resultant_delta_n": 80.0458072801016,
+      "worst_tension_magnitude_delta_n": -5.676839329258179,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093439999998793,
+        "gap_at_least_1_error_limit_kmh": -0.33906560000001207,
+        "elbow_peak_error_limit_nm": 1.8578953350093101,
+        "shoulder_resultant_error_limit_n": 2.294195725525583,
+        "signed_tension_error_limit_n": 2.8384196646290896,
+        "joint_shoulder_error_limit_n": 2.294195725525583
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "789",
+      "pitch_i": "1313_2",
+      "pitch_j": "1313_3",
+      "faster_pitch": "1313_2",
+      "slower_pitch": "1313_3",
+      "recorded_speed_gap_kmh": 0.16093440000003056,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -5.32534868067151,
+      "worst_shoulder_resultant_delta_n": -1.2027621600874454,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046720000001528,
+        "gap_at_least_1_error_limit_kmh": -0.4195327999999847,
+        "elbow_peak_error_limit_nm": 2.662674340335755,
+        "shoulder_resultant_error_limit_n": 3.70652523934433,
+        "signed_tension_error_limit_n": 10.003261572689961,
+        "joint_shoulder_error_limit_n": 3.70652523934433
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "830",
+      "pitch_i": "1615_1",
+      "pitch_j": "1615_2",
+      "faster_pitch": "1615_1",
+      "slower_pitch": "1615_2",
+      "recorded_speed_gap_kmh": 1.609343999999993,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -2.1564420356289276,
+      "worst_shoulder_resultant_delta_n": -13.225807151899517,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.8046719999999965,
+        "gap_at_least_1_error_limit_kmh": 0.3046719999999965,
+        "elbow_peak_error_limit_nm": 1.0782210178144638,
+        "shoulder_resultant_error_limit_n": 11.663910573127794,
+        "signed_tension_error_limit_n": 8.209750566881825,
+        "joint_shoulder_error_limit_n": 8.209750566881825
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "920",
+      "pitch_i": "1394_1",
+      "pitch_j": "1394_2",
+      "faster_pitch": "1394_2",
+      "slower_pitch": "1394_1",
+      "recorded_speed_gap_kmh": 0.6437376000000086,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.5877378464443836,
+      "worst_shoulder_resultant_delta_n": 25.157092858049737,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218688000000043,
+        "gap_at_least_1_error_limit_kmh": -0.17813119999999572,
+        "elbow_peak_error_limit_nm": 0.7938689232221918,
+        "shoulder_resultant_error_limit_n": 13.192135806665874,
+        "signed_tension_error_limit_n": 16.82451105622037,
+        "joint_shoulder_error_limit_n": 13.192135806665874
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "927",
+      "pitch_i": "1403_2",
+      "pitch_j": "1403_3",
+      "faster_pitch": "1403_2",
+      "slower_pitch": "1403_3",
+      "recorded_speed_gap_kmh": 1.1265407999999724,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.7103892423913152,
+      "worst_shoulder_resultant_delta_n": -12.95359476961437,
+      "worst_tension_magnitude_delta_n": -1.8473898426040631,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999862,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999998618,
+        "elbow_peak_error_limit_nm": 0.8551946211956576,
+        "shoulder_resultant_error_limit_n": 6.476797384807185,
+        "signed_tension_error_limit_n": 0.9236949213020316,
+        "joint_shoulder_error_limit_n": 0.9236949213020316
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "952",
+      "pitch_i": "1574_1",
+      "pitch_j": "1574_2",
+      "faster_pitch": "1574_1",
+      "slower_pitch": "1574_2",
+      "recorded_speed_gap_kmh": 1.9312127999999973,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -17.277574706981753,
+      "worst_shoulder_resultant_delta_n": -58.053857039849504,
+      "worst_tension_magnitude_delta_n": -7.023357672473039,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.9656063999999986,
+        "gap_at_least_1_error_limit_kmh": 0.46560639999999864,
+        "elbow_peak_error_limit_nm": 8.638787353490876,
+        "shoulder_resultant_error_limit_n": 29.026928519924752,
+        "signed_tension_error_limit_n": 3.5924689713525972,
+        "joint_shoulder_error_limit_n": 3.5924689713525972
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "952",
+      "pitch_i": "1574_1",
+      "pitch_j": "1574_3",
+      "faster_pitch": "1574_1",
+      "slower_pitch": "1574_3",
+      "recorded_speed_gap_kmh": 0.482803199999978,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -15.661114839054576,
+      "worst_shoulder_resultant_delta_n": -79.78979811983982,
+      "worst_tension_magnitude_delta_n": -2.680379277858031,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.241401599999989,
+        "gap_at_least_1_error_limit_kmh": -0.258598400000011,
+        "elbow_peak_error_limit_nm": 7.830557419527288,
+        "shoulder_resultant_error_limit_n": 39.89489905991991,
+        "signed_tension_error_limit_n": 1.3401896389290155,
+        "joint_shoulder_error_limit_n": 1.3401896389290155
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "970",
+      "pitch_i": "1623_1",
+      "pitch_j": "1623_2",
+      "faster_pitch": "1623_1",
+      "slower_pitch": "1623_2",
+      "recorded_speed_gap_kmh": 0.16093439999997372,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.7678215113111122,
+      "worst_shoulder_resultant_delta_n": -9.456223121000903,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046719999998686,
+        "gap_at_least_1_error_limit_kmh": -0.41953280000001314,
+        "elbow_peak_error_limit_nm": 0.3839107556555561,
+        "shoulder_resultant_error_limit_n": 14.193804667827976,
+        "signed_tension_error_limit_n": 6.401533722147643,
+        "joint_shoulder_error_limit_n": 6.401533722147643
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1002",
+      "pitch_i": "3132_1",
+      "pitch_j": "3132_2",
+      "faster_pitch": "3132_1",
+      "slower_pitch": "3132_2",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.9671337223548875,
+      "worst_shoulder_resultant_delta_n": -1.0114455895268293,
+      "worst_tension_magnitude_delta_n": -3.2240817046946386,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 0.48356686117744374,
+        "shoulder_resultant_error_limit_n": 0.6990115784078625,
+        "signed_tension_error_limit_n": 1.6120408523473193,
+        "joint_shoulder_error_limit_n": 0.6990115784078625
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1003",
+      "pitch_i": "1729_2",
+      "pitch_j": "1729_3",
+      "faster_pitch": "1729_2",
+      "slower_pitch": "1729_3",
+      "recorded_speed_gap_kmh": 0.16093439999997372,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.10264530885736178,
+      "worst_shoulder_resultant_delta_n": -11.68071715217502,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046719999998686,
+        "gap_at_least_1_error_limit_kmh": -0.41953280000001314,
+        "elbow_peak_error_limit_nm": 0.05132265442868089,
+        "shoulder_resultant_error_limit_n": 5.84035857608751,
+        "signed_tension_error_limit_n": 30.514915446200067,
+        "joint_shoulder_error_limit_n": 5.84035857608751
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1029",
+      "pitch_i": "2907_3",
+      "pitch_j": "2907_4",
+      "faster_pitch": "2907_3",
+      "slower_pitch": "2907_4",
+      "recorded_speed_gap_kmh": 1.287475200000003,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.2728625282776136,
+      "worst_shoulder_resultant_delta_n": 34.932569963700644,
+      "worst_tension_magnitude_delta_n": -2.906533118561761,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.6437376000000015,
+        "gap_at_least_1_error_limit_kmh": 0.14373760000000146,
+        "elbow_peak_error_limit_nm": 0.6364312641388068,
+        "shoulder_resultant_error_limit_n": 3.4993082501939057,
+        "signed_tension_error_limit_n": 1.4532665592808804,
+        "joint_shoulder_error_limit_n": 1.4532665592808804
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1029",
+      "pitch_i": "2907_3",
+      "pitch_j": "2907_5",
+      "faster_pitch": "2907_3",
+      "slower_pitch": "2907_5",
+      "recorded_speed_gap_kmh": 0.32186879999997586,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.2953903631577077,
+      "worst_shoulder_resultant_delta_n": 2.3139003908179347,
+      "worst_tension_magnitude_delta_n": -1.6542916621824446,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093439999998793,
+        "gap_at_least_1_error_limit_kmh": -0.33906560000001207,
+        "elbow_peak_error_limit_nm": 0.6476951815788539,
+        "shoulder_resultant_error_limit_n": 4.065095801551195,
+        "signed_tension_error_limit_n": 0.8271458310912223,
+        "joint_shoulder_error_limit_n": 0.8271458310912223
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1539",
+      "pitch_i": "3035_1",
+      "pitch_j": "3035_4",
+      "faster_pitch": "3035_1",
+      "slower_pitch": "3035_4",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.9822214619162963,
+      "worst_shoulder_resultant_delta_n": 25.321691413136023,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 0.9911107309581482,
+        "shoulder_resultant_error_limit_n": 9.185628350843672,
+        "signed_tension_error_limit_n": 6.574704644965485,
+        "joint_shoulder_error_limit_n": 6.574704644965485
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1540",
+      "pitch_i": "2989_1",
+      "pitch_j": "2989_3",
+      "faster_pitch": "2989_3",
+      "slower_pitch": "2989_1",
+      "recorded_speed_gap_kmh": 0.482803199999978,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.9928618603029093,
+      "worst_shoulder_resultant_delta_n": -23.893289728231935,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.241401599999989,
+        "gap_at_least_1_error_limit_kmh": -0.258598400000011,
+        "elbow_peak_error_limit_nm": 0.9964309301514547,
+        "shoulder_resultant_error_limit_n": 11.946644864115967,
+        "signed_tension_error_limit_n": 1.261400803588466,
+        "joint_shoulder_error_limit_n": 1.261400803588466
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1584",
+      "pitch_i": "2806_1",
+      "pitch_j": "2806_2",
+      "faster_pitch": "2806_1",
+      "slower_pitch": "2806_2",
+      "recorded_speed_gap_kmh": 1.1265408000000008,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.054846914362116195,
+      "worst_shoulder_resultant_delta_n": -10.382139240330275,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632704000000004,
+        "gap_at_least_1_error_limit_kmh": 0.06327040000000039,
+        "elbow_peak_error_limit_nm": 0.027423457181058097,
+        "shoulder_resultant_error_limit_n": 6.562111721572592,
+        "signed_tension_error_limit_n": 1.9561516345014098,
+        "joint_shoulder_error_limit_n": 1.9561516345014098
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1584",
+      "pitch_i": "2806_1",
+      "pitch_j": "2806_3",
+      "faster_pitch": "2806_1",
+      "slower_pitch": "2806_3",
+      "recorded_speed_gap_kmh": 0.6437375999999801,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -4.711659022787757,
+      "worst_shoulder_resultant_delta_n": -16.63699079399612,
+      "worst_tension_magnitude_delta_n": -2.811650100671712,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218687999999901,
+        "gap_at_least_1_error_limit_kmh": -0.17813120000000993,
+        "elbow_peak_error_limit_nm": 2.3558295113938783,
+        "shoulder_resultant_error_limit_n": 9.121946349056373,
+        "signed_tension_error_limit_n": 2.5625368423051644,
+        "joint_shoulder_error_limit_n": 2.5625368423051644
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1584",
+      "pitch_i": "2806_1",
+      "pitch_j": "2806_4",
+      "faster_pitch": "2806_1",
+      "slower_pitch": "2806_4",
+      "recorded_speed_gap_kmh": 1.1265408000000008,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.804943496603883,
+      "worst_shoulder_resultant_delta_n": -0.29908830109820883,
+      "worst_tension_magnitude_delta_n": -0.25467816222994877,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632704000000004,
+        "gap_at_least_1_error_limit_kmh": 0.06327040000000039,
+        "elbow_peak_error_limit_nm": 0.9024717483019415,
+        "shoulder_resultant_error_limit_n": 4.200615805238726,
+        "signed_tension_error_limit_n": 1.9626063585945803,
+        "joint_shoulder_error_limit_n": 1.9626063585945803
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1584",
+      "pitch_i": "2806_1",
+      "pitch_j": "2806_5",
+      "faster_pitch": "2806_1",
+      "slower_pitch": "2806_5",
+      "recorded_speed_gap_kmh": 0.8046719999999965,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -3.1757799204359287,
+      "worst_shoulder_resultant_delta_n": -36.6450194207124,
+      "worst_tension_magnitude_delta_n": -2.8218075611135585,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.40233599999999825,
+        "gap_at_least_1_error_limit_kmh": -0.09766400000000175,
+        "elbow_peak_error_limit_nm": 1.5878899602179644,
+        "shoulder_resultant_error_limit_n": 20.212873109440466,
+        "signed_tension_error_limit_n": 2.651887802811127,
+        "joint_shoulder_error_limit_n": 2.651887802811127
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1587",
+      "pitch_i": "2927_2",
+      "pitch_j": "2927_5",
+      "faster_pitch": "2927_2",
+      "slower_pitch": "2927_5",
+      "recorded_speed_gap_kmh": 1.4484095999999909,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -2.27684081848129,
+      "worst_shoulder_resultant_delta_n": -22.947287200218966,
+      "worst_tension_magnitude_delta_n": -11.960733134239906,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.7242047999999954,
+        "gap_at_least_1_error_limit_kmh": 0.22420479999999543,
+        "elbow_peak_error_limit_nm": 1.138420409240645,
+        "shoulder_resultant_error_limit_n": 14.625779755808765,
+        "signed_tension_error_limit_n": 5.980366567119953,
+        "joint_shoulder_error_limit_n": 5.980366567119953
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1589",
+      "pitch_i": "2811_2",
+      "pitch_j": "2811_3",
+      "faster_pitch": "2811_2",
+      "slower_pitch": "2811_3",
+      "recorded_speed_gap_kmh": 2.4140160000000037,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.6917585994704751,
+      "worst_shoulder_resultant_delta_n": -0.08918254726620489,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 1.2070080000000019,
+        "gap_at_least_1_error_limit_kmh": 0.7070080000000019,
+        "elbow_peak_error_limit_nm": 0.8458792997352376,
+        "shoulder_resultant_error_limit_n": 5.655151138357496,
+        "signed_tension_error_limit_n": 0.3790971880418501,
+        "joint_shoulder_error_limit_n": 0.3790971880418501
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1590",
+      "pitch_i": "2812_1",
+      "pitch_j": "2812_4",
+      "faster_pitch": "2812_1",
+      "slower_pitch": "2812_4",
+      "recorded_speed_gap_kmh": 0.9656064000000129,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -2.104936164588551,
+      "worst_shoulder_resultant_delta_n": -18.064350106131087,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.4828032000000064,
+        "gap_at_least_1_error_limit_kmh": -0.017196799999993573,
+        "elbow_peak_error_limit_nm": 1.0524680822942756,
+        "shoulder_resultant_error_limit_n": 9.032175053065544,
+        "signed_tension_error_limit_n": 1.2501887461745376,
+        "joint_shoulder_error_limit_n": 1.2501887461745376
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1590",
+      "pitch_i": "2812_2",
+      "pitch_j": "2812_3",
+      "faster_pitch": "2812_3",
+      "slower_pitch": "2812_2",
+      "recorded_speed_gap_kmh": 1.9312127999999973,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.357241760791986,
+      "worst_shoulder_resultant_delta_n": -31.696722058431646,
+      "worst_tension_magnitude_delta_n": -0.5957302873321193,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.9656063999999986,
+        "gap_at_least_1_error_limit_kmh": 0.46560639999999864,
+        "elbow_peak_error_limit_nm": 0.178620880395993,
+        "shoulder_resultant_error_limit_n": 15.848361029215823,
+        "signed_tension_error_limit_n": 4.351552947514131,
+        "joint_shoulder_error_limit_n": 4.351552947514131
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1595",
+      "pitch_i": "2818_1",
+      "pitch_j": "2818_3",
+      "faster_pitch": "2818_1",
+      "slower_pitch": "2818_3",
+      "recorded_speed_gap_kmh": 0.6437376000000086,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -4.083054237847065,
+      "worst_shoulder_resultant_delta_n": -38.65038475947517,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218688000000043,
+        "gap_at_least_1_error_limit_kmh": -0.17813119999999572,
+        "elbow_peak_error_limit_nm": 2.0415271189235327,
+        "shoulder_resultant_error_limit_n": 24.89427939749214,
+        "signed_tension_error_limit_n": 12.478870827621204,
+        "joint_shoulder_error_limit_n": 12.478870827621204
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1596",
+      "pitch_i": "2916_3",
+      "pitch_j": "2916_5",
+      "faster_pitch": "2916_3",
+      "slower_pitch": "2916_5",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -4.192283441613569,
+      "worst_shoulder_resultant_delta_n": -12.145281406669596,
+      "worst_tension_magnitude_delta_n": -9.236428375753015,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 2.0961417208067843,
+        "shoulder_resultant_error_limit_n": 12.29925556744513,
+        "signed_tension_error_limit_n": 4.618214187876507,
+        "joint_shoulder_error_limit_n": 4.618214187876507
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1605",
+      "pitch_i": "3247_1",
+      "pitch_j": "3247_5",
+      "faster_pitch": "3247_5",
+      "slower_pitch": "3247_1",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -2.5840032996076445,
+      "worst_shoulder_resultant_delta_n": -5.862338091173797,
+      "worst_tension_magnitude_delta_n": -3.9901453184572944,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 1.2920016498038223,
+        "shoulder_resultant_error_limit_n": 2.9311690455868984,
+        "signed_tension_error_limit_n": 1.9950726592286472,
+        "joint_shoulder_error_limit_n": 1.9950726592286472
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1616",
+      "pitch_i": "2857_2",
+      "pitch_j": "2857_5",
+      "faster_pitch": "2857_2",
+      "slower_pitch": "2857_5",
+      "recorded_speed_gap_kmh": 0.3218688000000043,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -0.42975906915614104,
+      "worst_shoulder_resultant_delta_n": 14.649683531904657,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.16093440000000214,
+        "gap_at_least_1_error_limit_kmh": -0.33906559999999786,
+        "elbow_peak_error_limit_nm": 0.21487953457807052,
+        "shoulder_resultant_error_limit_n": 5.48512737639669,
+        "signed_tension_error_limit_n": 5.372465134774672,
+        "joint_shoulder_error_limit_n": 5.372465134774672
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_1",
+      "pitch_j": "2859_2",
+      "faster_pitch": "2859_2",
+      "slower_pitch": "2859_1",
+      "recorded_speed_gap_kmh": 0.9656063999999844,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.7552245859544087,
+      "worst_shoulder_resultant_delta_n": -15.24034856967205,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.4828031999999922,
+        "gap_at_least_1_error_limit_kmh": -0.017196800000007784,
+        "elbow_peak_error_limit_nm": 0.8776122929772043,
+        "shoulder_resultant_error_limit_n": 9.174884855322944,
+        "signed_tension_error_limit_n": 20.398452412604364,
+        "joint_shoulder_error_limit_n": 9.174884855322944
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_1",
+      "pitch_j": "2859_3",
+      "faster_pitch": "2859_1",
+      "slower_pitch": "2859_3",
+      "recorded_speed_gap_kmh": 0.16093440000000214,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.8025038703206064,
+      "worst_shoulder_resultant_delta_n": -24.995877942507605,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046720000000107,
+        "gap_at_least_1_error_limit_kmh": -0.41953279999999893,
+        "elbow_peak_error_limit_nm": 0.4012519351603032,
+        "shoulder_resultant_error_limit_n": 12.497938971253802,
+        "signed_tension_error_limit_n": 21.346975097455505,
+        "joint_shoulder_error_limit_n": 12.497938971253802
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_1",
+      "pitch_j": "2859_4",
+      "faster_pitch": "2859_1",
+      "slower_pitch": "2859_4",
+      "recorded_speed_gap_kmh": 0.16093440000000214,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.6726728836380005,
+      "worst_shoulder_resultant_delta_n": 3.2801594450829725,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046720000000107,
+        "gap_at_least_1_error_limit_kmh": -0.41953279999999893,
+        "elbow_peak_error_limit_nm": 0.8363364418190002,
+        "shoulder_resultant_error_limit_n": 0.8371034751788784,
+        "signed_tension_error_limit_n": 21.346975097455505,
+        "joint_shoulder_error_limit_n": 0.8371034751788784
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_2",
+      "pitch_j": "2859_3",
+      "faster_pitch": "2859_2",
+      "slower_pitch": "2859_3",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -2.8513264581917355,
+      "worst_shoulder_resultant_delta_n": -43.34564765315349,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 1.4256632290958677,
+        "shoulder_resultant_error_limit_n": 21.672823826576746,
+        "signed_tension_error_limit_n": 20.398452412604364,
+        "joint_shoulder_error_limit_n": 20.398452412604364
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_2",
+      "pitch_j": "2859_4",
+      "faster_pitch": "2859_2",
+      "slower_pitch": "2859_4",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -3.427897469592409,
+      "worst_shoulder_resultant_delta_n": -19.051932515420276,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 1.7139487347962046,
+        "shoulder_resultant_error_limit_n": 10.011988330501822,
+        "signed_tension_error_limit_n": 20.398452412604364,
+        "joint_shoulder_error_limit_n": 10.011988330501822
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_2",
+      "pitch_j": "2859_5",
+      "faster_pitch": "2859_2",
+      "slower_pitch": "2859_5",
+      "recorded_speed_gap_kmh": 0.16093439999997372,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -1.4576676907310997,
+      "worst_shoulder_resultant_delta_n": -14.222464511781709,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046719999998686,
+        "gap_at_least_1_error_limit_kmh": -0.41953280000001314,
+        "elbow_peak_error_limit_nm": 0.7288338453655498,
+        "shoulder_resultant_error_limit_n": 7.1112322558908545,
+        "signed_tension_error_limit_n": 20.398452412604364,
+        "joint_shoulder_error_limit_n": 7.1112322558908545
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1618",
+      "pitch_i": "2859_3",
+      "pitch_j": "2859_5",
+      "faster_pitch": "2859_5",
+      "slower_pitch": "2859_3",
+      "recorded_speed_gap_kmh": 0.9656064000000129,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -0.8757183945557188,
+      "worst_shoulder_resultant_delta_n": -17.426500866030437,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.4828032000000064,
+        "gap_at_least_1_error_limit_kmh": -0.017196799999993573,
+        "elbow_peak_error_limit_nm": 0.4378591972778594,
+        "shoulder_resultant_error_limit_n": 11.428140915440395,
+        "signed_tension_error_limit_n": 19.884173457954677,
+        "joint_shoulder_error_limit_n": 11.428140915440395
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1619",
+      "pitch_i": "2860_1",
+      "pitch_j": "2860_5",
+      "faster_pitch": "2860_5",
+      "slower_pitch": "2860_1",
+      "recorded_speed_gap_kmh": 0.8046720000000107,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.0913237514133414,
+      "worst_shoulder_resultant_delta_n": 13.046664990393424,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.40233600000000536,
+        "gap_at_least_1_error_limit_kmh": -0.09766399999999464,
+        "elbow_peak_error_limit_nm": 0.5456618757066707,
+        "shoulder_resultant_error_limit_n": 0.8511198815437524,
+        "signed_tension_error_limit_n": 17.62019765515635,
+        "joint_shoulder_error_limit_n": 0.8511198815437524
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1619",
+      "pitch_i": "2860_3",
+      "pitch_j": "2860_5",
+      "faster_pitch": "2860_5",
+      "slower_pitch": "2860_3",
+      "recorded_speed_gap_kmh": 2.735884800000008,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -2.851050317862345,
+      "worst_shoulder_resultant_delta_n": 18.503009376162595,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 1.367942400000004,
+        "gap_at_least_1_error_limit_kmh": 0.867942400000004,
+        "elbow_peak_error_limit_nm": 1.4255251589311726,
+        "shoulder_resultant_error_limit_n": 0.4887742761535492,
+        "signed_tension_error_limit_n": 17.62019765515635,
+        "joint_shoulder_error_limit_n": 0.4887742761535492
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1624",
+      "pitch_i": "2865_1",
+      "pitch_j": "2865_2",
+      "faster_pitch": "2865_2",
+      "slower_pitch": "2865_1",
+      "recorded_speed_gap_kmh": 0.16093440000000214,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -2.4714850362410914,
+      "worst_shoulder_resultant_delta_n": 11.814811896515266,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.08046720000000107,
+        "gap_at_least_1_error_limit_kmh": -0.41953279999999893,
+        "elbow_peak_error_limit_nm": 1.2357425181205457,
+        "shoulder_resultant_error_limit_n": 4.322501966229993,
+        "signed_tension_error_limit_n": 4.845056570855312,
+        "joint_shoulder_error_limit_n": 4.322501966229993
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1624",
+      "pitch_i": "2865_2",
+      "pitch_j": "2865_4",
+      "faster_pitch": "2865_2",
+      "slower_pitch": "2865_4",
+      "recorded_speed_gap_kmh": 1.4484096000000193,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -3.679917545197597,
+      "worst_shoulder_resultant_delta_n": 41.229859626026155,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.7242048000000096,
+        "gap_at_least_1_error_limit_kmh": 0.22420480000000964,
+        "elbow_peak_error_limit_nm": 1.8399587725987985,
+        "shoulder_resultant_error_limit_n": 0.19086777679069655,
+        "signed_tension_error_limit_n": 4.845056570855312,
+        "joint_shoulder_error_limit_n": 0.19086777679069655
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1624",
+      "pitch_i": "2865_3",
+      "pitch_j": "2865_4",
+      "faster_pitch": "2865_3",
+      "slower_pitch": "2865_4",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -0.7428588461836227,
+      "worst_shoulder_resultant_delta_n": 21.022409096174215,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 0.3714294230918114,
+        "shoulder_resultant_error_limit_n": 4.494815048067437,
+        "signed_tension_error_limit_n": 4.8535398899110005,
+        "joint_shoulder_error_limit_n": 4.494815048067437
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1633",
+      "pitch_i": "2891_2",
+      "pitch_j": "2891_4",
+      "faster_pitch": "2891_4",
+      "slower_pitch": "2891_2",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -6.846315435916395,
+      "worst_shoulder_resultant_delta_n": -13.358997874692932,
+      "worst_tension_magnitude_delta_n": -18.61085965457515,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 3.4231577179581976,
+        "shoulder_resultant_error_limit_n": 8.236578223635775,
+        "signed_tension_error_limit_n": 9.305429827287576,
+        "joint_shoulder_error_limit_n": 8.236578223635775
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1633",
+      "pitch_i": "2891_2",
+      "pitch_j": "2891_5",
+      "faster_pitch": "2891_5",
+      "slower_pitch": "2891_2",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -10.304071958218884,
+      "worst_shoulder_resultant_delta_n": -9.713195491023043,
+      "worst_tension_magnitude_delta_n": -5.54272588931434,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 5.152035979109442,
+        "shoulder_resultant_error_limit_n": 6.41367703180083,
+        "signed_tension_error_limit_n": 2.77136294465717,
+        "joint_shoulder_error_limit_n": 2.77136294465717
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1636",
+      "pitch_i": "2905_1",
+      "pitch_j": "2905_5",
+      "faster_pitch": "2905_1",
+      "slower_pitch": "2905_5",
+      "recorded_speed_gap_kmh": 0.6437376000000086,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -2.533554332167384,
+      "worst_shoulder_resultant_delta_n": 15.331355201197084,
+      "worst_tension_magnitude_delta_n": -0.257269838745831,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.3218688000000043,
+        "gap_at_least_1_error_limit_kmh": -0.17813119999999572,
+        "elbow_peak_error_limit_nm": 1.266777166083692,
+        "shoulder_resultant_error_limit_n": 13.976380049344812,
+        "signed_tension_error_limit_n": 0.5782200874000273,
+        "joint_shoulder_error_limit_n": 0.5782200874000273
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1637",
+      "pitch_i": "2918_4",
+      "pitch_j": "2918_5",
+      "faster_pitch": "2918_4",
+      "slower_pitch": "2918_5",
+      "recorded_speed_gap_kmh": 1.609343999999993,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.4746938462849641,
+      "worst_shoulder_resultant_delta_n": 24.22456125199892,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.8046719999999965,
+        "gap_at_least_1_error_limit_kmh": 0.3046719999999965,
+        "elbow_peak_error_limit_nm": 0.7373469231424821,
+        "shoulder_resultant_error_limit_n": 2.0456809069243036,
+        "signed_tension_error_limit_n": 4.335083513710274,
+        "joint_shoulder_error_limit_n": 2.0456809069243036
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1641",
+      "pitch_i": "2923_3",
+      "pitch_j": "2923_5",
+      "faster_pitch": "2923_3",
+      "slower_pitch": "2923_5",
+      "recorded_speed_gap_kmh": 0.9656064000000129,
+      "nominal_still_valid": true,
+      "common_event_stable": false,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -0.4115709732104875,
+      "worst_shoulder_resultant_delta_n": 15.907834211881323,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.4828032000000064,
+        "gap_at_least_1_error_limit_kmh": -0.017196799999993573,
+        "elbow_peak_error_limit_nm": 0.20578548660524376,
+        "shoulder_resultant_error_limit_n": 0.7668455224082322,
+        "signed_tension_error_limit_n": 3.731797463824627,
+        "joint_shoulder_error_limit_n": 0.7668455224082322
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1667",
+      "pitch_i": "2993_2",
+      "pitch_j": "2993_3",
+      "faster_pitch": "2993_3",
+      "slower_pitch": "2993_2",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -1.9677716215213366,
+      "worst_shoulder_resultant_delta_n": 2.413785212599123,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 0.9838858107606683,
+        "shoulder_resultant_error_limit_n": 7.6194033860635955,
+        "signed_tension_error_limit_n": 17.189504082923687,
+        "joint_shoulder_error_limit_n": 7.6194033860635955
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1692",
+      "pitch_i": "3055_1",
+      "pitch_j": "3055_5",
+      "faster_pitch": "3055_1",
+      "slower_pitch": "3055_5",
+      "recorded_speed_gap_kmh": 0.8046719999999965,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -3.193017275691844,
+      "worst_shoulder_resultant_delta_n": 38.921843644923,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.40233599999999825,
+        "gap_at_least_1_error_limit_kmh": -0.09766400000000175,
+        "elbow_peak_error_limit_nm": 1.596508637845922,
+        "shoulder_resultant_error_limit_n": 5.166521258238731,
+        "signed_tension_error_limit_n": 3.1408114749881624,
+        "joint_shoulder_error_limit_n": 3.1408114749881624
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1724",
+      "pitch_i": "3233_1",
+      "pitch_j": "3233_3",
+      "faster_pitch": "3233_1",
+      "slower_pitch": "3233_3",
+      "recorded_speed_gap_kmh": 0.9656064000000129,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -4.041669403609902,
+      "worst_shoulder_resultant_delta_n": 4.454160088205185,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.4828032000000064,
+        "gap_at_least_1_error_limit_kmh": -0.017196799999993573,
+        "elbow_peak_error_limit_nm": 2.020834701804951,
+        "shoulder_resultant_error_limit_n": 7.020211323528315,
+        "signed_tension_error_limit_n": 12.565761669136007,
+        "joint_shoulder_error_limit_n": 7.020211323528315
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1724",
+      "pitch_i": "3233_3",
+      "pitch_j": "3233_4",
+      "faster_pitch": "3233_4",
+      "slower_pitch": "3233_3",
+      "recorded_speed_gap_kmh": 1.609343999999993,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": false,
+      "worst_elbow_delta_nm": -0.5598291191637514,
+      "worst_shoulder_resultant_delta_n": 30.39893922807937,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": false,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.8046719999999965,
+        "gap_at_least_1_error_limit_kmh": 0.3046719999999965,
+        "elbow_peak_error_limit_nm": 0.2799145595818757,
+        "shoulder_resultant_error_limit_n": 3.7439346728032774,
+        "signed_tension_error_limit_n": 15.751856106249614,
+        "joint_shoulder_error_limit_n": 3.7439346728032774
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    },
+    {
+      "user": "1724",
+      "pitch_i": "3233_3",
+      "pitch_j": "3233_5",
+      "faster_pitch": "3233_5",
+      "slower_pitch": "3233_3",
+      "recorded_speed_gap_kmh": 1.1265407999999866,
+      "nominal_still_valid": true,
+      "common_event_stable": true,
+      "independent_event_stable": true,
+      "worst_elbow_delta_nm": -3.0167668592298185,
+      "worst_shoulder_resultant_delta_n": -4.929385258580396,
+      "worst_tension_magnitude_delta_n": 0.0,
+      "raw_signed_independent_event_stable": true,
+      "minimum_margins_across_filters": {
+        "speed_order_error_limit_kmh": 0.5632703999999933,
+        "gap_at_least_1_error_limit_kmh": 0.06327039999999329,
+        "elbow_peak_error_limit_nm": 1.5083834296149092,
+        "shoulder_resultant_error_limit_n": 4.933279404599148,
+        "signed_tension_error_limit_n": 16.30776520019161,
+        "joint_shoulder_error_limit_n": 4.933279404599148
+      },
+      "profiles": [
+        {
+          "per_reading_bounds": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nominal": true,
+          "common_event": true,
+          "independent_event": true,
+          "independent_event_gap_at_least_1": true
+        },
+        {
+          "per_reading_bounds": [
+            0.25,
+            0.5,
+            5.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            0.5,
+            1.0,
+            10.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            1.0,
+            2.0,
+            20.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        },
+        {
+          "per_reading_bounds": [
+            2.0,
+            5.0,
+            50.0
+          ],
+          "nominal": false,
+          "common_event": false,
+          "independent_event": false,
+          "independent_event_gap_at_least_1": false
+        }
+      ]
+    }
+  ],
+  "measurement_robustness_validated": false,
+  "same_capacity_validated": false,
+  "intervention_effect_validated": false,
+  "coaching_recommendation_ready": false,
+  "speed_prediction_gate_changed": false
+}
