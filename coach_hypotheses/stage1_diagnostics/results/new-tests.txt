@@ -1,0 +1,18 @@
+test_all_fixed_penalties_reported_without_loss_unit_mixing (coach_hypotheses.stage1_diagnostics.test_ablation.AblationTests.test_all_fixed_penalties_reported_without_loss_unit_mixing) ... ok
+test_add_waveforms_and_data_quality_fixture (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_add_waveforms_and_data_quality_fixture) ... ok
+test_analyze_orchestration_with_verified_pipeline_contract (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_analyze_orchestration_with_verified_pipeline_contract) ... ok
+test_cli_dispatch_and_output_guard (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_cli_dispatch_and_output_guard) ... usage: diagnostics [-h] --data DATA [--output OUTPUT]
+diagnostics: error: output must stay inside stage1_diagnostics
+ok
+test_inner_null_tie_and_weighting (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_inner_null_tie_and_weighting) ... ok
+test_loss_control_and_failed_optimizer_not_hidden (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_loss_control_and_failed_optimizer_not_hidden) ... ok
+test_model_selection_has_no_held_label_leak (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_model_selection_has_no_held_label_leak) ... ok
+test_permutation_control_includes_actual_and_train_shuffles (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_permutation_control_includes_actual_and_train_shuffles) ... ok
+test_phase_features_known_linear_trajectory (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_phase_features_known_linear_trajectory) ... ok
+test_synthetic_known_signal_is_recovered (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_synthetic_known_signal_is_recovered) ... ok
+test_verified_sources_detect_changed_bytes (coach_hypotheses.stage1_diagnostics.test_diagnostics.DiagnosticTests.test_verified_sources_detect_changed_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.795s
+
+OK

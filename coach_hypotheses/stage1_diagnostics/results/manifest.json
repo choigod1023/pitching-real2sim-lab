@@ -1,0 +1,13 @@
+{
+  "preregistered_commit": "1edccac",
+  "head_at_execution": "1edccacd4f31160ca210ed1d52d7c267135d53f3",
+  "protocol_sha256": "2f4476d557913476cc64d0b78c89d15560cae16766cfccbbf3dad68250cd0dec",
+  "original_protocol_sha256": "df6f1b1b8c61510f2dea351909066d90ea9e64cd2c35a35921c6bfd765e2eb99",
+  "code_sha256": {
+    "diagnostics.py": "5b78bdf77bd8a8474b70feda9536ac7f4cc526d92b5306b832a8e63a846dcc45",
+    "run.py": "ccb1a5234095c625b2299edb63958c38dc0ec71d58deae97c42c11cbc0eb8d2d",
+    "test_diagnostics.py": "1662301479a446e8cf222442aa66c04fb6f6c434647d84b5ef6e08517703740e",
+    "__init__.py": "bf308fa28934c25497c8bc3283db654f8ef29d89c00064b9b3544097014d6c9c"
+  },
+  "input_features_sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4"
+}

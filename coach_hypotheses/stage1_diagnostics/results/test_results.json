@@ -1,0 +1,18 @@
+{
+  "new_tests": {
+    "run": 11,
+    "passed": 11,
+    "failures": 0,
+    "errors": 0
+  },
+  "full_suite": {
+    "run": 310,
+    "passed": 298,
+    "errors": 10,
+    "skipped": 2,
+    "assertion_failures": 0
+  },
+  "baseline_error_names_identical": true,
+  "baseline_protocol_and_results_preserved": true,
+  "preregistered_gate_changed": false
+}
