@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1PiilWNXRe4aToghIx9S_4gyOpo8eqFVP",
+    "name": "edgertronic_dynamic_checkerboard_4.mp4",
+    "size": "134225811",
+    "url": "https://drive.google.com/file/d/1PiilWNXRe4aToghIx9S_4gyOpo8eqFVP/view?usp=drivesdk",
+    "sha256": "aade0553129c712b66b69995f1cb5d9af08868e924420772f8e54776d6bef93e",
+    "frame_count": 1320,
+    "playback_fps": 30.0,
+    "width": 1280,
+    "height": 1024
+  },
+  {
+    "id": "1FDKVO2pR-D15_ln23U9h3fCNvMgXlP_2",
+    "name": "edgertronic_dynamic_checkerboard_3.mp4",
+    "size": "115652325",
+    "url": "https://drive.google.com/file/d/1FDKVO2pR-D15_ln23U9h3fCNvMgXlP_2/view?usp=drivesdk",
+    "sha256": "837f187328021c7c48ac5128a10c36599c577b2d54bf4037b228bfe51b933630",
+    "frame_count": 1320,
+    "playback_fps": 30.0,
+    "width": 1280,
+    "height": 1024
+  },
+  {
+    "id": "11fpSab6_xnG7cIzR2hlpvsv2mhYYEgTp",
+    "name": "edgertronic_dynamic_checkerboard_2.mp4",
+    "size": "82697333",
+    "url": "https://drive.google.com/file/d/11fpSab6_xnG7cIzR2hlpvsv2mhYYEgTp/view?usp=drivesdk",
+    "sha256": "58f4291b07287e6660e28068245805d2eb77513878e1af47ee5db8fa3d5d0fe5",
+    "frame_count": 1320,
+    "playback_fps": 30.0,
+    "width": 1280,
+    "height": 1024
+  },
+  {
+    "id": "1YKitO7hNmSOu1qbabcHvOIDPRq-danoI",
+    "name": "edgertronic_dynamic_checkerboard_1.mp4",
+    "size": "75967320",
+    "url": "https://drive.google.com/file/d/1YKitO7hNmSOu1qbabcHvOIDPRq-danoI/view?usp=drivesdk",
+    "sha256": "e9d04195fcebb7e6a932d73b4eb9e312cdc839ff58360511950e95240331b302",
+    "frame_count": 1320,
+    "playback_fps": 30.0,
+    "width": 1280,
+    "height": 1024
+  }
+]
