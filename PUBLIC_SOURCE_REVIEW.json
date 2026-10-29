@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-10-29",
+  "exact_trial_queries": ["\"000002_003034\" pitching", "\"OpenBiomechanics\" \"3034\" video"],
+  "usable_exact_trial_link_found": false,
+  "scope": "No usable same3034 ball/video link found in the performed queries. Not a universal absence claim.",
+  "github_issue_search": {
+    "provider": "connected GitHub search_issues",
+    "queries": ["repo:drivelineresearch/openbiomechanics \"ball release\"", "repo:drivelineresearch/openbiomechanics radar", "repo:drivelineresearch/openbiomechanics 3034"],
+    "result_counts": [0, 0, 0]
+  },
+  "matsuo2024": {
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/39540653/",
+    "publisher_url": "https://www.tandfonline.com/doi/abs/10.1080/02640414.2024.2426895",
+    "data_policy_evidence": "Publisher page indexed in web search describes data available from corresponding author upon reasonable request.",
+    "direct_publisher_open": "403 Forbidden",
+    "supplemental_contents_verified": false,
+    "raw_motion_downloaded": false,
+    "author_contacted": false,
+    "applied_as3034_correction": false
+  },
+  "secondary_obp_methods": {
+    "url": "https://www.jomh.org/articles/10.22514/jomh.2026.026/htm",
+    "observed_description": "Stalker Pro II behind home plate; BR described as peak hand segment rotation.",
+    "original3034_protocol_confirmed": false
+  },
+  "current_scientific_block": "Same3034 direct ball/relative finger motion and physical release/radar timing definition remain unverified."
+}
