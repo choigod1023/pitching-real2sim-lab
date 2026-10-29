@@ -1,0 +1,160 @@
+======================================================================
+ERROR: test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_anatomical_shoulder
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_anatomical_shoulder.py", line 3, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_applied_path_forces
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_applied_path_forces.py", line 3, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_directional_shoulder
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_directional_shoulder.py", line 3, in <module>
+    from anatomical_shoulder_fit import OUT as BASE
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\anatomical_shoulder_fit.py", line 9, in <module>
+    import opensim as osim
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_elbow_moment_validation
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_elbow_moment_validation.py", line 3, in <module>
+    from elbow_moment_validation import OUT,BASE,PREVIOUS
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\elbow_moment_validation.py", line 5, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_elbow_registration_audit
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_elbow_registration_audit.py", line 3, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_muscle_equilibrium_mode
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_muscle_equilibrium_mode.py", line 3, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_research_audit_gate.py", line 10, in test_actual_wrapped_path_fails_consistency_gate
+    reports=json.loads((OUT/'formula_checks.json').read_text())['reports']
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-tradeoff-sensitivity-20261029\\artifacts\\research-evidence-audit\\formula_checks.json'
+
+======================================================================
+ERROR: test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_shoulder_load_audit
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_shoulder_load_audit.py", line 3, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_wrist_integration
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_wrist_integration.py", line 3, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+======================================================================
+ERROR: test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_wrist_residual_audit
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\unittest\loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\test_wrist_residual_audit.py", line 3, in <module>
+    from wrist_residual_audit import project,OUT,INPUT
+  File "C:\Users\user\Documents\Codex\2026-10-20\new-chat-2\outputs\pitching-lab\observed-tradeoff-sensitivity-20261029\wrist_residual_audit.py", line 6, in <module>
+    import opensim as o
+ModuleNotFoundError: No module named 'opensim'
+
+
+----------------------------------------------------------------------
+Ran 300 tests in 4.306s
+
+FAILED (errors=10, skipped=2)
