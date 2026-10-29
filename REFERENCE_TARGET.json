@@ -1,0 +1,18 @@
+{
+  "selected_date": "2026-10-29",
+  "authorized_by": "User explicitly requested replacing3034 with available multiview baseball showing hand and ball",
+  "primary_trial": "OBP_movement_BaseballThrow_001",
+  "dataset": "OBP/Prime_multiview_demo",
+  "athlete_identity": "Anonymous demonstration athlete; not OBP user2/session3034",
+  "retired_primary_trial": "OBP3034_1",
+  "cross_trial_before_after_allowed": false,
+  "primary_threshold": 80,
+  "primary_body_frame_offset": 1,
+  "training_video_frames": [973, 974, 975, 976],
+  "evaluation_video_frames": [977, 978, 979],
+  "body_motion_modified": false,
+  "contact_model_validated": false,
+  "same_force_work_verified": false,
+  "candidate_optimization_enabled": false,
+  "next_unfinished_task": "New camera17 hand/wrist/elbow image observations in release neighborhood, distinct from previously completed ball-only third-view diagnostics; assess uncertainty with existing views without using radar in fitting."
+}
