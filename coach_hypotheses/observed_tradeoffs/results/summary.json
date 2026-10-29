@@ -1,0 +1,999 @@
+{
+  "players": 98,
+  "unordered_pairs": 666,
+  "filter_pair_rows": 1998,
+  "non_tied_pairs": 622,
+  "tied_speed_pairs": 44,
+  "status_counts_per_filter": {
+    "10": {
+      "mixed_load_tradeoff": 434,
+      "observed_nonincrease": 104,
+      "all_loads_increase": 84,
+      "tied_speed": 44
+    },
+    "20": {
+      "mixed_load_tradeoff": 405,
+      "observed_nonincrease": 121,
+      "all_loads_increase": 96,
+      "tied_speed": 44
+    },
+    "30": {
+      "mixed_load_tradeoff": 401,
+      "observed_nonincrease": 126,
+      "all_loads_increase": 95,
+      "tied_speed": 44
+    }
+  },
+  "raw_signed_status_counts_per_filter": {
+    "10": {
+      "mixed_load_tradeoff": 418,
+      "all_loads_increase": 125,
+      "observed_nonincrease": 79,
+      "tied_speed": 44
+    },
+    "20": {
+      "mixed_load_tradeoff": 394,
+      "all_loads_increase": 129,
+      "observed_nonincrease": 99,
+      "tied_speed": 44
+    },
+    "30": {
+      "mixed_load_tradeoff": 394,
+      "all_loads_increase": 126,
+      "observed_nonincrease": 102,
+      "tied_speed": 44
+    }
+  },
+  "raw_signed_stable_nonincrease_pairs": 44,
+  "amended_vs_raw_stable_disagreement_pairs": 15,
+  "filter_stable_nonincrease_pairs": 59,
+  "filter_stable_nonincrease_players": 38,
+  "gap_at_least_1kmh_pairs": 253,
+  "stable_gap_at_least_1kmh_pairs": 21,
+  "status_disagreement_pairs": 197,
+  "player_balanced_stable_fraction": 0.10588624338624338,
+  "player_cluster_sampling_ci95": [
+    0.0731312003968254,
+    0.14376074735449731
+  ],
+  "players_without_non_tied_pairs": [
+    "750",
+    "905"
+  ],
+  "player_rates": [
+    {
+      "user": "1000",
+      "non_tied_pairs": 2,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1002",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1003",
+      "non_tied_pairs": 3,
+      "stable_pairs": 1,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "1005",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1017",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1027",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1029",
+      "non_tied_pairs": 9,
+      "stable_pairs": 2,
+      "stable_fraction": 0.2222222222222222
+    },
+    {
+      "user": "1062",
+      "non_tied_pairs": 8,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1068",
+      "non_tied_pairs": 2,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1466",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1539",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1540",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1543",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1547",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1552",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1557",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1558",
+      "non_tied_pairs": 5,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1562",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1584",
+      "non_tied_pairs": 9,
+      "stable_pairs": 4,
+      "stable_fraction": 0.4444444444444444
+    },
+    {
+      "user": "1587",
+      "non_tied_pairs": 9,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1111111111111111
+    },
+    {
+      "user": "1589",
+      "non_tied_pairs": 9,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1111111111111111
+    },
+    {
+      "user": "1590",
+      "non_tied_pairs": 10,
+      "stable_pairs": 2,
+      "stable_fraction": 0.2
+    },
+    {
+      "user": "1592",
+      "non_tied_pairs": 7,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1595",
+      "non_tied_pairs": 7,
+      "stable_pairs": 1,
+      "stable_fraction": 0.14285714285714285
+    },
+    {
+      "user": "1596",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1605",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1606",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1607",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1612",
+      "non_tied_pairs": 5,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1615",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1616",
+      "non_tied_pairs": 6,
+      "stable_pairs": 1,
+      "stable_fraction": 0.16666666666666666
+    },
+    {
+      "user": "1618",
+      "non_tied_pairs": 9,
+      "stable_pairs": 7,
+      "stable_fraction": 0.7777777777777778
+    },
+    {
+      "user": "1619",
+      "non_tied_pairs": 6,
+      "stable_pairs": 2,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "1620",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1621",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1624",
+      "non_tied_pairs": 9,
+      "stable_pairs": 3,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "1630",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1632",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1633",
+      "non_tied_pairs": 9,
+      "stable_pairs": 2,
+      "stable_fraction": 0.2222222222222222
+    },
+    {
+      "user": "1636",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1637",
+      "non_tied_pairs": 6,
+      "stable_pairs": 1,
+      "stable_fraction": 0.16666666666666666
+    },
+    {
+      "user": "1641",
+      "non_tied_pairs": 2,
+      "stable_pairs": 1,
+      "stable_fraction": 0.5
+    },
+    {
+      "user": "1644",
+      "non_tied_pairs": 5,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1659",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1663",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1667",
+      "non_tied_pairs": 6,
+      "stable_pairs": 1,
+      "stable_fraction": 0.16666666666666666
+    },
+    {
+      "user": "1685",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1688",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1689",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1691",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1692",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "1706",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1724",
+      "non_tied_pairs": 10,
+      "stable_pairs": 3,
+      "stable_fraction": 0.3
+    },
+    {
+      "user": "1737",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "1756",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "2",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "283",
+      "non_tied_pairs": 10,
+      "stable_pairs": 2,
+      "stable_fraction": 0.2
+    },
+    {
+      "user": "359",
+      "non_tied_pairs": 10,
+      "stable_pairs": 2,
+      "stable_fraction": 0.2
+    },
+    {
+      "user": "511",
+      "non_tied_pairs": 1,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "538",
+      "non_tied_pairs": 9,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "560",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "565",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "572",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "581",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "610",
+      "non_tied_pairs": 1,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "616",
+      "non_tied_pairs": 2,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "625",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "628",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "653",
+      "non_tied_pairs": 1,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "675",
+      "non_tied_pairs": 10,
+      "stable_pairs": 1,
+      "stable_fraction": 0.1
+    },
+    {
+      "user": "72",
+      "non_tied_pairs": 6,
+      "stable_pairs": 1,
+      "stable_fraction": 0.16666666666666666
+    },
+    {
+      "user": "738",
+      "non_tied_pairs": 1,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "750",
+      "non_tied_pairs": 0,
+      "stable_pairs": 0,
+      "stable_fraction": null
+    },
+    {
+      "user": "774",
+      "non_tied_pairs": 3,
+      "stable_pairs": 1,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "782",
+      "non_tied_pairs": 6,
+      "stable_pairs": 1,
+      "stable_fraction": 0.16666666666666666
+    },
+    {
+      "user": "787",
+      "non_tied_pairs": 5,
+      "stable_pairs": 2,
+      "stable_fraction": 0.4
+    },
+    {
+      "user": "789",
+      "non_tied_pairs": 2,
+      "stable_pairs": 1,
+      "stable_fraction": 0.5
+    },
+    {
+      "user": "822",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "830",
+      "non_tied_pairs": 1,
+      "stable_pairs": 1,
+      "stable_fraction": 1.0
+    },
+    {
+      "user": "870",
+      "non_tied_pairs": 7,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "874",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "884",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "890",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "894",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "90",
+      "non_tied_pairs": 7,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "905",
+      "non_tied_pairs": 0,
+      "stable_pairs": 0,
+      "stable_fraction": null
+    },
+    {
+      "user": "919",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "920",
+      "non_tied_pairs": 3,
+      "stable_pairs": 1,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "922",
+      "non_tied_pairs": 1,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "927",
+      "non_tied_pairs": 3,
+      "stable_pairs": 1,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "949",
+      "non_tied_pairs": 2,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "952",
+      "non_tied_pairs": 3,
+      "stable_pairs": 2,
+      "stable_fraction": 0.6666666666666666
+    },
+    {
+      "user": "956",
+      "non_tied_pairs": 2,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "964",
+      "non_tied_pairs": 10,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "967",
+      "non_tied_pairs": 1,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "970",
+      "non_tied_pairs": 3,
+      "stable_pairs": 1,
+      "stable_fraction": 0.3333333333333333
+    },
+    {
+      "user": "976",
+      "non_tied_pairs": 6,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    },
+    {
+      "user": "986",
+      "non_tied_pairs": 3,
+      "stable_pairs": 0,
+      "stable_fraction": 0.0
+    }
+  ],
+  "examples": [
+    {
+      "user": "774",
+      "pitch_i": "1097_2",
+      "pitch_j": "1097_3",
+      "recorded_speed_gap_kmh": 1.448409600000005,
+      "qualifying_filters": 3,
+      "raw_signed_qualifying_filters": 3,
+      "status_count": 1,
+      "filter_stable_observed_nonincrease": true,
+      "raw_signed_filter_stable_nonincrease": true,
+      "filters": [
+        {
+          "user": "774",
+          "session": "1097",
+          "pitch_i": "1097_2",
+          "pitch_j": "1097_3",
+          "cutoff_hz": 10,
+          "faster_pitch": "1097_2",
+          "slower_pitch": "1097_3",
+          "higher_recorded_speed_kmh": 123.919488,
+          "lower_recorded_speed_kmh": 122.4710784,
+          "recorded_speed_gap_kmh": 1.448409600000005,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -1.7093633485269635,
+          "shoulder_resultant_peak_n_delta": -30.70550347404344,
+          "shoulder_distraction_peak_n_delta": -2.975841461357703,
+          "shoulder_tension_peak_magnitude_n_delta": -2.975841461357703,
+          "sequence_lag_ms_delta": -2.799999999999912,
+          "lead_knee_extension_deg_delta": -22.541082130310485,
+          "hip_shoulder_sep_fp10_deg_delta": -1.6404365735926127,
+          "wrist_height_br_m_delta": -0.06791430895159523,
+          "arm_slot_poi_deg_delta": -4.060899999999997,
+          "stride_reported_delta": 0.03739999999999999,
+          "elbow_varus_peak_nm_higher_speed_pitch": 87.23077276477898,
+          "elbow_varus_peak_nm_lower_speed_pitch": 88.94013611330594,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 729.670172101624,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 760.3756755756674,
+          "shoulder_distraction_peak_n_higher_speed_pitch": 32.43894442692344,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 35.414785888281145,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 32.43894442692344,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 35.414785888281145
+        },
+        {
+          "user": "774",
+          "session": "1097",
+          "pitch_i": "1097_2",
+          "pitch_j": "1097_3",
+          "cutoff_hz": 20,
+          "faster_pitch": "1097_2",
+          "slower_pitch": "1097_3",
+          "higher_recorded_speed_kmh": 123.919488,
+          "lower_recorded_speed_kmh": 122.4710784,
+          "recorded_speed_gap_kmh": 1.448409600000005,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -4.079951694881871,
+          "shoulder_resultant_peak_n_delta": -37.18712316115602,
+          "shoulder_distraction_peak_n_delta": -21.64395241345435,
+          "shoulder_tension_peak_magnitude_n_delta": -21.64395241345435,
+          "sequence_lag_ms_delta": 2.8000000000001357,
+          "lead_knee_extension_deg_delta": -23.254783070904026,
+          "hip_shoulder_sep_fp10_deg_delta": -1.5422500840904618,
+          "wrist_height_br_m_delta": -0.07194441665746965,
+          "arm_slot_poi_deg_delta": -4.060899999999997,
+          "stride_reported_delta": 0.03739999999999999,
+          "elbow_varus_peak_nm_higher_speed_pitch": 125.77640169357228,
+          "elbow_varus_peak_nm_lower_speed_pitch": 129.85635338845415,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 900.7832807721986,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 937.9704039333546,
+          "shoulder_distraction_peak_n_higher_speed_pitch": 20.102681748333566,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 41.74663416178792,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 20.102681748333566,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 41.74663416178792
+        },
+        {
+          "user": "774",
+          "session": "1097",
+          "pitch_i": "1097_2",
+          "pitch_j": "1097_3",
+          "cutoff_hz": 30,
+          "faster_pitch": "1097_2",
+          "slower_pitch": "1097_3",
+          "higher_recorded_speed_kmh": 123.919488,
+          "lower_recorded_speed_kmh": 122.4710784,
+          "recorded_speed_gap_kmh": 1.448409600000005,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -4.753641543382372,
+          "shoulder_resultant_peak_n_delta": -41.02468898023494,
+          "shoulder_distraction_peak_n_delta": -24.30157416077684,
+          "shoulder_tension_peak_magnitude_n_delta": -24.30157416077684,
+          "sequence_lag_ms_delta": 2.8000000000001357,
+          "lead_knee_extension_deg_delta": -23.560144642920093,
+          "hip_shoulder_sep_fp10_deg_delta": -1.5338956446814969,
+          "wrist_height_br_m_delta": -0.07251393635788661,
+          "arm_slot_poi_deg_delta": -4.060899999999997,
+          "stride_reported_delta": 0.03739999999999999,
+          "elbow_varus_peak_nm_higher_speed_pitch": 130.40637345439336,
+          "elbow_varus_peak_nm_lower_speed_pitch": 135.16001499777573,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 939.1191990481254,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 980.1438880283604,
+          "shoulder_distraction_peak_n_higher_speed_pitch": 19.297914211279082,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 43.59948837205592,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 19.297914211279082,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 43.59948837205592
+        }
+      ]
+    },
+    {
+      "user": "830",
+      "pitch_i": "1615_1",
+      "pitch_j": "1615_2",
+      "recorded_speed_gap_kmh": 1.609343999999993,
+      "qualifying_filters": 3,
+      "raw_signed_qualifying_filters": 3,
+      "status_count": 1,
+      "filter_stable_observed_nonincrease": true,
+      "raw_signed_filter_stable_nonincrease": true,
+      "filters": [
+        {
+          "user": "830",
+          "session": "1615",
+          "pitch_i": "1615_1",
+          "pitch_j": "1615_2",
+          "cutoff_hz": 10,
+          "faster_pitch": "1615_1",
+          "slower_pitch": "1615_2",
+          "higher_recorded_speed_kmh": 137.4379776,
+          "lower_recorded_speed_kmh": 135.82863360000002,
+          "recorded_speed_gap_kmh": 1.609343999999993,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -4.578235732635633,
+          "shoulder_resultant_peak_n_delta": -23.327821146255587,
+          "shoulder_distraction_peak_n_delta": -11.058283203720817,
+          "shoulder_tension_peak_magnitude_n_delta": 0.0,
+          "sequence_lag_ms_delta": 5.500000000000064,
+          "lead_knee_extension_deg_delta": -11.37830703601383,
+          "hip_shoulder_sep_fp10_deg_delta": 1.584093817409105,
+          "wrist_height_br_m_delta": -0.07129858832642233,
+          "arm_slot_poi_deg_delta": -2.345499999999994,
+          "stride_reported_delta": 0.015900000000000025,
+          "elbow_varus_peak_nm_higher_speed_pitch": 85.27461960775972,
+          "elbow_varus_peak_nm_lower_speed_pitch": 89.85285534039535,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 879.3532643079136,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 902.6810854541692,
+          "shoulder_distraction_peak_n_higher_speed_pitch": -13.193007933297967,
+          "shoulder_distraction_peak_n_lower_speed_pitch": -2.1347247295771496,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 0.0,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 0.0
+        },
+        {
+          "user": "830",
+          "session": "1615",
+          "pitch_i": "1615_1",
+          "pitch_j": "1615_2",
+          "cutoff_hz": 20,
+          "faster_pitch": "1615_1",
+          "slower_pitch": "1615_2",
+          "higher_recorded_speed_kmh": 137.4379776,
+          "lower_recorded_speed_kmh": 135.82863360000002,
+          "recorded_speed_gap_kmh": 1.609343999999993,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -2.8020091905561912,
+          "shoulder_resultant_peak_n_delta": -46.80753387656978,
+          "shoulder_distraction_peak_n_delta": -14.460889064905297,
+          "shoulder_tension_peak_magnitude_n_delta": -5.826108467770821,
+          "sequence_lag_ms_delta": 2.7999999999999154,
+          "lead_knee_extension_deg_delta": -9.201123057576567,
+          "hip_shoulder_sep_fp10_deg_delta": 1.7458794090192242,
+          "wrist_height_br_m_delta": -0.07423344740445992,
+          "arm_slot_poi_deg_delta": -2.345499999999994,
+          "stride_reported_delta": 0.015900000000000025,
+          "elbow_varus_peak_nm_higher_speed_pitch": 113.2472630378254,
+          "elbow_varus_peak_nm_lower_speed_pitch": 116.0492722283816,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 1212.2180657266526,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 1259.0255996032224,
+          "shoulder_distraction_peak_n_higher_speed_pitch": -8.634780597134476,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 5.826108467770821,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 0.0,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 5.826108467770821
+        },
+        {
+          "user": "830",
+          "session": "1615",
+          "pitch_i": "1615_1",
+          "pitch_j": "1615_2",
+          "cutoff_hz": 30,
+          "faster_pitch": "1615_1",
+          "slower_pitch": "1615_2",
+          "higher_recorded_speed_kmh": 137.4379776,
+          "lower_recorded_speed_kmh": 135.82863360000002,
+          "recorded_speed_gap_kmh": 1.609343999999993,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -2.1564420356289276,
+          "shoulder_resultant_peak_n_delta": -56.564538768722514,
+          "shoulder_distraction_peak_n_delta": -14.739549021851897,
+          "shoulder_tension_peak_magnitude_n_delta": -6.529798454970073,
+          "sequence_lag_ms_delta": 5.600000000000051,
+          "lead_knee_extension_deg_delta": -9.189517260188541,
+          "hip_shoulder_sep_fp10_deg_delta": 1.707054885061936,
+          "wrist_height_br_m_delta": -0.07506342442893099,
+          "arm_slot_poi_deg_delta": -2.345499999999994,
+          "stride_reported_delta": 0.015900000000000025,
+          "elbow_varus_peak_nm_higher_speed_pitch": 116.41798217274656,
+          "elbow_varus_peak_nm_lower_speed_pitch": 118.57442420837549,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 1254.0927288261857,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 1310.6572675949083,
+          "shoulder_distraction_peak_n_higher_speed_pitch": -8.209750566881825,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 6.529798454970073,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 0.0,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 6.529798454970073
+        }
+      ]
+    },
+    {
+      "user": "927",
+      "pitch_i": "1403_2",
+      "pitch_j": "1403_3",
+      "recorded_speed_gap_kmh": 1.1265407999999724,
+      "qualifying_filters": 3,
+      "raw_signed_qualifying_filters": 3,
+      "status_count": 1,
+      "filter_stable_observed_nonincrease": true,
+      "raw_signed_filter_stable_nonincrease": true,
+      "filters": [
+        {
+          "user": "927",
+          "session": "1403",
+          "pitch_i": "1403_2",
+          "pitch_j": "1403_3",
+          "cutoff_hz": 10,
+          "faster_pitch": "1403_2",
+          "slower_pitch": "1403_3",
+          "higher_recorded_speed_kmh": 126.49443839999999,
+          "lower_recorded_speed_kmh": 125.36789760000002,
+          "recorded_speed_gap_kmh": 1.1265407999999724,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -2.8833584030888346,
+          "shoulder_resultant_peak_n_delta": -19.859921696568563,
+          "shoulder_distraction_peak_n_delta": -1.8473898426040631,
+          "shoulder_tension_peak_magnitude_n_delta": -1.8473898426040631,
+          "sequence_lag_ms_delta": -8.399999999999963,
+          "lead_knee_extension_deg_delta": -2.7888183907424846,
+          "hip_shoulder_sep_fp10_deg_delta": 1.1266854717614372,
+          "wrist_height_br_m_delta": -0.023805576920822746,
+          "arm_slot_poi_deg_delta": 0.5450000000000017,
+          "stride_reported_delta": -0.02290000000000003,
+          "elbow_varus_peak_nm_higher_speed_pitch": 57.44165088868515,
+          "elbow_varus_peak_nm_lower_speed_pitch": 60.32500929177399,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 734.5949867702229,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 754.4549084667915,
+          "shoulder_distraction_peak_n_higher_speed_pitch": 3.605842729973673,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 5.453232572577736,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 3.605842729973673,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 5.453232572577736
+        },
+        {
+          "user": "927",
+          "session": "1403",
+          "pitch_i": "1403_2",
+          "pitch_j": "1403_3",
+          "cutoff_hz": 20,
+          "faster_pitch": "1403_2",
+          "slower_pitch": "1403_3",
+          "higher_recorded_speed_kmh": 126.49443839999999,
+          "lower_recorded_speed_kmh": 125.36789760000002,
+          "recorded_speed_gap_kmh": 1.1265407999999724,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -1.7103892423913152,
+          "shoulder_resultant_peak_n_delta": -14.3557105443723,
+          "shoulder_distraction_peak_n_delta": -9.74778790649798,
+          "shoulder_tension_peak_magnitude_n_delta": -9.74778790649798,
+          "sequence_lag_ms_delta": -5.5999999999999375,
+          "lead_knee_extension_deg_delta": -1.9898462718356242,
+          "hip_shoulder_sep_fp10_deg_delta": 1.2191695852236357,
+          "wrist_height_br_m_delta": -0.022659354436507684,
+          "arm_slot_poi_deg_delta": 0.5450000000000017,
+          "stride_reported_delta": -0.02290000000000003,
+          "elbow_varus_peak_nm_higher_speed_pitch": 72.03279500570349,
+          "elbow_varus_peak_nm_lower_speed_pitch": 73.7431842480948,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 844.5443441779083,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 858.9000547222806,
+          "shoulder_distraction_peak_n_higher_speed_pitch": 4.518532512186544,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 14.266320418684524,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 4.518532512186544,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 14.266320418684524
+        },
+        {
+          "user": "927",
+          "session": "1403",
+          "pitch_i": "1403_2",
+          "pitch_j": "1403_3",
+          "cutoff_hz": 30,
+          "faster_pitch": "1403_2",
+          "slower_pitch": "1403_3",
+          "higher_recorded_speed_kmh": 126.49443839999999,
+          "lower_recorded_speed_kmh": 125.36789760000002,
+          "recorded_speed_gap_kmh": 1.1265407999999724,
+          "tied_speed": false,
+          "raw_signed_status": "observed_nonincrease",
+          "status": "observed_nonincrease",
+          "elbow_varus_peak_nm_delta": -1.8557582739525458,
+          "shoulder_resultant_peak_n_delta": -12.95359476961437,
+          "shoulder_distraction_peak_n_delta": -10.578188889698945,
+          "shoulder_tension_peak_magnitude_n_delta": -10.578188889698945,
+          "sequence_lag_ms_delta": -8.399999999999963,
+          "lead_knee_extension_deg_delta": -1.9574786894042333,
+          "hip_shoulder_sep_fp10_deg_delta": 1.1998477059919104,
+          "wrist_height_br_m_delta": -0.022559855504417747,
+          "arm_slot_poi_deg_delta": 0.5450000000000017,
+          "stride_reported_delta": -0.02290000000000003,
+          "elbow_varus_peak_nm_higher_speed_pitch": 73.2709757100666,
+          "elbow_varus_peak_nm_lower_speed_pitch": 75.12673398401914,
+          "shoulder_resultant_peak_n_higher_speed_pitch": 844.3606454637157,
+          "shoulder_resultant_peak_n_lower_speed_pitch": 857.3142402333301,
+          "shoulder_distraction_peak_n_higher_speed_pitch": 4.940538624862423,
+          "shoulder_distraction_peak_n_lower_speed_pitch": 15.518727514561368,
+          "shoulder_tension_peak_magnitude_n_higher_speed_pitch": 4.940538624862423,
+          "shoulder_tension_peak_magnitude_n_lower_speed_pitch": 15.518727514561368
+        }
+      ]
+    }
+  ],
+  "observational_finding": "PRESENT",
+  "measurement_robustness_validated": false,
+  "same_capacity_validated": false,
+  "intervention_effect_validated": false,
+  "coaching_recommendation_ready": false,
+  "speed_prediction_gate_changed": false,
+  "model_fitted": false,
+  "negative_signed_shoulder_extreme_rows": 523
+}
