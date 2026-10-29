@@ -1,0 +1,173 @@
+{
+  "protocol_commit": "4664982b8a5638c76d03927a2e1a94c56a2a3e8f",
+  "protocol_sha256": "d6520f154091bef8f89e193e73e0769aee3f1b0eb7ad4e9a945d2cb9460dc11c",
+  "code_sha256": "c59cb6cb77e88b218fa817d4957fd9c635953a512f46fd8d2b899e0f85db5513",
+  "source_hashes": {
+    "metadata.csv": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+    "full_sig/landmarks.csv": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+    "full_sig/joint_angles.csv": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce"
+  },
+  "input_audit": {
+    "1097_2": {
+      "c3d_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000774\\000774_001097_76_223_005_FF_770.c3d",
+      "c3d_sha256": "f30dba242e15293163710566e63344f99024f8e59b1d17e782710c7c49e032b8",
+      "frames": 446,
+      "csv_time_rounding_max_seconds": 4.4444444444513564e-05,
+      "raw_marker_midpoint_processed_wrist_median_distance_mm": 0.1782384072817527,
+      "fp10_to_br_ms": 208.29999999999993,
+      "fixed_xy_origin_mm": [
+        983.4952000000001,
+        -140.18120000000005,
+        0.0
+      ],
+      "marker_mapping": "POINT LABELS names, not shared array indices",
+      "raw_residual_zero_is_not_accuracy": true
+    },
+    "1097_3": {
+      "c3d_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000774\\000774_001097_76_223_006_FF_761.c3d",
+      "c3d_sha256": "7d24249611e87d51a681af653b4b31c9665920d834a01d6a8fc7b20d59218853",
+      "frames": 446,
+      "csv_time_rounding_max_seconds": 4.4444444444513564e-05,
+      "raw_marker_midpoint_processed_wrist_median_distance_mm": 0.15155310997678678,
+      "fp10_to_br_ms": 194.5,
+      "fixed_xy_origin_mm": [
+        1005.1283999999998,
+        -167.9357999999999,
+        0.0
+      ],
+      "marker_mapping": "POINT LABELS names, not shared array indices",
+      "raw_residual_zero_is_not_accuracy": true
+    },
+    "1615_1": {
+      "c3d_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000830\\000830_001615_70_193_005_FF_854.c3d",
+      "c3d_sha256": "c1d77c5bffb84efcfb1fcebe14bf6ac435db218e3d0a96a7ebdf8d7d35f4e72e",
+      "frames": 549,
+      "csv_time_rounding_max_seconds": 4.4444444444513564e-05,
+      "raw_marker_midpoint_processed_wrist_median_distance_mm": 0.6289037148713476,
+      "fp10_to_br_ms": 158.4000000000001,
+      "fixed_xy_origin_mm": [
+        1046.8384,
+        -179.98360000000005,
+        0.0
+      ],
+      "marker_mapping": "POINT LABELS names, not shared array indices",
+      "raw_residual_zero_is_not_accuracy": true
+    },
+    "1615_2": {
+      "c3d_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000830\\000830_001615_70_193_006_FF_844.c3d",
+      "c3d_sha256": "163fa5288f51b4fd1370bcd2596d36bd43454f583a47f7dab917970671c2f689",
+      "frames": 573,
+      "csv_time_rounding_max_seconds": 4.4444444444513564e-05,
+      "raw_marker_midpoint_processed_wrist_median_distance_mm": 0.5489128893996322,
+      "fp10_to_br_ms": 138.90000000000003,
+      "fixed_xy_origin_mm": [
+        1034.3948000000003,
+        -221.63720000000006,
+        0.0
+      ],
+      "marker_mapping": "POINT LABELS names, not shared array indices",
+      "raw_residual_zero_is_not_accuracy": true
+    }
+  },
+  "videos": [
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_830_observed_overlay.mp4",
+      "sha256": "3ad81b130fa2f4dafc9f2a0ea9474290c50437dce4cf6adef4fa29610f6e617d",
+      "frames": 289,
+      "fps": 30,
+      "slowdown": 12,
+      "full_decode_verified": true,
+      "segments": [
+        {
+          "anchor": "fp",
+          "frame_start": 0,
+          "frames": 152,
+          "elapsed_start": -0.12,
+          "elapsed_end": 0.29944444444444446
+        },
+        {
+          "anchor": "br",
+          "frame_start": 152,
+          "frames": 137,
+          "elapsed_start": -0.3,
+          "elapsed_end": 0.07777777777777778
+        }
+      ],
+      "previews": [
+        "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_830_fp_zero.png",
+        "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_830_fp_fast_br.png",
+        "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_830_br_zero.png"
+      ],
+      "lower_bound_m": [
+        -1.0168144000000003,
+        -0.7273395999999999,
+        -0.0101
+      ],
+      "upper_bound_m": [
+        1.1480423999999998,
+        0.5200628,
+        1.4992920000000003
+      ]
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_774_observed_overlay.mp4",
+      "sha256": "c2744e384d8b821324229e93b139a14dafb51824c1eb6b6c03fe11352c2cf181",
+      "frames": 289,
+      "fps": 30,
+      "slowdown": 12,
+      "full_decode_verified": true,
+      "segments": [
+        {
+          "anchor": "fp",
+          "frame_start": 0,
+          "frames": 152,
+          "elapsed_start": -0.12,
+          "elapsed_end": 0.29944444444444446
+        },
+        {
+          "anchor": "br",
+          "frame_start": 152,
+          "frames": 137,
+          "elapsed_start": -0.3,
+          "elapsed_end": 0.07777777777777778
+        }
+      ],
+      "previews": [
+        "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_774_fp_zero.png",
+        "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_774_fp_fast_br.png",
+        "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-motion-overlays-20261029\\coach_hypotheses\\observed_motion\\artifacts\\player_774_br_zero.png"
+      ],
+      "lower_bound_m": [
+        -0.9290895999999997,
+        -0.6734939999999999,
+        -0.019398400000000003
+      ],
+      "upper_bound_m": [
+        1.3816984,
+        0.4862357999999999,
+        1.7802
+      ]
+    }
+  ],
+  "metric_source": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-stage1-diagnostics-20261029\\coach_hypotheses\\stage1\\results\\pitch_metrics.csv",
+    "sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4"
+  },
+  "sensitivity_source": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-tradeoff-sensitivity-20261029\\coach_hypotheses\\observed_sensitivity\\results\\summary.json",
+    "sha256": "32ca2146b29a31ddf212988711705832e05366a0300300999f4535ed5fa0e490"
+  },
+  "colors": {
+    "faster_recorded": "orange",
+    "slower_recorded": "blue"
+  },
+  "pose_processing": "provided 20Hz, no additional filtering",
+  "angle_processing": "provided angles unwrapped in degrees for linear sampling",
+  "alignment": "FP10 primary + BR diagnostic, real elapsed time, fixed FP10 XY translations only",
+  "camera_views": "fixed lab XZ and YZ, same meter/pixel scale, no rotation fit",
+  "speed_values": "recorded, not predicted",
+  "same_capacity_validated": false,
+  "intervention_effect_validated": false,
+  "coaching_recommendation_ready": false,
+  "data_license": "CC BY-NC-SA 4.0"
+}
