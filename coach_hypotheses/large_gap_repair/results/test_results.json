@@ -1,0 +1,17 @@
+{
+  "new_tests": {
+    "run": 6,
+    "passed": 6,
+    "errors": 0,
+    "failures": 0
+  },
+  "full_suite": {
+    "run": 317,
+    "passed": 305,
+    "errors": 10,
+    "skipped": 2,
+    "assertion_failures": 0
+  },
+  "old_error_names_identical": true,
+  "validated_speed_gap_reduction": false
+}
