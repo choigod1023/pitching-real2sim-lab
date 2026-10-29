@@ -1,0 +1,39 @@
+{
+  "plan_commit": "de6c176",
+  "code": {
+    "ablation.py": "9b9a120ad13f2bd5d2083b475dcd45d22a5f0289425b158531ac049cb43e6e00",
+    "test_ablation.py": "65db780abb29fef511e98d650c31dc3bf04c8e93e8ca9a965598feecbfefd56f"
+  },
+  "protocol_sha256": "139df69bac9bb682f532a9fe6591ae69a26e530af51f9b200307431b339decfd",
+  "primary_results_retained": {
+    "errors_extended14_10.csv": true,
+    "errors_extended14_20.csv": true,
+    "errors_extended14_30.csv": true,
+    "errors_mae14_10.csv": true,
+    "errors_mae14_20.csv": true,
+    "errors_mae14_30.csv": true,
+    "errors_null_10.csv": true,
+    "errors_null_20.csv": true,
+    "errors_null_30.csv": true,
+    "errors_original12_10.csv": true,
+    "errors_original12_20.csv": true,
+    "errors_original12_30.csv": true,
+    "errors_selector_10.csv": true,
+    "errors_selector_20.csv": true,
+    "errors_selector_30.csv": true,
+    "errors_stable7_10.csv": true,
+    "errors_stable7_20.csv": true,
+    "errors_stable7_30.csv": true,
+    "errors_waveform20_10.csv": true,
+    "errors_waveform20_20.csv": true,
+    "errors_waveform20_30.csv": true,
+    "feature_diagnostics.csv": true,
+    "fold_diagnostics.csv": true,
+    "inner_scores.csv": true,
+    "manifest.json": true,
+    "permutation_controls.csv": true,
+    "predictions.csv": true,
+    "summary.json": true,
+    "waveform_features.csv": true
+  }
+}

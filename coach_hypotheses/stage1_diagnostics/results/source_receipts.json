@@ -1,0 +1,13 @@
+{
+  "primary_source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11882905/fullTextXML",
+  "http_status": 200,
+  "bytes": 107854,
+  "sha256": "507d6ea0da293f0a571015e5ec02902af393b74604fe9ded83f70526719026b9",
+  "title": "Leveraging graph neural networks and gate recurrent units for accurate and transparent prediction of baseball pitching speed",
+  "original_article_doi": "10.1038/s41598-025-88284-x",
+  "other_article": {
+    "doi": "10.1016/j.smhs.2024.10.001",
+    "verification": "publisher_author_abstract_only",
+    "pdf_access": "failed_via_web_redirect"
+  }
+}
