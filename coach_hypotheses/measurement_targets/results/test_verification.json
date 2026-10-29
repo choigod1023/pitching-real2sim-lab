@@ -1,0 +1,31 @@
+{
+  "targeted-tests": {
+    "returncode": 0,
+    "tail": [
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 24 tests in 5.380s",
+      "",
+      "OK"
+    ]
+  },
+  "full-suite": {
+    "returncode": 1,
+    "tail": [
+      "",
+      "----------------------------------------------------------------------",
+      "Ran 323 tests in 11.120s",
+      "",
+      "FAILED (errors=10, skipped=2)"
+    ]
+  },
+  "model_xml_side_effect": {
+    "changed_by_this_test_run": true,
+    "before_sha256": "abb05e8208c80e33ca31caf37077c05a0642bb82cee3821aab540a09c6782d97",
+    "generated_sha256": "ad5ed58fcdb22ebeb62d875ebd74b7ccb6acf2327ff4ff07610588fe25644ee3",
+    "restored_sha256": "abb05e8208c80e33ca31caf37077c05a0642bb82cee3821aab540a09c6782d97"
+  },
+  "existing_tracked_count": 664,
+  "existing_files_preserved": true,
+  "changed_existing_files": []
+}

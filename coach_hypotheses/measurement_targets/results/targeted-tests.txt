@@ -1,0 +1,37 @@
+{
+  "rows": 0,
+  "conditions": 0,
+  "local_distance_mm_for_1kmh": 1.0
+}
+
+test_common_random_samples_and_seed (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_common_random_samples_and_seed) ... ok
+test_conditions_complete_and_fixed_nominal (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_conditions_complete_and_fixed_nominal) ... ok
+test_distance_mm_units_and_input_unchanged (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_distance_mm_units_and_input_unchanged) ... ok
+test_each_fixed_factor_and_allfixed_width_zero (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_each_fixed_factor_and_allfixed_width_zero) ... ok
+test_invalid_inputs (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_invalid_inputs) ... ok
+test_new_goal_requires_five_pitches_both_seeds (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_new_goal_requires_five_pitches_both_seeds) ... ok
+test_no_radar_loader_and_unchanged_original_criteria (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_no_radar_loader_and_unchanged_original_criteria) ... ok
+test_original_prior_width_reproduced (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_original_prior_width_reproduced) ... ok
+test_runner_freezes_before_recorded_comparison_and_boundaries (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_runner_freezes_before_recorded_comparison_and_boundaries) ... ok
+test_sensitivity_scalar_and_vector_differ_under_cancellation (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_sensitivity_scalar_and_vector_differ_under_cancellation) ... ok
+test_width_shapley_efficiency_and_interactions (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_width_shapley_efficiency_and_interactions) ... ok
+test_zero_offset_columns_cannot_change_result (coach_hypotheses.measurement_targets.test_targets.TargetTests.test_zero_offset_columns_cannot_change_result) ... ok
+test_additive_group_indices_and_reproducibility (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_additive_group_indices_and_reproducibility) ... ok
+test_cli_dispatch_and_output_boundary (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_cli_dispatch_and_output_boundary) ... usage: stage2 [-h] --data DATA [--output OUTPUT]
+stage2: error: output must remain in coach_hypotheses/stage2
+ok
+test_common_translation_and_rotation_preserve_speed (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_common_translation_and_rotation_preserve_speed) ... ok
+test_convergence_pass_and_explicit_fail (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_convergence_pass_and_explicit_fail) ... ok
+test_degenerate_design_and_output_fail (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_degenerate_design_and_output_fail) ... ok
+test_hash_and_separate_recorded_comparison (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_hash_and_separate_recorded_comparison) ... ok
+test_kinematic_distance_and_distance_rate_units (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_kinematic_distance_and_distance_rate_units) ... ok
+test_loader_without_radar_and_legacy_regression (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_loader_without_radar_and_legacy_regression) ... ok
+test_local_extremes_and_offset_reach (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_local_extremes_and_offset_reach) ... ok
+test_precision_followup_preserves_original_and_cli (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_precision_followup_preserves_original_and_cli) ... ok
+test_product_interaction_analytic (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_product_interaction_analytic) ... ok
+test_run_freezes_outputs_before_recorded_read (coach_hypotheses.stage2.test_uncertainty.ScenarioTests.test_run_freezes_outputs_before_recorded_read) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 5.380s
+
+OK

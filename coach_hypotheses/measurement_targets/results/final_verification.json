@@ -1,0 +1,69 @@
+{
+  "actual_prior_reproduction": [
+    {
+      "pitch": "3034_1",
+      "seed": 20261029,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_1",
+      "seed": 20261030,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_2",
+      "seed": 20261029,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_2",
+      "seed": 20261030,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_3",
+      "seed": 20261029,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_3",
+      "seed": 20261030,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_4",
+      "seed": 20261029,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_4",
+      "seed": 20261030,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_5",
+      "seed": 20261029,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_5",
+      "seed": 20261030,
+      "mean_difference_kmh": 0.0,
+      "width_difference_kmh": 0.0
+    }
+  ],
+  "max_prior_width_difference_kmh": 0.0,
+  "same_ten_known_error_headers": true,
+  "existing_tracked_preserved_after_tests": true,
+  "source_hashes_preserved_after_tests": true,
+  "only_new_folder_changed": true
+}
