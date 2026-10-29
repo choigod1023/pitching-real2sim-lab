@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-29",
+  "sources": [
+    {
+      "url": "https://docs.theiamarkerless.com/theia3d-documentation/theia-model-description/full-body-model-description.md",
+      "role": "current_full_body_model",
+      "verification": "web tool retrieved model table; upper arm shoulder origin, free6DOF; lowerarm elbow/hand wrist",
+      "direct_download": "403 Forbidden; no full-page hash claimed"
+    },
+    {
+      "url": "https://docs.theiamarkerless.com/theia3d-documentation/theia-model-description/head-arms-torso-and-lower-body-models-description.md",
+      "role": "current_separate_arm_model",
+      "verification": "web tool retrieved table; upper arm parentLab/free6DOF, lowerarm elbow/hand wrist",
+      "source2023_equivalence_verified": false
+    },
+    {
+      "url": "https://www.theiamarkerless.com/faq/can-i-customize-the-model-used-by-theia3d",
+      "role": "configurable_dof_options",
+      "verification": "officialFAQ documents shoulder3or6DOF; does not identify this file exact solver"
+    },
+    {
+      "url": "https://www.theiamarkerless.com/blog/theia-2024-release-part-3-model-dofs",
+      "role": "legacy_option_bridge",
+      "verification": "official release discussion describes prior Use Free Arms option as enabling6DOF shoulder; consistent with fileFREE_ARMS1, not full2023 model implementation proof"
+    }
+  ],
+  "exact2023_implementation_verified": false,
+  "clinical_point_equivalence_to_COCO_verified": false,
+  "remote_document_content_hash_available": false,
+  "source_body_and_alignment_hashes": "joint_origin_results.json"
+}
