@@ -1,0 +1,34 @@
+{
+  "technical_validation": "PASS",
+  "independent_waveform_peak_cases": 2592,
+  "independent_pair_filter_event_rows": 14337,
+  "maximum_row_absolute_difference": 0.0,
+  "independently_checked_profile_pair_results": 295,
+  "new_tests_passed": 11,
+  "full_suite": {
+    "tests_run": 300,
+    "passed": 288,
+    "errors": 10,
+    "skipped": 2,
+    "new_error_ids": [],
+    "existing_error_ids": [
+      "test_anatomical_shoulder (unittest.loader._FailedTest.test_anatomical_shoulder)",
+      "test_applied_path_forces (unittest.loader._FailedTest.test_applied_path_forces)",
+      "test_directional_shoulder (unittest.loader._FailedTest.test_directional_shoulder)",
+      "test_elbow_moment_validation (unittest.loader._FailedTest.test_elbow_moment_validation)",
+      "test_elbow_registration_audit (unittest.loader._FailedTest.test_elbow_registration_audit)",
+      "test_muscle_equilibrium_mode (unittest.loader._FailedTest.test_muscle_equilibrium_mode)",
+      "test_actual_wrapped_path_fails_consistency_gate (test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate)",
+      "test_shoulder_load_audit (unittest.loader._FailedTest.test_shoulder_load_audit)",
+      "test_wrist_integration (unittest.loader._FailedTest.test_wrist_integration)",
+      "test_wrist_residual_audit (unittest.loader._FailedTest.test_wrist_residual_audit)"
+    ]
+  },
+  "predecessor_outputs_unchanged": true,
+  "protocol_and_code_hashes_match": true,
+  "own_worktree_model_xml_test_side_effect_restored": true,
+  "calibrated_measurement_error_estimated": false,
+  "same_capacity_validated": false,
+  "intervention_effect_validated": false,
+  "full_signal_sources_unchanged_after_checks": true
+}
