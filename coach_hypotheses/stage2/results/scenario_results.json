@@ -1,0 +1,535 @@
+{
+  "scope": "engineering scenario, conditional kinematics, not empirical measurement intervals",
+  "protocol_commit": "45069ca",
+  "summaries": [
+    {
+      "pitch": "3034_1",
+      "nominal_15cm_kmh": 113.41533956375693,
+      "primary": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 115.65247606846384,
+        "sd_kmh": 10.36175944928991,
+        "variance_kmh2": 107.36605888494871,
+        "scenario_quantiles_025_50_975_kmh": [
+          98.11310042471996,
+          115.4872170844051,
+          134.74808138542707
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.8803215382929778,
+          "release_frame": 0.0730623816394342,
+          "hand_orientation_filter": 0.035687246632748366,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.8870258076316994,
+          "release_frame": 0.08070994023333795,
+          "hand_orientation_filter": 0.045953605765039825,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.010928833434839635
+      },
+      "relative_offset_stress": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 115.66752453784687,
+        "sd_kmh": 10.57734454175923,
+        "variance_kmh2": 111.88021755508376,
+        "scenario_quantiles_025_50_975_kmh": [
+          97.45741662360285,
+          115.56434891996332,
+          135.19803256684037
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.8432619931394142,
+          "release_frame": 0.07064622696686748,
+          "hand_orientation_filter": 0.033927655371513515,
+          "relative_local_offset": 0.03991718097699836
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.8509210529584256,
+          "release_frame": 0.07817778393019455,
+          "hand_orientation_filter": 0.044426453515056696,
+          "relative_local_offset": 0.04269014367390278
+        },
+        "interaction_residual": 0.012246943545206501
+      },
+      "constant_distance_companion": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 115.64691441976893,
+        "sd_kmh": 10.356900094896007,
+        "variance_kmh2": 107.26537957565694,
+        "scenario_quantiles_025_50_975_kmh": [
+          98.0939447806093,
+          115.46971528128556,
+          134.76726951072834
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.8811648218279605,
+          "release_frame": 0.07284949521737816,
+          "hand_orientation_filter": 0.035705960329440185,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.8867738575482826,
+          "release_frame": 0.07994520473289957,
+          "hand_orientation_filter": 0.04599527755952061,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.010279722625221144
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "nominal_15cm_kmh": 113.86003470301378,
+      "primary": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 114.45996354025635,
+        "sd_kmh": 9.758899417700155,
+        "variance_kmh2": 95.23611784478841,
+        "scenario_quantiles_025_50_975_kmh": [
+          97.92567964642006,
+          114.1935870314611,
+          132.721971825703
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.8312694132721478,
+          "release_frame": 0.10658093390232284,
+          "hand_orientation_filter": 0.05452898614454516,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.8404455701529208,
+          "release_frame": 0.10934873235260548,
+          "hand_orientation_filter": 0.06229053575084962,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.007620666680984267
+      },
+      "relative_offset_stress": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 114.47423752828658,
+        "sd_kmh": 9.97874511656869,
+        "variance_kmh2": 99.5753541014435,
+        "scenario_quantiles_025_50_975_kmh": [
+          97.16810067251423,
+          114.23667240780074,
+          133.28286583495913
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7937689056791047,
+          "release_frame": 0.10271519674170736,
+          "hand_orientation_filter": 0.052384459957389,
+          "relative_local_offset": 0.04279127639784525
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.8035380524373739,
+          "release_frame": 0.1053927694334581,
+          "hand_orientation_filter": 0.05998598474298296,
+          "relative_local_offset": 0.04546452581967038
+        },
+        "interaction_residual": 0.008340161223953646
+      },
+      "constant_distance_companion": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 114.45445911920538,
+        "sd_kmh": 9.754910914925262,
+        "variance_kmh2": 95.15828695812802,
+        "scenario_quantiles_025_50_975_kmh": [
+          97.92462347732182,
+          114.19254327301559,
+          132.6566714318053
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.8320109313959629,
+          "release_frame": 0.10649486169539124,
+          "hand_orientation_filter": 0.05455046599897475,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.840163824532169,
+          "release_frame": 0.10868129800371973,
+          "hand_orientation_filter": 0.06232466892610901,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.006943740909671092
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "nominal_15cm_kmh": 112.5366982072812,
+      "primary": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 111.16097384490261,
+        "sd_kmh": 9.764128099707655,
+        "variance_kmh2": 95.33819754750061,
+        "scenario_quantiles_025_50_975_kmh": [
+          94.28552802892935,
+          110.59002598055909,
+          130.0948851805921
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7375661666981306,
+          "release_frame": 0.09629969617948642,
+          "hand_orientation_filter": 0.15374928871180574,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7509401295867543,
+          "release_frame": 0.0991771014468409,
+          "hand_orientation_filter": 0.16583553331857295,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.012384848410577298
+      },
+      "relative_offset_stress": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 111.1753202006438,
+        "sd_kmh": 9.981330970984343,
+        "variance_kmh2": 99.62696795233124,
+        "scenario_quantiles_025_50_975_kmh": [
+          93.75785228524508,
+          110.65109160019782,
+          130.4926351300014
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7049763148159324,
+          "release_frame": 0.0929095369732661,
+          "hand_orientation_filter": 0.1480396391586382,
+          "relative_local_offset": 0.04222227503208083
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7183470807461365,
+          "release_frame": 0.09581886365706085,
+          "hand_orientation_filter": 0.15897440196952178,
+          "relative_local_offset": 0.04435652425731835
+        },
+        "interaction_residual": 0.011852234020082508
+      },
+      "constant_distance_companion": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 111.15534341614995,
+        "sd_kmh": 9.761125540842986,
+        "variance_kmh2": 95.27957182409727,
+        "scenario_quantiles_025_50_975_kmh": [
+          94.2972892420756,
+          110.58944376116418,
+          130.09286027309707
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7381010838070428,
+          "release_frame": 0.09628022849735607,
+          "hand_orientation_filter": 0.1538276205757486,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7506085866100115,
+          "release_frame": 0.09857331292323933,
+          "hand_orientation_filter": 0.16596038478910907,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.01179106711985256
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "nominal_15cm_kmh": 113.6467276905119,
+      "primary": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 113.82537725279747,
+        "sd_kmh": 10.191986568919484,
+        "variance_kmh2": 103.87659022103516,
+        "scenario_quantiles_025_50_975_kmh": [
+          96.47566429525008,
+          113.37262761505923,
+          133.88351077479447
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7660121727942412,
+          "release_frame": 0.13224279342038286,
+          "hand_orientation_filter": 0.09290779562056356,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.77840618221152,
+          "release_frame": 0.13453305308345864,
+          "hand_orientation_filter": 0.1016784961778917,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.008837238164812411
+      },
+      "relative_offset_stress": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 113.8396737900994,
+        "sd_kmh": 10.406110423989205,
+        "variance_kmh2": 108.28713415625678,
+        "scenario_quantiles_025_50_975_kmh": [
+          95.89264210262098,
+          113.39497603420648,
+          134.23395409491047
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7336624496272853,
+          "release_frame": 0.12775720650525274,
+          "hand_orientation_filter": 0.08957458885427526,
+          "relative_local_offset": 0.0399230106207893
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7464287802763548,
+          "release_frame": 0.12987646486086976,
+          "hand_orientation_filter": 0.0979612617028553,
+          "relative_local_offset": 0.042421559136534996
+        },
+        "interaction_residual": 0.009082744392397424
+      },
+      "constant_distance_companion": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 113.8198597014622,
+        "sd_kmh": 10.188203737798805,
+        "variance_kmh2": 103.79949540289752,
+        "scenario_quantiles_025_50_975_kmh": [
+          96.4968538675971,
+          113.36607887700097,
+          133.87374953928287
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7666448997081358,
+          "release_frame": 0.1322189052887702,
+          "hand_orientation_filter": 0.09295371101981469,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7780986590186381,
+          "release_frame": 0.13394377481550132,
+          "hand_orientation_filter": 0.10173223299334133,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.008182483983279365
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "nominal_15cm_kmh": 108.73143811361751,
+      "primary": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 108.15957152126987,
+        "sd_kmh": 9.253427120235159,
+        "variance_kmh2": 85.62591346950354,
+        "scenario_quantiles_025_50_975_kmh": [
+          92.24472380469481,
+          107.64931997057876,
+          125.8972422603797
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7519650344744407,
+          "release_frame": 0.08932672945837086,
+          "hand_orientation_filter": 0.14325443687247288,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7651943877049776,
+          "release_frame": 0.09566290351194302,
+          "hand_orientation_filter": 0.15825981547069434,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.015453799194715456
+      },
+      "relative_offset_stress": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 108.17537754783847,
+        "sd_kmh": 9.498514298415243,
+        "variance_kmh2": 90.2217738771988,
+        "scenario_quantiles_025_50_975_kmh": [
+          91.55310156400171,
+          107.70332813163057,
+          126.42655960184777
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7127256362763602,
+          "release_frame": 0.08563718031103422,
+          "hand_orientation_filter": 0.13694217585592128,
+          "relative_local_offset": 0.04967736060788724
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7258998966778434,
+          "release_frame": 0.09214927369926858,
+          "hand_orientation_filter": 0.1505259561501176,
+          "relative_local_offset": 0.052264212362701776
+        },
+        "interaction_residual": 0.015017646948797037
+      },
+      "constant_distance_companion": {
+        "n_per_matrix": 32768,
+        "seed": 20261029,
+        "mean_kmh": 108.15377618905448,
+        "sd_kmh": 9.250285273475827,
+        "variance_kmh2": 85.56777764068374,
+        "scenario_quantiles_025_50_975_kmh": [
+          92.26637673916636,
+          107.63312523130519,
+          125.86474838658955
+        ],
+        "first_order": {
+          "distance_and_relative_motion": 0.7525175754406652,
+          "release_frame": 0.08932752033064129,
+          "hand_orientation_filter": 0.14330769075521754,
+          "relative_local_offset": 0.0
+        },
+        "total_order": {
+          "distance_and_relative_motion": 0.7648637489620119,
+          "release_frame": 0.09505326351902559,
+          "hand_orientation_filter": 0.15839518753910373,
+          "relative_local_offset": 0.0
+        },
+        "interaction_residual": 0.014847213473475951
+      }
+    }
+  ],
+  "diagnostics": [
+    {
+      "pitch": "3034_1",
+      "legacy_15cm_error_kmh": 2.4158453015843406e-13,
+      "fixed_global_transform_speed_difference_kmh": 0.0,
+      "lengths_m": [
+        0.35626962154046415,
+        0.30600300598665986
+      ],
+      "br_s": 1.6,
+      "rate_hz": 360.0
+    },
+    {
+      "pitch": "3034_2",
+      "legacy_15cm_error_kmh": 1.1510792319313623e-12,
+      "fixed_global_transform_speed_difference_kmh": 1.2789769243681804e-14,
+      "lengths_m": [
+        0.3637799956152826,
+        0.2988906430453653
+      ],
+      "br_s": 1.5583,
+      "rate_hz": 360.0
+    },
+    {
+      "pitch": "3034_3",
+      "legacy_15cm_error_kmh": 1.5063505998114124e-12,
+      "fixed_global_transform_speed_difference_kmh": 1.2789769243681804e-14,
+      "lengths_m": [
+        0.3616876863748521,
+        0.298982871135121
+      ],
+      "br_s": 1.4583,
+      "rate_hz": 360.0
+    },
+    {
+      "pitch": "3034_4",
+      "legacy_15cm_error_kmh": 4.973799150320701e-13,
+      "fixed_global_transform_speed_difference_kmh": 1.2789769243681804e-14,
+      "lengths_m": [
+        0.3632259232246646,
+        0.2999674777640511
+      ],
+      "br_s": 1.4528,
+      "rate_hz": 360.0
+    },
+    {
+      "pitch": "3034_5",
+      "legacy_15cm_error_kmh": 1.0658141036401503e-12,
+      "fixed_global_transform_speed_difference_kmh": 1.2789769243681804e-14,
+      "lengths_m": [
+        0.3569225554704957,
+        0.30000204131424324
+      ],
+      "br_s": 1.4139,
+      "rate_hz": 360.0
+    }
+  ],
+  "convergence": [
+    {
+      "pitch": "3034_1",
+      "mode": "primary",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "relative_offset_stress",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_1",
+      "mode": "constant_distance_companion",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "primary",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "relative_offset_stress",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_2",
+      "mode": "constant_distance_companion",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "primary",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "relative_offset_stress",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_3",
+      "mode": "constant_distance_companion",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "primary",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "relative_offset_stress",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_4",
+      "mode": "constant_distance_companion",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "primary",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "relative_offset_stress",
+      "verdict": "FAIL"
+    },
+    {
+      "pitch": "3034_5",
+      "mode": "constant_distance_companion",
+      "verdict": "FAIL"
+    }
+  ]
+}

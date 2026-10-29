@@ -1,0 +1,7 @@
+{
+  "tracked_files_checked": 644,
+  "test_side_effects": [
+    "artifacts/coupled-body/model.xml"
+  ],
+  "remaining_changes": []
+}

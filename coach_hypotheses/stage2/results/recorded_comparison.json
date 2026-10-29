@@ -1,0 +1,32 @@
+[
+  {
+    "pitch": "3034_1",
+    "recorded_speed_kmh": 130.19592960000003,
+    "nominal_difference_kmh": -16.780590036243098,
+    "scenario_mean_difference_kmh": -14.543453531536187
+  },
+  {
+    "pitch": "3034_2",
+    "recorded_speed_kmh": 131.0006016,
+    "nominal_difference_kmh": -17.14056689698623,
+    "scenario_mean_difference_kmh": -16.540638059743657
+  },
+  {
+    "pitch": "3034_3",
+    "recorded_speed_kmh": 129.23032320000002,
+    "nominal_difference_kmh": -16.69362499271881,
+    "scenario_mean_difference_kmh": -18.0693493550974
+  },
+  {
+    "pitch": "3034_4",
+    "recorded_speed_kmh": 128.4256512,
+    "nominal_difference_kmh": -14.77892350948811,
+    "scenario_mean_difference_kmh": -14.600273947202538
+  },
+  {
+    "pitch": "3034_5",
+    "recorded_speed_kmh": 128.5865856,
+    "nominal_difference_kmh": -19.855147486382492,
+    "scenario_mean_difference_kmh": -20.42701407873014
+  }
+]
