@@ -1,0 +1,13 @@
+test_axes_are_proper_and_reject_degenerate_inputs (coach_hypotheses.large_gap_repair.test_audit.GapRepairTests.test_axes_are_proper_and_reject_degenerate_inputs) ... ok
+test_cli_dispatch_and_output_guard (coach_hypotheses.large_gap_repair.test_audit.GapRepairTests.test_cli_dispatch_and_output_guard) ... usage: audit [-h] --data DATA [--output OUTPUT]
+audit: error: output must stay inside large_gap_repair
+ok
+test_fixed_wrist_position_derivative_matches_analytic_velocity (coach_hypotheses.large_gap_repair.test_audit.GapRepairTests.test_fixed_wrist_position_derivative_matches_analytic_velocity) ... ok
+test_full_csv_pipeline_preserves_source_and_detects_identity_conflict (coach_hypotheses.large_gap_repair.test_audit.GapRepairTests.test_full_csv_pipeline_preserves_source_and_detects_identity_conflict) ... ok
+test_global_coordinates_rotation_does_not_change_speed (coach_hypotheses.large_gap_repair.test_audit.GapRepairTests.test_global_coordinates_rotation_does_not_change_speed) ... ok
+test_loader_never_requires_radar_and_exact_path_closure (coach_hypotheses.large_gap_repair.test_audit.GapRepairTests.test_loader_never_requires_radar_and_exact_path_closure) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.649s
+
+OK

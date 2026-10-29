@@ -1,0 +1,11 @@
+{
+  "protocol_commit": "d565bfa",
+  "sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\metadata.csv": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\poi\\poi_metrics.csv": "69361bbf41f314ca70194ead90e789173288985df80f880884f1bcc065eb75b6",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\code\\v3d\\model\\v6_model_hybrid_lm.mdh": "3336f188691ad1aa84ac4869324980efe5f7f5fd6ac139a6012550d9c59a1514",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\large-speed-gap-repair-20261029\\coach_hypotheses\\large_gap_repair\\PROTOCOL.md": "d68e001dc55ab143b822fddfbd98fc3ac50a3fc50c2775fb4aa6aefa411b52cb",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\large-speed-gap-repair-20261029\\coach_hypotheses\\large_gap_repair\\audit.py": "c35fb26bbdca1caa5a91afd6405666f49c50c39645c6ac3a7c21e6931364cb81"
+  }
+}

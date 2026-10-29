@@ -1,0 +1,99 @@
+{
+  "summary": [
+    {
+      "frame": "center_axis",
+      "wrist_origin": "fixed",
+      "absolute_mae_kmh": 24.67368261605433,
+      "within_centered_mae_kmh": 1.304243842034694,
+      "mean_signed_difference_kmh": -24.67368261605433
+    },
+    {
+      "frame": "center_axis",
+      "wrist_origin": "marker",
+      "absolute_mae_kmh": 24.211275375876294,
+      "within_centered_mae_kmh": 1.726991386107062,
+      "mean_signed_difference_kmh": -24.211275375876294
+    },
+    {
+      "frame": "center_axis",
+      "wrist_origin": "processed",
+      "absolute_mae_kmh": 24.450589298873656,
+      "within_centered_mae_kmh": 1.8433080743117614,
+      "mean_signed_difference_kmh": -24.450589298873656
+    },
+    {
+      "frame": "surface",
+      "wrist_origin": "fixed",
+      "absolute_mae_kmh": 17.04977058436418,
+      "within_centered_mae_kmh": 1.1584692858561112,
+      "mean_signed_difference_kmh": -17.04977058436418
+    },
+    {
+      "frame": "surface",
+      "wrist_origin": "marker",
+      "absolute_mae_kmh": 16.60523217673393,
+      "within_centered_mae_kmh": 1.5136059178556196,
+      "mean_signed_difference_kmh": -16.60523217673393
+    },
+    {
+      "frame": "surface",
+      "wrist_origin": "processed",
+      "absolute_mae_kmh": 16.832250207116765,
+      "within_centered_mae_kmh": 1.5706640999888264,
+      "mean_signed_difference_kmh": -16.832250207116765
+    }
+  ],
+  "regression": [
+    {
+      "pitch": "3034_1",
+      "speed_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_2",
+      "speed_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_3",
+      "speed_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_4",
+      "speed_difference_kmh": 0.0
+    },
+    {
+      "pitch": "3034_5",
+      "speed_difference_kmh": 0.0
+    }
+  ],
+  "sources": [
+    {
+      "pitch": "3034_1",
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_002_FF_809.c3d",
+      "sha256": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1"
+    },
+    {
+      "pitch": "3034_2",
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_005_FF_814.c3d",
+      "sha256": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c"
+    },
+    {
+      "pitch": "3034_3",
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_006_FF_803.c3d",
+      "sha256": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757"
+    },
+    {
+      "pitch": "3034_4",
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_008_FF_798.c3d",
+      "sha256": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053"
+    },
+    {
+      "pitch": "3034_5",
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_011_FF_799.c3d",
+      "sha256": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1"
+    }
+  ],
+  "actual_ball_center_observed": false,
+  "grip_release_force_fit_to_radar": false,
+  "new_core_adopted": false,
+  "same_ability_improvement_tested": false
+}
