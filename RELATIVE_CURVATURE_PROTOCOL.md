@@ -1,0 +1,5 @@
+# Post-primary relative-coordinate curvature diagnostic
+
+The frozen D2 primary reduced the source-label gap0.640→0.247km/h but worsened future speed,vector and position discrepancies, so it was rejected. No radar-only success claim.
+
+Next secondary hypothesis: a ball moving nearly linearly in world coordinates can have curved coordinates in a rapidly rotating hand frame; affine local motion may therefore impose a wrong endpoint derivative. Before running, fix degree2 origin/log-rotation and degree2 local-relative position, using the same four training frames only. This new D2R2 may change launch position as well as velocity; report the shift from B. Original D2 remains the primary and its rejection is retained. Keep gravity/free sphere, frame split, all nine conditions and all future metrics unchanged. Do not choose a degree/threshold/offset using radar. Require simultaneous improvement in speed/vector/position before claiming a conditional component improvement; report ball-only C separately. This is outcome-motivated exploratory analysis on a reused evaluation window, not confirmatory generalization or a body intervention.
