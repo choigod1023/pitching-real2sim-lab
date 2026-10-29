@@ -1,0 +1,18 @@
+{
+  "scope": "Single AI reader, approximate visible wrist/elbow regions frozen before any camera17 model projection; not anatomical truth, repeated-observer uncertainty or confidence intervals",
+  "source": "PR103 camera17_hand_raw_971/973/975/977/979.png with native coordinate grids; source frame transforms retained",
+  "native_resolution": [1280,720],
+  "observations": [
+    {"camera":17,"frame":971,"segment":"l_hand","box":[505,406,534,437],"split":"fit"},
+    {"camera":17,"frame":971,"segment":"l_larm","box":[544,337,583,375],"split":"fit"},
+    {"camera":17,"frame":973,"segment":"l_hand","box":[493,394,521,424],"split":"fit"},
+    {"camera":17,"frame":973,"segment":"l_larm","box":[541,330,580,365],"split":"fit"},
+    {"camera":17,"frame":975,"segment":"l_hand","box":[482,380,510,408],"split":"fit"},
+    {"camera":17,"frame":975,"segment":"l_larm","box":[539,320,579,355],"split":"fit"},
+    {"camera":17,"frame":977,"segment":"l_hand","box":[474,363,504,393],"split":"eval"},
+    {"camera":17,"frame":977,"segment":"l_larm","box":[532,310,574,347],"split":"eval"},
+    {"camera":17,"frame":979,"segment":"l_hand","box":[473,345,503,376],"split":"eval"},
+    {"camera":17,"frame":979,"segment":"l_larm","box":[527,300,570,338],"split":"eval"}
+  ],
+  "exclusion": "Only surface regions read; no exact finger joint or physical last-contact annotation. No interpolation of unannotated frames."
+}
