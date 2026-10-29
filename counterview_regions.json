@@ -1,0 +1,9 @@
+{
+  "scope": "Post-primary-failure diagnostic; raw-only single AI approximate wrist/elbow regions before inspecting new-view projections, not ground truth",
+  "observations": [
+    {"camera":20,"frame":950,"segment":"l_hand","box":[520,383,549,410]},
+    {"camera":20,"frame":950,"segment":"l_larm","box":[533,332,570,368]},
+    {"camera":21,"frame":950,"segment":"l_hand","box":[935,396,967,428]},
+    {"camera":21,"frame":950,"segment":"l_larm","box":[805,389,842,429]}
+  ]
+}

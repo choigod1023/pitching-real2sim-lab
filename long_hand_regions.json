@@ -1,0 +1,22 @@
+{
+  "scope": "Single AI raw-image visible surface regions before new-frame projection inspection; not anatomical joint truth or calibrated uncertainty",
+  "native_size": [1280,720],
+  "excluded": [
+    {"camera":17,"frame":940,"segment":"l_larm","reason":"elbow region foreshortened and overlapping torso/arm; anatomical centre not reliably visible"},
+    {"camera":17,"frame":945,"segment":"l_larm","reason":"elbow region foreshortened; cannot separate anatomical centre from continuous arm surface"}
+  ],
+  "observations": [
+    {"camera":17,"frame":940,"segment":"l_hand","box":[724,328,756,355],"split":"fit"},
+    {"camera":17,"frame":945,"segment":"l_hand","box":[698,341,730,369],"split":"eval"},
+    {"camera":17,"frame":950,"segment":"l_hand","box":[655,380,687,408],"split":"fit"},
+    {"camera":17,"frame":950,"segment":"l_larm","box":[645,336,686,369],"split":"fit"},
+    {"camera":17,"frame":955,"segment":"l_hand","box":[631,405,660,433],"split":"eval"},
+    {"camera":17,"frame":955,"segment":"l_larm","box":[621,337,659,374],"split":"eval"},
+    {"camera":17,"frame":960,"segment":"l_hand","box":[616,430,645,458],"split":"fit"},
+    {"camera":17,"frame":960,"segment":"l_larm","box":[599,344,638,382],"split":"fit"},
+    {"camera":17,"frame":965,"segment":"l_hand","box":[568,434,598,464],"split":"eval"},
+    {"camera":17,"frame":965,"segment":"l_larm","box":[572,344,614,382],"split":"eval"},
+    {"camera":17,"frame":970,"segment":"l_hand","box":[520,413,550,443],"split":"eval"},
+    {"camera":17,"frame":970,"segment":"l_larm","box":[550,340,590,379],"split":"eval"}
+  ]
+}

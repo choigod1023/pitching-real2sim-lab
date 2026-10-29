@@ -1,0 +1,186 @@
+{
+  "source_sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\counterview_regions.json": "a38a561b159560cdd41c453dd65c7bb1af72c54355ba0f9ff3edcca971395e71",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\COUNTERVIEW_REGION_PROTOCOL.md": "695a5370220f8dc6a45a8876c5b7a73bd61a661060d10b9568ad44729cd32a9b"
+  },
+  "segments": {
+    "l_hand": {
+      "views20_21": {
+        "unbounded": {
+          "feasible": true,
+          "conditional_example_point_m": [
+            1.2039793593285253,
+            0.0,
+            4.969351943482115
+          ],
+          "max_inequality_violation": 0.0,
+          "exact_joint_reconstructed": false
+        },
+        "within200mm": {
+          "feasible": true,
+          "conditional_example_point_m": [
+            1.1968287720053044,
+            -0.056964734873885585,
+            4.941545057586577
+          ],
+          "max_inequality_violation": 0.0,
+          "exact_joint_reconstructed": false
+        },
+        "minimum_shared_box_padding_px": 0.0,
+        "padding_is_accuracy_or_confidence_bound": false
+      },
+      "views17_20_21": {
+        "unbounded": {
+          "feasible": false,
+          "exact_joint_reconstructed": false
+        },
+        "within200mm": {
+          "feasible": false,
+          "exact_joint_reconstructed": false
+        },
+        "minimum_shared_box_padding_px": 0.615234375,
+        "padding_is_accuracy_or_confidence_bound": false
+      },
+      "new_view_model_residuals": [
+        {
+          "camera": 20,
+          "frame": 950,
+          "segment": "l_hand",
+          "box": [
+            520,
+            383,
+            549,
+            410
+          ],
+          "M0_outside_px": 8.314094248109825,
+          "M0_pixel": [
+            525.1604623352135,
+            418.3140942481098
+          ],
+          "M2_outside_px": 0.0,
+          "M2_pixel": [
+            526.8222707991939,
+            398.70399327468095
+          ]
+        },
+        {
+          "camera": 21,
+          "frame": 950,
+          "segment": "l_hand",
+          "box": [
+            935,
+            396,
+            967,
+            428
+          ],
+          "M0_outside_px": 6.030708873910157,
+          "M0_pixel": [
+            928.9692911260898,
+            421.63408129996924
+          ],
+          "M2_outside_px": 13.657663189786035,
+          "M2_pixel": [
+            921.342336810214,
+            405.68828031045024
+          ]
+        }
+      ]
+    },
+    "l_larm": {
+      "views20_21": {
+        "unbounded": {
+          "feasible": true,
+          "conditional_example_point_m": [
+            0.7977722106142023,
+            0.11199078122361004,
+            4.995000981033547
+          ],
+          "max_inequality_violation": 4.547473508864641e-13,
+          "exact_joint_reconstructed": false
+        },
+        "within200mm": {
+          "feasible": true,
+          "conditional_example_point_m": [
+            0.8506655739745616,
+            0.06778630307017884,
+            4.880372505288015
+          ],
+          "max_inequality_violation": 0.0,
+          "exact_joint_reconstructed": false
+        },
+        "minimum_shared_box_padding_px": 0.0,
+        "padding_is_accuracy_or_confidence_bound": false
+      },
+      "views17_20_21": {
+        "unbounded": {
+          "feasible": true,
+          "conditional_example_point_m": [
+            0.8506655739745628,
+            0.06778630307017809,
+            4.8803725052880145
+          ],
+          "max_inequality_violation": 9.094947017729282e-13,
+          "exact_joint_reconstructed": false
+        },
+        "within200mm": {
+          "feasible": true,
+          "conditional_example_point_m": [
+            0.8506655739745616,
+            0.06778630307017884,
+            4.880372505288015
+          ],
+          "max_inequality_violation": 0.0,
+          "exact_joint_reconstructed": false
+        },
+        "minimum_shared_box_padding_px": 0.0,
+        "padding_is_accuracy_or_confidence_bound": false
+      },
+      "new_view_model_residuals": [
+        {
+          "camera": 20,
+          "frame": 950,
+          "segment": "l_larm",
+          "box": [
+            533,
+            332,
+            570,
+            368
+          ],
+          "M0_outside_px": 19.06224203793596,
+          "M0_pixel": [
+            547.9355331371236,
+            387.06224203793596
+          ],
+          "M2_outside_px": 2.962214353020329,
+          "M2_pixel": [
+            550.5854645718638,
+            370.96221435302033
+          ]
+        },
+        {
+          "camera": 21,
+          "frame": 950,
+          "segment": "l_larm",
+          "box": [
+            805,
+            389,
+            842,
+            429
+          ],
+          "M0_outside_px": 0.0,
+          "M0_pixel": [
+            836.3968038062516,
+            407.8934599894998
+          ],
+          "M2_outside_px": 0.0,
+          "M2_pixel": [
+            829.5844357838031,
+            393.60334415778635
+          ]
+        }
+      ]
+    }
+  },
+  "calibration_updated": false,
+  "anatomical_accuracy_established": false
+}

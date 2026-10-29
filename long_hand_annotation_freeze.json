@@ -1,0 +1,15 @@
+{
+  "new_frame_projections_inspected": false,
+  "single_reader_not_ground_truth": true,
+  "sha256": {
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\long_hand_regions.json": "9ea45232ea30afe99099c7e144dff0a15b15cf6f77e2a023be62e58e004d1fe2",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\LONG_HAND_PROTOCOL.md": "f6a210579eb293c1722eca80d02d6964358909d43fb19f6b888ae50a54694892",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_940.png": "265abdf649f103ee5f38add815b85975852c00624a436d7f68d229805da76637",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_945.png": "51dc2a6086523228520b928f9866a6cba1fc6598a2dbe7f41d597b68b8495ef0",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_950.png": "eeaa808b427d1d2a9fa11386bdfc56d63ddde73615886671f334cdac2ead299a",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_955.png": "ffa7dada1cecfb165b9869597711e27f7cec43952ea949b96c890da953eb093a",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_960.png": "8a75af43e0a2771e368e8d0d46c7aff3797eb2943dd2a53fd06c28ab214afd24",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_965.png": "ae470b7ab7fd20ec227ff0e0cc8ad1459d86e88dc52f9a3438038f022bbd51e7",
+    "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\prime17-long-window-20261029\\artifacts\\prime17-long\\raw17_970.png": "9dd59b6195e5947642b73a20d42e3f14852194d834d4eaea0daa09b5d1a50b21"
+  }
+}
