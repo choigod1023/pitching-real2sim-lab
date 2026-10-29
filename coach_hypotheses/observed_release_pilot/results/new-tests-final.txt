@@ -1,0 +1,16 @@
+test_cli_dispatch_and_path_guard (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_cli_dispatch_and_path_guard) ... usage: pilot [-h] --data DATA [--output OUTPUT]
+pilot: error: output must stay inside observed_release_pilot
+ok
+test_dynamic_hand_frame_and_observed_relative_motion (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_dynamic_hand_frame_and_observed_relative_motion) ... ok
+test_global_rigid_transform_preserves_errors (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_global_rigid_transform_preserves_errors) ... ok
+test_linear_surface_marker_recovered_and_no_held_target_leak (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_linear_surface_marker_recovered_and_no_held_target_leak) ... ok
+test_load_units_and_on_disk_event_index (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_load_units_and_on_disk_event_index) ... ok
+test_missing_observation_rejected_and_shift_kept_separate (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_missing_observation_rejected_and_shift_kept_separate) ... ok
+test_real_file_orchestration (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_real_file_orchestration) ... ok
+test_rigid_fit_and_degenerate_cluster (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_rigid_fit_and_degenerate_cluster) ... ok
+test_static_holdout_does_not_change_calibration (coach_hypotheses.observed_release_pilot.test_pilot.ObservationTests.test_static_holdout_does_not_change_calibration) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.725s
+
+OK

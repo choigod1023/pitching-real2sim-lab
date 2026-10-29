@@ -1,0 +1,304 @@
+{
+  "inputs_sha256": {
+    "1w2d/S1_DP_05_O.c3d": "0e14030f1b1baf5d5dc64dbec84a1946640fe8cef7a04a1ec9986313cd37b14d",
+    "1w2d/S1_static_01_D.c3d": "72aab183d578d34aa898e0faf432e53e67ec837fffa601767e9260f5927c1c03",
+    "1w2d/S1_DP_06_O.c3d": "c2f3830c6e7ee38c175785a248ed29c791e68bb916514dfa3ec489e009c652b1",
+    "1w1d/S1_NDP_07_O.c3d": "5303939060d3973deab71f087e1df2fc0850af0e4fdaf4f8846a989ec39adaed",
+    "1w1d/S1_static_03_N.c3d": "36a429dc440c7449dfeeeb747a6fa96fb14489428c54d0a7fe52c96fe41c49b5"
+  },
+  "exclusions": [],
+  "rows": [
+    {
+      "event_shift_frames": 0,
+      "model": "rigid_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 13.054587047772857,
+      "marker_speed_mae_kmh": 2.0217870789763457,
+      "marker_velocity_vector_rmse_kmh": 2.765206049437939,
+      "candidate_event_array_index": 258,
+      "local_offset_at_event_mm": [
+        127.99020618300533,
+        22.585914464304775,
+        91.19438141075793
+      ],
+      "fitted_local_relative_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.41428468563966947,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_05_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 0,
+      "model": "linear_relative_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 17.96204744858448,
+      "marker_speed_mae_kmh": 1.7397872546265238,
+      "marker_velocity_vector_rmse_kmh": 3.179197212471211,
+      "candidate_event_array_index": 258,
+      "local_offset_at_event_mm": [
+        105.71895012811437,
+        4.4653731271485375,
+        91.15671525332179
+      ],
+      "fitted_local_relative_velocity_mps": [
+        -0.3299447439197515,
+        -0.2684526349317554,
+        -0.0005580175019797577
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.41428468563966947,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_05_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 1,
+      "model": "rigid_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 14.527923881457603,
+      "marker_speed_mae_kmh": 2.3265309495312043,
+      "marker_velocity_vector_rmse_kmh": 3.3939463992341015,
+      "candidate_event_array_index": 258,
+      "local_offset_at_event_mm": [
+        126.83461405859742,
+        21.299524292858813,
+        91.53960576066315
+      ],
+      "fitted_local_relative_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.42224852337479285,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_05_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 1,
+      "model": "linear_relative_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 21.33980832767873,
+      "marker_speed_mae_kmh": 1.9402587036075338,
+      "marker_velocity_vector_rmse_kmh": 3.811391253183444,
+      "candidate_event_array_index": 258,
+      "local_offset_at_event_mm": [
+        105.14510343553022,
+        3.243957659997086,
+        93.68108406444483
+      ],
+      "fitted_local_relative_velocity_mps": [
+        -0.32132628759845133,
+        -0.26749004610798727,
+        0.03172562467107836
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.42224852337479285,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_05_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 0,
+      "model": "rigid_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 17.50821059071495,
+      "marker_speed_mae_kmh": 2.0559408258809313,
+      "marker_velocity_vector_rmse_kmh": 3.258028721647745,
+      "candidate_event_array_index": 308,
+      "local_offset_at_event_mm": [
+        127.82616111396398,
+        29.36412512277186,
+        92.35087151080857
+      ],
+      "fitted_local_relative_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.3979518433138129,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_06_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 0,
+      "model": "linear_relative_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 13.140229576347762,
+      "marker_speed_mae_kmh": 2.250675868429673,
+      "marker_velocity_vector_rmse_kmh": 3.1636057807866105,
+      "candidate_event_array_index": 308,
+      "local_offset_at_event_mm": [
+        119.11736466328541,
+        22.423126288271487,
+        104.18844644166741
+      ],
+      "fitted_local_relative_velocity_mps": [
+        -0.12901928870497387,
+        -0.10282967774031693,
+        0.17537159195542384
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.3979518433138129,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_06_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 1,
+      "model": "rigid_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 19.66108746343108,
+      "marker_speed_mae_kmh": 2.5232322666390696,
+      "marker_velocity_vector_rmse_kmh": 3.7276562389951287,
+      "candidate_event_array_index": 308,
+      "local_offset_at_event_mm": [
+        127.09258078282792,
+        28.895856040868882,
+        93.45003649540362
+      ],
+      "fitted_local_relative_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.3966570048967987,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_06_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 1,
+      "model": "linear_relative_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 16.73065729845182,
+      "marker_speed_mae_kmh": 2.785641499349875,
+      "marker_velocity_vector_rmse_kmh": 3.7616659314057794,
+      "candidate_event_array_index": 308,
+      "local_offset_at_event_mm": [
+        118.51051147618146,
+        21.57467556398854,
+        105.32133199204932
+      ],
+      "fitted_local_relative_velocity_mps": [
+        -0.1271418483404836,
+        -0.1084620019491036,
+        0.17587115621062097
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.3966570048967987,
+      "held_static_wrist_rmse_mm": 0.19032333268639362,
+      "trial": "1w2d/S1_DP_06_O.c3d",
+      "side": "R"
+    },
+    {
+      "event_shift_frames": 0,
+      "model": "rigid_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 20.381662364436163,
+      "marker_speed_mae_kmh": 1.999369011270513,
+      "marker_velocity_vector_rmse_kmh": 3.7762926715007805,
+      "candidate_event_array_index": 310,
+      "local_offset_at_event_mm": [
+        111.60041664100976,
+        38.99647350633159,
+        -85.8914254046686
+      ],
+      "fitted_local_relative_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.6421403582270303,
+      "held_static_wrist_rmse_mm": 0.2321153763979401,
+      "trial": "1w1d/S1_NDP_07_O.c3d",
+      "side": "L"
+    },
+    {
+      "event_shift_frames": 0,
+      "model": "linear_relative_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 20.97735670033233,
+      "marker_speed_mae_kmh": 1.4968886556970447,
+      "marker_velocity_vector_rmse_kmh": 3.603398151374,
+      "candidate_event_array_index": 310,
+      "local_offset_at_event_mm": [
+        109.86828040358334,
+        31.764512741932123,
+        -83.33663644116807
+      ],
+      "fitted_local_relative_velocity_mps": [
+        -0.025661297532073857,
+        -0.1071402427278346,
+        0.03784875479624713
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.6421403582270303,
+      "held_static_wrist_rmse_mm": 0.2321153763979401,
+      "trial": "1w1d/S1_NDP_07_O.c3d",
+      "side": "L"
+    },
+    {
+      "event_shift_frames": 1,
+      "model": "rigid_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 25.083403911402172,
+      "marker_speed_mae_kmh": 2.1225433481080462,
+      "marker_velocity_vector_rmse_kmh": 5.106223825687096,
+      "candidate_event_array_index": 310,
+      "local_offset_at_event_mm": [
+        111.71657252633779,
+        38.49851486023322,
+        -85.76539638825253
+      ],
+      "fitted_local_relative_velocity_mps": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.6759514485658364,
+      "held_static_wrist_rmse_mm": 0.2321153763979401,
+      "trial": "1w1d/S1_NDP_07_O.c3d",
+      "side": "L"
+    },
+    {
+      "event_shift_frames": 1,
+      "model": "linear_relative_offset",
+      "train_samples": 10,
+      "test_samples": 8,
+      "marker_position_rmse_mm": 24.64325938347565,
+      "marker_speed_mae_kmh": 1.7166311828150258,
+      "marker_velocity_vector_rmse_kmh": 4.864803071111586,
+      "candidate_event_array_index": 310,
+      "local_offset_at_event_mm": [
+        111.69982206867813,
+        31.935342043875917,
+        -83.8924140007127
+      ],
+      "fitted_local_relative_velocity_mps": [
+        -0.00024815512112361717,
+        -0.09723226542803812,
+        0.0277479087848224
+      ],
+      "held_forearm_marker_fit_rmse_mm": 0.6759514485658364,
+      "held_static_wrist_rmse_mm": 0.2321153763979401,
+      "trial": "1w1d/S1_NDP_07_O.c3d",
+      "side": "L"
+    }
+  ],
+  "ball_marker_is_confirmed_center": false,
+  "actual_release_time_validated": false,
+  "radar_comparison_performed": false,
+  "athlete_performance_effect_tested": false
+}

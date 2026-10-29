@@ -1,0 +1,9 @@
+{
+  "protocol_commit": "6a3c38d",
+  "protocol_sha256": "e1dfe9419f7a7fd20488796a8819ff36eeaac881cfa9b47bd8933822feefc0f1",
+  "code_sha256": {
+    "pilot.py": "2955b3b38f133277979d1ad7e85273eacba5974f1751f77b76b8e5119a5d9f75",
+    "test_pilot.py": "8acf61353cb63bee1474d84606a983742998385d31194cd4493057ad13b14fe2",
+    "__init__.py": "0f9800bcfb2ef41e41cd4893c1a2f1af1b1c8913cf50144da9058828a0096b53"
+  }
+}
