@@ -1,0 +1,126 @@
+{
+  "players": 98,
+  "pitches": 399,
+  "pairs_per_filter": 666,
+  "stability": {
+    "peak_lag_ms": {
+      "median_range_ms": 8.199999999999763,
+      "p95_range_ms": 22.299999999999788,
+      "maximum_range_ms": 111.0
+    },
+    "centroid_lag_ms": {
+      "median_range_ms": 1.388911918069006,
+      "p95_range_ms": 2.5795533350153708,
+      "maximum_range_ms": 12.497672935414485
+    },
+    "engineering_stability_improved": true
+  },
+  "prediction": {
+    "peak_lag_ms": {
+      "10": {
+        "model_mae_kmh": 1.0161549684518558,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0009544982477734796,
+        "player_bootstrap_difference_ci95": [
+          -0.003608879022403156,
+          0.006641114582868343
+        ],
+        "players": 98,
+        "pairs": 666
+      },
+      "20": {
+        "model_mae_kmh": 1.0245557243292949,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.009355254125212495,
+        "player_bootstrap_difference_ci95": [
+          0.0033981415975778816,
+          0.017734290577803763
+        ],
+        "players": 98,
+        "pairs": 666
+      },
+      "30": {
+        "model_mae_kmh": 1.0254931538204146,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.010292683616332251,
+        "player_bootstrap_difference_ci95": [
+          0.001973573583313132,
+          0.022288148807356033
+        ],
+        "players": 98,
+        "pairs": 666
+      }
+    },
+    "centroid_lag_ms": {
+      "10": {
+        "model_mae_kmh": 1.0196429123235813,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.004442442119498858,
+        "player_bootstrap_difference_ci95": [
+          -0.001511099318882439,
+          0.010751952969211423
+        ],
+        "players": 98,
+        "pairs": 666
+      },
+      "20": {
+        "model_mae_kmh": 1.0189001195128935,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0036996493088112593,
+        "player_bootstrap_difference_ci95": [
+          -0.0036034403592497045,
+          0.01117132368682959
+        ],
+        "players": 98,
+        "pairs": 666
+      },
+      "30": {
+        "model_mae_kmh": 1.018737118625078,
+        "zero_delta_mae_kmh": 1.0152004702040824,
+        "paired_mae_difference_kmh": 0.0035366484209956267,
+        "player_bootstrap_difference_ci95": [
+          -0.003917968464808328,
+          0.011159272968917593
+        ],
+        "players": 98,
+        "pairs": 666
+      }
+    }
+  },
+  "verdicts": {
+    "peak_lag_ms": {
+      "checks": {
+        "minimum_players": true,
+        "minimum_pitches": true,
+        "integrity": true,
+        "primary_better": false,
+        "upper_ci_below_zero": false,
+        "other_filters_not_worse": false
+      },
+      "development_prediction_criteria_pass": false,
+      "real2sim_scientific_gate_changed": false,
+      "coaching_recommendation_ready": false,
+      "same_capacity_validated": false,
+      "athlete_effect_validated": false
+    },
+    "centroid_lag_ms": {
+      "checks": {
+        "minimum_players": true,
+        "minimum_pitches": true,
+        "integrity": true,
+        "primary_better": false,
+        "upper_ci_below_zero": false,
+        "other_filters_not_worse": false
+      },
+      "development_prediction_criteria_pass": false,
+      "real2sim_scientific_gate_changed": false,
+      "coaching_recommendation_ready": false,
+      "same_capacity_validated": false,
+      "athlete_effect_validated": false
+    }
+  },
+  "numerical_precision_is_measurement_accuracy": false,
+  "existing_failures_preserved": true,
+  "intervention_effect_validated": false,
+  "spin_or_movement_improvement_validated": false
+}
