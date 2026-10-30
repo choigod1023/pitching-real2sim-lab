@@ -1,0 +1,23 @@
+{
+  "technical_validation": "PASS",
+  "independent_peak_rows_checked": 21546,
+  "independent_pitch_ranges_checked": 1197,
+  "independent_pair_ranges_checked": 105,
+  "maximum_peak_or_band_absolute_difference": 0.0,
+  "shifted_event_changed_peak_pitch_filter_cases": {
+    "pelvis": 0,
+    "torso": 0
+  },
+  "new_tests_passed": 9,
+  "full_suite": {
+    "tests_run": 328,
+    "passed": 316,
+    "errors": 10,
+    "skipped": 2,
+    "new_error_ids": []
+  },
+  "source_hashes_unchanged": true,
+  "scientific_gate_changed": false,
+  "calibrated_timing_accuracy_validated": false,
+  "spin_or_movement_improvement_validated": false
+}
