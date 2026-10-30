@@ -1,0 +1,12 @@
+{
+  "technical_access_ready": true,
+  "conditional_study_ready": false,
+  "body_to_spin_ready": false,
+  "outcome_analysis_performed": false,
+  "fixtures_count_as_research_data": false,
+  "record_count": 256,
+  "source_sha256": "7f40e379d47c491aa1318190a030fe6ba5ff9f609dd9f42ebc2c852a692d0fc7",
+  "all_numeric_fields_finite_complete": true,
+  "official_pitch_flags_complete": true,
+  "boxscore_pitch_count_matches": true
+}
