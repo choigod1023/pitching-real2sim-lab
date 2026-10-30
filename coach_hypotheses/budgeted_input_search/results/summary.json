@@ -1,0 +1,55 @@
+{
+  "primary_A_gain_kmh": 0.6473596802644153,
+  "baseline_kmh": 113.46658197344723,
+  "candidate_kmh": 114.11394165371165,
+  "strict_A_gate": {
+    "strict_model_budget_pass": true,
+    "violations": [],
+    "floating_comparison_epsilon": 1e-09,
+    "physiological_capacity_validated": false
+  },
+  "pose_pass": true,
+  "maximum_rotation_deg": 1.6406449939626477,
+  "maximum_ball_position_mm": 5.831945010501174,
+  "release_direction_difference_deg": 0.6016812126776988,
+  "recovery_optimizer": {
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "nit": 3
+  },
+  "recovery_evaluations": 102,
+  "coarse_fine_gain_discrepancy_kmh": 1.6041255435084167e-08,
+  "overall_no_extra_force_work_claim_validated": false,
+  "real_athlete_effect_verified": false,
+  "empirical_effect_95ci": null,
+  "archives": {
+    "initial_search": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\budgeted-input-search-20261030\\artifacts\\budgeted-input-search\\report.json",
+      "raw_sha256": "8ccd7d29dc3671c331564f774415de0d29efdb6b96545abcebd1a079fb82e6cb",
+      "raw_bytes": 5968410,
+      "gzip_sha256": "7b479a58fd2fad4c19403bf459ee62175ef3d0e9427f2e6780ff22f11e747062",
+      "gzip_bytes": 632251
+    },
+    "first_restore": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\budgeted-input-search-20261030\\artifacts\\budgeted-input-restore\\report.json",
+      "raw_sha256": "a520865c9a7fbfd26d0a62bfcaf97b58f1044654bb96b31f3b7d81eca1b6a18e",
+      "raw_bytes": 5303300,
+      "gzip_sha256": "7288109e680374887001f3863f17f1df11e97a2b2f17141cd28c0967480217ff",
+      "gzip_bytes": 555144
+    },
+    "raw_restore": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\budgeted-input-search-20261030\\artifacts\\budgeted-input-restore-raw\\report.json",
+      "raw_sha256": "9b7f11bc38c2e4168828afe5bca4e7c20875dcb7b3074a996a81632734abad7c",
+      "raw_bytes": 6325915,
+      "gzip_sha256": "405200229202e6218ed77390d3c205f830f4a8d00f77823c0a64b2f7a0221062",
+      "gzip_bytes": 572734
+    },
+    "clean_restore": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\budgeted-input-search-20261030\\artifacts\\budgeted-input-restore-clean\\report.json",
+      "raw_sha256": "20e3ca9c9c0c4268ee3401e6192601c5aa770dfe09b5a5113d71fe1a54bab4f6",
+      "raw_bytes": 1490938,
+      "gzip_sha256": "8e635a2374fe6adced58e112611ca7a0d0ddc791b1ba354b81b1f4288a461bf0",
+      "gzip_bytes": 155356
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "scope": "Paired endpoint kinematics of saved actual rollout qpos/qvel. Grip and time are shared by baseline and candidate. No rigid-payload mass/inertia dynamics rerun.",
+  "time_scope": "Finite partial engineering offsets; not a measured ball-release timing error, probability distribution, or confidence interval. Missing post-endpoint states are excluded without extrapolation.",
+  "axis_scope": "Grip lies along the hand marker-frame x axis; hand-frame rotation axes are not anatomically calibrated.",
+  "interpolation": "No frame rounding. MuJoCo differentiatePos/integratePos quaternion interpolation and linear generalized velocity.",
+  "state_dt_s": 4.339139344267107e-05,
+  "source_frame_dt_s": 0.002777777777777778,
+  "endpoint_time_s": 0.16940000000018784,
+  "baseline_saved_interval_s": [
+    0.0,
+    0.16940000000018784
+  ],
+  "candidate_saved_interval_s": [
+    0.0,
+    0.16940000000018784
+  ],
+  "requested_grip_lengths_m": [
+    0.14,
+    0.15,
+    0.16
+  ],
+  "requested_frame_offsets": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "scenarios": [
+    {
+      "grip_length_m": 0.14,
+      "frame_offset": -2,
+      "time_s": 0.16384444444463228,
+      "baseline_velocity_mps": [
+        31.128296011857255,
+        3.1569668020968447,
+        -0.45645025570803244
+      ],
+      "candidate_velocity_mps": [
+        31.230754946622426,
+        3.365066433163176,
+        -0.6465414954642106
+      ],
+      "baseline_speed_kmh": 112.64868823382554,
+      "candidate_speed_kmh": 113.10543127246622,
+      "paired_delta_kmh": 0.4567430386406812
+    },
+    {
+      "grip_length_m": 0.15,
+      "frame_offset": -2,
+      "time_s": 0.16384444444463228,
+      "baseline_velocity_mps": [
+        32.03028494807615,
+        3.2121060094270164,
+        -0.3583197459474033
+      ],
+      "candidate_velocity_mps": [
+        32.141725713534235,
+        3.4410293662398583,
+        -0.5498561912856773
+      ],
+      "baseline_speed_kmh": 115.89457203841638,
+      "candidate_speed_kmh": 116.38825926955592,
+      "paired_delta_kmh": 0.49368723113953195
+    },
+    {
+      "grip_length_m": 0.16,
+      "frame_offset": -2,
+      "time_s": 0.16384444444463228,
+      "baseline_velocity_mps": [
+        32.93227388429505,
+        3.267245216757189,
+        -0.2601892361867574
+      ],
+      "candidate_velocity_mps": [
+        33.05269648044602,
+        3.5169922993165375,
+        -0.45317088710716646
+      ],
+      "baseline_speed_kmh": 119.1419036193443,
+      "candidate_speed_kmh": 119.67254175190153,
+      "paired_delta_kmh": 0.5306381325572289
+    },
+    {
+      "grip_length_m": 0.14,
+      "frame_offset": -1,
+      "time_s": 0.16662222222241008,
+      "baseline_velocity_mps": [
+        30.13660539357039,
+        6.108513908403953,
+        -4.812516161717671
+      ],
+      "candidate_velocity_mps": [
+        30.21921038733892,
+        6.2676035230226494,
+        -5.079239411603041
+      ],
+      "baseline_speed_kmh": 112.04558238754261,
+      "candidate_speed_kmh": 112.59901134334822,
+      "paired_delta_kmh": 0.5534289558056145
+    },
+    {
+      "grip_length_m": 0.15,
+      "frame_offset": -1,
+      "time_s": 0.16662222222241008,
+      "baseline_velocity_mps": [
+        31.03333152496345,
+        6.248397046975787,
+        -4.929220161177977
+      ],
+      "candidate_velocity_mps": [
+        31.125195801341675,
+        6.42311617489473,
+        -5.205718005969925
+      ],
+      "baseline_speed_kmh": 115.33533352791908,
+      "candidate_speed_kmh": 115.93641880760971,
+      "paired_delta_kmh": 0.6010852796906363
+    },
+    {
+      "grip_length_m": 0.16,
+      "frame_offset": -1,
+      "time_s": 0.16662222222241008,
+      "baseline_velocity_mps": [
+        31.930057656356517,
+        6.388280185547624,
+        -5.045924160638263
+      ],
+      "candidate_velocity_mps": [
+        32.031181215344446,
+        6.578628826766811,
+        -5.33219660033681
+      ],
+      "baseline_speed_kmh": 118.6253292078755,
+      "candidate_speed_kmh": 119.27399520626105,
+      "paired_delta_kmh": 0.6486659983855532
+    },
+    {
+      "grip_length_m": 0.14,
+      "frame_offset": 0,
+      "time_s": 0.16940000000018784,
+      "baseline_velocity_mps": [
+        27.988375212245096,
+        8.722193392958646,
+        -8.856371245881997
+      ],
+      "candidate_velocity_mps": [
+        28.03202746183832,
+        8.807281656200233,
+        -9.199455448438517
+      ],
+      "baseline_speed_kmh": 110.24826559454858,
+      "candidate_speed_kmh": 110.84216750071032,
+      "paired_delta_kmh": 0.593901906161733
+    },
+    {
+      "grip_length_m": 0.15,
+      "frame_offset": 0,
+      "time_s": 0.16940000000018784,
+      "baseline_velocity_mps": [
+        28.800556364996982,
+        8.932660734346097,
+        -9.173388243816161
+      ],
+      "candidate_velocity_mps": [
+        28.851272475406333,
+        9.025259413864607,
+        -9.53583125295012
+      ],
+      "baseline_speed_kmh": 113.46658197344739,
+      "candidate_speed_kmh": 114.11394165371165,
+      "paired_delta_kmh": 0.6473596802642589
+    },
+    {
+      "grip_length_m": 0.16,
+      "frame_offset": 0,
+      "time_s": 0.16940000000018784,
+      "baseline_velocity_mps": [
+        29.61273751774885,
+        9.143128075733541,
+        -9.490405241750352
+      ],
+      "candidate_velocity_mps": [
+        29.67051748897434,
+        9.24323717152898,
+        -9.872207057461702
+      ],
+      "baseline_speed_kmh": 116.68548035296732,
+      "candidate_speed_kmh": 117.38636282383277,
+      "paired_delta_kmh": 0.7008824708654515
+    }
+  ],
+  "excluded_times": [
+    {
+      "frame_offset": 1,
+      "time_s": 0.1721777777779656,
+      "reasons": [
+        "outside_baseline_saved_interval",
+        "outside_candidate_saved_interval"
+      ],
+      "excluded_grip_lengths_m": [
+        0.14,
+        0.15,
+        0.16
+      ]
+    },
+    {
+      "frame_offset": 2,
+      "time_s": 0.1749555555557434,
+      "reasons": [
+        "outside_baseline_saved_interval",
+        "outside_candidate_saved_interval"
+      ],
+      "excluded_grip_lengths_m": [
+        0.14,
+        0.15,
+        0.16
+      ]
+    }
+  ],
+  "summary": {
+    "scenario_count": 9,
+    "paired_delta_range_kmh": [
+      0.4567430386406812,
+      0.7008824708654515
+    ],
+    "sign_stability": "positive",
+    "all_positive": true,
+    "positive_count": 9,
+    "negative_count": 0,
+    "zero_count": 0,
+    "zero_tolerance_kmh": 1e-09,
+    "descriptive_paired_delta_variance_kmh2": 0.00558700176111181,
+    "descriptive_baseline_variance_kmh2": 8.12754112665313,
+    "descriptive_candidate_variance_kmh2": 8.217061755678438,
+    "descriptive_paired_covariance_kmh2": 8.16950794028523,
+    "variance_identity_rhs_kmh2": 0.005587001761107047,
+    "variance_scope": "Equal-weight finite engineering scenarios only; no probability distribution, standard error, confidence interval, or independent-error assumption."
+  },
+  "coaching_ready": false,
+  "sources": {
+    "baseline": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\budgeted-input-search-20261030\\artifacts\\budgeted-input-restore-clean\\baseline-sub2.npz",
+      "sha256": "6b2128fa1cca1015621c485d22031858b3c72eb6902d6c229d233feae8df9873"
+    },
+    "candidate": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\budgeted-input-search-20261030\\artifacts\\budgeted-input-restore-clean\\selected-sub2.npz",
+      "sha256": "4b5b355fed421847fe7a05cabb62a291be28c7a2b2c75af7139c3f552b9e3e2a"
+    }
+  }
+}

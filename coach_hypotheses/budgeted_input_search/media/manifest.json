@@ -1,0 +1,17 @@
+{
+  "frames": 420,
+  "fps": 30,
+  "physical_interval_s": 0.16940000000018784,
+  "full_decode_passed": true,
+  "scope": "Strict-budget conditional simulation; real athlete effect, spin and command unverified.",
+  "policy_scope": "Legacy A only; total net work and root force vector norm increased, so not a full no-extra-work result.",
+  "total_net_work_change_j": 1.1246697402241352,
+  "root_force_norm_change_n": 0.010508829637728923,
+  "report_sha256": "20e3ca9c9c0c4268ee3401e6192601c5aa770dfe09b5a5113d71fe1a54bab4f6",
+  "state_sha256": {
+    "artifacts\\budgeted-input-restore-clean\\baseline-sub2.npz": "6b2128fa1cca1015621c485d22031858b3c72eb6902d6c229d233feae8df9873",
+    "artifacts\\budgeted-input-restore-clean\\selected-sub2.npz": "4b5b355fed421847fe7a05cabb62a291be28c7a2b2c75af7139c3f552b9e3e2a"
+  },
+  "landmarks_sha256": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+  "video_sha256": "0922540d0997a47402d270bfb3b35a334f8e9d81d2ed0ca8c192c9366497a889"
+}

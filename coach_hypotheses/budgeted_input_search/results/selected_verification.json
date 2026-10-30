@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "substeps": 1,
+      "replay_exact": true,
+      "accounting_exact": true,
+      "strict_gate": {
+        "strict_model_budget_pass": true,
+        "violations": [],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "pose": {
+        "max_rotation_change_deg": 1.6406439152974437,
+        "rotation_change_by_joint_deg": {
+          "shoulder": 0.5102404381103463,
+          "elbow": 0.46968244392039654,
+          "marker_roll": 1.3267147007738676,
+          "wrist_marker": 1.6406439152974437
+        },
+        "max_ball_position_change_mm": 5.831936735701443,
+        "release_direction_change_deg": 0.6016816792130775,
+        "max_shoulder_translation_change_mm": 3.0795981325861197,
+        "endpoint_wrist_marker_rotation_change_deg": [
+          -1.1232753814034708,
+          -0.09697118273087083,
+          1.0990457852777682
+        ],
+        "endpoint_wrist_marker_velocity_change_deg_s": [
+          -135.24771807915644,
+          -22.819739648884266,
+          67.69482689846771
+        ],
+        "pose_screen_pass": true
+      },
+      "paired_gain_kmh": 0.6473596642231598,
+      "total_positive_component_work_change_j": -1.0745239522937027,
+      "total_negative_component_work_change_j": -2.1991811065983313,
+      "total_net_work_change_j": 1.1246571543044865,
+      "exploratory_B_gate_on_A_candidate": {
+        "policy_budget_pass": false,
+        "violation_indices": [
+          16,
+          18,
+          23
+        ],
+        "excess_values": [
+          0.004477008316200681,
+          0.0046562772066405245,
+          1.1246571543044865
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false,
+        "original_strict_gate": {
+          "strict_model_budget_pass": true,
+          "violations": [],
+          "floating_comparison_epsilon": 1e-09,
+          "physiological_capacity_validated": false
+        }
+      },
+      "root_force_norm_change_n": 0.010508829637728923,
+      "energy_accounting_residual_j": -0.0003830259040000783,
+      "state_sha256": "92f77407c99a81e95f19dd15d3fe03d7ca7f3b6e9557201eec302edb04fc22ab"
+    },
+    {
+      "substeps": 2,
+      "replay_exact": true,
+      "accounting_exact": true,
+      "strict_gate": {
+        "strict_model_budget_pass": true,
+        "violations": [],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "pose": {
+        "max_rotation_change_deg": 1.6406449939626477,
+        "rotation_change_by_joint_deg": {
+          "shoulder": 0.5102424003817437,
+          "elbow": 0.4696828522861373,
+          "marker_roll": 1.326707844683965,
+          "wrist_marker": 1.6406449939626477
+        },
+        "max_ball_position_change_mm": 5.831945010501174,
+        "release_direction_change_deg": 0.6016812126776988,
+        "max_shoulder_translation_change_mm": 3.079627727858082,
+        "endpoint_wrist_marker_rotation_change_deg": [
+          -1.1232802437792784,
+          -0.09696959681112398,
+          1.099045434246149
+        ],
+        "endpoint_wrist_marker_velocity_change_deg_s": [
+          -135.24831355147128,
+          -22.81907183508636,
+          67.6948809685866
+        ],
+        "pose_screen_pass": true
+      },
+      "paired_gain_kmh": 0.6473596802644153,
+      "total_positive_component_work_change_j": -1.074522899761348,
+      "total_negative_component_work_change_j": -2.19919263998608,
+      "total_net_work_change_j": 1.1246697402241352,
+      "exploratory_B_gate_on_A_candidate": {
+        "policy_budget_pass": false,
+        "violation_indices": [
+          16,
+          18,
+          23
+        ],
+        "excess_values": [
+          0.004481197634135015,
+          0.004655676893437377,
+          1.1246697402241352
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false,
+        "original_strict_gate": {
+          "strict_model_budget_pass": true,
+          "violations": [],
+          "floating_comparison_epsilon": 1e-09,
+          "physiological_capacity_validated": false
+        }
+      },
+      "root_force_norm_change_n": 0.010508829637728923,
+      "energy_accounting_residual_j": -9.576161261293237e-05,
+      "state_sha256": "4b5b355fed421847fe7a05cabb62a291be28c7a2b2c75af7139c3f552b9e3e2a"
+    }
+  ],
+  "actual_athlete_effect_verified": false,
+  "empirical_effect_95ci": null
+}

@@ -1,0 +1,7 @@
+{
+  "potential_energy_difference_j": -0.12363020589143048,
+  "kinetic_energy_difference_j": 1.2483050846225296,
+  "total_energy_difference_j": 1.1246748787311276,
+  "ball_translational_kinetic_energy_difference_j": 0.8241641966205532,
+  "scope": "Generic rigid-payload model at BR only; no post-release braking or actual spin effect validated."
+}
