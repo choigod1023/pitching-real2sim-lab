@@ -1,0 +1,138 @@
+{
+  "review_date": "2026-10-30",
+  "base_commit": "9377c44468570fa59135e4e9895e1515d922ba95",
+  "pitch": "3034_1",
+  "candidate": "wrist_z_p2",
+  "artifact": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\joint-intervention\\artifacts\\joint-intervention\\report.json",
+  "artifact_sha256": "bb920f6029344b5204d356be4f84c9becee304467d31474f6617cb1a2aedfb41",
+  "input": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\grip-identifiability\\artifacts\\grip-identifiability\\fine-reference\\reference-0.npz",
+  "input_sha256_verified": "85ac33f74967e35101ea87aefa17d8cd2d7681585fcccea10f69912cf7e952c2",
+  "fine_and_coarse": [
+    {
+      "substeps": 1,
+      "dt_s": 8.678278688534213e-05,
+      "baseline_kmh": 113.46658063527904,
+      "candidate_kmh": 115.13181735192768,
+      "paired_gain_kmh": 1.6652367166486357,
+      "positive_component_work_change_j": 6.2357896809019735,
+      "positive_component_work_change_percent": 1.3725669382694328,
+      "shoulder_translation_net_work_change_j": 0.751256178895801,
+      "shoulder_rotation_peak_change_percent": 4.135993692974171,
+      "wrist_peak_change_percent": 5.5951108443945685,
+      "max_actual_rotation_change_deg": 2.0107565838511414,
+      "constraint_pass": false
+    },
+    {
+      "substeps": 2,
+      "dt_s": 4.339139344267107e-05,
+      "baseline_kmh": 113.46658197344723,
+      "candidate_kmh": 115.1318189406906,
+      "paired_gain_kmh": 1.6652369672433593,
+      "positive_component_work_change_j": 6.235790235028503,
+      "positive_component_work_change_percent": 1.3725676204455715,
+      "shoulder_translation_net_work_change_j": 0.7512628829321386,
+      "shoulder_rotation_peak_change_percent": 4.135993692974171,
+      "wrist_peak_change_percent": 5.5951108443945685,
+      "max_actual_rotation_change_deg": 2.01075910179797,
+      "constraint_pass": false
+    }
+  ],
+  "paired_gain_resolution_difference_kmh": 2.505947236386419e-07,
+  "mapping_artifact": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\joint-intervention\\artifacts\\joint-mapping\\report.json",
+  "mapping_sha256": "ded0f378b070f67c67787008b369d5b4e4bd2f98228d100149bbccc11e321584",
+  "mapping_scope": "Endpoint kinematics, not new equal-input rollout, engineering sensitivity not confidence interval",
+  "mapping_grip_rows": [
+    {
+      "grip_m": 0.14,
+      "speed_kmh": 111.79142159907273,
+      "paired_gain_kmh": 1.5633697962441602
+    },
+    {
+      "grip_m": 0.15,
+      "speed_kmh": 115.13615677321022,
+      "paired_gain_kmh": 1.6743342746221117
+    },
+    {
+      "grip_m": 0.16,
+      "speed_kmh": 118.48145252131059,
+      "paired_gain_kmh": 1.7852378662140609
+    }
+  ],
+  "state_artifacts": [
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\joint-intervention\\artifacts\\joint-intervention\\state-wrist_z_p2-sub1.npz",
+      "sha256": "a2fc2237982e1f515a767f0285dd3aae0af55fd0072e00284ef23908275c59c5",
+      "array_shapes": {
+        "qreference": [
+          1953,
+          13
+        ],
+        "candidate_q": [
+          1953,
+          13
+        ],
+        "controls": [
+          1953,
+          11
+        ],
+        "qpos": [
+          1953,
+          13
+        ],
+        "qvel": [
+          1953,
+          11
+        ],
+        "dt": [],
+        "lengths": [
+          2
+        ],
+        "requested_angles": [
+          1953
+        ]
+      }
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\joint-intervention\\artifacts\\joint-intervention\\state-wrist_z_p2-sub2.npz",
+      "sha256": "27c3be1822fd39e7a0ea5cfbd046392df2f847385223d2dce3a0462fa52679a2",
+      "array_shapes": {
+        "qreference": [
+          1953,
+          13
+        ],
+        "candidate_q": [
+          1953,
+          13
+        ],
+        "controls": [
+          1953,
+          11
+        ],
+        "qpos": [
+          1953,
+          13
+        ],
+        "qvel": [
+          1953,
+          11
+        ],
+        "dt": [],
+        "lengths": [
+          2
+        ],
+        "requested_angles": [
+          1953
+        ]
+      }
+    }
+  ],
+  "prescribed_extra_endpoint_angular_rate_deg_s": 200.0,
+  "actual_intervention_observations": 0,
+  "empirical_paired_gain_error_kmh": null,
+  "empirical_gain_95ci": null,
+  "same_ability_validated": false,
+  "spin_effect_validated": false,
+  "training_effect_validated": false,
+  "audit_assertions_passed": true,
+  "new_optimization_executed": false
+}
