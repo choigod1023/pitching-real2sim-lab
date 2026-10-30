@@ -1,0 +1,35 @@
+{
+  "continuous_minimum_checks": [
+    {
+      "delay_ms": 0,
+      "continuous_min_clearance_mm": -69.49982052613859,
+      "continuous_closest_ms": -2.800535803260118e-06,
+      "sampled_minus_continuous_clearance_mm": -0.00017947343648927472,
+      "same_near_classification": true
+    },
+    {
+      "delay_ms": 12,
+      "continuous_min_clearance_mm": -68.54795462734972,
+      "continuous_closest_ms": 5.032923882068275,
+      "sampled_minus_continuous_clearance_mm": 1.5329989497509189,
+      "same_near_classification": true
+    }
+  ],
+  "max_bone_length_change_under_scene_transform_mm": 3.3861802251067274e-12,
+  "source_pitch_frames": 549,
+  "video_frames": 382,
+  "video_sha256": "30dde10a907445ac8375666918003a8bd287e7fcf68e9abf84c7539045767263",
+  "full_video_decode_passed": true,
+  "representative_frames_visually_checked": true,
+  "response_model_exact_reproduction": 0.0,
+  "code_hashes": {
+    "coach_hypotheses\\batter_contact\\geometry.py": "0d7d833c9e1af974a47271083b99aca66b0a25637fa2016a59bb7b0e5b745290",
+    "coach_hypotheses\\batter_contact\\render.py": "c059e378e0df3052e5296944fb7da6b16cc5044d977f97d1f97ab4134caf6321",
+    "coach_hypotheses\\batter_contact\\response.py": "0bd639c277bbde369a0d9bd0b980cd0d58e448000a7bcd9186613405b2611d76",
+    "coach_hypotheses\\batter_contact\\run.py": "ceb3c912ade616ec03331bbdd21dabafc1fbe0099156d33c8a77dfb8e55658ff",
+    "coach_hypotheses\\batter_contact\\scene.py": "c47effb0c804786ac9b9e48500cdeb7769bdf3cb9ad593035ee96f4feacc054b",
+    "coach_hypotheses\\batter_contact\\__init__.py": "73ab169d8e2b16fca23a54b92c6560943014c1d300ef87b497d42cef19ee590c"
+  },
+  "physical_model_validated": false,
+  "actual_athlete_effect": false
+}

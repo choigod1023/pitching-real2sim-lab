@@ -1,0 +1,26 @@
+{
+  "verified_at_utc": "2026-10-30T02:48:27.625934+00:00",
+  "sources": [
+    {
+      "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_landmarks.zip",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\external\\hitting_landmarks.zip",
+      "bytes": 65801815,
+      "sha256": "9cc2bdc94f5f5a6c5d540f4abe459caae2c5164cd53f6a6fd23f4b2b7283bcb3",
+      "published_github_asset_digest": "9cc2bdc94f5f5a6c5d540f4abe459caae2c5164cd53f6a6fd23f4b2b7283bcb3",
+      "digest_verified": true,
+      "method": "gh release download",
+      "raw_file_committed": false
+    },
+    {
+      "url": "https://github.com/drivelineresearch/openbiomechanics/releases/download/dataset-v1/hitting_c3d.zip",
+      "local_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\external\\hitting_c3d.zip",
+      "bytes": 432315558,
+      "sha256": "083980649dfb4c3069a4f10baff57f156fcc4fb1d52decdba24f487e2ebc18cf",
+      "published_github_asset_digest": "083980649dfb4c3069a4f10baff57f156fcc4fb1d52decdba24f487e2ebc18cf",
+      "digest_verified": true,
+      "method": "gh release download",
+      "raw_file_committed": false
+    }
+  ],
+  "data_license": "CC BY-NC-SA 4.0"
+}

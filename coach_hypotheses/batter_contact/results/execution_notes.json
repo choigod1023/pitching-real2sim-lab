@@ -1,0 +1,17 @@
+{
+  "failures": [
+    {
+      "error": "preregistered_first_hitter_changed",
+      "fix": "identity amendment ad9fec6 before geometric calculation",
+      "preserved_log": "artifacts/batter_contact/failures/identity-mismatch.log"
+    },
+    {
+      "error": "UnicodeEncodeError cp949 en dash after successful export",
+      "fix": "UTF-8 video emitter with cp949 regression test",
+      "preserved_log": "artifacts/batter_contact/failures/console-encoding.log"
+    }
+  ],
+  "final_cli_exit_code": 0,
+  "kinematic_replay_is_athlete_improvement": false,
+  "prior_results_modified": false
+}
