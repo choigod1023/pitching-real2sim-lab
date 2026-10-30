@@ -58,8 +58,16 @@ def check_response(source,previous,output):
     return result
 
 
-def run(obp_dir,external,previous,mlb_source,output,media):
+def run(obp_dir,external,previous,mlb_source,output,media,*,show_demo=False):
     output,media=Path(output),Path(media)
+    if not show_demo:
+        result=dict(status='no_validated_pitcher_intervention_video',pitcher_performance_video=None,
+            body_to_stuff_mapping_validated=False,pitcher_performance_improvement_verified=False,
+            statistical_prediction_gain_is_pitcher_improvement=False,
+            demo_available_with_explicit_flag=True,automatic_demo_export=False)
+        m.save(Path(__file__).with_name('results')/'performance_video_status.json',result)
+        print('현재 검증된 투수 동작 수정 후보가 없어 성능 향상 영상은 표시하지 않습니다.',flush=True)
+        return result
     response=check_response(mlb_source,previous,output)
     scene,audit=load_scene(obp_dir,external,output/'source_checks')
     geometry=run_geometry(scene)
@@ -78,6 +86,7 @@ def run(obp_dir,external,previous,mlb_source,output,media):
 
 
 def main():
+    if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
     parser=argparse.ArgumentParser(description=__doc__)
     root=Path(__file__).resolve().parents[2]
     parser.add_argument('--obp-dir',type=Path,default=root.parent/'openbiomechanics')
@@ -86,8 +95,9 @@ def main():
     parser.add_argument('--mlb-source',type=Path,default=root.parent/'temporal-collection-agent-20261030/artifacts/temporal_quality_games')
     parser.add_argument('--output',type=Path,default=root/'artifacts/batter_contact')
     parser.add_argument('--media',type=Path,default=Path(__file__).with_name('media'))
+    parser.add_argument('--show-demo',action='store_true',help='Explicitly export the separate-record diagnostic demo, not a pitcher improvement.')
     args=parser.parse_args()
-    run(args.obp_dir,args.external,args.previous,args.mlb_source,args.output,args.media)
+    run(args.obp_dir,args.external,args.previous,args.mlb_source,args.output,args.media,show_demo=args.show_demo)
 
 
 if __name__=='__main__':main()

@@ -182,6 +182,9 @@ class MediaTests(unittest.TestCase):
             self.assertGreater(info['decoded_frames'],1);self.assertTrue(info['contains_pitcher_scene'])
         with patch('sys.argv',['run']),patch.object(app,'run') as called:
             app.main();self.assertEqual(len(called.call_args[0]),6)
+            self.assertFalse(called.call_args.kwargs['show_demo'])
+        with patch('sys.argv',['run','--show-demo']),patch.object(app,'run') as called:
+            app.main();self.assertTrue(called.call_args.kwargs['show_demo'])
 
     def test_video_markdown_supports_unicode_console(self):
         stream=io.StringIO()
@@ -199,8 +202,19 @@ class MediaTests(unittest.TestCase):
             with patch.object(app,'check_response',return_value={}),patch.object(app,'load_scene',return_value=({},{})),\
                  patch.object(app,'run_geometry',return_value={}),patch.object(app,'export',return_value=info),\
                  patch.object(app.m,'save'):
-                result=app.run(root,root,root,root,root/'out',root/'media')
+                result=app.run(root,root,root,root,root/'out',root/'media',show_demo=True)
             self.assertFalse(result['actual_athlete_improvement']);self.assertFalse(result['same_pitch_prediction_with_body_video'])
+
+    def test_default_does_not_substitute_demo_for_pitcher_improvement(self):
+        with contextlib.redirect_stdout(io.StringIO()) as stdout,patch.object(app.m,'save') as save,\
+             patch.object(app,'check_response') as response,patch.object(app,'load_scene') as scene,\
+             patch.object(app,'export') as export,patch.object(app,'emit_video') as emit:
+            result=app.run('unused','unused','unused','unused','unused','unused')
+        self.assertIsNone(result['pitcher_performance_video'])
+        self.assertFalse(result['pitcher_performance_improvement_verified'])
+        self.assertFalse(result['statistical_prediction_gain_is_pitcher_improvement'])
+        response.assert_not_called();scene.assert_not_called();export.assert_not_called();emit.assert_not_called()
+        self.assertNotIn('![',stdout.getvalue());save.assert_called_once()
 
 
 if __name__=='__main__':unittest.main()
