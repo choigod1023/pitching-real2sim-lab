@@ -1,0 +1,21 @@
+{
+  "review_only": true,
+  "code_changed": false,
+  "new_functions": 0,
+  "command": "python -m unittest test_joint_intervention test_capacity_budget_gate test_joint_video -v",
+  "tests_run": 12,
+  "passed": 12,
+  "failed": 0,
+  "skipped": 0,
+  "full_suite_rerun": false,
+  "reason": "Documentation and derived audit only; selected regression checks cover original intervention and force/work accounting.",
+  "test_log_sha256": "d0487248e18a8f875e50ec6a115a3c5d5a0c424fc4cd3be58e54ce136bbb7cc7",
+  "report_sha256": "eb768c4b694d52afeeee0877f64927cd45c4a5974aced95cb409c11684e45d6f",
+  "audit_sha256": "b84745d37c1bc16f72163f9150f4c0a13c5dadbb0bc49a63489c8bbbec96e4e7",
+  "scientific_verdict": {
+    "numerical_gain_reproduced": true,
+    "existing_force_work_budget_pass": false,
+    "real_intervention_gain_verified": false,
+    "real_gain_error_interval": null
+  }
+}
