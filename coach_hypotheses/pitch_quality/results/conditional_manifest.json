@@ -1,0 +1,14 @@
+{
+  "protocol_commit": "9198cf13067e031ef109288b57745299f56aa9e1",
+  "input_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\mlb-quality-collection-agent-20261030\\artifacts\\mlb_quality_games\\parsed_pitches.json",
+  "input_sha256": "806206da474392b62f447bf21c79f5ad95abcd2d18ea50743fa3033d32b47229",
+  "code_sha256": "a6b29fdc0717c1a3226195327b74fbdf5fd3fef82f2cff0f3454a6f29f768af2",
+  "protocol_sha256": "b21203c96d50d129cb41cb192954c451de7fadbeef17109fe2286d652883b265",
+  "execution_notes_sha256": "fc22e50f3fb33061d5a21424af6801c69d4b8079f4f4acfda09d738427d4a71b",
+  "date_range": [
+    "2025-06-01",
+    "2025-06-14"
+  ],
+  "unit_conversions_performed": false,
+  "raw_or_pitch_level_data_redistributed": false
+}

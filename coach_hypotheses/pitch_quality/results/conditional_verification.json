@@ -1,0 +1,21 @@
+{
+  "raw_games_verified": 186,
+  "raw_pitches_verified": 53950,
+  "raw_required_numeric_cells_checked": 323700,
+  "nonmissing_numeric_cells": 323676,
+  "pre_and_post_counts_verified": 53950,
+  "official_call_flags_verified": 53950,
+  "source_row_sha256": "806206da474392b62f447bf21c79f5ad95abcd2d18ea50743fa3033d32b47229",
+  "independently_matched_FF_out_of_game_predictions": 1689,
+  "independently_eligible_FF_groups_per_fold": [
+    112,
+    111,
+    114,
+    108,
+    120
+  ],
+  "max_absolute_independent_metric_difference": 1.1102230246251565e-16,
+  "primary_verdict_unchanged": "FAIL",
+  "confidence_interval_is_physical_measurement_error": false,
+  "actual_athlete_effect_validated": false
+}
