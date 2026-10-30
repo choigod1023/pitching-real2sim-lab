@@ -1,0 +1,890 @@
+{
+  "source_audit": {
+    "pitch": "1615_1",
+    "pitcher": "830",
+    "swing": "103_1",
+    "hitter": "000004",
+    "same_real_matchup": false,
+    "protocol_commit": "3daae1d263c995fe6c86823aba85fe692675a38c",
+    "source_hashes": {
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\external\\hitting_landmarks.zip": "9cc2bdc94f5f5a6c5d540f4abe459caae2c5164cd53f6a6fd23f4b2b7283bcb3",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\external\\hitting_c3d.zip": "083980649dfb4c3069a4f10baff57f156fcc4fb1d52decdba24f487e2ebc18cf",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\metadata.csv": "52e9f0a966447f358405c20a46920a9a11944a366e21fb5a1e50581e0b4783a0",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\full_sig\\landmarks.csv": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_hitting\\data\\metadata.csv": "ba633936d5f4c122dde98fa68c10181998dfecdce262219e3da95c39df4f3392",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\source_checks\\000004_000103_75_236_R_003_972.c3d": "6108372aed66e4ca6df400bb49be5d03168024ec43d3a6213e7337b0beb037d0"
+    },
+    "raw_hitting_unit": "m",
+    "raw_hitting_rate_hz": 360,
+    "hitting_raw_match": "unique_frame_count_and_wrist_geometric_correspondence_not_explicit_trial_id",
+    "identity_amendment_commit": "ad9fec6",
+    "hitting_raw_processed_wrist_median_mm": 0.16297098426743406,
+    "hitting_raw_correspondence_candidates": [
+      {
+        "median_wrist_mm": 0.16297098426743406,
+        "name": "000004_000103_75_236_R_003_972.c3d"
+      }
+    ],
+    "recorded_pitch_speed_used_as_initial_assumption_kmh": 137.4379776,
+    "flight_time_ms": 461.6641590057411,
+    "release_origin": "processed_hand_center_proxy_not_observed_ball",
+    "ball_destination": "forced_through_provided_sweet_spot_at_contact_not_observed_ball",
+    "pitcher_rotation": [
+      [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pitcher_translation": [
+      18.44,
+      0,
+      0
+    ],
+    "pitcher_translation_reference": "FP10_hip_scene_anchor_not_calibrated_rubber",
+    "pitcher_pose_change_mm": 0.0,
+    "pitcher_angle_change_deg": 0.0,
+    "force_change": null,
+    "work_change": null,
+    "spin": null,
+    "drag": null,
+    "postimpact_exit_velocity": null,
+    "postimpact_launch_angle": null,
+    "actual_athlete_improvement": false,
+    "data_license": "CC BY-NC-SA 4.0"
+  },
+  "geometry": {
+    "nominal": {
+      "cases": [
+        {
+          "delay_ms": -20.0,
+          "minimum_clearance_mm": 12.312547635345657,
+          "closest_time_from_nominal_contact_ms": -6.50000000000589,
+          "sweet_zone_near": false,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -19.0,
+          "minimum_clearance_mm": 5.127046275232167,
+          "closest_time_from_nominal_contact_ms": -6.200000000005923,
+          "sweet_zone_near": false,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -18.0,
+          "minimum_clearance_mm": -1.954599199837717,
+          "closest_time_from_nominal_contact_ms": -5.9000000000059565,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -17.0,
+          "minimum_clearance_mm": -8.899920191258708,
+          "closest_time_from_nominal_contact_ms": -5.6000000000059895,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -16.0,
+          "minimum_clearance_mm": -14.836454504704417,
+          "closest_time_from_nominal_contact_ms": -5.200000000006034,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -15.0,
+          "minimum_clearance_mm": -19.747685853514447,
+          "closest_time_from_nominal_contact_ms": -5.000000000006056,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -14.0,
+          "minimum_clearance_mm": -24.424097207656683,
+          "closest_time_from_nominal_contact_ms": -4.800000000006078,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -13.0,
+          "minimum_clearance_mm": -28.787010259543397,
+          "closest_time_from_nominal_contact_ms": -4.6000000000061,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -12.0,
+          "minimum_clearance_mm": -34.219925099439756,
+          "closest_time_from_nominal_contact_ms": -4.300000000006133,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -11.0,
+          "minimum_clearance_mm": -39.241696394256216,
+          "closest_time_from_nominal_contact_ms": -4.000000000006166,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -10.0,
+          "minimum_clearance_mm": -43.30906012296479,
+          "closest_time_from_nominal_contact_ms": -3.7000000000061983,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -9.0,
+          "minimum_clearance_mm": -46.38473970845615,
+          "closest_time_from_nominal_contact_ms": -3.4000000000062314,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -8.0,
+          "minimum_clearance_mm": -50.983439454383145,
+          "closest_time_from_nominal_contact_ms": -3.1000000000062644,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -7.0,
+          "minimum_clearance_mm": -55.805494601229825,
+          "closest_time_from_nominal_contact_ms": -2.7000000000063085,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -6.0,
+          "minimum_clearance_mm": -60.45181148472819,
+          "closest_time_from_nominal_contact_ms": -2.4000000000063415,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -5.0,
+          "minimum_clearance_mm": -64.41391677820279,
+          "closest_time_from_nominal_contact_ms": -2.1000000000063745,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -4.0,
+          "minimum_clearance_mm": -65.62512772299745,
+          "closest_time_from_nominal_contact_ms": -1.7000000000064186,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -3.0,
+          "minimum_clearance_mm": -66.23728746293473,
+          "closest_time_from_nominal_contact_ms": -1.2000000000064737,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -2.0,
+          "minimum_clearance_mm": -67.50315811950469,
+          "closest_time_from_nominal_contact_ms": -0.8000000000065177,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": -1.0,
+          "minimum_clearance_mm": -68.58769183638077,
+          "closest_time_from_nominal_contact_ms": -0.4000000000065618,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 0.0,
+          "minimum_clearance_mm": -69.49999999957508,
+          "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 1.0,
+          "minimum_clearance_mm": -67.35924465233795,
+          "closest_time_from_nominal_contact_ms": 0.3999999999933501,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 2.0,
+          "minimum_clearance_mm": -67.99052423396147,
+          "closest_time_from_nominal_contact_ms": 0.6999999999933171,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 3.0,
+          "minimum_clearance_mm": -68.42357975158676,
+          "closest_time_from_nominal_contact_ms": 1.099999999993273,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 4.0,
+          "minimum_clearance_mm": -67.04345692796538,
+          "closest_time_from_nominal_contact_ms": 1.39999999999324,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 5.0,
+          "minimum_clearance_mm": -66.50833314450593,
+          "closest_time_from_nominal_contact_ms": 1.899999999993185,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 6.0,
+          "minimum_clearance_mm": -68.44140498073006,
+          "closest_time_from_nominal_contact_ms": 2.299999999993141,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 7.0,
+          "minimum_clearance_mm": -67.05532762670425,
+          "closest_time_from_nominal_contact_ms": 2.799999999993086,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 8.0,
+          "minimum_clearance_mm": -68.11516658407807,
+          "closest_time_from_nominal_contact_ms": 3.1999999999930417,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 9.0,
+          "minimum_clearance_mm": -67.33257642725063,
+          "closest_time_from_nominal_contact_ms": 3.6999999999929867,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 10.0,
+          "minimum_clearance_mm": -67.82729893576152,
+          "closest_time_from_nominal_contact_ms": 4.099999999992942,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 11.0,
+          "minimum_clearance_mm": -67.75267248235859,
+          "closest_time_from_nominal_contact_ms": 4.599999999992887,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 12.0,
+          "minimum_clearance_mm": -67.0149556775988,
+          "closest_time_from_nominal_contact_ms": 4.999999999992843,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 13.0,
+          "minimum_clearance_mm": -68.11274250633664,
+          "closest_time_from_nominal_contact_ms": 5.499999999992788,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 14.0,
+          "minimum_clearance_mm": -66.08619710433041,
+          "closest_time_from_nominal_contact_ms": 5.899999999992744,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 15.0,
+          "minimum_clearance_mm": -68.15780875741679,
+          "closest_time_from_nominal_contact_ms": 6.399999999992689,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 16.0,
+          "minimum_clearance_mm": -66.49108347212376,
+          "closest_time_from_nominal_contact_ms": 6.899999999992634,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 17.0,
+          "minimum_clearance_mm": -68.00246919175183,
+          "closest_time_from_nominal_contact_ms": 7.29999999999259,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 18.0,
+          "minimum_clearance_mm": -68.00361404158775,
+          "closest_time_from_nominal_contact_ms": 7.799999999992535,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 19.0,
+          "minimum_clearance_mm": -66.56294901878748,
+          "closest_time_from_nominal_contact_ms": 8.19999999999249,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        },
+        {
+          "delay_ms": 20.0,
+          "minimum_clearance_mm": -68.81134504738407,
+          "closest_time_from_nominal_contact_ms": 8.699999999992436,
+          "sweet_zone_near": true,
+          "step_ms": 0.1,
+          "measured_contact_or_miss": false
+        }
+      ],
+      "grid_near_intervals_ms": [
+        [
+          -18.0,
+          20
+        ]
+      ],
+      "largest_sampled_interval_width_ms": 38.0,
+      "touches_sweep_boundary": true,
+      "meaning": "conditional_sweet_zone_proximity_not_whiff_probability"
+    },
+    "convergence": [
+      {
+        "step_ms": 0.2,
+        "intervals_ms": [
+          [
+            -18.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -69.49999999957508,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.2,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -67.0149556775988,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.2,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "step_ms": 0.1,
+        "intervals_ms": [
+          [
+            -18.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -69.49999999957508,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -67.0149556775988,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "step_ms": 0.05,
+        "intervals_ms": [
+          [
+            -18.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -69.49999999957508,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.05,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -67.9753047717053,
+            "closest_time_from_nominal_contact_ms": 5.049999999992838,
+            "sweet_zone_near": true,
+            "step_ms": 0.05,
+            "measured_contact_or_miss": false
+          }
+        ]
+      }
+    ],
+    "engineering_sensitivity": [
+      {
+        "bat_radius_mm": 28.0,
+        "z_offset_mm": -10.0,
+        "intervals_ms": [
+          [
+            -16.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -55.95594315681257,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -56.98372179721433,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 28.0,
+        "z_offset_mm": 0,
+        "intervals_ms": [
+          [
+            -17.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -64.49999999957508,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -62.0149556775988,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 28.0,
+        "z_offset_mm": 10.0,
+        "intervals_ms": [
+          [
+            -18.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -55.95594315662113,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -55.043286275839655,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 33.0,
+        "z_offset_mm": -10.0,
+        "intervals_ms": [
+          [
+            -16.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -60.95594315681257,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -61.983721797214336,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 33.0,
+        "z_offset_mm": 0,
+        "intervals_ms": [
+          [
+            -18.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -69.49999999957508,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -67.0149556775988,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 33.0,
+        "z_offset_mm": 10.0,
+        "intervals_ms": [
+          [
+            -19.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -60.95594315662114,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -60.043286275839655,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 38.0,
+        "z_offset_mm": -10.0,
+        "intervals_ms": [
+          [
+            -17.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -65.95594315681257,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -66.98372179721433,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 38.0,
+        "z_offset_mm": 0,
+        "intervals_ms": [
+          [
+            -18.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -74.49999999957507,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -72.0149556775988,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      },
+      {
+        "bat_radius_mm": 38.0,
+        "z_offset_mm": 10.0,
+        "intervals_ms": [
+          [
+            -20.0,
+            20
+          ]
+        ],
+        "selected_cases": [
+          {
+            "delay_ms": 0.0,
+            "minimum_clearance_mm": -65.95594315662113,
+            "closest_time_from_nominal_contact_ms": -6.6058269965196814e-12,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          },
+          {
+            "delay_ms": 12.0,
+            "minimum_clearance_mm": -65.04328627583965,
+            "closest_time_from_nominal_contact_ms": 4.999999999992843,
+            "sweet_zone_near": true,
+            "step_ms": 0.1,
+            "measured_contact_or_miss": false
+          }
+        ]
+      }
+    ],
+    "baseline_near_by_construction": true,
+    "matched_player_validation": false,
+    "actual_whiff_probability": null,
+    "same_force_and_work_validated": false,
+    "athlete_improvement": false
+  },
+  "response": {
+    "audit": {
+      "test_before_eligibility": 39702,
+      "test_after_eligibility": 32910,
+      "excluded_unseen_or_sparse": 6792,
+      "pitchers": 334
+    },
+    "restored_model_comparisons": {
+      "GB0": {
+        "comparisons": 65236
+      },
+      "GB1": {
+        "comparisons": 65236
+      }
+    },
+    "max_abs_reproduction_difference": 0.0,
+    "joint_branch_sums_verified": true,
+    "diagnostics": {
+      "strict_SW": {
+        "metrics": {
+          "before": {
+            "brier": 0.07682812921328896,
+            "log_loss": 0.2698045597443009
+          },
+          "after": {
+            "brier": 0.07586797308504609,
+            "log_loss": 0.26553499056823215
+          }
+        },
+        "comparison": {
+          "reference": "before",
+          "candidate": "after",
+          "brier_gain": 0.0009601561282428702,
+          "pitcher_bootstrap_95pct": [
+            0.000594601905494493,
+            0.0013271124615257645
+          ],
+          "draws": 2000,
+          "seed": 20261030
+        }
+      },
+      "official_nonbunt_swingMissStatus": {
+        "metrics": {
+          "before": {
+            "brier": 0.0872410444261094,
+            "log_loss": 0.29808664485419994
+          },
+          "after": {
+            "brier": 0.08599123373657488,
+            "log_loss": 0.29304772636912857
+          }
+        },
+        "comparison": {
+          "reference": "before",
+          "candidate": "after",
+          "brier_gain": 0.0012498106895345242,
+          "pitcher_bootstrap_95pct": [
+            0.000840495890297513,
+            0.0016537980907769545
+          ],
+          "draws": 2000,
+          "seed": 20261030
+        }
+      }
+    },
+    "scope": "integration_diagnostic_on_previously_used_August_not_new_heldout",
+    "example": {
+      "key": [
+        776507,
+        0,
+        3
+      ],
+      "batterId": 702616,
+      "swing_probability": 0.11480781519958798,
+      "physical_contact_probability": null,
+      "actual_swing_trajectory_predicted": false,
+      "causal_body_adjustment_effect": false,
+      "strict_SW": {
+        "labelled_miss_given_swing": 0.128481604084728,
+        "branches": {
+          "take": 0.8851921848004121,
+          "swing_labelled_miss": 0.01475069225830608,
+          "swing_other": 0.1000571229412819
+        }
+      },
+      "official_nonbunt_swingMissStatus": {
+        "labelled_miss_given_swing": 0.17332823578138723,
+        "branches": {
+          "take": 0.8851921848004121,
+          "swing_labelled_miss": 0.019899436062460116,
+          "swing_other": 0.09490837913712787
+        }
+      }
+    },
+    "physical_contact_probability": null,
+    "body_mapping_validated": false,
+    "video_dataset_is_same_MLB_pitch": false
+  },
+  "video": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\pitcher_batter_overlay.mp4",
+    "sha256": "30dde10a907445ac8375666918003a8bd287e7fcf68e9abf84c7539045767263",
+    "decoded_frames": 382,
+    "fps": 30.0,
+    "representative_frames": [
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\frames\\frame_0000.png",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\frames\\frame_0191.png",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\frames\\frame_0381.png",
+      "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\frames\\contact.png"
+    ],
+    "scope": "separate_observed_pose_records_with_conditional_ball_sweet_zone_demo",
+    "contains_pitcher_scene": true,
+    "pitcher_pose_modified": false,
+    "actual_athlete_improvement": false,
+    "full_pitch_frames": 290,
+    "contact_replay_frames": 92
+  },
+  "success_bundle": {
+    "success": true,
+    "success_kind": "engineering",
+    "videos": [
+      {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\artifacts\\batter_contact\\pitcher_batter_overlay.mp4",
+        "sha256": "30dde10a907445ac8375666918003a8bd287e7fcf68e9abf84c7539045767263",
+        "decoded_frames": 382,
+        "fps": 30.0,
+        "representative_frames": []
+      }
+    ],
+    "inline_markdown": [
+      "![\ud22c\uc218\u2013\ud0c0\uc790 \uc2dc\ubbac\ub808\uc774\uc158](C:/Users/user/Documents/Codex/2026-10-20/new-chat-2/outputs/pitching-lab/pitcher-batter-contact-20261030/artifacts/batter_contact/pitcher_batter_overlay.mp4)"
+    ],
+    "actual_athlete_improvement": false
+  },
+  "shared_video": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitcher-batter-contact-20261030\\coach_hypotheses\\batter_contact\\media\\pitcher_batter_overlay.mp4",
+    "sha256": "30dde10a907445ac8375666918003a8bd287e7fcf68e9abf84c7539045767263"
+  },
+  "same_pitch_prediction_with_body_video": false,
+  "actual_athlete_improvement": false
+}

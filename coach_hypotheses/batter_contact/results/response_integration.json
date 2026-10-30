@@ -1,0 +1,98 @@
+{
+  "audit": {
+    "test_before_eligibility": 39702,
+    "test_after_eligibility": 32910,
+    "excluded_unseen_or_sparse": 6792,
+    "pitchers": 334
+  },
+  "restored_model_comparisons": {
+    "GB0": {
+      "comparisons": 65236
+    },
+    "GB1": {
+      "comparisons": 65236
+    }
+  },
+  "max_abs_reproduction_difference": 0.0,
+  "joint_branch_sums_verified": true,
+  "diagnostics": {
+    "strict_SW": {
+      "metrics": {
+        "before": {
+          "brier": 0.07682812921328896,
+          "log_loss": 0.2698045597443009
+        },
+        "after": {
+          "brier": 0.07586797308504609,
+          "log_loss": 0.26553499056823215
+        }
+      },
+      "comparison": {
+        "reference": "before",
+        "candidate": "after",
+        "brier_gain": 0.0009601561282428702,
+        "pitcher_bootstrap_95pct": [
+          0.000594601905494493,
+          0.0013271124615257645
+        ],
+        "draws": 2000,
+        "seed": 20261030
+      }
+    },
+    "official_nonbunt_swingMissStatus": {
+      "metrics": {
+        "before": {
+          "brier": 0.0872410444261094,
+          "log_loss": 0.29808664485419994
+        },
+        "after": {
+          "brier": 0.08599123373657488,
+          "log_loss": 0.29304772636912857
+        }
+      },
+      "comparison": {
+        "reference": "before",
+        "candidate": "after",
+        "brier_gain": 0.0012498106895345242,
+        "pitcher_bootstrap_95pct": [
+          0.000840495890297513,
+          0.0016537980907769545
+        ],
+        "draws": 2000,
+        "seed": 20261030
+      }
+    }
+  },
+  "scope": "integration_diagnostic_on_previously_used_August_not_new_heldout",
+  "example": {
+    "key": [
+      776507,
+      0,
+      3
+    ],
+    "batterId": 702616,
+    "swing_probability": 0.11480781519958798,
+    "physical_contact_probability": null,
+    "actual_swing_trajectory_predicted": false,
+    "causal_body_adjustment_effect": false,
+    "strict_SW": {
+      "labelled_miss_given_swing": 0.128481604084728,
+      "branches": {
+        "take": 0.8851921848004121,
+        "swing_labelled_miss": 0.01475069225830608,
+        "swing_other": 0.1000571229412819
+      }
+    },
+    "official_nonbunt_swingMissStatus": {
+      "labelled_miss_given_swing": 0.17332823578138723,
+      "branches": {
+        "take": 0.8851921848004121,
+        "swing_labelled_miss": 0.019899436062460116,
+        "swing_other": 0.09490837913712787
+      }
+    }
+  },
+  "physical_contact_probability": null,
+  "body_mapping_validated": false,
+  "video_dataset_is_same_MLB_pitch": false
+}
