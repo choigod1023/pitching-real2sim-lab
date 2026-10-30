@@ -1,0 +1,27 @@
+{
+  "review_date": "2026-10-30",
+  "mode": "parallel_read_only_preliminary_review",
+  "literature": [
+    {"doi": "10.1080/14763141.2022.2125823", "url": "https://pubmed.ncbi.nlm.nih.gov/36175120/", "access_reviewed": "abstract_only", "participants": 13, "evidence": "observational_estimated_finger_force_and_spin_per_speed", "public_raw_download_verified": false},
+    {"doi": "10.1038/s41598-025-93632-y", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11950353/", "access_reviewed": "full_text", "participants": 6, "evidence": "friction_condition_intervention_not_constant_actual_velocity_or_work", "raw_data_status": "reasonable_request_not_public_download"},
+    {"doi": "10.1038/s41598-025-12298-8", "url": "https://doi.org/10.1038/s41598-025-12298-8", "access_reviewed": "full_text", "participants": 8, "evidence": "related_friction_experiment_arm_path_compensation", "raw_data_status": "request_only", "independent_replication_of_previous_entry": false},
+    {"doi": "10.1177/1754337120961609", "url": "https://digitalcommons.usu.edu/etd/7903/", "access_reviewed": "journal_and_author_repository_abstract", "evidence": "mechanical_seam_orientation_flight_experiment", "full_text_access_failure": "journal_timeout_and_thesis_pdf_403", "public_raw_download_verified": false},
+    {"doi": "10.1123/jab.29.3.279", "url": "https://waseda.elsevierpure.com/ja/publications/the-effect-of-fastball-backspin-rate-on-baseball-hitting-accuracy/", "access_reviewed": "author_university_abstract", "participants": 13, "evidence": "batting_experiment_fixed_ball_speed_not_pitcher_intervention", "public_raw_download_verified": false},
+    {"doi": "10.1177/17479541251378897", "url": "https://journals.sagepub.com/doi/pdf/10.1177/17479541251378897", "access_reviewed": "full_text_and_appendix", "evidence": "mlb_observational_between_and_within_pitcher_analysis", "public_replication_repository_verified": false},
+    {"doi": "10.1177/03635465241309316", "url": "https://journals.sagepub.com/doi/abs/10.1177/03635465241309316", "access_reviewed": "publisher_abstract", "participants": 31, "evidence": "professional_pitch_type_spin_and_elbow_load_observation", "full_text_status": "subscription", "public_raw_download_verified": false}
+  ],
+  "data_sources": [
+    {"url": "https://data.mendeley.com/datasets/xfnz6mkdzm/2", "doi": "10.17632/xfnz6mkdzm.2", "access_reviewed": "publisher_description_only", "described_pitches": 3344, "described_games": 21, "described_filename": "Track_Combo.csv", "declared_license": "CC BY 4.0", "raw_csv_access_verified": false, "actual_rows_and_headers_verified": false, "python_page_and_documented_api_status": 403, "prior_3334_count_corrected": true},
+    {"url": "https://data.mendeley.com/datasets/xfnz6mkdzm/3", "doi": "10.17632/xfnz6mkdzm.3", "access_reviewed": "publisher_description_only", "file_equality_to_v2_verified": false},
+    {"url": "https://baseballsavant.mlb.com/csv-docs", "access_reviewed": "official_field_definitions", "raw_csv_access_verified": false, "sample_missingness_verified": false, "official_search_page_python_status": 403, "csv_url_not_guessed_after_access_failure": true},
+    {"url": "https://baseballsavant.mlb.com/leaderboard/active-spin", "access_reviewed": "official_definition", "general_csv_spin_axis_is_3d_vector": false},
+    {"url": "https://baseballsavant.mlb.com/leaderboard/pitcher-arm-angles", "access_reviewed": "official_definition", "arm_angle_is_full_body_time_series": false},
+    {"url": "https://baseballsavant.mlb.com/leaderboard/spin-direction-pitches", "access_reviewed": "official_definition", "movement_discrepancy_is_direct_seam_observation": false}
+  ],
+  "same_capacity_work_load_intervention_validated": false,
+  "new_pitch_quality_model_implemented": false,
+  "observed_pitch_quality_improvement": false,
+  "external_contact_performed": false,
+  "paid_access_used": false,
+  "files_or_restricted_access_bypassed": false
+}
