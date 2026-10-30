@@ -21,8 +21,17 @@ DEFAULT_REUSE = m.ROOT.parent / "curve-timing-and-quality-data-20261030" / "arti
 SPEED_JS_URL = "https://builds.mlbstatic.com/baseballsavant.mlb.com/v1/sections/gamefeed/builds/4a2930fb3794eed37b9aabce1f4ff3d0966f246b/scripts/build/gamefeed-all.js"
 
 
-def fixed_dates():
-    return [(START_DATE + timedelta(days=i)).isoformat() for i in range((END_DATE-START_DATE).days+1)]
+def date_interval(start_date=START_DATE, end_date=END_DATE):
+    start = date.fromisoformat(start_date) if isinstance(start_date, str) else start_date
+    end = date.fromisoformat(end_date) if isinstance(end_date, str) else end_date
+    if type(start) is not date or type(end) is not date or end < start:
+        raise ValueError("valid_inclusive_date_interval_required")
+    return start, end
+
+
+def fixed_dates(start_date=START_DATE, end_date=END_DATE):
+    start, end = date_interval(start_date, end_date)
+    return [(start + timedelta(days=i)).isoformat() for i in range((end-start).days+1)]
 
 
 def reuse_cache(url, destination, sources):
@@ -85,8 +94,9 @@ def fetch_with_retries(url, cache, *, reuse_dirs=(), retries=2, opener=None, sle
                 failure=dict(url=url, stage="fetch", error=attempts[-1]["error"], error_type=attempts[-1]["error_type"]))
 
 
-def select_games(schedules):
+def select_games(schedules, *, start_date=START_DATE, end_date=END_DATE):
     """Deduplicate every completed R game in the fixed officialDate interval."""
+    start, end = date_interval(start_date, end_date)
     games, duplicates, excluded = {}, 0, Counter()
     for schedule_url, payload in schedules:
         if not isinstance(payload, dict) or not isinstance(payload.get("dates"), list):
@@ -104,7 +114,7 @@ def select_games(schedules):
                 if game.get("status", {}).get("abstractGameState") != "Final":
                     excluded["not_final"] += 1
                     continue
-                if not isinstance(official, str) or not START_DATE.isoformat() <= official <= END_DATE.isoformat():
+                if not isinstance(official, str) or not start.isoformat() <= official <= end.isoformat():
                     excluded["official_date_outside_interval_or_missing"] += 1
                     continue
                 # Reject malformed date strings that happened to pass lexical bounds.
@@ -184,15 +194,22 @@ def aggregate_audits(game_results, rows):
 
 
 def collect(*, cache_dir=DEFAULT_CACHE, results_dir=None, reuse_dirs=(DEFAULT_REUSE,), workers=3,
-            retries=2, opener=None, sleeper=time.sleep, progress=None):
+            retries=2, opener=None, sleeper=time.sleep, progress=None,
+            start_date=START_DATE, end_date=END_DATE,
+            protocol="coach_hypotheses/pitch_quality/CONDITIONAL_PROTOCOL.md",
+            export_relative_path="artifacts/mlb_quality_games/parsed_pitches.json"):
     if type(workers) is not int or not 1 <= workers <= 3:
         raise ValueError("one_to_three_workers_required")
     if type(retries) is not int or not 0 <= retries <= 2:
         raise ValueError("at_most_two_additional_retries")
+    start, end = date_interval(start_date, end_date)
+    if (start, end) != (START_DATE, END_DATE) and (results_dir is None or Path(cache_dir) == DEFAULT_CACHE):
+        raise ValueError("custom_interval_requires_separate_cache_and_results")
+    days = fixed_dates(start, end)
     cache, results = Path(cache_dir), Path(results_dir or Path(__file__).resolve().parent / "results")
     cache.mkdir(parents=True, exist_ok=True)
     source_records, failures, schedules = [], [], []
-    urls = [f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&date={day}" for day in fixed_dates()]
+    urls = [f"https://statsapi.mlb.com/api/v1/schedule?sportId=1&date={day}" for day in days]
     with ThreadPoolExecutor(max_workers=workers) as pool:
         jobs = {pool.submit(fetch_with_retries, url, cache, reuse_dirs=reuse_dirs, retries=retries,
                             opener=opener, sleeper=sleeper): url for url in urls}
@@ -203,18 +220,18 @@ def collect(*, cache_dir=DEFAULT_CACHE, results_dir=None, reuse_dirs=(DEFAULT_RE
                 failures.append(response["failure"])
             else:
                 try:
-                    select_games([(url, response["value"])])
+                    select_games([(url, response["value"])], start_date=start, end_date=end)
                     schedules.append((url, response["value"]))
                 except Exception as exc:
                     failures.append(dict(stage="schedule_schema", url=url, error_type=type(exc).__name__, error=str(exc)))
     # Keep successful days if any other schedule failed; completeness remains explicitly false.
     try:
-        games, selection = select_games(schedules)
+        games, selection = select_games(schedules, start_date=start, end_date=end)
     except Exception as exc:
         failures.append(dict(stage="schedule_selection", error_type=type(exc).__name__, error=str(exc)))
         games, selection = [], dict(duplicate_game_records=None, excluded_schedule_records={})
     if progress:
-        progress(f"schedules={len(schedules)}/14 selected_games={len(games)}")
+        progress(f"schedules={len(schedules)}/{len(days)} selected_games={len(games)}")
     response = fetch_with_retries(m.PITCH_CODES_URL, cache, reuse_dirs=reuse_dirs, retries=retries,
                                  opener=opener, sleeper=sleeper)
     source_records.append(dict(url=m.PITCH_CODES_URL, **{k: v for k, v in response.items() if k != "value"}))
@@ -252,15 +269,15 @@ def collect(*, cache_dir=DEFAULT_CACHE, results_dir=None, reuse_dirs=(DEFAULT_RE
     temporary_row_path.write_bytes(row_raw)
     temporary_row_path.replace(row_path)
     audit = aggregate_audits(game_results, all_rows)
-    audit.update(schedule_days_requested=14, schedule_days_received=len(schedules), failures=failures,
-                 collection_complete=(len(schedules) == 14 and lookup is not None and bool(games)
+    audit.update(schedule_days_requested=len(days), schedule_days_received=len(schedules), failures=failures,
+                 collection_complete=(len(schedules) == len(days) and lookup is not None and bool(games)
                                       and len(game_results) == len(games) and not failures), **selection)
-    manifest = dict(protocol="coach_hypotheses/pitch_quality/CONDITIONAL_PROTOCOL.md",
-                    interval=[START_DATE.isoformat(), END_DATE.isoformat()], max_workers=workers,
+    manifest = dict(protocol=protocol,
+                    interval=[start.isoformat(), end.isoformat()], max_workers=workers,
                     maximum_additional_retries=retries, selection="all_Final_R_officialDate_in_interval_deduplicated_gamePk",
                     source_format="official_mlb_json_not_csv", sources=sorted(source_records, key=lambda x: x["url"]),
                     games=[dict(**g["game"], provenance=g["provenance"], failure=g["failure"]) for g in game_results],
-                    pitch_level_export=dict(relative_path="artifacts/mlb_quality_games/parsed_pitches.json",
+                    pitch_level_export=dict(relative_path=export_relative_path,
                                             bytes=len(row_raw), rows=len(all_rows), sha256=hashlib.sha256(row_raw).hexdigest()),
                     generated_at_utc=datetime.now(timezone.utc).isoformat(), raw_redeployment_license_assumed=False,
                     prior_csv_access_failures_unchanged=True, body_to_spin_ready=False, relationships_computed=False)
