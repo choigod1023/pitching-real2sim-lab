@@ -1,0 +1,175 @@
+{
+  "protocol_commit": "59ae41da8c5f605689a87f4e81a017240539ba38",
+  "code_sha256": "a8bf487d3f53f905b323cb0fecf01e0dec3efe213de7b5a5bf47b4e2d698c90e",
+  "protocol_sha256": "0d61a366ad00651b85fb4582c3528ba93f4b55b021e89cb99d7210097f176966",
+  "train_sha256": "a0281af982076904b8d518b0836a4c02a61f18349317a0b0f9e99647b050f617",
+  "validation_sha256": "b7d72da9a168d50fafe1a667500ec8df2ae3d40d4db5278d1d88c209622fcd15",
+  "selected_lambda": 10,
+  "candidates": {
+    "1": {
+      "metrics": {
+        "global_mean": {
+          "brier": 0.1571517549167679,
+          "log_loss": 0.4938839269416463
+        },
+        "pitcher_mean": {
+          "brier": 0.15680375571631838,
+          "log_loss": 0.49305091496442577
+        },
+        "GB0": {
+          "brier": 0.13695288932439947,
+          "log_loss": 0.4366742809121361
+        }
+      },
+      "fits": [
+        {
+          "model": "GB0",
+          "lambda_": 1,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "iterations": 588,
+          "max_abs_gradient": 0.028033496670482605,
+          "n_parameters": 1116,
+          "train_rows": 25636,
+          "train_misses_or_swings": 4765,
+          "zero_within_sd_features": 0,
+          "within_sd_percentiles": [
+            0.000799469281348758,
+            0.01684100298026043,
+            0.47165973296981173
+          ],
+          "coefficient_norm": 17.700194113811897,
+          "fit_audit_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\temporal-pitch-quality-20261030\\artifacts\\temporal_quality\\selection\\1\\strict_SW_GB0_1.json",
+          "fit_audit_sha256": "5d3eefa596274d43814dcfb89006ddbf46d1d513bdebd20eeb0c2f3f6ec0ed06"
+        }
+      ],
+      "audit": {
+        "test_before_eligibility": 8633,
+        "test_after_eligibility": 7271,
+        "excluded_unseen_or_sparse": 1362,
+        "pitchers": 284,
+        "train_rows": 25636,
+        "train_games": 575,
+        "test_games": 188,
+        "unseen_batter_rows": 154
+      },
+      "clipped_inputs": {
+        "GB0": {
+          "startSpeed": {
+            "below": 0,
+            "above": 0,
+            "training_min": 83.1,
+            "training_max": 104.1
+          },
+          "pX": {
+            "below": 0,
+            "above": 0,
+            "training_min": -1.9381958098522813,
+            "training_max": 1.9893850011154994
+          },
+          "pZ": {
+            "below": 0,
+            "above": 0,
+            "training_min": 0.3721060102744514,
+            "training_max": 4.825799020968835
+          }
+        }
+      }
+    },
+    "10": {
+      "metrics": {
+        "global_mean": {
+          "brier": 0.1571517549167679,
+          "log_loss": 0.4938839269416463
+        },
+        "pitcher_mean": {
+          "brier": 0.15680375571631838,
+          "log_loss": 0.49305091496442577
+        },
+        "GB0": {
+          "brier": 0.13681681222948303,
+          "log_loss": 0.43613941733582967
+        }
+      },
+      "fits": [
+        {
+          "model": "GB0",
+          "lambda_": 10,
+          "success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "iterations": 589,
+          "max_abs_gradient": 0.0910085812032358,
+          "n_parameters": 1116,
+          "train_rows": 25636,
+          "train_misses_or_swings": 4765,
+          "zero_within_sd_features": 0,
+          "within_sd_percentiles": [
+            0.000799469281348758,
+            0.01684100298026043,
+            0.47165973296981173
+          ],
+          "coefficient_norm": 17.630298939188204,
+          "fit_audit_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\temporal-pitch-quality-20261030\\artifacts\\temporal_quality\\selection\\10\\strict_SW_GB0_10.json",
+          "fit_audit_sha256": "bf660c3a35f479c1b0a4829defeffba7cd99e1c77365acd510af0eea8694c0fd"
+        }
+      ],
+      "audit": {
+        "test_before_eligibility": 8633,
+        "test_after_eligibility": 7271,
+        "excluded_unseen_or_sparse": 1362,
+        "pitchers": 284,
+        "train_rows": 25636,
+        "train_games": 575,
+        "test_games": 188,
+        "unseen_batter_rows": 154
+      },
+      "clipped_inputs": {
+        "GB0": {
+          "startSpeed": {
+            "below": 0,
+            "above": 0,
+            "training_min": 83.1,
+            "training_max": 104.1
+          },
+          "pX": {
+            "below": 0,
+            "above": 0,
+            "training_min": -1.9381958098522813,
+            "training_max": 1.9893850011154994
+          },
+          "pZ": {
+            "below": 0,
+            "above": 0,
+            "training_min": 0.3721060102744514,
+            "training_max": 4.825799020968835
+          }
+        }
+      }
+    }
+  },
+  "file_audits": [
+    {
+      "raw": 167532,
+      "selected_nonbunt_FF": 52063,
+      "exclusions": {
+        "not_FF": 114958,
+        "bunt": 99,
+        "identity_uncertain": 20,
+        "missing_numeric": 392
+      }
+    },
+    {
+      "raw": 54720,
+      "selected_nonbunt_FF": 17299,
+      "exclusions": {
+        "not_FF": 37369,
+        "bunt": 39,
+        "identity_uncertain": 11,
+        "missing_numeric": 2
+      }
+    }
+  ],
+  "all_selection_candidates_converged": true,
+  "final_test_opened": false,
+  "selection_target": "strict_SW"
+}
