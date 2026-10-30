@@ -1,0 +1,13 @@
+{
+  "all_declared_trials_reported": true,
+  "original_speed_and_cost_arrays_reproduced": true,
+  "bounded_peak_limits_passed_all": true,
+  "paired_runs": 48,
+  "budget_pass": 0,
+  "pose_pass": 12,
+  "conditional_candidates": 0,
+  "maximum_gain_resolution_difference_kmh": 9.09120080905268e-06,
+  "empirical_effect_interval": null,
+  "source_sha256": "85ac33f74967e35101ea87aefa17d8cd2d7681585fcccea10f69912cf7e952c2",
+  "profiles_report_sha256": "bf90cd955afe8d529817fc3d02386a884f6b9962d6c7ac8e8415d6cae5e234e9"
+}
