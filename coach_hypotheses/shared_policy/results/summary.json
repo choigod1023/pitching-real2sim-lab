@@ -1,0 +1,129 @@
+{
+  "baseline_fallback": true,
+  "policy_evaluations": 93,
+  "paired_pitch_evaluations": 279,
+  "optimizer_messages": [
+    {
+      "start_index": 0,
+      "unique_policies": 13,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 1
+    },
+    {
+      "start_index": 1,
+      "unique_policies": 80,
+      "success": false,
+      "message": "80 distinct-policy evaluation limit; not an impossibility proof"
+    }
+  ],
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "role": "training",
+      "baseline_kmh": 113.46658197344723,
+      "candidate_kmh": 113.46658197344723,
+      "gain_kmh": 0.0,
+      "improvement_pass": false,
+      "C_pass": true,
+      "abstained": false,
+      "root_norm_change_n": 0.0,
+      "net_work_change_j": 0.0,
+      "independent_check": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 113.46658197344723,
+        "total_net_work_j": 303.90496326051726
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "role": "training",
+      "baseline_kmh": 115.56781650873835,
+      "candidate_kmh": 115.56781650873835,
+      "gain_kmh": 0.0,
+      "improvement_pass": false,
+      "C_pass": true,
+      "abstained": false,
+      "root_norm_change_n": 0.0,
+      "net_work_change_j": 0.0,
+      "independent_check": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.56781650873835,
+        "total_net_work_j": 326.2633571995555
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "role": "training",
+      "baseline_kmh": 114.16382840829402,
+      "candidate_kmh": 114.16382840829402,
+      "gain_kmh": 0.0,
+      "improvement_pass": false,
+      "C_pass": true,
+      "abstained": false,
+      "root_norm_change_n": 0.0,
+      "net_work_change_j": 0.0,
+      "independent_check": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 114.16382840829402,
+        "total_net_work_j": 320.91356547724683
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "role": "evaluation",
+      "baseline_kmh": 115.15938327296108,
+      "candidate_kmh": 115.15938327296108,
+      "gain_kmh": 0.0,
+      "improvement_pass": false,
+      "C_pass": true,
+      "abstained": true,
+      "root_norm_change_n": 0.0,
+      "net_work_change_j": 0.0,
+      "independent_check": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.15938327296108,
+        "total_net_work_j": 322.3648211171089
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "role": "evaluation",
+      "baseline_kmh": 110.02441764658575,
+      "candidate_kmh": 110.02441764658575,
+      "gain_kmh": 0.0,
+      "improvement_pass": false,
+      "C_pass": true,
+      "abstained": true,
+      "root_norm_change_n": 0.0,
+      "net_work_change_j": 0.0,
+      "independent_check": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 110.02441764658575,
+        "total_net_work_j": 310.3725568464233
+      }
+    }
+  ],
+  "unconstrained_best_min_training_gain_kmh": 0.010763015722119462,
+  "unconstrained_best_evaluation_id": 22,
+  "unconstrained_best_has_all_C_gates": false,
+  "archive": {
+    "raw_sha256": "c6c36688bd9fd50221386adbcf30b38c33452e02956fcd072b1069adb4561236",
+    "gzip_sha256": "f9bbc87bb8f40f3e2ba0ae512b1ea37a2e1f2ebba1e105f8d557d4c1064ac483",
+    "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\shared-pitch-policy-20261030\\artifacts\\shared-policy\\report.json"
+  },
+  "protocol_sha256": "32870ae0c12a9aa99ebbdb31aadb823bdf7ee6fefbbd7011f93da09560a99a6e",
+  "frozen_policy_sha256": "3540f374d1c37c0965a439c41af509777f317bd30e53d2653de97161277314a9",
+  "code_sha256": {
+    "study.py": "5804bbc7f08bb2af158d208a98c768c941388791c35a8b8260b514eb386de265",
+    "policy.py": "1f0087f9e3e8ffecd6d2a690412eb3bcc5d0f601dc894e8d5edbbb69bab98211"
+  },
+  "real_effect_verified": false,
+  "effect_95ci": null,
+  "independent_unseen_evaluation": false
+}
