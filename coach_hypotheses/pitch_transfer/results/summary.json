@@ -1,0 +1,1365 @@
+{
+  "rows": [
+    {
+      "pitch": "3034_1",
+      "method": "normalized",
+      "baseline_kmh": 113.46658197344723,
+      "candidate_kmh": 114.11394165371165,
+      "gain_kmh": 0.6473596802644153,
+      "transfer_pass": true,
+      "A_pass": true,
+      "pose_pass": true,
+      "violations": [],
+      "B_pass": false,
+      "net_work_change_j": 1.1246697402241352,
+      "root_force_norm_peak_change_n": 0.010508829637728923,
+      "positive_component_work_change_j": -1.074522899761348,
+      "negative_component_work_change_j": -2.19919263998608,
+      "rotation_deg": 1.6406449939626477,
+      "ball_position_mm": 5.831945010501174,
+      "direction_deg": 0.6016812126776988,
+      "resolution_gain_difference_kmh": 1.6041255435084167e-08,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 114.11394165371165,
+        "total_net_work_j": 305.0296330007414
+      }
+    },
+    {
+      "pitch": "3034_1",
+      "method": "absolute",
+      "baseline_kmh": 113.46658197344723,
+      "candidate_kmh": 114.11394165371163,
+      "gain_kmh": 0.647359680264401,
+      "transfer_pass": true,
+      "A_pass": true,
+      "pose_pass": true,
+      "violations": [],
+      "B_pass": false,
+      "net_work_change_j": 1.1246697402241352,
+      "root_force_norm_peak_change_n": 0.010508829637728923,
+      "positive_component_work_change_j": -1.074522899761348,
+      "negative_component_work_change_j": -2.19919263998608,
+      "rotation_deg": 1.6406449939626477,
+      "ball_position_mm": 5.831945010501249,
+      "direction_deg": 0.6016812126776988,
+      "resolution_gain_difference_kmh": 1.604115595910116e-08,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 114.11394165371163,
+        "total_net_work_j": 305.0296330007414
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "method": "normalized",
+      "baseline_kmh": 115.56781650873835,
+      "candidate_kmh": 116.32622404699778,
+      "gain_kmh": 0.7584075382594335,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.09720270930728248
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.12900388015239628
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.6464900150289878
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.07892005954023151
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.06444609165832138
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.8567582756249692
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 1.9473596900636494,
+      "root_force_norm_peak_change_n": -1.087863327238665,
+      "positive_component_work_change_j": -0.6592584726308246,
+      "negative_component_work_change_j": -2.606618162694275,
+      "rotation_deg": 2.262342856150676,
+      "ball_position_mm": 7.365968824108271,
+      "direction_deg": 0.7817177684512928,
+      "resolution_gain_difference_kmh": 5.3841105795982e-08,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 116.32622404699778,
+        "total_net_work_j": 328.21071688961916
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "method": "absolute",
+      "baseline_kmh": 115.56781650873835,
+      "candidate_kmh": 116.25403279566177,
+      "gain_kmh": 0.6862162869234254,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.012652861651616831
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.7041587120114912
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 6,
+          "excess": 0.03833741217109221
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.12710582560759554
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.022393650078692984
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.5451688159502055
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 1.5500910668383199,
+      "root_force_norm_peak_change_n": -0.5472125037154001,
+      "positive_component_work_change_j": -0.6339541015150871,
+      "negative_component_work_change_j": -2.184045168353009,
+      "rotation_deg": 2.1122184617635598,
+      "ball_position_mm": 6.569929094832135,
+      "direction_deg": 0.6991922819545346,
+      "resolution_gain_difference_kmh": 3.435487911929158e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 116.25403279566177,
+        "total_net_work_j": 327.81344826639383
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "method": "normalized",
+      "baseline_kmh": 114.16382840829402,
+      "candidate_kmh": 114.76008197145696,
+      "gain_kmh": 0.5962535631629322,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.11787636493769327
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.12433406302393735
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.33891114875718786
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.0012268140751916547
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 1,
+          "excess": 0.0003824470090769694
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.2849242960629832
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.6407284699712932
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 1.2666760433889408,
+      "root_force_norm_peak_change_n": -0.0015832404419597879,
+      "positive_component_work_change_j": -0.8736009388591697,
+      "negative_component_work_change_j": -2.1402769822483947,
+      "rotation_deg": 4.397595741010044,
+      "ball_position_mm": 6.772883890085925,
+      "direction_deg": 0.67441042875955,
+      "resolution_gain_difference_kmh": 5.1835229442076525e-08,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 114.76008197145696,
+        "total_net_work_j": 322.1802415206358
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "method": "absolute",
+      "baseline_kmh": 114.16382840829402,
+      "candidate_kmh": 114.64759029780333,
+      "gain_kmh": 0.4837618895093101,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.010285797395468421
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.34545463704925794
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 6,
+          "excess": 0.03357461474442047
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.0007294667454735317
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.0875191194966014
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.040928843677804916
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.41693152951188495
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 0.9706782475465161,
+      "root_force_norm_peak_change_n": -0.00277170452250175,
+      "positive_component_work_change_j": -0.9649369863603852,
+      "negative_component_work_change_j": -1.9356152339067876,
+      "rotation_deg": 2.383581961338199,
+      "ball_position_mm": 5.669925913685475,
+      "direction_deg": 0.5415556676334289,
+      "resolution_gain_difference_kmh": 5.896451398257341e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 114.64759029780333,
+        "total_net_work_j": 321.88424372479335
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "method": "normalized",
+      "baseline_kmh": 115.15938327296108,
+      "candidate_kmh": 115.91457366428479,
+      "gain_kmh": 0.7551903913237084,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.12920815714873868
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 1.1650018083601736
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.0032434626786561616
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.12321832067072958
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.11240623011139395
+        },
+        {
+          "metric": "shoulder_translation_net_work_j",
+          "excess": 0.0584382436602624
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.6888102584609612
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 2.241898557257855,
+      "root_force_norm_peak_change_n": -0.9354532336224111,
+      "positive_component_work_change_j": -0.34753292450363915,
+      "negative_component_work_change_j": -2.5894314817613235,
+      "rotation_deg": 2.079865798833126,
+      "ball_position_mm": 8.745649604142304,
+      "direction_deg": 0.9822229707773176,
+      "resolution_gain_difference_kmh": 4.841895986373856e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.91457366428479,
+        "total_net_work_j": 324.60671967436673
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "method": "absolute",
+      "baseline_kmh": 115.15938327296108,
+      "candidate_kmh": 115.77598487985153,
+      "gain_kmh": 0.6166016068904554,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.019559115712098674
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.6415558006496269
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 6,
+          "excess": 0.09842238184401353
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.1623067820334072
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.08056658150493201
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.3612853025843208
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 1.3876092854504805,
+      "root_force_norm_peak_change_n": -0.686771652586458,
+      "positive_component_work_change_j": -0.8931271093820783,
+      "negative_component_work_change_j": -2.2807363948321893,
+      "rotation_deg": 3.3136759362784254,
+      "ball_position_mm": 6.547525344360978,
+      "direction_deg": 0.6892705149064633,
+      "resolution_gain_difference_kmh": 8.578488177590771e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.77598487985153,
+        "total_net_work_j": 323.75243040255936
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "method": "normalized",
+      "baseline_kmh": 110.02441764658575,
+      "candidate_kmh": 110.66090311865626,
+      "gain_kmh": 0.6364854720705182,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.16389295389305403
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.16006642097936918
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 1.0322709928592388
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 6,
+          "excess": 0.020999955097742884
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.11800587177033961
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.00413895868024533
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.0032833045018332285
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.28291453599613625
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.013985614343795527
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.463487388407799
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 1.9459941520067332,
+      "root_force_norm_peak_change_n": -0.8313087081269259,
+      "positive_component_work_change_j": -0.2529301888600912,
+      "negative_component_work_change_j": -2.198924340866739,
+      "rotation_deg": 2.355521858128925,
+      "ball_position_mm": 6.924204909665596,
+      "direction_deg": 0.7538515487058041,
+      "resolution_gain_difference_kmh": 1.2193751786071516e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 110.66090311865626,
+        "total_net_work_j": 312.31855099843006
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "method": "absolute",
+      "baseline_kmh": 110.02441764658575,
+      "candidate_kmh": 110.53068568641211,
+      "gain_kmh": 0.5062680398263666,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 0,
+          "excess": 0.02860632989003875
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.29596762924020936
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.0013669203982399625
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.06278227745375364
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.02221602475296558
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.17951646402394772
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 0.9931433967357179,
+      "root_force_norm_peak_change_n": -0.2104991801872984,
+      "positive_component_work_change_j": -1.1439046584919197,
+      "negative_component_work_change_j": -2.1370480552272397,
+      "rotation_deg": 1.6943677680596918,
+      "ball_position_mm": 5.258791093656925,
+      "direction_deg": 0.4741834037542742,
+      "resolution_gain_difference_kmh": 2.9698554726564907e-08,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 110.53068568641211,
+        "total_net_work_j": 311.36570024315904
+      }
+    },
+    {
+      "pitch": "2996_1",
+      "method": "normalized",
+      "baseline_kmh": 120.2036211675774,
+      "candidate_kmh": 122.08166107712499,
+      "gain_kmh": 1.8780399095475957,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.3342837240313017
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 8.03037241275004
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 6,
+          "excess": 0.426651714303679
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 0,
+          "excess": 0.11451574099334216
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.1087482355989895
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 3,
+          "excess": 4.691804711927588
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 4,
+          "excess": 0.0075070136906253415
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 1.5383921774950977
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 6.323477076044355,
+      "root_force_norm_peak_change_n": -0.6016376320083054,
+      "positive_component_work_change_j": 5.961932447600816,
+      "negative_component_work_change_j": -0.36154462844345403,
+      "rotation_deg": 6.095246030237697,
+      "ball_position_mm": 18.048663082268813,
+      "direction_deg": 2.5405988837950244,
+      "resolution_gain_difference_kmh": 2.8857015763605887e-06,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 122.08166107712499,
+        "total_net_work_j": 403.8318135680503
+      }
+    },
+    {
+      "pitch": "2996_1",
+      "method": "absolute",
+      "baseline_kmh": 120.2036211675774,
+      "candidate_kmh": 120.92269626707707,
+      "gain_kmh": 0.7190750994996762,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": true,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.13163855017750592
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 4,
+          "excess": 0.07375691606610246
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.3785541457357908
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.39303153793049717
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.0012882288292485056
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 5,
+          "excess": 0.05748984877779151
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 6,
+          "excess": 0.4725630194349293
+        },
+        {
+          "metric": "shoulder_translation_net_work_j",
+          "excess": 0.17291712840591345
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 0.4763352338133586,
+      "root_force_norm_peak_change_n": -0.23241910512683717,
+      "positive_component_work_change_j": -0.3315891764945036,
+      "negative_component_work_change_j": -0.8079244103079475,
+      "rotation_deg": 2.6896541499862607,
+      "ball_position_mm": 5.761880124957523,
+      "direction_deg": 0.5948086542601619,
+      "resolution_gain_difference_kmh": 1.6439713590443716e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 120.92269626707707,
+        "total_net_work_j": 397.9846717258193
+      }
+    },
+    {
+      "pitch": "2996_2",
+      "method": "normalized",
+      "baseline_kmh": 114.49674907119392,
+      "candidate_kmh": 116.56491221365488,
+      "gain_kmh": 2.0681631424609606,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.14645127942603864
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 6.72957060523504
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 6,
+          "excess": 0.9401200640731044
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.008939767787978503
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 9,
+          "excess": 0.00225693257137638
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.04100719766169619
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 0,
+          "excess": 0.12394486941918004
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 3,
+          "excess": 4.893053041866466
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 4,
+          "excess": 0.030309759792158664
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.22247289272627047
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 9,
+          "excess": 0.009466598168727303
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 4.83107288014304,
+      "root_force_norm_peak_change_n": -0.0041839824928047165,
+      "positive_component_work_change_j": 3.9735950427249236,
+      "negative_component_work_change_j": -0.8574778374182301,
+      "rotation_deg": 7.31282086617932,
+      "ball_position_mm": 17.96935531328014,
+      "direction_deg": 2.519354961369161,
+      "resolution_gain_difference_kmh": 4.796948374519161e-06,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 116.56491221365488,
+        "total_net_work_j": 380.6900996705207
+      }
+    },
+    {
+      "pitch": "2996_2",
+      "method": "absolute",
+      "baseline_kmh": 114.49674907119392,
+      "candidate_kmh": 115.34330815428635,
+      "gain_kmh": 0.8465590830924299,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 1,
+          "excess": 0.04200217209502455
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 4,
+          "excess": 0.030859399387011877
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 5,
+          "excess": 0.04014028966355454
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.18222013473464216
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.0018225535127661119
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 5,
+          "excess": 0.05110099727382078
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 6,
+          "excess": 0.8470745388915191
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.42948477700226384
+        },
+        {
+          "metric": "shoulder_translation_net_work_j",
+          "excess": 0.09827426776590187
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": -0.25863771688830184,
+      "root_force_norm_peak_change_n": -0.003658515382312544,
+      "positive_component_work_change_j": -1.2543643437098808,
+      "negative_component_work_change_j": -0.9957266268221474,
+      "rotation_deg": 3.046353283097797,
+      "ball_position_mm": 5.632345655945683,
+      "direction_deg": 0.529922966334635,
+      "resolution_gain_difference_kmh": 4.5528956604812265e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.34330815428635,
+        "total_net_work_j": 375.60038907348934
+      }
+    },
+    {
+      "pitch": "3044_1",
+      "method": "normalized",
+      "baseline_kmh": 116.62748565289691,
+      "candidate_kmh": 117.12467251698448,
+      "gain_kmh": 0.49718686408756696,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 2,
+          "excess": 0.4063842721410804
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 4,
+          "excess": 2.3790272623930235
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.1832257407000928
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.0841076800917463
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 6,
+          "excess": 1.0679402591213005
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.09094687011623948
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 1.083699901390105
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": -0.7827653975062958,
+      "root_force_norm_peak_change_n": -0.00364262159109785,
+      "positive_component_work_change_j": -1.718342473420762,
+      "negative_component_work_change_j": -0.9355770759153188,
+      "rotation_deg": 6.794355861072845,
+      "ball_position_mm": 5.422307608559806,
+      "direction_deg": 0.15632548782292732,
+      "resolution_gain_difference_kmh": 4.949892229433317e-08,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 117.12467251698448,
+        "total_net_work_j": 383.3904343157639
+      }
+    },
+    {
+      "pitch": "3044_1",
+      "method": "absolute",
+      "baseline_kmh": 116.62748565289691,
+      "candidate_kmh": 117.23205237564521,
+      "gain_kmh": 0.6045667227483023,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 2,
+          "excess": 0.19610621233797687
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 4,
+          "excess": 1.3065422104110098
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.0017164897914097588
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 9,
+          "excess": 0.009342749766162672
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.08356884006186915
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.02035156223662149
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 3,
+          "excess": 0.01997313501643827
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 5,
+          "excess": 0.011300964051329743
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 6,
+          "excess": 0.3407696403365108
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.11691285876144153
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.6237105796459446
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 0.0893521459437352,
+      "root_force_norm_peak_change_n": -0.00265440430871422,
+      "positive_component_work_change_j": -0.7770682825986341,
+      "negative_component_work_change_j": -0.8664204285430515,
+      "rotation_deg": 5.815537333363116,
+      "ball_position_mm": 4.678802810340899,
+      "direction_deg": 0.29391887234027614,
+      "resolution_gain_difference_kmh": 6.049934029306314e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 117.23205237564521,
+        "total_net_work_j": 384.26255185921394
+      }
+    },
+    {
+      "pitch": "3044_2",
+      "method": "normalized",
+      "baseline_kmh": 116.77377846938344,
+      "candidate_kmh": 117.2272595637694,
+      "gain_kmh": 0.45348109438594975,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 2,
+          "excess": 0.7206744115957875
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 4,
+          "excess": 2.761813594265206
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 7,
+          "excess": 0.16389818055893768
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 9,
+          "excess": 0.015483095592836005
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.11461446925293894
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 3,
+          "excess": 0.15794358490775728
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 5,
+          "excess": 0.16505019679777888
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 6,
+          "excess": 1.9048296194682806
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.15346017446741111
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": -1.655660969611347,
+      "root_force_norm_peak_change_n": 0.04012438569770893,
+      "positive_component_work_change_j": -1.4850423144381466,
+      "negative_component_work_change_j": 0.17061865517351293,
+      "rotation_deg": 6.6865100593530515,
+      "ball_position_mm": 4.311357465027735,
+      "direction_deg": 0.1545287227213628,
+      "resolution_gain_difference_kmh": 1.6132798918988556e-07,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 117.2272595637694,
+        "total_net_work_j": 362.8246133559197
+      }
+    },
+    {
+      "pitch": "3044_2",
+      "method": "absolute",
+      "baseline_kmh": 116.77377846938344,
+      "candidate_kmh": 117.56450917423105,
+      "gain_kmh": 0.7907307048476042,
+      "transfer_pass": false,
+      "A_pass": false,
+      "pose_pass": false,
+      "violations": [
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 2,
+          "excess": 0.398124030595401
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 4,
+          "excess": 1.3944416685114618
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 8,
+          "excess": 0.002918993628843569
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 9,
+          "excess": 0.018985979270136788
+        },
+        {
+          "metric": "positive_work_per_dof_j",
+          "dof": 10,
+          "excess": 0.08389305721720608
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 2,
+          "excess": 0.007418414400665263
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 3,
+          "excess": 0.12999826268969628
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 5,
+          "excess": 0.017141794178414216
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 6,
+          "excess": 0.3384870143606946
+        },
+        {
+          "metric": "negative_work_magnitude_per_dof_j",
+          "dof": 7,
+          "excess": 0.16587489940415412
+        },
+        {
+          "metric": "shoulder_translation_net_work_j",
+          "excess": 0.25529472018601496
+        },
+        {
+          "metric": "shoulder_rotation_net_work_j",
+          "excess": 0.4364026577431446
+        }
+      ],
+      "B_pass": false,
+      "net_work_change_j": 0.600396999524321,
+      "root_force_norm_peak_change_n": 0.030457533192929986,
+      "positive_component_work_change_j": -0.4360495673680589,
+      "negative_component_work_change_j": -1.0364465668922094,
+      "rotation_deg": 8.151445305517132,
+      "ball_position_mm": 4.971125703374939,
+      "direction_deg": 0.36493555171788644,
+      "resolution_gain_difference_kmh": 1.0189691295181547e-06,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 117.56450917423105,
+        "total_net_work_j": 365.0806713250554
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "method": "refit",
+      "baseline_kmh": 115.56781650873835,
+      "candidate_kmh": 115.56781650873835,
+      "gain_kmh": 0.0,
+      "transfer_pass": false,
+      "A_pass": true,
+      "pose_pass": true,
+      "violations": [],
+      "B_pass": true,
+      "net_work_change_j": 0.0,
+      "root_force_norm_peak_change_n": 0.0,
+      "positive_component_work_change_j": 0.0,
+      "negative_component_work_change_j": 0.0,
+      "rotation_deg": 4.49798356639495e-15,
+      "ball_position_mm": 0.0,
+      "direction_deg": 0.0,
+      "resolution_gain_difference_kmh": 0.0,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.56781650873835,
+        "total_net_work_j": 326.2633571995555
+      },
+      "paired_evaluations": 240,
+      "optimizer_messages": [
+        {
+          "start_index": 0,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        },
+        {
+          "start_index": 1,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        }
+      ],
+      "baseline_fallback": true
+    },
+    {
+      "pitch": "3034_3",
+      "method": "refit",
+      "baseline_kmh": 114.16382840829402,
+      "candidate_kmh": 114.16382840829402,
+      "gain_kmh": 0.0,
+      "transfer_pass": false,
+      "A_pass": true,
+      "pose_pass": true,
+      "violations": [],
+      "B_pass": true,
+      "net_work_change_j": 0.0,
+      "root_force_norm_peak_change_n": 0.0,
+      "positive_component_work_change_j": 0.0,
+      "negative_component_work_change_j": 0.0,
+      "rotation_deg": 4.497983566394945e-15,
+      "ball_position_mm": 0.0,
+      "direction_deg": 0.0,
+      "resolution_gain_difference_kmh": 0.0,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 114.16382840829402,
+        "total_net_work_j": 320.91356547724683
+      },
+      "paired_evaluations": 240,
+      "optimizer_messages": [
+        {
+          "start_index": 0,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        },
+        {
+          "start_index": 1,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        }
+      ],
+      "baseline_fallback": true
+    },
+    {
+      "pitch": "3034_4",
+      "method": "refit",
+      "baseline_kmh": 115.15938327296108,
+      "candidate_kmh": 115.15938327296108,
+      "gain_kmh": 0.0,
+      "transfer_pass": false,
+      "A_pass": true,
+      "pose_pass": true,
+      "violations": [],
+      "B_pass": true,
+      "net_work_change_j": 0.0,
+      "root_force_norm_peak_change_n": 0.0,
+      "positive_component_work_change_j": 0.0,
+      "negative_component_work_change_j": 0.0,
+      "rotation_deg": 4.4979835663949474e-15,
+      "ball_position_mm": 0.0,
+      "direction_deg": 8.537736462515939e-07,
+      "resolution_gain_difference_kmh": 0.0,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 115.15938327296108,
+        "total_net_work_j": 322.3648211171089
+      },
+      "paired_evaluations": 240,
+      "optimizer_messages": [
+        {
+          "start_index": 0,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        },
+        {
+          "start_index": 1,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        }
+      ],
+      "baseline_fallback": true
+    },
+    {
+      "pitch": "3034_5",
+      "method": "refit",
+      "baseline_kmh": 110.02441764658575,
+      "candidate_kmh": 110.02441764658575,
+      "gain_kmh": 0.0,
+      "transfer_pass": false,
+      "A_pass": true,
+      "pose_pass": true,
+      "violations": [],
+      "B_pass": true,
+      "net_work_change_j": 0.0,
+      "root_force_norm_peak_change_n": 0.0,
+      "positive_component_work_change_j": 0.0,
+      "negative_component_work_change_j": 0.0,
+      "rotation_deg": 7.111936473907619e-15,
+      "ball_position_mm": 0.0,
+      "direction_deg": 0.0,
+      "resolution_gain_difference_kmh": 0.0,
+      "verified": {
+        "bitwise_replay_pass": true,
+        "accounting_pass": true,
+        "speed_kmh": 110.02441764658575,
+        "total_net_work_j": 310.3725568464233
+      },
+      "paired_evaluations": 240,
+      "optimizer_messages": [
+        {
+          "start_index": 0,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        },
+        {
+          "start_index": 1,
+          "pairs": 120,
+          "success": false,
+          "message": "120 paired-evaluation limit reached; not an impossibility proof"
+        }
+      ],
+      "baseline_fallback": true
+    }
+  ],
+  "frozen_transfer_counts": {
+    "same_athlete": {
+      "normalized": {
+        "passed": 0,
+        "denominator": 4
+      },
+      "absolute": {
+        "passed": 0,
+        "denominator": 4
+      }
+    },
+    "other_athletes": {
+      "normalized": {
+        "passed": 0,
+        "denominator": 4
+      },
+      "absolute": {
+        "passed": 0,
+        "denominator": 4
+      }
+    }
+  },
+  "video_candidate": null,
+  "same_athlete_refit_count": 4,
+  "real_effect_verified": false,
+  "effect_95ci": null,
+  "independent_external_validation": false,
+  "scope": "Model-conditional applied-input feasibility; not an anatomical coaching prescription or counterfactual accuracy validation.",
+  "archives": {
+    "3034_1": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3034_1\\report.json",
+      "raw_sha256": "35b31c10ce65c005bac9580db2d3d9a9e6344ff28d2c04058218e0aa8ccadbf7",
+      "gzip_sha256": "03432ae58d14cc1ddce0c75f37e83f8c8480160cafa7b8713db61e86ff5b07d3"
+    },
+    "3034_2": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3034_2\\report.json",
+      "raw_sha256": "195877977406817c6fa36d3e155fd47652cfb1f477e602125f1bc5401c5af591",
+      "gzip_sha256": "dc9cfaa742da7b8456bc1094e77b3750c5ac7fcf619b8434cc5dff2cb6f449af"
+    },
+    "3034_3": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3034_3\\report.json",
+      "raw_sha256": "578b2c8d664bcaece6aa9a8c203e8bb1899c8911a33606077896bf8e3bbf383a",
+      "gzip_sha256": "3802c5126edf54f2d79623e4e9f33b29bf745bba48b37c5a246b0800e3557fa5"
+    },
+    "3034_4": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3034_4\\report.json",
+      "raw_sha256": "50bdf38b8a83d3fdfab689aa48b68a8f69c658ddba77a162c9b8b6fe557c4305",
+      "gzip_sha256": "8dd93e74b43e445809e2f53e7afd0190fa5c27f9af5322c38ffd9daac44b8220"
+    },
+    "3034_5": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3034_5\\report.json",
+      "raw_sha256": "d7c44dd9b2b7c660260b32b61f653c11818e2a99f88ba025e2cbcad072f46c79",
+      "gzip_sha256": "ea689b2a8776e10b988b0fb83f61cc5c0a8b36ac4ac47bcc3ab1ea2c7ba7fcf6"
+    },
+    "2996_1": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\2996_1\\report.json",
+      "raw_sha256": "827fe1145350a78e9f21ab0b18271b3ebe5bfba6fd0147eefd50efcbed0d0658",
+      "gzip_sha256": "d472479a82caffcb7e48d779c667c83f6a5ff04807eb7f514c06c0c18cda488b"
+    },
+    "2996_2": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\2996_2\\report.json",
+      "raw_sha256": "032f07ba4b12eebc65a8748748f6cfc0febbeec94f7f8fbf0836c02d5361591c",
+      "gzip_sha256": "898d3ee4f169f5c0f827c092da3c0dd80598f66047bfb35a0cbc5e4bd548678d"
+    },
+    "3044_1": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3044_1\\report.json",
+      "raw_sha256": "52c0827108bf4a798680d7b2199f0b39c81703c979c0c120e7739827a78bce70",
+      "gzip_sha256": "6d59f2d4af99a800ffcbff59fab3ed30a06d736238d00ec27f85ed9a0d3b2550"
+    },
+    "3044_2": {
+      "original_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\pitch-transfer-validation-20261030\\artifacts\\pitch-transfer\\3044_2\\report.json",
+      "raw_sha256": "076e64c74d7c90da045d44e1473f2184d050d5cf4a4a950c42485dd2340c6ee6",
+      "gzip_sha256": "37ef1fe986ae584a9a4c88b0b23eccacd636ba8d2d406486572c511268a2711f"
+    }
+  }
+}
