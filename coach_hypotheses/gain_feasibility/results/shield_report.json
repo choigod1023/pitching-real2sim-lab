@@ -1,0 +1,929 @@
+{
+  "pitch": "3034_1",
+  "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\grip-identifiability\\artifacts\\grip-identifiability\\fine-reference\\reference-0.npz",
+  "source_sha256": "85ac33f74967e35101ea87aefa17d8cd2d7681585fcccea10f69912cf7e952c2",
+  "reference_report": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\gain-feasibility-20261030\\artifacts\\gain-feasibility\\report.json",
+  "reference_report_sha256": "bf90cd955afe8d529817fc3d02386a884f6b9962d6c7ac8e8415d6cae5e234e9",
+  "protocol_sha256": "64989f475b5d93e6d7df1865b0baf57d9f52c86bdff5310426ee68b36ac96e32",
+  "code_sha256": "aa8da3ea0b6d81ef641ca00143aa7849ee52605e5a42052bd7a9b8f3b1b19365",
+  "scope": "All generalized applied inputs may decrease; gravity retained; per-DOF work protection only. Distinct from fixed shoulder/elbow/marker-roll inputs.",
+  "baseline": {
+    "1": {
+      "speed_kmh": 113.46658063527904,
+      "positive_work_per_dof_j": [
+        106.52208357274756,
+        32.39679565607139,
+        9.682419556932597,
+        97.93935808837416,
+        97.52635710151164,
+        78.0529226089387,
+        25.62742237951555,
+        3.706037710334415,
+        0.04367914868115876,
+        2.5601419394644633,
+        0.25867074077631136
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        28.691075175811495,
+        6.37097446250162,
+        7.097826283634232,
+        5.997214388987293,
+        2.3055024366218215,
+        49.54187943868793,
+        38.20904265669594,
+        0.9195964507099483,
+        0.13436684054110498,
+        5.888439725536166,
+        5.254791834082702
+      ],
+      "net_work_per_dof_j": [
+        77.83100839693606,
+        26.02582119356974,
+        2.5845932732983816,
+        91.94214369938693,
+        95.22085466488991,
+        28.51104317025076,
+        -12.581620277180368,
+        2.786441259624465,
+        -0.09068769185994631,
+        -3.3282977860717087,
+        -4.99612109330639
+      ],
+      "total_positive_component_work_j": 454.315888503348,
+      "total_negative_component_work_magnitude_j": 150.41070969381025,
+      "total_net_work_j": 303.90517880953786,
+      "shoulder_translation_net_work_j": 106.44142286380418,
+      "shoulder_rotation_net_work_j": 215.67404153452762,
+      "shoulder_translation_positive_component_work_j": 148.60129878575154,
+      "shoulder_rotation_positive_component_work_j": 273.5186377988245,
+      "peak_abs_generalized_force_per_dof": [
+        434.50606214902433,
+        1293.5291999502,
+        885.3709228764098,
+        219.53580758437113,
+        300.72564030037347,
+        139.9445201505817,
+        95.55671402027156,
+        12.606981974144773,
+        0.7184230475087554,
+        21.189769565057077,
+        27.20316594386057
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 374.2663683573654,
+        "elbow": 95.55671402027156,
+        "marker_roll": 12.606981974144773,
+        "wrist_marker_rotation": 32.93580299687109
+      },
+      "mechanical_energy_change_j": 303.90477523295215,
+      "energy_change_minus_applied_work_j": -0.00040357658571110733,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 8.678278688534213e-05,
+      "substeps": 1,
+      "virtual_trial_count": 1952,
+      "virtual_retry_count": 0,
+      "suppressed_substeps": 0,
+      "zero_force_substeps": 0,
+      "max_positive_budget_excess_j": 0.0,
+      "max_negative_budget_excess_j": 0.0
+    },
+    "2": {
+      "speed_kmh": 113.46658197344723,
+      "positive_work_per_dof_j": [
+        106.52199083653535,
+        32.39675351010729,
+        9.682438277365279,
+        97.93948850768403,
+        97.52653951956609,
+        78.05255685961075,
+        25.627407150778332,
+        3.706004370895753,
+        0.04367925519286371,
+        2.5601433831883016,
+        0.2587014056356871
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        28.69104505213383,
+        6.370949892734918,
+        7.0977076645680475,
+        5.997181649323068,
+        2.30554097577393,
+        49.541855229932146,
+        38.209296158061576,
+        0.9196262880105324,
+        0.13436386101988004,
+        5.888537000314824,
+        5.254636044169988
+      ],
+      "net_work_per_dof_j": [
+        77.83094578440172,
+        26.02580361737243,
+        2.584730612797233,
+        91.94230685836095,
+        95.2209985437922,
+        28.51070162967862,
+        -12.581889007283275,
+        2.7863780828852196,
+        -0.09068460582701647,
+        -3.3283936171265216,
+        -4.9959346385342975
+      ],
+      "total_positive_component_work_j": 454.3157030765597,
+      "total_negative_component_work_magnitude_j": 150.41073981604274,
+      "total_net_work_j": 303.90496326051726,
+      "shoulder_translation_net_work_j": 106.44148001457138,
+      "shoulder_rotation_net_work_j": 215.67400703183176,
+      "shoulder_translation_positive_component_work_j": 148.60118262400795,
+      "shoulder_rotation_positive_component_work_j": 273.5185848868608,
+      "peak_abs_generalized_force_per_dof": [
+        434.50606214902433,
+        1293.5291999502,
+        885.3709228764098,
+        219.53580758437113,
+        300.72564030037347,
+        139.9445201505817,
+        95.55671402027156,
+        12.606981974144773,
+        0.7184230475087554,
+        21.189769565057077,
+        27.20316594386057
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 374.2663683573654,
+        "elbow": 95.55671402027156,
+        "marker_roll": 12.606981974144773,
+        "wrist_marker_rotation": 32.93580299687109
+      },
+      "mechanical_energy_change_j": 303.9048623603976,
+      "energy_change_minus_applied_work_j": -0.00010090011966212842,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 4.339139344267107e-05,
+      "substeps": 2,
+      "virtual_trial_count": 3904,
+      "virtual_retry_count": 0,
+      "suppressed_substeps": 0,
+      "zero_force_substeps": 0,
+      "max_positive_budget_excess_j": 0.0,
+      "max_negative_budget_excess_j": 0.0
+    }
+  },
+  "baseline_checks": [
+    {
+      "substeps": 1,
+      "exact_original_states": true,
+      "virtual_retry_count": 0,
+      "budget_gate": {
+        "strict_model_budget_pass": true,
+        "violations": [],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      }
+    },
+    {
+      "substeps": 2,
+      "exact_original_states": true,
+      "virtual_retry_count": 0,
+      "budget_gate": {
+        "strict_model_budget_pass": true,
+        "violations": [],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      }
+    }
+  ],
+  "runs": [
+    {
+      "speed_kmh": 117.06318839178384,
+      "positive_work_per_dof_j": [
+        106.5218006931285,
+        25.254952758243057,
+        9.634547424330641,
+        97.93913859286481,
+        97.2740021476675,
+        71.86496245021561,
+        25.344701867094038,
+        2.8724159390655704,
+        0.04234047118037277,
+        2.558881637437279,
+        0.20975883126307363
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        19.731379727672152,
+        6.37097446250162,
+        7.040285003849472,
+        3.2002200168901984,
+        1.983070014547532,
+        48.75537140344029,
+        34.591973065173825,
+        0.9195964507099477,
+        0.051942744210111184,
+        3.983291167983996,
+        2.872760361343972
+      ],
+      "net_work_per_dof_j": [
+        86.79042096545629,
+        18.883978295741418,
+        2.594262420481172,
+        94.7389185759747,
+        95.29093213312001,
+        23.109591046775254,
+        -9.247271198079819,
+        1.9528194883556216,
+        -0.00960227302973841,
+        -1.4244095305467142,
+        -2.6630015300808996
+      ],
+      "total_positive_component_work_j": 439.51750281249036,
+      "total_negative_component_work_magnitude_j": 129.5008644183231,
+      "total_net_work_j": 310.0166383941673,
+      "shoulder_translation_net_work_j": 108.26866168167888,
+      "shoulder_rotation_net_work_j": 213.13944175586997,
+      "shoulder_translation_positive_component_work_j": 141.41130087570218,
+      "shoulder_rotation_positive_component_work_j": 267.0781031907479,
+      "peak_abs_generalized_force_per_dof": [
+        429.80757383725233,
+        1171.7856981008802,
+        581.3250680189994,
+        98.66924758249252,
+        164.53074810256402,
+        139.9445201505817,
+        86.29412798393253,
+        12.606981974144773,
+        0.5901279578361416,
+        18.594626999559004,
+        27.20316594386057
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 203.492682984729,
+        "elbow": 86.29412798393253,
+        "marker_roll": 12.606981974144773,
+        "wrist_marker_rotation": 32.93580299687109
+      },
+      "mechanical_energy_change_j": 310.0163222589697,
+      "energy_change_minus_applied_work_j": -0.0003161351975791149,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 8.678278688534213e-05,
+      "substeps": 1,
+      "virtual_trial_count": 4278,
+      "virtual_retry_count": 2326,
+      "suppressed_substeps": 65,
+      "zero_force_substeps": 47,
+      "max_positive_budget_excess_j": -0.00021949550935573825,
+      "max_negative_budget_excess_j": 0.0,
+      "max_rotation_change_deg": 12.190411092828988,
+      "rotation_change_by_joint_deg": {
+        "shoulder": 1.7795030242972234,
+        "elbow": 1.0153437199112259,
+        "marker_roll": 10.167940014358233,
+        "wrist_marker": 12.190411092828988
+      },
+      "max_ball_position_change_mm": 9.717656896900571,
+      "release_direction_change_deg": 5.902122153555961,
+      "max_shoulder_translation_change_mm": 6.152235003942007,
+      "endpoint_wrist_marker_rotation_change_deg": [
+        -9.31108125638323,
+        7.576682461395283,
+        2.1222090680189982
+      ],
+      "endpoint_wrist_marker_velocity_change_deg_s": [
+        398.5468766377244,
+        1620.0911355620983,
+        -427.9600047512204
+      ],
+      "pose_screen_pass": false,
+      "case": "cubic_in",
+      "window_ms": 30.0,
+      "alpha": 1.0,
+      "paired_gain_kmh": 3.5966077565047954,
+      "positive_component_work_change_j": -14.798385690857629,
+      "budget_gate": {
+        "strict_model_budget_pass": false,
+        "violations": [
+          {
+            "metric": "shoulder_translation_net_work_j",
+            "excess": 1.8272388178747008
+          }
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "initial_state_equal": true
+    },
+    {
+      "speed_kmh": 117.06330826623432,
+      "positive_work_per_dof_j": [
+        106.52170793487,
+        25.255260751485743,
+        9.634536623338464,
+        97.93926903083182,
+        97.27418429620508,
+        71.86503166960458,
+        25.34467086093087,
+        2.8723839416594625,
+        0.042340412412618406,
+        2.5588830682344925,
+        0.2097927357905223
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        19.731289877534152,
+        6.370949892734918,
+        7.040227030441519,
+        3.2002607461674115,
+        1.9830878089891624,
+        48.75534404138564,
+        34.592488153023815,
+        0.9196262880105291,
+        0.05194149767589781,
+        3.9832499223373525,
+        2.8725994581722434
+      ],
+      "net_work_per_dof_j": [
+        86.79041805733591,
+        18.884310858750833,
+        2.594309592896944,
+        94.73900828466446,
+        95.29109648721598,
+        23.10968762821894,
+        -9.247817292093,
+        1.9527576536489353,
+        -0.009601085263279487,
+        -1.42436685410286,
+        -2.6628067223817222
+      ],
+      "total_positive_component_work_j": 439.5180613253636,
+      "total_negative_component_work_magnitude_j": 129.50106471647263,
+      "total_net_work_j": 310.01699660889113,
+      "shoulder_translation_net_work_j": 108.2690385089837,
+      "shoulder_rotation_net_work_j": 213.1397924000994,
+      "shoulder_translation_positive_component_work_j": 141.4115053096942,
+      "shoulder_rotation_positive_component_work_j": 267.07848499664146,
+      "peak_abs_generalized_force_per_dof": [
+        429.80757383725233,
+        1171.7856981008802,
+        581.3250680189994,
+        98.66924758249252,
+        164.53074810256402,
+        139.9445201505817,
+        86.29412798393253,
+        12.606981974144773,
+        0.5901279578361416,
+        18.594626999559004,
+        27.20316594386057
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 203.492682984729,
+        "elbow": 86.29412798393253,
+        "marker_roll": 12.606981974144773,
+        "wrist_marker_rotation": 32.93580299687109
+      },
+      "mechanical_energy_change_j": 310.0169175573528,
+      "energy_change_minus_applied_work_j": -7.90515383073398e-05,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 4.339139344267107e-05,
+      "substeps": 2,
+      "virtual_trial_count": 8853,
+      "virtual_retry_count": 4949,
+      "suppressed_substeps": 130,
+      "zero_force_substeps": 113,
+      "max_positive_budget_excess_j": -0.00021947685220879976,
+      "max_negative_budget_excess_j": 0.0,
+      "max_rotation_change_deg": 12.19032524229437,
+      "rotation_change_by_joint_deg": {
+        "shoulder": 1.7793734615113563,
+        "elbow": 1.0152310316872917,
+        "marker_roll": 10.167972610315505,
+        "wrist_marker": 12.19032524229437
+      },
+      "max_ball_position_change_mm": 9.71735642732945,
+      "release_direction_change_deg": 5.9021585357959445,
+      "max_shoulder_translation_change_mm": 6.151981213347727,
+      "endpoint_wrist_marker_rotation_change_deg": [
+        -9.311166192869726,
+        7.576465755021342,
+        2.122116939442343
+      ],
+      "endpoint_wrist_marker_velocity_change_deg_s": [
+        398.55145776954555,
+        1620.1055363353446,
+        -427.98973196611104
+      ],
+      "pose_screen_pass": false,
+      "case": "cubic_in",
+      "window_ms": 30.0,
+      "alpha": 1.0,
+      "paired_gain_kmh": 3.596726292787082,
+      "positive_component_work_change_j": -14.797641751196124,
+      "budget_gate": {
+        "strict_model_budget_pass": false,
+        "violations": [
+          {
+            "metric": "shoulder_translation_net_work_j",
+            "excess": 1.8275584944123153
+          }
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "initial_state_equal": true
+    },
+    {
+      "speed_kmh": 92.55676020888431,
+      "positive_work_per_dof_j": [
+        103.49093717276718,
+        10.151097283007394,
+        9.634541068210126,
+        97.7955946936238,
+        88.62604605419757,
+        11.134182396676872,
+        23.475180026366214,
+        0.516507703264548,
+        0.027276249312056727,
+        2.553828500150806,
+        0.25867074077630864
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        2.9539384309964776,
+        6.37097446250162,
+        4.315017073244642,
+        0.15179450124257926,
+        0.1650793906910827,
+        48.75537140344029,
+        4.505121207776136,
+        0.28857857735479114,
+        0.005304413443297778,
+        0.015456726165920781,
+        1.890679952586815
+      ],
+      "net_work_per_dof_j": [
+        100.53699874177066,
+        3.7801228205057735,
+        5.3195239949654916,
+        97.6438001923812,
+        88.4609666635065,
+        -37.62118900676341,
+        18.970058818590058,
+        0.22792912590975647,
+        0.021971835868758935,
+        2.5383717739848852,
+        -1.632009211810508
+      ],
+      "total_positive_component_work_j": 347.6638618883529,
+      "total_negative_component_work_magnitude_j": 69.41731613944366,
+      "total_net_work_j": 278.24654574890917,
+      "shoulder_translation_net_work_j": 109.63664555724192,
+      "shoulder_rotation_net_work_j": 148.4835778491243,
+      "shoulder_translation_positive_component_work_j": 123.27657552398469,
+      "shoulder_rotation_positive_component_work_j": 197.55582314449822,
+      "peak_abs_generalized_force_per_dof": [
+        429.80757383725233,
+        426.7251688623462,
+        305.48190655647187,
+        73.99294939677762,
+        164.53074810256402,
+        139.9445201505817,
+        83.43024678333131,
+        11.684181412348371,
+        0.2677165964179411,
+        9.747353855403897,
+        14.741063540495507
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 203.492682984729,
+        "elbow": 83.43024678333131,
+        "marker_roll": 11.684181412348371,
+        "wrist_marker_rotation": 15.1591289107515
+      },
+      "mechanical_energy_change_j": 278.246624056325,
+      "energy_change_minus_applied_work_j": 7.830741583347844e-05,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 8.678278688534213e-05,
+      "substeps": 1,
+      "virtual_trial_count": 14462,
+      "virtual_retry_count": 12510,
+      "suppressed_substeps": 317,
+      "zero_force_substeps": 294,
+      "max_positive_budget_excess_j": -2.7200464103316335e-15,
+      "max_negative_budget_excess_j": 0.0,
+      "max_rotation_change_deg": 76.2108596447414,
+      "rotation_change_by_joint_deg": {
+        "shoulder": 76.2108596447414,
+        "elbow": 27.532531539172254,
+        "marker_roll": 11.705745452897911,
+        "wrist_marker": 71.24623695836364
+      },
+      "max_ball_position_change_mm": 136.45404595879913,
+      "release_direction_change_deg": 18.8386313233156,
+      "max_shoulder_translation_change_mm": 77.11479547769714,
+      "endpoint_wrist_marker_rotation_change_deg": [
+        -49.21065982477973,
+        51.44738816865133,
+        -2.7392500727800226
+      ],
+      "endpoint_wrist_marker_velocity_change_deg_s": [
+        -890.3531222846034,
+        445.6729645455692,
+        -371.72205106556146
+      ],
+      "pose_screen_pass": false,
+      "case": "smoothstep",
+      "window_ms": 30.0,
+      "alpha": 1.0,
+      "paired_gain_kmh": -20.90982042639473,
+      "positive_component_work_change_j": -106.65202661499507,
+      "budget_gate": {
+        "strict_model_budget_pass": false,
+        "violations": [
+          {
+            "metric": "shoulder_translation_net_work_j",
+            "excess": 3.195222693437742
+          }
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "initial_state_equal": true
+    },
+    {
+      "speed_kmh": 92.5578633450825,
+      "positive_work_per_dof_j": [
+        103.49253386931711,
+        10.150789963743838,
+        9.634536528348116,
+        97.79569972523569,
+        88.6290696780303,
+        11.136107435652834,
+        23.477477813407095,
+        0.5165375072384512,
+        0.027276476285777923,
+        2.5539194945253874,
+        0.2587014056356841
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        2.953938239759972,
+        6.370949892734918,
+        4.315105940445151,
+        0.15179468506327362,
+        0.16507871600200186,
+        48.75534404138564,
+        4.505133480590817,
+        0.28858396939408326,
+        0.005304345876581342,
+        0.01545725889918101,
+        1.8906723157841192
+      ],
+      "net_work_per_dof_j": [
+        100.53859562955716,
+        3.7798400710089335,
+        5.319430587902954,
+        97.6439050401724,
+        88.46399096202832,
+        -37.61923660573282,
+        18.97234433281626,
+        0.22795353784436778,
+        0.021972130409196544,
+        2.5384622356262065,
+        -1.6319709101484339
+      ],
+      "total_positive_component_work_j": 347.6726498974203,
+      "total_negative_component_work_magnitude_j": 69.41736288593573,
+      "total_net_work_j": 278.25528701148454,
+      "shoulder_translation_net_work_j": 109.63786628846906,
+      "shoulder_rotation_net_work_j": 148.4886593964679,
+      "shoulder_translation_positive_component_work_j": 123.27786036140907,
+      "shoulder_rotation_positive_component_work_j": 197.56087683891883,
+      "peak_abs_generalized_force_per_dof": [
+        429.80757383725233,
+        426.7251688623462,
+        305.48190655647187,
+        73.99294939677762,
+        164.53074810256402,
+        139.9445201505817,
+        83.43024678333131,
+        11.684181412348371,
+        0.2677165964179411,
+        9.747353855403897,
+        14.741063540495507
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 203.492682984729,
+        "elbow": 83.43024678333131,
+        "marker_roll": 11.684181412348371,
+        "wrist_marker_rotation": 15.1591289107515
+      },
+      "mechanical_energy_change_j": 278.2553065651779,
+      "energy_change_minus_applied_work_j": 1.955369333472845e-05,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 4.339139344267107e-05,
+      "substeps": 2,
+      "virtual_trial_count": 29520,
+      "virtual_retry_count": 25616,
+      "suppressed_substeps": 633,
+      "zero_force_substeps": 616,
+      "max_positive_budget_excess_j": -2.9976021664879227e-15,
+      "max_negative_budget_excess_j": 0.0,
+      "max_rotation_change_deg": 76.20148290961927,
+      "rotation_change_by_joint_deg": {
+        "shoulder": 76.20148290961927,
+        "elbow": 27.533204553994704,
+        "marker_roll": 11.708368258270577,
+        "wrist_marker": 71.24800537255013
+      },
+      "max_ball_position_change_mm": 136.44351215121586,
+      "release_direction_change_deg": 18.83665159885281,
+      "max_shoulder_translation_change_mm": 77.11595731701996,
+      "endpoint_wrist_marker_rotation_change_deg": [
+        -49.21153310189654,
+        51.44902812089587,
+        -2.7387560576178975
+      ],
+      "endpoint_wrist_marker_velocity_change_deg_s": [
+        -890.516848861757,
+        446.28550006505105,
+        -371.35561611582
+      ],
+      "pose_screen_pass": false,
+      "case": "smoothstep",
+      "window_ms": 30.0,
+      "alpha": 1.0,
+      "paired_gain_kmh": -20.90871862836474,
+      "positive_component_work_change_j": -106.64305317913943,
+      "budget_gate": {
+        "strict_model_budget_pass": false,
+        "violations": [
+          {
+            "metric": "shoulder_translation_net_work_j",
+            "excess": 3.196386273897673
+          }
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "initial_state_equal": true
+    },
+    {
+      "speed_kmh": 94.32890083900632,
+      "positive_work_per_dof_j": [
+        104.81401496172629,
+        10.363023928715931,
+        9.634541068210126,
+        97.84540963050644,
+        90.71617514230496,
+        13.260398085363851,
+        24.464531831290007,
+        0.6871143159720818,
+        0.027944028717068997,
+        2.56014155044955,
+        0.2586707407763048
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        2.9539384309964776,
+        6.37097446250162,
+        4.572443319571793,
+        0.15179450124257926,
+        0.1650793906910827,
+        48.75537140344029,
+        4.505121208097075,
+        0.28857857735479114,
+        0.004980012474145181,
+        0.020960099769615877,
+        1.890679952586815
+      ],
+      "net_work_per_dof_j": [
+        101.86007653072977,
+        3.9920494662143113,
+        5.06209774863834,
+        97.69361512926385,
+        90.55109575161389,
+        -35.49497331807643,
+        19.959410623192912,
+        0.39853573861728986,
+        0.022964016242923806,
+        2.5391814506799344,
+        -1.6320092118105123
+      ],
+      "total_positive_component_work_j": 354.6319652840326,
+      "total_negative_component_work_magnitude_j": 69.67992135872628,
+      "total_net_work_j": 284.9520439253063,
+      "shoulder_translation_net_work_j": 110.91422374558242,
+      "shoulder_rotation_net_work_j": 152.7497375628013,
+      "shoulder_translation_positive_component_work_j": 124.81157995865235,
+      "shoulder_rotation_positive_component_work_j": 201.82198285817523,
+      "peak_abs_generalized_force_per_dof": [
+        429.80757383725233,
+        426.7251688623462,
+        305.48190655647187,
+        73.99294939677762,
+        164.53074810256402,
+        139.9445201505817,
+        83.43024678333131,
+        11.770389604696678,
+        0.2677165964179411,
+        9.747353855403897,
+        16.57470812950745
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 203.492682984729,
+        "elbow": 83.43024678333131,
+        "marker_roll": 11.770389604696678,
+        "wrist_marker_rotation": 16.59192870015605
+      },
+      "mechanical_energy_change_j": 284.9521015478275,
+      "energy_change_minus_applied_work_j": 5.762252118302058e-05,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 8.678278688534213e-05,
+      "substeps": 1,
+      "virtual_trial_count": 13818,
+      "virtual_retry_count": 11866,
+      "suppressed_substeps": 303,
+      "zero_force_substeps": 281,
+      "max_positive_budget_excess_j": -6.5503158452884236e-15,
+      "max_negative_budget_excess_j": 0.0,
+      "max_rotation_change_deg": 66.84724718941754,
+      "rotation_change_by_joint_deg": {
+        "shoulder": 66.84724718941754,
+        "elbow": 27.26713773836207,
+        "marker_roll": 9.725453712615556,
+        "wrist_marker": 64.80595977588868
+      },
+      "max_ball_position_change_mm": 123.08738442425991,
+      "release_direction_change_deg": 16.707561768133626,
+      "max_shoulder_translation_change_mm": 73.46750249851735,
+      "endpoint_wrist_marker_rotation_change_deg": [
+        -40.47448730921808,
+        50.59793726363045,
+        -1.2153370708425288
+      ],
+      "endpoint_wrist_marker_velocity_change_deg_s": [
+        -707.1832498605567,
+        1037.0530972936792,
+        49.770101129818336
+      ],
+      "pose_screen_pass": false,
+      "case": "smootherstep",
+      "window_ms": 30.0,
+      "alpha": 1.0,
+      "paired_gain_kmh": -19.13767979627272,
+      "positive_component_work_change_j": -99.68392321931537,
+      "budget_gate": {
+        "strict_model_budget_pass": false,
+        "violations": [
+          {
+            "metric": "shoulder_translation_net_work_j",
+            "excess": 4.472800881778241
+          }
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "initial_state_equal": true
+    },
+    {
+      "speed_kmh": 94.3275879516397,
+      "positive_work_per_dof_j": [
+        104.81205452187808,
+        10.36318947162154,
+        9.634536528348116,
+        97.84556530957497,
+        90.71380127724738,
+        13.258133051752143,
+        24.46198412550888,
+        0.6870273160398798,
+        0.02794373083306687,
+        2.560143383162325,
+        0.25870140563568556
+      ],
+      "negative_work_magnitude_per_dof_j": [
+        2.953938239759972,
+        6.370949892734918,
+        4.572265276015109,
+        0.15179468506327362,
+        0.16507871600200186,
+        48.75534404138564,
+        4.5051334805908185,
+        0.28858396939408326,
+        0.004979969399842074,
+        0.021089572521912632,
+        1.8906723157841192
+      ],
+      "net_work_per_dof_j": [
+        101.85811628211813,
+        3.992239578886646,
+        5.062271252332996,
+        97.69377062451167,
+        90.54872256124541,
+        -35.497210989633516,
+        19.956850644918042,
+        0.3984433466457962,
+        0.022963761433224754,
+        2.5390538106404126,
+        -1.631970910148434
+      ],
+      "total_positive_component_work_j": 354.6230801216021,
+      "total_negative_component_work_magnitude_j": 69.67983015865168,
+      "total_net_work_j": 284.9432499629504,
+      "shoulder_translation_net_work_j": 110.91262711333776,
+      "shoulder_rotation_net_work_j": 152.74528219612358,
+      "shoulder_translation_positive_component_work_j": 124.80978052184774,
+      "shoulder_rotation_positive_component_work_j": 201.8174996385745,
+      "peak_abs_generalized_force_per_dof": [
+        429.80757383725233,
+        426.7251688623462,
+        305.48190655647187,
+        73.99294939677762,
+        164.53074810256402,
+        139.9445201505817,
+        83.43024678333131,
+        11.770389604696678,
+        0.2677165964179411,
+        9.747353855403897,
+        16.57470812950745
+      ],
+      "peak_joint_torque_norm_nm": {
+        "shoulder_rotation": 203.492682984729,
+        "elbow": 83.43024678333131,
+        "marker_roll": 11.770389604696678,
+        "wrist_marker_rotation": 16.59192870015605
+      },
+      "mechanical_energy_change_j": 284.94326437202415,
+      "energy_change_minus_applied_work_j": 1.440907374217204e-05,
+      "initial_energy_j": 88.51980330129979,
+      "dt_s": 4.339139344267107e-05,
+      "substeps": 2,
+      "virtual_trial_count": 27990,
+      "virtual_retry_count": 24086,
+      "suppressed_substeps": 605,
+      "zero_force_substeps": 575,
+      "max_positive_budget_excess_j": -1.5543122344752192e-15,
+      "max_negative_budget_excess_j": 0.0,
+      "max_rotation_change_deg": 66.85719194110945,
+      "rotation_change_by_joint_deg": {
+        "shoulder": 66.85719194110945,
+        "elbow": 27.267228006423405,
+        "marker_roll": 9.720143916071157,
+        "wrist_marker": 64.80714257911013
+      },
+      "max_ball_position_change_mm": 123.09834869173106,
+      "release_direction_change_deg": 16.709467580313003,
+      "max_shoulder_translation_change_mm": 73.46714486087916,
+      "endpoint_wrist_marker_rotation_change_deg": [
+        -40.47757071729682,
+        50.59696685855986,
+        -1.2161179256715868
+      ],
+      "endpoint_wrist_marker_velocity_change_deg_s": [
+        -707.171839169656,
+        1036.3891911175888,
+        49.434275281087764
+      ],
+      "pose_screen_pass": false,
+      "case": "smootherstep",
+      "window_ms": 30.0,
+      "alpha": 1.0,
+      "paired_gain_kmh": -19.138994021807534,
+      "positive_component_work_change_j": -99.69262295495764,
+      "budget_gate": {
+        "strict_model_budget_pass": false,
+        "violations": [
+          {
+            "metric": "shoulder_translation_net_work_j",
+            "excess": 4.47114709876638
+          }
+        ],
+        "floating_comparison_epsilon": 1e-09,
+        "physiological_capacity_validated": false
+      },
+      "initial_state_equal": true
+    }
+  ],
+  "decisions": [
+    {
+      "case": "cubic_in",
+      "conditional_model_candidate": false,
+      "fine_gain_kmh": 3.596726292787082,
+      "gain_resolution_difference_kmh": 0.00011853628228664093,
+      "absolute_resolution_sum_kmh": 0.00012121261866582245,
+      "gain_at_least_1kmh": true
+    },
+    {
+      "case": "smoothstep",
+      "conditional_model_candidate": false,
+      "fine_gain_kmh": -20.90871862836474,
+      "gain_resolution_difference_kmh": 0.0011017980299925512,
+      "absolute_resolution_sum_kmh": 0.0011044743663717327,
+      "gain_at_least_1kmh": false
+    },
+    {
+      "case": "smootherstep",
+      "conditional_model_candidate": false,
+      "fine_gain_kmh": -19.138994021807534,
+      "gain_resolution_difference_kmh": 0.0013142255348128629,
+      "absolute_resolution_sum_kmh": 0.0013142255348128629,
+      "gain_at_least_1kmh": false
+    }
+  ],
+  "conditional_candidates": [],
+  "real_athlete_effect_verified": false,
+  "empirical_effect_95ci": null,
+  "spin_or_command_effect_verified": false,
+  "physiological_capacity_validated": false
+}
