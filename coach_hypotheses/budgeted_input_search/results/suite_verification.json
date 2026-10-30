@@ -1,0 +1,50 @@
+{
+  "tests_run": 464,
+  "passed": 452,
+  "errors": [
+    {
+      "test": "unittest.loader._FailedTest.test_anatomical_shoulder",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_applied_path_forces",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_directional_shoulder",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_elbow_moment_validation",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_elbow_registration_audit",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_muscle_equilibrium_mode",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate",
+      "last_line": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\Documents\\\\Codex\\\\2026-10-20\\\\new-chat-2\\\\outputs\\\\pitching-lab\\\\budgeted-input-search-20261030\\\\artifacts\\\\research-evidence-audit\\\\formula_checks.json'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_shoulder_load_audit",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_wrist_integration",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_wrist_residual_audit",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    }
+  ],
+  "failures": [],
+  "skipped": 2,
+  "new_error_ids": [],
+  "actual_athlete_effect_validated": false
+}
