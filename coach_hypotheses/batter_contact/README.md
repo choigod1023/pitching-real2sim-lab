@@ -1,5 +1,7 @@
 # 투수–공–타자 연결 모듈
 
+**사용자 정정 반영:** 원한 영상은 투수의 신체 조정과 구위 변화가 연결된 비교다. 현재 데모는 그 결과가 아니므로 기본 실행에서 영상 생성/표시를 중단한다. 최신 기준은 `PITCHER_PERFORMANCE_VIDEO_POLICY.md`다. 예측 오차 감소를 선수 구위 향상으로 취급하지 않는다.
+
 실측 투구 자세와 별도 타격 궤적을 한 장면에서 재생하고, 배트 스윗스폿 구간과 참조 공의 근접을 계산한다. 별도 API는 기존 MLB 모델의 스윙·통계적 미스 확률을 복원해 결합한다. 두 자료를 같은 실제 대결로 취급하지 않는다. **현재는 실제 선수의 성능 향상·같은 힘/일에서의 관절 수정 효과를 검증한 프로그램이 아니다. 훈련·의료 조언을 제공하지 않는다.**
 
 ## 실행
@@ -7,11 +9,17 @@
 저장소 root에서 실행한다. Python은 기존 lab의 전용 환경을 사용한다.
 
 ```powershell
+& '../.venv/Scripts/python.exe' -m coach_hypotheses.batter_contact.run
+& '../.venv/Scripts/python.exe' -m unittest coach_hypotheses.batter_contact.test_contact -v
+```
+
+기본 실행에는 원자료 다운로드가 필요 없다. **사용자가 별도 데모를 명시적으로 요청한 경우에만** 아래를 사용한다.
+
+```powershell
 New-Item -ItemType Directory -Force artifacts/batter_contact/external
 gh release download dataset-v1 --repo drivelineresearch/openbiomechanics --pattern hitting_landmarks.zip --dir artifacts/batter_contact/external
 gh release download dataset-v1 --repo drivelineresearch/openbiomechanics --pattern hitting_c3d.zip --dir artifacts/batter_contact/external
-& '../.venv/Scripts/python.exe' -m coach_hypotheses.batter_contact.run
-& '../.venv/Scripts/python.exe' -m unittest coach_hypotheses.batter_contact.test_contact -v
+& '../.venv/Scripts/python.exe' -m coach_hypotheses.batter_contact.run --show-demo
 ```
 
 기본 입력:
@@ -21,7 +29,7 @@ gh release download dataset-v1 --repo drivelineresearch/openbiomechanics --patte
 - `../temporal-pitch-quality-20261030`: PR129 모델 적합 감사 JSON·기존 예측. summary의 해시와 저장 계수를 대조하며 검사 자료로 다시 학습하지 않는다.
 - `../temporal-collection-agent-20261030/artifacts/temporal_quality_games`: 기존 MLB 세 분할이다. 새 기간을 수집하거나 새로운 미사용 검사라고 부르지 않는다.
 
-모든 경로는 CLI 인자로 바꿀 수 있다. raw·행별자료는 ignored artifacts에만 둔다. 결과는 `results/integration.json`, `results/response_integration.json`, 생성한 투구 장면은 `media/pitcher_batter_overlay.mp4`다. 성공 출력에는 바로 사용할 수 있는 절대 경로 Markdown 영상 태그를 내보낸다. **성공을 보고할 때 이 투구 영상을 채팅에 함께 표시한다.**
+모든 경로는 CLI 인자로 바꿀 수 있다. 기본 명령은 `performance_video_status.json`에 검증된 투수 개입 영상이 없음을 기록하고, 기존 자료나 데모를 재계산하지 않는다. `--show-demo`는 사용자가 별도 진단을 명시적으로 요청한 경우에만 쓴다. 이때 raw·행별자료는 ignored artifacts에 두고 `results/integration.json`, `results/response_integration.json`, `media/pitcher_batter_overlay.mp4`를 생성한다. **이 데모 영상은 투수 구위 향상 결과를 대신하지 않는다.**
 
 ## 세 부분을 구분한다
 

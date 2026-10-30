@@ -1,0 +1,9 @@
+{
+  "status": "no_validated_pitcher_intervention_video",
+  "pitcher_performance_video": null,
+  "body_to_stuff_mapping_validated": false,
+  "pitcher_performance_improvement_verified": false,
+  "statistical_prediction_gain_is_pitcher_improvement": false,
+  "demo_available_with_explicit_flag": true,
+  "automatic_demo_export": false
+}
