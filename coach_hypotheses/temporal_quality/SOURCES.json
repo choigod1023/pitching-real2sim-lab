@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-30",
+  "recorded_at_utc": "2026-10-30T01:41:27.221710+00:00",
+  "protocol_commit": "59ae41da8c5f605689a87f4e81a017240539ba38",
+  "remote_default_at_start": "63fc06c2c37b9af55c48d341a5c5e39d8a6deb2e",
+  "branch": "codex/body-ball-evidence-20261030",
+  "scope": "literature, source definitions, existing-record audit; documentation only",
+  "sources": [
+    {
+      "id": "shibata2023",
+      "doi": "10.1016/j.jbiomech.2023.111603",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37126885/",
+      "review_scope": "PubMed abstract; publisher preview and indexed partial methods only; full text not acquired",
+      "raw_data_or_executable_model_verified": false,
+      "direct_get_started_at_utc": "2026-10-30T01:41:25.514797+00:00",
+      "raw_response_saved": false,
+      "hash_meaning": "exact response body bytes read in memory, not a scientific raw-data hash",
+      "http_status": 200,
+      "final_url": "https://pubmed.ncbi.nlm.nih.gov/37126885/",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 24379,
+      "response_sha256": "73008cdb15333dff8502abc3c44437468db1bf94dc9b4c1234ff513ebc235f3c",
+      "response_truncated": false,
+      "possible_access_challenge": false,
+      "direct_get_finished_at_utc": "2026-10-30T01:41:25.950641+00:00"
+    },
+    {
+      "id": "savant_csv",
+      "url": "https://baseballsavant.mlb.com/csv-docs",
+      "review_scope": "official field definitions only; no new CSV row download or StatsAPI equivalence validated",
+      "direct_get_started_at_utc": "2026-10-30T01:41:25.515316+00:00",
+      "raw_response_saved": false,
+      "hash_meaning": "exact response body bytes read in memory, not a scientific raw-data hash",
+      "http_status": 403,
+      "response_sha256": null,
+      "error_type": "HTTPError",
+      "error_message": "HTTP Error 403: Forbidden",
+      "direct_get_finished_at_utc": "2026-10-30T01:41:25.614761+00:00",
+      "definition_review_via": "web tool returned readable official definition text; separate direct urllib GET was denied",
+      "direct_get_retried_after_denial": false
+    },
+    {
+      "id": "savant_active_spin",
+      "url": "https://baseballsavant.mlb.com/leaderboard/active-spin",
+      "review_scope": "official explanatory text: measured 3D spin versus inferred spin; no pitch-level 3D vectors acquired",
+      "direct_get_started_at_utc": "2026-10-30T01:41:25.515621+00:00",
+      "raw_response_saved": false,
+      "hash_meaning": "exact response body bytes read in memory, not a scientific raw-data hash",
+      "http_status": 403,
+      "response_sha256": null,
+      "error_type": "HTTPError",
+      "error_message": "HTTP Error 403: Forbidden",
+      "direct_get_finished_at_utc": "2026-10-30T01:41:25.616966+00:00",
+      "definition_review_via": "web tool returned readable official definition text; separate direct urllib GET was denied",
+      "direct_get_retried_after_denial": false
+    },
+    {
+      "id": "savant_spin_direction",
+      "url": "https://baseballsavant.mlb.com/leaderboard/spin-direction-pitches",
+      "review_scope": "official observed-versus-spin-based movement explanation; not direct seam/contact observation",
+      "direct_get_started_at_utc": "2026-10-30T01:41:25.614781+00:00",
+      "raw_response_saved": false,
+      "hash_meaning": "exact response body bytes read in memory, not a scientific raw-data hash",
+      "http_status": 403,
+      "response_sha256": null,
+      "error_type": "HTTPError",
+      "error_message": "HTTP Error 403: Forbidden",
+      "direct_get_finished_at_utc": "2026-10-30T01:41:25.647101+00:00",
+      "definition_review_via": "web tool returned readable official definition text; separate direct urllib GET was denied",
+      "direct_get_retried_after_denial": false
+    },
+    {
+      "id": "savant_arm_angle",
+      "url": "https://baseballsavant.mlb.com/leaderboard/pitcher-arm-angles",
+      "review_scope": "official explanatory definition; not full-body time series",
+      "direct_get_started_at_utc": "2026-10-30T01:41:25.616984+00:00",
+      "raw_response_saved": false,
+      "hash_meaning": "exact response body bytes read in memory, not a scientific raw-data hash",
+      "http_status": 403,
+      "response_sha256": null,
+      "error_type": "HTTPError",
+      "error_message": "HTTP Error 403: Forbidden",
+      "direct_get_finished_at_utc": "2026-10-30T01:41:25.633423+00:00",
+      "definition_review_via": "web tool returned readable official definition text; separate direct urllib GET was denied",
+      "direct_get_retried_after_denial": false
+    },
+    {
+      "id": "approach_angle_definition2025",
+      "doi": "10.3389/fspor.2025.1557145",
+      "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1557145/full",
+      "review_scope": "primary methods/Table 1 definitions of vertical and horizontal approach angle; not MLB heldout prediction validation",
+      "direct_get_started_at_utc": "2026-10-30T01:41:25.633439+00:00",
+      "raw_response_saved": false,
+      "hash_meaning": "exact response body bytes read in memory, not a scientific raw-data hash",
+      "http_status": 200,
+      "final_url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1557145/full",
+      "content_type": "text/html;charset=utf-8",
+      "bytes_read": 754003,
+      "response_sha256": "b964c541daca26906d5cf7a09b89058bf8efc5df88e1221c3585705c83691644",
+      "response_truncated": false,
+      "possible_access_challenge": false,
+      "direct_get_finished_at_utc": "2026-10-30T01:41:27.203378+00:00"
+    },
+    {
+      "id": "shibata2023_author_pdf",
+      "doi": "10.1016/j.jbiomech.2023.111603",
+      "url": "https://researchmap.jp/nifsbaseball-kanoya/published_papers/42164792/attachment_file.pdf",
+      "access_via": "web tool",
+      "review_date": "2026-10-30",
+      "status": "403 Forbidden",
+      "full_text_acquired": false,
+      "response_sha256": null,
+      "retried_after_denial": false
+    },
+    {
+      "id": "shibata2023_publisher",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0021929023001720",
+      "access_via": "web tool search index and direct open",
+      "review_date": "2026-10-30",
+      "status": "search preview available; direct open 403",
+      "full_text_acquired": false,
+      "response_sha256": null
+    },
+    {
+      "id": "shibata2022",
+      "doi": "10.1080/14763141.2022.2125823",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36175120/",
+      "review_scope": "reused prior abstract review",
+      "reacquired_this_audit": false,
+      "response_sha256": null
+    },
+    {
+      "id": "yamaguchi2025_slip",
+      "doi": "10.1038/s41598-025-93632-y",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11950353/",
+      "review_scope": "reused prior full-text and local supplement audit; raw coordinates not acquired",
+      "reacquired_this_audit": false,
+      "response_sha256": null
+    },
+    {
+      "id": "yamaguchi2025_arm",
+      "doi": "10.1038/s41598-025-12298-8",
+      "url": "https://doi.org/10.1038/s41598-025-12298-8",
+      "review_scope": "reused prior full-text review; related friction experiment",
+      "reacquired_this_audit": false,
+      "response_sha256": null
+    },
+    {
+      "id": "kato_yanai2026",
+      "doi": "10.1177/17479541251378897",
+      "url": "https://journals.sagepub.com/doi/pdf/10.1177/17479541251378897",
+      "review_scope": "reused prior full text and appendix review; observational not an intervention",
+      "reacquired_this_audit": false,
+      "response_sha256": null
+    }
+  ],
+  "local_records": [
+    {
+      "path": "coach_hypotheses/temporal_quality/PROTOCOL.md",
+      "bytes": 6570,
+      "sha256": "11c05648ad70dcbc6c4fdfbb8f39a26b77c7279e927dc88253f7ae013b1ac08d",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/pitch_quality/FIELD_DEFINITIONS.md",
+      "bytes": 6655,
+      "sha256": "98f26654948fdd2fabec52a95b594933ccead6b7cd97d1e86ec024c1dc4635ca",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/pitch_quality/RESEARCH_REVIEW.md",
+      "bytes": 9481,
+      "sha256": "c86a99de07d8f2dc4cbb3d32db1edecd52d6e4515b5d4d69095a55b2dce2d85b",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/pitch_quality/SOURCE_AUDIT.json",
+      "bytes": 3943,
+      "sha256": "dde70e88af841c9c163071106e216d6809c6777d4a9388e663b987b7ac4aab9d",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/pitch_quality/mlb_feed.py",
+      "bytes": 22227,
+      "sha256": "7cc325ff13fa48daff9c06c87c8fb1d0331c7d797a8dc73e279d20f0b8107599",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/pitch_quality/CONDITIONAL_FINDINGS.md",
+      "bytes": 11109,
+      "sha256": "3557f35a2daa5a4f0157f7d5a15ac7d2f1d68574ce5d5413ca0bed384a0740c8",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/observed_motion/COMPARISON_FINDINGS.md",
+      "bytes": 26548,
+      "sha256": "ba45c7295b93c1a5151eba2d480c75c5e3c330b6223a9f5619a6150e43e988b0",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "coach_hypotheses/peak_stability/FINDINGS.md",
+      "bytes": 7088,
+      "sha256": "cf57e6d06137685caf6aadaf7205a8cd0ab7bfdfd552a7914bd5f717bb0e4ade",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "PAIRED_DATA_SOURCES.md",
+      "bytes": 4675,
+      "sha256": "97f6e653f438776d574156040990e23a6b86bc587b2118e6210946e09a6ad95b",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "HAND_BALL_OBSERVATION.md",
+      "bytes": 6680,
+      "sha256": "d10e92a002924e0da0832b018d23fe9fd137acaabb3a3322b53cf25473c8debf",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "HAND_BALL_LINK_FINDINGS.md",
+      "bytes": 4691,
+      "sha256": "d51819dd55412b628de491b4760d38d4d13a2670f2afec86acdbc564f89191e4",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "WHOLE_CHAIN_FINDINGS.md",
+      "bytes": 5636,
+      "sha256": "35f32ba7ad043f07050779625f95516f40226953d08e266e2de0dcb18769bb02",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "WRIST_MUSCLE_FINDINGS.md",
+      "bytes": 5576,
+      "sha256": "1a0c9f99b2ed0d3006687429953572c1d660dc32ebf4aef55b803a5ef1ac9988",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "WRIST_RESIDUAL_FINDINGS.md",
+      "bytes": 5701,
+      "sha256": "32db98d09e953986c5d20de63d3213c34f8a7d4812cd9430bddfb98cb9dad856",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "CONTACT_EVIDENCE_FINDINGS.md",
+      "bytes": 6858,
+      "sha256": "f30a5f564f2245077819f838d88fa2199963d71f6b5c13e7c07f4dffed9daae9",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    },
+    {
+      "path": "COMPLIANT_PROTOCOL.md",
+      "bytes": 2323,
+      "sha256": "8ffb15fd6cc289fe2fba0a2529f84b9f0394138bbf0deef70853bfa007d35ebe",
+      "review": "existing record or input-path audit only; experiment not rerun"
+    }
+  ],
+  "observability": {
+    "statsapi_field_units_promoted": false,
+    "x0_is_actual_release_claimed": false,
+    "spinDirection_is_3d_axis_claimed": false,
+    "same_pitch_hand_ball_kinematic_candidates_exist": true,
+    "same_pitch_validated_muscle_force_work_and_direct_spin_bundle_verified": false,
+    "shibata2023_full_text_acquired": false,
+    "shibata2023_raw_data_or_executable_model_verified": false
+  },
+  "actions": {
+    "code_or_models_changed": false,
+    "new_athlete_data_analysis_performed": false,
+    "physical_simulation_rerun": false,
+    "large_raw_downloads": false,
+    "external_contact": false,
+    "paid_access": false,
+    "access_denial_bypassed": false
+  },
+  "outputs": [
+    "BODY_BALL_EVIDENCE.md",
+    "SOURCES.json"
+  ]
+}
