@@ -1,0 +1,74 @@
+{
+  "protocol": "coach_hypotheses/pitch_quality/DATA_PROTOCOL.md",
+  "source_format": "official_mlb_json_not_statcast_or_mendeley_csv",
+  "fixed_date": "2025-06-01",
+  "game_selection": "minimum_numeric_gamePk_completed_R",
+  "gamePk": 777677,
+  "schedule_actual_feed_link": "/api/v1.1/game/777677/feed/live",
+  "sources": {
+    "schedule": {
+      "requested_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2025-06-01",
+      "response_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2025-06-01",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 20239,
+      "sha256": "e0b5fc3cf5b8cfa83ee89c418a298fcf28bd24e3e8235bf3493446ab6bb0d938",
+      "accessed_at_utc": "2026-10-30T00:41:09.011782+00:00",
+      "from_cache": true
+    },
+    "feed": {
+      "requested_url": "https://statsapi.mlb.com/api/v1.1/game/777677/feed/live",
+      "response_url": "https://statsapi.mlb.com/api/v1.1/game/777677/feed/live",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 725682,
+      "sha256": "7f40e379d47c491aa1318190a030fe6ba5ff9f609dd9f42ebc2c852a692d0fc7",
+      "accessed_at_utc": "2026-10-30T00:41:10.335996+00:00",
+      "from_cache": true
+    },
+    "pitch_codes": {
+      "requested_url": "https://statsapi.mlb.com/api/v1/pitchCodes",
+      "response_url": "https://statsapi.mlb.com/api/v1/pitchCodes",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 10909,
+      "sha256": "d63b121b60f31524580b3dfc95d5fb31342eb5f3af344fb13b7933ad72adc8e1",
+      "accessed_at_utc": "2026-10-30T00:41:10.960908+00:00",
+      "from_cache": true
+    },
+    "metrics": {
+      "requested_url": "https://statsapi.mlb.com/api/v1/metrics",
+      "response_url": "https://statsapi.mlb.com/api/v1/metrics",
+      "status": 200,
+      "content_type": "application/json;charset=UTF-8",
+      "bytes": 1545,
+      "sha256": "8618875aab2415fd26d6ea672a9d49d3194cc1240849e4e26fada47a768cb496",
+      "accessed_at_utc": "2026-10-30T00:41:11.518949+00:00",
+      "from_cache": true
+    }
+  },
+  "initial_feed_sha256": "7f40e379d47c491aa1318190a030fe6ba5ff9f609dd9f42ebc2c852a692d0fc7",
+  "current_feed_matches_initial_sha256": true,
+  "initial_audit": {
+    "gamePk": 777677,
+    "play_count": 69,
+    "pitch_count": 256,
+    "pitcher_count": 8
+  },
+  "current_sample_matches_initial_audit": true,
+  "pitch_code_lookup_entries": 39,
+  "metrics_registry_entry_count": 22,
+  "metrics_aliases_to_feed_fields_confirmed": false,
+  "raw_and_pitch_level_exports": "gitignored_artifacts_only",
+  "prior_csv_access_failures_preserved": [
+    {
+      "source": "Mendeley xfnz6mkdzm v2 actual files",
+      "status": "HTTP_403_NOT_ACQUIRED"
+    },
+    {
+      "source": "Baseball Savant search/CSV",
+      "status": "HTTP_403_CSV_NOT_ACQUIRED"
+    }
+  ],
+  "license": "public_access_does_not_establish_redistribution_permission"
+}
