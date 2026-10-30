@@ -4,6 +4,7 @@
 
 - 선행: PR135, e2f7131da61a63757aad4baf112e08cd81373dae. 최신 원격 main 63fc06c2c37b9af55c48d341a5c5e39d8a6deb2e에서 별도 worktree/branch를 만들고 필요한 선행 체인을 fast-forward했다.
 - 브랜치: codex/pitch-transfer-validation-20261030.
+- 구현 커밋: 214bddd. PR: https://github.com/choigod1023/pitching-real2sim-lab/pull/136 (PR135 위, OPEN/MERGEABLE 확인, 미병합). 채팅 첨부는 100개 한도로 실패해 URL로 보존했다.
 - 사전 계획 커밋: 01e0d06. PROTOCOL.md를 새 결과 계산 전에 고정했다.
 - 로컬 계산: 이 worktree의 artifacts/pitch-transfer/<pitch>/{input,baseline,normalized,absolute,refit} NPZ와 report/direct/refit-partial JSON. 완료 계산은 재실행하지 않는다.
 - 보존 결과: results/summary.json, 투구별 json.gz, suite_verification.json. 데이터 원본, C3D, 영상, reference NPZ는 업로드하지 않는다.
