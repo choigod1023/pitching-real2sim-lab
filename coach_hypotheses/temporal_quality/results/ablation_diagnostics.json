@@ -1,0 +1,61 @@
+{
+  "status": "posthoc_descriptive_not_preregistered_primary_no_multiple_testing_adjustment",
+  "comparisons": [
+    {
+      "reference": "L0",
+      "candidate": "G0",
+      "brier_gain": 0.00021067133830493244,
+      "pitcher_bootstrap_95pct": [
+        -0.0005478597368032926,
+        0.0008827027429872701
+      ],
+      "draws": 2000,
+      "seed": 20261030
+    },
+    {
+      "reference": "G0",
+      "candidate": "GB0",
+      "brier_gain": 0.0008265024006931025,
+      "pitcher_bootstrap_95pct": [
+        -0.0007300358893011135,
+        0.0023474512303681867
+      ],
+      "draws": 2000,
+      "seed": 20261030
+    },
+    {
+      "reference": "L0",
+      "candidate": "L1",
+      "brier_gain": 0.0016688095814428815,
+      "pitcher_bootstrap_95pct": [
+        0.0010573475713852982,
+        0.0022919569324461532
+      ],
+      "draws": 2000,
+      "seed": 20261030
+    },
+    {
+      "reference": "L1",
+      "candidate": "GB1",
+      "brier_gain": 0.0013668032474294122,
+      "pitcher_bootstrap_95pct": [
+        -0.000477047800611085,
+        0.0032241959133281033
+      ],
+      "draws": 2000,
+      "seed": 20261030
+    },
+    {
+      "reference": "G0",
+      "candidate": "G1",
+      "brier_gain": 0.0018461755269356828,
+      "pitcher_bootstrap_95pct": [
+        0.0010637214205609475,
+        0.0026929990798021646
+      ],
+      "draws": 2000,
+      "seed": 20261030
+    }
+  ],
+  "primary_verdict_modified": false
+}
