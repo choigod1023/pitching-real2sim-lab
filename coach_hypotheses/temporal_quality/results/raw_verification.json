@@ -1,0 +1,25 @@
+{
+  "raw_games": 1187,
+  "raw_pitches": 346191,
+  "required_raw_numeric_cells": 2077146,
+  "counts_calls_and_reported_pitcher_checked": 346191,
+  "independently_matched_FF_test_keys": 16163,
+  "independently_recomputed_predictions": {
+    "strict_SW": {
+      "rows": 16163,
+      "players": 333
+    },
+    "official_nonbunt_swingMissStatus": {
+      "rows": 16163,
+      "players": 333
+    },
+    "swing": {
+      "rows": 34769,
+      "players": 382
+    }
+  },
+  "max_abs_metric_difference": 2.7755575615628914e-17,
+  "primary_B_bootstrap_reproduced": true,
+  "raw_or_pitch_level_data_committed": false,
+  "actual_athlete_effect_validated": false
+}

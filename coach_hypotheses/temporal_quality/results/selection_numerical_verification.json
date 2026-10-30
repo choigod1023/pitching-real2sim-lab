@@ -1,0 +1,35 @@
+{
+  "refinements": [
+    {
+      "lambda_": 1,
+      "success": true,
+      "iterations": 296,
+      "original_objective": 10113.128059851837,
+      "refined_objective": 10113.127958370085,
+      "refined_max_abs_gradient": 0.0010105301408741846,
+      "max_abs_probability_change": 0.0002627267513581333,
+      "rms_probability_change": 2.834210609180642e-05,
+      "original_validation_brier": 0.13695288932439947,
+      "refined_validation_brier": 0.13695375570951449,
+      "coefficient_change_norm": 0.009780875765105966
+    },
+    {
+      "lambda_": 10,
+      "success": true,
+      "iterations": 305,
+      "original_objective": 10125.643713553747,
+      "refined_objective": 10125.643612646021,
+      "refined_max_abs_gradient": 0.0037773533208777244,
+      "max_abs_probability_change": 0.00026820894446821786,
+      "rms_probability_change": 2.9506440674440682e-05,
+      "original_validation_brier": 0.13681681222948303,
+      "refined_validation_brier": 0.13681701687098627,
+      "coefficient_change_norm": 0.009464362860387187
+    }
+  ],
+  "original_lambda": 10,
+  "refined_lambda": 10,
+  "lambda_selection_unchanged": true,
+  "original_outputs_changed": false,
+  "august_opened": false
+}

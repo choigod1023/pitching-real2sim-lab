@@ -1,0 +1,33 @@
+{
+  "refinements": [
+    {
+      "model": "GB0",
+      "success": true,
+      "iterations": 352,
+      "original_brier": 0.13426288647431117,
+      "refined_brier": 0.13426278360290253,
+      "max_abs_probability_change": 0.0006496015283985468,
+      "rms_probability_change": 3.66073548738443e-05,
+      "coefficient_change_norm": 0.013772842199434737,
+      "max_abs_gradient": 0.004153294903903426
+    },
+    {
+      "model": "GB1",
+      "success": true,
+      "iterations": 429,
+      "original_brier": 0.1322644473844369,
+      "refined_brier": 0.13226412649633634,
+      "max_abs_probability_change": 0.0004156741830778632,
+      "rms_probability_change": 3.674006050014689e-05,
+      "coefficient_change_norm": 0.011324347170778565,
+      "max_abs_gradient": 0.0009054615056955928
+    }
+  ],
+  "refined_B_gain": 0.001998657106566174,
+  "refined_B_95pct": [
+    0.0011480260264027493,
+    0.0029246802650143146
+  ],
+  "primary_B_direction_unchanged": true,
+  "original_primary_outputs_modified": false
+}

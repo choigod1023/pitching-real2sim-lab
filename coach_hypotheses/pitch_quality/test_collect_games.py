@@ -32,6 +32,21 @@ class CollectionTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             c.fetch_with_retries(m.SCHEDULE_URL, "unused", retries=3)
 
+    def test_custom_interval_is_inclusive_and_cannot_overwrite_default_outputs(self):
+        self.assertEqual(len(c.fixed_dates("2025-06-01", "2025-08-31")), 92)
+        self.assertEqual(c.fixed_dates("2025-07-31", "2025-08-01"), ["2025-07-31", "2025-08-01"])
+        for first, last in (("2025-08-01", "2025-07-01"), (True, "2025-08-01"), ("bad", "2025-08-01")):
+            with self.assertRaises(ValueError):
+                c.fixed_dates(first, last)
+        with self.assertRaisesRegex(ValueError, "separate_cache"):
+            c.collect(start_date="2025-07-01", end_date="2025-07-02")
+        _, schedule, _ = fixture()
+        game = schedule["dates"][0]["games"][0]
+        game["officialDate"] = "2025-08-01"
+        selected, _ = c.select_games([("date", schedule)], start_date="2025-08-01", end_date="2025-08-31")
+        self.assertEqual(selected[0]["gameDate"], "2025-08-01")
+        self.assertEqual(c.select_games([("date", schedule)])[0], [])
+
     def test_valid_prior_cache_reused_without_network_and_bad_hash_preserved(self):
         with tempfile.TemporaryDirectory() as temp:
             source, destination = Path(temp)/"source", Path(temp)/"destination"
