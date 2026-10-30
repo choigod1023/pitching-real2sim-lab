@@ -1,0 +1,6 @@
+{
+  "method": "stdlib csv + statistics; re-read raw frozen metric rows; independent pair subtraction and player means",
+  "checked_values": 1296,
+  "maximum_absolute_difference": 7.105427357601002e-15,
+  "passed": true
+}

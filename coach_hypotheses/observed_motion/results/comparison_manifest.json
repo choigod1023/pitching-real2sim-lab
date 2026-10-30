@@ -1,0 +1,23 @@
+{
+  "protocol_commit": "4664982b8a5638c76d03927a2e1a94c56a2a3e8f",
+  "protocol_sha256": "df6a2c548778dba505728d0ecc2dd595cf2752fef75b06f370a283088621073c",
+  "code_sha256": "673be240a86ddcfb6fab9d75108a303b5ac181a917ecc4ab63cc937c478dc500",
+  "test_sha256": "17af1ebc3f559e46247ae21f8d167526b3557d5cb8b6a503c42db3727f24ee52",
+  "summary_source": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\observed-tradeoff-sensitivity-20261029\\coach_hypotheses\\observed_sensitivity\\results\\summary.json",
+    "sha256": "32ca2146b29a31ddf212988711705832e05366a0300300999f4535ed5fa0e490"
+  },
+  "metric_source": {
+    "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\coach-stage1-diagnostics-20261029\\coach_hypotheses\\stage1\\results\\pitch_metrics.csv",
+    "sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4"
+  },
+  "tracked_outputs": [
+    "comparison.json",
+    "comparison_manifest.json",
+    "comparison_verification.json"
+  ],
+  "local_ignored_csv": [
+    "comparison_pairs.csv",
+    "comparison_players.csv"
+  ]
+}

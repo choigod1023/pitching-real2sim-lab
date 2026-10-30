@@ -1,0 +1,71 @@
+{
+  "technical_validation": "PASS",
+  "agent_tasks": [
+    "fullbody_motion_comparison",
+    "motion_alignment_audit"
+  ],
+  "new_tests_passed": 19,
+  "full_suite": {
+    "tests_run": 319,
+    "passed": 307,
+    "errors": 10,
+    "skipped": 2,
+    "new_error_ids": []
+  },
+  "independent_joint_position_triplets_checked": 16184,
+  "maximum_position_difference_m": 2.220446049250313e-16,
+  "generated_videos": 2,
+  "decoded_frames_total": 578,
+  "representative_frames_visually_reviewed": [
+    "player_830_fp_fast_br.png",
+    "player_774_br_zero.png"
+  ],
+  "published_video_copies_match_render_hashes": true,
+  "protocol": {
+    "original_commit": "4664982b8a5638c76d03927a2e1a94c56a2a3e8f",
+    "repository_lf_sha256": "d6520f154091bef8f89e193e73e0769aee3f1b0eb7ad4e9a945d2cb9460dc11c",
+    "agent_execution_crlf_sha256": "df6a2c548778dba505728d0ecc2dd595cf2752fef75b06f370a283088621073c",
+    "same_text_after_newline_normalization": true,
+    "criteria_changed": false
+  },
+  "numerical_zero_diagnostic": {
+    "threshold": 1e-09,
+    "scope": "floating point only, not measurement tolerance; original strict-zero counts preserved",
+    "tiny_nonzero_cells": [
+      {
+        "cohort": "independent_event_stable",
+        "metric": "sequence_lag_ms",
+        "user": "1003",
+        "cutoff": "10",
+        "value": 2.2382096176443156e-13
+      },
+      {
+        "cohort": "independent_event_stable",
+        "metric": "sequence_lag_ms",
+        "user": "1596",
+        "cutoff": "10",
+        "value": 2.2026824808563106e-13
+      },
+      {
+        "cohort": "independent_event_stable",
+        "metric": "sequence_lag_ms",
+        "user": "789",
+        "cutoff": "10",
+        "value": 1.1013412404281553e-13
+      },
+      {
+        "cohort": "original_gap_at_least_1_kmh",
+        "metric": "sequence_lag_ms",
+        "user": "1584",
+        "cutoff": "20",
+        "value": -1.6697754290362354e-13
+      }
+    ]
+  },
+  "original_gate_changed": false,
+  "same_capacity_validated": false,
+  "intervention_effect_validated": false,
+  "coaching_recommendation_ready": false,
+  "own_test_model_xml_side_effect_restored": true,
+  "raw_source_media_uploaded": false
+}

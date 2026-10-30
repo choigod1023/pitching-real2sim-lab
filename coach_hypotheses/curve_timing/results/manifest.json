@@ -1,0 +1,22 @@
+{
+  "protocol_commit": "b784cac8d0431b1b8756229ad6007ee2cde052b9",
+  "protocol_sha256": "a93f8031c7ddaff46e09c64fbd6c8488b00164f46201d07e5db71e3dfe79c2c6",
+  "code_sha256": "1774c6666c182f13584d28b7cfdcc34c13dcd9850b2205895c5952de928b09e8",
+  "metrics_sha256": "c555d826ce78fc0ca20bb6a2be017ffc6df8fa84e8911001a3250ac3ea4b04f4",
+  "source_hashes": {
+    "full_sig/joint_velos.csv": "f97a1d199f312f844cbc9f01b6019147583d23659154f9dc3358a33695433297",
+    "full_sig/joint_angles.csv": "0cc950eb86d17ff2d7ce25b57ee7bff8da402d0d38922754be1a4ef2db2de2ce",
+    "full_sig/forces_moments.csv": "23920e256fbc42ba25278ba95086db297457e7c8054c98c66f27fa03874c1f9f",
+    "full_sig/landmarks.csv": "bddd0bfab9da2a02fb4235d400d446ce08452dc1a43f47a8f5d44f41a2002370"
+  },
+  "source_processed_hz": 20,
+  "additional_filter_hz": [
+    10,
+    20,
+    30
+  ],
+  "alpha": 10.0,
+  "bootstrap_seed": 20261030,
+  "source_path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data",
+  "data_license": "CC BY-NC-SA 4.0"
+}

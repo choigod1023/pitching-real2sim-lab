@@ -1,0 +1,13 @@
+{
+  "technical_validation": "PASS",
+  "independent_simpson_centroid_cases": 10773,
+  "maximum_centroid_lag_difference_ms": 1.3358203432289883e-12,
+  "independent_closed_form_predictions": 3996,
+  "maximum_prediction_difference_kmh": 4.440892098500626e-16,
+  "all_source_hashes_match_previous_audits": true,
+  "new_curve_tests_passed": 9,
+  "engineering_stability_improved": true,
+  "centroid_prediction_criteria_pass": false,
+  "actual_timing_accuracy_validated": false,
+  "athlete_effect_validated": false
+}
