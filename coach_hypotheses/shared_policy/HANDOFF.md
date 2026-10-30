@@ -4,6 +4,7 @@
 
 - 최신 원격 main 63fc06c2c37b9af55c48d341a5c5e39d8a6deb2e에서 고유 worktree/브랜치 codex/shared-pitch-policy-20261030를 만들고, 필요한 미병합 PR136 체인 6e876f7을 fast-forward했다.
 - 사전 계획 커밋: 37cdc0f. 실제 결과 계산 전에 PROTOCOL.md를 고정했다.
+- 구현 커밋: 2d8518a. PR https://github.com/choigod1023/pitching-real2sim-lab/pull/137 (PR136 위, OPEN/MERGEABLE 확인, 미병합). 채팅 첨부는 100개 한도로 실패해 링크로 보존했다. 기존 첨부는 제거하지 않았다.
 - 자료 확인: SOURCES.md에 원문 확인 구간, 초록만 확인한 논문, 403/reCAPTCHA/리다이렉트 오류, 이번 설계와 논문 결과의 차이를 기록했다. 원문을 다운로드한 척하거나 원문 파일 해시를 만들지 않았다.
 - 코드: policy.py/study.py. 같은 W를 모든 투구에 적용하며 실제 MuJoCo 힘 기반 RK4로 평가한다. 세 학습 투구와 두 제외 투구를 분리한다. 모두 이미 본 개발 자료라는 한계를 유지한다.
 - 결과: 93개 정책, 279쌍/558회 후보 적분. 학습 전체 통과 정책 0. 0 시작은 로컬 0 해, 다른 시작은 80회 예산 종료. W=0 fallback, 제외 2구는 상태 범위 밖 적용 보류. 개선 영상 미생성.
