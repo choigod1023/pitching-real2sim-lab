@@ -1,0 +1,4130 @@
+{
+  "peak_lag_ms_10": [
+    {
+      "heldout_user": "1000",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.661381594810889,
+      "beta": 0.04698812464199933
+    },
+    {
+      "heldout_user": "1002",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.638586608352767,
+      "beta": 0.04491804173403943
+    },
+    {
+      "heldout_user": "1003",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.646016248347781,
+      "beta": 0.04571472265030521
+    },
+    {
+      "heldout_user": "1005",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.644955766488058,
+      "beta": 0.04952555989066678
+    },
+    {
+      "heldout_user": "1017",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.661519942808932,
+      "beta": 0.0456848624933507
+    },
+    {
+      "heldout_user": "1027",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.61651059650534,
+      "beta": 0.0438181644670542
+    },
+    {
+      "heldout_user": "1029",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.662210404145725,
+      "beta": 0.0459027317770822
+    },
+    {
+      "heldout_user": "1062",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655891569957879,
+      "beta": 0.046447136792670686
+    },
+    {
+      "heldout_user": "1068",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.657222954598604,
+      "beta": 0.045012764008672365
+    },
+    {
+      "heldout_user": "1466",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.657540243333779,
+      "beta": 0.04409362870848551
+    },
+    {
+      "heldout_user": "1539",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 12.561854110526754,
+      "beta": 0.020118620083379786
+    },
+    {
+      "heldout_user": "1540",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.644830346655224,
+      "beta": 0.04307209082351802
+    },
+    {
+      "heldout_user": "1543",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66164068173506,
+      "beta": 0.04710466675401171
+    },
+    {
+      "heldout_user": "1547",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.658766805715693,
+      "beta": 0.04351265700586469
+    },
+    {
+      "heldout_user": "1552",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.654686644297326,
+      "beta": 0.04526492300333584
+    },
+    {
+      "heldout_user": "1557",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.656293188219546,
+      "beta": 0.04418796735618132
+    },
+    {
+      "heldout_user": "1558",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.654158512099508,
+      "beta": 0.04617581127542541
+    },
+    {
+      "heldout_user": "1562",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.65355950971113,
+      "beta": 0.04476413240152947
+    },
+    {
+      "heldout_user": "1584",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.64170052182453,
+      "beta": 0.04703018900339865
+    },
+    {
+      "heldout_user": "1587",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.659212114956503,
+      "beta": 0.04809525173414302
+    },
+    {
+      "heldout_user": "1589",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.632324129376649,
+      "beta": 0.041847218499988
+    },
+    {
+      "heldout_user": "1590",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.609667324131747,
+      "beta": 0.05368331770375293
+    },
+    {
+      "heldout_user": "1592",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.640092259163348,
+      "beta": 0.03809082900320897
+    },
+    {
+      "heldout_user": "1595",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.647053733365839,
+      "beta": 0.04516019069394801
+    },
+    {
+      "heldout_user": "1596",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.658639248359933,
+      "beta": 0.0464807390808748
+    },
+    {
+      "heldout_user": "1605",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655849293664286,
+      "beta": 0.04405833672381383
+    },
+    {
+      "heldout_user": "1606",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.65447750789995,
+      "beta": 0.04582959146329368
+    },
+    {
+      "heldout_user": "1607",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.659548351551921,
+      "beta": 0.04398290849805309
+    },
+    {
+      "heldout_user": "1612",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.6539842252497,
+      "beta": 0.04855575688421032
+    },
+    {
+      "heldout_user": "1615",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.642949666453163,
+      "beta": 0.042502552154403524
+    },
+    {
+      "heldout_user": "1616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.553613028150037,
+      "beta": 0.03997106280681764
+    },
+    {
+      "heldout_user": "1618",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 12.390575622672596,
+      "beta": 0.06578833152881253
+    },
+    {
+      "heldout_user": "1619",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.663351035233905,
+      "beta": 0.04652268565975234
+    },
+    {
+      "heldout_user": "1620",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.658744917260023,
+      "beta": 0.045901164146768494
+    },
+    {
+      "heldout_user": "1621",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.662190030376417,
+      "beta": 0.04741322429704403
+    },
+    {
+      "heldout_user": "1624",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.650116623999853,
+      "beta": 0.04742541049146347
+    },
+    {
+      "heldout_user": "1630",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.642349164335641,
+      "beta": 0.038380730685672375
+    },
+    {
+      "heldout_user": "1632",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.635329843141726,
+      "beta": 0.049092824897662264
+    },
+    {
+      "heldout_user": "1633",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.592135132386103,
+      "beta": 0.04385543399294195
+    },
+    {
+      "heldout_user": "1636",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.65868227079649,
+      "beta": 0.047742539114114135
+    },
+    {
+      "heldout_user": "1637",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.658138819537076,
+      "beta": 0.04490329447420096
+    },
+    {
+      "heldout_user": "1641",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66335355030198,
+      "beta": 0.046570378361417086
+    },
+    {
+      "heldout_user": "1644",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.661942524382058,
+      "beta": 0.045283451330518
+    },
+    {
+      "heldout_user": "1659",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.600756245398095,
+      "beta": 0.0428799091756905
+    },
+    {
+      "heldout_user": "1663",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.624105885098839,
+      "beta": 0.053864882597738854
+    },
+    {
+      "heldout_user": "1667",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.650211659550024,
+      "beta": 0.04582922229529721
+    },
+    {
+      "heldout_user": "1685",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.611207227843995,
+      "beta": 0.042166663691182354
+    },
+    {
+      "heldout_user": "1688",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.65937891349403,
+      "beta": 0.04624588606098073
+    },
+    {
+      "heldout_user": "1689",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.63811668831601,
+      "beta": 0.047480005677701775
+    },
+    {
+      "heldout_user": "1691",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.653606952665267,
+      "beta": 0.05075989983260436
+    },
+    {
+      "heldout_user": "1692",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.653439328545819,
+      "beta": 0.04215924773342359
+    },
+    {
+      "heldout_user": "1706",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.661513905834619,
+      "beta": 0.04493844084457483
+    },
+    {
+      "heldout_user": "1724",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.64197408898996,
+      "beta": 0.048380939801832515
+    },
+    {
+      "heldout_user": "1737",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655661313559765,
+      "beta": 0.04511630498800952
+    },
+    {
+      "heldout_user": "1756",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.65060601854509,
+      "beta": 0.04655216553497577
+    },
+    {
+      "heldout_user": "2",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.658787939363746,
+      "beta": 0.04828174129157685
+    },
+    {
+      "heldout_user": "283",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.659337402736153,
+      "beta": 0.04546863440772937
+    },
+    {
+      "heldout_user": "359",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.61636951982222,
+      "beta": 0.04489191834472966
+    },
+    {
+      "heldout_user": "511",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66335355030198,
+      "beta": 0.046570378361417135
+    },
+    {
+      "heldout_user": "538",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.661578803168721,
+      "beta": 0.04682303910264855
+    },
+    {
+      "heldout_user": "560",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66130864712052,
+      "beta": 0.04803062071175655
+    },
+    {
+      "heldout_user": "565",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.651726726377282,
+      "beta": 0.04940294178918349
+    },
+    {
+      "heldout_user": "572",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.652869240125769,
+      "beta": 0.04456259151758056
+    },
+    {
+      "heldout_user": "581",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.621221819234762,
+      "beta": 0.04399587642563712
+    },
+    {
+      "heldout_user": "610",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66335355030198,
+      "beta": 0.046570378361417135
+    },
+    {
+      "heldout_user": "616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655743350710756,
+      "beta": 0.04700018256210701
+    },
+    {
+      "heldout_user": "625",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.657222954598604,
+      "beta": 0.044763137693401324
+    },
+    {
+      "heldout_user": "628",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.63769588826842,
+      "beta": 0.04758440518618132
+    },
+    {
+      "heldout_user": "653",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.660603046768266,
+      "beta": 0.05163343723034263
+    },
+    {
+      "heldout_user": "675",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.660395510316738,
+      "beta": 0.04719704337914131
+    },
+    {
+      "heldout_user": "72",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.63614108326148,
+      "beta": 0.06466051981333071
+    },
+    {
+      "heldout_user": "738",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.52062240581216,
+      "beta": 0.05785246587881062
+    },
+    {
+      "heldout_user": "750",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.663349777699692,
+      "beta": 0.04657039122001469
+    },
+    {
+      "heldout_user": "774",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.657436829654886,
+      "beta": 0.04474041119756749
+    },
+    {
+      "heldout_user": "782",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.647568039839985,
+      "beta": 0.04328680378261773
+    },
+    {
+      "heldout_user": "787",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.654193117526995,
+      "beta": 0.0471230160166732
+    },
+    {
+      "heldout_user": "789",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.661381594810889,
+      "beta": 0.04647434455719012
+    },
+    {
+      "heldout_user": "822",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.638534955735954,
+      "beta": 0.05819042907084351
+    },
+    {
+      "heldout_user": "830",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.65193666006573,
+      "beta": 0.040549869852757076
+    },
+    {
+      "heldout_user": "870",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.648871911896377,
+      "beta": 0.05488674203528822
+    },
+    {
+      "heldout_user": "874",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.645595691905191,
+      "beta": 0.05496384938602965
+    },
+    {
+      "heldout_user": "884",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.638187240346461,
+      "beta": 0.04288831234935765
+    },
+    {
+      "heldout_user": "890",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.657575217612466,
+      "beta": 0.04556957685916332
+    },
+    {
+      "heldout_user": "894",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.649823331308905,
+      "beta": 0.04680753486876474
+    },
+    {
+      "heldout_user": "90",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655661313559765,
+      "beta": 0.04579477878988958
+    },
+    {
+      "heldout_user": "905",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66060304676827,
+      "beta": 0.04657975510633909
+    },
+    {
+      "heldout_user": "919",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.410649202312738,
+      "beta": 0.04443472212931708
+    },
+    {
+      "heldout_user": "920",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655743350710756,
+      "beta": 0.045384778452737445
+    },
+    {
+      "heldout_user": "922",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.66335355030198,
+      "beta": 0.046570378361417135
+    },
+    {
+      "heldout_user": "927",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.6494708682358,
+      "beta": 0.04936152033827905
+    },
+    {
+      "heldout_user": "949",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.58708250495902,
+      "beta": 0.06408589435872541
+    },
+    {
+      "heldout_user": "952",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.663351035233905,
+      "beta": 0.04664744283806825
+    },
+    {
+      "heldout_user": "956",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.655743350710756,
+      "beta": 0.04518285293906624
+    },
+    {
+      "heldout_user": "964",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.654581698996507,
+      "beta": 0.0470574204990034
+    },
+    {
+      "heldout_user": "967",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 10.722892618917646,
+      "beta": 0.012548217692782495
+    },
+    {
+      "heldout_user": "970",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.622303825419085,
+      "beta": 0.04334316190500526
+    },
+    {
+      "heldout_user": "976",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.634624536608827,
+      "beta": 0.051154517802531996
+    },
+    {
+      "heldout_user": "986",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.568366282418935,
+      "beta": 0.04617956782883416
+    }
+  ],
+  "centroid_lag_ms_10": [
+    {
+      "heldout_user": "1000",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.565341856106134,
+      "beta": 0.06257335005462357
+    },
+    {
+      "heldout_user": "1002",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.479074054169375,
+      "beta": 0.06494483148762774
+    },
+    {
+      "heldout_user": "1003",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.571776941538308,
+      "beta": 0.06075843920480868
+    },
+    {
+      "heldout_user": "1005",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.533177337099666,
+      "beta": 0.062055086419570575
+    },
+    {
+      "heldout_user": "1017",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.561364044486064,
+      "beta": 0.0573676888284705
+    },
+    {
+      "heldout_user": "1027",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.56503639836823,
+      "beta": 0.05997581053431036
+    },
+    {
+      "heldout_user": "1029",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.573017063628468,
+      "beta": 0.05899713070477293
+    },
+    {
+      "heldout_user": "1062",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.510688908690964,
+      "beta": 0.058309193948261936
+    },
+    {
+      "heldout_user": "1068",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.565928334540693,
+      "beta": 0.05732498939658621
+    },
+    {
+      "heldout_user": "1466",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.527997097584239,
+      "beta": 0.07020927465987299
+    },
+    {
+      "heldout_user": "1539",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.573130771653823,
+      "beta": 0.06245204855579089
+    },
+    {
+      "heldout_user": "1540",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.571490046519171,
+      "beta": 0.058197166262288276
+    },
+    {
+      "heldout_user": "1543",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.558146088747227,
+      "beta": 0.05969500763816798
+    },
+    {
+      "heldout_user": "1547",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.551004327269098,
+      "beta": 0.0639313530784345
+    },
+    {
+      "heldout_user": "1552",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.461676563868279,
+      "beta": 0.0595696741178075
+    },
+    {
+      "heldout_user": "1557",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.562290063492103,
+      "beta": 0.056561206647548934
+    },
+    {
+      "heldout_user": "1558",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.574038031494535,
+      "beta": 0.06081023943787814
+    },
+    {
+      "heldout_user": "1562",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.564511161783924,
+      "beta": 0.05716552987771045
+    },
+    {
+      "heldout_user": "1584",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.556292194133897,
+      "beta": 0.06208059813225796
+    },
+    {
+      "heldout_user": "1587",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55022966594643,
+      "beta": 0.0542941148029442
+    },
+    {
+      "heldout_user": "1589",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.508951101190055,
+      "beta": 0.06915488780004406
+    },
+    {
+      "heldout_user": "1590",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.56796057950584,
+      "beta": 0.059521368424035916
+    },
+    {
+      "heldout_user": "1592",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 7.956291435350906,
+      "beta": 0.03991136054702682
+    },
+    {
+      "heldout_user": "1595",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.564915087353349,
+      "beta": 0.05893621176235134
+    },
+    {
+      "heldout_user": "1596",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.567081682238832,
+      "beta": 0.060474045598537696
+    },
+    {
+      "heldout_user": "1605",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.560918988024136,
+      "beta": 0.05039729320950986
+    },
+    {
+      "heldout_user": "1606",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.524762160827173,
+      "beta": 0.060951656627492405
+    },
+    {
+      "heldout_user": "1607",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.558489589207415,
+      "beta": 0.05861333080840751
+    },
+    {
+      "heldout_user": "1612",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.561283292424669,
+      "beta": 0.0639453346411601
+    },
+    {
+      "heldout_user": "1615",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.530236843317994,
+      "beta": 0.060623004016985615
+    },
+    {
+      "heldout_user": "1616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.47861045007837,
+      "beta": 0.07175247703502238
+    },
+    {
+      "heldout_user": "1618",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.533048605512395,
+      "beta": 0.062345435364360775
+    },
+    {
+      "heldout_user": "1619",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.570704721610836,
+      "beta": 0.05543721529421965
+    },
+    {
+      "heldout_user": "1620",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.521574173025577,
+      "beta": 0.06440708475769275
+    },
+    {
+      "heldout_user": "1621",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.531763375104472,
+      "beta": 0.05719138798814617
+    },
+    {
+      "heldout_user": "1624",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.53252514822965,
+      "beta": 0.06083208839566168
+    },
+    {
+      "heldout_user": "1630",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.557833189718151,
+      "beta": 0.07751962142959742
+    },
+    {
+      "heldout_user": "1632",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.386556960696707,
+      "beta": 0.05709910009772048
+    },
+    {
+      "heldout_user": "1633",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.508865322547198,
+      "beta": 0.0561077455568247
+    },
+    {
+      "heldout_user": "1636",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.527816841095005,
+      "beta": 0.055505747120038744
+    },
+    {
+      "heldout_user": "1637",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.531045200240222,
+      "beta": 0.056235884545729725
+    },
+    {
+      "heldout_user": "1641",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.462682606472006,
+      "beta": 0.04929183752567882
+    },
+    {
+      "heldout_user": "1644",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.54420012253998,
+      "beta": 0.06811793400607423
+    },
+    {
+      "heldout_user": "1659",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554472689682273,
+      "beta": 0.06201368486322491
+    },
+    {
+      "heldout_user": "1663",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.567962868069053,
+      "beta": 0.0583966445514808
+    },
+    {
+      "heldout_user": "1667",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.464356373086096,
+      "beta": 0.06374376250580431
+    },
+    {
+      "heldout_user": "1685",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.574159242537611,
+      "beta": 0.0618675080641002
+    },
+    {
+      "heldout_user": "1688",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.572997049923202,
+      "beta": 0.05893525269189322
+    },
+    {
+      "heldout_user": "1689",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.565064295172393,
+      "beta": 0.06193434133988386
+    },
+    {
+      "heldout_user": "1691",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549176307001295,
+      "beta": 0.06002571801922812
+    },
+    {
+      "heldout_user": "1692",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.562979003601479,
+      "beta": 0.06910781643746794
+    },
+    {
+      "heldout_user": "1706",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549542299818501,
+      "beta": 0.06289838351700443
+    },
+    {
+      "heldout_user": "1724",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.469827669872284,
+      "beta": 0.07129764811699502
+    },
+    {
+      "heldout_user": "1737",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.550221868291365,
+      "beta": 0.055573646592218036
+    },
+    {
+      "heldout_user": "1756",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.551874208657704,
+      "beta": 0.05820377645448098
+    },
+    {
+      "heldout_user": "2",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.508867576483015,
+      "beta": 0.07109054761710962
+    },
+    {
+      "heldout_user": "283",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.566756135513563,
+      "beta": 0.05834691899340496
+    },
+    {
+      "heldout_user": "359",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.534299253470802,
+      "beta": 0.05669840458286652
+    },
+    {
+      "heldout_user": "511",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.485940899918745,
+      "beta": 0.024018472055713086
+    },
+    {
+      "heldout_user": "538",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.520907436127477,
+      "beta": 0.061935381875019124
+    },
+    {
+      "heldout_user": "560",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55965619809398,
+      "beta": 0.04973951890511573
+    },
+    {
+      "heldout_user": "565",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.530560167893064,
+      "beta": 0.05677763886142107
+    },
+    {
+      "heldout_user": "572",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.553262786525314,
+      "beta": 0.06603451796772615
+    },
+    {
+      "heldout_user": "581",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.415687290470075,
+      "beta": 0.06004756772845211
+    },
+    {
+      "heldout_user": "610",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.526754692140209,
+      "beta": 0.062051235704859965
+    },
+    {
+      "heldout_user": "616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.545629554845606,
+      "beta": 0.058305779116168834
+    },
+    {
+      "heldout_user": "625",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.542016507873623,
+      "beta": 0.060207750775758545
+    },
+    {
+      "heldout_user": "628",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.575196998655207,
+      "beta": 0.059919861893419184
+    },
+    {
+      "heldout_user": "653",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5243826036714,
+      "beta": 0.08816395823068054
+    },
+    {
+      "heldout_user": "675",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.563917481261017,
+      "beta": 0.05925446677965645
+    },
+    {
+      "heldout_user": "72",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.540157379656355,
+      "beta": 0.06405809935103683
+    },
+    {
+      "heldout_user": "738",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.571034559573253,
+      "beta": 0.05769261112049571
+    },
+    {
+      "heldout_user": "750",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.484364356222688,
+      "beta": 0.06076310503216641
+    },
+    {
+      "heldout_user": "774",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548321286361057,
+      "beta": 0.05206364440532511
+    },
+    {
+      "heldout_user": "782",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.539453392005218,
+      "beta": 0.0683057075778181
+    },
+    {
+      "heldout_user": "787",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.57332125365538,
+      "beta": 0.06079809148071481
+    },
+    {
+      "heldout_user": "789",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.568026935744664,
+      "beta": 0.05968541835760058
+    },
+    {
+      "heldout_user": "822",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.556202730675606,
+      "beta": 0.04736688668059052
+    },
+    {
+      "heldout_user": "830",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.536684856841052,
+      "beta": 0.04620377886966032
+    },
+    {
+      "heldout_user": "870",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.354265194831617,
+      "beta": 0.0453849830950423
+    },
+    {
+      "heldout_user": "874",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.560752865274157,
+      "beta": 0.058970717237251766
+    },
+    {
+      "heldout_user": "884",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.569871464419085,
+      "beta": 0.06001105220312729
+    },
+    {
+      "heldout_user": "890",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.538721492793181,
+      "beta": 0.06441148825157522
+    },
+    {
+      "heldout_user": "894",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.489510406374174,
+      "beta": 0.05637400571308612
+    },
+    {
+      "heldout_user": "90",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.568537516895502,
+      "beta": 0.058962380585418285
+    },
+    {
+      "heldout_user": "905",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.568457914977369,
+      "beta": 0.06016675668175816
+    },
+    {
+      "heldout_user": "919",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.573115782890236,
+      "beta": 0.05536767889165546
+    },
+    {
+      "heldout_user": "920",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.538323493658304,
+      "beta": 0.05564778889842036
+    },
+    {
+      "heldout_user": "922",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.575744105546098,
+      "beta": 0.060062712468096455
+    },
+    {
+      "heldout_user": "927",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.574239890879722,
+      "beta": 0.05863012622116225
+    },
+    {
+      "heldout_user": "949",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.529267971923334,
+      "beta": 0.07795149854246283
+    },
+    {
+      "heldout_user": "952",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.572086182924437,
+      "beta": 0.06395221180027516
+    },
+    {
+      "heldout_user": "956",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.515857709560386,
+      "beta": 0.05050096923466813
+    },
+    {
+      "heldout_user": "964",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.339994609548976,
+      "beta": 0.055907227511085206
+    },
+    {
+      "heldout_user": "967",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.562021265396073,
+      "beta": 0.06356826542037894
+    },
+    {
+      "heldout_user": "970",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.571708563325732,
+      "beta": 0.0608568755373234
+    },
+    {
+      "heldout_user": "976",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.564641178480931,
+      "beta": 0.05563375961806294
+    },
+    {
+      "heldout_user": "986",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.557774125616188,
+      "beta": 0.0621330794098541
+    }
+  ],
+  "peak_lag_ms_20": [
+    {
+      "heldout_user": "1000",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160036815336456,
+      "beta": -0.014214886153003245
+    },
+    {
+      "heldout_user": "1002",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.14685507775722,
+      "beta": -0.014037822759572981
+    },
+    {
+      "heldout_user": "1003",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.137731071941596,
+      "beta": -0.014609665408621287
+    },
+    {
+      "heldout_user": "1005",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.157604904513416,
+      "beta": -0.012591903596301314
+    },
+    {
+      "heldout_user": "1017",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160036815336456,
+      "beta": -0.014034314469780358
+    },
+    {
+      "heldout_user": "1027",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.122815860693345,
+      "beta": -0.015097238483171928
+    },
+    {
+      "heldout_user": "1029",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160948310218265,
+      "beta": -0.013894273667603407
+    },
+    {
+      "heldout_user": "1062",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154769817664477,
+      "beta": -0.012976955033915643
+    },
+    {
+      "heldout_user": "1068",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160107193762043,
+      "beta": -0.013903242381810696
+    },
+    {
+      "heldout_user": "1466",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149038921619313,
+      "beta": -0.010404407097010137
+    },
+    {
+      "heldout_user": "1539",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 12.771278316134946,
+      "beta": -0.08478381727339158
+    },
+    {
+      "heldout_user": "1540",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.124187900505897,
+      "beta": -0.018572257769092652
+    },
+    {
+      "heldout_user": "1543",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160297456444296,
+      "beta": -0.01290178631660593
+    },
+    {
+      "heldout_user": "1547",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.159256319415237,
+      "beta": -0.014881697281759608
+    },
+    {
+      "heldout_user": "1552",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160887157445702,
+      "beta": -0.013662790944612997
+    },
+    {
+      "heldout_user": "1557",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.157461452415552,
+      "beta": -0.015372278579182242
+    },
+    {
+      "heldout_user": "1558",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.100381170056838,
+      "beta": -0.017403954981297803
+    },
+    {
+      "heldout_user": "1562",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.14535405131711,
+      "beta": -0.01411622360675085
+    },
+    {
+      "heldout_user": "1584",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.155280364560522,
+      "beta": -0.013648014343935401
+    },
+    {
+      "heldout_user": "1587",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.159153657701632,
+      "beta": -0.01371438954820307
+    },
+    {
+      "heldout_user": "1589",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.854101455806013,
+      "beta": -0.03500942998994663
+    },
+    {
+      "heldout_user": "1590",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.080745914129754,
+      "beta": -0.003853593045019004
+    },
+    {
+      "heldout_user": "1592",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.10870548444241,
+      "beta": -0.023945279887994022
+    },
+    {
+      "heldout_user": "1595",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.152465208495062,
+      "beta": -0.014396782916908291
+    },
+    {
+      "heldout_user": "1596",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.152584672806666,
+      "beta": -0.01174404819005116
+    },
+    {
+      "heldout_user": "1605",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.159255591320598,
+      "beta": -0.01509096030748517
+    },
+    {
+      "heldout_user": "1606",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154708638198894,
+      "beta": -0.013266034570580896
+    },
+    {
+      "heldout_user": "1607",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.145216184048612,
+      "beta": -0.01980324015389666
+    },
+    {
+      "heldout_user": "1612",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.122949688495673,
+      "beta": -0.005767908352955377
+    },
+    {
+      "heldout_user": "1615",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.14685507775722,
+      "beta": -0.01690520868640402
+    },
+    {
+      "heldout_user": "1616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.136027064503832,
+      "beta": -0.01677842044130776
+    },
+    {
+      "heldout_user": "1618",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.026225191659647,
+      "beta": -0.014457729595415922
+    },
+    {
+      "heldout_user": "1619",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160512469612879,
+      "beta": -0.01278758624156366
+    },
+    {
+      "heldout_user": "1620",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.158094232713859,
+      "beta": -0.01538965117814635
+    },
+    {
+      "heldout_user": "1621",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149671349989537,
+      "beta": -0.011304272985033597
+    },
+    {
+      "heldout_user": "1624",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.134934544257597,
+      "beta": -0.010076413889318318
+    },
+    {
+      "heldout_user": "1630",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.977212431452559,
+      "beta": -0.04619180816853296
+    },
+    {
+      "heldout_user": "1632",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.026928569216803,
+      "beta": -0.009685421060839404
+    },
+    {
+      "heldout_user": "1633",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.012619619152774,
+      "beta": -0.018033178843888192
+    },
+    {
+      "heldout_user": "1636",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.157563398218295,
+      "beta": -0.012630185902425014
+    },
+    {
+      "heldout_user": "1637",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.145993567813415,
+      "beta": -0.013940150696954172
+    },
+    {
+      "heldout_user": "1641",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.162009705558868,
+      "beta": -0.01340575671250832
+    },
+    {
+      "heldout_user": "1644",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149398976950742,
+      "beta": -0.017042483337411436
+    },
+    {
+      "heldout_user": "1659",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149405412932337,
+      "beta": -0.015264102576972732
+    },
+    {
+      "heldout_user": "1663",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.773101805088542,
+      "beta": 0.02702693858948778
+    },
+    {
+      "heldout_user": "1667",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.134325282897276,
+      "beta": -0.013410731741093177
+    },
+    {
+      "heldout_user": "1685",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.06820316196015,
+      "beta": -0.020027469607077058
+    },
+    {
+      "heldout_user": "1688",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.151874428081202,
+      "beta": -0.011646860083504278
+    },
+    {
+      "heldout_user": "1689",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.160682948952568,
+      "beta": -0.012833458268740529
+    },
+    {
+      "heldout_user": "1691",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.14971142226347,
+      "beta": -0.010429423676790546
+    },
+    {
+      "heldout_user": "1692",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.155159466388936,
+      "beta": -0.013739510413782494
+    },
+    {
+      "heldout_user": "1706",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.16033677060841,
+      "beta": -0.014354790673306785
+    },
+    {
+      "heldout_user": "1724",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.152425144018414,
+      "beta": -0.010818518655367716
+    },
+    {
+      "heldout_user": "1737",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.155320420955904,
+      "beta": -0.015599862218406316
+    },
+    {
+      "heldout_user": "1756",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154810603827963,
+      "beta": -0.013501831445502287
+    },
+    {
+      "heldout_user": "2",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.15758451547137,
+      "beta": -0.010726399381790456
+    },
+    {
+      "heldout_user": "283",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154769817664477,
+      "beta": -0.014279680090270757
+    },
+    {
+      "heldout_user": "359",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.104060369281735,
+      "beta": -0.015721609161091388
+    },
+    {
+      "heldout_user": "511",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.150995132153797,
+      "beta": -0.023353979427591934
+    },
+    {
+      "heldout_user": "538",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154525826553513,
+      "beta": -0.012310928571292856
+    },
+    {
+      "heldout_user": "560",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.156301403114004,
+      "beta": -0.00894880243899742
+    },
+    {
+      "heldout_user": "565",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.147076610816184,
+      "beta": -0.012356747853362847
+    },
+    {
+      "heldout_user": "572",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149038921619313,
+      "beta": -0.014688345448093098
+    },
+    {
+      "heldout_user": "581",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.013982094967709,
+      "beta": -0.015752901947195443
+    },
+    {
+      "heldout_user": "610",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.162006065793085,
+      "beta": -0.013395139771179823
+    },
+    {
+      "heldout_user": "616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.156301403114004,
+      "beta": -0.012816181045687663
+    },
+    {
+      "heldout_user": "625",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.148686750711509,
+      "beta": -0.01758549084658253
+    },
+    {
+      "heldout_user": "628",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154667608964715,
+      "beta": -0.012828286238663675
+    },
+    {
+      "heldout_user": "653",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.162009705558868,
+      "beta": -0.013405756712508267
+    },
+    {
+      "heldout_user": "675",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.159255591320598,
+      "beta": -0.012974968313174226
+    },
+    {
+      "heldout_user": "72",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.14521618404861,
+      "beta": 0.0006262832737087505
+    },
+    {
+      "heldout_user": "738",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.136913125388322,
+      "beta": -0.009014271595193996
+    },
+    {
+      "heldout_user": "750",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.150590797958628,
+      "beta": -0.013416574571592524
+    },
+    {
+      "heldout_user": "774",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149024349203877,
+      "beta": -0.019891809664287052
+    },
+    {
+      "heldout_user": "782",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 12.88319358606184,
+      "beta": 0.03319163288735031
+    },
+    {
+      "heldout_user": "787",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.162009705558868,
+      "beta": -0.013405756712508286
+    },
+    {
+      "heldout_user": "789",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.156301403114004,
+      "beta": -0.013708653031847033
+    },
+    {
+      "heldout_user": "822",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154667608964715,
+      "beta": -0.012243862132037302
+    },
+    {
+      "heldout_user": "830",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.159155842001159,
+      "beta": -0.01638276561312799
+    },
+    {
+      "heldout_user": "870",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.128537448962485,
+      "beta": -0.0011908816348814922
+    },
+    {
+      "heldout_user": "874",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.910755437376073,
+      "beta": 0.008830690685369024
+    },
+    {
+      "heldout_user": "884",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.1377310719416,
+      "beta": -0.017063640956649247
+    },
+    {
+      "heldout_user": "890",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.152970496795415,
+      "beta": -0.016092364780537813
+    },
+    {
+      "heldout_user": "894",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154398124056549,
+      "beta": -0.012421196828235816
+    },
+    {
+      "heldout_user": "90",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.143627880497743,
+      "beta": -0.011381415689227108
+    },
+    {
+      "heldout_user": "905",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.136913125388322,
+      "beta": -0.01342955530595636
+    },
+    {
+      "heldout_user": "919",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.784077796040082,
+      "beta": -0.005124075028271365
+    },
+    {
+      "heldout_user": "920",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.16200727904845,
+      "beta": -0.013395138623621745
+    },
+    {
+      "heldout_user": "922",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.136913125388322,
+      "beta": -0.01872789575887117
+    },
+    {
+      "heldout_user": "927",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154398124056549,
+      "beta": -0.012222843052035023
+    },
+    {
+      "heldout_user": "949",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.31174106463243,
+      "beta": 0.0472182128469482
+    },
+    {
+      "heldout_user": "952",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.16200727904845,
+      "beta": -0.013352657080336321
+    },
+    {
+      "heldout_user": "956",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.149024349203877,
+      "beta": -0.016840962088500503
+    },
+    {
+      "heldout_user": "964",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.130787595728746,
+      "beta": -0.01239760150016589
+    },
+    {
+      "heldout_user": "967",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.162009705558868,
+      "beta": -0.013405756712508267
+    },
+    {
+      "heldout_user": "970",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.8653010743785,
+      "beta": -0.02513690579696964
+    },
+    {
+      "heldout_user": "976",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.009122334788334,
+      "beta": -0.019907942192418426
+    },
+    {
+      "heldout_user": "986",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.154667608964715,
+      "beta": -0.013607518380832179
+    }
+  ],
+  "centroid_lag_ms_20": [
+    {
+      "heldout_user": "1000",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.547616077056823,
+      "beta": 0.0785349557831708
+    },
+    {
+      "heldout_user": "1002",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.458130050934932,
+      "beta": 0.08120670506596848
+    },
+    {
+      "heldout_user": "1003",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.553875009987276,
+      "beta": 0.07672829040977494
+    },
+    {
+      "heldout_user": "1005",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.516423488453025,
+      "beta": 0.07814096408881602
+    },
+    {
+      "heldout_user": "1017",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.541985239010282,
+      "beta": 0.07310958659424464
+    },
+    {
+      "heldout_user": "1027",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548512413026884,
+      "beta": 0.07601494069014476
+    },
+    {
+      "heldout_user": "1029",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554790794190687,
+      "beta": 0.074831214279904
+    },
+    {
+      "heldout_user": "1062",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.492902950119019,
+      "beta": 0.07438713430794473
+    },
+    {
+      "heldout_user": "1068",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.547564860089203,
+      "beta": 0.07331327361441367
+    },
+    {
+      "heldout_user": "1466",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.514785591511778,
+      "beta": 0.08308893142927802
+    },
+    {
+      "heldout_user": "1539",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554799520485307,
+      "beta": 0.07849951844993615
+    },
+    {
+      "heldout_user": "1540",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.553935135451072,
+      "beta": 0.07434565715328274
+    },
+    {
+      "heldout_user": "1543",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.54320833974641,
+      "beta": 0.07557055880824877
+    },
+    {
+      "heldout_user": "1547",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.536397635613882,
+      "beta": 0.08043931615969775
+    },
+    {
+      "heldout_user": "1552",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.4444470743643,
+      "beta": 0.06911648383634715
+    },
+    {
+      "heldout_user": "1557",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.545519888094658,
+      "beta": 0.07267812257846419
+    },
+    {
+      "heldout_user": "1558",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555575574918885,
+      "beta": 0.07685765365669324
+    },
+    {
+      "heldout_user": "1562",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.546840051221828,
+      "beta": 0.07305001621044255
+    },
+    {
+      "heldout_user": "1584",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.538247435507058,
+      "beta": 0.07819153227438633
+    },
+    {
+      "heldout_user": "1587",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5303181066381,
+      "beta": 0.06998783906524557
+    },
+    {
+      "heldout_user": "1589",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.497400544527032,
+      "beta": 0.08061265528081897
+    },
+    {
+      "heldout_user": "1590",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.547244317134206,
+      "beta": 0.07668597871240004
+    },
+    {
+      "heldout_user": "1592",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 7.9269544708953985,
+      "beta": 0.05793837712027887
+    },
+    {
+      "heldout_user": "1595",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548397575999111,
+      "beta": 0.07450715359308456
+    },
+    {
+      "heldout_user": "1596",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549043934573211,
+      "beta": 0.07708761612937474
+    },
+    {
+      "heldout_user": "1605",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.541967553036496,
+      "beta": 0.06644963083189294
+    },
+    {
+      "heldout_user": "1606",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.50393652759006,
+      "beta": 0.07740239095675859
+    },
+    {
+      "heldout_user": "1607",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.544038641961333,
+      "beta": 0.0740036662182376
+    },
+    {
+      "heldout_user": "1612",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.54494547862934,
+      "beta": 0.07957270459619567
+    },
+    {
+      "heldout_user": "1615",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.51983225888348,
+      "beta": 0.07692009400612965
+    },
+    {
+      "heldout_user": "1616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.45871666772363,
+      "beta": 0.08793153759034057
+    },
+    {
+      "heldout_user": "1618",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.514515256541507,
+      "beta": 0.07822349569803769
+    },
+    {
+      "heldout_user": "1619",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.551647648115244,
+      "beta": 0.07095811076015002
+    },
+    {
+      "heldout_user": "1620",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.48531486858993,
+      "beta": 0.07965284698652329
+    },
+    {
+      "heldout_user": "1621",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.516721526376926,
+      "beta": 0.0733313906570039
+    },
+    {
+      "heldout_user": "1624",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.516284126686125,
+      "beta": 0.07666275415861132
+    },
+    {
+      "heldout_user": "1630",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.539175048826776,
+      "beta": 0.09441490895648028
+    },
+    {
+      "heldout_user": "1632",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.36972956390084,
+      "beta": 0.07302476794980291
+    },
+    {
+      "heldout_user": "1633",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.487922665862957,
+      "beta": 0.07249912686120658
+    },
+    {
+      "heldout_user": "1636",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.508234740816235,
+      "beta": 0.07104658084979928
+    },
+    {
+      "heldout_user": "1637",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.512221040579941,
+      "beta": 0.07301973208737729
+    },
+    {
+      "heldout_user": "1641",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.434142151440232,
+      "beta": 0.0652470668050528
+    },
+    {
+      "heldout_user": "1644",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.527987396764765,
+      "beta": 0.08378840295676705
+    },
+    {
+      "heldout_user": "1659",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.536145040415427,
+      "beta": 0.07807697808659811
+    },
+    {
+      "heldout_user": "1663",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549328477842714,
+      "beta": 0.07408695598394686
+    },
+    {
+      "heldout_user": "1667",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.437749473871225,
+      "beta": 0.08024086609135272
+    },
+    {
+      "heldout_user": "1685",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.556391593832316,
+      "beta": 0.07786038640800237
+    },
+    {
+      "heldout_user": "1688",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554637554171507,
+      "beta": 0.07477863649130637
+    },
+    {
+      "heldout_user": "1689",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548310144725264,
+      "beta": 0.07790009648604797
+    },
+    {
+      "heldout_user": "1691",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.532347694195009,
+      "beta": 0.07620433992793513
+    },
+    {
+      "heldout_user": "1692",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.543766986299504,
+      "beta": 0.08535024074214406
+    },
+    {
+      "heldout_user": "1706",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.530827478951178,
+      "beta": 0.07887578778247448
+    },
+    {
+      "heldout_user": "1724",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.448849698548186,
+      "beta": 0.08721687972382147
+    },
+    {
+      "heldout_user": "1737",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.531764929695063,
+      "beta": 0.07190320830642509
+    },
+    {
+      "heldout_user": "1756",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.53193915829239,
+      "beta": 0.0741900801982572
+    },
+    {
+      "heldout_user": "2",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.489433852057537,
+      "beta": 0.08799834149635315
+    },
+    {
+      "heldout_user": "283",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548866646170628,
+      "beta": 0.07448865089272572
+    },
+    {
+      "heldout_user": "359",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.519505567344128,
+      "beta": 0.07307468456775824
+    },
+    {
+      "heldout_user": "511",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.46343316412732,
+      "beta": 0.039263211022524336
+    },
+    {
+      "heldout_user": "538",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.504572437099528,
+      "beta": 0.07783253603597672
+    },
+    {
+      "heldout_user": "560",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.542669738323486,
+      "beta": 0.06634477148551256
+    },
+    {
+      "heldout_user": "565",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.512046706104565,
+      "beta": 0.07182280882857583
+    },
+    {
+      "heldout_user": "572",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.538466908798037,
+      "beta": 0.08136771547562041
+    },
+    {
+      "heldout_user": "581",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.401284898375602,
+      "beta": 0.07647420162756315
+    },
+    {
+      "heldout_user": "610",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.501885646860137,
+      "beta": 0.07829880438617812
+    },
+    {
+      "heldout_user": "616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.525113509771582,
+      "beta": 0.07427737420277326
+    },
+    {
+      "heldout_user": "625",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.519819506342614,
+      "beta": 0.07586325442687837
+    },
+    {
+      "heldout_user": "628",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55603540538435,
+      "beta": 0.07582365716432188
+    },
+    {
+      "heldout_user": "653",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.50737041769111,
+      "beta": 0.10397413565737516
+    },
+    {
+      "heldout_user": "675",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.540830947622783,
+      "beta": 0.07492232286884629
+    },
+    {
+      "heldout_user": "72",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.513744341662907,
+      "beta": 0.0803047074631912
+    },
+    {
+      "heldout_user": "738",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554782286756513,
+      "beta": 0.07420107550532792
+    },
+    {
+      "heldout_user": "750",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.515702464832419,
+      "beta": 0.07647481833617484
+    },
+    {
+      "heldout_user": "774",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.527230630371545,
+      "beta": 0.06729917236016955
+    },
+    {
+      "heldout_user": "782",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.523823055440293,
+      "beta": 0.08393712222202637
+    },
+    {
+      "heldout_user": "787",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554751652445423,
+      "beta": 0.07689916834094827
+    },
+    {
+      "heldout_user": "789",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549674310373026,
+      "beta": 0.07570766083485128
+    },
+    {
+      "heldout_user": "822",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.537154551121878,
+      "beta": 0.06326284101913836
+    },
+    {
+      "heldout_user": "830",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.53169419349036,
+      "beta": 0.06476349770210055
+    },
+    {
+      "heldout_user": "870",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.323090705347145,
+      "beta": 0.06094827656057587
+    },
+    {
+      "heldout_user": "874",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.544581849118034,
+      "beta": 0.07469591141471842
+    },
+    {
+      "heldout_user": "884",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55197290114477,
+      "beta": 0.07655735363616675
+    },
+    {
+      "heldout_user": "890",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.518512511439734,
+      "beta": 0.08016514647739724
+    },
+    {
+      "heldout_user": "894",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.471950993058737,
+      "beta": 0.07250760326729828
+    },
+    {
+      "heldout_user": "90",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.54886835526474,
+      "beta": 0.0748997018266681
+    },
+    {
+      "heldout_user": "905",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.553460566857625,
+      "beta": 0.0761372305294005
+    },
+    {
+      "heldout_user": "919",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555153236659082,
+      "beta": 0.0715602787807153
+    },
+    {
+      "heldout_user": "920",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.521496437955378,
+      "beta": 0.07177213368908929
+    },
+    {
+      "heldout_user": "922",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.557605034106007,
+      "beta": 0.07644484637182075
+    },
+    {
+      "heldout_user": "927",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.556756488652754,
+      "beta": 0.07494572791223354
+    },
+    {
+      "heldout_user": "949",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5152767868343,
+      "beta": 0.09309750094119795
+    },
+    {
+      "heldout_user": "952",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5540143310288,
+      "beta": 0.07994588162711884
+    },
+    {
+      "heldout_user": "956",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.495480676033067,
+      "beta": 0.0664198037458604
+    },
+    {
+      "heldout_user": "964",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.320448761340801,
+      "beta": 0.07281282972193794
+    },
+    {
+      "heldout_user": "967",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.543987227639576,
+      "beta": 0.07957628701477547
+    },
+    {
+      "heldout_user": "970",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554282369932816,
+      "beta": 0.07667845083405571
+    },
+    {
+      "heldout_user": "976",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.545759732065077,
+      "beta": 0.0714457947277358
+    },
+    {
+      "heldout_user": "986",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.542659691879734,
+      "beta": 0.07713531807619839
+    }
+  ],
+  "peak_lag_ms_30": [
+    {
+      "heldout_user": "1000",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.487673632616909,
+      "beta": -0.053900151302716755
+    },
+    {
+      "heldout_user": "1002",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.476612255824847,
+      "beta": -0.054783584609356915
+    },
+    {
+      "heldout_user": "1003",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.452830255887534,
+      "beta": -0.05546274859135973
+    },
+    {
+      "heldout_user": "1005",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.483370248174433,
+      "beta": -0.05310269542064738
+    },
+    {
+      "heldout_user": "1017",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.485681044619902,
+      "beta": -0.054797049406432013
+    },
+    {
+      "heldout_user": "1027",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.453560186398903,
+      "beta": -0.056261221525327185
+    },
+    {
+      "heldout_user": "1029",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.4865601892526,
+      "beta": -0.05438465542764211
+    },
+    {
+      "heldout_user": "1062",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.483289814430872,
+      "beta": -0.05361703763286555
+    },
+    {
+      "heldout_user": "1068",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.485816264616695,
+      "beta": -0.054377757588467926
+    },
+    {
+      "heldout_user": "1466",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.465441695172187,
+      "beta": -0.05253529693083762
+    },
+    {
+      "heldout_user": "1539",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.096063520198953,
+      "beta": -0.1291472258619669
+    },
+    {
+      "heldout_user": "1540",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.450982677439013,
+      "beta": -0.058722342903337735
+    },
+    {
+      "heldout_user": "1543",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.486002249357298,
+      "beta": -0.05339830282285507
+    },
+    {
+      "heldout_user": "1547",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.486578691993241,
+      "beta": -0.0533536100354437
+    },
+    {
+      "heldout_user": "1552",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48607982136869,
+      "beta": -0.0542172193177082
+    },
+    {
+      "heldout_user": "1557",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.480937819680635,
+      "beta": -0.05619432279445806
+    },
+    {
+      "heldout_user": "1558",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.416797309858364,
+      "beta": -0.05858859764363949
+    },
+    {
+      "heldout_user": "1562",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.471395176364833,
+      "beta": -0.05462595513370149
+    },
+    {
+      "heldout_user": "1584",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.478425945848384,
+      "beta": -0.054138881398655136
+    },
+    {
+      "heldout_user": "1587",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.478346196685074,
+      "beta": -0.0529403651816255
+    },
+    {
+      "heldout_user": "1589",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.123279507783689,
+      "beta": -0.07852237399272795
+    },
+    {
+      "heldout_user": "1590",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.417547775152233,
+      "beta": -0.044394350341169446
+    },
+    {
+      "heldout_user": "1592",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.42555269120512,
+      "beta": -0.0637053968744912
+    },
+    {
+      "heldout_user": "1595",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.477847754461795,
+      "beta": -0.05529003345179636
+    },
+    {
+      "heldout_user": "1596",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.479599347041995,
+      "beta": -0.051730840273543244
+    },
+    {
+      "heldout_user": "1605",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.484983811304227,
+      "beta": -0.05554107463519743
+    },
+    {
+      "heldout_user": "1606",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.470090493854677,
+      "beta": -0.05388526502752613
+    },
+    {
+      "heldout_user": "1607",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.471260415280788,
+      "beta": -0.06018521476145511
+    },
+    {
+      "heldout_user": "1612",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.43323496232439,
+      "beta": -0.04527702461437438
+    },
+    {
+      "heldout_user": "1615",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.479502516562773,
+      "beta": -0.056216513160213956
+    },
+    {
+      "heldout_user": "1616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.46201530209182,
+      "beta": -0.057256202449381254
+    },
+    {
+      "heldout_user": "1618",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.40131771366892,
+      "beta": -0.05475460422554826
+    },
+    {
+      "heldout_user": "1619",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.486212428218213,
+      "beta": -0.05328608710496275
+    },
+    {
+      "heldout_user": "1620",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48109800093607,
+      "beta": -0.05471260544054154
+    },
+    {
+      "heldout_user": "1621",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48384857059088,
+      "beta": -0.053842387416432325
+    },
+    {
+      "heldout_user": "1624",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.151420216998554,
+      "beta": -0.043700863757522496
+    },
+    {
+      "heldout_user": "1630",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.449335232452519,
+      "beta": -0.06248502350722357
+    },
+    {
+      "heldout_user": "1632",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.318331316317858,
+      "beta": -0.04957603135700483
+    },
+    {
+      "heldout_user": "1633",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.346166316215232,
+      "beta": -0.05959066358552632
+    },
+    {
+      "heldout_user": "1636",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.478425945848384,
+      "beta": -0.05251830930249847
+    },
+    {
+      "heldout_user": "1637",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.427872152377866,
+      "beta": -0.053743058873506756
+    },
+    {
+      "heldout_user": "1641",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.487676004582157,
+      "beta": -0.053886300278050525
+    },
+    {
+      "heldout_user": "1644",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.47534899483728,
+      "beta": -0.057475346496786754
+    },
+    {
+      "heldout_user": "1659",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.475355285896123,
+      "beta": -0.05573699315369465
+    },
+    {
+      "heldout_user": "1663",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.094176370406938,
+      "beta": -0.01404511482830233
+    },
+    {
+      "heldout_user": "1667",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.476645132610406,
+      "beta": -0.0537472746881081
+    },
+    {
+      "heldout_user": "1685",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.399734151803344,
+      "beta": -0.06001239814777872
+    },
+    {
+      "heldout_user": "1688",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.466777914595925,
+      "beta": -0.05390488124060922
+    },
+    {
+      "heldout_user": "1689",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.482293609048742,
+      "beta": -0.05276392139244079
+    },
+    {
+      "heldout_user": "1691",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.47505616082737,
+      "beta": -0.05021756548104366
+    },
+    {
+      "heldout_user": "1692",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.480979822936785,
+      "beta": -0.0527770175568235
+    },
+    {
+      "heldout_user": "1706",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.486040679580002,
+      "beta": -0.05481853120612348
+    },
+    {
+      "heldout_user": "1724",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48384857059088,
+      "beta": -0.05206146395063684
+    },
+    {
+      "heldout_user": "1737",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.480638809929708,
+      "beta": -0.05558578414032775
+    },
+    {
+      "heldout_user": "1756",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.478445883070577,
+      "beta": -0.05412426327220369
+    },
+    {
+      "heldout_user": "2",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48109800093607,
+      "beta": -0.04992033625133942
+    },
+    {
+      "heldout_user": "283",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.477847754461795,
+      "beta": -0.05526510057770742
+    },
+    {
+      "heldout_user": "359",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.43103447483047,
+      "beta": -0.05630735128300279
+    },
+    {
+      "heldout_user": "511",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.484886305093234,
+      "beta": -0.0588392955709394
+    },
+    {
+      "heldout_user": "538",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.480360440540574,
+      "beta": -0.05283640296068321
+    },
+    {
+      "heldout_user": "560",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.482096068221944,
+      "beta": -0.04954508960473846
+    },
+    {
+      "heldout_user": "565",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.438669204081089,
+      "beta": -0.05419940876955496
+    },
+    {
+      "heldout_user": "572",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.474997047284681,
+      "beta": -0.05517519427958675
+    },
+    {
+      "heldout_user": "581",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.320068584373757,
+      "beta": -0.05632249894257091
+    },
+    {
+      "heldout_user": "610",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.476909212385165,
+      "beta": -0.054497792098538625
+    },
+    {
+      "heldout_user": "616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.47465280699891,
+      "beta": -0.05296495730485078
+    },
+    {
+      "heldout_user": "625",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.452830255887536,
+      "beta": -0.05976070748111236
+    },
+    {
+      "heldout_user": "628",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.471326311826694,
+      "beta": -0.05308453050620573
+    },
+    {
+      "heldout_user": "653",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.487676004582157,
+      "beta": -0.053886300278050456
+    },
+    {
+      "heldout_user": "675",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48607982136869,
+      "beta": -0.053381404408179185
+    },
+    {
+      "heldout_user": "72",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.44750088378407,
+      "beta": -0.03248637130954619
+    },
+    {
+      "heldout_user": "738",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.463144534580941,
+      "beta": -0.04966200645742506
+    },
+    {
+      "heldout_user": "750",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.462549337282594,
+      "beta": -0.05397992022758455
+    },
+    {
+      "heldout_user": "774",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.463944032522559,
+      "beta": -0.06234565568282431
+    },
+    {
+      "heldout_user": "782",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.28456355572058,
+      "beta": -0.012697844446493335
+    },
+    {
+      "heldout_user": "787",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.483956285860625,
+      "beta": -0.05351245803159042
+    },
+    {
+      "heldout_user": "789",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.482096068221944,
+      "beta": -0.054197860813322445
+    },
+    {
+      "heldout_user": "822",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.48229301583708,
+      "beta": -0.05556801092501929
+    },
+    {
+      "heldout_user": "830",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.476513981089282,
+      "beta": -0.059746055588836666
+    },
+    {
+      "heldout_user": "870",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.4455291600819,
+      "beta": -0.03926689597557853
+    },
+    {
+      "heldout_user": "874",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.283387606307803,
+      "beta": -0.0345339245023228
+    },
+    {
+      "heldout_user": "884",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.47465280699891,
+      "beta": -0.056456330147672255
+    },
+    {
+      "heldout_user": "890",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.482659022815318,
+      "beta": -0.05514773500402895
+    },
+    {
+      "heldout_user": "894",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.463944032522559,
+      "beta": -0.05320174634524556
+    },
+    {
+      "heldout_user": "90",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.456633098679237,
+      "beta": -0.05103792773897422
+    },
+    {
+      "heldout_user": "905",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.463144534580943,
+      "beta": -0.053977698808680266
+    },
+    {
+      "heldout_user": "919",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.259650617698583,
+      "beta": -0.049340558565765524
+    },
+    {
+      "heldout_user": "920",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.485880315753567,
+      "beta": -0.05475476385788138
+    },
+    {
+      "heldout_user": "922",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.476909212385168,
+      "beta": -0.05735486913432093
+    },
+    {
+      "heldout_user": "927",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.470929740695217,
+      "beta": -0.052202523831610864
+    },
+    {
+      "heldout_user": "949",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 13.657696997855215,
+      "beta": 0.0027619458916156355
+    },
+    {
+      "heldout_user": "952",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.487673632616909,
+      "beta": -0.05383440084207629
+    },
+    {
+      "heldout_user": "956",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.474982803021431,
+      "beta": -0.0572793762022477
+    },
+    {
+      "heldout_user": "964",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.457157230555506,
+      "beta": -0.05411969419862245
+    },
+    {
+      "heldout_user": "967",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.487676004582157,
+      "beta": -0.053886300278050456
+    },
+    {
+      "heldout_user": "970",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.148759492938007,
+      "beta": -0.06728502754601663
+    },
+    {
+      "heldout_user": "976",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.372311581864118,
+      "beta": -0.05934202898984459
+    },
+    {
+      "heldout_user": "986",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 14.480499032618898,
+      "beta": -0.054103432536398086
+    }
+  ],
+  "centroid_lag_ms_30": [
+    {
+      "heldout_user": "1000",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548545312591767,
+      "beta": 0.08068248011854226
+    },
+    {
+      "heldout_user": "1002",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.458932628781147,
+      "beta": 0.08335973298953192
+    },
+    {
+      "heldout_user": "1003",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554867330080205,
+      "beta": 0.07886620533527601
+    },
+    {
+      "heldout_user": "1005",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.517508582685764,
+      "beta": 0.08026303816430494
+    },
+    {
+      "heldout_user": "1017",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.542846178872868,
+      "beta": 0.07521894343490623
+    },
+    {
+      "heldout_user": "1027",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549578166107578,
+      "beta": 0.07814861731259856
+    },
+    {
+      "heldout_user": "1029",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555693562437444,
+      "beta": 0.07698722736477197
+    },
+    {
+      "heldout_user": "1062",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.49394466669585,
+      "beta": 0.07654240575599063
+    },
+    {
+      "heldout_user": "1068",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.548985292397276,
+      "beta": 0.07551166824279508
+    },
+    {
+      "heldout_user": "1466",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.51571168942275,
+      "beta": 0.08515715581489126
+    },
+    {
+      "heldout_user": "1539",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555735058259884,
+      "beta": 0.08068392359615978
+    },
+    {
+      "heldout_user": "1540",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.554956530922292,
+      "beta": 0.07649116947006271
+    },
+    {
+      "heldout_user": "1543",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.544330728596396,
+      "beta": 0.07770489084266088
+    },
+    {
+      "heldout_user": "1547",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.537428612026082,
+      "beta": 0.08259642475794131
+    },
+    {
+      "heldout_user": "1552",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.444188200411295,
+      "beta": 0.07080095845667247
+    },
+    {
+      "heldout_user": "1557",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.546510299177086,
+      "beta": 0.07481282913992521
+    },
+    {
+      "heldout_user": "1558",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.556506950078942,
+      "beta": 0.0790031450859569
+    },
+    {
+      "heldout_user": "1562",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.547709386852858,
+      "beta": 0.07519231122046151
+    },
+    {
+      "heldout_user": "1584",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.539375380206913,
+      "beta": 0.08033162901057093
+    },
+    {
+      "heldout_user": "1587",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.530931032475479,
+      "beta": 0.07208541054858536
+    },
+    {
+      "heldout_user": "1589",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.49631575756868,
+      "beta": 0.08231052667615586
+    },
+    {
+      "heldout_user": "1590",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5477692736931,
+      "beta": 0.07881345095368314
+    },
+    {
+      "heldout_user": "1592",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 7.926246839216969,
+      "beta": 0.06011448324146989
+    },
+    {
+      "heldout_user": "1595",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549557335200387,
+      "beta": 0.07669659386936165
+    },
+    {
+      "heldout_user": "1596",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.550022032347266,
+      "beta": 0.07928242107853678
+    },
+    {
+      "heldout_user": "1605",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.542617460777603,
+      "beta": 0.06848656448136455
+    },
+    {
+      "heldout_user": "1606",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.504656507770937,
+      "beta": 0.07957282359520682
+    },
+    {
+      "heldout_user": "1607",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.54482014244135,
+      "beta": 0.07603962052245104
+    },
+    {
+      "heldout_user": "1612",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.545925001020782,
+      "beta": 0.08173195273941489
+    },
+    {
+      "heldout_user": "1615",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.520591197963821,
+      "beta": 0.07903525402744327
+    },
+    {
+      "heldout_user": "1616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.459548825402493,
+      "beta": 0.09010063129554688
+    },
+    {
+      "heldout_user": "1618",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.515563319957375,
+      "beta": 0.08036378261699413
+    },
+    {
+      "heldout_user": "1619",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.552676865200723,
+      "beta": 0.07309346695426844
+    },
+    {
+      "heldout_user": "1620",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.486325686767733,
+      "beta": 0.08173036846578749
+    },
+    {
+      "heldout_user": "1621",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.517576445291098,
+      "beta": 0.0754945303588657
+    },
+    {
+      "heldout_user": "1624",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.517521672899806,
+      "beta": 0.07877513247780829
+    },
+    {
+      "heldout_user": "1630",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.539678823028096,
+      "beta": 0.09678114802084739
+    },
+    {
+      "heldout_user": "1632",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.370415806881441,
+      "beta": 0.07519079880510793
+    },
+    {
+      "heldout_user": "1633",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.488184451245939,
+      "beta": 0.07469780314589455
+    },
+    {
+      "heldout_user": "1636",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.509160752688375,
+      "beta": 0.07315604510282253
+    },
+    {
+      "heldout_user": "1637",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.512811125469847,
+      "beta": 0.07519255789587771
+    },
+    {
+      "heldout_user": "1641",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.43408709447483,
+      "beta": 0.06739411644851524
+    },
+    {
+      "heldout_user": "1644",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.529125733908389,
+      "beta": 0.08588400859782384
+    },
+    {
+      "heldout_user": "1659",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.537090313995904,
+      "beta": 0.0802109317063608
+    },
+    {
+      "heldout_user": "1663",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55030915534748,
+      "beta": 0.07623564184287969
+    },
+    {
+      "heldout_user": "1667",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.441100702843643,
+      "beta": 0.08232733995953824
+    },
+    {
+      "heldout_user": "1685",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.557349135077164,
+      "beta": 0.08000155504313493
+    },
+    {
+      "heldout_user": "1688",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555672967670361,
+      "beta": 0.07692955483074781
+    },
+    {
+      "heldout_user": "1689",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549335226436057,
+      "beta": 0.0800220611642187
+    },
+    {
+      "heldout_user": "1691",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.53358993907685,
+      "beta": 0.07833624232796639
+    },
+    {
+      "heldout_user": "1692",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.544751694540588,
+      "beta": 0.08748671732053637
+    },
+    {
+      "heldout_user": "1706",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.53181991802021,
+      "beta": 0.08104356596300205
+    },
+    {
+      "heldout_user": "1724",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.450211083419847,
+      "beta": 0.08936383047323142
+    },
+    {
+      "heldout_user": "1737",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.532771264342635,
+      "beta": 0.07405684046403782
+    },
+    {
+      "heldout_user": "1756",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.532724404139772,
+      "beta": 0.07635382618434348
+    },
+    {
+      "heldout_user": "2",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.490462905269332,
+      "beta": 0.09017390836507794
+    },
+    {
+      "heldout_user": "283",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549847932381278,
+      "beta": 0.07663398651827143
+    },
+    {
+      "heldout_user": "359",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.521175069789669,
+      "beta": 0.07527485005072009
+    },
+    {
+      "heldout_user": "511",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.463241207967398,
+      "beta": 0.04119699029750451
+    },
+    {
+      "heldout_user": "538",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.505473163112045,
+      "beta": 0.07997666941951657
+    },
+    {
+      "heldout_user": "560",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.543694709539338,
+      "beta": 0.06846349563413645
+    },
+    {
+      "heldout_user": "565",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.513036377426095,
+      "beta": 0.07393617395732335
+    },
+    {
+      "heldout_user": "572",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.539599038857261,
+      "beta": 0.08346297660574546
+    },
+    {
+      "heldout_user": "581",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.403185503040739,
+      "beta": 0.07867424590137827
+    },
+    {
+      "heldout_user": "610",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.502887476908592,
+      "beta": 0.08044955527832383
+    },
+    {
+      "heldout_user": "616",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.525424468298269,
+      "beta": 0.0764062621652319
+    },
+    {
+      "heldout_user": "625",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.52116390989826,
+      "beta": 0.07799124198547062
+    },
+    {
+      "heldout_user": "628",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.556891246485,
+      "beta": 0.0779449987049429
+    },
+    {
+      "heldout_user": "653",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.509335763754999,
+      "beta": 0.10584473417364881
+    },
+    {
+      "heldout_user": "675",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.541550351697728,
+      "beta": 0.07702970093683749
+    },
+    {
+      "heldout_user": "72",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.514109380285978,
+      "beta": 0.0822572308292853
+    },
+    {
+      "heldout_user": "738",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555817590449402,
+      "beta": 0.07635252242720529
+    },
+    {
+      "heldout_user": "750",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5204140883658,
+      "beta": 0.07858808621004519
+    },
+    {
+      "heldout_user": "774",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.528201050573852,
+      "beta": 0.0694484258609034
+    },
+    {
+      "heldout_user": "782",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.524801642589265,
+      "beta": 0.08606760270453674
+    },
+    {
+      "heldout_user": "787",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.5557372526509,
+      "beta": 0.07904296801771665
+    },
+    {
+      "heldout_user": "789",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.550830467273856,
+      "beta": 0.07785147803103674
+    },
+    {
+      "heldout_user": "822",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.538134303996497,
+      "beta": 0.06538748814596254
+    },
+    {
+      "heldout_user": "830",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.533600413595417,
+      "beta": 0.0671052500516073
+    },
+    {
+      "heldout_user": "870",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.324099975731528,
+      "beta": 0.0631425848041128
+    },
+    {
+      "heldout_user": "874",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.544871760326156,
+      "beta": 0.07667950179176992
+    },
+    {
+      "heldout_user": "884",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55300730362544,
+      "beta": 0.07873389580254746
+    },
+    {
+      "heldout_user": "890",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.518889566929726,
+      "beta": 0.08232076197412258
+    },
+    {
+      "heldout_user": "894",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.472888459238447,
+      "beta": 0.07466227918568305
+    },
+    {
+      "heldout_user": "90",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.549897669107102,
+      "beta": 0.07705505855880519
+    },
+    {
+      "heldout_user": "905",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.555850594239791,
+      "beta": 0.07826259114115247
+    },
+    {
+      "heldout_user": "919",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55614519089879,
+      "beta": 0.07369164769501671
+    },
+    {
+      "heldout_user": "920",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.522317658037073,
+      "beta": 0.07391352884372504
+    },
+    {
+      "heldout_user": "922",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.558594933199196,
+      "beta": 0.07859210354267629
+    },
+    {
+      "heldout_user": "927",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.557728602783019,
+      "beta": 0.07706361697736847
+    },
+    {
+      "heldout_user": "949",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.516472862202603,
+      "beta": 0.09519100736039834
+    },
+    {
+      "heldout_user": "952",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55497472322936,
+      "beta": 0.08209637647239415
+    },
+    {
+      "heldout_user": "956",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.496310993862386,
+      "beta": 0.06856490715247585
+    },
+    {
+      "heldout_user": "964",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.322404137650096,
+      "beta": 0.07505442017049842
+    },
+    {
+      "heldout_user": "967",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.545023483251496,
+      "beta": 0.08171096887095126
+    },
+    {
+      "heldout_user": "970",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.55539484079209,
+      "beta": 0.07878514383168893
+    },
+    {
+      "heldout_user": "976",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.546867989801365,
+      "beta": 0.07359793478629527
+    },
+    {
+      "heldout_user": "986",
+      "train_players": 97,
+      "heldout_absent_from_train": true,
+      "scale": 8.54377970120866,
+      "beta": 0.07911564351924814
+    }
+  ]
+}

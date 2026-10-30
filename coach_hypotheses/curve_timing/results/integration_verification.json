@@ -1,0 +1,28 @@
+{
+  "technical_validation": "PASS",
+  "full_suite": {
+    "tests_run": 355,
+    "passed": 343,
+    "errors": 10,
+    "skipped": 2,
+    "new_error_ids": []
+  },
+  "new_tests_passed": {
+    "curve": 9,
+    "mlb": 18
+  },
+  "independent_mlb_pitches_checked": 256,
+  "independent_raw_numeric_values_checked": 6400,
+  "mlb_agent_and_parent_aggregate_equal": true,
+  "feed_sha256": "7f40e379d47c491aa1318190a030fe6ba5ff9f609dd9f42ebc2c852a692d0fc7",
+  "raw_json_and_pitch_level_data_committed": false,
+  "unit_conversion_performed": false,
+  "conditional_pitch_quality_study_ready": false,
+  "code_sha256": {
+    "curve_timing/compare.py": "1774c6666c182f13584d28b7cfdcc34c13dcd9850b2205895c5952de928b09e8",
+    "pitch_quality/mlb_feed.py": "2d3e0904ee0be909188f41cb520d1bf3d02365787d164752e9700e013cfcdbf6"
+  },
+  "actual_athlete_effect_validated": false,
+  "real2sim_gate_changed": false,
+  "own_model_xml_test_side_effect_restored": true
+}
