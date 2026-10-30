@@ -1,0 +1,58 @@
+{
+  "tests_run": 490,
+  "passed": 478,
+  "failures": [],
+  "errors": [
+    {
+      "test": "unittest.loader._FailedTest.test_anatomical_shoulder",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_applied_path_forces",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_directional_shoulder",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_elbow_moment_validation",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_elbow_registration_audit",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_muscle_equilibrium_mode",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "test_research_audit_gate.ResearchAuditGateTests.test_actual_wrapped_path_fails_consistency_gate",
+      "last_line": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\user\\\\Documents\\\\Codex\\\\2026-10-20\\\\new-chat-2\\\\outputs\\\\pitching-lab\\\\shared-pitch-policy-20261030\\\\artifacts\\\\research-evidence-audit\\\\formula_checks.json'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_shoulder_load_audit",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_wrist_integration",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_wrist_residual_audit",
+      "last_line": "ModuleNotFoundError: No module named 'opensim'"
+    }
+  ],
+  "skipped": [
+    {
+      "test": "test_pitch_fit.ArmFitTests.test_synthetic_recovery_and_constraints",
+      "reason": "install pinned model to run integration checks"
+    },
+    {
+      "test": "test_pitch_fit.ArmFitTests.test_temporal_solver_preserves_constant_feasible_motion",
+      "reason": "install pinned model to run integration checks"
+    }
+  ],
+  "new_errors": []
+}
