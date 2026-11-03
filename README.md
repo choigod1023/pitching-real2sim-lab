@@ -77,15 +77,21 @@ Results can differ with dependency versions and available data.
 python -m unittest discover
 ```
 
-The full suite includes OpenSim-dependent modules and checks that read locally
-generated files under `artifacts/`; a fresh clone with only core requirements
-cannot run all of them. OpenSim 4.6 bindings have their own environment and
-platform requirements; see `requirements-anatomical.txt` before installing.
-The pinned model integration checks also require `artifacts/vendor/myo_sim`.
-External OpenBiomechanics files and locally generated artifacts are not supplied
-by `pip install`; consult the relevant research protocol before regenerating them.
-A missing dependency or artifact prevents the affected test from running and is
-not evidence that its research result has been validated.
+In a fresh macOS Python 3.12 environment with only `requirements.txt`, this
+command reported **269 tests, 12 errors and 3 skips**. The errors were nine
+OpenSim import failures, one missing `imageio_ffmpeg` import, one missing
+OpenBiomechanics `metadata.csv`, and one missing locally generated
+`artifacts/research-evidence-audit/formula_checks.json`. Counts may vary with
+dependency versions and available files.
+
+OpenSim 4.6 bindings have their own environment and platform requirements; see
+`requirements-anatomical.txt` before installing. The rendering-related test
+also imports the separate `imageio-ffmpeg` Python package. The pinned model
+integration checks require `artifacts/vendor/myo_sim`. External OpenBiomechanics
+files and locally generated artifacts are not supplied by `pip install`;
+consult the relevant research protocol before regenerating them. A missing
+dependency or artifact prevents the affected test from running and is not
+evidence that its research result has been validated.
 
 To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D
 files, then run for example `python offset_cv.py <path to baseball_pitching/data/c3d/000002>`
