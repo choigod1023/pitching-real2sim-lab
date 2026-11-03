@@ -45,19 +45,58 @@ Direct observation of the ball and fingers at release (synchronized video, relea
 - Code in this repository is licensed under MIT (see `LICENSE`). Derived data files are under CC BY-NC-SA 4.0 (see `NOTICE.md`).
 - Please cite OpenBiomechanics and Driveline Baseball Research and Development when you use anything derived from the data.
 
-## Setup
+## Setup and tests
 
-Python 3.12. Core dependencies are in `requirements.txt` (NumPy, SciPy, pandas, ezc3d, MuJoCo, Pillow). The musculoskeletal modules additionally need the OpenSim 4.6 Python bindings.
+Use Python 3.12. The core requirements include NumPy, SciPy, pandas, ezc3d,
+MuJoCo, Pillow and OpenCV. Create an isolated environment from the repository
+root (the activation command below is for macOS/Linux):
 
 ```bash
-python -m venv .venv
-pip install -r requirements.txt
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### Core smoke test
+
+This small, synthetic-data subset checks coordinate frames, rigid-offset ball
+release, and flight calculations without OpenSim or external downloads:
+
+```bash
+python -m unittest test_kinematics test_ball_release test_pitch_outcomes
+```
+
+On Python 3.12 with the core requirements on macOS, this ran 16 tests: 15 passed
+and one was skipped because the optional OpenBiomechanics C3D files were absent.
+The subset is a smoke test, not a substitute for the entire research suite.
+Results can differ with dependency versions and available data.
+
+### Full suite and external requirements
+
+```bash
 python -m unittest discover
 ```
 
-Tests status: 275 tests run on the core environment, 263 pass (2 skipped). Ten fail there for two reasons, not because of a logic error: nine test modules import `opensim`, which is not part of `requirements.txt`, and one test reads a locally generated file under `artifacts/` (not tracked). They pass in an environment with the OpenSim 4.6 Python bindings and the locally generated artifacts.
+In a fresh macOS Python 3.12 environment with only `requirements.txt`, this
+command reported **269 tests, 12 errors and 3 skips**. The errors were nine
+OpenSim import failures, one missing `imageio_ffmpeg` import, one missing
+OpenBiomechanics `metadata.csv`, and one missing locally generated
+`artifacts/research-evidence-audit/formula_checks.json`. Counts may vary with
+dependency versions and available files.
 
-To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D files, then run for example `python offset_cv.py <path to baseball_pitching/data/c3d/000002>` from inside that folder. The scripts write their JSON and figures next to themselves.
+OpenSim 4.6 bindings have their own environment and platform requirements; see
+`requirements-anatomical.txt` before installing. The rendering-related test
+also imports the separate `imageio-ffmpeg` Python package. The pinned model
+integration checks require `artifacts/vendor/myo_sim`. External OpenBiomechanics
+files and locally generated artifacts are not supplied by `pip install`;
+consult the relevant research protocol before regenerating them. A missing
+dependency or artifact prevents the affected test from running and is not
+evidence that its research result has been validated.
+
+To rerun the marker audit in `marker_audit/`, download the OBP pitching C3D
+files, then run for example `python offset_cv.py <path to baseball_pitching/data/c3d/000002>`
+from inside that folder. The scripts write their JSON and figures next to
+themselves.
 
 ## Key modules
 
