@@ -4,6 +4,9 @@ A personal, self-directed research project by **Jang JunHyeok**, a student in th
 
 ## Goal
 
+Latest body-input experiment: [control retiming findings](CONTROL_RETIMING_FINDINGS.md).
+27 timing conditions at two integration resolutions produced **no accepted speed gain** under the stated pose and work budgets. Pitching-scene overlay videos, including measured joints and baseline/modified simulations, follow [the video standard](PITCHING_VIDEO_STANDARD.md).
+
 Can a small change in an athlete's joint motion raise pitch speed **without raising the athlete's force capacity**? To answer this I try to turn measured pitching motion into a physics simulation (Real2Sim), predict the speed of the released ball, and test whether the prediction survives held-out checks.
 
 The project is deliberately skeptical. Every step has a stated pass criterion, and results that fail it are kept and reported. **No result here shows that any change improves a real athlete's speed, accuracy, or safety, and nothing here is training or medical advice.**
