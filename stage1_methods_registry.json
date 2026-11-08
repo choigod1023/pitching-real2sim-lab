@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-28",
+  "kind": "literature_review_and_proposed_experiments",
+  "scientific_pass": false,
+  "new_speed_improvement_kmh": null,
+  "experiments_executed": false,
+  "source_urls": [
+    "https://github.com/drivelineresearch/openbiomechanics/blob/main/computer_vision/calibration/README.md",
+    "https://github.com/drivelineresearch/openbiomechanics/blob/main/computer_vision/calibration/ANNOTATION_PLAN.md",
+    "https://github.com/drivelineresearch/openbiomechanics/blob/main/computer_vision/4d_reconstruction/README.md",
+    "https://arxiv.org/abs/1704.06843",
+    "https://openaccess.thecvf.com/content_cvpr_2016/html/Vo_Spatiotemporal_Bundle_Adjustment_CVPR_2016_paper.html",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8498918/",
+    "https://github.com/lambdaloop/aniposelib",
+    "https://arxiv.org/abs/2008.01258",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC7899139/",
+    "https://github.com/florisvb/PyNumDiff",
+    "https://www.jstage.jst.go.jp/article/mej/10/6/10_23-00220/_article",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11985933/",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC11950353/",
+    "https://pubmed.ncbi.nlm.nih.gov/28632054/",
+    "https://www.bipm.org/en/committees/jc/jcgm/publications",
+    "https://baseballsavant.mlb.com/csv-docs"
+  ],
+  "local_evidence": [
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\same-pitch-model-ledger-20261028\\HAND_IMAGE_FINDINGS.md",
+      "sha256": "32eeda017e169ffa8b9ad8bd92096ac45531384d3d33a25b95147cc4a85f8a7c"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\data-observability-20261028\\artifacts\\source-audit\\local-source-audit.json",
+      "sha256": "7be91c0cca72b8c8388ff1e12e73420e69ad9f838b6ecd7d4c6a3e90b543cbc9"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\README.md",
+      "sha256": "51074c0c4d7f325e0bfcff0b7b9a75d7e969f455c418d4c7140e57dd4a298b18"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\calibration\\ANNOTATION_PLAN.md",
+      "sha256": "0b812bb3b6842c19b0b6dff0f8d11dbfde32e46ea5eb2e8e34b169c108b967d4"
+    },
+    {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\gated-research-automation-20261028\\artifacts\\research-gates\\state.json",
+      "sha256": "278776ae2c4b537cb9e2aea5db114b00c14c5bf75bc0e7e9f4662d0591b0621f"
+    }
+  ],
+  "proposed_steps": [
+    {
+      "id": "A_release_window_annotations",
+      "status": "not_executed"
+    },
+    {
+      "id": "B_four_alignment_comparators",
+      "status": "not_executed"
+    },
+    {
+      "id": "C_relative_hand_ball_motion",
+      "status": "not_executed"
+    },
+    {
+      "id": "D_differentiation_and_uncertainty",
+      "status": "not_executed"
+    },
+    {
+      "id": "E_speed_reference_definition",
+      "status": "not_executed"
+    }
+  ]
+}
