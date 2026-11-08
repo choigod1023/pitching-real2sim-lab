@@ -1,0 +1,453 @@
+{
+  "prime": {
+    "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\tracking-calibration\\artifacts\\joint-video\\OBP_movement_BaseballThrow_001.c3d",
+    "sha256": "6b9edc5c2195ae717f9aa18a1a34476ca70fa3f2f46860192c0a4eb9440eca72",
+    "physical_point_count": 0,
+    "point_labels": [],
+    "rotation_count": 19,
+    "rotation_labels": [
+      "worldbody_4X4",
+      "pelvis_4X4",
+      "l_thigh_4X4",
+      "l_shank_4X4",
+      "l_foot_4X4",
+      "l_toes_4X4",
+      "r_thigh_4X4",
+      "r_shank_4X4",
+      "r_foot_4X4",
+      "r_toes_4X4",
+      "torso_4X4",
+      "head_4X4",
+      "l_uarm_4X4",
+      "l_larm_4X4",
+      "l_hand_4X4",
+      "r_uarm_4X4",
+      "r_larm_4X4",
+      "r_hand_4X4",
+      "pelvis_shifted_4X4"
+    ],
+    "frames": 1406,
+    "rate_hz": 360.0,
+    "point_units": [
+      "mm"
+    ],
+    "theia_parameters": {
+      "THEIA3D_VERSION": [
+        2023,
+        1,
+        0,
+        3161
+      ],
+      "MODEL_VERSION": [
+        10,
+        0,
+        1
+      ],
+      "RPV": [
+        "0.105957"
+      ],
+      "LHEEL_POS": [
+        [
+          0.0
+        ],
+        [
+          -0.054444942623376846
+        ],
+        [
+          -0.06753204017877579
+        ]
+      ],
+      "LTOE_LENGTH": [
+        "0.055325"
+      ],
+      "RHEEL_POS": [
+        [
+          0.0
+        ],
+        [
+          -0.06476661562919617
+        ],
+        [
+          -0.06557103991508484
+        ]
+      ],
+      "RTOE_LENGTH": [
+        "0.053168"
+      ],
+      "THORAX_LENGTH": [
+        "0.258272"
+      ],
+      "LHAND_LENGTH": [
+        "0.090731"
+      ],
+      "RHAND_LENGTH": [
+        "0.096334"
+      ],
+      "ANALYSIS_START_FRAME": [
+        0
+      ],
+      "ANALYSIS_END_FRAME": [
+        1405
+      ],
+      "MAX_PEOPLE": [
+        1
+      ],
+      "TRACK_ROT": [
+        0
+      ],
+      "TRACK_STATIONARY": [
+        0
+      ],
+      "SAVED_MODEL": [],
+      "ANIMATION_MODEL": [
+        0
+      ],
+      "LARGE_LENS_DIST": [
+        0
+      ],
+      "3DOF_KNEE": [
+        0
+      ],
+      "FREE_ARMS": [
+        1
+      ],
+      "FREE_FEET": [
+        0
+      ],
+      "FILT_FREQ": [
+        30.0
+      ]
+    }
+  },
+  "origin_mapping": {
+    "uarm": "estimated proximal shoulder point",
+    "larm": "estimated proximal elbow point",
+    "hand": "estimated proximal wrist point; not ball center or fingertip"
+  },
+  "source_urls": [
+    "https://docs.theiamarkerless.com/theia3d-documentation/data-formats/c3d-files",
+    "https://www.theiamarkerless.com/blog/working-with-theia-markerless-data-in-visual3d",
+    "https://github.com/drivelineresearch/openbiomechanics/blob/main/baseball_pitching/README.md"
+  ],
+  "arms": {
+    "l": {
+      "upper_arm_length_mm": {
+        "min": 333.81914456320374,
+        "median": 333.819371540665,
+        "max": 333.8195779151115,
+        "range": 0.00043335190775906085
+      },
+      "forearm_length_mm": {
+        "min": 280.777392600798,
+        "median": 280.777577875838,
+        "max": 280.777752096994,
+        "range": 0.00035949619598341087
+      },
+      "forearm_local_wrist_median_mm": [
+        6.182722245284822e-07,
+        4.075563992955722e-07,
+        -280.7775783779174
+      ],
+      "hand_rotation_orthogonality_max": 8.896393666191216e-08,
+      "hand_rotation_det": {
+        "min": 0.9999999163729179,
+        "median": 0.9999999992992301,
+        "max": 1.0000000759256777,
+        "range": 1.5955275989298912e-07
+      },
+      "homogeneous_bottom_row_max": 0.0,
+      "hand_speed_960_990_kmh": {
+        "min": 38.60297709070799,
+        "median": 50.147912198935835,
+        "max": 59.65057382096464,
+        "range": 21.04759673025665
+      }
+    },
+    "r": {
+      "upper_arm_length_mm": {
+        "min": 325.7231245673996,
+        "median": 325.7232842272138,
+        "max": 325.7234886425051,
+        "range": 0.00036407510549452127
+      },
+      "forearm_length_mm": {
+        "min": 292.91661998881295,
+        "median": 292.91679364310687,
+        "max": 292.9169598031368,
+        "range": 0.00033981432386553934
+      },
+      "forearm_local_wrist_median_mm": [
+        5.002988245905726e-08,
+        -1.1209638159925817e-06,
+        -292.91679416839685
+      ],
+      "hand_rotation_orthogonality_max": 9.781276233411518e-08,
+      "hand_rotation_det": {
+        "min": 0.9999999180593103,
+        "median": 0.9999999984102921,
+        "max": 1.0000000824101631,
+        "range": 1.643508528159643e-07
+      },
+      "homogeneous_bottom_row_max": 0.0,
+      "hand_speed_960_990_kmh": {
+        "min": 2.9406939147250166,
+        "median": 4.915886267760259,
+        "max": 7.314495510977559,
+        "range": 4.373801596252543
+      }
+    }
+  },
+  "angle_check": [
+    {
+      "video_frame": 970,
+      "c3d_index": 971,
+      "before_wrong_right_interior_deg": 134.6575489823168,
+      "after_left_interior_deg": 168.08862459560362,
+      "left_flexion_from_straight_deg": 11.91137540439638,
+      "difference_deg": 33.43107561328682
+    },
+    {
+      "video_frame": 974,
+      "c3d_index": 975,
+      "before_wrong_right_interior_deg": 131.91501874111015,
+      "after_left_interior_deg": 170.28706672785458,
+      "left_flexion_from_straight_deg": 9.71293327214542,
+      "difference_deg": 38.372047986744434
+    },
+    {
+      "video_frame": 977,
+      "c3d_index": 978,
+      "before_wrong_right_interior_deg": 128.9710299987684,
+      "after_left_interior_deg": 168.05328386025062,
+      "left_flexion_from_straight_deg": 11.946716139749384,
+      "difference_deg": 39.08225386148223
+    },
+    {
+      "video_frame": 979,
+      "c3d_index": 980,
+      "before_wrong_right_interior_deg": 126.70881458692755,
+      "after_left_interior_deg": 165.80893681789286,
+      "left_flexion_from_straight_deg": 14.191063182107143,
+      "difference_deg": 39.10012223096531
+    },
+    {
+      "video_frame": 986,
+      "c3d_index": 987,
+      "before_wrong_right_interior_deg": 121.3279669867872,
+      "after_left_interior_deg": 161.50164166873944,
+      "left_flexion_from_straight_deg": 18.49835833126056,
+      "difference_deg": 40.173674681952235
+    }
+  ],
+  "marker_based_trials": [
+    {
+      "pitch": "3034_1",
+      "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_002_FF_809.c3d",
+      "sha256": "416fc64319be9ed592c5e3126cc7170bd90110f062632fe49bdc5800bbd028e1",
+      "point_units": [
+        "m"
+      ],
+      "point_count": 45,
+      "BR_time": 1.6,
+      "valid_release_frames": 36,
+      "invalid_frames_by_marker": {
+        "RFIN": 0,
+        "RWRA": 0,
+        "RWRB": 0,
+        "RFRM": 0,
+        "LWRA": 0,
+        "LWRB": 0
+      },
+      "RFIN_to_right_wrist_mid_mm": {
+        "min": 80.69674725043386,
+        "median": 83.83096996420753,
+        "max": 86.87028948233592,
+        "range": 6.173542231902061
+      },
+      "RFIN_to_left_wrist_mid_mm": {
+        "min": 798.8135477911854,
+        "median": 989.9615680275925,
+        "max": 1136.3245720423474,
+        "range": 337.511024251162
+      },
+      "wrist_pair_width_mm": {
+        "min": 83.002455791923,
+        "median": 85.23715093557152,
+        "max": 86.37170230594087,
+        "range": 3.369246514017874
+      }
+    },
+    {
+      "pitch": "3034_2",
+      "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_005_FF_814.c3d",
+      "sha256": "c35e5d879546cffc5005c86d731256a9df01b4f12559dfc474a9c37da4cab40c",
+      "point_units": [
+        "m"
+      ],
+      "point_count": 45,
+      "BR_time": 1.5583,
+      "valid_release_frames": 36,
+      "invalid_frames_by_marker": {
+        "RFIN": 0,
+        "RWRA": 0,
+        "RWRB": 0,
+        "RFRM": 0,
+        "LWRA": 0,
+        "LWRB": 0
+      },
+      "RFIN_to_right_wrist_mid_mm": {
+        "min": 84.90862297550842,
+        "median": 88.3341579710728,
+        "max": 91.98172163393592,
+        "range": 7.073098658427497
+      },
+      "RFIN_to_left_wrist_mid_mm": {
+        "min": 793.7061868281003,
+        "median": 987.8050895690214,
+        "max": 1137.0048184080028,
+        "range": 343.2986315799026
+      },
+      "wrist_pair_width_mm": {
+        "min": 82.8392069096419,
+        "median": 85.16468998922839,
+        "max": 86.64833187656917,
+        "range": 3.8091249669272713
+      }
+    },
+    {
+      "pitch": "3034_3",
+      "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_006_FF_803.c3d",
+      "sha256": "4c510f3ef1198568458a012f4023494a71a8627c2c3b1b40366013a979fc0757",
+      "point_units": [
+        "m"
+      ],
+      "point_count": 45,
+      "BR_time": 1.4583,
+      "valid_release_frames": 36,
+      "invalid_frames_by_marker": {
+        "RFIN": 0,
+        "RWRA": 0,
+        "RWRB": 0,
+        "RFRM": 0,
+        "LWRA": 0,
+        "LWRB": 0
+      },
+      "RFIN_to_right_wrist_mid_mm": {
+        "min": 85.6665185634487,
+        "median": 97.53770898649068,
+        "max": 117.13347454858867,
+        "range": 31.46695598513996
+      },
+      "RFIN_to_left_wrist_mid_mm": {
+        "min": 777.6325441036004,
+        "median": 1038.6001389574885,
+        "max": 1179.6409036912455,
+        "range": 402.00835958764515
+      },
+      "wrist_pair_width_mm": {
+        "min": 81.99638385831791,
+        "median": 85.0415789183615,
+        "max": 86.21544555722669,
+        "range": 4.219061698908774
+      }
+    },
+    {
+      "pitch": "3034_4",
+      "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_008_FF_798.c3d",
+      "sha256": "c9b81a46b9f713047172144b61d7b03349d6e65dc39191e8722bc96139fc1053",
+      "point_units": [
+        "m"
+      ],
+      "point_count": 45,
+      "BR_time": 1.4528,
+      "valid_release_frames": 36,
+      "invalid_frames_by_marker": {
+        "RFIN": 0,
+        "RWRA": 0,
+        "RWRB": 0,
+        "RFRM": 0,
+        "LWRA": 0,
+        "LWRB": 0
+      },
+      "RFIN_to_right_wrist_mid_mm": {
+        "min": 86.74220308260348,
+        "median": 91.0367136142557,
+        "max": 94.97420814086823,
+        "range": 8.232005058264747
+      },
+      "RFIN_to_left_wrist_mid_mm": {
+        "min": 755.7371570712264,
+        "median": 985.1563102308676,
+        "max": 1133.5861555102013,
+        "range": 377.84899843897483
+      },
+      "wrist_pair_width_mm": {
+        "min": 84.30374079288514,
+        "median": 85.07412125935625,
+        "max": 86.68230581223789,
+        "range": 2.3785650193527488
+      }
+    },
+    {
+      "pitch": "3034_5",
+      "source": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\baseball_pitching\\data\\c3d\\000002\\000002_003034_73_207_011_FF_799.c3d",
+      "sha256": "4950df70683b37970fc1a2ea7611481fb1006f33833a458178be662f8b75e1f1",
+      "point_units": [
+        "m"
+      ],
+      "point_count": 45,
+      "BR_time": 1.4139,
+      "valid_release_frames": 36,
+      "invalid_frames_by_marker": {
+        "RFIN": 0,
+        "RWRA": 0,
+        "RWRB": 0,
+        "RFRM": 0,
+        "LWRA": 0,
+        "LWRB": 0
+      },
+      "RFIN_to_right_wrist_mid_mm": {
+        "min": 90.31407887041765,
+        "median": 119.15445755629054,
+        "max": 131.52429958904014,
+        "range": 41.210220718622494
+      },
+      "RFIN_to_left_wrist_mid_mm": {
+        "min": 820.9408580611514,
+        "median": 989.5131762022338,
+        "max": 1140.0558970083764,
+        "range": 319.115038947225
+      },
+      "wrist_pair_width_mm": {
+        "min": 82.94431606574375,
+        "median": 85.53771237341684,
+        "max": 86.90900154071242,
+        "range": 3.9646854749686753
+      }
+    }
+  ],
+  "fixed_alignment_side_check": [
+    {
+      "label": "l_hand",
+      "same_side_rmse_mm": 13.034531890476282,
+      "opposite_side_rmse_mm": 1295.5569721291442
+    },
+    {
+      "label": "l_larm",
+      "same_side_rmse_mm": 14.46633860528752,
+      "opposite_side_rmse_mm": 901.2765756618412
+    },
+    {
+      "label": "l_uarm",
+      "same_side_rmse_mm": 34.821128051668886,
+      "opposite_side_rmse_mm": 436.4401144494789
+    }
+  ],
+  "conclusions": {
+    "label_swap_confirmed": false,
+    "physical_marker_vs_model_origin_distinct": true,
+    "corrected_defect": "Prime joint_video elbow diagnostic selected right arm; now explicit left/right side required.",
+    "speed_error_reduction_verified": false,
+    "caveat": "RFIN hand-surface marker and wrist midpoint are not measured ball center/contact point. FILT_FREQ30 is a stored setting, not proof of causal delay or of filtered versus unfiltered export."
+  }
+}

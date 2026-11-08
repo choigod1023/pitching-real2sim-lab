@@ -10,8 +10,17 @@ class JointVideoTests(unittest.TestCase):
 
     def test_elbow_geometry(self):
         p={'r_uarm':np.array([0.,1,0]),'r_larm':np.zeros(3),'r_hand':np.array([1.,0,0])}
-        self.assertAlmostEqual(elbow_angle(p),90.)
+        self.assertAlmostEqual(elbow_angle(p, side='r'),90.)
         p['r_hand']=np.array([0.,-1,0])
-        self.assertAlmostEqual(elbow_angle(p),180.)
+        self.assertAlmostEqual(elbow_angle(p, side='r'),180.)
         p['r_hand']=np.zeros(3)
-        with self.assertRaises(ValueError): elbow_angle(p)
+        with self.assertRaises(ValueError): elbow_angle(p, side='r')
+
+    def test_left_throw_does_not_use_right_arm(self):
+        p={'l_uarm':np.array([0.,1,0]),'l_larm':np.zeros(3),'l_hand':np.array([0.,-1,0]),
+           'r_uarm':np.array([0.,1,0]),'r_larm':np.zeros(3),'r_hand':np.array([1.,0,0])}
+        self.assertAlmostEqual(elbow_angle(p, side='l'),180.)
+        self.assertAlmostEqual(elbow_angle(p, side='r'),90.)
+        with self.assertRaises(ValueError): elbow_angle(p, side='left_on_screen')
+        p['l_hand'][0]=np.nan
+        with self.assertRaises(ValueError): elbow_angle(p, side='l')
