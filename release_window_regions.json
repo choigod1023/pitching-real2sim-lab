@@ -1,0 +1,26 @@
+{
+  "scope": "Single AI reader, approximate visible wrist/elbow areas from raw frames before new model projection. Not anatomical centers or confidence intervals.",
+  "scientific_ground_truth": false,
+  "independent_review_required": true,
+  "review_after_projection": "Landmark placement is uncertain, especially camera20 elbow970 and hand/elbow986 and camera21 hand/elbow986. Original boxes retained without correction; do not use to establish anatomical accuracy.",
+  "frames": [970, 978, 986],
+  "regions": [
+    {"camera":19,"frame":970,"segment":"l_hand","box":[861,435,886,461]},
+    {"camera":19,"frame":970,"segment":"l_larm","box":[811,355,840,385]},
+    {"camera":19,"frame":978,"segment":"l_hand","box":[793,440,815,465]},
+    {"camera":19,"frame":978,"segment":"l_larm","box":[800,350,828,380]},
+    {"camera":20,"frame":970,"segment":"l_hand","box":[365,382,392,408]},
+    {"camera":20,"frame":970,"segment":"l_larm","box":[458,277,485,306]},
+    {"camera":20,"frame":978,"segment":"l_hand","box":[387,308,415,333]},
+    {"camera":20,"frame":978,"segment":"l_larm","box":[446,281,476,308]},
+    {"camera":20,"frame":986,"segment":"l_hand","box":[435,247,458,270]},
+    {"camera":20,"frame":986,"segment":"l_larm","box":[496,253,524,281]},
+    {"camera":21,"frame":970,"segment":"l_hand","box":[686,560,711,585]},
+    {"camera":21,"frame":970,"segment":"l_larm","box":[682,450,710,480]},
+    {"camera":21,"frame":978,"segment":"l_hand","box":[579,518,605,546]},
+    {"camera":21,"frame":978,"segment":"l_larm","box":[632,447,660,476]},
+    {"camera":21,"frame":986,"segment":"l_hand","box":[466,450,492,474]},
+    {"camera":21,"frame":986,"segment":"l_larm","box":[543,416,571,445]}
+  ],
+  "not_annotated": [{"camera":19,"frame":986,"segments":["l_hand","l_larm"],"reason":"Required landmark extent not fully covered by inspected crop; not imputed and not asserted physically invisible."}]
+}
