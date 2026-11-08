@@ -1,0 +1,388 @@
+{
+  "trial": "OBP_movement_BaseballThrow_001",
+  "segment": "l_hand_4X4",
+  "fps": 360.0,
+  "nominal_c3d_minus_video_frame": 1,
+  "provenance": {
+    "track_sha256": "c585f0b0f62fbf262875160877ca608e86e071ddba8ff9817376bc8ba6caf881",
+    "theia_sha256": "6b9edc5c2195ae717f9aa18a1a34476ca70fa3f2f46860192c0a4eb9440eca72",
+    "alignment_sha256": "0fc0709f68c50d3451e01d8eaf19c1b8a59b508c5f008fa5bce5ea1dbd844a73"
+  },
+  "alignment_note": "Similarity from the Theia3D lab frame (millimeters) to the rig frame (meters, camera 19 as origin), fitted on the joint centers of the 12 limb segments against COCO keypoints triangulated from the 8 cameras over 30 frames around ball release of OBP_movement_BaseballThrow_001; median residual 1.7 cm. The C3D and the videos both run at 360 Hz; C3D frame index = video frame index + 1.",
+  "scope": "Observed kinematic decomposition, not ball/contact dynamics or independent prediction",
+  "full_reconstruction_is_algebraic_identity": true,
+  "radar_used": false,
+  "derivatives_use_future_observations": true,
+  "real_time_predictor": false,
+  "release_identified": false,
+  "finger_acceleration_identified": false,
+  "transfer_to_3034_validated": false,
+  "candidate_optimization_ready": false,
+  "derivative_method": "Unsmoothed CubicSpline positions + RotationSpline orientation; 3/5/7/9-frame speed sensitivity reported",
+  "window_scope": "Fixed diagnostic windows, not confirmed hand contact or release",
+  "results_by_c3d_offset": {
+    "0": {
+      "summary": {
+        "fit_frames": [
+          956,
+          963
+        ],
+        "evaluation_frames": [
+          964,
+          973
+        ],
+        "fixed_local_vector_mm": [
+          -10.578827196390929,
+          16.64232376273368,
+          -116.9867519493286
+        ],
+        "fixed_heldout_position_rmse_mm": 37.360570162102256,
+        "fixed_heldout_velocity_vector_mae_kmh": 17.908467803293817,
+        "fixed_heldout_speed_mae_kmh": 13.64305082101845,
+        "formula_closure_max_mps": 1.4015219063576278e-14,
+        "relative_derivative_fd_max_mps": 4.3322397913012e-07
+      },
+      "local_displacement_970_to974_mm": 77.57639246197402,
+      "diagnostic_frames": [
+        {
+          "frame": 970,
+          "local_ball_mm": [
+            -4.607475556145822,
+            13.81356682624097,
+            -144.9855929525352
+          ],
+          "distance_mm": 145.7150150919998,
+          "fixed_position_error_mm": 28.767933602190727,
+          "observed_spline_speed_kmh": 88.38826140410693,
+          "fixed_speed_kmh": 78.54916817563783,
+          "relative_speed_norm_kmh": 17.038987575233545,
+          "signed_speed_components_kmh": {
+            "hand_translation": 52.153085499048785,
+            "hand_rotation": 27.48957922336569,
+            "relative_ball_motion": 8.745596681692437
+          },
+          "window_speeds_kmh": {
+            "3": 89.55745049507789,
+            "5": 90.2251972530776,
+            "7": 88.86766803336552,
+            "9": 89.13044405226746
+          }
+        },
+        {
+          "frame": 973,
+          "local_ball_mm": [
+            -30.29565881902033,
+            45.45134875595153,
+            -171.9649697574058
+          ],
+          "distance_mm": 180.43171248613453,
+          "fixed_position_error_mm": 65.12540060258611,
+          "observed_spline_speed_kmh": 95.09711711336617,
+          "fixed_speed_kmh": 71.26226449149553,
+          "relative_speed_norm_kmh": 24.731989620389996,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.41891380617909,
+            "hand_rotation": 31.459427546712778,
+            "relative_ball_motion": 13.218775760474283
+          },
+          "window_speeds_kmh": {
+            "3": 96.3790295052509,
+            "5": 97.82410017760132,
+            "7": 97.43552026004089,
+            "9": 96.78126145550118
+          }
+        },
+        {
+          "frame": 974,
+          "local_ball_mm": [
+            -46.69040317315469,
+            60.81459408178528,
+            -190.1301087603207
+          ],
+          "distance_mm": 205.00699221981534,
+          "fixed_position_error_mm": 92.76414194205165,
+          "observed_spline_speed_kmh": 104.58077147375998,
+          "fixed_speed_kmh": 69.00503417670312,
+          "relative_speed_norm_kmh": 38.60874491754406,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.37430172761879,
+            "hand_rotation": 29.569911702206053,
+            "relative_ball_motion": 24.63655804393513
+          },
+          "window_speeds_kmh": {
+            "3": 100.40083805602194,
+            "5": 96.3074310352513,
+            "7": 98.43823627373799,
+            "9": 99.25704874242298
+          }
+        },
+        {
+          "frame": 975,
+          "local_ball_mm": [
+            -67.18371617710542,
+            51.149936715057876,
+            -208.58804447730702
+          ],
+          "distance_mm": 225.0309757437569,
+          "fixed_position_error_mm": 113.07380598963975,
+          "observed_spline_speed_kmh": 89.61660590428593,
+          "fixed_speed_kmh": 66.6391953972467,
+          "relative_speed_norm_kmh": 40.218266802107884,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.80724793837383,
+            "hand_rotation": 26.800827520849534,
+            "relative_ball_motion": 12.00853044506257
+          },
+          "window_speeds_kmh": {
+            "3": 94.32054060200335,
+            "5": 100.13204956300451,
+            "7": 99.93727582899027,
+            "9": 100.14285490841226
+          }
+        }
+      ]
+    },
+    "1": {
+      "summary": {
+        "fit_frames": [
+          956,
+          963
+        ],
+        "evaluation_frames": [
+          964,
+          973
+        ],
+        "fixed_local_vector_mm": [
+          -51.64469759576256,
+          24.669970208507053,
+          -132.74185687754593
+        ],
+        "fixed_heldout_position_rmse_mm": 68.07078625808413,
+        "fixed_heldout_velocity_vector_mae_kmh": 22.60508070183321,
+        "fixed_heldout_speed_mae_kmh": 13.14928983933955,
+        "formula_closure_max_mps": 1.464821375527116e-14,
+        "relative_derivative_fd_max_mps": 4.6617258399010655e-07
+      },
+      "local_displacement_970_to974_mm": 66.6697406765354,
+      "diagnostic_frames": [
+        {
+          "frame": 970,
+          "local_ball_mm": [
+            -14.256658866486571,
+            -46.85079613511195,
+            -149.2987046756203
+          ],
+          "distance_mm": 157.12527689187144,
+          "fixed_position_error_mm": 82.38455357291772,
+          "observed_spline_speed_kmh": 88.38826140410693,
+          "fixed_speed_kmh": 92.42751782034948,
+          "relative_speed_norm_kmh": 18.1153903568364,
+          "signed_speed_components_kmh": {
+            "hand_translation": 49.49402280383766,
+            "hand_rotation": 30.19305609069365,
+            "relative_ball_motion": 8.701182509575599
+          },
+          "window_speeds_kmh": {
+            "3": 89.55745049507789,
+            "5": 90.2251972530776,
+            "7": 88.86766803336552,
+            "9": 89.13044405226746
+          }
+        },
+        {
+          "frame": 973,
+          "local_ball_mm": [
+            -8.70614289555735,
+            -13.977326469257967,
+            -173.12113153270167
+          ],
+          "distance_mm": 173.90252661335626,
+          "fixed_position_error_mm": 70.48275563510704,
+          "observed_spline_speed_kmh": 95.09711711336617,
+          "fixed_speed_kmh": 80.15598395198899,
+          "relative_speed_norm_kmh": 17.88215264930725,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.449173222601296,
+            "hand_rotation": 30.04731176206231,
+            "relative_ball_motion": 14.600632128702541
+          },
+          "window_speeds_kmh": {
+            "3": 96.3790295052509,
+            "5": 97.82410017760132,
+            "7": 97.43552026004089,
+            "9": 96.78126145550118
+          }
+        },
+        {
+          "frame": 974,
+          "local_ball_mm": [
+            -18.098712041017233,
+            4.370545022965709,
+            -191.80125941352253
+          ],
+          "distance_mm": 192.70284936646578,
+          "fixed_position_error_mm": 70.89014626595923,
+          "observed_spline_speed_kmh": 104.58077147375998,
+          "fixed_speed_kmh": 75.41112798274038,
+          "relative_speed_norm_kmh": 33.43702196867886,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.132911550231086,
+            "hand_rotation": 27.625582276798653,
+            "relative_ball_motion": 26.82227764673024
+          },
+          "window_speeds_kmh": {
+            "3": 100.40083805602194,
+            "5": 96.3074310352513,
+            "7": 98.43823627373799,
+            "9": 99.25704874242298
+          }
+        },
+        {
+          "frame": 975,
+          "local_ball_mm": [
+            -29.049038629920545,
+            -0.27993876426086334,
+            -208.78362081531665
+          ],
+          "distance_mm": 210.79498412388344,
+          "fixed_position_error_mm": 83.15895396538886,
+          "observed_spline_speed_kmh": 89.61660590428593,
+          "fixed_speed_kmh": 70.6677422593684,
+          "relative_speed_norm_kmh": 29.36936952827811,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.33209977232198,
+            "hand_rotation": 25.967551290179667,
+            "relative_ball_motion": 13.31695484178429
+          },
+          "window_speeds_kmh": {
+            "3": 94.32054060200335,
+            "5": 100.13204956300451,
+            "7": 99.93727582899027,
+            "9": 100.14285490841226
+          }
+        }
+      ]
+    },
+    "2": {
+      "summary": {
+        "fit_frames": [
+          956,
+          963
+        ],
+        "evaluation_frames": [
+          964,
+          973
+        ],
+        "fixed_local_vector_mm": [
+          -96.00773224563191,
+          28.556887079217155,
+          -144.86842054791737
+        ],
+        "fixed_heldout_position_rmse_mm": 140.09836859142956,
+        "fixed_heldout_velocity_vector_mae_kmh": 36.08497720731101,
+        "fixed_heldout_speed_mae_kmh": 18.20373978898316,
+        "formula_closure_max_mps": 1.5713480306226774e-14,
+        "relative_derivative_fd_max_mps": 5.334560388981649e-07
+      },
+      "local_displacement_970_to974_mm": 84.9272962490857,
+      "diagnostic_frames": [
+        {
+          "frame": 970,
+          "local_ball_mm": [
+            4.927836167210365,
+            -107.08965847126991,
+            -142.6536124339741
+          ],
+          "distance_mm": 178.44475800999754,
+          "fixed_position_error_mm": 169.09429223242768,
+          "observed_spline_speed_kmh": 88.38826140410693,
+          "fixed_speed_kmh": 104.81064481195102,
+          "relative_speed_norm_kmh": 30.626986111196416,
+          "signed_speed_components_kmh": {
+            "hand_translation": 47.76403039279099,
+            "hand_rotation": 32.42586533411469,
+            "relative_ball_motion": 8.198365677201236
+          },
+          "window_speeds_kmh": {
+            "3": 89.55745049507789,
+            "5": 90.2251972530776,
+            "7": 88.86766803336552,
+            "9": 89.13044405226746
+          }
+        },
+        {
+          "frame": 973,
+          "local_ball_mm": [
+            31.693499660398068,
+            -60.008928687396676,
+            -165.30673670527796
+          ],
+          "distance_mm": 178.6948982010421,
+          "fixed_position_error_mm": 156.74575949629926,
+          "observed_spline_speed_kmh": 95.09711711336617,
+          "fixed_speed_kmh": 85.4949491953591,
+          "relative_speed_norm_kmh": 21.943835391242246,
+          "signed_speed_components_kmh": {
+            "hand_translation": 50.19567335948892,
+            "hand_rotation": 28.50400425899125,
+            "relative_ball_motion": 16.397439494885987
+          },
+          "window_speeds_kmh": {
+            "3": 96.3790295052509,
+            "5": 97.82410017760132,
+            "7": 97.43552026004089,
+            "9": 96.78126145550118
+          }
+        },
+        {
+          "frame": 974,
+          "local_ball_mm": [
+            25.763410686732698,
+            -36.712659749018755,
+            -185.38068269943528
+          ],
+          "distance_mm": 190.72904926667354,
+          "fixed_position_error_mm": 143.97766625018943,
+          "observed_spline_speed_kmh": 104.58077147375998,
+          "fixed_speed_kmh": 78.69262198183189,
+          "relative_speed_norm_kmh": 35.266594424772116,
+          "signed_speed_components_kmh": {
+            "hand_translation": 49.405242392198375,
+            "hand_rotation": 25.636150076158483,
+            "relative_ball_motion": 29.539379005403124
+          },
+          "window_speeds_kmh": {
+            "3": 100.40083805602194,
+            "5": 96.3074310352513,
+            "7": 98.43823627373799,
+            "9": 99.25704874242298
+          }
+        },
+        {
+          "frame": 975,
+          "local_ball_mm": [
+            20.263174078166816,
+            -34.490760556202964,
+            -202.1153753966407
+          ],
+          "distance_mm": 206.03600112405698,
+          "fixed_position_error_mm": 144.12197392892398,
+          "observed_spline_speed_kmh": 89.61660590428593,
+          "fixed_speed_kmh": 72.19591876384492,
+          "relative_speed_norm_kmh": 25.11061003488873,
+          "signed_speed_components_kmh": {
+            "hand_translation": 49.366122678203446,
+            "hand_rotation": 24.89932828510036,
+            "relative_ball_motion": 15.351154940982129
+          },
+          "window_speeds_kmh": {
+            "3": 94.32054060200335,
+            "5": 100.13204956300451,
+            "7": 99.93727582899027,
+            "9": 100.14285490841226
+          }
+        }
+      ]
+    }
+  }
+}

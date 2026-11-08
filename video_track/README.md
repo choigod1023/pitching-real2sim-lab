@@ -21,6 +21,31 @@ python -m video_track.simulate_grip --obp-data <obp>/baseball_pitching/data --wo
 python -m unittest test_video_track
 ```
 
+### 3D hand-relative ball motion
+
+`relative_motion` extends the earlier `hand_ball_observation.py` / `relative_ball_state.py`
+diagnostics to the new eight-camera track, including Theia hand **rotation**, not just
+wrist-to-ball distance. It decomposes observed velocity into translation, rotation and
+relative motion. It does not predict unseen ball motion or validate a finger-contact model.
+
+```bash
+python -m video_track.relative_motion --track video_track/results/track.json \
+  --theia-c3d <same c3d> --alignment <same alignment> --out artifacts/hand-ball-relative
+python -m video_track.render_relative_motion --analysis artifacts/hand-ball-relative \
+  --cv-root "OBP CV Files" --cal-dir <obp>/computer_vision/calibration/results \
+  --out artifacts/hand-ball-relative
+python -m unittest test_video_track test_relative_motion
+```
+
+The initial local ball vector uses only frames 956–963 and is frozen for the diagnostic
+evaluation at 964–973. These are analysis windows, **not established contact/release labels**.
+All C3D offsets 0/1/2 are reported; offset 1 is the contributor's nominal alignment, not
+selected by residual or radar speed. Full observed reconstruction is an algebraic identity.
+The supplied alignment is contributor-fitted, trial-specific and provisional. The backward
+ball track also used a hand-origin prior for its search windows. Full results/NPZ/video
+are generated locally, and a compact result is in `results/relative_motion_summary.json`.
+See [the Korean findings](RELATIVE_MOTION_FINDINGS.md) for interpretation and limitations.
+
 ## Modules
 
 | File | Purpose |
