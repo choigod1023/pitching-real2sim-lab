@@ -1,0 +1,133 @@
+{
+  "upstream_url": "https://github.com/drivelineresearch/openbiomechanics/blob/main/computer_vision/calibration/results/calibration_results.json",
+  "upstream_commit": "44b98dae05cceb016f080ab39d105c85b8639084",
+  "upstream_json_sha256": "cd8c23e67736b152ee0a7ad7c72d86b8aa0a904f712892329cc664754ab5e01a",
+  "calibrations": {
+    "edgertronic_1": {
+      "status": "fit",
+      "quality": "strong",
+      "model": "zero_square",
+      "fx_px": 1733.7625428214865,
+      "fy_px": 1733.7625428214865,
+      "cx_px": 691.3969343433513,
+      "cy_px": 494.3449429340349,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "test_median_px": 0.19049715995788574,
+      "test_p95_px": 0.44412147998809814
+    },
+    "edgertronic_2": {
+      "status": "fit",
+      "quality": "strong",
+      "model": "zero_square",
+      "fx_px": 1810.8083075477439,
+      "fy_px": 1810.8083075477439,
+      "cx_px": 684.3229836677566,
+      "cy_px": 489.9113788605606,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "test_median_px": 0.18316750228405,
+      "test_p95_px": 0.46493393182754517
+    },
+    "edgertronic_3": {
+      "status": "fit",
+      "quality": "strong",
+      "model": "zero_square",
+      "fx_px": 1068.1750967929534,
+      "fy_px": 1068.1750967929534,
+      "cx_px": 650.196075410482,
+      "cy_px": 485.0533695053411,
+      "distortion": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "test_median_px": 0.1937427818775177,
+      "test_p95_px": 0.4923674762248993
+    },
+    "edgertronic_4": {
+      "status": "fit",
+      "quality": "strong",
+      "model": "k1_square",
+      "fx_px": 1070.580620841368,
+      "fy_px": 1070.580620841368,
+      "cx_px": 631.7690733381846,
+      "cy_px": 530.2361168648954,
+      "distortion": [
+        -0.1410584262214351,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "test_median_px": 0.20417702198028564,
+      "test_p95_px": 0.42146191000938416
+    }
+  },
+  "stereo_pairs": {
+    "edgertronic_1__edgertronic_4": {
+      "status": "fit",
+      "n_shared_raw": 93,
+      "n_shared_after_intrinsic_filter": 91,
+      "n_selected": 91,
+      "n_train": 72,
+      "n_validation": 19,
+      "selected_frame_range": [
+        0,
+        558
+      ],
+      "train_stereo_rms_px": 0.6222271536924333,
+      "stereo_rms_px": 0.6252009215815069,
+      "rotation_deg": 35.571725695157596,
+      "rotation_matrix": [
+        [
+          0.9999753089603118,
+          0.007013667507430584,
+          -0.0004358185678980495
+        ],
+        [
+          -0.005958500952952444,
+          0.8133894196704862,
+          -0.5816890477175098
+        ],
+        [
+          -0.003725283361380322,
+          0.5816772820354985,
+          0.8134111271845699
+        ]
+      ],
+      "translation_mm": [
+        -322.2049790449053,
+        1592.7394533724748,
+        114.25507683168264
+      ],
+      "baseline_mm": 1629.0148057744568,
+      "training_diagnostics": {
+        "n_solved": 72,
+        "rotation_delta_median_deg": 0.867051560442641,
+        "rotation_delta_p95_deg": 2.1034161257541797,
+        "translation_delta_median_mm": 77.41856469237734,
+        "translation_delta_p95_mm": 133.09271261367948
+      },
+      "validation_diagnostics": {
+        "n_solved": 19,
+        "rotation_delta_median_deg": 0.7853182632461805,
+        "rotation_delta_p95_deg": 2.151907697771814,
+        "translation_delta_median_mm": 73.84406816780684,
+        "translation_delta_p95_mm": 132.01308008018088
+      }
+    }
+  }
+}

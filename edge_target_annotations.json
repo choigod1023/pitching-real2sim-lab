@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "frame": 120,
+  "method": "Single analyst visual placement on native frames, enlarged only for inspection. Not independently reviewed; no inferred hidden corner.",
+  "cube_side_mm": 698.5,
+  "local_coordinate_convention": "A=(1,0), B=(0,0), C=(0,1), D=(1,1), z=0 bottom, z=1 top. A left, B far, C right, D near in each camera's local image convention. Camera 4 defines the reference cube frame; horizontal cube symmetry is explicitly enumerated.",
+  "cube_coordinates": {"A0":[1,0,0],"B0":[0,0,0],"C0":[0,1,0],"D0":[1,1,0],"A1":[1,0,1],"B1":[0,0,1],"C1":[0,1,1],"D1":[1,1,1],"Am":[1,0,0.5],"Bm":[0,0,0.5],"Cm":[0,1,0.5],"Dm":[1,1,0.5]},
+  "cameras": {
+    "1": {"fit":{"A0":[629,923],"B0":[774,888],"C0":[975,919],"D0":[850,963],"A1":[630,674],"B1":[772,661],"C1":[979,675],"D1":[847,685]},"heldout":{"Am":[630,799],"Bm":[772,777],"Cm":[977,798],"Dm":[848,826]},"plane":{"O":[778,929],"L":[855,929],"S":[777,915]},"plane_quality":"Mounting centres are small and low contrast; approximate manual locations, not reflective-marker sphere centres."},
+    "2": {"fit":{"A0":[632,777],"B0":[801,734],"C0":[1027,784],"D0":[885,834],"A1":[650,482],"B1":[820,479],"C1":[1051,501],"D1":[908,516]},"heldout":{"Am":[642,635],"Bm":[811,612],"Cm":[1040,644],"Dm":[896,676]},"plane":{"O":[792,783],"L":[855,770],"S":[791,763]},"plane_quality":"Mounting centres are small and low contrast; approximate manual locations."},
+    "3": {"fit":{"A0":[366,811],"B0":[507,760],"C0":[675,773],"D0":[536,833],"A1":[350,583],"C1":[661,557]},"heldout":{"Am":[358,698],"Cm":[668,669],"Dm":[531,705]},"excluded":{"B1":"Overlapping top rails obscure the joint centre","D1":"Overlapping top rails obscure the joint centre","Bm":"Far vertical joint centre unclear"},"plane":{"O":[558,797],"L":[505,798],"S":[556,780]},"plane_quality":"Mounting centres are small and low contrast; approximate manual locations."},
+    "4": {"fit":{"A0":[516,493],"B0":[617,432],"C0":[736,477],"D0":[649,550],"A1":[509,347],"B1":[614,297],"C1":[747,339],"D1":[649,394]},"heldout":{"Am":[512,421],"Bm":[616,365],"Cm":[742,410],"Dm":[649,473]},"plane":{"O":[612,495],"L":[658,496],"S":[612,478]},"plane_quality":"Mounting centres are small and low contrast; approximate manual locations."}
+  },
+  "plane_distances_mm": {"O-L":200,"O-S":150,"L-S":250},
+  "annotation_round": 1
+}
