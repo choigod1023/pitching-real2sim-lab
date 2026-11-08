@@ -1,0 +1,310 @@
+{
+  "source_index": {
+    "source_url": "https://docs.google.com/spreadsheets/d/1NhpF8DnfBdio_xsU7B44KNuHghtePDp-d3juvCYNm9Q/edit",
+    "source_sha256": "1c8eb794cf86a6676c993fdc9f9f9f6012d5f3ffb3e46c91bae0562b028a815b",
+    "shot_lists": {
+      "Prime Color - Shot List": {
+        "cell": "H17",
+        "text": "Baseball Throw - 62.7 MPH",
+        "speed_label": {
+          "mph": 62.7,
+          "kmh": 100.90586880000001,
+          "kind": "source label; not instrument accuracy verification"
+        },
+        "capture_rate_cell": "D17",
+        "declared_capture_fps": 360.0
+      },
+      "Edgertronic - Shot List": {
+        "cell": "H16",
+        "text": "Baseball Throw - 69.1 MPH",
+        "speed_label": {
+          "mph": 69.1,
+          "kmh": 111.2056704,
+          "kind": "source label; not instrument accuracy verification"
+        },
+        "capture_rate_cell": "D16",
+        "declared_capture_fps": 360.0
+      },
+      "iPhone - Shot List": {
+        "cell": "H13",
+        "text": "Baseball Throw - 70.3 MPH",
+        "speed_label": {
+          "mph": 70.3,
+          "kmh": 113.1368832,
+          "kind": "source label; not instrument accuracy verification"
+        },
+        "capture_rate_cell": "D13",
+        "declared_capture_fps": 240.0
+      }
+    },
+    "calibration_definition": {
+      "cube_source_cell": "OBP-CV Readme!B14",
+      "cube_source_text": "- Calibration cube is 27.5 inches from red joint center to joint center with the middle joint center being exactly half the distance.",
+      "outer_red_joint_spacing_mm": 698.5,
+      "midpoint_spacing_mm": 349.25,
+      "checkerboard_cell": "OBP-CV Readme!B17",
+      "checkerboard_text": "- Checkerboard is 5x8 with blue squares to denote orientation. Each square is 100mm in size."
+    },
+    "synchronization_cell": "OBP-CV Readme!B20",
+    "synchronization_text": "- Both the OptiTrack and Edgertronic systems are GENLOCKED and SYNCHRONIZED with global shutters.",
+    "timing_caveat_cell": "OBP-CV Readme!B26",
+    "timing_caveat": "Shot List Tabs have the video descriptions, frame rates, and other details - it is possible some frame rates may be slightly inaccurate. Double check!",
+    "edgertronic_filename_labels": [
+      {
+        "file_label_mph": 67,
+        "file_label_kmh": 107.82604800000001,
+        "measured_speed_kmh": null,
+        "worksheet_trial_correspondence": "unresolved"
+      },
+      {
+        "file_label_mph": 70,
+        "file_label_kmh": 112.65408000000001,
+        "measured_speed_kmh": null,
+        "worksheet_trial_correspondence": "unresolved"
+      }
+    ],
+    "files_with_pose": "Only BaseballThrow_001 was found among eight initial C3D folder entries; no new 67/70 Theia assignment established."
+  },
+  "new_video_files": [
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow67mph_1.mp4",
+      "sha256": "1b1b8136e7a6e1b5a63699e015239d206d7b71c2dd30e83fb7f0524241d183e7",
+      "bytes": 37830698,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow67mph_2.mp4",
+      "sha256": "206537fbd029c5d5de00ea48e94e94a6cfc04b82ea541db01c1244a81055103b",
+      "bytes": 40378353,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow67mph_3.mp4",
+      "sha256": "b43989b1e4459851d3bbaf402dc5eb3a31e57e41a2ca1b707634cbf7e633779d",
+      "bytes": 59810405,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow67mph_4.mp4",
+      "sha256": "407df0c6fb46362579bac5479620393df33e3f085af9b6a907dd676b36002c98",
+      "bytes": 69188372,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow70mph_1.mp4",
+      "sha256": "3663a248e1a638bf7bf9168350cd0c79834fa103b6e0470b871303b14a9b31ed",
+      "bytes": 38867919,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow70mph_2.mp4",
+      "sha256": "43a298c2842f50994fb49d201187e413a1ae38483b916c05f001b18e21856e19",
+      "bytes": 41669655,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow70mph_3.mp4",
+      "sha256": "7afcc9e04f9a1c728c56c4af10635b688b641958013c10172991519e27313a4b",
+      "bytes": 61384086,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    },
+    {
+      "source_name": "edgertronic_dynamic_baseballthrow70mph_4.mp4",
+      "sha256": "d4d53461e29d30b57aa2042c1941046505166e3deaae2252aee83415a3aea054",
+      "bytes": 71129129,
+      "frames": 721,
+      "playback_fps": 30.0,
+      "dimensions": [
+        1280,
+        1024
+      ]
+    }
+  ],
+  "ball_track_cases": [
+    {
+      "label": 67,
+      "threshold": 100,
+      "frames": [
+        375,
+        376,
+        377,
+        378,
+        379
+      ],
+      "valid_frames": 2,
+      "fit": null
+    },
+    {
+      "label": 67,
+      "threshold": 130,
+      "frames": [
+        375,
+        376,
+        377,
+        378,
+        379
+      ],
+      "valid_frames": 4,
+      "fit": null
+    },
+    {
+      "label": 67,
+      "threshold": 160,
+      "frames": [
+        375,
+        376,
+        377,
+        378,
+        379
+      ],
+      "valid_frames": 5,
+      "fit": {
+        "velocity_px_per_frame": [
+          -42.582607434346976,
+          -6.229458832913212
+        ],
+        "speed_px_per_frame": 43.03585264937436,
+        "position_rmse_px": 1.0104801917160802,
+        "speed_kmh": null
+      }
+    },
+    {
+      "label": 70,
+      "threshold": 100,
+      "frames": [
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "valid_frames": 3,
+      "fit": null
+    },
+    {
+      "label": 70,
+      "threshold": 130,
+      "frames": [
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "valid_frames": 5,
+      "fit": {
+        "velocity_px_per_frame": [
+          -44.4751662085653,
+          -6.374158243426076
+        ],
+        "speed_px_per_frame": 44.92961498379154,
+        "position_rmse_px": 0.34956801903378376,
+        "speed_kmh": null
+      }
+    },
+    {
+      "label": 70,
+      "threshold": 160,
+      "frames": [
+        455,
+        456,
+        457,
+        458,
+        459
+      ],
+      "valid_frames": 5,
+      "fit": {
+        "velocity_px_per_frame": [
+          -44.439648635648865,
+          -6.153236361028713
+        ],
+        "speed_px_per_frame": 44.86362322165491,
+        "position_rmse_px": 0.29764003784906296,
+        "speed_kmh": null
+      }
+    }
+  ],
+  "calibration_reference": {
+    "cube_outer_red_joint_spacing_mm": 698.5,
+    "cube_half_spacing_mm": 349.25,
+    "CS200_relative_planar_marker_coordinates_mm": [
+      [
+        0,
+        0
+      ],
+      [
+        200,
+        0
+      ],
+      [
+        0,
+        150
+      ]
+    ],
+    "CS200_pair_lengths_mm": [
+      150,
+      200,
+      250
+    ],
+    "origin": "Chosen marker corner for relative geometry, not established laboratory axes; height convention not assigned"
+  },
+  "supplements": [
+    {
+      "name": "yamaguchi_supp1.docx",
+      "embedded_videos": [],
+      "embedded_workbooks": [],
+      "media": []
+    },
+    {
+      "name": "yamaguchi_supp2.docx",
+      "embedded_videos": [],
+      "embedded_workbooks": [],
+      "media": [
+        "word/media/image1.emf",
+        "word/media/image2.emf",
+        "word/media/image3.emf",
+        "word/media/image4.emf"
+      ]
+    }
+  ],
+  "paired_3d_hand_ball_ground_truth_obtained": false,
+  "radar_speed_definition_verified": false,
+  "actual_performance_improvement_verified": false,
+  "scientific_gate_passed": false,
+  "next_step": "Use newly obtained cube/CS200 definitions and videos for held-out geometric calibration; verify filename/worksheet speed mapping before3D speed validation."
+}
