@@ -6,3 +6,4 @@ artifacts/
 *.zip
 *.log
 MUJOCO_LOG.TXT
+obsidian/**/attachments/
