@@ -1,0 +1,214 @@
+{
+  "local_audit": {
+    "trial": "OBP_movement_BaseballThrow_001",
+    "scope": "Fresh source-integrity and observability audit, not a speed improvement experiment",
+    "observation_sha256": "c2d57d036bb9846869ff820ccaea2114888a85e9a42571f80e03fa1754ca5071",
+    "source_chain": {
+      "ball": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\candidate_audit.json",
+        "exists": true,
+        "expected_sha256": "5eeb51a92d757d068eac2b4793c784d7b10464e509dd33048f51a3681b686c5e",
+        "actual_sha256": "5eeb51a92d757d068eac2b4793c784d7b10464e509dd33048f51a3681b686c5e",
+        "hash_matches": true
+      },
+      "alignment": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\openbiomechanics\\computer_vision\\4d_reconstruction\\theia_alignment.json",
+        "exists": true,
+        "expected_sha256": "0fc0709f68c50d3451e01d8eaf19c1b8a59b508c5f008fa5bce5ea1dbd844a73",
+        "actual_sha256": "0fc0709f68c50d3451e01d8eaf19c1b8a59b508c5f008fa5bce5ea1dbd844a73",
+        "hash_matches": true
+      },
+      "body": {
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\tracking-calibration\\artifacts\\joint-video\\OBP_movement_BaseballThrow_001.c3d",
+        "exists": true,
+        "expected_sha256": "6b9edc5c2195ae717f9aa18a1a34476ca70fa3f2f46860192c0a4eb9440eca72",
+        "actual_sha256": "6b9edc5c2195ae717f9aa18a1a34476ca70fa3f2f46860192c0a4eb9440eca72",
+        "hash_matches": true
+      }
+    },
+    "primary_videos": [
+      {
+        "camera": 20,
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\camera20.mp4",
+        "sha256": "71ceff9056cd39d7f3d727b7696ed8bab5d4c7e084ada94d5f46a3614e58cead",
+        "stored_manifest_hash_matches": true,
+        "stored_container_pts_count": 1406,
+        "stored_container_interval_ticks": [
+          32
+        ],
+        "physical_exposure_synchronization_validated": false,
+        "frames": 1406,
+        "nominal_rate_hz": 360.0,
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "camera": 21,
+        "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\speed-journey\\artifacts\\release-observation\\camera21.mp4",
+        "sha256": "1bbf95eb85758f2d065649c93e08f7b0cd8e8e0829ac9117c7197cb44b64ded7",
+        "stored_manifest_hash_matches": true,
+        "stored_container_pts_count": 1406,
+        "stored_container_interval_ticks": [
+          32
+        ],
+        "physical_exposure_synchronization_validated": false,
+        "frames": 1406,
+        "nominal_rate_hz": 360.0,
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "original_video_manifest_sha256": "5aea1ca0b030ce16c5940e2a4932aac3db6e72cf25a578591823f7ede6c02858",
+    "body": {
+      "path": "C:\\Users\\user\\Documents\\Codex\\2026-10-20\\new-chat-2\\outputs\\pitching-lab\\tracking-calibration\\artifacts\\joint-video\\OBP_movement_BaseballThrow_001.c3d",
+      "rotation_labels": [
+        "worldbody_4X4",
+        "pelvis_4X4",
+        "l_thigh_4X4",
+        "l_shank_4X4",
+        "l_foot_4X4",
+        "l_toes_4X4",
+        "r_thigh_4X4",
+        "r_shank_4X4",
+        "r_foot_4X4",
+        "r_toes_4X4",
+        "torso_4X4",
+        "head_4X4",
+        "l_uarm_4X4",
+        "l_larm_4X4",
+        "l_hand_4X4",
+        "r_uarm_4X4",
+        "r_larm_4X4",
+        "r_hand_4X4",
+        "pelvis_shifted_4X4"
+      ],
+      "rotation_frames": 1406,
+      "point_labels": [],
+      "point_units": [
+        "mm"
+      ],
+      "point_rate_hz": 360.0,
+      "event_parameter_keys": [
+        "__METADATA__",
+        "USED"
+      ],
+      "used_hand_rotation_orthogonality_max": 5.4823274808768474e-08,
+      "used_hand_rotation_det_range": [
+        0.999999957415274,
+        1.0000000064780015
+      ]
+    },
+    "alignment": {
+      "sha256": "0fc0709f68c50d3451e01d8eaf19c1b8a59b508c5f008fa5bce5ea1dbd844a73",
+      "scale_m_per_mm": 0.0010095743123137383,
+      "nonunit_length_scale_percent": 0.9574312313738176,
+      "fit_code_available": false,
+      "fit_frame_selection": "30 frames around release; exact indices not supplied by contributor",
+      "status": "contributor-fitted, trial-specific; not final laboratory calibration",
+      "fit_cameras": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    "temporal_support": {
+      "keypoint_csv_sha256": "13efbe37f16806e58d01ddc6752dcda5048c3fdf4270436ac01760340d35ade2",
+      "keypoint_frame_range": [
+        935,
+        964
+      ],
+      "keypoint_frame_count": 30,
+      "ball_frames": [
+        973,
+        974,
+        975,
+        976,
+        977,
+        978,
+        979
+      ],
+      "body_indices": [
+        974,
+        975,
+        976,
+        977,
+        978,
+        979,
+        980
+      ],
+      "keypoint_ball_overlap": []
+    },
+    "finite_difference_sensitivity": {
+      "target_kmh": 1.0,
+      "rate_hz": 360.0,
+      "one_interval_displacement_mm": 0.771604938271605,
+      "scope": "Exact two-frame conversion only; not actual tracking error or confidence interval; longer-window fitting changes sensitivity."
+    },
+    "data_gate_passed": false,
+    "hand_ball_stage_allowed": false,
+    "remaining": [
+      "Exact alignment fit indices/code absent; no independent hand/ball-window alignment bound.",
+      "Same nominal frame rates do not alone establish exposure-time correspondence.",
+      "Hand/ball overlap in images does not identify physical contact termination.",
+      "Radar location/time and true release definitions remain unverified."
+    ]
+  },
+  "external_sample": {
+    "source": "https://api.figshare.com/v2/articles/28861655",
+    "file": "sampleHumandata.xlsx",
+    "download_url": "https://ndownloader.figshare.com/files/53969009",
+    "bytes": 1569447,
+    "md5": "82feb6ef2856b401ac84479d88ab9379",
+    "md5_verified": true,
+    "sha256": "e7889352e351d5fc8339d21b6a813fb2e70946d36d8fc6b1b72f8e309ed535b8",
+    "sheets": [
+      "Sheet1"
+    ],
+    "relevant_strings": [],
+    "sheet_preview": {
+      "xl/worksheets/sheet1.xml": {
+        "rows": 98185,
+        "top_rows": [
+          [
+            "time(s)",
+            "Angle"
+          ],
+          [
+            "0.04",
+            "32.356440176523698"
+          ],
+          [
+            "0.08",
+            "34.999017649790403"
+          ],
+          [
+            "0.12",
+            "39.691961419517902"
+          ],
+          [
+            "0.16",
+            "42.3046361323035"
+          ]
+        ]
+      }
+    },
+    "same_pitch_hand_ball_validation": false
+  },
+  "research_gate_result": {
+    "stage": "data",
+    "passed": false,
+    "errors": [
+      "check_not_passed:units_coordinates_time_verified",
+      "check_not_passed:body_hand_ball_observed",
+      "check_not_passed:release_window_usable",
+      "check_not_passed:alignment_uncertainty_quantified",
+      "check_not_passed:speed_reference_definition_documented"
+    ],
+    "scope": "Evidence integrity and progression guard; scientific claims require the referenced source/measurement/calculation review."
+  }
+}
