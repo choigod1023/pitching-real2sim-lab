@@ -1,0 +1,7 @@
+{
+  "name": "@pitch/core",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./pitch.mjs"
+}

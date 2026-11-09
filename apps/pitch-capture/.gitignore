@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.local/
+*.task
+web/public/wasm/
+android/.gradle/
+android/local.properties
+android/**/build/
+ios/DerivedData/
+xcuserdata/
+*.xcuserstate

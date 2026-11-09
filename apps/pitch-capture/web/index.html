@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1ec">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 6h22v11L16 27 5 17z' fill='none' stroke='%2325221d' stroke-width='2.5'/%3E%3Cpath d='M10 12h12' stroke='%2325221d' stroke-width='2.5'/%3E%3C/svg%3E">
+  <title>Pitch Replay · 투구 분석</title>
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 4.5h18v8.75L12 21l-9-7.75zM7 9h10"/>
+        </svg>
+        <span>Pitch Replay</span>
+      </div>
+      <span class="local">이 기기에 저장</span>
+    </div>
+  </header>
+  <main id="workspace" data-mode="idle">
+    <div class="workspace-head">
+      <h1>투구 검토</h1>
+      <div class="toolbar" role="group" aria-label="영상 입력">
+        <button id="camera" class="primary">카메라 켜기</button>
+        <button id="record" disabled>녹화 시작</button>
+        <label class="button">영상 불러오기<input id="upload" type="file" accept="video/*" multiple></label>
+      </div>
+    </div>
+    <div class="workspace-options">
+      <div id="notice" role="status" aria-live="polite">카메라를 켜거나 투구 영상을 불러오세요.</div>
+      <div class="capture-options" role="group" aria-label="추적 설정">
+        <label>투구 손 <select id="side"><option value="right">오른손</option><option value="left">왼손</option></select></label>
+        <label>추적 영역 <select id="region"><option value="full">전체 화면</option><option value="mound">화면 중앙</option></select></label>
+      </div>
+    </div>
+    <div class="workbench">
+      <section class="viewer" aria-label="투구 영상">
+        <div class="viewer-head">
+          <div class="viewer-title"><span class="live-dot" aria-hidden="true"></span><strong id="view-title">투구 화면</strong></div>
+          <span id="quality" aria-live="off">입력 대기</span>
+        </div>
+        <div id="stage" class="stage">
+          <video id="video" playsinline muted preload="metadata" aria-label="원본 투구 영상"></video>
+          <canvas id="overlay" aria-label="영상 위 관절 표시"></canvas>
+          <canvas id="ball-overlay" aria-label="영상 위 공 궤적" hidden></canvas>
+          <div id="empty" class="empty">
+            <div class="empty-copy">
+              <p class="empty-label">영상 입력 대기</p>
+              <p class="empty-title">투구 영상을 열어보세요</p>
+              <p>카메라를 고정하고 발끝부터 투구 손까지<br class="desktop-break"> 화면에 담으세요.</p>
+            </div>
+            <svg class="field-plan" viewBox="0 0 260 230" fill="none" aria-hidden="true">
+              <g stroke="currentColor" stroke-width="1">
+                <path d="M130 30 220 120 130 210 40 120Z" opacity=".55"/>
+                <path d="M130 210 16 96m114 114L244 96M55 105a106 106 0 0 1 150 0" opacity=".32"/>
+                <path d="M130 120v82" stroke-dasharray="3 5" opacity=".72"/>
+                <circle cx="130" cy="120" r="21" opacity=".68"/>
+                <path d="M123 118h14m-7-79 5-5-5-5-5 5zm86 81 5 5 5-5-5-5zm-182 0 5 5 5-5-5-5zm90 82h12v5l-6 5-6-5z"/>
+              </g>
+              <circle cx="130" cy="120" r="2.5" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+        <section id="ball-controls" class="ball-controls" aria-label="실시간 공 추적" hidden>
+          <div class="ball-instruments">
+            <div><span>평면 구속</span><strong id="ball-speed">—</strong><small id="ball-speed-note">실제 기준 거리 필요</small></div>
+            <div><span>표식 회전수</span><strong id="ball-rpm">—</strong><small id="ball-rpm-note">고속 표식 모드 필요</small></div>
+            <div><span>평면 휨</span><strong id="ball-bend">—</strong><small>관측 경로와 양 끝 직선의 차이</small></div>
+          </div>
+          <p id="ball-status" class="hint">고정된 측면 영상에서 공이 날아가는 구간을 지정하세요.</p>
+          <div class="controls">
+            <button id="ball-calibrate">추적 구간 지정</button><button id="ball-reset">공 추적 해제</button>
+            <label class="ball-input">두 점의 실제 거리(m) <input id="ball-metres" type="number" min=".1" max="35" step=".01" inputmode="decimal"></label>
+            <label class="verify"><input id="ball-marked" type="checkbox"> 고속 표식 모드</label>
+          </div>
+          <p class="hint">속도를 보려면 공이 날아가는 평면에 기준점 두 개를 두고, 영상에서 그 점을 눌러 실제 거리를 입력하세요.</p>
+        </section>
+        <div id="review" class="review" hidden>
+          <label class="scrub-label" for="time">영상 위치 <output id="time-read"></output></label>
+          <div class="timeline">
+            <input id="time" type="range" min="0" max="1" step=".001">
+            <div class="timeline-marks" aria-hidden="true">
+              <span id="landing-mark" hidden></span><span id="release-mark" hidden></span>
+            </div>
+          </div>
+          <div class="controls">
+            <div class="control-group">
+              <button id="play">재생</button><button id="back" aria-label="이전 프레임">이전</button><button id="next" aria-label="다음 프레임">다음</button>
+            </div>
+            <div class="control-group">
+              <button id="landing">착지 확인</button><button id="release">릴리스 확인</button>
+            </div>
+          </div>
+          <p id="events" class="hint"></p>
+          <fieldset id="offline-controls" class="offline-controls">
+            <legend>녹화 원본 공 분석</legend>
+            <p class="hint">릴리스 근처로 이동한 뒤, 공을 찾을 범위를 넓게 표시하세요. 거리를 아는 경우에만 그 안에 측정 지점 A와 B를 따로 표시하세요.</p>
+            <div class="controls">
+              <button id="offline-source" hidden>원본 전체 열기</button>
+              <button id="offline-mark">1. 공 검출 범위</button>
+              <button id="offline-gates" disabled>2. 속력 측정 지점</button>
+              <label class="ball-input">A–B 거리(m) <input id="offline-metres" type="number" min=".1" max="35" step="any" inputmode="decimal" disabled></label>
+              <button id="offline-run" disabled>원본 분석·저장</button>
+              <button id="offline-export" hidden>결과 JSON</button>
+            </div>
+            <p id="offline-status" class="hint" role="status"></p>
+          </fieldset>
+        </div>
+        <div id="compare-controls" class="review" hidden>
+          <label class="scrub-label" for="phase">착지부터 릴리스까지 <output id="phase-read">50%</output></label>
+          <input id="phase" type="range" min="0" max="1000" value="500">
+          <div class="compare-footer">
+            <div class="legend"><span><i class="swatch a"></i>A 기준 투구</span><span><i class="swatch b"></i>B 비교 투구</span></div>
+            <button id="leave-compare">투구 검수로 돌아가기</button>
+          </div>
+        </div>
+      </section>
+      <aside class="sessions" aria-label="투구 기록">
+        <div class="sessions-head"><h2>투구 기록</h2><span id="count">0구</span></div>
+        <div id="pitches" class="pitch-list"></div>
+        <details id="manual" hidden>
+          <summary>누락된 투구 추가</summary>
+          <p class="hint">현재 원본 영상에서 시작과 끝을 차례로 지정하세요.</p>
+          <div class="controls"><button id="manual-start">현재를 시작으로</button><button id="manual-end">현재를 끝으로 저장</button></div>
+        </details>
+        <div class="compare-card">
+          <h2>두 투구 비교</h2>
+          <div class="pair">
+            <label><span><i class="swatch a"></i>A 기준</span><select id="pitch-a"><option value="">투구 선택</option></select></label>
+            <label><span><i class="swatch b"></i>B 비교</span><select id="pitch-b"><option value="">투구 선택</option></select></label>
+          </div>
+          <label class="verify"><input id="view-check" type="checkbox"> 같은 선수와 카메라 시야를 확인했습니다</label>
+          <button id="compare">착지·릴리스 맞춰 겹치기</button>
+          <p id="compare-note" class="hint" role="status"></p>
+        </div>
+      </aside>
+    </div>
+    <footer>관절점은 영상 추정 · 착지와 릴리스는 사용자 판독</footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

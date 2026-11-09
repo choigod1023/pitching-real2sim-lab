@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PitchTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/pitch_surface</item>
+        <item name="colorPrimary">@color/pitch_primary</item>
+        <item name="colorOnPrimary">@color/pitch_on_primary</item>
+        <item name="colorPrimaryContainer">@color/pitch_accent_container</item>
+        <item name="colorOnPrimaryContainer">@color/pitch_on_accent_container</item>
+        <item name="colorSecondary">@color/pitch_primary</item>
+        <item name="colorOnSecondary">@color/pitch_on_primary</item>
+        <item name="colorSecondaryContainer">@color/pitch_accent_container</item>
+        <item name="colorOnSecondaryContainer">@color/pitch_on_accent_container</item>
+        <item name="colorSurface">@color/pitch_surface</item>
+        <item name="colorOnSurface">@color/pitch_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/pitch_on_surface_variant</item>
+        <item name="colorSurfaceVariant">@color/pitch_surface_high</item>
+        <item name="colorSurfaceContainerLow">@color/pitch_surface_low</item>
+        <item name="colorSurfaceContainer">@color/pitch_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/pitch_surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/pitch_surface_highest</item>
+        <item name="colorOutline">@color/pitch_outline</item>
+        <item name="colorOutlineVariant">@color/pitch_outline_variant</item>
+    </style>
+</resources>
