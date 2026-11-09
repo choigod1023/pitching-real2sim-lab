@@ -78,9 +78,38 @@ function crossingTime(model, bracket, signed, target) {
   return (before+after)/2;
 }
 
+function gateCrossing(model, points, signed, target, gap) {
+  if (!model) return null;
+  const bracket = crossing(points,signed,target,gap);
+  return bracket && {...bracket,estimate:crossingTime(model,bracket,signed,target)};
+}
+
+function measurementAxis(tracker, gates) {
+  if (!Array.isArray(gates) || gates.length !== 2) throw new Error('속력 측정 지점 두 개를 표시하세요.');
+  const [a,b] = gates;
+  const {start,length,ux,uy,band,width,height} = tracker;
+  const inside = p => {
+    if (!p || !(p.x >= 0 && p.x < width && p.y >= 0 && p.y < height)) return false;
+    const x = p.x-start.x, y = p.y-start.y;
+    const progress = x*ux+y*uy;
+    return progress >= -.12*length && progress <= 1.12*length && Math.abs(y*ux-x*uy) <= band;
+  };
+  if (!inside(a) || !inside(b)) throw new Error('속력 측정 지점을 공 검출 범위 안에 표시하세요.');
+  const dx = b.x-a.x, dy = b.y-a.y;
+  if (!(dx*ux+dy*uy >= 1)) throw new Error('공이 날아가는 순서대로 두 측정 지점을 표시하세요.');
+  const span = Math.hypot(dx,dy);
+  return {span,signed:p => ((p.x-a.x)*dx+(p.y-a.y)*dy)/span};
+}
+
 export class OfflineBallReview {
-  constructor(width, height, start, end, metres = null) {
-    this.tracker = new BallTracker(width,height,start,end,{metres});
+  constructor(width, height, start, end, metres = null, {gates = null} = {}) {
+    this.tracker = new BallTracker(width,height,start,end,{metres:gates ? null : metres});
+    const tracker = this.tracker;
+    this.axis = gates ? measurementAxis(tracker,gates) : {
+      span:tracker.length,
+      signed:p => (p.x-start.x)*tracker.ux+(p.y-start.y)*tracker.uy,
+    };
+    this.metres = Number.isFinite(metres) && metres > 0 ? metres : null;
     this.times = [];
     this.track = null;
     this.baseline = null;
@@ -98,7 +127,8 @@ export class OfflineBallReview {
   }
 
   finish() {
-    const {width,height,start,length,ux,uy,band,metres} = this.tracker;
+    const {width,height,start,length,ux,uy,band} = this.tracker;
+    const {metres,axis} = this;
     const signed = p => (p.x-start.x)*ux + (p.y-start.y)*uy;
     const points = this.track?.points ?? [];
     const limit = 3.5 * width / 960;
@@ -109,10 +139,11 @@ export class OfflineBallReview {
     const model = usable.length < 4 ? null :
       checkedFit(usable,'linear',limit) ?? checkedFit(usable,'perspective',limit);
     const gap = Math.min(.05,this.track?.gap ?? .05);
-    const releaseBracket = crossing(usable,signed,0,gap);
-    const release = releaseBracket && model
-      ? {...releaseBracket, estimate:crossingTime(model,releaseBracket,signed,0), method:'marked_start_crossing'}
-      : null;
+    const release = gateCrossing(model,usable,signed,0,gap);
+    const measurement = {
+      start:gateCrossing(model,usable,axis.signed,0,gap),
+      finish:gateCrossing(model,usable,axis.signed,axis.span,gap),
+    };
     let imageSpeedPxS = null, kmh = null, speedBoundsKmh = null;
     let speedStatus = model ? 'uncalibrated' : usable.length < 4 ? 'too_few_centres' : 'unreliable_fit';
     if (model) {
@@ -120,24 +151,27 @@ export class OfflineBallReview {
       const a = model.at(first), b = model.at(last);
       imageSpeedPxS = Math.hypot(b.x-a.x,b.y-a.y)/(last-first);
       if (metres !== null) {
-        const finish = crossing(usable,signed,length,gap);
-        const startTime = release?.estimate ?? null;
-        const finishTime = finish && crossingTime(model,finish,signed,length);
+        const {start:entry,finish} = measurement;
+        const startTime = entry?.estimate ?? null, finishTime = finish?.estimate ?? null;
         speedStatus = 'unbracketed_gates';
-        const fastest = finish && release ? finish.before-release.after : null;
-        if (startTime !== null && finishTime !== null && finishTime > startTime && fastest > 0) {
-          speedStatus = 'available';
-          kmh = metres/(finishTime-startTime)*3.6;
-          // Range from observed frame brackets only. Camera calibration and detection errors are separate.
-          speedBoundsKmh = [metres/(finish.after-release.before)*3.6, metres/fastest*3.6];
+        if (startTime !== null && finishTime !== null && finishTime > startTime) {
+          const fastest = finish.before-entry.after;
+          speedStatus = 'overlapping_gate_brackets';
+          if (fastest > 1e-9) {
+            speedStatus = 'available';
+            kmh = metres/(finishTime-startTime)*3.6;
+            // Range from observed frame brackets only. Camera calibration and detection errors are separate.
+            speedBoundsKmh = [metres/(finish.after-entry.before)*3.6, metres/fastest*3.6];
+          }
         }
       }
     }
     return {
-      version:1,width,height,frameCount:this.times.length,
+      version:2,width,height,frameCount:this.times.length,
       points:points.map(({x,y,time})=>({x,y,time,usedForFit: Boolean(model && usable.some(p=>p.time===time))})),
       firstObservation:points[0]?.time ?? null,
-      release:release?.estimate != null ? release : null,
+      release:release?.estimate != null ? {...release,method:'marked_start_crossing'} : null,
+      measurement,
       usableCentres:usable.length,
       linearResidualPx:linear?.residual ?? null,
       fit:model ? {kind:model.kind,residualPx:model.residual,edgeErrorPx:model.edgeError} : null,

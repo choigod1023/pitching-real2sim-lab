@@ -2,13 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {OfflineBallReview} from './offline-ball.mjs';
 
-function recording({metres = null, startX = 122} = {}) {
+function recording({metres = null, startX = 122, step = 21, range = [135,303], gates = null} = {}) {
   const width = 640, height = 360;
-  const review = new OfflineBallReview(width,height,{x:135,y:180},{x:303,y:180},metres);
+  const onPath = x => ({x,y:180});
+  const [a,b] = range.map(onPath);
+  const review = new OfflineBallReview(width,height,a,b,metres,{gates:gates?.map(onPath)});
   for (let i=0; i<=10; i++) {
     const pixels = new Uint8Array(width*height*4);
     if (i > 0) {
-      const x = startX+(i-1)*21;
+      const x = startX+(i-1)*step;
       for (let row=177; row<=183; row++) for (let col=x-3; col<=x+3; col++) {
         if ((row-180)**2+(col-x)**2 <= 9) pixels.fill(255,4*(row*width+col),4*(row*width+col)+4);
       }
@@ -50,4 +52,34 @@ test('a recording without a coherent ball track retains the frame count and with
   assert.deepEqual(result.points,[]);
   assert.equal(result.speedStatus,'too_few_centres');
   assert.equal(result.release,null);
+});
+
+test('wide detection retains fast samples when the calibrated segment is too short for tracking', () => {
+  const input = {startX:80,step:60,metres:1.3};
+  const coupled = recording({...input,range:[165,295]});
+  const separated = recording({...input,range:[100,510],gates:[165,295]});
+  const longer = recording({...input,range:[100,510],gates:[165,415],metres:2.5});
+  assert.equal(coupled.kmh,null);
+  assert.ok(Math.abs(separated.kmh-129.6) < 1e-4);
+  assert.deepEqual(separated.points,longer.points);
+  assert.equal(separated.baseline.kmh,null);
+  assert.ok(Math.abs(longer.kmh-129.6) < 1e-4);
+  assert.equal(separated.measurement.start.estimate,longer.measurement.start.estimate);
+  const [shortMin,shortMax] = separated.speedBoundsKmh;
+  const [longMin,longMax] = longer.speedBoundsKmh;
+  assert.ok(longMax-longMin < shortMax-shortMin);
+});
+
+test('ordered measurement points must be in the detection corridor and separately bracketed', () => {
+  const input = {startX:80,step:60,range:[100,510],metres:1};
+  assert.throws(() => recording({...input,gates:[300,200]}),/순서대로/);
+  assert.throws(() => recording({...input,gates:[200,600]}),/검출 범위/);
+  const missed = recording({...input,gates:[200,550]});
+  assert.equal(missed.speedStatus,'unbracketed_gates');
+  assert.equal(missed.measurement.finish,null);
+  assert.equal(missed.kmh,null);
+  const adjacent = recording({...input,gates:[165,225]});
+  assert.equal(adjacent.speedStatus,'overlapping_gate_brackets');
+  assert.ok(adjacent.measurement.finish.estimate > adjacent.measurement.start.estimate);
+  assert.equal(adjacent.kmh,null);
 });

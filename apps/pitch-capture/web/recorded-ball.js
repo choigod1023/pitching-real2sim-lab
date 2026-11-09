@@ -1,6 +1,6 @@
 import {OfflineBallReview} from '@pitch/core/offline-ball.mjs';
 
-export async function reviewRecordedBall(blob, {start,end,anchors,metres}, onProgress) {
+export async function reviewRecordedBall(blob, {start,end,anchors,gates,metres}, onProgress) {
   const {ALL_FORMATS,BlobSource,Input,VideoSampleSink} = await import('mediabunny');
   const input = new Input({source:new BlobSource(blob),formats:ALL_FORMATS});
   try {
@@ -18,8 +18,9 @@ export async function reviewRecordedBall(blob, {start,end,anchors,metres}, onPro
           const scale = Math.min(1,960/Math.max(sample.displayWidth,sample.displayHeight));
           const width = canvas.width = Math.round(sample.displayWidth*scale);
           const height = canvas.height = Math.round(sample.displayHeight*scale);
-          const [a,b] = anchors.map(p=>({x:p.x*width,y:p.y*height}));
-          review = new OfflineBallReview(width,height,a,b,metres);
+          const pixelPoint = p => ({x:p.x*width,y:p.y*height});
+          const [a,b] = anchors.map(pixelPoint);
+          review = new OfflineBallReview(width,height,a,b,metres,{gates:gates?.map(pixelPoint)});
         }
         sample.draw(pixels,0,0,canvas.width,canvas.height);
         review.push(pixels.getImageData(0,0,canvas.width,canvas.height).data,sample.timestamp);

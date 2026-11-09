@@ -423,16 +423,40 @@ function recordedReview() {
 
 function drawRecordedReview(time) {
   const saved = recordedReview();
-  const anchors = offlineDraft?.anchors ?? saved?.anchors;
+  const settings = offlineDraft ?? saved;
+  const anchors = settings?.anchors;
   if (!anchors?.length) return;
   const fit = liveBall.geometry(canvas.width,canvas.height);
   if (!fit) return;
   const scale = Math.min(devicePixelRatio || 1,2);
+  const position = p => ({x:fit.x+p.x*fit.w,y:fit.y+p.y*fit.h});
+  ctx.save();
+  ctx.strokeStyle = '#edf2f8';
+  ctx.lineWidth = 1.5*scale;
+  if (anchors.length === 2) {
+    const [a,b] = anchors.map(position);
+    ctx.setLineDash([6*scale,5*scale]);
+    ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  for (const point of anchors) {
+    const {x,y} = position(point);
+    ctx.strokeRect(x-4*scale,y-4*scale,8*scale,8*scale);
+  }
   ctx.strokeStyle = '#ffe2a0';
   ctx.fillStyle = '#ffe2a0';
   ctx.lineWidth = 2*scale;
-  for (const point of anchors) ctx.strokeRect(fit.x+point.x*fit.w-4*scale,fit.y+point.y*fit.h-4*scale,8*scale,8*scale);
+  ctx.font = `${13*scale}px system-ui`;
+  for (const [index,point] of (settings.gates ?? []).entries()) {
+    const {x,y} = position(point);
+    ctx.beginPath(); ctx.arc(x,y,6*scale,0,Math.PI*2); ctx.stroke();
+    ctx.fillText(index === 0 ? 'A' : 'B',x+9*scale,y-7*scale);
+  }
+  ctx.restore();
   if (!saved || offlineDraft) return;
+  ctx.strokeStyle = '#ffe2a0';
+  ctx.fillStyle = '#ffe2a0';
+  ctx.lineWidth = 2*scale;
   const {points,width,height} = saved.result;
   let previous = null;
   for (const p of points) {
@@ -448,29 +472,41 @@ function drawRecordedReview(time) {
   ctx.globalAlpha = 1;
 }
 
+function updateRecordedControls() {
+  const settings = offlineDraft ?? recordedReview();
+  const hasRange = settings?.anchors?.length === 2;
+  const hasGates = offlineDraft?.gates?.length === 2;
+  byId('offline-gates').disabled = !hasRange;
+  byId('offline-metres').disabled = !hasGates;
+  byId('offline-run').disabled = !offlineDraft || !hasRange || !!offlineDraft.marking;
+}
+
 function showRecordedResult() {
   const saved = recordedReview();
   byId('offline-source').hidden = !selected?.pitch;
-  byId('offline-run').disabled = !offlineDraft || offlineDraft.anchors.length !== 2;
+  updateRecordedControls();
   byId('offline-export').hidden = !saved;
   byId('offline-metres').value = saved?.metres ?? '';
   if (!saved) {
-    byId('offline-status').textContent = '실제 구간 거리를 알고 있을 때만 입력하세요. 두 지점 통과가 모두 관측돼야 km/h를 계산합니다.';
+    byId('offline-status').textContent = '공 검출 범위를 지정하면 거리 없이도 화면 궤적을 저장할 수 있습니다.';
     return;
   }
   const r = saved.result;
   const speed = r.kmh === null ? (r.imageSpeedPxS === null ? '속도 보류' : `화면 속도 ${r.imageSpeedPxS.toFixed(0)} px/s`) :
     `구간 평균 ${r.kmh.toFixed(1)} km/h`;
   const release = r.release ?
-    `릴리스 위치 통과 후보 ${r.release.before.toFixed(3)}~${r.release.after.toFixed(3)}초` : '릴리스 위치 통과 미확정';
+    `검출 시작점 통과 ${r.release.before.toFixed(3)}~${r.release.after.toFixed(3)}초` : null;
+  const bounds = r.speedBoundsKmh?.map(value => value.toFixed(1)).join('~');
   const reason = {
-    uncalibrated:'실제 구간 거리 미입력',
-    unbracketed_gates:'두 기준점 통과를 모두 확인하지 못함',
+    uncalibrated:'측정 구간 거리 미입력',
+    unbracketed_gates:'A와 B를 통과하는 공이 모두 보여야 합니다.',
+    overlapping_gate_brackets:'A와 B의 통과 시각을 구분하기 어렵습니다.',
     too_few_centres:'속도에 필요한 공 중심 부족',
     unreliable_fit:'궤적 맞춤 검사 미통과',
   }[r.speedStatus];
   byId('offline-status').textContent = [
-    `${r.frameCount}프레임 분석 · 공 중심 ${r.points.length}개`,release,speed,reason,
+    `${r.frameCount}프레임 분석 · 공 중심 ${r.points.length}개`,release,speed,
+    bounds && `프레임 간격 기준 ${bounds} km/h`,reason,
   ].filter(Boolean).join(' · ');
 }
 
@@ -478,39 +514,61 @@ function markRecordedAnchors() {
   if (busy || !selected || mode !== 'review') return;
   if (video.seeking) return tell('영상 이동이 끝나면 두 지점을 표시하세요.');
   video.pause();
-  offlineDraft = {time:video.currentTime,anchors:[]};
+  offlineDraft = {time:frameTime ?? video.currentTime,anchors:[],gates:[],marking:'anchors'};
+  byId('offline-metres').value = '';
   byId('stage').classList.add('marking');
-  byId('offline-run').disabled = true;
-  byId('offline-status').textContent = '영상에서 릴리스 부근을 누르세요.';
+  updateRecordedControls();
+  byId('offline-status').textContent = '영상에서 공이 보이기 시작하는 쪽을 누르세요.';
+  refreshReview();
+}
+
+function markRecordedGates() {
+  if (busy || !selected || mode !== 'review') return;
+  const settings = offlineDraft ?? recordedReview();
+  if (settings?.anchors?.length !== 2) return;
+  video.pause();
+  offlineDraft = {
+    time:settings.time ?? Math.min(selected.session.duration,settings.start+.20),
+    anchors:settings.anchors,gates:[],marking:'gates',
+  };
+  byId('offline-metres').value = '';
+  byId('stage').classList.add('marking');
+  updateRecordedControls();
+  byId('offline-status').textContent = '공이 먼저 통과할 측정 지점 A를 누르세요.';
   refreshReview();
 }
 
 function pickRecordedAnchor(event) {
-  if (!offlineDraft || offlineDraft.anchors.length >= 2 || mode !== 'review' || busy) return;
+  if (!offlineDraft?.marking || mode !== 'review' || busy) return;
   const bounds = byId('stage').getBoundingClientRect();
   const fit = liveBall.geometry(bounds.width,bounds.height);
   if (!fit) return;
   const x = (event.clientX-bounds.left-fit.x)/fit.w, y = (event.clientY-bounds.top-fit.y)/fit.h;
   if (x<0 || x>1 || y<0 || y>1) return;
-  offlineDraft.anchors.push({x,y});
-  if (offlineDraft.anchors.length === 2) {
+  const field = offlineDraft.marking;
+  const points = offlineDraft[field];
+  points.push({x,y});
+  if (points.length === 2) {
+    offlineDraft.marking = null;
     byId('stage').classList.remove('marking');
-    byId('offline-run').disabled = false;
   }
-  byId('offline-status').textContent = offlineDraft.anchors.length === 1 ?
-    '공이 진행하는 방향에서 두 번째 지점을 누르세요.' : '구간을 지정했습니다. 원본 분석을 실행하세요.';
+  updateRecordedControls();
+  byId('offline-status').textContent = field === 'anchors' ?
+    (points.length === 1 ? '공이 날아가는 방향에서 검출 범위의 끝을 누르세요.' : '검출 범위를 지정했습니다. 속력 측정 지점을 추가하거나 분석을 실행하세요.') :
+    (points.length === 1 ? '공이 다음에 통과할 측정 지점 B를 누르세요.' : 'A와 B 사이의 실제 거리를 입력하세요.');
   refreshReview();
 }
 
 async function analyzeRecordedBall() {
-  if (busy || !selected || mode !== 'review' || offlineDraft?.anchors.length !== 2) return;
+  if (busy || !selected || mode !== 'review' || offlineDraft?.anchors.length !== 2 || offlineDraft.marking) return;
   video.pause();
   const session = selected.session, pitch = selected.pitch;
-  const {time,anchors} = offlineDraft;
+  const {time,anchors,gates} = offlineDraft;
   const distance = byId('offline-metres');
   if (!distance.validity.valid) throw new Error('거리 입력값을 확인하세요.');
-  const metres = Number.isFinite(distance.valueAsNumber) ? distance.valueAsNumber : null;
-  const settings = {anchors,metres,start:Math.max(0,time-.20),end:Math.min(session.duration,time+.40)};
+  const metres = gates.length === 2 && Number.isFinite(distance.valueAsNumber) ? distance.valueAsNumber : null;
+  const settings = {time,anchors,gates:gates.length === 2 ? gates : null,metres,
+    start:Math.max(0,time-.20),end:Math.min(session.duration,time+.65)};
   busy = true;
   byId('offline-controls').disabled = true;
   byId('offline-status').textContent = '녹화 원본에서 공을 다시 찾고 있습니다.';
@@ -680,6 +738,7 @@ video.onpause = () => { byId('play').textContent = '재생'; };
 byId('landing').onclick = () => handle(() => annotate('landing'));
 byId('release').onclick = () => handle(() => annotate('release'));
 byId('offline-mark').onclick = markRecordedAnchors;
+byId('offline-gates').onclick = markRecordedGates;
 byId('offline-source').onclick = () => handle(async () => {
   if (busy || !selected?.pitch || mode !== 'review') return;
   const time = frameTime ?? video.currentTime;

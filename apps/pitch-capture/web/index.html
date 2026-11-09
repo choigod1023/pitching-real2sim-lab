@@ -96,11 +96,12 @@
           <p id="events" class="hint"></p>
           <fieldset id="offline-controls" class="offline-controls">
             <legend>녹화 원본 공 분석</legend>
-            <p class="hint">릴리스 근처로 이동한 다음, 영상에서 릴리스 부근과 공의 진행 방향에 있는 끝점을 차례로 누르세요.</p>
+            <p class="hint">릴리스 근처로 이동한 뒤, 공을 찾을 범위를 넓게 표시하세요. 거리를 아는 경우에만 그 안에 측정 지점 A와 B를 따로 표시하세요.</p>
             <div class="controls">
               <button id="offline-source" hidden>원본 전체 열기</button>
-              <button id="offline-mark">두 지점 표시</button>
-              <label class="ball-input">두 통과 지점 거리(m) <input id="offline-metres" type="number" min=".1" max="35" step=".01" inputmode="decimal"></label>
+              <button id="offline-mark">1. 공 검출 범위</button>
+              <button id="offline-gates" disabled>2. 속력 측정 지점</button>
+              <label class="ball-input">A–B 거리(m) <input id="offline-metres" type="number" min=".1" max="35" step="any" inputmode="decimal" disabled></label>
               <button id="offline-run" disabled>원본 분석·저장</button>
               <button id="offline-export" hidden>결과 JSON</button>
             </div>
