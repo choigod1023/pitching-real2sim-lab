@@ -246,6 +246,16 @@ main {
 [hidden] {
   display: none !important;
 }
+
+.stage.marking { cursor: crosshair; }
+.ball-controls { padding: 14px 16px; border-top: 1px solid #c6d5cf; }
+.ball-instruments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.ball-instruments div { display: grid; gap: 3px; }
+.ball-instruments span, .ball-instruments small, .ball-input { font-size: .82rem; }
+.ball-instruments strong { font-size: 1.28rem; font-variant-numeric: tabular-nums; }
+.ball-instruments small { color: #415850; }
+.ball-controls .controls { align-items: center; flex-wrap: wrap; }
+.ball-input input { width: 5rem; margin-left: .35rem; }
 .review {
   padding: 12px 15px;
 }

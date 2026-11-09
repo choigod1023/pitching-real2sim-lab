@@ -1,6 +1,7 @@
 package lab.pitch.replay
 
 import android.graphics.ImageFormat
+import android.graphics.Rect
 import android.media.Image
 import android.media.MediaCodec
 import android.media.MediaCodecInfo
@@ -15,6 +16,7 @@ import com.google.mlkit.vision.pose.PoseDetection
 import com.google.mlkit.vision.pose.PoseDetector
 import com.google.mlkit.vision.pose.defaults.PoseDetectorOptions
 import java.io.File
+import java.nio.ByteBuffer
 import java.util.concurrent.TimeUnit
 
 internal fun streamPoseDetector(): PoseDetector = PoseDetection.getClient(
@@ -138,23 +140,27 @@ private fun decodeFrames(
     return frames
 }
 
-private data class Nv21(val bytes: ByteArray, val width: Int, val height: Int)
+internal data class Nv21(val bytes: ByteArray, val width: Int, val height: Int, val scale: Int)
+internal data class YuvPlane(val buffer: ByteBuffer, val rowStride: Int, val pixelStride: Int)
 
 private fun packNv21(image: Image): Nv21 {
     require(image.format == ImageFormat.YUV_420_888 && image.planes.size == 3) {
         "기기에서 이 영상의 픽셀 형식을 읽을 수 없습니다."
     }
-    val crop = image.cropRect
+    val (y, u, v) = image.planes.map { YuvPlane(it.buffer, it.rowStride, it.pixelStride) }
+    return packNv21(image.cropRect, y, u, v)
+}
+
+internal fun packNv21(crop: Rect, y: YuvPlane, u: YuvPlane, v: YuvPlane): Nv21 {
     val scale = (maxOf(crop.width(), crop.height()) + 1279) / 1280
     require(scale > 0)
     val width = (crop.width() / scale) and -2
     val height = (crop.height() / scale) and -2
     require(width > 0 && height > 0)
     val bytes = ByteArray(width * height * 3 / 2)
-    val (y, u, v) = image.planes
-    val luma = y.buffer
-    val blue = u.buffer
-    val red = v.buffer
+    val luma = y.buffer.duplicate()
+    val blue = u.buffer.duplicate()
+    val red = v.buffer.duplicate()
     val lumaStart = luma.position() + crop.top * y.rowStride + crop.left * y.pixelStride
     val blueStart = blue.position() + (crop.top / 2) * u.rowStride + (crop.left / 2) * u.pixelStride
     val redStart = red.position() + (crop.top / 2) * v.rowStride + (crop.left / 2) * v.pixelStride
@@ -177,7 +183,7 @@ private fun packNv21(image: Image): Nv21 {
             bytes[target + col * 2 + 1] = blue[blueRow + col * scale * u.pixelStride]
         }
     }
-    return Nv21(bytes, width, height)
+    return Nv21(bytes, width, height, scale)
 }
 
 private fun detectJoints(detector: PoseDetector, frame: Nv21, rotation: Int): Map<Int, Joint> {

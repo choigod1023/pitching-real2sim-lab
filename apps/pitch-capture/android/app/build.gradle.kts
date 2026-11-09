@@ -34,7 +34,6 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:$cameraVersion")
     implementation("androidx.camera:camera-video:$cameraVersion")
     implementation("androidx.camera:camera-view:$cameraVersion")
-    implementation("androidx.camera:camera-mlkit-vision:$cameraVersion")
     implementation("com.google.mlkit:pose-detection:18.0.0-beta5")
     testImplementation("junit:junit:4.13.2")
 }

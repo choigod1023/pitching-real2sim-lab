@@ -2,9 +2,11 @@ import './style.css';
 import {BONES, JOINTS, PitchDetector, nearestPose, markEvent, confirmed,
   comparisonError, phaseTime} from '@pitch/core';
 import {listSessions, saveSession} from './storage.js';
+import {LiveBall} from './live-ball.js';
 
 const byId = id => document.getElementById(id);
 const video = byId('video'), canvas = byId('overlay'), ctx = canvas.getContext('2d');
+const liveBall = new LiveBall(video);
 const A = '#75e4d3', B = '#ffd17e';
 const regions = {full:[0,0,1,1], mound:[.40,.24,.28,.63]};
 let sessions = [], selected = null, comparison = null, mode = 'idle', stream, recorder;
@@ -141,6 +143,7 @@ function stopPreview() {
 
 function showMode(next) {
   mode = next;
+  liveBall.active(next === 'live');
   byId('review').hidden = next !== 'review';
   byId('compare-controls').hidden = next !== 'compare';
   byId('manual').hidden = next !== 'review';
@@ -149,13 +152,14 @@ function showMode(next) {
 
 function preview() {
   const token = ++loop;
-  let working = false, last = -Infinity;
+  let working = false, poseFailed = false, last = -Infinity;
   previewCount = 0;
   previewStarted = performance.now();
   const step = async (_, meta) => {
     if (token !== loop || mode !== 'live') return;
     video.requestVideoFrameCallback(step);
-    if (working || meta.mediaTime-last < .055) return;
+    liveBall.frame(meta.mediaTime);
+    if (poseFailed || working || meta.mediaTime-last < .055) return;
     last = meta.mediaTime;
     working = true;
     const region = regions[byId('region').value];
@@ -171,7 +175,7 @@ function preview() {
         `추적 ${fps.toFixed(1)} fps · ${Math.round(performance.now()-started)} ms`;
     } catch (error) {
       if (token === loop) {
-        loop++;
+        poseFailed = true;
         tell(error.message,true);
         byId('quality').textContent = '관절 추적 중단';
       }

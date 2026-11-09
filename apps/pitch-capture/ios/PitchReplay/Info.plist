@@ -10,7 +10,7 @@
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleShortVersionString</key><string>1.0</string>
     <key>CFBundleVersion</key><string>1</string>
-    <key>NSCameraUsageDescription</key><string>야구 투구를 녹화하고 영상에 관절선을 표시합니다.</string>
+    <key>NSCameraUsageDescription</key><string>야구 투구를 녹화하고 영상에서 관절과 공의 움직임을 추적합니다.</string>
     <key>UILaunchScreen</key><dict/>
     <key>UIRequiresFullScreen</key><true/>
     <key>UISupportedInterfaceOrientations</key>

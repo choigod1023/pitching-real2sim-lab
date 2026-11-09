@@ -25,12 +25,32 @@ final class ReplayModel: ObservableObject {
     @Published var recording = false
     @Published var busy = false
     @Published var status = ""
+    @Published var highSpeed = false
+    @Published private(set) var markedModeReady = false
+    @Published private(set) var liveFPS: Double?
+    @Published private(set) var choosingBallPath = false
+    @Published private(set) var firstBallPoint: Point2D?
+    @Published private(set) var ballCorridor: BallCorridor?
+    @Published private(set) var liveBall = BallReadout.waiting
+    @Published var scaleMeters = ""
+    private var ballRevision = 0
 
     init() {
         camera.onPose = { [weak self] points, aspect in
             guard let self, self.cameraReady else { return }
             self.livePoints = points
-            self.aspect = aspect
+            if abs(self.aspect - aspect) > 0.01 {
+                self.aspect = aspect
+                if self.ballCorridor != nil { self.chooseBallPath() }
+            }
+        }
+        camera.onBall = { [weak self] readout, revision in
+            guard let self, self.cameraReady, revision == self.ballRevision else { return }
+            self.liveBall = readout
+        }
+        camera.onRate = { [weak self] rate in
+            guard let self, self.cameraReady else { return }
+            self.liveFPS = rate
         }
         do {
             let archive = try Archive.read()
@@ -45,11 +65,17 @@ final class ReplayModel: ObservableObject {
 
     func openCamera() {
         opening = true
-        camera.open { [weak self] result in
+        let requestedHighSpeed = highSpeed
+        camera.open(highSpeed: requestedHighSpeed) { [weak self] result in
             guard let self else { return }
             self.opening = false
             switch result {
-            case .success: self.cameraReady = true; self.status = "후면 카메라가 켜졌습니다."
+            case .success(let markedMode):
+                self.cameraReady = true
+                self.markedModeReady = markedMode
+                self.status = requestedHighSpeed && !markedMode
+                    ? "이 카메라 구성에서는 240 fps 표식 추적을 사용할 수 없습니다."
+                    : "후면 카메라가 켜졌습니다."
             case .failure(let error): self.status = error.localizedDescription
             }
         }
@@ -59,6 +85,60 @@ final class ReplayModel: ObservableObject {
         camera.close()
         cameraReady = false
         livePoints = [:]
+        liveFPS = nil
+        markedModeReady = false
+        choosingBallPath = false
+        firstBallPoint = nil
+        scaleMeters = ""
+        installBallCorridor(nil)
+    }
+
+    func chooseBallPath() {
+        choosingBallPath = true
+        firstBallPoint = nil
+        scaleMeters = ""
+        installBallCorridor(nil)
+        status = "공이 날아가는 방향으로 영상에서 시작점과 끝점을 고르세요."
+    }
+
+    func placeBallPoint(_ point: Point2D) {
+        guard choosingBallPath else { return }
+        guard let start = firstBallPoint else {
+            firstBallPoint = point
+            status = "이제 공이 향하는 쪽에 끝점을 고르세요."
+            return
+        }
+        guard let corridor = BallCorridor(start: start, end: point, aspect: aspect, meters: nil) else {
+            status = "시작점에서 충분히 떨어진 끝점을 고르세요. 카메라는 투구 옆에 두세요."
+            return
+        }
+        choosingBallPath = false
+        firstBallPoint = nil
+        installBallCorridor(corridor)
+        status = "공이 추적 구간에 들어오면 궤적을 표시합니다."
+    }
+
+    func applyBallScale() {
+        guard let corridor = ballCorridor else { return }
+        let text = scaleMeters.trimmingCharacters(in: .whitespacesAndNewlines)
+        let meters = Double(text.replacingOccurrences(of: ",", with: "."))
+        if !text.isEmpty {
+            guard let meters, meters.isFinite, (0.01...100).contains(meters) else {
+                status = "기준 거리를 0.01~100 m 사이 숫자로 입력하세요."
+                return
+            }
+        }
+        guard let calibrated = BallCorridor(start: corridor.start, end: corridor.end,
+                                            aspect: aspect, meters: meters) else { return }
+        installBallCorridor(calibrated)
+        status = meters == nil ? "거리 보정을 해제했습니다." : "화면 거리 보정을 적용했습니다."
+    }
+
+    private func installBallCorridor(_ corridor: BallCorridor?) {
+        ballRevision += 1
+        ballCorridor = corridor
+        liveBall = .waiting
+        camera.setBallCorridor(corridor, revision: ballRevision)
     }
 
     func start() {
@@ -188,6 +268,61 @@ private struct PoseLines: View {
     }
 }
 
+private struct BallOverlay: View {
+    let aspect: Double
+    let corridor: BallCorridor?
+    let first: Point2D?
+    let readout: BallReadout
+    let color: Color
+
+    var body: some View {
+        Canvas { context, size in
+            let rect = imageRect(in: size, aspect: aspect)
+            func position(_ p: Point2D) -> CGPoint {
+                CGPoint(x: rect.minX + p.x * rect.width, y: rect.minY + p.y * rect.height)
+            }
+            func dot(_ p: CGPoint, radius: CGFloat, color: Color) {
+                let rect = CGRect(x: p.x - radius, y: p.y - radius, width: radius * 2, height: radius * 2)
+                context.fill(Path(ellipseIn: rect), with: .color(color))
+            }
+            if let corridor {
+                let a = position(corridor.start)
+                let b = position(corridor.end)
+                let axis = corridor.direction
+                let pad = BallCorridor.halfWidth * rect.height
+                let offset = CGPoint(x: -axis.y * pad, y: axis.x * pad)
+                var outline = Path()
+                outline.move(to: CGPoint(x: a.x + offset.x, y: a.y + offset.y))
+                outline.addLine(to: CGPoint(x: b.x + offset.x, y: b.y + offset.y))
+                outline.addLine(to: CGPoint(x: b.x - offset.x, y: b.y - offset.y))
+                outline.addLine(to: CGPoint(x: a.x - offset.x, y: a.y - offset.y))
+                outline.closeSubpath()
+                var clipped = context
+                clipped.clip(to: Path(rect))
+                clipped.stroke(outline, with: .color(.white.opacity(0.65)), style: StrokeStyle(lineWidth: 1, dash: [5, 4]))
+                dot(a, radius: 3, color: .white)
+                dot(b, radius: 3, color: .white)
+            } else if let first {
+                dot(position(first), radius: 4, color: .white)
+            }
+            guard let start = readout.path.first else { return }
+            let trace = color.opacity(readout.active ? 1 : 0.70)
+            var line = Path()
+            line.move(to: position(start))
+            for point in readout.path.dropFirst() { line.addLine(to: position(point)) }
+            context.stroke(line, with: .color(.black.opacity(0.70)), style: StrokeStyle(lineWidth: 4, lineCap: .round))
+            context.stroke(line, with: .color(trace), style: StrokeStyle(lineWidth: 2, lineCap: .round))
+            for point in readout.path { dot(position(point), radius: 2.5, color: trace) }
+        }.allowsHitTesting(false).accessibilityHidden(true)
+    }
+}
+
+private func imageRect(in size: CGSize, aspect: Double) -> CGRect {
+    let width = min(size.width, size.height * aspect)
+    let height = width / aspect
+    return CGRect(x: (size.width - width) / 2, y: (size.height - height) / 2, width: width, height: height)
+}
+
 private final class CameraSurface: UIView {
     override class var layerClass: AnyClass { AVCaptureVideoPreviewLayer.self }
     var preview: AVCaptureVideoPreviewLayer { layer as! AVCaptureVideoPreviewLayer }
@@ -199,7 +334,7 @@ private struct CameraFeed: UIViewRepresentable {
     func updateUIView(_ view: CameraSurface, context: Context) {
         if view.preview.session !== session { view.preview.session = session }
         view.preview.videoGravity = .resizeAspect
-        if let link = view.preview.connection, link.isVideoOrientationSupported {
+        if let link = view.preview.connection, link.isVideoOrientationSupported, link.videoOrientation != .landscapeRight {
             link.videoOrientation = .landscapeRight
         }
     }
@@ -324,9 +459,37 @@ private struct ReplayView: View {
                 Button("후면 카메라 켜기") { model.openCamera() }
                     .buttonStyle(.borderedProminent).disabled(model.busy || model.opening)
             }
+            if model.cameraReady {
+                Button(model.ballCorridor == nil ? "투구 경로 지정" : "투구 경로 다시 지정") { model.chooseBallPath() }
+                    .buttonStyle(.bordered).disabled(model.choosingBallPath)
+                if model.choosingBallPath {
+                    Text(model.firstBallPoint == nil ? "1. 영상에서 공이 들어올 지점을 탭하세요." : "2. 공이 나갈 지점을 탭하세요.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }
+                if model.ballCorridor != nil {
+                    HStack(spacing: 8) {
+                        TextField("기준 거리 (m)", text: $model.scaleMeters)
+                            .textFieldStyle(.roundedBorder).keyboardType(.decimalPad)
+                            .accessibilityLabel("두 지점 사이의 실제 거리, 미터")
+                        Button("적용") { model.applyBallScale() }.buttonStyle(.bordered)
+                    }
+                    Text("공이 지나는 평면에서 잰 두 지점 사이 거리를 입력하세요. 거리 없이도 궤적과 휨(px)을 볼 수 있습니다.")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+                if !model.recording {
+                    Button("카메라 닫기") { model.closeCamera() }.buttonStyle(.bordered)
+                }
+            } else {
+                Toggle("표식 회전 모드", isOn: $model.highSpeed)
+                    .font(.footnote).disabled(model.busy || model.opening)
+                if model.highSpeed {
+                    Text("240 fps 지원 기기에서 밝은 곳에 고정하세요. 흰 공에 파란 점 하나를 찍고 회전축을 카메라 방향에 가깝게 맞추세요.")
+                        .font(.caption).foregroundStyle(.secondary)
+                }
+            }
             Button("기존 영상 가져오기") { importing = true }
                 .buttonStyle(.bordered).disabled(model.recording || model.busy || model.opening)
-            Text("휴대폰을 가로로 고정하고 전신이 들어오게 촬영하세요. 90초까지 저장합니다.")
+            Text("휴대폰을 투구 방향 옆에 가로로 고정하세요. 전신과 공이 지나는 구간을 영상에 담으세요.")
                 .font(.footnote).foregroundStyle(.secondary)
         }
     }
@@ -407,12 +570,8 @@ private struct ReplayView: View {
             switch screen {
             case 0:
                 if model.cameraReady {
-                    ZStack {
-                        CameraFeed(session: model.camera.session)
-                        PoseLines(aspect: model.aspect, layers: [(model.livePoints, mint)])
-                    }
-                    Text(model.livePoints.isEmpty ? "관절 관측 없음" : "관절 \(model.livePoints.count)/12개")
-                        .font(.caption.monospacedDigit())
+                    livePreview
+                    liveReadout
                 } else { placeholder("카메라를 켜거나 촬영한 영상을 가져오세요.") }
             case 1:
                 if let session = reviewSession, let url = model.video(session) {
@@ -441,6 +600,69 @@ private struct ReplayView: View {
         }
         .padding(12).frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(panel, in: RoundedRectangle(cornerRadius: 12))
+    }
+
+    private var livePreview: some View {
+        GeometryReader { geometry in
+            ZStack {
+                CameraFeed(session: model.camera.session)
+                PoseLines(aspect: model.aspect, layers: [(model.livePoints, mint)])
+                BallOverlay(aspect: model.aspect, corridor: model.ballCorridor, first: model.firstBallPoint,
+                            readout: model.liveBall, color: amber)
+                if model.choosingBallPath {
+                    Rectangle().fill(.clear).contentShape(Rectangle())
+                        .gesture(SpatialTapGesture().onEnded { event in
+                            let rect = imageRect(in: geometry.size, aspect: model.aspect)
+                            guard rect.contains(event.location), !rect.isEmpty else { return }
+                            model.placeBallPoint(Point2D(x: (event.location.x - rect.minX) / rect.width,
+                                                        y: (event.location.y - rect.minY) / rect.height))
+                        })
+                        .accessibilityLabel(model.firstBallPoint == nil ? "투구 경로 시작점 선택" : "투구 경로 끝점 선택")
+                }
+            }
+        }.frame(minHeight: 160)
+    }
+
+    private var liveReadout: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 8) {
+                Text("관절 \(model.livePoints.count)/12")
+                if let fps = model.liveFPS { Text(String(format: "%.0f fps", fps)) }
+                if model.ballCorridor != nil {
+                    let ball = model.liveBall
+                    Text(ball.path.isEmpty ? "공 대기" : "\(ball.active ? "공 추적 중" : "마지막 궤적") · \(ball.path.count)프레임")
+                        .foregroundStyle(amber)
+                }
+            }.font(.caption.monospacedDigit())
+            if model.ballCorridor != nil {
+                ViewThatFits(in: .horizontal) {
+                    HStack(spacing: 16) { ballValues }
+                    VStack(alignment: .leading, spacing: 4) { ballValues }
+                }.font(.caption.monospacedDigit())
+                Text(ballNote)
+                    .font(.caption2).foregroundStyle(.secondary)
+            }
+        }.frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var ballValues: some View {
+        Group {
+            Text(model.liveBall.speedKPH.map { String(format: "화면 속도 %.1f km/h", $0) } ?? "화면 속도 —")
+            Text(model.liveBall.movementCM.map { String(format: "화면 휨 %+.1f cm", $0) }
+                 ?? model.liveBall.movementPX.map { String(format: "화면 휨 %+.1f px", $0) } ?? "화면 휨 —")
+            Text(model.liveBall.rpm.map { String(format: "표식 회전 약 %.0f RPM", $0) } ?? "회전수 —")
+        }.fixedSize(horizontal: true, vertical: false)
+    }
+
+    private var ballNote: String {
+        let scale = model.ballCorridor?.meters == nil
+            ? "거리 보정 후 속도와 휨(cm) 표시"
+            : "처음 3프레임 평균 속도"
+        let spin: String
+        if model.liveBall.rpm != nil { spin = "카메라를 향한 축 기준 표식 추정" }
+        else if model.markedModeReady { spin = "회전수는 선명한 파란 점과 연속 고속 프레임이 필요" }
+        else { spin = "회전수는 카메라를 닫고 표식 회전 모드로 다시 시작" }
+        return "\(scale) · 휨은 양 끝점을 이은 선에서 가장 먼 편차 (+는 아래) · \(spin)"
     }
 
     private var comparison: some View {

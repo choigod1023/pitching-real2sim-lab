@@ -30,11 +30,21 @@ iPhone은 SwiftUI, [AVFoundation](https://developer.apple.com/documentation/avfo
 
 관절 검출기는 플랫폼마다 다르므로 같은 영상을 넣어도 검출 점과 자동 후보가 달라질 수 있다. 보이지 않는 관절은 비워 둔다. 라이브 미리보기와 저장 영상의 추적 표본은 서로 다른 처리 경로에서 얻으며, 실시간 지연이나 고속 촬영 정밀도는 기기에서 확인해야 한다.
 
+## 라이브 공 추적
+
+카메라를 측면에 고정한다. 라이브 화면에서 공이 진행할 구간의 시작점과 끝점을 차례로 지정하면 관절선과 공 궤적이 같은 영상 위에 표시된다. 연속 영상에서 밝기가 변한 작은 후보를 찾고, 같은 방향으로 이어지는 중심이 세 개 이상 모이면 궤적을 표시한다. 후보가 끊겼을 때에는 실제로 확인된 점만 남긴다. 첫 점을 릴리스로 자동 확정하지 않는다.
+
+- **평면 구속(km/h)**은 초기 공 중심과 실제 프레임 시각에 직선을 맞춰 계산한다. 공이 날아가는 평면에 있는 실제 거리 표식 두 점을 고르고 그 사이 길이를 입력해야 한다. 카메라가 기울었거나 공이 그 평면에서 크게 벗어나면 한 길이로 전체 영상의 축척을 대신할 수 없다.
+- **평면 휨**은 관측한 첫 점과 마지막 점을 잇는 직선에서 공 경로가 가장 멀리 떨어진 정도다. 기준 거리가 없으면 픽셀로 표시한다. 관측 구간이 짧거나 카메라 위치가 다르면 값이 달라진다. MLB는 별도의 추적 자료로 수평·수직 무브먼트를 정의한다. [Statcast CSV 항목](https://baseballsavant.mlb.com/csv-docs)
+- **표식 회전수(rpm)**는 파란 점 하나를 붙인 훈련구의 중심과 표식 사이 각도가 고속 프레임에서 어떻게 바뀌는지 계산한다. 회전축이 카메라를 향하고 표식이 계속 보이는 조건에서만 사용한다. 실제 표식 관측 사이의 간격이 약 5ms 이내이고, 회전 한 바퀴 이상에서 각도와 반지름이 일관될 때 숫자를 표시한다. 웹과 iPhone에 표식 모드가 있다. iPhone에서는 카메라를 열기 전에 모드를 켠다. Android의 일반 CameraX 촬영 경로에서는 회전수 측정 불가를 표시한다. [고속 표식 촬영 연구](https://pubmed.ncbi.nlm.nih.gov/16939153/)
+
 iPhone의 Swift 순수 로직은 Mac에서도 Xcode 프로젝트와 별도로 검산할 수 있다.
 
 ```sh
 swiftc ios/PitchReplay/ReplayCore.swift ios/Tests/ReplayCoreChecks.swift -o /tmp/pitch-replay-check
 /tmp/pitch-replay-check
+swiftc ios/PitchReplay/ReplayCore.swift ios/PitchReplay/LiveBall.swift ios/Tests/LiveBallChecks.swift -o /tmp/pitch-live-check
+/tmp/pitch-live-check
 ```
 
 Android SDK를 설정한 Windows에서는 `android/` 폴더에서 `./gradlew.bat :app:testDebugUnitTest :app:assembleDebug`를 실행한다.
@@ -45,7 +55,9 @@ Android SDK를 설정한 Windows에서는 `android/` 폴더에서 `./gradlew.bat
 
 - 실제 중계 영상의 서로 다른 폴 스킨스 투구 두 개를 가져와 각각 한 구를 자동 저장했다. 착지와 릴리스를 화면에서 표시하고, 21개 진행률에서 A와 B의 픽셀이 모두 그려지는지 확인했다. 새로고침 뒤에도 영상과 표식이 IndexedDB에 남았다. 시연 영상은 실제 브라우저의 겹쳐보기 화면이며 관중석에만 흐림을 넣었다. [첫 번째 영상](https://www.mlb.com/video/paul-skenes-grabs-his-seventh-strikeout) · [두 번째 영상](https://www.mlb.com/video/yasmani-grandal-nabs-christopher-morel-stealing)
 - 초기 웹 검증에서 같은 실영상을 Chromium의 파일 기반 카메라 입력으로 재생했다. 카메라 권한, 실시간 관절선, MediaRecorder 녹화, 분석 후 두 구 자동 저장을 확인했다.
-- 이 Windows 환경에서는 웹 빌드와 테스트 3개, Swift 문법과 Xcode 프로젝트 연결을 확인했다. Android는 API 35 검증용 클래스와 실제 Gradle 의존성으로 Kotlin 컴파일과 JUnit 테스트 4개를 확인했다. Android SDK·Xcode가 없어 양쪽 설치 파일을 만들지 못했고 실제 기기의 촬영·추적·겹쳐보기도 확인하지 못했다.
+- Prime `OBP_movement_BaseballThrow_001`의 19번 영상에서 브라우저 공 추적기를 원본 360Hz로 실행했다. 기존 밝은 코어 좌표가 있는 8프레임이 모두 추적에 포함됐고, 원본 영상 좌표의 평균 거리는 3.56px이었다. 기존 좌표도 밝기 기반 판독이므로 이 수치는 실제 중심의 오차 한계로 사용할 수 없다. 같은 입력을 60fps로 줄여 Chromium 카메라에 공급한 실행에서 관절선과 공 관측이 한 화면에 표시됐다.
+- 웹 테스트의 구속·회전수 수치 검산에는 속도, 거리, 회전율을 아는 합성 프레임을 사용했다. 실제 구속·RPM과 비교할 측면 촬영 및 회전 표식은 이 실영상 시연에 없다.
+- 웹 빌드와 테스트 6개, Android 디버그 APK 빌드와 Gradle 단위 테스트 9개를 확인했다. iOS는 Swift 문법 및 Xcode 프로젝트 연결을 검사했다. 스마트폰에서 카메라, 렌즈 보정, 기기별 처리 속도와 표식 회전수는 별도로 확인해야 한다.
 
 관절선은 영상에서 추정한다. 두 영상의 비교에는 같은 카메라 각도와 사람이 확인한 사건이 필요하다. 자동 후보는 이 두 개발 영상에서 확인한 결과다. 구속·회전수·힘은 별도의 장비나 검증된 모델로 연결할 수 있는 항목이다.
 

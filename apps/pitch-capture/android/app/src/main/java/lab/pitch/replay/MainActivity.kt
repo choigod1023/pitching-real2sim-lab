@@ -10,13 +10,16 @@ import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.net.Uri
 import android.os.Bundle
+import android.text.InputType
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.Gravity
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.ScrollView
@@ -152,19 +155,37 @@ class MainActivity : ComponentActivity() {
         val stage = FrameLayout(this).apply { setBackgroundColor(Color.BLACK) }
         val preview = PreviewView(this)
         val skeleton = PoseOverlay(this)
+        val flight = BallOverlay(this)
         val guide = stageLabel("후면 카메라 · 가로 촬영")
         stage.addView(preview, FrameLayout.LayoutParams(-1, -1))
         stage.addView(skeleton, FrameLayout.LayoutParams(-1, -1))
+        stage.addView(flight, FrameLayout.LayoutParams(-1, -1))
         stage.addView(guide, FrameLayout.LayoutParams(-2, -2, Gravity.TOP or Gravity.START).apply {
             topMargin = dp(12)
             marginStart = dp(12)
         })
         val center = stageLabel("카메라를 켜면 여기서 구도를 확인할 수 있습니다.").apply { gravity = Gravity.CENTER }
         stage.addView(center, FrameLayout.LayoutParams(-2, -2, Gravity.CENTER))
+        val live = stageLabel("").apply { visibility = View.GONE }
+        stage.addView(live, FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM or Gravity.START).apply {
+            bottomMargin = dp(12)
+            marginStart = dp(12)
+        })
         val controls = screen(stage)
-        addHeading(controls, "투구 촬영", "휴대폰을 고정하고 투수 한 명의 전신이 화면에 들어오게 맞추세요.")
+        addHeading(controls, "투구 촬영", "휴대폰을 옆에서 고정하고 투수 전신과 공이 지나는 구간을 화면에 넣으세요.")
         var ready = false
-        val live = label("카메라 대기", 14, color = MUTED)
+        var picking = false
+        var ballStart: BallPoint? = null
+        var ballEnd: BallPoint? = null
+        var distance: Double? = null
+        var trace: BallReadout? = null
+        val primary = button("카메라 켜기", primary = true) {}
+        val calibrate = button("공 추적 설정") {}
+        addButtonRow(controls, primary, calibrate)
+        val ballStatus = label("", 14, color = MUTED)
+        val optical = label("", 14)
+        addControl(controls, ballStatus)
+        addControl(controls, optical)
         status(controls)
         val handButton = addAction(controls, "투구 손 · ${hand.label}") {}
         handButton.setOnClickListener {
@@ -175,10 +196,40 @@ class MainActivity : ComponentActivity() {
                     dialog.dismiss()
                 }.setNegativeButton("닫기", null).show()
         }
-        val primary = button("카메라 켜기", primary = true) {}
-        addControl(controls, primary)
         val import = addAction(controls, "영상 가져오기") { openDocument.launch(arrayOf("video/*")) }
-        addControl(controls, live)
+
+        fun updateBall() {
+            flight.showSetup(ballStart, ballEnd)
+            flight.showReadout(trace)
+            calibrate.text = when {
+                picking -> "설정 취소"
+                ballEnd != null -> "공 추적 재설정"
+                else -> "공 추적 설정"
+            }
+            ballStatus.text = when {
+                picking && ballStart == null -> "공이 날아가는 구간의 시작점을 화면에서 누르세요."
+                picking -> "공이 날아가는 방향으로 떨어진 끝점을 누르세요."
+                ballEnd == null -> "공 추적 설정에서 공이 지나갈 구간을 지정하세요."
+                trace != null -> "${if (trace?.active == true) "추적 중" else "최근 궤적"} · 관측 ${trace?.points?.size}점"
+                else -> "공 추적 대기 · 손이 화면 구간 밖에 오게 맞추세요."
+            }
+            val speed = trace?.speedKmh?.let { String.format(Locale.KOREA, "%.1f km/h", it) }
+            val movement = trace?.deviationCm?.let { String.format(Locale.KOREA, "%+.1f cm", it) }
+                ?: trace?.deviationPx?.let { String.format(Locale.KOREA, "%+.1f px", it) }
+            val pending = if (distance == null) "거리 보정 필요" else "관측 대기"
+            optical.text = "화면 평면 평균 구속 · ${speed ?: pending}\n" +
+                "화면 휨 · ${movement ?: "관측 대기"}\n" +
+                "회전수(RPM) · 측정 불가"
+        }
+
+        fun clearBall() {
+            picking = false
+            ballStart = null
+            ballEnd = null
+            distance = null
+            trace = null
+            updateBall()
+        }
 
         fun updateButtons() {
             primary.text = when {
@@ -188,9 +239,57 @@ class MainActivity : ComponentActivity() {
                 else -> "카메라 켜기"
             }
             primary.isEnabled = busy == null && !stopping && (recording || !cameraRequested || ready)
+            calibrate.isEnabled = ready && !recording && busy == null
             handButton.isEnabled = !recording && busy == null
             import.isEnabled = !recording && busy == null
             updateNavigation()
+        }
+
+        calibrate.setOnClickListener {
+            val startPicking = !picking
+            clearBall()
+            picking = startPicking
+            camera?.setBallSetup(null)
+            updateBall()
+        }
+
+        fun markBall(point: BallPoint) {
+            if (camera?.canMark(point) != true) {
+                ballStatus.text = "영상이 보이는 영역 안에서 점을 선택하세요."
+                return
+            }
+            val start = ballStart
+            if (start == null) {
+                ballStart = point
+                updateBall()
+                return
+            }
+            if ((point - start).length < dp(56)) {
+                ballStatus.text = "시작점에서 더 떨어진 끝점을 선택하세요."
+                return
+            }
+            ballEnd = point
+            picking = false
+            camera?.setBallSetup(BallSetup(start, point, null))
+            updateBall()
+            askDistance { meters ->
+                if (ready && ballStart == start && ballEnd == point) {
+                    distance = meters
+                    camera?.setBallSetup(BallSetup(start, point, meters))
+                    updateBall()
+                }
+            }
+        }
+
+        preview.setOnTouchListener { _, event ->
+            if (!picking) false
+            else {
+                if (event.actionMasked == MotionEvent.ACTION_UP) {
+                    preview.performClick()
+                    markBall(BallPoint(event.x, event.y))
+                }
+                true
+            }
         }
 
         primary.setOnClickListener {
@@ -201,6 +300,10 @@ class MainActivity : ComponentActivity() {
                     updateButtons()
                 }
                 cameraRequested && ready -> {
+                    if (picking) {
+                        clearBall()
+                        camera?.setBallSetup(null)
+                    }
                     val id = archive.newSessionId()
                     val chosenHand = hand
                     try {
@@ -244,6 +347,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        updateBall()
         updateButtons()
 
         if (cameraRequested && busy == null) {
@@ -251,15 +355,53 @@ class MainActivity : ComponentActivity() {
             camera = CameraCapture(this, preview, poseChanged = {
                 skeleton.show(it to MINT)
                 live.text = if (it == null) "전신이 보이도록 구도를 맞추세요." else "관절이 화면에 잡혔습니다."
+            }, ballChanged = {
+                trace = it
+                updateBall()
+            }, geometryChanged = {
+                clearBall()
             }, readyChanged = {
                 ready = it
                 center.visibility = if (it) View.GONE else View.VISIBLE
+                live.visibility = if (it) View.VISIBLE else View.GONE
                 updateButtons()
             }, failed = {
                 center.text = "후면 카메라를 열지 못했습니다."
                 setNotice(it)
             }).also { it.open() }
         }
+    }
+
+    private fun askDistance(applyDistance: (Double) -> Unit) {
+        val input = EditText(this).apply {
+            inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+            hint = "두 점 사이 거리 (m)"
+            contentDescription = hint
+            setSingleLine()
+        }
+        val field = column().apply {
+            setPadding(dp(24), 0, dp(24), 0)
+            addView(input)
+        }
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("거리 보정")
+            .setMessage("공이 지나는 평면에서 선택한 두 점 사이의 실측 거리를 입력하세요.")
+            .setView(field)
+            .setNegativeButton("궤적만 보기", null)
+            .setPositiveButton("적용", null)
+            .create()
+        dialog.setOnShowListener {
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                val distance = input.text.toString().trim().replace(',', '.').toDoubleOrNull()
+                if (distance == null || distance !in 0.3..35.0) {
+                    input.error = "0.3~35 m 사이의 거리를 입력하세요."
+                } else {
+                    applyDistance(distance)
+                    dialog.dismiss()
+                }
+            }
+        }
+        dialog.show()
     }
 
     private fun renderLibrary() {

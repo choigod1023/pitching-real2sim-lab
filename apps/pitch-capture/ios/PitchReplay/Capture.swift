@@ -44,15 +44,28 @@ enum PoseReader {
 final class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureFileOutputRecordingDelegate {
     let session = AVCaptureSession()
     private let queue = DispatchQueue(label: "pitch.camera")
+    private let videoQueue = DispatchQueue(label: "pitch.video", qos: .userInitiated)
     private let poseQueue = DispatchQueue(label: "pitch.pose", qos: .userInitiated)
+    private let video = AVCaptureVideoDataOutput()
     private let movie = AVCaptureMovieFileOutput()
+    private var device: AVCaptureDevice?
     private var configured = false
     private var lastSample = -Double.infinity
+    private var readingPose = false
+    private var tracker: LiveBallTracker?
+    private var trackingRevision = 0
+    private var publishedBall = BallReadout.waiting
+    private var lastBallPublish = -Double.infinity
+    private var markedMode = false
+    private var rateStart: Double?
+    private var rateCount = 0
     private var finished: ((Result<URL, Error>) -> Void)?
     private var stopRequested = false
     var onPose: (([Joint: Point2D], Double) -> Void)?
+    var onBall: ((BallReadout, Int) -> Void)?
+    var onRate: ((Double) -> Void)?
 
-    func open(_ completion: @escaping (Result<Void, Error>) -> Void) {
+    func open(highSpeed: Bool, _ completion: @escaping (Result<Bool, Error>) -> Void) {
         AVCaptureDevice.requestAccess(for: .video) { [weak self] allowed in
             guard let self else { return }
             guard allowed else {
@@ -62,8 +75,16 @@ final class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             self.queue.async {
                 let result = Result {
                     try self.configure()
+                    let markedMode = self.configureFormat(highSpeed: highSpeed)
+                    self.videoQueue.sync {
+                        self.markedMode = markedMode
+                        self.rateStart = nil
+                        self.rateCount = 0
+                        self.lastSample = -.infinity
+                    }
                     if !self.session.isRunning { self.session.startRunning() }
                     guard self.session.isRunning else { throw ReplayError.camera }
+                    return markedMode
                 }
                 DispatchQueue.main.async { completion(result) }
             }
@@ -75,7 +96,6 @@ final class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
         guard let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
         else { throw ReplayError.camera }
         let input = try AVCaptureDeviceInput(device: device)
-        let video = AVCaptureVideoDataOutput()
         video.alwaysDiscardsLateVideoFrames = true
         session.beginConfiguration()
         defer { session.commitConfiguration() }
@@ -98,8 +118,58 @@ final class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
             }
         }
         movie.maxRecordedDuration = CMTime(seconds: 90, preferredTimescale: 1000)
-        video.setSampleBufferDelegate(self, queue: poseQueue)
+        video.setSampleBufferDelegate(self, queue: videoQueue)
+        self.device = device
         configured = true
+    }
+
+    private func configureFormat(highSpeed: Bool) -> Bool {
+        guard let device else { return false }
+        session.beginConfiguration()
+        defer { session.commitConfiguration() }
+        let normalPreset: AVCaptureSession.Preset = session.canSetSessionPreset(.hd1280x720) ? .hd1280x720 : .high
+        session.sessionPreset = normalPreset
+        var enabled = false
+        if highSpeed {
+            let formats = device.formats.compactMap { format -> (AVCaptureDevice.Format, CMTime, Int32)? in
+                let size = CMVideoFormatDescriptionGetDimensions(format.formatDescription)
+                guard size.width >= 1280, size.height >= 720,
+                      format.unsupportedCaptureOutputClasses.allSatisfy({
+                          ObjectIdentifier($0) != ObjectIdentifier(AVCaptureMovieFileOutput.self)
+                              && ObjectIdentifier($0) != ObjectIdentifier(AVCaptureVideoDataOutput.self)
+                      }),
+                      let range = format.videoSupportedFrameRateRanges.first(where: { (239...241).contains($0.maxFrameRate) })
+                else { return nil }
+                return (format, range.minFrameDuration, size.width * size.height)
+            }
+            if let (format, duration, _) = formats.min(by: { $0.2 < $1.2 }),
+               (try? device.lockForConfiguration()) != nil {
+                device.activeFormat = format
+                if #available(iOS 18.0, *), device.isAutoVideoFrameRateEnabled {
+                    device.isAutoVideoFrameRateEnabled = false
+                }
+                device.activeVideoMinFrameDuration = duration
+                device.activeVideoMaxFrameDuration = duration
+                device.unlockForConfiguration()
+                enabled = true
+            }
+        }
+        let supported = video.availableVideoPixelFormatTypes
+        let nv12 = [kCVPixelFormatType_420YpCbCr8BiPlanarFullRange, kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange]
+        let native = CMFormatDescriptionGetMediaSubType(device.activeFormat.formatDescription)
+        let yuv = nv12.contains(native) && supported.contains(native) ? native : nv12.first { supported.contains($0) }
+        if let yuv { video.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: yuv] }
+        else { video.videoSettings = nil }
+        return enabled && yuv != nil
+    }
+
+    func setBallCorridor(_ corridor: BallCorridor?, revision: Int) {
+        videoQueue.async {
+            self.trackingRevision = revision
+            self.tracker = corridor.map { LiveBallTracker(corridor: $0) }
+            self.publishedBall = .waiting
+            self.lastBallPublish = -.infinity
+        }
     }
 
     func close() {
@@ -135,12 +205,86 @@ final class Camera: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
 
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let time = CMSampleBufferGetPresentationTimeStamp(sampleBuffer).seconds
-        guard time.isFinite, time < lastSample || time - lastSample >= 0.048,
-              let buffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        guard time.isFinite, let buffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            tracker?.breakContinuity()
+            publishBall()
+            return
+        }
+        measureRate(time)
+        if let tracker {
+            processBall(buffer, time: time, tracker: tracker)
+            publishBall(time: time)
+        }
+        guard !readingPose, time < lastSample || time - lastSample >= 0.048 else { return }
         lastSample = time
-        let points = PoseReader.points(buffer)
-        let aspect = Double(CVPixelBufferGetWidth(buffer)) / Double(CVPixelBufferGetHeight(buffer))
-        DispatchQueue.main.async { [weak self] in self?.onPose?(points, aspect) }
+        readingPose = true
+        poseQueue.async {
+            let points = PoseReader.points(buffer)
+            let aspect = Double(CVPixelBufferGetWidth(buffer)) / Double(CVPixelBufferGetHeight(buffer))
+            DispatchQueue.main.async { [weak self] in self?.onPose?(points, aspect) }
+            self.videoQueue.async { self.readingPose = false }
+        }
+    }
+
+    func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        tracker?.breakContinuity()
+        publishBall()
+    }
+
+    private func measureRate(_ time: Double) {
+        guard let start = rateStart, time > start else {
+            rateStart = time
+            rateCount = 0
+            return
+        }
+        rateCount += 1
+        if time - start >= 0.5 {
+            let rate = Double(rateCount) / (time - start)
+            rateStart = time
+            rateCount = 0
+            DispatchQueue.main.async { [weak self] in self?.onRate?(rate) }
+        }
+    }
+
+    private func processBall(_ buffer: CVPixelBuffer, time: Double, tracker: LiveBallTracker) {
+        let format = CVPixelBufferGetPixelFormatType(buffer)
+        guard format == kCVPixelFormatType_420YpCbCr8BiPlanarFullRange || format == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange,
+              CVPixelBufferGetPlaneCount(buffer) == 2,
+              CVPixelBufferLockBaseAddress(buffer, .readOnly) == kCVReturnSuccess else {
+            tracker.breakContinuity()
+            return
+        }
+        defer { CVPixelBufferUnlockBaseAddress(buffer, .readOnly) }
+        guard let luma = CVPixelBufferGetBaseAddressOfPlane(buffer, 0) else {
+            tracker.breakContinuity()
+            return
+        }
+        var marker: LiveBallTracker.MarkerReader?
+        if markedMode, let chroma = CVPixelBufferGetBaseAddressOfPlane(buffer, 1) {
+            let width = CVPixelBufferGetWidthOfPlane(buffer, 1)
+            let height = CVPixelBufferGetHeightOfPlane(buffer, 1)
+            let stride = CVPixelBufferGetBytesPerRowOfPlane(buffer, 1)
+            marker = { x, y, radius in
+                BallMarker.blueDot(chroma: chroma.assumingMemoryBound(to: UInt8.self),
+                                   width: width, height: height, stride: stride, x: x, y: y, radius: radius)
+            }
+        }
+        tracker.process(luma: luma.assumingMemoryBound(to: UInt8.self),
+                        width: CVPixelBufferGetWidthOfPlane(buffer, 0),
+                        height: CVPixelBufferGetHeightOfPlane(buffer, 0),
+                        stride: CVPixelBufferGetBytesPerRowOfPlane(buffer, 0), time: time, marker: marker)
+    }
+
+    private func publishBall(time: Double? = nil) {
+        guard let readout = tracker?.readout, readout != publishedBall else { return }
+        if let time {
+            if readout.active == publishedBall.active, (readout.rpm == nil) == (publishedBall.rpm == nil),
+               time >= lastBallPublish, time - lastBallPublish < 1.0 / 30 { return }
+            lastBallPublish = time
+        }
+        publishedBall = readout
+        let revision = trackingRevision
+        DispatchQueue.main.async { [weak self] in self?.onBall?(readout, revision) }
     }
 
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo url: URL,

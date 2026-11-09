@@ -28,8 +28,23 @@
         <div id="stage" class="stage">
           <video id="video" playsinline muted preload="metadata" aria-label="원본 투구 영상"></video>
           <canvas id="overlay" aria-label="영상 위 관절 표시"></canvas>
+          <canvas id="ball-overlay" aria-label="영상 위 공 궤적" hidden></canvas>
           <div id="empty" class="empty"><span aria-hidden="true">◇</span><strong>투구 영상이 여기에 표시됩니다</strong><p>발끝과 투구 손이 화면 안에 들어오게 촬영하세요.</p></div>
         </div>
+        <section id="ball-controls" class="ball-controls" aria-label="실시간 공 추적" hidden>
+          <div class="ball-instruments">
+            <div><span>평면 구속</span><strong id="ball-speed">—</strong><small id="ball-speed-note">실제 기준 거리 필요</small></div>
+            <div><span>표식 회전수</span><strong id="ball-rpm">—</strong><small id="ball-rpm-note">고속 표식 모드 필요</small></div>
+            <div><span>평면 휨</span><strong id="ball-bend">—</strong><small>관측 경로와 양 끝 직선의 차이</small></div>
+          </div>
+          <p id="ball-status" class="hint">고정된 측면 영상에서 공이 날아가는 구간을 지정하세요.</p>
+          <div class="controls">
+            <button id="ball-calibrate">추적 구간 지정</button><button id="ball-reset">공 추적 해제</button>
+            <label class="ball-input">두 점의 실제 거리(m) <input id="ball-metres" type="number" min=".1" max="35" step=".01" inputmode="decimal"></label>
+            <label class="verify"><input id="ball-marked" type="checkbox"> 고속 표식 모드</label>
+          </div>
+          <p class="hint">속도를 보려면 공이 날아가는 평면에 기준점 두 개를 두고, 영상에서 그 점을 눌러 실제 거리를 입력하세요.</p>
+        </section>
         <div id="review" class="review" hidden>
           <label class="scrub-label" for="time">영상 위치 <output id="time-read"></output></label>
           <input id="time" type="range" min="0" max="1" step=".001">

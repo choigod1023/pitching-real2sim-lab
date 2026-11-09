@@ -17,7 +17,7 @@ enum Joint: String, Codable {
     ]
 }
 
-struct Point2D: Codable {
+struct Point2D: Codable, Equatable {
     let x: Double
     let y: Double
     func distance(to point: Point2D, aspect: Double) -> Double {
