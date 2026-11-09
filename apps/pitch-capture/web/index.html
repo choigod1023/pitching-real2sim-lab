@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111e20">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23006953'/%3E%3Ctext x='8' y='23' fill='white' font-family='sans-serif' font-size='22'%3EP%3C/text%3E%3C/svg%3E">
+  <title>Pitch Replay · 투구 분석</title>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">P</span><div>Pitch Replay<small>투구 기록실</small></div></div>
+    <span class="local">기기에 저장</span>
+  </header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">촬영 / 복기 / 비교</p><h1>투구를 다시 보다</h1><p>착지와 릴리스를 확인하고 두 투구를 같은 진행률에서 겹쳐 보세요.</p></div></div>
+    <section class="toolbar" aria-label="촬영 설정">
+      <button id="camera" class="primary">카메라 켜기</button>
+      <button id="record" disabled>녹화 시작</button>
+      <label class="button">영상 불러오기<input id="upload" type="file" accept="video/*" multiple></label>
+      <label class="hand">투구 손 <select id="side"><option value="right">오른손</option><option value="left">왼손</option></select></label>
+      <label class="hand region">추적 영역 <select id="region"><option value="full">전체 화면</option><option value="mound">화면 중앙</option></select></label>
+    </section>
+    <div id="notice" role="status" aria-live="polite">카메라를 켜거나 기기에 저장된 투구 영상을 선택하세요.</div>
+    <div class="workbench">
+      <section class="viewer" aria-label="투구 영상">
+        <div class="viewer-head"><div><span class="dot"></span><strong id="view-title">투구 화면</strong></div><span id="quality" aria-live="off">입력 대기</span></div>
+        <div id="stage" class="stage">
+          <video id="video" playsinline muted preload="metadata" aria-label="원본 투구 영상"></video>
+          <canvas id="overlay" aria-label="영상 위 관절 표시"></canvas>
+          <div id="empty" class="empty"><span aria-hidden="true">◇</span><strong>투구 영상이 여기에 표시됩니다</strong><p>발끝과 투구 손이 화면 안에 들어오게 촬영하세요.</p></div>
+        </div>
+        <div id="review" class="review" hidden>
+          <label class="scrub-label" for="time">영상 위치 <output id="time-read"></output></label>
+          <input id="time" type="range" min="0" max="1" step=".001">
+          <div class="controls">
+            <button id="play">재생</button><button id="back" aria-label="이전 프레임">이전</button><button id="next" aria-label="다음 프레임">다음</button>
+            <button id="landing">착지 확인</button><button id="release">릴리스 확인</button>
+          </div>
+          <p id="events" class="hint"></p>
+        </div>
+        <div id="compare-controls" class="review" hidden>
+          <label class="scrub-label" for="phase">착지 → 릴리스 <output id="phase-read">50%</output></label>
+          <input id="phase" type="range" min="0" max="1000" value="500">
+          <p class="hint"><span class="swatch a"></span>A 기준 투구 <span class="swatch b"></span>B 비교 투구 · 2D 영상 좌표</p>
+          <button id="leave-compare">투구 검수로 돌아가기</button>
+        </div>
+      </section>
+      <aside class="sessions" aria-label="투구 기록">
+        <div class="sessions-head"><h2>투구 기록</h2><span id="count">0구</span></div>
+        <div id="pitches" class="pitch-list"></div>
+        <details id="manual" hidden>
+          <summary>누락된 투구 추가</summary>
+          <p class="hint">현재 원본 영상에서 시작과 끝을 차례로 지정하세요.</p>
+          <div class="controls"><button id="manual-start">현재를 시작으로</button><button id="manual-end">현재를 끝으로 저장</button></div>
+        </details>
+        <div class="compare-card">
+          <h2>두 투구 비교</h2>
+          <div class="pair"><label>A <select id="pitch-a"><option value="">선택</option></select></label><label>B <select id="pitch-b"><option value="">선택</option></select></label></div>
+          <label class="verify"><input id="view-check" type="checkbox"> 같은 선수와 고정 시야를 확인했습니다</label>
+          <button id="compare" class="primary">착지·릴리스 맞춰 겹치기</button>
+          <p id="compare-note" class="hint" role="status"></p>
+        </div>
+      </aside>
+    </div>
+    <footer>관절점은 영상 추정 · 착지와 릴리스는 사용자 판독</footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

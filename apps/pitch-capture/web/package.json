@@ -1,0 +1,17 @@
+{
+  "name": "@pitch/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4317 --strictPort"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "0.10.32",
+    "@pitch/core": "1.0.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.6",
+    "playwright-core": "1.65.0"
+  }
+}

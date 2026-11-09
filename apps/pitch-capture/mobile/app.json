@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "Pitch Replay",
+    "slug": "pitch-replay",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "newArchEnabled": true,
+    "ios": {
+      "bundleIdentifier": "org.pitchinglab.pitchreplay",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "org.pitchinglab.pitchreplay",
+      "allowBackup": false,
+      "blockedPermissions": ["android.permission.READ_EXTERNAL_STORAGE", "android.permission.WRITE_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      ["expo-build-properties", {"ios": {"useFrameworks": "static"}}],
+      ["react-native-vision-camera", {
+        "cameraPermissionText": "투구 영상과 관절 움직임을 기기에 기록합니다.",
+        "enableMicrophonePermission": false,
+        "enableFrameProcessors": true
+      }],
+      ["react-native-mediapipe-posedetection", {"assetsPaths": ["./assets/models/"]}]
+    ]
+  }
+}
