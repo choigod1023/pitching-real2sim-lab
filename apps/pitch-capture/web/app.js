@@ -143,11 +143,16 @@ function stopPreview() {
 
 function showMode(next) {
   mode = next;
+  byId('workspace').dataset.mode = next;
   liveBall.active(next === 'live');
   byId('review').hidden = next !== 'review';
   byId('compare-controls').hidden = next !== 'compare';
   byId('manual').hidden = next !== 'review';
   byId('empty').hidden = next !== 'idle';
+  if (next === 'idle') {
+    byId('view-title').textContent = '투구 화면';
+    byId('quality').textContent = '입력 대기';
+  }
 }
 
 function preview() {
@@ -358,15 +363,23 @@ function updateList() {
   const list = byId('pitches');
   list.replaceChildren();
   if (!sessions.length) list.append(Object.assign(document.createElement('p'),{className:'hint',textContent:'아직 저장된 투구가 없습니다.'}));
-  for (const item of items) {
+  for (const [index, item] of items.entries()) {
     const button = document.createElement('button');
     button.className = 'pitch-row';
     button.dataset.pitchId = item.pitch.id;
     button.setAttribute('aria-pressed',String(selected?.pitch?.id === item.pitch.id));
-    button.textContent = item.label;
+    const number = document.createElement('span');
+    number.className = 'pitch-index';
+    number.setAttribute('aria-hidden','true');
+    number.textContent = String(index + 1).padStart(2,'0');
+    const text = document.createElement('span');
+    text.className = 'pitch-info';
+    const title = document.createElement('span');
+    title.textContent = item.label;
     const detail = document.createElement('small');
     detail.textContent = `${item.pitch.kind === 'auto' ? '자동 저장' : '직접 추가'} · ${confirmed(item.pitch) ? '검수 완료' : '착지·릴리스 검수 대기'}`;
-    button.append(detail);
+    text.append(title,detail);
+    button.append(number,text);
     button.onclick = () => handle(() => { if (!busy && recorder?.state !== 'recording') return review(item.session,item.pitch); });
     list.append(button);
   }
@@ -377,7 +390,7 @@ function updateList() {
   }
   for (const id of ['pitch-a','pitch-b']) {
     const select = byId(id), old = select.value;
-    select.replaceChildren(new Option('선택',''),...items.map(({label,pitch}) => new Option(label,pitch.id)));
+    select.replaceChildren(new Option('투구 선택',''),...items.map(({label,pitch}) => new Option(label,pitch.id)));
     if (items.some(row => row.pitch.id === old)) select.value = old;
   }
 }
@@ -387,6 +400,13 @@ function refreshReview(time = video.currentTime) {
   const {pitch,session} = selected;
   draw([[nearestPose(session.samples,time),A]]);
   byId('time').value = time;
+  const start = Number(byId('time').min), end = Number(byId('time').max);
+  for (const event of ['landing','release']) {
+    const mark = byId(`${event}-mark`);
+    const eventTime = pitch?.[event];
+    mark.hidden = !Number.isFinite(eventTime) || eventTime < start || eventTime > end || end <= start;
+    if (!mark.hidden) mark.style.left = `${(eventTime-start)/(end-start)*100}%`;
+  }
   byId('time-read').textContent = `${time.toFixed(3)}초`;
   const label = value => value === null || value === undefined ? '미확인' : `${value.toFixed(3)}초`;
   byId('events').textContent = pitch ? `착지 ${label(pitch.landing)} · 릴리스 ${label(pitch.release)}` : '원본에서 투구 시작과 끝을 직접 표시할 수 있습니다.';

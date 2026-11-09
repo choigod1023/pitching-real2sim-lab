@@ -3,33 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111e20">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23006953'/%3E%3Ctext x='8' y='23' fill='white' font-family='sans-serif' font-size='22'%3EP%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#f3f1ec">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 6h22v11L16 27 5 17z' fill='none' stroke='%2325221d' stroke-width='2.5'/%3E%3Cpath d='M10 12h12' stroke='%2325221d' stroke-width='2.5'/%3E%3C/svg%3E">
   <title>Pitch Replay · 투구 분석</title>
 </head>
 <body>
   <header class="masthead">
-    <div class="brand"><span class="brand-mark" aria-hidden="true">P</span><div>Pitch Replay<small>투구 기록실</small></div></div>
-    <span class="local">기기에 저장</span>
+    <div class="masthead-inner">
+      <div class="brand">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 4.5h18v8.75L12 21l-9-7.75zM7 9h10"/>
+        </svg>
+        <span>Pitch Replay</span>
+      </div>
+      <span class="local">이 기기에 저장</span>
+    </div>
   </header>
-  <main>
-    <div class="intro"><div><p class="eyebrow">촬영 / 복기 / 비교</p><h1>투구를 다시 보다</h1><p>착지와 릴리스를 확인하고 두 투구를 같은 진행률에서 겹쳐 보세요.</p></div></div>
-    <section class="toolbar" aria-label="촬영 설정">
-      <button id="camera" class="primary">카메라 켜기</button>
-      <button id="record" disabled>녹화 시작</button>
-      <label class="button">영상 불러오기<input id="upload" type="file" accept="video/*" multiple></label>
-      <label class="hand">투구 손 <select id="side"><option value="right">오른손</option><option value="left">왼손</option></select></label>
-      <label class="hand region">추적 영역 <select id="region"><option value="full">전체 화면</option><option value="mound">화면 중앙</option></select></label>
-    </section>
-    <div id="notice" role="status" aria-live="polite">카메라를 켜거나 기기에 저장된 투구 영상을 선택하세요.</div>
+  <main id="workspace" data-mode="idle">
+    <div class="workspace-head">
+      <h1>투구 검토</h1>
+      <div class="toolbar" role="group" aria-label="영상 입력">
+        <button id="camera" class="primary">카메라 켜기</button>
+        <button id="record" disabled>녹화 시작</button>
+        <label class="button">영상 불러오기<input id="upload" type="file" accept="video/*" multiple></label>
+      </div>
+    </div>
+    <div class="workspace-options">
+      <div id="notice" role="status" aria-live="polite">카메라를 켜거나 투구 영상을 불러오세요.</div>
+      <div class="capture-options" role="group" aria-label="추적 설정">
+        <label>투구 손 <select id="side"><option value="right">오른손</option><option value="left">왼손</option></select></label>
+        <label>추적 영역 <select id="region"><option value="full">전체 화면</option><option value="mound">화면 중앙</option></select></label>
+      </div>
+    </div>
     <div class="workbench">
       <section class="viewer" aria-label="투구 영상">
-        <div class="viewer-head"><div><span class="dot"></span><strong id="view-title">투구 화면</strong></div><span id="quality" aria-live="off">입력 대기</span></div>
+        <div class="viewer-head">
+          <div class="viewer-title"><span class="live-dot" aria-hidden="true"></span><strong id="view-title">투구 화면</strong></div>
+          <span id="quality" aria-live="off">입력 대기</span>
+        </div>
         <div id="stage" class="stage">
           <video id="video" playsinline muted preload="metadata" aria-label="원본 투구 영상"></video>
           <canvas id="overlay" aria-label="영상 위 관절 표시"></canvas>
           <canvas id="ball-overlay" aria-label="영상 위 공 궤적" hidden></canvas>
-          <div id="empty" class="empty"><span aria-hidden="true">◇</span><strong>투구 영상이 여기에 표시됩니다</strong><p>발끝과 투구 손이 화면 안에 들어오게 촬영하세요.</p></div>
+          <div id="empty" class="empty">
+            <div class="empty-copy">
+              <p class="empty-label">영상 입력 대기</p>
+              <p class="empty-title">투구 영상을 열어보세요</p>
+              <p>카메라를 고정하고 발끝부터 투구 손까지<br class="desktop-break"> 화면에 담으세요.</p>
+            </div>
+            <svg class="field-plan" viewBox="0 0 260 230" fill="none" aria-hidden="true">
+              <g stroke="currentColor" stroke-width="1">
+                <path d="M130 30 220 120 130 210 40 120Z" opacity=".55"/>
+                <path d="M130 210 16 96m114 114L244 96M55 105a106 106 0 0 1 150 0" opacity=".32"/>
+                <path d="M130 120v82" stroke-dasharray="3 5" opacity=".72"/>
+                <circle cx="130" cy="120" r="21" opacity=".68"/>
+                <path d="M123 118h14m-7-79 5-5-5-5-5 5zm86 81 5 5 5-5-5-5zm-182 0 5 5 5-5-5-5zm90 82h12v5l-6 5-6-5z"/>
+              </g>
+              <circle cx="130" cy="120" r="2.5" fill="currentColor"/>
+            </svg>
+          </div>
         </div>
         <section id="ball-controls" class="ball-controls" aria-label="실시간 공 추적" hidden>
           <div class="ball-instruments">
@@ -47,18 +79,29 @@
         </section>
         <div id="review" class="review" hidden>
           <label class="scrub-label" for="time">영상 위치 <output id="time-read"></output></label>
-          <input id="time" type="range" min="0" max="1" step=".001">
+          <div class="timeline">
+            <input id="time" type="range" min="0" max="1" step=".001">
+            <div class="timeline-marks" aria-hidden="true">
+              <span id="landing-mark" hidden></span><span id="release-mark" hidden></span>
+            </div>
+          </div>
           <div class="controls">
-            <button id="play">재생</button><button id="back" aria-label="이전 프레임">이전</button><button id="next" aria-label="다음 프레임">다음</button>
-            <button id="landing">착지 확인</button><button id="release">릴리스 확인</button>
+            <div class="control-group">
+              <button id="play">재생</button><button id="back" aria-label="이전 프레임">이전</button><button id="next" aria-label="다음 프레임">다음</button>
+            </div>
+            <div class="control-group">
+              <button id="landing">착지 확인</button><button id="release">릴리스 확인</button>
+            </div>
           </div>
           <p id="events" class="hint"></p>
         </div>
         <div id="compare-controls" class="review" hidden>
-          <label class="scrub-label" for="phase">착지 → 릴리스 <output id="phase-read">50%</output></label>
+          <label class="scrub-label" for="phase">착지부터 릴리스까지 <output id="phase-read">50%</output></label>
           <input id="phase" type="range" min="0" max="1000" value="500">
-          <p class="hint"><span class="swatch a"></span>A 기준 투구 <span class="swatch b"></span>B 비교 투구 · 2D 영상 좌표</p>
-          <button id="leave-compare">투구 검수로 돌아가기</button>
+          <div class="compare-footer">
+            <div class="legend"><span><i class="swatch a"></i>A 기준 투구</span><span><i class="swatch b"></i>B 비교 투구</span></div>
+            <button id="leave-compare">투구 검수로 돌아가기</button>
+          </div>
         </div>
       </section>
       <aside class="sessions" aria-label="투구 기록">
@@ -71,9 +114,12 @@
         </details>
         <div class="compare-card">
           <h2>두 투구 비교</h2>
-          <div class="pair"><label>A <select id="pitch-a"><option value="">선택</option></select></label><label>B <select id="pitch-b"><option value="">선택</option></select></label></div>
-          <label class="verify"><input id="view-check" type="checkbox"> 같은 선수와 고정 시야를 확인했습니다</label>
-          <button id="compare" class="primary">착지·릴리스 맞춰 겹치기</button>
+          <div class="pair">
+            <label><span><i class="swatch a"></i>A 기준</span><select id="pitch-a"><option value="">투구 선택</option></select></label>
+            <label><span><i class="swatch b"></i>B 비교</span><select id="pitch-b"><option value="">투구 선택</option></select></label>
+          </div>
+          <label class="verify"><input id="view-check" type="checkbox"> 같은 선수와 카메라 시야를 확인했습니다</label>
+          <button id="compare">착지·릴리스 맞춰 겹치기</button>
           <p id="compare-note" class="hint" role="status"></p>
         </div>
       </aside>
