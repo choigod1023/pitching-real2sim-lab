@@ -1,55 +1,69 @@
 package lab.pitch.replay
 
 import android.Manifest
-import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.pm.PackageManager
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
-import android.graphics.drawable.RippleDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.text.InputType
 import android.text.format.DateFormat
 import android.util.Log
 import android.view.Gravity
+import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.ScrollView
-import android.widget.SeekBar
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.R as MaterialR
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.checkbox.MaterialCheckBox
+import com.google.android.material.color.MaterialColors
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.navigationrail.NavigationRailView
+import com.google.android.material.slider.LabelFormatter
+import com.google.android.material.slider.Slider
+import com.google.android.material.slider.TickVisibilityMode
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
+import com.google.android.material.textview.MaterialTextView
 import java.io.File
 import java.util.Date
 import java.util.Locale
 import java.util.concurrent.Executors
 
-private const val BACKGROUND = 0xFF101A18.toInt()
-private const val PANEL = 0xFF23332E.toInt()
-private const val INK = 0xFFF1F5F2.toInt()
-private const val MUTED = 0xFFADC0B7.toInt()
 private val analysisWorker = Executors.newSingleThreadExecutor()
 
-class MainActivity : ComponentActivity() {
-    private enum class Page(val label: String) { CAPTURE("촬영"), LIBRARY("보관함"), COMPARE("겹쳐보기") }
+class MainActivity : AppCompatActivity() {
+    private enum class Page(val label: String, val icon: Int) {
+        CAPTURE("촬영", R.drawable.ic_capture),
+        LIBRARY("보관함", R.drawable.ic_library),
+        COMPARE("겹쳐보기", R.drawable.ic_compare),
+    }
 
     private lateinit var archive: Archive
     private lateinit var root: LinearLayout
     private lateinit var workspace: LinearLayout
-    private lateinit var navButtons: List<Button>
+    private lateinit var navigation: NavigationBarView
+    private val ink get() = themeColor(MaterialR.attr.colorOnSurface)
+    private val muted get() = themeColor(MaterialR.attr.colorOnSurfaceVariant)
+    private val surface get() = themeColor(MaterialR.attr.colorSurface)
     private var page = Page.CAPTURE
     private var camera: CameraCapture? = null
     private var replay: ReplayView? = null
@@ -84,11 +98,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         archive = Archive(applicationContext)
         root = column()
-        root.setBackgroundColor(BACKGROUND)
+        root.setBackgroundColor(surface)
         ViewCompat.setOnApplyWindowInsetsListener(root) { view, insets ->
             val safe = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
-            view.setPadding(safe.left + dp(12), safe.top + dp(4), safe.right + dp(12), safe.bottom + dp(4))
-            insets
+            view.setPadding(safe.left, safe.top, safe.right, safe.bottom)
+            WindowInsetsCompat.CONSUMED
         }
         setContentView(root)
         render()
@@ -133,17 +147,47 @@ class MainActivity : ComponentActivity() {
         statusText = null
         root.removeAllViews()
 
-        val header = LinearLayout(this).apply { gravity = Gravity.CENTER_VERTICAL }
-        header.addView(label("Pitch Replay", 22, bold = true), LinearLayout.LayoutParams(0, -2, 1f))
-        navButtons = Page.entries.map { target ->
-            button(target.label, primary = target == page) { go(target) }.also {
-                it.isEnabled = !recording && busy == null && !saving
-                header.addView(it, LinearLayout.LayoutParams(-2, dp(48)).apply { marginStart = dp(4) })
-            }
+        val window = resources.configuration
+        val useRail = window.screenWidthDp >= 600 ||
+            (window.screenWidthDp >= 480 && window.screenWidthDp > window.screenHeightDp)
+        val sideBySide = window.screenWidthDp >= 600 || useRail && window.screenHeightDp < 480
+        val toolbar = MaterialToolbar(this).apply {
+            title = "Pitch Replay"
+            minimumHeight = dp(56)
+            setTitleTextColor(ink)
+            setContentInsetsRelative(dp(16), dp(16))
         }
-        root.addView(header, LinearLayout.LayoutParams(-1, -2).apply { bottomMargin = dp(8) })
-        workspace = LinearLayout(this)
-        root.addView(workspace, LinearLayout.LayoutParams(-1, 0, 1f))
+        root.addView(toolbar, LinearLayout.LayoutParams(-1, -2))
+
+        navigation = if (useRail) {
+            NavigationRailView(this).apply {
+                setMenuGravity(Gravity.CENTER_VERTICAL)
+                setCollapsedItemMinimumHeight(dp(64))
+            }
+        } else {
+            BottomNavigationView(this)
+        }
+        navigation.setBackgroundColor(surface)
+        navigation.labelVisibilityMode = NavigationBarView.LABEL_VISIBILITY_LABELED
+        Page.entries.forEach { target ->
+            navigation.menu.add(Menu.NONE, target.ordinal + 1, target.ordinal, target.label).setIcon(target.icon)
+        }
+        navigation.selectedItemId = page.ordinal + 1
+        navigation.setOnItemSelectedListener { item ->
+            go(Page.entries[item.itemId - 1])
+            true
+        }
+        updateNavigation()
+
+        val body = LinearLayout(this)
+        root.addView(body, LinearLayout.LayoutParams(-1, 0, 1f))
+        if (useRail) body.addView(navigation, LinearLayout.LayoutParams(-2, -1))
+        workspace = LinearLayout(this).apply {
+            orientation = if (sideBySide) LinearLayout.HORIZONTAL else LinearLayout.VERTICAL
+            setPaddingRelative(dp(if (useRail) 4 else 16), dp(4), dp(16), dp(12))
+        }
+        body.addView(workspace, LinearLayout.LayoutParams(0, -1, 1f))
+        if (!useRail) root.addView(navigation, LinearLayout.LayoutParams(-1, -2))
         when (page) {
             Page.CAPTURE -> renderCapture()
             Page.LIBRARY -> renderLibrary()
@@ -152,7 +196,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun renderCapture() {
-        val stage = FrameLayout(this).apply { setBackgroundColor(Color.BLACK) }
+        val stage = FrameLayout(this)
         val preview = PreviewView(this)
         val skeleton = PoseOverlay(this)
         val flight = BallOverlay(this)
@@ -164,7 +208,7 @@ class MainActivity : ComponentActivity() {
             topMargin = dp(12)
             marginStart = dp(12)
         })
-        val center = stageLabel("카메라를 켜면 여기서 구도를 확인할 수 있습니다.").apply { gravity = Gravity.CENTER }
+        val center = stageLabel("카메라를 켜고 구도를 확인하세요.").apply { gravity = Gravity.CENTER }
         stage.addView(center, FrameLayout.LayoutParams(-2, -2, Gravity.CENTER))
         val live = stageLabel("").apply { visibility = View.GONE }
         stage.addView(live, FrameLayout.LayoutParams(-2, -2, Gravity.BOTTOM or Gravity.START).apply {
@@ -172,7 +216,7 @@ class MainActivity : ComponentActivity() {
             marginStart = dp(12)
         })
         val controls = screen(stage)
-        addHeading(controls, "투구 촬영", "휴대폰을 옆에서 고정하고 투수 전신과 공이 지나는 구간을 화면에 넣으세요.")
+        addHeading(controls, "투구 촬영", "휴대폰을 고정하고 투수 전신과 공의 경로를 담으세요.")
         var ready = false
         var picking = false
         var ballStart: BallPoint? = null
@@ -182,14 +226,20 @@ class MainActivity : ComponentActivity() {
         val primary = button("카메라 켜기", primary = true) {}
         val calibrate = button("공 추적 설정") {}
         addButtonRow(controls, primary, calibrate)
-        val ballStatus = label("", 14, color = MUTED)
-        val optical = label("", 14)
+        val ballStatus = label("", 14, color = muted)
         addControl(controls, ballStatus)
-        addControl(controls, optical)
         status(controls)
+        val optical = column().apply {
+            setPadding(dp(12), dp(4), dp(12), dp(4))
+            background = rounded(themeColor(MaterialR.attr.colorSurfaceContainerLow), 12)
+        }
+        val speedValue = addMetric(optical, "화면 평면 평균 구속")
+        val movementValue = addMetric(optical, "화면 휨")
+        addMetric(optical, "회전수 (RPM)").text = "측정 불가"
+        addControl(controls, optical)
         val handButton = addAction(controls, "투구 손 · ${hand.label}") {}
         handButton.setOnClickListener {
-            AlertDialog.Builder(this).setTitle("투구 손")
+            MaterialAlertDialogBuilder(this).setTitle("투구 손")
                 .setSingleChoiceItems(Hand.entries.map { it.label }.toTypedArray(), hand.ordinal) { dialog, index ->
                     hand = Hand.entries[index]
                     handButton.text = "투구 손 · ${hand.label}"
@@ -216,10 +266,8 @@ class MainActivity : ComponentActivity() {
             val speed = trace?.speedKmh?.let { String.format(Locale.KOREA, "%.1f km/h", it) }
             val movement = trace?.deviationCm?.let { String.format(Locale.KOREA, "%+.1f cm", it) }
                 ?: trace?.deviationPx?.let { String.format(Locale.KOREA, "%+.1f px", it) }
-            val pending = if (distance == null) "거리 보정 필요" else "관측 대기"
-            optical.text = "화면 평면 평균 구속 · ${speed ?: pending}\n" +
-                "화면 휨 · ${movement ?: "관측 대기"}\n" +
-                "회전수(RPM) · 측정 불가"
+            speedValue.text = speed ?: if (distance == null) "거리 보정 필요" else "관측 대기"
+            movementValue.text = movement ?: "관측 대기"
         }
 
         fun clearBall() {
@@ -232,6 +280,11 @@ class MainActivity : ComponentActivity() {
         }
 
         fun updateButtons() {
+            guide.setTextColor(if (recording) themeColor(MaterialR.attr.colorOnErrorContainer) else Color.WHITE)
+            guide.background = rounded(
+                if (recording) themeColor(MaterialR.attr.colorErrorContainer) else 0xEB141B18.toInt(),
+                8,
+            )
             primary.text = when {
                 stopping -> "녹화 마무리 중"
                 recording -> "녹화 끝내기"
@@ -373,17 +426,19 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun askDistance(applyDistance: (Double) -> Unit) {
-        val input = EditText(this).apply {
-            inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
+        val distanceField = TextInputLayout(this, null, MaterialR.attr.textInputOutlinedStyle).apply {
             hint = "두 점 사이 거리 (m)"
-            contentDescription = hint
+        }
+        val input = TextInputEditText(distanceField.context).apply {
+            inputType = InputType.TYPE_CLASS_NUMBER or InputType.TYPE_NUMBER_FLAG_DECIMAL
             setSingleLine()
         }
+        distanceField.addView(input, LinearLayout.LayoutParams(-1, -2))
         val field = column().apply {
             setPadding(dp(24), 0, dp(24), 0)
-            addView(input)
+            addView(distanceField, LinearLayout.LayoutParams(-1, -2))
         }
-        val dialog = AlertDialog.Builder(this)
+        val dialog = MaterialAlertDialogBuilder(this)
             .setTitle("거리 보정")
             .setMessage("공이 지나는 평면에서 선택한 두 점 사이의 실측 거리를 입력하세요.")
             .setView(field)
@@ -391,10 +446,10 @@ class MainActivity : ComponentActivity() {
             .setPositiveButton("적용", null)
             .create()
         dialog.setOnShowListener {
-            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            dialog.getButton(DialogInterface.BUTTON_POSITIVE).setOnClickListener {
                 val distance = input.text.toString().trim().replace(',', '.').toDoubleOrNull()
                 if (distance == null || distance !in 0.3..35.0) {
-                    input.error = "0.3~35 m 사이의 거리를 입력하세요."
+                    distanceField.error = "0.3~35 m 사이의 거리를 입력하세요."
                 } else {
                     applyDistance(distance)
                     dialog.dismiss()
@@ -419,18 +474,18 @@ class MainActivity : ComponentActivity() {
         val end = pitch?.endUs ?: session.durationUs
         var playing = false
         val controls = column()
-        val time = label("영상을 여는 중", 15, bold = true)
+        val time = label("영상을 여는 중", 16, bold = true).apply { fontFeatureSettings = "tnum" }
         val seekBar = slider(1_000, "영상 위치") { progress ->
             replay?.seek(start + (end - start) * progress / 1_000)
         }
-        val play = button("재생") { replay?.toggle() }
-        val marks = label("", 14, color = MUTED)
+        val play = button("재생", primary = true) { replay?.toggle() }
+        val marks = label("", 14, color = muted)
         val viewer = ReplayView(this, archive.source(session.id), session.aspect, start, end, timeChanged = { current, running ->
             playing = running
             time.text = current?.let { "${formatTime(it)} / ${formatTime(end)}" } ?: "프레임을 찾는 중"
             play.text = if (running) "멈춤" else "재생"
             play.isEnabled = current != null
-            if (current != null) seekBar.progress = ((current - start) * 1_000 / (end - start)).toInt()
+            if (current != null) seekBar.value = ((current - start) * 1_000 / (end - start)).coerceIn(0L, 1_000L).toFloat()
             replay?.overlay?.show(current?.let { nearestPose(session.frames, it) } to MINT)
         }, failed = ::setNotice)
         replay = viewer
@@ -454,7 +509,7 @@ class MainActivity : ComponentActivity() {
                         marks.text = "시작 ${formatTime(it)}"
                     }
                 },
-                button("끝 지정", primary = true) {
+                button("끝 지정") {
                     val first = manualStartUs
                     val last = currentPausedTime(playing)
                     if (first == null) setNotice("투구 시작 위치를 먼저 지정하세요.")
@@ -478,7 +533,7 @@ class MainActivity : ComponentActivity() {
             showMarks(pitch)
             addButtonRow(controls,
                 button("착지 확인") { recordEvent(session.id, pitch.id, Event.LANDING, playing, ::showMarks) },
-                button("릴리스 확인", primary = true) { recordEvent(session.id, pitch.id, Event.RELEASE, playing, ::showMarks) }
+                button("릴리스 확인") { recordEvent(session.id, pitch.id, Event.RELEASE, playing, ::showMarks) }
             )
             addButtonRow(controls,
                 button("A로 선택") { setTake(true, pitch.id) },
@@ -490,7 +545,7 @@ class MainActivity : ComponentActivity() {
                 render()
             }
         }
-        session.analysisError?.let { addControl(controls, label(it, 14, color = MUTED)) }
+        session.analysisError?.let { addControl(controls, label(it, 14, color = muted)) }
     }
 
     private fun renderCompare() {
@@ -498,8 +553,8 @@ class MainActivity : ComponentActivity() {
         val b = take(bId)
         val problem = comparisonError(a, b, sameView)
         val controls = column()
-        val phaseLabel = label("착지 0% · 릴리스 100%", 14, color = MUTED)
-        val frameStatus = label("", 14, color = MUTED)
+        val phaseLabel = label("착지 0% · 릴리스 100%", 14, color = muted).apply { fontFeatureSettings = "tnum" }
+        val frameStatus = label("", 14, color = muted)
         val phase = slider(100, "착지부터 릴리스까지의 진행률") { percent ->
             if (a != null && problem == null) replay?.seek(phaseTime(a.pitch, percent / 100.0))
         }
@@ -512,13 +567,14 @@ class MainActivity : ComponentActivity() {
             ReplayView(this, archive.source(a.session.id), a.session.aspect, first, last, timeChanged = { current, _ ->
                 if (current != null && b != null && problem == null) {
                     val fraction = (current - first).toDouble() / (last - first)
-                    phase.progress = (fraction * 100).toInt().coerceIn(0, 100)
+                    val percent = (fraction * 100).toInt().coerceIn(0, 100)
+                    phase.value = percent.toFloat()
                     val aFrame = nearestPose(a.session.frames, current)
                     val bFrame = nearestPose(b.session.frames, phaseTime(b.pitch, fraction))
                     val both = aFrame != null && bFrame != null
                     replay?.overlay?.show(aFrame?.takeIf { both } to MINT, bFrame?.takeIf { both } to ORANGE)
                     frameStatus.text = if (both) "" else "이 시점에는 두 관절선을 함께 표시할 수 없습니다."
-                    phaseLabel.text = "${phase.progress}% · A ${formatTime(current)} · B ${formatTime(phaseTime(b.pitch, fraction))}"
+                    phaseLabel.text = "${percent}% · A ${formatTime(current)} · B ${formatTime(phaseTime(b.pitch, fraction))}"
                 } else if (problem == null) {
                     frameStatus.text = "프레임을 찾는 중"
                 }
@@ -527,13 +583,9 @@ class MainActivity : ComponentActivity() {
         screen(stage, controls)
         addHeading(controls, "두 투구 겹쳐보기", "A 영상 위에 같은 진행률의 관절선을 표시합니다.")
         addAction(controls, "A · ${a?.let { pitchTitle(it.session, it.pitch) } ?: "기준 투구 선택"}") { chooseTake(true) }
-            .setTextColor(MINT)
         addAction(controls, "B · ${b?.let { pitchTitle(it.session, it.pitch) } ?: "비교 투구 선택"}") { chooseTake(false) }
-            .setTextColor(ORANGE)
-        val check = CheckBox(this).apply {
+        val check = MaterialCheckBox(this).apply {
             text = "같은 선수와 고정된 시야를 두 원본에서 확인했습니다."
-            setTextColor(INK)
-            buttonTintList = ColorStateList.valueOf(MINT)
             minHeight = dp(48)
             isChecked = sameView
             isEnabled = a != null && b != null
@@ -543,7 +595,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         addControl(controls, check)
-        addControl(controls, label(problem ?: "민트색 A · 주황색 B", 14, color = if (problem == null) MUTED else ORANGE))
+        addControl(controls, label(problem ?: "민트색 A · 주황색 B", 14, color = muted))
         addControl(controls, phase)
         addControl(controls, phaseLabel)
         addControl(controls, frameStatus)
@@ -610,7 +662,7 @@ class MainActivity : ComponentActivity() {
                     runOnUiThread {
                         if (!isDestroyed) {
                             busy = "원본 영상에서 관절 분석 중 · $percent%"
-                            statusText?.text = busy
+                            updateStatus()
                         }
                     }
                 }
@@ -649,7 +701,7 @@ class MainActivity : ComponentActivity() {
 
     private fun selectSession() {
         if (saving) return
-        AlertDialog.Builder(this).setTitle("원본 영상")
+        MaterialAlertDialogBuilder(this).setTitle("원본 영상")
             .setItems(sessions.map(::sessionTitle).toTypedArray()) { _, index ->
                 val session = sessions[index]
                 selectedSessionId = session.id
@@ -662,7 +714,7 @@ class MainActivity : ComponentActivity() {
 
     private fun selectPitch(session: Session) {
         if (saving) return
-        AlertDialog.Builder(this).setTitle("투구 구간")
+        MaterialAlertDialogBuilder(this).setTitle("투구 구간")
             .setItems(session.pitches.map { pitchTitle(session, it) + " · " + formatTime(it.startUs) }.toTypedArray()) { _, index ->
                 selectedPitchId = session.pitches[index].id
                 notice = ""
@@ -676,7 +728,7 @@ class MainActivity : ComponentActivity() {
             setNotice("보관함에서 투구 구간을 먼저 저장하세요.")
             return
         }
-        AlertDialog.Builder(this).setTitle(if (first) "기준 투구 A" else "비교 투구 B")
+        MaterialAlertDialogBuilder(this).setTitle(if (first) "기준 투구 A" else "비교 투구 B")
             .setItems(takes.map { pitchTitle(it.session, it.pitch) + " · " + sessionTitle(it.session) }.toTypedArray()) { _, index ->
                 setTake(first, takes[index].pitch.id)
                 render()
@@ -704,53 +756,99 @@ class MainActivity : ComponentActivity() {
     private fun formatTime(timeUs: Long) = String.format(Locale.ROOT, "%.3f초", timeUs / 1_000_000.0)
 
     private fun updateNavigation() {
-        if (::navButtons.isInitialized) navButtons.forEach { it.isEnabled = !recording && busy == null && !saving }
+        val enabled = !recording && busy == null && !saving
+        val menu = navigation.menu
+        for (index in 0 until menu.size()) menu.getItem(index).isEnabled = enabled
     }
 
     private fun setNotice(message: String) {
         notice = message
-        statusText?.text = message
+        updateStatus()
     }
 
-    private fun status(controls: LinearLayout) = label(busy ?: notice, 14, color = ORANGE).also {
+    private fun updateStatus() {
+        val message = busy ?: notice
+        statusText?.apply {
+            text = message
+            visibility = if (message.isBlank()) View.GONE else View.VISIBLE
+        }
+    }
+
+    private fun status(controls: LinearLayout) = label("", 14).also {
         statusText = it
         it.accessibilityLiveRegion = View.ACCESSIBILITY_LIVE_REGION_POLITE
+        it.setPadding(dp(12), dp(8), dp(12), dp(8))
+        it.background = rounded(themeColor(MaterialR.attr.colorSurfaceContainerHigh), 8)
         addControl(controls, it)
+        updateStatus()
     }
 
     private fun screen(stage: View, controls: LinearLayout = column()): LinearLayout {
-        workspace.addView(stage, LinearLayout.LayoutParams(0, -1, 1.55f))
+        stage.background = rounded(Color.BLACK, 12)
+        stage.clipToOutline = true
         val scroll = ScrollView(this).apply {
             isFillViewport = true
+            isVerticalScrollBarEnabled = false
             addView(controls, ViewGroup.LayoutParams(-1, -2))
         }
-        workspace.addView(scroll, LinearLayout.LayoutParams(0, -1, 1f).apply { marginStart = dp(12) })
+        val window = resources.configuration
+        if (workspace.orientation == LinearLayout.HORIZONTAL) {
+            val controlsWidth = (window.screenWidthDp / 3).coerceIn(192, 360)
+            workspace.addView(stage, LinearLayout.LayoutParams(0, -1, 1f))
+            workspace.addView(scroll, LinearLayout.LayoutParams(dp(controlsWidth), -1).apply { marginStart = dp(16) })
+        } else {
+            val stageHeight = minOf((window.screenWidthDp - 32) * 9 / 16, window.screenHeightDp / 3)
+            workspace.addView(stage, LinearLayout.LayoutParams(-1, dp(stageHeight)))
+            workspace.addView(scroll, LinearLayout.LayoutParams(-1, 0, 1f).apply { topMargin = dp(12) })
+        }
         return controls
     }
 
     private fun emptyStage(message: String) = FrameLayout(this).apply {
-        setBackgroundColor(Color.BLACK)
-        addView(stageLabel(message), FrameLayout.LayoutParams(-2, -2, Gravity.CENTER))
+        addView(stageLabel(message).apply { gravity = Gravity.CENTER },
+            FrameLayout.LayoutParams(-2, -2, Gravity.CENTER))
     }
 
-    private fun stageLabel(message: String) = label(message, 14).apply {
+    private fun stageLabel(message: String) = label(message, 14, color = Color.WHITE).apply {
         setPadding(dp(8), dp(4), dp(8), dp(4))
-        setBackgroundColor(0xC0101A18.toInt())
+        background = rounded(0xEB141B18.toInt(), 8)
+        fontFeatureSettings = "tnum"
     }
 
     private fun addHeading(parent: LinearLayout, title: String, detail: String) {
-        addControl(parent, label(title, 21, bold = true))
-        addControl(parent, label(detail, 14, color = MUTED))
+        addControl(parent, label(title, 22, bold = true).apply {
+            ViewCompat.setAccessibilityHeading(this, true)
+        }, gap = 4)
+        addControl(parent, label(detail, 14, color = muted), gap = 12)
     }
 
-    private fun addControl(parent: LinearLayout, view: View) {
-        parent.addView(view, LinearLayout.LayoutParams(-1, -2).apply { bottomMargin = dp(4) })
+    private fun addControl(parent: LinearLayout, view: View, gap: Int = 8) {
+        parent.addView(view, LinearLayout.LayoutParams(-1, -2).apply { bottomMargin = dp(gap) })
+    }
+
+    private fun addMetric(parent: LinearLayout, title: String): TextView {
+        val metric = LinearLayout(this).apply {
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(0, dp(4), 0, dp(4))
+        }
+        metric.addView(label(title, 14, color = muted), LinearLayout.LayoutParams(0, -2, 1f))
+        val value = label("", 14, bold = true).apply {
+            gravity = Gravity.END
+            fontFeatureSettings = "tnum"
+        }
+        metric.addView(value, LinearLayout.LayoutParams(0, -2, 1f).apply { marginStart = dp(8) })
+        parent.addView(metric, LinearLayout.LayoutParams(-1, -2))
+        return value
     }
 
     private fun addAction(parent: LinearLayout, title: String, primary: Boolean = false, run: () -> Unit) =
         button(title, primary, run).also { addControl(parent, it) }
 
     private fun addButtonRow(parent: LinearLayout, vararg buttons: Button) {
+        if (resources.configuration.fontScale >= 1.4f) {
+            buttons.forEach { addControl(parent, it) }
+            return
+        }
         val row = LinearLayout(this)
         for ((index, view) in buttons.withIndex()) {
             row.addView(view, LinearLayout.LayoutParams(0, -2, 1f).apply { if (index > 0) marginStart = dp(4) })
@@ -758,52 +856,44 @@ class MainActivity : ComponentActivity() {
         addControl(parent, row)
     }
 
-    private fun slider(limit: Int, description: String, changed: (Int) -> Unit) = SeekBar(this).apply {
-        max = limit
-        minHeight = dp(48)
+    private fun slider(limit: Int, description: String, changed: (Int) -> Unit) = Slider(this).apply {
+        valueTo = limit.toFloat()
+        stepSize = 1f
+        tickVisibilityMode = TickVisibilityMode.TICK_VISIBILITY_HIDDEN
+        labelBehavior = LabelFormatter.LABEL_GONE
+        minimumHeight = dp(48)
         contentDescription = description
-        progressTintList = ColorStateList.valueOf(MINT)
-        thumbTintList = ColorStateList.valueOf(MINT)
-        setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(bar: SeekBar, progress: Int, fromUser: Boolean) {
-                if (fromUser) changed(progress)
-            }
-
-            override fun onStartTrackingTouch(bar: SeekBar) = Unit
-            override fun onStopTrackingTouch(bar: SeekBar) = Unit
-        })
+        addOnChangeListener { _, value, fromUser -> if (fromUser) changed(value.toInt()) }
     }
 
     private fun column() = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
 
-    private fun label(value: String, size: Int, bold: Boolean = false, color: Int = INK) = TextView(this).apply {
+    private fun label(value: String, size: Int, bold: Boolean = false, color: Int = ink) = MaterialTextView(this).apply {
         text = value
         textSize = size.toFloat()
         setTextColor(color)
         if (bold) typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL)
     }
 
-    private fun button(title: String, primary: Boolean = false, run: () -> Unit) = Button(this).apply {
+    private fun button(title: String, primary: Boolean = false, run: () -> Unit) = MaterialButton(
+        this, null, if (primary) MaterialR.attr.materialButtonStyle else MaterialR.attr.materialButtonOutlinedStyle,
+    ).apply {
         text = title
-        textSize = 14f
-        typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL)
         isAllCaps = false
         minHeight = dp(48)
         minimumHeight = dp(48)
-        minWidth = 0
-        minimumWidth = 0
-        setPadding(dp(8), 0, dp(8), 0)
-        stateListAnimator = null
-        setTextColor(ColorStateList(
-            arrayOf(intArrayOf(android.R.attr.state_enabled), intArrayOf()),
-            intArrayOf(if (primary) BACKGROUND else INK, if (primary) 0xFF465A50.toInt() else MUTED)
-        ))
-        background = RippleDrawable(ColorStateList.valueOf(0x224B6259), GradientDrawable().apply {
-            setColor(if (primary) MINT else PANEL)
-            cornerRadius = dp(8).toFloat()
-        }, null)
+        minWidth = dp(48)
+        minimumWidth = dp(48)
+        setPaddingRelative(dp(8), paddingTop, dp(8), paddingBottom)
         setOnClickListener { run() }
     }
+
+    private fun rounded(color: Int, radius: Int) = GradientDrawable().apply {
+        setColor(color)
+        cornerRadius = dp(radius).toFloat()
+    }
+
+    private fun themeColor(attribute: Int) = MaterialColors.getColor(this, attribute, "Pitch Replay")
 
     private fun dp(value: Int) = (value * resources.displayMetrics.density + .5f).toInt()
 }

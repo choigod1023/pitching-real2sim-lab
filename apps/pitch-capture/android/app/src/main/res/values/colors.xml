@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pitch_surface">#F6F9F7</color>
+    <color name="pitch_on_surface">#17211D</color>
+    <color name="pitch_on_surface_variant">#47564F</color>
+    <color name="pitch_surface_low">#F0F4F1</color>
+    <color name="pitch_surface_container">#E8EEEA</color>
+    <color name="pitch_surface_high">#E1E9E3</color>
+    <color name="pitch_surface_highest">#DBE4DE</color>
+    <color name="pitch_outline">#697971</color>
+    <color name="pitch_outline_variant">#BAC8BF</color>
+    <color name="pitch_primary">#235D49</color>
+    <color name="pitch_on_primary">#FFFFFF</color>
+    <color name="pitch_accent_container">#CDEBDD</color>
+    <color name="pitch_on_accent_container">#133C2E</color>
+</resources>

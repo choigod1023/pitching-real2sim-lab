@@ -29,6 +29,7 @@ kotlin {
 
 dependencies {
     implementation("androidx.activity:activity:1.10.1")
+    implementation("com.google.android.material:material:1.13.0")
     val cameraVersion = "1.4.2"
     implementation("androidx.camera:camera-camera2:$cameraVersion")
     implementation("androidx.camera:camera-lifecycle:$cameraVersion")

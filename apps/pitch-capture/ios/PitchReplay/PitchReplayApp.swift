@@ -9,7 +9,7 @@ struct PitchReplayApp: App {
     @StateObject private var model = ReplayModel()
 
     var body: some Scene {
-        WindowGroup { ReplayView(model: model).preferredColorScheme(.dark) }
+        WindowGroup { ReplayView(model: model) }
     }
 }
 
@@ -385,8 +385,13 @@ private struct MovieFrame: UIViewRepresentable {
 
 @MainActor
 private struct ReplayView: View {
+    private enum Destination: Hashable {
+        case capture, review, compare
+    }
+
     @ObservedObject var model: ReplayModel
-    @State private var screen = 0
+    @Environment(\.dynamicTypeSize) private var typeSize
+    @State private var screen = Destination.capture
     @State private var importing = false
     @State private var reviewID: UUID?
     @State private var time = 0.0
@@ -401,96 +406,129 @@ private struct ReplayView: View {
 
     private let mint = Color(red: 0.34, green: 0.92, blue: 0.76)
     private let amber = Color(red: 1, green: 0.68, blue: 0.34)
-    private let panel = Color(red: 0.075, green: 0.10, blue: 0.13)
+    private var captureLocked: Bool { model.recording || model.opening || model.busy }
 
     var body: some View {
-        GeometryReader { geometry in
-            let stacked = geometry.size.width < 680
-            Group {
-                if stacked {
-                    ScrollView { VStack(spacing: 18) { rail; stage.frame(minHeight: 280) } }
-                } else {
-                    HStack(alignment: .top, spacing: 18) {
-                        ScrollView { rail }.frame(width: 245)
-                        stage
-                    }
-                }
-            }.padding(16)
+        TabView(selection: tabSelection) {
+            page("촬영", stage: { stage(.capture) }, options: { captureControls })
+                .tabItem { Label("촬영", systemImage: "video") }
+                .tag(Destination.capture)
+            page("복기", stage: { stage(.review) }, options: { reviewControls })
+                .tabItem { Label("복기", systemImage: "list.bullet.rectangle") }
+                .tag(Destination.review)
+            page("비교", stage: { stage(.compare) }, options: { compareControls })
+                .tabItem { Label("비교", systemImage: "square.split.2x1") }
+                .tag(Destination.compare)
         }
-        .background(Color(red: 0.045, green: 0.064, blue: 0.085).ignoresSafeArea())
-        .tint(mint)
         .fileImporter(isPresented: $importing, allowedContentTypes: [.movie], onCompletion: model.importVideo)
         .onChange(of: screen) { next in
-            if next != 0 { model.closeCamera() }
+            if next != .capture { model.closeCamera() }
+        }
+        .onChange(of: reviewID) { _ in
+            time = reviewItem?.pitch.start ?? 0
             shownReview = nil
-            shownCompare = nil
+            manualStart = nil
+        }
+        .onChange(of: manualSession) { _ in
+            time = 0
+            shownReview = nil
+            manualStart = nil
         }
         .onChange(of: aID) { _ in sameView = false }
         .onChange(of: bID) { _ in sameView = false }
     }
 
-    private var rail: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Pitch Replay").font(.system(size: 28, weight: .semibold))
-            Picker("화면", selection: $screen) {
-                Text("촬영").tag(0); Text("복기").tag(1); Text("비교").tag(2)
-            }.pickerStyle(.segmented).disabled(model.recording || model.opening || model.busy)
+    private var tabSelection: Binding<Destination> {
+        Binding(get: { screen }, set: { destination in
+            if !captureLocked { screen = destination }
+        })
+    }
 
-            switch screen {
-            case 0: captureControls
-            case 1: reviewControls
-            default: compareControls
+    private func page<Stage: View, Options: View>(
+        _ title: String, @ViewBuilder stage: () -> Stage, @ViewBuilder options: () -> Options
+    ) -> some View {
+        let preview = stage()
+        let rows = options()
+        return NavigationStack {
+            GeometryReader { geometry in
+                if geometry.size.width >= 620 && !typeSize.isAccessibilitySize {
+                    HStack(spacing: 0) {
+                        preview.frame(maxWidth: .infinity, maxHeight: .infinity).padding(12)
+                        Divider()
+                        Form { rows; notice }
+                            .frame(width: min(340, max(252, geometry.size.width * 0.35)))
+                    }
+                } else {
+                    Form {
+                        Section {
+                            preview.frame(minHeight: 180)
+                                .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+                        }
+                        rows
+                        notice
+                    }
+                }
             }
-            if model.busy { ProgressView().accessibilityLabel("분석 중") }
-            if !model.status.isEmpty { Text(model.status).font(.footnote).foregroundStyle(.secondary) }
-        }.frame(maxWidth: .infinity, alignment: .leading)
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+
+    @ViewBuilder private var notice: some View {
+        if model.busy || !model.status.isEmpty {
+            Section {
+                if model.busy { ProgressView("영상 분석 중") }
+                if !model.status.isEmpty { Text(model.status).font(.footnote).foregroundStyle(.secondary) }
+            }
+        }
     }
 
     private var captureControls: some View {
         Group {
-            Picker("투구 손", selection: $model.hand) {
-                ForEach(ThrowHand.allCases, id: \.self) { Text($0.title).tag($0) }
-            }.pickerStyle(.segmented).disabled(model.recording || model.busy)
-            if model.recording {
-                Button("녹화 종료") { model.camera.stop() }.buttonStyle(.borderedProminent)
-            } else if model.cameraReady {
-                Button("녹화 시작") { model.start() }.buttonStyle(.borderedProminent).disabled(model.busy)
-            } else {
-                Button("후면 카메라 켜기") { model.openCamera() }
-                    .buttonStyle(.borderedProminent).disabled(model.busy || model.opening)
+            Section {
+                Picker("투구 손", selection: $model.hand) {
+                    ForEach(ThrowHand.allCases, id: \.self) { Text($0.title).tag($0) }
+                }.disabled(captureLocked)
+                if model.cameraReady {
+                    Button("카메라 닫기") { model.closeCamera() }.disabled(model.recording)
+                } else {
+                    Toggle("표식 회전 모드", isOn: $model.highSpeed).disabled(captureLocked)
+                }
+            } header: {
+                Text("카메라")
+            } footer: {
+                if model.highSpeed && !model.cameraReady {
+                    Text("240 fps 지원 기기를 밝은 곳에 고정하세요. 파란 표식이 보이도록 회전축을 카메라 방향에 가깝게 맞추세요.")
+                }
             }
             if model.cameraReady {
-                Button(model.ballCorridor == nil ? "투구 경로 지정" : "투구 경로 다시 지정") { model.chooseBallPath() }
-                    .buttonStyle(.bordered).disabled(model.choosingBallPath)
-                if model.choosingBallPath {
-                    Text(model.firstBallPoint == nil ? "1. 영상에서 공이 들어올 지점을 탭하세요." : "2. 공이 나갈 지점을 탭하세요.")
-                        .font(.footnote).foregroundStyle(.secondary)
-                }
-                if model.ballCorridor != nil {
-                    HStack(spacing: 8) {
-                        TextField("기준 거리 (m)", text: $model.scaleMeters)
-                            .textFieldStyle(.roundedBorder).keyboardType(.decimalPad)
-                            .accessibilityLabel("두 지점 사이의 실제 거리, 미터")
-                        Button("적용") { model.applyBallScale() }.buttonStyle(.bordered)
+                Section {
+                    Button(model.ballCorridor == nil ? "투구 경로 지정" : "투구 경로 다시 지정") {
+                        model.chooseBallPath()
+                    }.disabled(model.choosingBallPath)
+                    if model.choosingBallPath {
+                        Text(model.firstBallPoint == nil ? "영상에서 공이 들어올 지점을 탭하세요." : "공이 나갈 지점을 탭하세요.")
+                            .foregroundStyle(.secondary)
                     }
-                    Text("공이 지나는 평면에서 잰 두 지점 사이 거리를 입력하세요. 거리 없이도 궤적과 휨(px)을 볼 수 있습니다.")
-                        .font(.caption).foregroundStyle(.secondary)
-                }
-                if !model.recording {
-                    Button("카메라 닫기") { model.closeCamera() }.buttonStyle(.bordered)
-                }
-            } else {
-                Toggle("표식 회전 모드", isOn: $model.highSpeed)
-                    .font(.footnote).disabled(model.busy || model.opening)
-                if model.highSpeed {
-                    Text("240 fps 지원 기기에서 밝은 곳에 고정하세요. 흰 공에 파란 점 하나를 찍고 회전축을 카메라 방향에 가깝게 맞추세요.")
-                        .font(.caption).foregroundStyle(.secondary)
+                    if model.ballCorridor != nil {
+                        TextField("기준 거리 (m)", text: $model.scaleMeters)
+                            .keyboardType(.decimalPad)
+                            .accessibilityLabel("두 지점 사이의 실제 거리, 미터")
+                        Button("거리 적용") { model.applyBallScale() }
+                    }
+                } header: {
+                    Text("공 추적")
+                } footer: {
+                    if model.ballCorridor != nil {
+                        Text(ballNote)
+                    }
                 }
             }
-            Button("기존 영상 가져오기") { importing = true }
-                .buttonStyle(.bordered).disabled(model.recording || model.busy || model.opening)
-            Text("휴대폰을 투구 방향 옆에 가로로 고정하세요. 전신과 공이 지나는 구간을 영상에 담으세요.")
-                .font(.footnote).foregroundStyle(.secondary)
+            Section("영상") {
+                Button { importing = true } label: {
+                    Label("영상 가져오기", systemImage: "square.and.arrow.down")
+                }.disabled(captureLocked)
+            }
         }
     }
 
@@ -506,40 +544,40 @@ private struct ReplayView: View {
 
     private var reviewControls: some View {
         Group {
-            Picker("복기할 투구", selection: $reviewID) {
-                Text("투구 선택").tag(nil as UUID?)
-                ForEach(model.entries) { Text(clipName($0)).tag(Optional($0.id)) }
-            }
-            .onChange(of: reviewID) { _ in
-                if let pitch = reviewItem?.pitch { time = pitch.start }
-                else { time = 0 }
-                shownReview = nil
-                manualStart = nil
+            Section("영상") {
+                Picker("복기할 투구", selection: $reviewID) {
+                    Text("투구 선택").tag(nil as UUID?)
+                    ForEach(model.entries) { Text(clipName($0)).tag(Optional($0.id)) }
+                }
+                .pickerStyle(.navigationLink)
             }
             if let item = reviewItem {
-                HStack {
-                    Button("착지 확인") { model.mark(item, event: .landing, time: time) }
-                    Button("릴리스 확인") { model.mark(item, event: .release, time: time) }
-                }.buttonStyle(.bordered).disabled(shownReview != time)
-                Text("착지 \(eventText(item.pitch.landing)) · 릴리스 \(eventText(item.pitch.release))")
-                    .font(.caption).monospacedDigit()
+                Section("투구 구간") {
+                    Button { model.mark(item, event: .landing, time: time) } label: {
+                        LabeledContent("착지 확인", value: eventText(item.pitch.landing))
+                    }.disabled(shownReview != time)
+                    Button { model.mark(item, event: .release, time: time) } label: {
+                        LabeledContent("릴리스 확인", value: eventText(item.pitch.release))
+                    }.disabled(shownReview != time)
+                }
             } else {
-                Picker("투구 구간 추가", selection: $manualSession) {
-                    Text("원본 선택").tag(nil as UUID?)
-                    ForEach(model.sessions) { session in
-                        Text(session.created.formatted(.dateTime.hour().minute().second())).tag(Optional(session.id))
-                    }
-                }.onChange(of: manualSession) { _ in time = 0; manualStart = nil; shownReview = nil }
-                if let session = reviewSession {
-                    HStack {
+                Section("투구 구간 추가") {
+                    Picker("원본 영상", selection: $manualSession) {
+                        Text("원본 선택").tag(nil as UUID?)
+                        ForEach(model.sessions) { session in
+                            Text(session.created.formatted(.dateTime.hour().minute().second())).tag(Optional(session.id))
+                        }
+                    }.pickerStyle(.navigationLink)
+                    if let session = reviewSession {
                         Button("구간 시작") { manualStart = time }
+                            .disabled(shownReview != time)
                         Button("구간 끝 저장") {
                             if let start = manualStart, let id = model.addManual(session.id, start: start, end: time) {
                                 reviewID = id
                             }
-                        }.disabled(manualStart == nil)
-                    }.buttonStyle(.bordered).disabled(shownReview != time)
-                    if let start = manualStart { Text("시작 \(eventText(start))").font(.caption) }
+                        }.disabled(manualStart == nil || shownReview != time)
+                        if let start = manualStart { LabeledContent("시작", value: eventText(start)) }
+                    }
                 }
             }
         }
@@ -550,56 +588,97 @@ private struct ReplayView: View {
     }
 
     private var compareControls: some View {
-        Group {
+        Section {
             Picker("A · 기준 투구", selection: $aID) {
                 Text("선택").tag(nil as UUID?)
                 ForEach(model.entries) { Text(clipName($0)).tag(Optional($0.id)) }
-            }.foregroundStyle(mint)
+            }.pickerStyle(.navigationLink)
             Picker("B · 비교 투구", selection: $bID) {
                 Text("선택").tag(nil as UUID?)
                 ForEach(model.entries) { Text(clipName($0)).tag(Optional($0.id)) }
-            }.foregroundStyle(amber)
-            Toggle("같은 선수와 고정된 카메라 시야", isOn: $sameView).font(.footnote)
+            }.pickerStyle(.navigationLink)
+            Toggle("같은 선수와 고정된 카메라 시야", isOn: $sameView)
+        } header: {
+            Text("비교할 투구")
+        } footer: {
             Text("착지에서 릴리스까지의 진행률을 맞춥니다. 화면에서 보이는 2D 차이입니다.")
-                .font(.footnote).foregroundStyle(.secondary)
         }
     }
 
-    private var stage: some View {
+    @ViewBuilder private func stage(_ destination: Destination) -> some View {
+        switch destination {
+        case .capture: captureStage
+        case .review: reviewStage
+        case .compare: comparison
+        }
+    }
+
+    private var captureStage: some View {
         VStack(spacing: 8) {
-            switch screen {
-            case 0:
-                if model.cameraReady {
-                    livePreview
-                    liveReadout
-                } else { placeholder("카메라를 켜거나 촬영한 영상을 가져오세요.") }
-            case 1:
-                if let session = reviewSession, let url = model.video(session) {
-                    let range = (reviewItem?.pitch.start ?? 0)...(reviewItem?.pitch.end ?? session.duration)
-                    ZStack {
-                        MovieFrame(url: url, time: time) { _, displayed in shownReview = displayed }
-                        if shownReview == time {
-                            PoseLines(aspect: session.aspect, layers: [(session.nearestPose(at: time)?.points ?? [:], mint)])
-                        }
-                    }
-                    HStack {
-                        Button("이전") { time = session.frameTime(from: time, moving: -1, in: range) }
-                        Slider(value: $time, in: range, onEditingChanged: { editing in
-                            if !editing { time = session.frameTime(from: time, moving: 0, in: range) }
-                        }).accessibilityLabel("영상 시각")
-                        Button("다음") { time = session.frameTime(from: time, moving: 1, in: range) }
-                        Text(eventText(time)).monospacedDigit()
-                    }.buttonStyle(.bordered)
-                    if session.frameTimes.isEmpty {
-                        Text("프레임 시각을 읽지 못해 이전·다음은 약 1/30초씩 이동합니다.")
-                            .font(.caption).foregroundStyle(.secondary)
-                    }
-                } else { placeholder("저장한 투구나 원본을 고르세요.") }
-            default: comparison
+            if model.cameraReady {
+                livePreview
+                    .background(.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                liveReadout
+                Button {
+                    if model.recording { model.camera.stop() } else { model.start() }
+                } label: {
+                    Label {
+                        Text(model.recording ? "녹화 종료" : "녹화 시작").foregroundStyle(.primary)
+                    } icon: {
+                        Image(systemName: model.recording ? "stop.circle.fill" : "record.circle")
+                            .foregroundStyle(.red)
+                    }.frame(minHeight: 34)
+                }
+                .buttonStyle(.bordered)
+                .disabled(model.busy)
+            } else {
+                placeholder("카메라 준비", symbol: "video", detail: "기기를 투구 방향 옆에 가로로 고정하세요. 전신과 공이 지나는 구간을 영상에 담으세요.")
+                Button { model.openCamera() } label: {
+                    Label("후면 카메라 켜기", systemImage: "video")
+                        .frame(minHeight: 34)
+                }.buttonStyle(.borderedProminent)
+                    .disabled(captureLocked)
             }
         }
-        .padding(12).frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(panel, in: RoundedRectangle(cornerRadius: 12))
+    }
+
+    @ViewBuilder private var reviewStage: some View {
+        if let session = reviewSession, let url = model.video(session) {
+            let range = (reviewItem?.pitch.start ?? 0)...(reviewItem?.pitch.end ?? session.duration)
+            VStack(spacing: 4) {
+                ZStack {
+                    MovieFrame(url: url, time: time) { _, displayed in shownReview = displayed }
+                    if shownReview == time {
+                        PoseLines(aspect: session.aspect, layers: [(session.nearestPose(at: time)?.points ?? [:], mint)])
+                    }
+                }
+                .background(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                HStack(spacing: 8) {
+                    Button {
+                        time = session.frameTime(from: time, moving: -1, in: range)
+                    } label: {
+                        Image(systemName: "backward.end").frame(minWidth: 44, minHeight: 44)
+                    }.accessibilityLabel("이전 프레임")
+                    Slider(value: $time, in: range, onEditingChanged: { editing in
+                        if !editing { time = session.frameTime(from: time, moving: 0, in: range) }
+                    }).accessibilityLabel("영상 시각")
+                    Button {
+                        time = session.frameTime(from: time, moving: 1, in: range)
+                    } label: {
+                        Image(systemName: "forward.end").frame(minWidth: 44, minHeight: 44)
+                    }.accessibilityLabel("다음 프레임")
+                }.buttonStyle(.borderless)
+                Text(eventText(time)).font(.footnote.monospacedDigit())
+                if session.frameTimes.isEmpty {
+                    Text("프레임 시각이 없어 약 1/30초씩 이동합니다.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }
+            }
+        } else {
+            placeholder("복기할 영상 선택", symbol: "film", detail: "저장한 투구 또는 원본을 고르세요.")
+        }
     }
 
     private var livePreview: some View {
@@ -620,29 +699,33 @@ private struct ReplayView: View {
                         .accessibilityLabel(model.firstBallPoint == nil ? "투구 경로 시작점 선택" : "투구 경로 끝점 선택")
                 }
             }
-        }.frame(minHeight: 160)
+        }.frame(minHeight: 100)
     }
 
     private var liveReadout: some View {
         VStack(alignment: .leading, spacing: 4) {
-            HStack(spacing: 8) {
-                Text("관절 \(model.livePoints.count)/12")
-                if let fps = model.liveFPS { Text(String(format: "%.0f fps", fps)) }
-                if model.ballCorridor != nil {
-                    let ball = model.liveBall
-                    Text(ball.path.isEmpty ? "공 대기" : "\(ball.active ? "공 추적 중" : "마지막 궤적") · \(ball.path.count)프레임")
-                        .foregroundStyle(amber)
-                }
-            }.font(.caption.monospacedDigit())
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 8) { trackingStatus }
+                VStack(alignment: .leading, spacing: 4) { trackingStatus }
+            }.font(.footnote.monospacedDigit()).foregroundStyle(.secondary)
             if model.ballCorridor != nil {
                 ViewThatFits(in: .horizontal) {
-                    HStack(spacing: 16) { ballValues }
+                    HStack(spacing: 16) { ballValues }.fixedSize(horizontal: true, vertical: false)
                     VStack(alignment: .leading, spacing: 4) { ballValues }
-                }.font(.caption.monospacedDigit())
-                Text(ballNote)
-                    .font(.caption2).foregroundStyle(.secondary)
+                }.font(.footnote.monospacedDigit())
             }
         }.frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private var trackingStatus: some View {
+        Group {
+            Text("관절 \(model.livePoints.count)/12")
+            if let fps = model.liveFPS { Text(String(format: "%.0f fps", fps)) }
+            if model.ballCorridor != nil {
+                let ball = model.liveBall
+                Text(ball.path.isEmpty ? "공 대기" : "\(ball.active ? "공 추적 중" : "마지막 궤적") · \(ball.path.count)프레임")
+            }
+        }
     }
 
     private var ballValues: some View {
@@ -651,12 +734,12 @@ private struct ReplayView: View {
             Text(model.liveBall.movementCM.map { String(format: "화면 휨 %+.1f cm", $0) }
                  ?? model.liveBall.movementPX.map { String(format: "화면 휨 %+.1f px", $0) } ?? "화면 휨 —")
             Text(model.liveBall.rpm.map { String(format: "표식 회전 약 %.0f RPM", $0) } ?? "회전수 —")
-        }.fixedSize(horizontal: true, vertical: false)
+        }
     }
 
     private var ballNote: String {
         let scale = model.ballCorridor?.meters == nil
-            ? "거리 보정 후 속도와 휨(cm) 표시"
+            ? "속도를 보려면 공이 지나는 평면에서 두 지점 사이의 실제 거리를 입력하세요."
             : "처음 3프레임 평균 속도"
         let spin: String
         if model.liveBall.rpm != nil { spin = "카메라를 향한 축 기준 표식 추정" }
@@ -665,20 +748,21 @@ private struct ReplayView: View {
         return "\(scale) · 휨은 양 끝점을 이은 선에서 가장 먼 편차 (+는 아래) · \(spin)"
     }
 
-    private var comparison: some View {
-        Group {
-            if let a = model.entries.first(where: { $0.id == aID }),
-               let b = model.entries.first(where: { $0.id == bID }),
-               PitchSelection.canCompare(a, b, sameView: sameView),
-               let url = model.video(a.session) {
-                let ta = a.pitch.time(at: phase)
-                let tb = b.pitch.time(at: phase)
-                let pa = a.session.nearestPose(at: ta)?.points ?? [:]
-                let pb = b.session.nearestPose(at: tb)?.points ?? [:]
+    @ViewBuilder private var comparison: some View {
+        if let a = model.entries.first(where: { $0.id == aID }),
+           let b = model.entries.first(where: { $0.id == bID }),
+           PitchSelection.canCompare(a, b, sameView: sameView),
+           let url = model.video(a.session) {
+            let ta = a.pitch.time(at: phase)
+            let tb = b.pitch.time(at: phase)
+            let pa = a.session.nearestPose(at: ta)?.points ?? [:]
+            let pb = b.session.nearestPose(at: tb)?.points ?? [:]
+            VStack(spacing: 8) {
                 ZStack {
                     MovieFrame(url: url, time: ta) { _, displayed in shownCompare = displayed }
                     if shownCompare == ta { PoseLines(aspect: a.session.aspect, layers: [(pa, mint), (pb, amber)]) }
-                }
+                }.background(.black)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
                 HStack {
                     Text("착지").font(.caption)
                     Slider(value: $phase).accessibilityLabel("착지에서 릴리스까지")
@@ -686,14 +770,20 @@ private struct ReplayView: View {
                 }
                 Text("A \(eventText(ta)) · 관절 \(pa.count)/12개     B \(eventText(tb)) · 관절 \(pb.count)/12개")
                     .font(.caption.monospacedDigit())
-            } else {
-                placeholder("같은 시야에서 관절이 보이는 서로 다른 두 투구를 고르세요. 투구 손, 영상 비율, 착지·릴리스 표시를 확인하세요.")
             }
+        } else {
+            placeholder("비교할 투구 선택", symbol: "square.split.2x1", detail: "같은 시야의 서로 다른 두 투구를 고르세요. 각 투구의 착지와 릴리스가 필요합니다.")
         }
     }
 
-    private func placeholder(_ text: String) -> some View {
-        Text(text).foregroundStyle(.secondary).multilineTextAlignment(.center)
-            .frame(maxWidth: .infinity, maxHeight: .infinity).padding()
+    private func placeholder(_ title: String, symbol: String, detail: String) -> some View {
+        VStack(spacing: 8) {
+            Image(systemName: symbol).font(.title).foregroundStyle(.secondary).accessibilityHidden(true)
+            Text(title).font(.headline)
+            Text(detail).font(.footnote).foregroundStyle(.secondary)
+        }
+        .multilineTextAlignment(.center)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(12)
     }
 }
