@@ -3,14 +3,12 @@
   "private": true,
   "workspaces": [
     "web",
-    "mobile",
     "core"
   ],
   "scripts": {
     "assets": "node prepare-model.mjs",
     "test": "node --test core/*.test.mjs",
     "web": "npm run build:web && npm run preview -w @pitch/web",
-    "build:web": "npm run build -w @pitch/web",
-    "mobile": "npm run start -w @pitch/mobile"
+    "build:web": "npm run build -w @pitch/web"
   }
 }
