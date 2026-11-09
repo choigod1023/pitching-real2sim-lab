@@ -94,6 +94,18 @@
             </div>
           </div>
           <p id="events" class="hint"></p>
+          <fieldset id="offline-controls" class="offline-controls">
+            <legend>녹화 원본 공 분석</legend>
+            <p class="hint">릴리스 근처로 이동한 다음, 영상에서 릴리스 부근과 공의 진행 방향에 있는 끝점을 차례로 누르세요.</p>
+            <div class="controls">
+              <button id="offline-source" hidden>원본 전체 열기</button>
+              <button id="offline-mark">두 지점 표시</button>
+              <label class="ball-input">두 통과 지점 거리(m) <input id="offline-metres" type="number" min=".1" max="35" step=".01" inputmode="decimal"></label>
+              <button id="offline-run" disabled>원본 분석·저장</button>
+              <button id="offline-export" hidden>결과 JSON</button>
+            </div>
+            <p id="offline-status" class="hint" role="status"></p>
+          </fieldset>
         </div>
         <div id="compare-controls" class="review" hidden>
           <label class="scrub-label" for="phase">착지부터 릴리스까지 <output id="phase-read">50%</output></label>

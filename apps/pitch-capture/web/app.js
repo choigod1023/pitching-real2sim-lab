@@ -3,6 +3,7 @@ import {BONES, JOINTS, PitchDetector, nearestPose, markEvent, confirmed,
   comparisonError, phaseTime} from '@pitch/core';
 import {listSessions, saveSession} from './storage.js';
 import {LiveBall} from './live-ball.js';
+import {reviewRecordedBall} from './recorded-ball.js';
 
 const byId = id => document.getElementById(id);
 const video = byId('video'), canvas = byId('overlay'), ctx = canvas.getContext('2d');
@@ -13,6 +14,7 @@ let sessions = [], selected = null, comparison = null, mode = 'idle', stream, re
 let objectUrl, busy = false, loop = 0, pendingStart = null, recordingTimer;
 let worker, requestId = 0, lastModelTime = -1, previewStarted = 0, previewCount = 0;
 let frameTime = null, seekVersion = 0;
+let offlineDraft = null;
 
 function tell(message, isError = false) {
   byId('notice').textContent = message;
@@ -143,6 +145,8 @@ function stopPreview() {
 
 function showMode(next) {
   mode = next;
+  offlineDraft = null;
+  byId('stage').classList.remove('marking');
   byId('workspace').dataset.mode = next;
   liveBall.active(next === 'live');
   byId('review').hidden = next !== 'review';
@@ -399,6 +403,7 @@ function refreshReview(time = video.currentTime) {
   if (mode !== 'review' || !selected) return;
   const {pitch,session} = selected;
   draw([[nearestPose(session.samples,time),A]]);
+  drawRecordedReview(time);
   byId('time').value = time;
   const start = Number(byId('time').min), end = Number(byId('time').max);
   for (const event of ['landing','release']) {
@@ -410,6 +415,140 @@ function refreshReview(time = video.currentTime) {
   byId('time-read').textContent = `${time.toFixed(3)}초`;
   const label = value => value === null || value === undefined ? '미확인' : `${value.toFixed(3)}초`;
   byId('events').textContent = pitch ? `착지 ${label(pitch.landing)} · 릴리스 ${label(pitch.release)}` : '원본에서 투구 시작과 끝을 직접 표시할 수 있습니다.';
+}
+
+function recordedReview() {
+  return selected?.session.ballReviews?.[selected.pitch?.id ?? 'source'] ?? null;
+}
+
+function drawRecordedReview(time) {
+  const saved = recordedReview();
+  const anchors = offlineDraft?.anchors ?? saved?.anchors;
+  if (!anchors?.length) return;
+  const fit = liveBall.geometry(canvas.width,canvas.height);
+  if (!fit) return;
+  const scale = Math.min(devicePixelRatio || 1,2);
+  ctx.strokeStyle = '#ffe2a0';
+  ctx.fillStyle = '#ffe2a0';
+  ctx.lineWidth = 2*scale;
+  for (const point of anchors) ctx.strokeRect(fit.x+point.x*fit.w-4*scale,fit.y+point.y*fit.h-4*scale,8*scale,8*scale);
+  if (!saved || offlineDraft) return;
+  const {points,width,height} = saved.result;
+  let previous = null;
+  for (const p of points) {
+    if (p.time > time + 0.008) break;
+    const x = fit.x+p.x/width*fit.w, y = fit.y+p.y/height*fit.h;
+    ctx.globalAlpha = p.usedForFit ? 1 : .45;
+    if (previous && p.usedForFit && previous.usedForFit && p.time-previous.time <= .035) {
+      ctx.beginPath(); ctx.moveTo(previous.x,previous.y); ctx.lineTo(x,y); ctx.stroke();
+    }
+    ctx.beginPath(); ctx.arc(x,y,3*scale,0,Math.PI*2); ctx.fill();
+    previous = {x,y,time:p.time,usedForFit:p.usedForFit};
+  }
+  ctx.globalAlpha = 1;
+}
+
+function showRecordedResult() {
+  const saved = recordedReview();
+  byId('offline-source').hidden = !selected?.pitch;
+  byId('offline-run').disabled = !offlineDraft || offlineDraft.anchors.length !== 2;
+  byId('offline-export').hidden = !saved;
+  byId('offline-metres').value = saved?.metres ?? '';
+  if (!saved) {
+    byId('offline-status').textContent = '실제 구간 거리를 알고 있을 때만 입력하세요. 두 지점 통과가 모두 관측돼야 km/h를 계산합니다.';
+    return;
+  }
+  const r = saved.result;
+  const speed = r.kmh === null ? (r.imageSpeedPxS === null ? '속도 보류' : `화면 속도 ${r.imageSpeedPxS.toFixed(0)} px/s`) :
+    `구간 평균 ${r.kmh.toFixed(1)} km/h`;
+  const release = r.release ?
+    `릴리스 위치 통과 후보 ${r.release.before.toFixed(3)}~${r.release.after.toFixed(3)}초` : '릴리스 위치 통과 미확정';
+  const reason = {
+    uncalibrated:'실제 구간 거리 미입력',
+    unbracketed_gates:'두 기준점 통과를 모두 확인하지 못함',
+    too_few_centres:'속도에 필요한 공 중심 부족',
+    unreliable_fit:'궤적 맞춤 검사 미통과',
+  }[r.speedStatus];
+  byId('offline-status').textContent = [
+    `${r.frameCount}프레임 분석 · 공 중심 ${r.points.length}개`,release,speed,reason,
+  ].filter(Boolean).join(' · ');
+}
+
+function markRecordedAnchors() {
+  if (busy || !selected || mode !== 'review') return;
+  if (video.seeking) return tell('영상 이동이 끝나면 두 지점을 표시하세요.');
+  video.pause();
+  offlineDraft = {time:video.currentTime,anchors:[]};
+  byId('stage').classList.add('marking');
+  byId('offline-run').disabled = true;
+  byId('offline-status').textContent = '영상에서 릴리스 부근을 누르세요.';
+  refreshReview();
+}
+
+function pickRecordedAnchor(event) {
+  if (!offlineDraft || offlineDraft.anchors.length >= 2 || mode !== 'review' || busy) return;
+  const bounds = byId('stage').getBoundingClientRect();
+  const fit = liveBall.geometry(bounds.width,bounds.height);
+  if (!fit) return;
+  const x = (event.clientX-bounds.left-fit.x)/fit.w, y = (event.clientY-bounds.top-fit.y)/fit.h;
+  if (x<0 || x>1 || y<0 || y>1) return;
+  offlineDraft.anchors.push({x,y});
+  if (offlineDraft.anchors.length === 2) {
+    byId('stage').classList.remove('marking');
+    byId('offline-run').disabled = false;
+  }
+  byId('offline-status').textContent = offlineDraft.anchors.length === 1 ?
+    '공이 진행하는 방향에서 두 번째 지점을 누르세요.' : '구간을 지정했습니다. 원본 분석을 실행하세요.';
+  refreshReview();
+}
+
+async function analyzeRecordedBall() {
+  if (busy || !selected || mode !== 'review' || offlineDraft?.anchors.length !== 2) return;
+  video.pause();
+  const session = selected.session, pitch = selected.pitch;
+  const {time,anchors} = offlineDraft;
+  const distance = byId('offline-metres');
+  if (!distance.validity.valid) throw new Error('거리 입력값을 확인하세요.');
+  const metres = Number.isFinite(distance.valueAsNumber) ? distance.valueAsNumber : null;
+  const settings = {anchors,metres,start:Math.max(0,time-.20),end:Math.min(session.duration,time+.40)};
+  busy = true;
+  byId('offline-controls').disabled = true;
+  byId('offline-status').textContent = '녹화 원본에서 공을 다시 찾고 있습니다.';
+  try {
+    const result = await reviewRecordedBall(session.blob,settings,frames => {
+      byId('offline-status').textContent = `녹화 원본 ${frames}프레임 분석 중…`;
+    });
+    const entry = {
+      ...settings,result,createdAt:new Date().toISOString(),
+      source:{name:session.name,sha256:session.fingerprint,pitchId:pitch?.id ?? null},
+    };
+    const key = pitch?.id ?? 'source';
+    const updated = {...session,ballReviews:{...session.ballReviews,[key]:entry}};
+    await saveSession(updated);
+    sessions = sessions.map(item => item.id === updated.id ? updated : item);
+    selected = {session:updated,pitch};
+    offlineDraft = null;
+    showRecordedResult();
+    refreshReview();
+  } catch (error) {
+    byId('offline-status').textContent = error.message;
+    throw error;
+  } finally {
+    busy = false;
+    byId('offline-controls').disabled = false;
+  }
+}
+
+function exportRecordedResult() {
+  const saved = recordedReview();
+  if (!saved) return;
+  const blob = new Blob([JSON.stringify(saved,null,2)],{type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = 'pitch-ball-review.json';
+  anchor.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
 
 async function seek(time) {
@@ -439,12 +578,13 @@ async function review(session, pitch) {
   byId('time').min = pitch?.start ?? 0;
   byId('time').max = pitch?.end ?? session.duration;
   byId('landing').disabled = byId('release').disabled = !pitch;
+  showRecordedResult();
   refreshReview(time ?? video.currentTime);
   updateList();
 }
 
 async function annotate(event) {
-  if (!selected?.pitch || mode !== 'review') return;
+  if (busy || !selected?.pitch || mode !== 'review') return;
   video.pause();
   const {pitch,session} = selected;
   const next = markEvent(pitch,event,frameTime ?? video.currentTime);
@@ -458,6 +598,7 @@ async function annotate(event) {
 }
 
 async function addManual() {
+  if (busy) return;
   if (!selected || mode !== 'review' || pendingStart === null) throw new Error('시작 시점을 먼저 지정하세요.');
   const end = frameTime ?? video.currentTime;
   if (end-pendingStart < .25) throw new Error('끝 시점은 시작보다 0.25초 이상 뒤여야 합니다.');
@@ -538,6 +679,17 @@ video.onplay = () => { byId('play').textContent = '일시정지'; };
 video.onpause = () => { byId('play').textContent = '재생'; };
 byId('landing').onclick = () => handle(() => annotate('landing'));
 byId('release').onclick = () => handle(() => annotate('release'));
+byId('offline-mark').onclick = markRecordedAnchors;
+byId('offline-source').onclick = () => handle(async () => {
+  if (busy || !selected?.pitch || mode !== 'review') return;
+  const time = frameTime ?? video.currentTime;
+  await review(selected.session,null);
+  const current = await seek(time);
+  if (current !== null) refreshReview(current);
+});
+byId('offline-run').onclick = () => handle(analyzeRecordedBall);
+byId('offline-export').onclick = exportRecordedResult;
+byId('stage').addEventListener('click',pickRecordedAnchor);
 byId('manual-start').onclick = () => { pendingStart = frameTime ?? video.currentTime; tell('시작을 표시했습니다. 끝 시점으로 이동하세요.'); };
 byId('manual-end').onclick = () => handle(addManual);
 byId('compare').onclick = () => handle(compare);

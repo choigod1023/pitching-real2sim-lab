@@ -175,6 +175,10 @@ h1 {
 .ball-controls .controls { margin-top: 12px; gap: 8px 12px; }
 .ball-input { display: flex; align-items: center; gap: 8px; }
 .ball-input input { width: 5rem; }
+.offline-controls { margin: 12px 0 0; padding: 8px 12px 12px; border: 1px solid var(--player-line); min-width: 0; }
+.offline-controls legend { padding-inline: 4px; color: var(--player-text); font-size: 14px; }
+.offline-controls .hint { margin-block: 4px 8px; }
+.offline-controls .controls { justify-content: flex-start; gap: 8px; }
 
 .scrub-label { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 14px; }
 .scrub-label output { font: 12px/1.5 var(--mono); color: var(--player-muted); text-align: right; }
