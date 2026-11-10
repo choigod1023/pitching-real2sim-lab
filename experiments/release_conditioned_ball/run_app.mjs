@@ -19,13 +19,17 @@ for (const [index,{frame,time}] of frames.entries()) {
   baseline.push(rgba.subarray(index*stride,(index+1)*stride),time);
   const extra = candidates[index].filter(point => raw.every(other =>
     Math.hypot(point.x-other.x,point.y-other.y) > 2*width/960));
-  evidence.push({frame,time,proposals:[...raw,...extra]});
+  evidence.push({frame,time,app:raw,round:candidates[index],proposals:[...raw,...extra]});
 }
 const result = baseline.finish();
 const points = result.points.map(point=>({...point,frame:frameByTime.get(point.time)}));
 const length = Math.hypot(anchors[1][0]-anchors[0][0],anchors[1][1]-anchors[0][1]);
 const run = shift => releaseTrack(evidence,release.map(frame=>frame+shift),length,width);
-process.stdout.write(JSON.stringify({
+process.stdout.write(JSON.stringify({proposalEvidence:evidence.map(({frame,app,round})=>({
+  frame,app:app.map(({x,y})=>[x,y]),round:round.map(({x,y})=>[x,y]),
+})),models:{
   app:{...result,points}, mask_only:{points:points.filter(point=>point.frame>release[1])},
   release_beam:run(0), one_frame_early:run(-1), one_frame_late:run(1),
-}));
+  wide_post_only:releaseTrack(evidence,release,length,width,{seedFrames:5}),
+  wide_bracket:releaseTrack(evidence,release,length,width,{startInBracket:true,seedFrames:5}),
+}}));

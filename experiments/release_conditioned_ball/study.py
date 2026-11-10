@@ -5,8 +5,9 @@ import json
 from pathlib import Path
 
 import cv2
+import numpy as np
 
-from experiments.shared_ball_tracking.study import execute, score
+from experiments.shared_ball_tracking.study import TOLERANCE_960, execute, score
 
 
 SCORE_KEYS = ("positive", "matched", "returned_on_positive", "wrong_on_positive",
@@ -30,6 +31,23 @@ def aggregate(clips):
     return groups, supported
 
 
+def proposal_recall(evidence, labels, factors, width):
+    """Measure candidate availability using references after inference."""
+    lookup = {row["frame"]:row for row in evidence}
+    counts = dict(app=0,round=0,either=0)
+    for frame, x, y in labels:
+        reference = np.asarray([x,y]) * factors
+        row = lookup[frame]
+        matches = {}
+        for mode in ("app","round"):
+            values = np.asarray(row[mode]).reshape(-1,2)
+            distances = np.linalg.norm(values-reference,axis=1)*960/width
+            matches[mode] = bool(np.any(distances <= TOLERANCE_960))
+            counts[mode] += matches[mode]
+        counts["either"] += any(matches.values())
+    return {"positive":len(labels),"available":counts}
+
+
 def compare(manifest_path):
     manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
     runner = Path(__file__).with_name("run_app.mjs")
@@ -44,8 +62,10 @@ def compare(manifest_path):
         for result in row["models"].values():
             result["score_after_release_bracket"] = score(
                 result["points"],after,[],row["factors"],row["width"])
+        proposals = proposal_recall(row.pop("proposal_evidence"),after,row["factors"],row["width"])
         results.append({**row,"split":item["split"],"release":item["release"],
-                        "positives_in_or_before_bracket":len(item["positive"])-len(after)})
+                        "positives_in_or_before_bracket":len(item["positive"])-len(after),
+                        "proposal_availability_after_bracket":proposals})
     groups, supported = aggregate(results)
     with manifest_path.open("rb") as stream:
         digest = file_digest(stream,"sha256").hexdigest()

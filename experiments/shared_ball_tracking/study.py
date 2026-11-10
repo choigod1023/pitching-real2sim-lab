@@ -126,11 +126,15 @@ def execute(item, directory, *, runner=None, extra_config=None):
         rgba = b"".join(cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA).tobytes() for frame in images)
         output = subprocess.run(["node", str(runner or Path(__file__).with_name("run_app.mjs")), str(cfg)],
                                 input=rgba, capture_output=True, check=True)
-    models = json.loads(output.stdout)
+    payload = json.loads(output.stdout)
+    models = payload.get("models",payload)
     for model in models.values():
         model["score"] = score(model["points"], item["positive"], item["negative"], factors, width)
-    return {"id":item["id"],"group":item["group"],"sha256":sha,"width":width,"height":height,"factors":factors,
-            "nominal_playback_fps":fps,"frames":frames,"anchors":anchors,"models":models}
+    result = {"id":item["id"],"group":item["group"],"sha256":sha,"width":width,"height":height,"factors":factors,
+              "nominal_playback_fps":fps,"frames":frames,"anchors":anchors,"models":models}
+    if "proposalEvidence" in payload:
+        result["proposal_evidence"] = payload["proposalEvidence"]
+    return result
 
 
 def summarize(results):

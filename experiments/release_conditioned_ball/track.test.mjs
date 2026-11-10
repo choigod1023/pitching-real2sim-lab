@@ -30,3 +30,11 @@ test('a skipped observation is not inserted and short tracks are insufficient', 
   assert.equal(releaseTrack(frames.slice(0,8),[3,3],160,960).status,'insufficient_support');
   assert.throws(()=>releaseTrack(frames,[4,3],160,960),/ordered release/);
 });
+
+test('context inside the release bracket cannot satisfy free-flight support or appear in output', () => {
+  const short = sequence(frame => frame>=3 && frame<=7 ? [point(frame,50)] : []);
+  assert.equal(releaseTrack(short,[3,5],160,960,{startInBracket:true,seedFrames:5}).points.length,0);
+  const long = sequence(frame => frame>=3 && frame<=10 ? [point(frame,50)] : []);
+  const result = releaseTrack(long,[3,5],160,960,{startInBracket:true,seedFrames:5});
+  assert.deepEqual(result.points.map(p=>p.frame),[6,7,8,9,10]);
+});
