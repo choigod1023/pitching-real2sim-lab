@@ -67,14 +67,19 @@ def transverse_axis(velocity, tilt):
     return axis / np.linalg.norm(axis, axis=1, keepdims=True)
 
 
+def lift_coefficient(rows, active):
+    speed = MPH * column(rows, "release_speed")
+    spin_parameter = .0366 * (2 * np.pi * active * column(rows, "release_spin_rate") / 60) / speed
+    return np.where(spin_parameter <= .1, 1.5 * spin_parameter, .09 + .6 * spin_parameter)
+
+
 def initial_state(rows, active):
     xz = FT * np.column_stack((-column(rows, "release_pos_x"), column(rows, "release_pos_z")))
     distance = FT * (column(rows, "release_pos_y") - PLATE_FT)
     segment = FT * (column(rows, "release_pos_y") - 50)
     v50 = FT * np.column_stack((-column(rows, "vx0"), -column(rows, "vy0"), column(rows, "vz0")))
     speed = MPH * column(rows, "release_speed")
-    spin_parameter = .0366 * (2 * np.pi * active * column(rows, "release_spin_rate") / 60) / speed
-    cl = np.where(spin_parameter <= .1, 1.5 * spin_parameter, .09 + .6 * spin_parameter)
+    cl = lift_coefficient(rows, active)
     zero = np.zeros(len(rows))
 
     def derivative(vel):
@@ -86,8 +91,12 @@ def initial_state(rows, active):
     return xz, launch, distance, cl
 
 
-def simulate(rows, use_axis, active=1., *, keep=(), steps=256):
-    xz, velocity, distance, cl = initial_state(rows, active)
+def simulate(rows, use_axis, active=1., *, keep=(), steps=256, fixed_launch=None):
+    if fixed_launch is None:
+        xz, velocity, distance, cl = initial_state(rows, active)
+    else:
+        xz, velocity, distance = fixed_launch
+        cl = lift_coefficient(rows, active)
     tilt = np.deg2rad(column(rows, "spin_axis") - 180) if use_axis else np.zeros(len(rows))
     end, trace, ground = integrate_to_plate(
         xz, velocity, distance, transverse_axis(velocity, tilt), cl, keep=keep, steps=steps

@@ -31,8 +31,9 @@ def render(report, output, font_path):
                 color=faint)
     styles = [("reference_xyz_m", "-", True, settings.get("reference_label", "TrackMan 적합 궤적")),
               ("model_xyz_m", "--", False, settings.get("model_label", "시뮬레이션"))]
-    if all("backspin_xyz_m" in pitch for pitch in report["examples"]):
-        styles.append(("backspin_xyz_m", ":", False, "백스핀 고정"))
+    comparison_field = settings.get("comparison_field", "backspin_xyz_m")
+    if all(comparison_field in pitch for pitch in report["examples"]):
+        styles.append((comparison_field, ":", False, settings.get("comparison_label", "백스핀 고정")))
 
     for axis, coordinate, label in zip(axes, (2, 0), ("측면에서 본 높이 (m)", "위에서 본 좌우 위치 (m)")):
         axis.set_title(label, loc="left", fontsize=12, weight="bold", color=ink, pad=8)
