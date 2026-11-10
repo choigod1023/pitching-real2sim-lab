@@ -142,11 +142,15 @@ def summarize(results):
                         "negative", "false_on_negative"):
                 row[key] = row.get(key, 0) + model["score"][key]
     groups = [group for group in totals.values() if group["app"]["positive"]]
-    adopted = (sum(group["round_contrast"]["matched"] > group["app"]["matched"] for group in groups) >= 2
-               and all(group["round_contrast"]["matched"] >= group["app"]["matched"] for group in groups)
-               and all(group["round_contrast"]["false_on_negative"] <= group["app"]["false_on_negative"]
-                       for group in totals.values()))
-    return {"by_source": totals, "adopted": adopted}
+    decisions = {}
+    for mode in results[0]["models"].keys() - {"app"}:
+        decisions[mode] = (
+            sum(group[mode]["matched"] > group["app"]["matched"] for group in groups) >= 2
+            and all(group[mode]["matched"] >= group["app"]["matched"] for group in groups)
+            and all(group[mode]["false_on_negative"] <= group["app"]["false_on_negative"]
+                    for group in totals.values())
+        )
+    return {"by_source": totals, "passes_source_gate": decisions}
 
 
 if __name__ == "__main__":
