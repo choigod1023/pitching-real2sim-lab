@@ -1,0 +1,20 @@
+{
+  "description": "Frame 45 marks independently frozen from source pixels. The plate/device centerline, wall parallelism and post plumbness are conditional. The withheld wall segment is on the same boundary.",
+  "nominal_capture_fps": 500,
+  "scenes": {
+    "4": {
+      "plate_and_device_px": [[823, 784], [756, 927]],
+      "wall_primary_px": [[1350, 777.58], [1530, 921.64]],
+      "wall_heldout_px": [[1575, 959.56], [1710, 1065.65]],
+      "vertical_primary_px": [[1573.41, 100], [1566.79, 890]],
+      "vertical_heldout_px": [[1248.95, 150], [1246.76, 630]]
+    },
+    "8": {
+      "plate_and_device_px": [[823, 784], [756, 927]],
+      "wall_primary_px": [[1350, 778.30], [1530, 921.84]],
+      "wall_heldout_px": [[1575, 960.75], [1710, 1065.92]],
+      "vertical_primary_px": [[1573.14, 100], [1566.52, 890]],
+      "vertical_heldout_px": [[1249.26, 150], [1246.49, 630]]
+    }
+  }
+}
