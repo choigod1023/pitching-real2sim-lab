@@ -109,7 +109,7 @@ def score(points, labels, negative, factors, width):
             "distances_px_960": deltas}
 
 
-def execute(item, directory):
+def execute(item, directory, *, runner=None, extra_config=None):
     path = directory / item["path"]
     with path.open("rb") as stream:
         sha = file_digest(stream, "sha256").hexdigest()
@@ -122,9 +122,9 @@ def execute(item, directory):
     with TemporaryDirectory() as temp:
         cfg = Path(temp) / "config.json"
         cfg.write_text(json.dumps({"width":width,"height":height,"anchors":anchors,"frames":frames,
-                                  "candidates":proposal}), encoding="utf-8")
+                                  "candidates":proposal, **(extra_config or {})}), encoding="utf-8")
         rgba = b"".join(cv2.cvtColor(frame, cv2.COLOR_BGR2RGBA).tobytes() for frame in images)
-        output = subprocess.run(["node", str(Path(__file__).with_name("run_app.mjs")), str(cfg)],
+        output = subprocess.run(["node", str(runner or Path(__file__).with_name("run_app.mjs")), str(cfg)],
                                 input=rgba, capture_output=True, check=True)
     models = json.loads(output.stdout)
     for model in models.values():
