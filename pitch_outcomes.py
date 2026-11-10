@@ -10,6 +10,15 @@ from pathlib import Path
 import numpy as np
 
 
+def flight_acceleration(velocity, axis, cl, cd, gravity=9.80665):
+    """Drag, lift and gravity for one velocity or a batch along the last axis."""
+    k = .5 * 1.225 * np.pi * .0366**2 / .145
+    speed = np.linalg.norm(velocity, axis=-1, keepdims=True)
+    acceleration = k * speed * (-cd * velocity + cl * np.cross(axis, velocity))
+    acceleration[..., 2] -= gravity
+    return acceleration
+
+
 def flight(position, velocity, spin_axis=(1, 0, 0), cl=.15, cd=.35,
            distance=16.8, dt=.002, gravity=9.80665):
     p, v, axis = map(lambda a: np.asarray(a, float), (position, velocity, spin_axis))
@@ -20,14 +29,8 @@ def flight(position, velocity, spin_axis=(1, 0, 0), cl=.15, cd=.35,
     if distance <= p[1] or v[1] <= 0 or (cl and np.linalg.norm(axis) == 0):
         raise ValueError('Forward release and nonzero lift axis required')
     axis = axis / np.linalg.norm(axis) if np.linalg.norm(axis) else axis
-    # rho=1.225 kg/m3, radius=.0366 m, mass=.145 kg, constant spin direction.
-    k = .5 * 1.225 * np.pi * .0366**2 / .145
     def rhs(s):
-        vel = s[3:]; speed = np.linalg.norm(vel)
-        # Effective transverse lift: gyro-aligned spin produces zero lift.
-        acc = -k*cd*speed*vel + k*cl*speed*np.cross(axis, vel)
-        acc[2] -= gravity
-        return np.r_[vel, acc]
+        return np.r_[s[3:], flight_acceleration(s[3:], axis, cl, cd, gravity)]
     s = np.r_[p, v]; path = [s.copy()]; elapsed = 0.
     for _ in range(int(3/dt)):
         a = rhs(s); b = rhs(s+dt*a/2); c = rhs(s+dt*b/2); d = rhs(s+dt*c)
