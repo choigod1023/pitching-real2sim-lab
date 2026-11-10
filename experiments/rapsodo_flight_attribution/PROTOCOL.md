@@ -8,3 +8,5 @@
 - 두 기준선의 수치 재현과 0.5 ms 수렴으로 구현을 확인한다. 이 두 구로 양력식, 실밥 힘, 실제 플레이트 거리 또는 현장 효용을 확정하지 않는다. 사후 최적 조합을 채택하지 않는다.
 
 [기존 양력식 비교 원문](https://baseball.physics.illinois.edu/AJPFeb08.pdf) · [Lyu 등 표 1](https://baseball.physics.illinois.edu/LyuDragLiftSpin.pdf) · [MLB 필드 치수](https://www.mlb.com/glossary/rules/field-dimensions)
+
+Rapsodo의 공개 설명은 무회전 기준에 중력만 작용한다고 적는다. 정의 차이를 분리하기 위해 같은 비행 경로와 평면에서 무양력 기준만 진공 탄도(중력만)로 교체해 IVB를 다시 계산한다. 기존 지표와 나란히 기록하고, 이 데이터 생성 당시 장비의 내부 처리와 일치하는지는 별도 미확인으로 둔다. 이 조건은 실제 궤적과 통과 높이를 바꾸지 않는다. [Rapsodo 장비 설명](https://note-rapsodojp.rapsodo.com/n/n689903d4af78?hl=en)
