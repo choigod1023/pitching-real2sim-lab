@@ -4,6 +4,7 @@ import {BONES, JOINTS, PitchDetector, nearestPose, markEvent, confirmed,
 import {listSessions, saveSession} from './storage.js';
 import {LiveBall} from './live-ball.js';
 import {reviewRecordedBall} from './recorded-ball.js';
+import {linkRapsodoRecord, parseRapsodoCsv, videoSpeedKmh} from '@pitch/core/replay-metrics.mjs';
 
 const byId = id => document.getElementById(id);
 const video = byId('video'), canvas = byId('overlay'), ctx = canvas.getContext('2d');
@@ -14,7 +15,7 @@ let sessions = [], selected = null, comparison = null, mode = 'idle', stream, re
 let objectUrl, busy = false, loop = 0, pendingStart = null, recordingTimer;
 let worker, requestId = 0, lastModelTime = -1, previewStarted = 0, previewCount = 0;
 let frameTime = null, seekVersion = 0;
-let offlineDraft = null;
+let offlineDraft = null, deviceDraft = null;
 
 function tell(message, isError = false) {
   byId('notice').textContent = message;
@@ -146,6 +147,8 @@ function stopPreview() {
 function showMode(next) {
   mode = next;
   offlineDraft = null;
+  resetDeviceDraft();
+  byId('device-import').open = false;
   byId('stage').classList.remove('marking');
   byId('workspace').dataset.mode = next;
   liveBall.active(next === 'live');
@@ -478,6 +481,7 @@ function updateRecordedControls() {
   const hasGates = offlineDraft?.gates?.length === 2;
   byId('offline-gates').disabled = !hasRange;
   byId('offline-metres').disabled = !hasGates;
+  byId('offline-timing').disabled = !hasGates;
   byId('offline-run').disabled = !offlineDraft || !hasRange || !!offlineDraft.marking;
 }
 
@@ -485,29 +489,117 @@ function showRecordedResult() {
   const saved = recordedReview();
   byId('offline-source').hidden = !selected?.pitch;
   updateRecordedControls();
-  byId('offline-export').hidden = !saved;
   byId('offline-metres').value = saved?.metres ?? '';
+  byId('offline-timing').checked = saved?.captureTimingConfirmed === true;
+  showReviewMetrics();
   if (!saved) {
     byId('offline-status').textContent = '공 검출 범위를 지정하면 거리 없이도 화면 궤적을 저장할 수 있습니다.';
     return;
   }
   const r = saved.result;
-  const speed = r.kmh === null ? (r.imageSpeedPxS === null ? '속도 보류' : `화면 속도 ${r.imageSpeedPxS.toFixed(0)} px/s`) :
-    `구간 평균 ${r.kmh.toFixed(1)} km/h`;
   const release = r.release ?
     `검출 시작점 통과 ${r.release.before.toFixed(3)}~${r.release.after.toFixed(3)}초` : null;
-  const bounds = r.speedBoundsKmh?.map(value => value.toFixed(1)).join('~');
+  byId('offline-status').textContent = [
+    `${r.frameCount}프레임 분석 · 공 중심 후보 ${r.points.length}개`, release,
+  ].filter(Boolean).join(' · ');
+}
+
+function deviceReference() {
+  return selected?.pitch && selected.session.deviceReferences?.[selected.pitch.id];
+}
+
+function showReviewMetrics() {
+  const saved = recordedReview();
+  const r = saved?.result;
+  const speed = videoSpeedKmh(saved);
+  const reference = deviceReference();
+  const format = (value, decimals, unit) => value == null ? '—' : `${value.toFixed(decimals)} ${unit}`;
+  byId('offline-export').hidden = !saved && !reference;
+  byId('review-video-speed').textContent = format(speed,1,'km/h');
+  byId('review-video-centres').textContent = r ? `${r.points.length}개` : '—';
   const reason = {
-    uncalibrated:'측정 구간 거리 미입력',
+    uncalibrated:'A–B 실제 거리와 통과 장면이 필요합니다.',
     unbracketed_gates:'A와 B를 통과하는 공이 모두 보여야 합니다.',
     overlapping_gate_brackets:'A와 B의 통과 시각을 구분하기 어렵습니다.',
-    too_few_centres:'속도에 필요한 공 중심 부족',
-    unreliable_fit:'궤적 맞춤 검사 미통과',
-  }[r.speedStatus];
-  byId('offline-status').textContent = [
-    `${r.frameCount}프레임 분석 · 공 중심 ${r.points.length}개`,release,speed,
-    bounds && `프레임 간격 기준 ${bounds} km/h`,reason,
-  ].filter(Boolean).join(' · ');
+    too_few_centres:'속력 계산에 필요한 공 중심이 부족합니다.',
+    unreliable_fit:'공 궤적이 맞춤 검사를 통과하지 못했습니다.',
+  }[r?.speedStatus];
+  const bounds = r?.speedBoundsKmh?.map(value => value.toFixed(1)).join('–');
+  const note = !r ? '원본을 분석하면 영상 위에 공 중심을 표시합니다.' :
+    speed !== null ? `A–B ${saved.metres.toFixed(2)} m · 프레임 간격 범위 ${bounds} km/h (거리 오차 제외)` :
+      (saved.metres != null && saved.captureTimingConfirmed !== true ?
+        '촬영 시간과 재생 시간의 일치 여부가 미확인입니다.' : reason);
+  byId('review-video-note').textContent = [note,
+    speed === null && r?.imageSpeedPxS != null ? `화면 속도 ${format(r.imageSpeedPxS,0,'px/s')}` : null,
+  ].filter(Boolean).join(' ');
+  byId('device-review').hidden = !selected?.pitch;
+  byId('device-values').hidden = byId('device-remove').hidden = !reference;
+  const record = reference?.record;
+  byId('device-source').textContent = reference ?
+    `투구 #${record.pitchNumber} · ${reference.source.name} · 같은 투구로 확인` : '현재 투구에 연결한 기록이 없습니다.';
+  byId('device-speed').textContent = format(record?.releaseKmh,1,'km/h');
+  byId('device-rpm').textContent = format(record?.rpm,0,'RPM');
+  byId('device-ivb').textContent = format(record?.ivbCm,1,'cm');
+  byId('device-height').textContent = format(record?.plateHeightCm,1,'cm');
+}
+
+function resetDeviceDraft() {
+  deviceDraft = null;
+  byId('device-draft').hidden = true;
+  byId('device-file').value = '';
+  byId('device-pitch').replaceChildren();
+  byId('device-confirm').checked = false;
+  byId('device-link').disabled = true;
+}
+
+async function loadDeviceCsv(file) {
+  if (busy || mode !== 'review' || !selected?.pitch) return;
+  resetDeviceDraft();
+  if (file.size > 1024*1024) throw new Error('Rapsodo CSV는 1MB 이하 파일을 선택하세요.');
+  const target = selected.pitch.id;
+  const request = deviceDraft = {};
+  const bytes = await file.arrayBuffer();
+  let text;
+  try { text = new TextDecoder('utf-8',{fatal:true}).decode(bytes); }
+  catch { throw new Error('Rapsodo 파일을 UTF-8 CSV로 저장한 뒤 선택하세요.'); }
+  const records = parseRapsodoCsv(text);
+  const digest = await crypto.subtle.digest('SHA-256',bytes);
+  if (deviceDraft !== request || mode !== 'review' || selected?.pitch?.id !== target) return;
+  const sha256 = Array.from(new Uint8Array(digest),byte => byte.toString(16).padStart(2,'0')).join('');
+  deviceDraft = {records,source:{name:file.name,sha256}};
+  const option = (value,text) => Object.assign(document.createElement('option'),{value,textContent:text});
+  byId('device-pitch').replaceChildren(option('','투구 선택'),...records.map((record,index) =>
+    option(String(index),[`#${record.pitchNumber}`,record.recordedAt,
+      record.releaseKmh != null ? `${record.releaseKmh.toFixed(1)} km/h` : null,
+      `CSV ${record.row}행`].filter(Boolean).join(' · '))));
+  byId('device-draft').hidden = false;
+  if (records.length === 1) byId('device-pitch').value = '0';
+}
+
+async function saveDeviceReference(remove = false) {
+  if (busy || mode !== 'review' || !selected?.pitch) return;
+  const {pitch,session} = selected;
+  const option = byId('device-pitch').value;
+  let references;
+  if (remove) {
+    references = {...session.deviceReferences};
+    delete references[pitch.id];
+  } else {
+    if (!deviceDraft?.records || !option || !byId('device-confirm').checked) return;
+    references = linkRapsodoRecord(session.deviceReferences,pitch.id,deviceDraft.records[Number(option)],deviceDraft.source);
+  }
+  const updated = {...session,deviceReferences:references};
+  busy = true;
+  try {
+    await saveSession(updated);
+    sessions = sessions.map(row => row.id === updated.id ? updated : row);
+    selected = {session:updated,pitch};
+    resetDeviceDraft();
+    byId('device-import').open = false;
+    showReviewMetrics();
+  } finally {
+    busy = false;
+  }
 }
 
 function markRecordedAnchors() {
@@ -516,6 +608,7 @@ function markRecordedAnchors() {
   video.pause();
   offlineDraft = {time:frameTime ?? video.currentTime,anchors:[],gates:[],marking:'anchors'};
   byId('offline-metres').value = '';
+  byId('offline-timing').checked = false;
   byId('stage').classList.add('marking');
   updateRecordedControls();
   byId('offline-status').textContent = '영상에서 공이 보이기 시작하는 쪽을 누르세요.';
@@ -532,6 +625,7 @@ function markRecordedGates() {
     anchors:settings.anchors,gates:[],marking:'gates',
   };
   byId('offline-metres').value = '';
+  byId('offline-timing').checked = false;
   byId('stage').classList.add('marking');
   updateRecordedControls();
   byId('offline-status').textContent = '공이 먼저 통과할 측정 지점 A를 누르세요.';
@@ -567,13 +661,14 @@ async function analyzeRecordedBall() {
   const distance = byId('offline-metres');
   if (!distance.validity.valid) throw new Error('거리 입력값을 확인하세요.');
   const metres = gates.length === 2 && Number.isFinite(distance.valueAsNumber) ? distance.valueAsNumber : null;
+  const captureTimingConfirmed = byId('offline-timing').checked;
   const settings = {time,anchors,gates:gates.length === 2 ? gates : null,metres,
-    start:Math.max(0,time-.20),end:Math.min(session.duration,time+.65)};
+    captureTimingConfirmed,start:Math.max(0,time-.20),end:Math.min(session.duration,time+.65)};
   busy = true;
   byId('offline-controls').disabled = true;
   byId('offline-status').textContent = '녹화 원본에서 공을 다시 찾고 있습니다.';
   try {
-    const result = await reviewRecordedBall(session.blob,settings,frames => {
+    const result = await reviewRecordedBall(session.blob,{...settings,metres:captureTimingConfirmed ? metres : null},frames => {
       byId('offline-status').textContent = `녹화 원본 ${frames}프레임 분석 중…`;
     });
     const entry = {
@@ -599,8 +694,11 @@ async function analyzeRecordedBall() {
 
 function exportRecordedResult() {
   const saved = recordedReview();
-  if (!saved) return;
-  const blob = new Blob([JSON.stringify(saved,null,2)],{type:'application/json'});
+  const reference = deviceReference();
+  if (!saved && !reference) return;
+  const source = saved?.source ?? {name:selected.session.name,sha256:selected.session.fingerprint,pitchId:selected.pitch.id};
+  const payload = reference ? {...saved,source,deviceReference:reference} : saved;
+  const blob = new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement('a');
   anchor.href = url;
@@ -748,6 +846,19 @@ byId('offline-source').onclick = () => handle(async () => {
 });
 byId('offline-run').onclick = () => handle(analyzeRecordedBall);
 byId('offline-export').onclick = exportRecordedResult;
+byId('device-file').onchange = event => {
+  const [file] = event.target.files;
+  if (file) handle(() => loadDeviceCsv(file));
+};
+byId('device-pitch').onchange = () => {
+  byId('device-confirm').checked = false;
+  byId('device-link').disabled = true;
+};
+byId('device-confirm').onchange = () => {
+  byId('device-link').disabled = !byId('device-pitch').value || !byId('device-confirm').checked;
+};
+byId('device-link').onclick = () => handle(saveDeviceReference);
+byId('device-remove').onclick = () => handle(() => saveDeviceReference(true));
 byId('stage').addEventListener('click',pickRecordedAnchor);
 byId('manual-start').onclick = () => { pendingStart = frameTime ?? video.currentTime; tell('시작을 표시했습니다. 끝 시점으로 이동하세요.'); };
 byId('manual-end').onclick = () => handle(addManual);
