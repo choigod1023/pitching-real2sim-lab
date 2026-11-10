@@ -43,3 +43,20 @@ test('abstains when separate paths have equal corroboration', () => {
   assert.deepEqual(result.points,[]);
   assert.deepEqual(result.changed.ambiguous,[3,4,5,6,7]);
 });
+
+test('requiring future fitted anchors rejects a coherent but disconnected replacement', () => {
+  const frames = video(frame=>[point(frame)]);
+  const baseline = [original(2,70,false),original(3,70,false),original(9)];
+  const result = preservePath(baseline,frames,[0,1],960,200,{anchorGuard:true});
+  assert.equal(result.points.find(p=>p.frame===2).y,70);
+  assert.deepEqual(result.changed.added,[]);
+});
+
+test('fitted future trajectory admits a single-cue origin only with later shared support', () => {
+  const frames = video(frame=>[point(frame)]);
+  frames[3].round = [];
+  const baseline = [original(1),original(2),original(4),original(5),original(6),original(7),original(8)];
+  const result = preservePath(baseline,frames,[1,2],960,200,{anchorGuard:true});
+  assert.deepEqual(result.changed.added,[3]);
+  assert.equal(result.points.find(p=>p.frame===3).futureHits,3);
+});

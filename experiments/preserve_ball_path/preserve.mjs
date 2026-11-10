@@ -26,7 +26,7 @@ function evidenceScore(first, second, following, fixed, scale, length, strict) {
   return tested>=2 ? {hits,error:error/tested} : null;
 }
 
-export function preservePath(baseline, frames, release, width, length) {
+export function preservePath(baseline, frames, release, width, length, {anchorGuard=false}={}) {
   const [low,high] = release;
   const scale = width/960;
   const fixed = new Map(baseline.map(point=>[point.frame,point]));
@@ -51,12 +51,25 @@ export function preservePath(baseline, frames, release, width, length) {
     }
     const next = prepared.slice(index+1,index+3).filter(row=>row.frame<=f+2);
     const following = prepared.slice(index+1,index+6).filter(row=>row.frame>=f+3 && row.frame<=f+5);
+    const anchors = anchorGuard ? [...next,...following].map(row=>fixed.get(row.frame))
+      .filter(point=>point?.usedForFit).slice(0,2) : [];
+    if (anchorGuard && baseline.length && anchors.length<2) {
+      if (original) points.push(original);
+      continue;
+    }
+    let origins = frame.agreed;
+    if (anchors.length===2) {
+      const [a,b] = anchors;
+      const ratio = (frame.time-a.time)/(b.time-a.time);
+      const backward = {x:a.x+ratio*(b.x-a.x),y:a.y+ratio*(b.y-a.y)};
+      origins = [...frame.app,...frame.round].filter(point=>dist(point,backward)<=8*scale);
+    }
     const scored = (point, seeds, strict) => seeds.map(seed=>evidenceScore(point,seed,following,fixed,scale,length,strict))
       .filter(Boolean).sort((a,b)=>a.error-b.error);
     const withTime = (point,row) => ({...point,frame:row.frame,time:row.time});
     const seeds = next.flatMap(row=>row.agreed.map(point=>withTime(point,row)));
     const options = [];
-    for (const proposal of frame.agreed) {
+    for (const proposal of origins) {
       const point = withTime(proposal,frame);
       const score = scored(point,seeds,true).find(value=>value.hits>=2);
       if (score) options.push({point,...score});

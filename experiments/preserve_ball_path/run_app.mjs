@@ -30,7 +30,10 @@ const points = result.points.map(point=>{
   return {...original,...point,frame};
 });
 const length = Math.hypot(anchors[1][0]-anchors[0][0],anchors[1][1]-anchors[0][1]);
-process.stdout.write(JSON.stringify({
+process.stdout.write(JSON.stringify({proposalEvidence:evidence.map(({frame,app,round})=>({
+  frame,app:app.map(({x,y})=>[x,y]),round:round.map(({x,y})=>[x,y]),
+})),models:{
   app:{...result,points}, release_beam:releaseTrack(evidence,release,length,width),
   preserved:preservePath(points,evidence,release,width,length),
-}));
+  anchored:preservePath(points,evidence,release,width,length,{anchorGuard:true}),
+}}));
