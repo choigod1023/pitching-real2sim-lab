@@ -60,15 +60,15 @@ def read_pitches(source):
             "vertical_angle_deg": float(values["VertRelAngle"]),
             "release_height_ft": float(values["RelHeight (Feet)"]),
         })
+        if values.get("PlateLocHeight (Inches)"):
+            pitch["plate_height_in"] = float(values["PlateLocHeight (Inches)"])
         pitches.append(pitch)
     if not pitches or len({pitch["pitch_id"] for pitch in pitches}) != len(pitches):
         raise ValueError("Expected unique, nonempty Game Pitch identifiers")
     return pitches
 
 
-def predict_movement(pitch, distance=16.8, cd=.35, dt=.001):
-    """Return horizontal and induced vertical break in cm, and the flight path."""
-    speed = pitch["speed_mph"] * .44704
+def launch_basis(pitch):
     azimuth, elevation = np.deg2rad([pitch["horizontal_angle_deg"], pitch["vertical_angle_deg"]])
     forward = np.array([
         np.cos(elevation) * np.sin(azimuth),
@@ -77,16 +77,24 @@ def predict_movement(pitch, distance=16.8, cd=.35, dt=.001):
     ])
     right = np.array([np.cos(azimuth), -np.sin(azimuth), 0.])
     up = np.cross(right, forward)
-    hours, minutes = map(int, pitch["direction"].split(":"))
-    if not (0 <= hours <= 12 and 0 <= minutes < 60):
-        raise ValueError("Expected a Rapsodo clock direction")
-    tilt = np.deg2rad(30 * (hours % 12) + .5 * minutes)
-    axis = np.cross(forward, np.cos(tilt) * up + np.sin(tilt) * right)
-    spin_parameter = .0366 * (2 * np.pi * pitch["true_rpm"] / 60) / speed
+    return forward, right, up
+
+
+def predict_movement(pitch, distance=16.8, cd=.35, dt=.001, *, spin_axis=None, active_rpm=None):
+    """Return horizontal and induced vertical break in cm, and the flight path."""
+    speed = pitch["speed_mph"] * .44704
+    forward, right, up = launch_basis(pitch)
+    if spin_axis is None:
+        hours, minutes = map(int, pitch["direction"].split(":"))
+        if not (0 <= hours <= 12 and 0 <= minutes < 60):
+            raise ValueError("Expected a Rapsodo clock direction")
+        tilt = np.deg2rad(30 * (hours % 12) + .5 * minutes)
+        spin_axis = np.cross(forward, np.cos(tilt) * up + np.sin(tilt) * right)
+    spin_parameter = .0366 * (2 * np.pi * (pitch["true_rpm"] if active_rpm is None else active_rpm) / 60) / speed
     cl = 1.5 * spin_parameter if spin_parameter <= .1 else .09 + .6 * spin_parameter
     position = [0., 0., pitch["release_height_ft"] * .3048]
-    path, _ = flight(position, speed * forward, axis, cl, cd, distance, dt)
-    baseline, _ = flight(position, speed * forward, axis, 0., cd, distance, dt)
+    path, _ = flight(position, speed * forward, spin_axis, cl, cd, distance, dt)
+    baseline, _ = flight(position, speed * forward, spin_axis, 0., cd, distance, dt)
     movement = 100 * (path[-1, [0, 2]] - baseline[-1, [0, 2]])
     return movement, path[:, :3]
 
