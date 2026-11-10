@@ -103,10 +103,47 @@
               <button id="offline-gates" disabled>2. 속력 측정 지점</button>
               <label class="ball-input">A–B 거리(m) <input id="offline-metres" type="number" min=".1" max="35" step="any" inputmode="decimal" disabled></label>
               <button id="offline-run" disabled>원본 분석·저장</button>
-              <button id="offline-export" hidden>결과 JSON</button>
             </div>
+            <label class="verify offline-timing"><input id="offline-timing" type="checkbox" disabled> 실제 경과 시간대로 재생되는 원본 (슬로모션 제외)</label>
             <p id="offline-status" class="hint" role="status"></p>
           </fieldset>
+          <section class="review-results" aria-labelledby="review-results-title">
+            <header class="review-results-head">
+              <h2 id="review-results-title">공 분석 결과</h2>
+              <button id="offline-export" hidden>결과 JSON</button>
+            </header>
+            <div class="review-results-grid">
+              <section aria-labelledby="video-metrics-title">
+                <h3 id="video-metrics-title"><i class="swatch" aria-hidden="true"></i>영상 분석</h3>
+                <dl class="review-metrics">
+                  <div><dt>A–B 구간 평균 추정</dt><dd id="review-video-speed">—</dd></div>
+                  <div><dt>원영상 공 중심 후보</dt><dd id="review-video-centres">—</dd></div>
+                </dl>
+                <p id="review-video-note" class="hint"></p>
+              </section>
+              <section aria-labelledby="device-metrics-title" id="device-review" hidden>
+                <h3 id="device-metrics-title">Rapsodo 기록</h3>
+                <p id="device-source" class="hint" role="status">현재 투구에 연결한 기록이 없습니다.</p>
+                <dl id="device-values" class="review-metrics" hidden>
+                  <div><dt>릴리스 구속</dt><dd id="device-speed">—</dd></div>
+                  <div><dt>전체 회전수</dt><dd id="device-rpm">—</dd></div>
+                  <div><dt>수직 무브먼트 (IVB)</dt><dd id="device-ivb">—</dd></div>
+                  <div><dt>플레이트 통과 높이</dt><dd id="device-height">—</dd></div>
+                </dl>
+                <details id="device-import">
+                  <summary>Rapsodo CSV 연결</summary>
+                  <label class="device-file">기록 파일 <input id="device-file" type="file" accept=".csv,text/csv"></label>
+                  <div id="device-draft" hidden>
+                    <label for="device-pitch">장비 기록의 투구</label>
+                    <select id="device-pitch"></select>
+                    <label class="verify"><input id="device-confirm" type="checkbox"> 현재 영상과 같은 투구임을 확인했습니다</label>
+                    <button id="device-link" disabled>이 투구에 연결</button>
+                  </div>
+                </details>
+                <button id="device-remove" hidden>기록 연결 해제</button>
+              </section>
+            </div>
+          </section>
         </div>
         <div id="compare-controls" class="review" hidden>
           <label class="scrub-label" for="phase">착지부터 릴리스까지 <output id="phase-read">50%</output></label>

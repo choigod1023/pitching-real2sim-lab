@@ -179,6 +179,31 @@ h1 {
 .offline-controls legend { padding-inline: 4px; color: var(--player-text); font-size: 14px; }
 .offline-controls .hint { margin-block: 4px 8px; }
 .offline-controls .controls { justify-content: flex-start; gap: 8px; }
+.offline-timing { margin-block: 8px; }
+.review-results { margin-top: 16px; border-top: 1px solid var(--player-line); padding-top: 12px; }
+.review-results-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.review-results-head h2, .review-results h3 { margin: 0; color: var(--player-text); font-weight: 550; }
+.review-results-head h2 { font-size: 16px; }
+.review-results h3 { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.review-results h3 .swatch { background: var(--b); }
+.review-results-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 12px; }
+.review-results-grid section { min-width: 0; }
+.review-results-grid section + section { border-left: 1px solid var(--player-line); padding-left: 16px; }
+.review-metrics { margin: 4px 0 0; font-size: 13px; }
+.review-metrics > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--player-line); }
+.review-metrics dt { color: var(--player-muted); }
+.review-metrics dd { margin: 0; color: var(--player-text); font-family: var(--mono); text-align: right; white-space: nowrap; }
+.review-results .hint { margin-block: 8px; overflow-wrap: anywhere; }
+#device-import { margin-top: 8px; font-size: 13px; }
+#device-import summary { cursor: pointer; }
+#device-import select { width: 100%; background: var(--player); color: var(--player-text); border-color: #565f57; }
+#device-draft, .device-file { display: grid; gap: 8px; margin-top: 8px; }
+.device-file input { max-width: 100%; }
+#device-remove { margin-top: 8px; }
+@media (max-width: 540px) {
+  .review-results-grid { grid-template-columns: minmax(0, 1fr); }
+  .review-results-grid section + section { border-left: 0; padding: 12px 0 0; border-top: 1px solid var(--player-line); }
+}
 
 .scrub-label { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 14px; }
 .scrub-label output { font: 12px/1.5 var(--mono); color: var(--player-muted); text-align: right; }
