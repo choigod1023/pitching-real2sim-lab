@@ -9,6 +9,12 @@
     if (!receipt?.submittedAt || !receipt.draft) return "none";
     return stableJSON(draft) === stableJSON(receipt.draft) ? "received" : "changed";
   }
+  function releasePair(task, draft) {
+    const frames = new Set(task.frames.map(f=>f.index));
+    if (frames.has(draft.contact) && frames.has(draft.free) && draft.contact < draft.free)
+      return {frames:[draft.contact,draft.free],source:"reader"};
+    return task.assistance?.release_hint ? {frames:task.assistance.release_hint,source:"model"} : null;
+  }
   function checkManifest(manifest) {
     if (!manifest || manifest.version !== 1 || !/^[\w-]{1,64}$/.test(manifest.batch ?? "") || !Array.isArray(manifest.tasks) || !manifest.tasks.length)
       throw new Error("작업 목록 형식을 확인하세요.");
@@ -53,8 +59,8 @@
       if (!point || !Number.isFinite(point.x) || !Number.isFinite(point.y) ||
           point.x < 0 || point.x >= task.width || point.y < 0 || point.y >= task.height) throw new Error("Invalid point");
       draft.marks[frame] = {kind:"ball",x:point.x,y:point.y,review:proposal ? "corrected" : "manual"};
-    } else if (["absent","unknown"].includes(decision)) {
-      draft.marks[frame] = {kind:decision,review:decision === "unknown" ? "unseen" : "no_free"};
+    } else if (["absent","held","caught","unknown"].includes(decision)) {
+      draft.marks[frame] = {kind:decision,review:({unknown:"unseen",absent:"no_free",held:"in_hand",caught:"caught"})[decision]};
     } else throw new Error("Unknown decision");
   }
 
@@ -65,24 +71,28 @@
       return !!p && mark.kind === "ball" && p.x === mark.x && p.y === mark.y;
     }
     return (mark.kind === "ball" && ["corrected","manual"].includes(mark.review)) ||
-      (mark.kind === "unknown" && mark.review === "unseen") || (mark.kind === "absent" && mark.review === "no_free");
+      (mark.kind === "unknown" && mark.review === "unseen") || (mark.kind === "absent" && mark.review === "no_free") ||
+      (mark.kind === "held" && mark.review === "in_hand") || (mark.kind === "caught" && mark.review === "caught");
   }
 
   function readiness(task, draft) {
     for (const frame of task.frames) {
       const mark = draft.marks[frame.index];
       if (!mark) return "지정된 프레임을 모두 판독하세요.";
-      if (!validReview(task,frame.index,mark) || !["ball", "absent", "unknown"].includes(mark.kind) ||
+      if (!validReview(task,frame.index,mark) || !["ball", "absent", "held", "caught", "unknown"].includes(mark.kind) ||
           (mark.kind === "ball" && !(mark.x >= 0 && mark.x < task.width && mark.y >= 0 && mark.y < task.height)))
         return "공 좌표 또는 판독 상태를 확인하세요.";
     }
     if (draft.uncertain) return "";
     if (draft.contact == null || draft.free == null || draft.contact >= draft.free)
       return "마지막 접촉과 첫 분리 프레임을 순서대로 지정하세요.";
-    if (draft.marks[draft.contact]?.kind !== "absent" || draft.marks[draft.free]?.kind !== "ball")
-      return "접촉에는 ‘자유 비행 없음’, 첫 분리에는 공 중심을 표시하세요.";
+    if (!["held","absent"].includes(draft.marks[draft.contact]?.kind) || draft.marks[draft.free]?.kind !== "ball")
+      return "마지막 접촉은 ‘손에 있음’, 첫 분리는 ‘날아가는 중’으로 확인하세요. 흐려서 구분되지 않으면 릴리스 범위를 판독 불가로 남기세요.";
     const early = task.frames.find(({index}) => index < draft.free && draft.marks[index].kind === "ball");
     if (early) return "F"+early.index+"에 공 위치가 있지만 첫 분리는 F"+draft.free+"입니다. F"+early.index+" 프레임을 다시 확인하세요.";
+    const phaseConflict = task.frames.find(({index}) =>
+      (index >= draft.free && draft.marks[index].kind === "held") || (index <= draft.contact && draft.marks[index].kind === "caught"));
+    if (phaseConflict) return "F"+phaseConflict.index+"의 손·글러브 상태와 릴리스 순서가 다릅니다. 원영상을 다시 확인하세요.";
     return "";
   }
 
@@ -92,14 +102,16 @@
     const issue = readiness(task,draft);
     const missing = task.frames.find(f=>!draft.marks[f.index]);
     const early = !draft.uncertain && draft.free != null && task.frames.find(f=>f.index < draft.free && draft.marks[f.index]?.kind === "ball");
-    const inconsistentContact = draft.contact != null && draft.marks[draft.contact]?.kind !== "absent";
+    const inconsistentContact = draft.contact != null && !["held","absent"].includes(draft.marks[draft.contact]?.kind);
     const inconsistentFree = draft.free != null && draft.marks[draft.free]?.kind !== "ball";
     const reviewFrames = draft.uncertain ? [] : [...new Set([
       ...task.frames.filter(f=>draft.free != null && f.index < draft.free && draft.marks[f.index]?.kind === "ball").map(f=>f.index),
+      ...task.frames.filter(f=>(draft.free != null && f.index >= draft.free && draft.marks[f.index]?.kind === "held") ||
+        (draft.contact != null && f.index <= draft.contact && draft.marks[f.index]?.kind === "caught")).map(f=>f.index),
       ...(inconsistentContact ? [draft.contact] : []), ...(inconsistentFree ? [draft.free] : []),
     ])].sort((a,b)=>a-b);
     return {marked,total:task.frames.length,status:!issue ? "complete" : !marked ? "not_started" : marked < task.frames.length ? "in_progress" : "needs_review",
-      issue,reviewFrames,frame:missing?.index ?? (inconsistentContact ? draft.contact : inconsistentFree ? draft.free : early?.index ?? null)};
+      issue,reviewFrames,frame:missing?.index ?? (inconsistentContact ? draft.contact : inconsistentFree ? draft.free : early?.index ?? reviewFrames[0] ?? null)};
   }
 
   function submission(manifest, drafts, reader) {
@@ -112,7 +124,7 @@
       for (const {index} of task.frames) {
         const mark = draft.marks[index];
         if (mark.kind === "ball") positive.push([index, mark.x, mark.y]);
-        if (mark.kind === "absent") negative.push(index);
+        if (["absent","held","caught"].includes(mark.kind)) negative.push(index);
         if (mark.kind === "unknown") unknown.push(index);
       }
       // The research tracker scans starting at release[1] + 1. A clearly separated frame is already free.
@@ -131,6 +143,6 @@
     return {schema:"pitch-video-annotation/1", batch:manifest.batch, practice:Boolean(manifest.practice), reader, clips};
   }
 
-  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview, sceneProgress, stableJSON, submissionState};
+  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview, sceneProgress, stableJSON, submissionState, releasePair};
   if (typeof module === "object") module.exports = root.PitchLabels;
 })(globalThis);

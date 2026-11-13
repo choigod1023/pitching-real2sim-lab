@@ -41,7 +41,7 @@ function checkDrafts(assignment, drafts) {
         draft.contact !== task.assistance.release_hint[0] || draft.free !== task.assistance.release_hint[1])) return false;
     return Object.entries(draft.marks).every(([frame, mark]) => {
       if (!frames.has(frame) || !plain(mark) || !validReview(task,frame,mark)) return false;
-      if (mark.kind === "unknown" || mark.kind === "absent") return true;
+      if (["unknown","absent","held","caught"].includes(mark.kind)) return mark.x == null && mark.y == null;
       return mark.kind === "ball" && Number.isFinite(mark.x) && Number.isFinite(mark.y) &&
         mark.x >= 0 && mark.x < task.width && mark.y >= 0 && mark.y < task.height;
     });
