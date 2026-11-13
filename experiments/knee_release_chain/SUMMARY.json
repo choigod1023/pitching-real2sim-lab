@@ -1,0 +1,1202 @@
+{
+  "protocol_commit": "fe18f2f",
+  "n_clips": 28,
+  "n_pairs": 14,
+  "observation_audit": {
+    "clips": 28,
+    "frames": 1402,
+    "finite_finger_point_frames": 0,
+    "hand_direction": "structurally_unavailable_body_only_detector",
+    "spin_axis": "recorded_2d_xz_angle_not_3d_vector"
+  },
+  "real2sim": {
+    "conditions": {
+      "statistical_body_link": false,
+      "confirmed_crossgame_camera": false,
+      "same_pitch_3d": false,
+      "force_work_budget": false,
+      "hand_ball_spin_generation": false,
+      "baseline_validation": false
+    },
+    "allow_body_intervention": false,
+    "unmet": [
+      "statistical_body_link",
+      "confirmed_crossgame_camera",
+      "same_pitch_3d",
+      "force_work_budget",
+      "hand_ball_spin_generation",
+      "baseline_validation"
+    ],
+    "predicted_gain": {
+      "speed_kmh": null,
+      "rpm": null,
+      "horizontal_cm": null,
+      "vertical_cm": null
+    }
+  },
+  "analyses": {
+    "matched_speed_spin": {
+      "n_pairs": 2,
+      "n_games": 2,
+      "links": [
+        {
+          "input": "knee",
+          "output": "release_x",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_x",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_x",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "release_z",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_z",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_z",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "extension",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "extension",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "extension",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "arm_slot",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "arm_slot",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "arm_slot",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "spin_axis",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "spin_axis",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "spin_axis",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "upperarm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "upperarm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "upperarm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "forearm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "forearm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "forearm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "arm_slot",
+          "output": "spin_axis",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "arm_slot",
+                "output": "spin_axis",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "arm_slot",
+                "output": "spin_axis",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "forearm",
+          "output": "spin_axis",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "forearm",
+                "output": "spin_axis",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "forearm",
+                "output": "spin_axis",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "spin_axis",
+          "output": "horizontal_cm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "horizontal_cm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "horizontal_cm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "spin_axis",
+          "output": "vertical_cm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "vertical_cm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "vertical_cm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 2,
+                "evaluated_pairs": 0,
+                "evaluated_games": 0,
+                "mae": {
+                  "m0": null,
+                  "m1": null,
+                  "mean": null,
+                  "zero": null
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": null,
+              "all_timing_pass": false
+            }
+          }
+        }
+      ]
+    },
+    "speed_contrast": {
+      "n_pairs": 7,
+      "n_games": 5,
+      "links": [
+        {
+          "input": "knee",
+          "output": "release_x",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_x",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 4.109795371341802,
+                  "m1": 3.372314256941317,
+                  "mean": 3.4137599999999964,
+                  "zero": 2.773679999999998
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                1.8424227628320196,
+                5.4119430340671
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_x",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 3.274838399217252,
+                  "m1": 2.6922044523809565,
+                  "mean": 3.4137599999999964,
+                  "zero": 2.773679999999998
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                1.6157034581100742,
+                4.472303311986379
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "release_z",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_z",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 2.8749114082160387,
+                  "m1": 2.8241307005567173,
+                  "mean": 1.7221199999999897,
+                  "zero": 1.5544799999999896
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                2.1187400867736788,
+                4.2589052852999725
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "release_z",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 2.3799325068886987,
+                  "m1": 2.5757006325845793,
+                  "mean": 1.7221199999999897,
+                  "zero": 1.5544799999999896
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                1.7191457159302246,
+                3.40395048285409
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "extension",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "extension",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 3.245433899527055,
+                  "m1": 3.6913570451902986,
+                  "mean": 3.0480000000000063,
+                  "zero": 3.3528000000000078
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                2.1144132020091204,
+                3.8974967820776696
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "extension",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 3.7138607605913507,
+                  "m1": 4.53346299190437,
+                  "mean": 3.0480000000000063,
+                  "zero": 3.3528000000000078
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                2.74284938355576,
+                4.602238929412875
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "arm_slot",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "arm_slot",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 6.257910071200302,
+                  "m1": 5.7584924574210365,
+                  "mean": 4.039599546945899,
+                  "zero": 3.319999999999996
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                4.31149081979367,
+                9.415755626448606
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "arm_slot",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 4.970156318837988,
+                  "m1": 4.8541997891398125,
+                  "mean": 4.039599546945899,
+                  "zero": 3.319999999999996
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                3.6748690675750226,
+                7.501398049610029
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "spin_axis",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "spin_axis",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 4.394042444796625,
+                  "m1": 5.717124830197079,
+                  "mean": 3.549738453190065,
+                  "zero": 6.3
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                3.8303457323016317,
+                6.011608205333383
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "spin_axis",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 6,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 3.528673416773111,
+                  "m1": 4.858273922580909,
+                  "mean": 3.549738453190065,
+                  "zero": 6.3
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                3.11355928328706,
+                4.987257570185605
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "upperarm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "upperarm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 5,
+                "evaluated_games": 4,
+                "mae": {
+                  "m0": 7.250297874615107,
+                  "m1": 8.12816892469893,
+                  "mean": 4.273784344453581,
+                  "zero": 3.4394950907428523
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                2.2178102262569865,
+                8.12816892469893
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "upperarm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 5,
+                "evaluated_games": 4,
+                "mae": {
+                  "m0": 5.820551208489853,
+                  "m1": 6.42461250085066,
+                  "mean": 4.273784344453581,
+                  "zero": 3.4394950907428523
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                2.305912024463609,
+                6.42461250085066
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "knee",
+          "output": "forearm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "knee",
+                "output": "forearm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 4,
+                "evaluated_games": 4,
+                "mae": {
+                  "m0": 14.8288547504185,
+                  "m1": 17.826850959401824,
+                  "mean": 16.577283571668055,
+                  "zero": 12.237591313342278
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                17.826850959401824,
+                64.46595358218659
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "knee",
+                "output": "forearm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 4,
+                "evaluated_games": 4,
+                "mae": {
+                  "m0": 13.517674970062068,
+                  "m1": 18.155789933566446,
+                  "mean": 16.577283571668055,
+                  "zero": 12.237591313342278
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                18.155789933566446,
+                80.22100420717545
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "arm_slot",
+          "output": "spin_axis",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "arm_slot",
+                "output": "spin_axis",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 7,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 3.946268232330053,
+                  "m1": 3.7612195307685936,
+                  "mean": 3.9504718256881004,
+                  "zero": 5.6
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                3.7612195307685936,
+                3.7612195307685936
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "arm_slot",
+                "output": "spin_axis",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 7,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 3.112982091902464,
+                  "m1": 2.921208042635283,
+                  "mean": 3.9504718256881004,
+                  "zero": 5.6
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                2.921208042635283,
+                2.921208042635283
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "forearm",
+          "output": "spin_axis",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "forearm",
+                "output": "spin_axis",
+                "mode": "full",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 5,
+                "evaluated_games": 4,
+                "mae": {
+                  "m0": 3.6180148885040673,
+                  "m1": 4.332399359406622,
+                  "mean": 3.9171100791355897,
+                  "zero": 5.875
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                1.4869267010442542,
+                4.332399359406622
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "forearm",
+                "output": "spin_axis",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "deg",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 5,
+                "evaluated_games": 4,
+                "mae": {
+                  "m0": 4.26648771167935,
+                  "m1": 5.2330610624975655,
+                  "mean": 3.9171100791355897,
+                  "zero": 5.875
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                1.4883245721382963,
+                6.027160766016408
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "spin_axis",
+          "output": "horizontal_cm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "horizontal_cm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 7,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 8.50763095371209,
+                  "m1": 8.372773199870107,
+                  "mean": 10.195560000000002,
+                  "zero": 9.845040000000001
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                8.372773199870107,
+                8.372773199870107
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "horizontal_cm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 7,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 7.188983874506391,
+                  "m1": 7.18460033927497,
+                  "mean": 10.195560000000002,
+                  "zero": 9.845040000000001
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                7.18460033927497,
+                7.18460033927497
+              ],
+              "all_timing_pass": false
+            }
+          }
+        },
+        {
+          "input": "spin_axis",
+          "output": "vertical_cm",
+          "modes": {
+            "full": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "vertical_cm",
+                "mode": "full",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 7,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 4.591773320008336,
+                  "m1": 4.138120681697905,
+                  "mean": 6.2179199999999994,
+                  "zero": 5.36448
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                4.138120681697905,
+                4.138120681697905
+              ],
+              "all_timing_pass": false
+            },
+            "speed_rpm": {
+              "nominal": {
+                "input": "spin_axis",
+                "output": "vertical_cm",
+                "mode": "speed_rpm",
+                "scenario": 4,
+                "units": "cm",
+                "candidate_pairs": 7,
+                "evaluated_pairs": 7,
+                "evaluated_games": 5,
+                "mae": {
+                  "m0": 4.098496036030246,
+                  "m1": 3.532135730345472,
+                  "mean": 6.2179199999999994,
+                  "zero": 5.36448
+                },
+                "repeat_pass": false
+              },
+              "timing_m1_mae_range": [
+                3.532135730345472,
+                3.532135730345472
+              ],
+              "all_timing_pass": false
+            }
+          }
+        }
+      ]
+    }
+  },
+  "video_support": {
+    "upperarm": {
+      "nominal_clips": 27,
+      "nominal_pairs": 13,
+      "pairs_with_8_of_9_supported": 9
+    },
+    "forearm": {
+      "nominal_clips": 24,
+      "nominal_pairs": 10,
+      "pairs_with_8_of_9_supported": 3
+    }
+  },
+  "validation": {
+    "local_tests": 27,
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "independent_scenarios": 396,
+    "independent_fit_folds": 848,
+    "independent_prediction_rows": 1090,
+    "independent_numeric_checks": 27825,
+    "independent_max_difference": 1.4211e-13,
+    "frame_mask_checks": 2804,
+    "old_flight_tests_worker": 12
+  },
+  "evidence_sha256": {
+    "results.private.json": "2cc915f020fa1341df71e081082ba33a08fc5775f81bcce5866823265869c254",
+    "direction-traces.private.npz": "4655774816f5cd395b8e5a13fbfc5e7531dfa5681eab771567fabe053d686a90"
+  }
+}
