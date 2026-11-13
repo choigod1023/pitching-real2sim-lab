@@ -1,0 +1,306 @@
+{
+  "protocol_commit": "9089861",
+  "scope": "Source integrity and eligibility; not model accuracy validation",
+  "file_integrity": {
+    "checked": 20,
+    "passed": 20,
+    "failed": 0
+  },
+  "git_blob_checks": {
+    "passed": 5,
+    "failed": 0
+  },
+  "video_files": 8,
+  "recorded_video_examples": 6,
+  "edited_demo_videos": 1,
+  "rendered_skeleton_videos": 1,
+  "main_video_decode": [
+    {
+      "name": "ijiri-fastball1.mp4",
+      "header_frames": 516,
+      "decoded_frames": 516,
+      "encoded_fps": 23.976023976023978,
+      "width": 1920,
+      "selected_frames": [
+        0,
+        27,
+        54,
+        81,
+        108,
+        135,
+        162,
+        189,
+        216,
+        243,
+        271,
+        298,
+        325,
+        352,
+        379,
+        406,
+        433,
+        460,
+        487,
+        515
+      ],
+      "all_decoded": true,
+      "height": 1080
+    },
+    {
+      "name": "ijiri-fastball2.mp4",
+      "header_frames": 405,
+      "decoded_frames": 405,
+      "encoded_fps": 29.97002997002997,
+      "width": 1920,
+      "selected_frames": [
+        0,
+        21,
+        42,
+        63,
+        85,
+        106,
+        127,
+        148,
+        170,
+        191,
+        212,
+        233,
+        255,
+        276,
+        297,
+        318,
+        340,
+        361,
+        382,
+        404
+      ],
+      "all_decoded": true,
+      "height": 1080
+    },
+    {
+      "name": "mpi-movie.mp4",
+      "header_frames": 5911,
+      "decoded_frames": 5911,
+      "encoded_fps": 25.0,
+      "width": 640,
+      "selected_frames": [
+        0,
+        311,
+        622,
+        933,
+        1244,
+        1555,
+        1866,
+        2177,
+        2488,
+        2799,
+        3110,
+        3421,
+        3732,
+        4043,
+        4354,
+        4665,
+        4976,
+        5287,
+        5598,
+        5910
+      ],
+      "all_decoded": true,
+      "height": 480
+    }
+  ],
+  "provider_decode": [
+    {
+      "id": "wJP6gtsELuHQ9kHv6",
+      "exit_code": 0,
+      "opencv_decoded_frames": 347,
+      "header_frames": 354.0,
+      "ffmpeg_showinfo_frames": 347,
+      "ffmpeg_last_frame_n": 346,
+      "pts_start_end_s": [
+        0.0,
+        5.772433
+      ],
+      "pts_delta_ms": {
+        "min": 16.68299999999956,
+        "median": 16.683000000000003,
+        "max": 16.684000000000587,
+        "nonpositive": 0,
+        "distinct_rounded_ms": [
+          16.683,
+          16.684
+        ]
+      },
+      "error_or_corruption_log_lines": [],
+      "stream_headers": [
+        "Duration: 00:00:05.78, start: 0.000000, bitrate: 52580 kb/s",
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 49982 kb/s, 59.93 fps, 59.94 tbr, 60k tbn (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 59.94 fps, 59.94 tbn (default)"
+      ],
+      "clock_status": "Playback PTS only. Capture FPS/frame retention remains unverified."
+    },
+    {
+      "id": "BhH21gZo238pyG5H6",
+      "exit_code": 0,
+      "opencv_decoded_frames": 402,
+      "header_frames": 429.0,
+      "ffmpeg_showinfo_frames": 402,
+      "ffmpeg_last_frame_n": 401,
+      "pts_start_end_s": [
+        0.0,
+        6.690017
+      ],
+      "pts_delta_ms": {
+        "min": 16.68299999999956,
+        "median": 16.683000000000003,
+        "max": 16.684000000000587,
+        "nonpositive": 0,
+        "distinct_rounded_ms": [
+          16.683,
+          16.684
+        ]
+      },
+      "error_or_corruption_log_lines": [],
+      "stream_headers": [
+        "Duration: 00:00:06.71, start: 0.000000, bitrate: 54803 kb/s",
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 49832 kb/s, 59.83 fps, 59.94 tbr, 60k tbn (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 59.94 fps, 59.94 tbn (default)"
+      ],
+      "clock_status": "Playback PTS only. Capture FPS/frame retention remains unverified."
+    },
+    {
+      "id": "8MdVnS2a3aVSfDfy9",
+      "exit_code": 0,
+      "opencv_decoded_frames": 381,
+      "header_frames": 429.0,
+      "ffmpeg_showinfo_frames": 381,
+      "ffmpeg_last_frame_n": 380,
+      "pts_start_end_s": [
+        0.0,
+        6.339667
+      ],
+      "pts_delta_ms": {
+        "min": 16.68299999999956,
+        "median": 16.683000000000003,
+        "max": 16.684000000000587,
+        "nonpositive": 0,
+        "distinct_rounded_ms": [
+          16.683,
+          16.684
+        ]
+      },
+      "error_or_corruption_log_lines": [],
+      "stream_headers": [
+        "Duration: 00:00:06.35, start: 0.000000, bitrate: 58072 kb/s",
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 50086 kb/s, 59.89 fps, 59.94 tbr, 60k tbn (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 59.94 fps, 59.94 tbn (default)"
+      ],
+      "clock_status": "Playback PTS only. Capture FPS/frame retention remains unverified."
+    },
+    {
+      "id": "KylerSW3",
+      "exit_code": 0,
+      "opencv_decoded_frames": 322,
+      "header_frames": 325.0,
+      "ffmpeg_showinfo_frames": 322,
+      "ffmpeg_last_frame_n": 321,
+      "pts_start_end_s": [
+        0.0,
+        5.35535
+      ],
+      "pts_delta_ms": {
+        "min": 16.68299999999956,
+        "median": 16.683000000000003,
+        "max": 16.684000000000587,
+        "nonpositive": 0,
+        "distinct_rounded_ms": [
+          16.683,
+          16.684
+        ]
+      },
+      "error_or_corruption_log_lines": [],
+      "stream_headers": [
+        "Duration: 00:00:05.37, start: 0.000000, bitrate: 51945 kb/s",
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 49852 kb/s, 59.91 fps, 59.94 tbr, 60k tbn (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(tv, bt709/bt709/iec61966-2-4, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 59.94 fps, 59.94 tbn (default)"
+      ],
+      "clock_status": "Playback PTS only. Capture FPS/frame retention remains unverified."
+    }
+  ],
+  "provider_ignore_editlist": [
+    {
+      "id": "wJP6gtsELuHQ9kHv6",
+      "exit_code": 0,
+      "ffmpeg_ignore_editlist_frames": 354,
+      "pts_start_end_s": [
+        0.0166833,
+        5.9059
+      ],
+      "header_frames": 354.0,
+      "error_or_corruption_log_lines": []
+    },
+    {
+      "id": "BhH21gZo238pyG5H6",
+      "exit_code": 0,
+      "ffmpeg_ignore_editlist_frames": 429,
+      "pts_start_end_s": [
+        0.0166833,
+        7.15715
+      ],
+      "header_frames": 429.0,
+      "error_or_corruption_log_lines": []
+    },
+    {
+      "id": "8MdVnS2a3aVSfDfy9",
+      "exit_code": 0,
+      "ffmpeg_ignore_editlist_frames": 429,
+      "pts_start_end_s": [
+        0.0166833,
+        7.15715
+      ],
+      "header_frames": 429.0,
+      "error_or_corruption_log_lines": []
+    },
+    {
+      "id": "KylerSW3",
+      "exit_code": 0,
+      "ffmpeg_ignore_editlist_frames": 325,
+      "pts_start_end_s": [
+        0.0166833,
+        5.422083
+      ],
+      "header_frames": 325.0,
+      "error_or_corruption_log_lines": []
+    }
+  ],
+  "pmgf_frames": 101,
+  "xlsx": {
+    "rows": 98184,
+    "columns": [
+      "time(s)",
+      "Angle"
+    ],
+    "interval_seconds_min": 0.03999999999996362,
+    "interval_seconds_max": 0.04000000000041837,
+    "same_pitch_identity_verified": false
+  },
+  "supplement_archive_checks": {
+    "passed": 2,
+    "failed": 0
+  },
+  "eligibility": {
+    "fully_qualified_new_pitch_bundles": 0,
+    "new_model_runs": 0,
+    "model_accuracy_validated": false,
+    "new_overlay_exported": false
+  },
+  "new_prediction_errors": {
+    "speed_mae_kmh": null,
+    "spin_mae_rpm": null,
+    "ivb_mae_cm": null,
+    "hb_mae_cm": null
+  },
+  "validation_recovery": "Two initial aggregate attempts failed: unavailable openpyxl, then implicit cp949 JSON read. Recovered with standard-library ZIP/XML and explicit UTF-8. No package installation.",
+  "regression_tests": "Not rerun: model and application code unchanged.",
+  "local_command": "python artifacts/source-search-001/validate_sources.py"
+}
