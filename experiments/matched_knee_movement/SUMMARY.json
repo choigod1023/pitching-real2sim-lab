@@ -1,0 +1,720 @@
+{
+  "protocol_commit": "f9e0422",
+  "diagnostic_protocol_commit": "f44c8f1",
+  "interpretation": "selected retrospective 2D conditional association, not causal or Real2Sim intervention",
+  "n_clips": 28,
+  "n_pairs": 14,
+  "pair_camera_pass": 14,
+  "shared_reference_camera_pass": 2,
+  "strict_context_pairs": 9,
+  "complete_count_pairs": 1,
+  "pair_background_median_px_range": [
+    0.20678935092781173,
+    0.48391150083365647
+  ],
+  "camera_clusters": [
+    {
+      "n_clips": 4,
+      "n_games": 1,
+      "eligible_pairs": 1,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 1,
+          "n_games": 1
+        },
+        "speed_contrast": {
+          "n_pairs": 0,
+          "n_games": 0
+        }
+      }
+    },
+    {
+      "n_clips": 6,
+      "n_games": 1,
+      "eligible_pairs": 2,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 1,
+          "n_games": 1
+        },
+        "speed_contrast": {
+          "n_pairs": 1,
+          "n_games": 1
+        }
+      }
+    },
+    {
+      "n_clips": 2,
+      "n_games": 1,
+      "eligible_pairs": 1,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 1,
+          "n_games": 1
+        }
+      }
+    },
+    {
+      "n_clips": 5,
+      "n_games": 2,
+      "eligible_pairs": 1,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 1,
+          "n_games": 1
+        }
+      }
+    },
+    {
+      "n_clips": 1,
+      "n_games": 1,
+      "eligible_pairs": 0,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 0,
+          "n_games": 0
+        }
+      }
+    },
+    {
+      "n_clips": 3,
+      "n_games": 1,
+      "eligible_pairs": 0,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 0,
+          "n_games": 0
+        }
+      }
+    },
+    {
+      "n_clips": 1,
+      "n_games": 1,
+      "eligible_pairs": 0,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 0,
+          "n_games": 0
+        }
+      }
+    },
+    {
+      "n_clips": 2,
+      "n_games": 1,
+      "eligible_pairs": 0,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 0,
+          "n_games": 0
+        }
+      }
+    },
+    {
+      "n_clips": 2,
+      "n_games": 1,
+      "eligible_pairs": 1,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 1,
+          "n_games": 1
+        }
+      }
+    },
+    {
+      "n_clips": 2,
+      "n_games": 1,
+      "eligible_pairs": 1,
+      "cohorts": {
+        "matched_speed_spin": {
+          "n_pairs": 0,
+          "n_games": 0
+        },
+        "speed_contrast": {
+          "n_pairs": 1,
+          "n_games": 1
+        }
+      }
+    }
+  ],
+  "analyses": {
+    "primary/matched_speed_spin": {
+      "n_pairs": 1,
+      "n_games": 1,
+      "models": [
+        {
+          "feature": "lead_knee_change",
+          "nominal": {
+            "feature": "lead_knee_change",
+            "scenario": 4,
+            "candidate_pairs": 1,
+            "candidate_games": 1,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        },
+        {
+          "feature": "lead_knee_level",
+          "nominal": {
+            "feature": "lead_knee_level",
+            "scenario": 4,
+            "candidate_pairs": 1,
+            "candidate_games": 1,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        }
+      ]
+    },
+    "primary/speed_contrast": {
+      "n_pairs": 0,
+      "n_games": 0,
+      "models": [
+        {
+          "feature": "lead_knee_change",
+          "nominal": {
+            "feature": "lead_knee_change",
+            "scenario": 4,
+            "candidate_pairs": 0,
+            "candidate_games": 0,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        },
+        {
+          "feature": "lead_knee_level",
+          "nominal": {
+            "feature": "lead_knee_level",
+            "scenario": 4,
+            "candidate_pairs": 0,
+            "candidate_games": 0,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        }
+      ]
+    },
+    "basic_context/matched_speed_spin": {
+      "n_pairs": 2,
+      "n_games": 1,
+      "models": [
+        {
+          "feature": "lead_knee_change",
+          "nominal": {
+            "feature": "lead_knee_change",
+            "scenario": 4,
+            "candidate_pairs": 2,
+            "candidate_games": 1,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        },
+        {
+          "feature": "lead_knee_level",
+          "nominal": {
+            "feature": "lead_knee_level",
+            "scenario": 4,
+            "candidate_pairs": 2,
+            "candidate_games": 1,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        }
+      ]
+    },
+    "basic_context/speed_contrast": {
+      "n_pairs": 0,
+      "n_games": 0,
+      "models": [
+        {
+          "feature": "lead_knee_change",
+          "nominal": {
+            "feature": "lead_knee_change",
+            "scenario": 4,
+            "candidate_pairs": 0,
+            "candidate_games": 0,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        },
+        {
+          "feature": "lead_knee_level",
+          "nominal": {
+            "feature": "lead_knee_level",
+            "scenario": 4,
+            "candidate_pairs": 0,
+            "candidate_games": 0,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        }
+      ]
+    },
+    "pair_camera_only/matched_speed_spin": {
+      "n_pairs": 2,
+      "n_games": 2,
+      "models": [
+        {
+          "feature": "lead_knee_change",
+          "nominal": {
+            "feature": "lead_knee_change",
+            "scenario": 4,
+            "candidate_pairs": 2,
+            "candidate_games": 2,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        },
+        {
+          "feature": "lead_knee_level",
+          "nominal": {
+            "feature": "lead_knee_level",
+            "scenario": 4,
+            "candidate_pairs": 2,
+            "candidate_games": 2,
+            "evaluated_pairs": 0,
+            "evaluated_games": 0,
+            "mae_cm": {
+              "m0": null,
+              "m1": null,
+              "mean": null,
+              "zero": null
+            },
+            "direction": {
+              "m0": {
+                "correct": 0,
+                "total": 0
+              },
+              "m1": {
+                "correct": 0,
+                "total": 0
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": null,
+          "all_timing_pass": false
+        }
+      ]
+    },
+    "pair_camera_only/speed_contrast": {
+      "n_pairs": 7,
+      "n_games": 5,
+      "models": [
+        {
+          "feature": "lead_knee_change",
+          "nominal": {
+            "feature": "lead_knee_change",
+            "scenario": 4,
+            "candidate_pairs": 7,
+            "candidate_games": 5,
+            "evaluated_pairs": 6,
+            "evaluated_games": 5,
+            "mae_cm": {
+              "m0": 9.415810520125412,
+              "m1": 8.20678594845278,
+              "mean": 10.378440000000001,
+              "zero": 9.96696
+            },
+            "direction": {
+              "m0": {
+                "correct": 3,
+                "total": 6
+              },
+              "m1": {
+                "correct": 4,
+                "total": 6
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": [
+            5.504815977492116,
+            15.194708035067265
+          ],
+          "all_timing_pass": false
+        },
+        {
+          "feature": "lead_knee_level",
+          "nominal": {
+            "feature": "lead_knee_level",
+            "scenario": 4,
+            "candidate_pairs": 7,
+            "candidate_games": 5,
+            "evaluated_pairs": 7,
+            "evaluated_games": 5,
+            "mae_cm": {
+              "m0": 8.50763095371209,
+              "m1": 8.231060637217146,
+              "mean": 10.195560000000002,
+              "zero": 9.845040000000001
+            },
+            "direction": {
+              "m0": {
+                "correct": 3,
+                "total": 7
+              },
+              "m1": {
+                "correct": 3,
+                "total": 7
+              }
+            },
+            "pass": false
+          },
+          "m1_timing_mae_range": [
+            8.012745413799895,
+            10.471998292852708
+          ],
+          "all_timing_pass": false
+        }
+      ]
+    }
+  },
+  "two_control_diagnostic": {
+    "matched_speed_spin": [
+      {
+        "feature": "lead_knee_change",
+        "nominal": {
+          "feature": "lead_knee_change",
+          "scenario": 4,
+          "candidate_pairs": 2,
+          "candidate_games": 2,
+          "evaluated_pairs": 0,
+          "evaluated_games": 0,
+          "mae_cm": {
+            "m0": null,
+            "m1": null,
+            "mean": null,
+            "zero": null
+          },
+          "direction": {
+            "m0": {
+              "correct": 0,
+              "total": 0
+            },
+            "m1": {
+              "correct": 0,
+              "total": 0
+            }
+          },
+          "pass": false
+        },
+        "m1_timing_mae_range": null,
+        "all_timing_pass": false
+      },
+      {
+        "feature": "lead_knee_level",
+        "nominal": {
+          "feature": "lead_knee_level",
+          "scenario": 4,
+          "candidate_pairs": 2,
+          "candidate_games": 2,
+          "evaluated_pairs": 0,
+          "evaluated_games": 0,
+          "mae_cm": {
+            "m0": null,
+            "m1": null,
+            "mean": null,
+            "zero": null
+          },
+          "direction": {
+            "m0": {
+              "correct": 0,
+              "total": 0
+            },
+            "m1": {
+              "correct": 0,
+              "total": 0
+            }
+          },
+          "pass": false
+        },
+        "m1_timing_mae_range": null,
+        "all_timing_pass": false
+      }
+    ],
+    "speed_contrast": [
+      {
+        "feature": "lead_knee_change",
+        "nominal": {
+          "feature": "lead_knee_change",
+          "scenario": 4,
+          "candidate_pairs": 7,
+          "candidate_games": 5,
+          "evaluated_pairs": 6,
+          "evaluated_games": 5,
+          "mae_cm": {
+            "m0": 7.411077458123979,
+            "m1": 6.777884213480888,
+            "mean": 10.378440000000001,
+            "zero": 9.96696
+          },
+          "direction": {
+            "m0": {
+              "correct": 3,
+              "total": 6
+            },
+            "m1": {
+              "correct": 4,
+              "total": 6
+            }
+          },
+          "pass": false
+        },
+        "m1_timing_mae_range": [
+          4.959406617355283,
+          12.419411981008775
+        ],
+        "all_timing_pass": false
+      },
+      {
+        "feature": "lead_knee_level",
+        "nominal": {
+          "feature": "lead_knee_level",
+          "scenario": 4,
+          "candidate_pairs": 7,
+          "candidate_games": 5,
+          "evaluated_pairs": 7,
+          "evaluated_games": 5,
+          "mae_cm": {
+            "m0": 7.188983874506391,
+            "m1": 7.295390688580982,
+            "mean": 10.195560000000002,
+            "zero": 9.845040000000001
+          },
+          "direction": {
+            "m0": {
+              "correct": 3,
+              "total": 7
+            },
+            "m1": {
+              "correct": 3,
+              "total": 7
+            }
+          },
+          "pass": false
+        },
+        "m1_timing_mae_range": [
+          7.204472852870377,
+          9.354123457699824
+        ],
+        "all_timing_pass": false
+      }
+    ]
+  },
+  "validation": {
+    "unit_and_related_tests": 27,
+    "passed": 27,
+    "failed": 0,
+    "independent_worker_prediction_rows": 240,
+    "independent_numeric_comparisons": 4764,
+    "max_numeric_difference": 2.90163e-13,
+    "directed_nonself_camera_checks": 756,
+    "video_frames": 1029,
+    "video_seconds": 34.3,
+    "full_decode": true
+  },
+  "evidence_sha256": {
+    "results.private.json": "b90334ac51393c76300ab9a7c380c4407a1a8e142f7ddd2dbed430b89b04e08c",
+    "diagnostics.private.json": "1336036bbdee2d86740bc74251b5637fb7265a7f4155ef129c44203d1bb13703",
+    "video-receipt.json": "7799a41e764ab17b437642bfa90da8c8b8c08433aef4f94ffce32704fa8fcfb0"
+  }
+}
