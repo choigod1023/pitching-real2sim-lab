@@ -47,6 +47,12 @@ def validate(assignment, submission):
 
 
 def compare(assignment, left, right):
+    if "drafts" in left:
+        left = left.get("result")
+    if "drafts" in right:
+        right = right.get("result")
+    if left is None or right is None:
+        raise ValueError("Both readers must submit their results before comparison")
     if left["reader"] == right["reader"]:
         raise ValueError("Use two distinct reader codes")
     left_tasks = validate(assignment, left)
