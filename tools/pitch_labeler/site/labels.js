@@ -1,4 +1,14 @@
 (function (root) {
+  function stableJSON(value) {
+    if (Array.isArray(value)) return "["+value.map(stableJSON).join(",")+"]";
+    if (value && typeof value === "object") return "{"+Object.keys(value).sort().map(key=>JSON.stringify(key)+":"+stableJSON(value[key])).join(",")+"}";
+    return JSON.stringify(value);
+  }
+
+  function submissionState(draft, receipt) {
+    if (!receipt?.submittedAt || !receipt.draft) return "none";
+    return stableJSON(draft) === stableJSON(receipt.draft) ? "received" : "changed";
+  }
   function checkManifest(manifest) {
     if (!manifest || manifest.version !== 1 || !/^[\w-]{1,64}$/.test(manifest.batch ?? "") || !Array.isArray(manifest.tasks) || !manifest.tasks.length)
       throw new Error("작업 목록 형식을 확인하세요.");
@@ -121,6 +131,6 @@
     return {schema:"pitch-video-annotation/1", batch:manifest.batch, practice:Boolean(manifest.practice), reader, clips};
   }
 
-  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview, sceneProgress};
+  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview, sceneProgress, stableJSON, submissionState};
   if (typeof module === "object") module.exports = root.PitchLabels;
 })(globalThis);

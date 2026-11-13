@@ -2,7 +2,7 @@ const {createServer} = require("node:http");
 const {randomUUID,createHash,timingSafeEqual} = require("node:crypto");
 const {readFileSync, writeFileSync, mkdirSync, renameSync} = require("node:fs");
 const {dirname, join} = require("node:path");
-const {checkManifest, submission, validReview, sceneProgress} = require("./site/labels.js");
+const {checkManifest, submission, validReview, sceneProgress, stableJSON} = require("./site/labels.js");
 
 const site = join(__dirname, "site");
 const assets = {
@@ -139,11 +139,26 @@ function makeServer({assignment, readers, directory, frameDirectory, portal}) {
       if (!plain(update) || update.batch !== assignment.batch || !Number.isSafeInteger(update.revision) ||
           typeof update.final !== "boolean" || !checkDrafts(assignment,update.drafts))
         return send(response,400,{error:"invalid_draft"});
+      const requestedScene = Object.hasOwn(update,"submitScene");
+      const scene = requestedScene && assignment.tasks.find(task=>task.id===update.submitScene);
+      if (requestedScene && (!scene || update.final)) return send(response,400,{error:"invalid_scene"});
       const old = loadRecord(file);
       if (old.revision !== update.revision) return send(response,409,{error:"revision_conflict"});
       const savedAt = new Date().toISOString();
       const next = {revision:old.revision+1,drafts:update.drafts,savedAt,submittedAt:null,result:null,
-        assistance:Object.fromEntries(assignment.tasks.map(task=>[task.id,task.assistance ?? null]))};
+        assistance:Object.fromEntries(assignment.tasks.map(task=>[task.id,task.assistance ?? null])),
+        sceneSubmissions:{...old.sceneSubmissions},sceneSubmissionHistory:[...(old.sceneSubmissionHistory ?? [])]};
+      if (scene) {
+        const draft = update.drafts[scene.id];
+        const progress = sceneProgress(scene,draft);
+        if (progress.marked !== progress.total) return send(response,422,{error:"scene_frames_missing",scene:scene.id});
+        const receipt = {id:randomUUID(),scene:scene.id,submittedAt:savedAt,
+          validation:progress.issue ? "needs_review" : "ready",issue:progress.issue,reviewFrames:progress.reviewFrames,
+          source_sha256:scene.sha256,draft_sha256:createHash("sha256").update(stableJSON(draft)).digest("hex"),
+          draft,result:progress.issue ? null : submission({...assignment,tasks:[scene]},{[scene.id]:draft},reader)};
+        next.sceneSubmissions[scene.id] = receipt;
+        next.sceneSubmissionHistory.push(receipt);
+      }
       if (update.final) {
         try { next.result = submission(assignment,update.drafts,reader); }
         catch { return send(response,422,{error:"incomplete_review"}); }
@@ -152,7 +167,7 @@ function makeServer({assignment, readers, directory, frameDirectory, portal}) {
       const temporary = file+"."+randomUUID()+".tmp";
       writeFileSync(temporary,JSON.stringify(next,null,2),{encoding:"utf8",mode:0o600,flush:true});
       renameSync(temporary,file);
-      return send(response,200,{revision:next.revision,savedAt,submittedAt:next.submittedAt});
+      return send(response,200,{revision:next.revision,savedAt,submittedAt:next.submittedAt,sceneSubmissions:next.sceneSubmissions});
     } catch {
       return send(response,500,{error:"save_failed"});
     }
