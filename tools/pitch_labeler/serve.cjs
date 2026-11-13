@@ -1,5 +1,5 @@
 const {createServer} = require("node:http");
-const {randomUUID,createHash,timingSafeEqual} = require("node:crypto");
+const {randomUUID,createHash} = require("node:crypto");
 const {readFileSync, writeFileSync, mkdirSync, renameSync} = require("node:fs");
 const {dirname, join} = require("node:path");
 const {checkManifest, submission, validReview, sceneProgress, stableJSON} = require("./site/labels.js");
@@ -55,7 +55,7 @@ function send(response, status, payload) {
   response.end(JSON.stringify(payload));
 }
 
-function makeServer({assignment, readers, directory, frameDirectory, portal, corrections}) {
+function makeServer({assignment, readers, directory, frameDirectory, corrections}) {
   checkManifest(assignment);
   if (assignment.practice || !plain(readers)) throw new Error("A research assignment and readers are required");
   const candidates = prepareCorrections(corrections,assignment,readers);
@@ -65,9 +65,6 @@ function makeServer({assignment, readers, directory, frameDirectory, portal, cor
       throw new Error("Invalid reader credential");
     byToken.set(token, reader);
   }
-  if (portal && (typeof portal.accessCode !== "string" || portal.accessCode.length < 12))
-    throw new Error("A portal access code of at least 12 characters is required");
-  const digest = code=>createHash("sha256").update(code).digest();
   let loginAttempts = 0, loginWindow = Date.now();
   const assignedFrames = new Set(assignment.tasks.flatMap(task => task.frames.map(frame => "/"+frame.file)));
   mkdirSync(directory,{recursive:true});
@@ -79,10 +76,10 @@ function makeServer({assignment, readers, directory, frameDirectory, portal, cor
     const path = request.url.split("?")[0];
     if (path === "/api/portal") {
       if (request.method !== "GET") return send(response,405,{});
-      return send(response,200,{enabled:!!portal,readers:portal ? Object.keys(readers) : []});
+      return send(response,200,{enabled:true,readers:Object.keys(readers)});
     }
     if (path === "/api/session") {
-      if (!portal || request.method !== "POST") return send(response,404,{});
+      if (request.method !== "POST") return send(response,405,{});
       if (request.headers["content-type"] !== "application/json") return send(response,415,{});
       if (Date.now()-loginWindow > 60000) { loginWindow = Date.now(); loginAttempts = 0; }
       if (++loginAttempts > 20) return send(response,429,{error:"too_many_attempts"});
@@ -95,8 +92,9 @@ function makeServer({assignment, readers, directory, frameDirectory, portal, cor
           chunks.push(chunk);
         }
         const data = JSON.parse(Buffer.concat(chunks).toString("utf8"));
-        if (!plain(data) || typeof data.accessCode !== "string" || !Object.hasOwn(readers,data.reader) ||
-            !timingSafeEqual(digest(data.accessCode),digest(portal.accessCode))) return send(response,401,{error:"invalid_access"});
+        // Reader selection separates work records; it is not an identity check.
+        if (!plain(data) || typeof data.reader !== "string" || !Object.hasOwn(readers,data.reader))
+          return send(response,400,{error:"invalid_reader"});
         return send(response,200,{reader:data.reader,token:readers[data.reader]});
       } catch { return send(response,400,{error:"invalid_json"}); }
     }
@@ -191,9 +189,9 @@ function makeServer({assignment, readers, directory, frameDirectory, portal, cor
 }
 
 if (require.main === module) {
-  const [assignmentFile, readersFile, directory, port = "8767", portalFile, correctionsFile] = process.argv.slice(2);
+  const [assignmentFile, readersFile, directory, port = "8767", correctionsFile] = process.argv.slice(2);
   const read = file => JSON.parse(readFileSync(file,"utf8").replace(/^\uFEFF/,""));
-  makeServer({assignment:read(assignmentFile),readers:read(readersFile),directory,frameDirectory:dirname(assignmentFile),portal:portalFile ? read(portalFile) : undefined,corrections:correctionsFile ? read(correctionsFile) : undefined})
+  makeServer({assignment:read(assignmentFile),readers:read(readersFile),directory,frameDirectory:dirname(assignmentFile),corrections:correctionsFile ? read(correctionsFile) : undefined})
     .listen(Number(port),"127.0.0.1",()=>console.log("Pitch review listening on 127.0.0.1:"+port));
 }
 
