@@ -1,0 +1,498 @@
+{
+  "protocol_commit": "f77f150",
+  "clips": [
+    {
+      "clip_id": "prime17",
+      "domain": "prime_same_pitch_3view",
+      "methods": {
+        "raw": {
+          "target_frames": 37,
+          "detected_frames": 7,
+          "missing_frames": 30,
+          "longest_detected_run": 4,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 7,
+            "median_segment_cv_percent": 20.046824599962406,
+            "max_segment_cv_percent": 48.31811460507831,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        },
+        "rotated": {
+          "target_frames": 37,
+          "detected_frames": 9,
+          "missing_frames": 28,
+          "longest_detected_run": 4,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 9,
+            "median_segment_cv_percent": 19.34079792608271,
+            "max_segment_cv_percent": 40.89847283145718,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        }
+      },
+      "input_agreement": {
+        "common_target_frames": 5,
+        "mean_median21_px": 2.093829259532206,
+        "not_accuracy": true
+      }
+    },
+    {
+      "clip_id": "prime20",
+      "domain": "prime_same_pitch_3view",
+      "methods": {
+        "raw": {
+          "target_frames": 37,
+          "detected_frames": 10,
+          "missing_frames": 27,
+          "longest_detected_run": 6,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 10,
+            "median_segment_cv_percent": 23.327293987758356,
+            "max_segment_cv_percent": 43.80421699615168,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        },
+        "rotated": {
+          "target_frames": 37,
+          "detected_frames": 8,
+          "missing_frames": 29,
+          "longest_detected_run": 6,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 8,
+            "median_segment_cv_percent": 22.482509728729102,
+            "max_segment_cv_percent": 57.42255994087492,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        }
+      },
+      "input_agreement": {
+        "common_target_frames": 6,
+        "mean_median21_px": 3.497071671278063,
+        "not_accuracy": true
+      }
+    },
+    {
+      "clip_id": "prime21",
+      "domain": "prime_same_pitch_3view",
+      "methods": {
+        "raw": {
+          "target_frames": 37,
+          "detected_frames": 11,
+          "missing_frames": 26,
+          "longest_detected_run": 2,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 11,
+            "median_segment_cv_percent": 24.64337135026539,
+            "max_segment_cv_percent": 45.22301216725189,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        },
+        "rotated": {
+          "target_frames": 37,
+          "detected_frames": 11,
+          "missing_frames": 26,
+          "longest_detected_run": 3,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 11,
+            "median_segment_cv_percent": 27.752180742188532,
+            "max_segment_cv_percent": 43.402036056322295,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        }
+      },
+      "input_agreement": {
+        "common_target_frames": 6,
+        "mean_median21_px": 4.115822924710339,
+        "not_accuracy": true
+      }
+    },
+    {
+      "clip_id": "Branson4S1",
+      "domain": "rapsodo_linked_single_view",
+      "methods": {
+        "raw": {
+          "target_frames": 16,
+          "detected_frames": 5,
+          "missing_frames": 11,
+          "longest_detected_run": 4,
+          "control_roi_samples": 6,
+          "control_unique_frames": 3,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 5,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 5,
+          "tip_outside_region_mean_px": 8.237157710191203,
+          "tip_region_center_mean_px": 12.900175389204062,
+          "tip_within_3px_of_region": 3,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 5,
+            "median_segment_cv_percent": 11.588299863578246,
+            "max_segment_cv_percent": 27.204379444971977,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        },
+        "rotated": {
+          "target_frames": 16,
+          "detected_frames": 6,
+          "missing_frames": 10,
+          "longest_detected_run": 4,
+          "control_roi_samples": 6,
+          "control_unique_frames": 3,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 5,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 5,
+          "tip_outside_region_mean_px": 10.099715159650662,
+          "tip_region_center_mean_px": 14.982155709673979,
+          "tip_within_3px_of_region": 3,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 6,
+            "median_segment_cv_percent": 18.321333041192513,
+            "max_segment_cv_percent": 42.84205347931265,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        }
+      },
+      "input_agreement": {
+        "common_target_frames": 4,
+        "mean_median21_px": 3.950070979736005,
+        "not_accuracy": true
+      }
+    },
+    {
+      "clip_id": "Branson4S2",
+      "domain": "rapsodo_linked_single_view",
+      "methods": {
+        "raw": {
+          "target_frames": 16,
+          "detected_frames": 4,
+          "missing_frames": 12,
+          "longest_detected_run": 3,
+          "control_roi_samples": 6,
+          "control_unique_frames": 3,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 7,
+          "missing_tip_regions": 1,
+          "scored_tip_regions": 6,
+          "tip_outside_region_mean_px": 5.253297517185023,
+          "tip_region_center_mean_px": 11.008028790745293,
+          "tip_within_3px_of_region": 2,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 4,
+            "median_segment_cv_percent": 13.439520591075302,
+            "max_segment_cv_percent": 44.99547173403655,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        },
+        "rotated": {
+          "target_frames": 16,
+          "detected_frames": 2,
+          "missing_frames": 14,
+          "longest_detected_run": 2,
+          "control_roi_samples": 6,
+          "control_unique_frames": 3,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 7,
+          "missing_tip_regions": 3,
+          "scored_tip_regions": 4,
+          "tip_outside_region_mean_px": 5.484974361206344,
+          "tip_region_center_mean_px": 12.266915599671744,
+          "tip_within_3px_of_region": 2,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 2,
+            "median_segment_cv_percent": 11.068600041137067,
+            "max_segment_cv_percent": 78.39011776526007,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        }
+      },
+      "input_agreement": {
+        "common_target_frames": 2,
+        "mean_median21_px": 6.031442152930101,
+        "not_accuracy": true
+      }
+    },
+    {
+      "clip_id": "driveline_four_seam_demo",
+      "domain": "unlinked_demo",
+      "methods": {
+        "raw": {
+          "target_frames": 13,
+          "detected_frames": 3,
+          "missing_frames": 10,
+          "longest_detected_run": 3,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 3,
+            "median_segment_cv_percent": 19.185459720507207,
+            "max_segment_cv_percent": 31.243817656377804,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        },
+        "rotated": {
+          "target_frames": 13,
+          "detected_frames": 2,
+          "missing_frames": 11,
+          "longest_detected_run": 2,
+          "control_roi_samples": 0,
+          "control_unique_frames": 0,
+          "control_any_hand": 0,
+          "control_selected_hand": 0,
+          "frozen_tip_regions": 0,
+          "missing_tip_regions": 0,
+          "scored_tip_regions": 0,
+          "tip_outside_region_mean_px": null,
+          "tip_region_center_mean_px": null,
+          "tip_within_3px_of_region": 0,
+          "optimistic_tip_identity": true,
+          "relative_world_shape": {
+            "samples": 2,
+            "median_segment_cv_percent": 13.459462708834295,
+            "max_segment_cv_percent": 23.14911194201778,
+            "interpretation": "model-relative shape stability, not anatomical accuracy"
+          }
+        }
+      },
+      "input_agreement": {
+        "common_target_frames": 2,
+        "mean_median21_px": 1.3622711269160608,
+        "not_accuracy": true
+      }
+    }
+  ],
+  "rapsodo_tip_regions": {
+    "raw": {
+      "regions_total": 12,
+      "regions_scored": 11,
+      "regions_missing": 1,
+      "outside_region_mean_px": 6.6095976049151055,
+      "within_3px_count_all_regions": 5
+    },
+    "rotated": {
+      "regions_total": 12,
+      "regions_scored": 9,
+      "regions_missing": 3,
+      "outside_region_mean_px": 8.048719249230965,
+      "within_3px_count_all_regions": 5
+    }
+  },
+  "common_tip_region_comparison": {
+    "regions": 9,
+    "raw_mean_px": 7.01333444382202,
+    "rotated_mean_px": 8.048719249230965,
+    "optimistic_tip_identity": true
+  },
+  "bridge": [
+    {
+      "method": "raw",
+      "pairs": [
+        {
+          "fit_views": [
+            17,
+            20
+          ],
+          "heldout_view": 21,
+          "heldout_evaluated_frames": 1,
+          "heldout_median_errors_px": [
+            18.921617106646877
+          ],
+          "heldout_max_errors_px": [
+            48.99318318329811
+          ],
+          "passing_frame_count": 0
+        },
+        {
+          "fit_views": [
+            17,
+            21
+          ],
+          "heldout_view": 20,
+          "heldout_evaluated_frames": 1,
+          "heldout_median_errors_px": [
+            6.702481187260363
+          ],
+          "heldout_max_errors_px": [
+            11.541684655076873
+          ],
+          "passing_frame_count": 0
+        },
+        {
+          "fit_views": [
+            20,
+            21
+          ],
+          "heldout_view": 17,
+          "heldout_evaluated_frames": 1,
+          "heldout_median_errors_px": [
+            6.499423454163112
+          ],
+          "heldout_max_errors_px": [
+            17.18211858932826
+          ],
+          "passing_frame_count": 0
+        }
+      ],
+      "body_attachment_validated": false,
+      "physical_contact_validated": false,
+      "dynamics_executed": false,
+      "prediction": {
+        "speed_kmh": null,
+        "rpm": null,
+        "ivb_cm": null,
+        "hb_cm": null
+      }
+    },
+    {
+      "method": "rotated",
+      "pairs": [
+        {
+          "fit_views": [
+            17,
+            20
+          ],
+          "heldout_view": 21,
+          "heldout_evaluated_frames": 0,
+          "heldout_median_errors_px": [],
+          "heldout_max_errors_px": [],
+          "passing_frame_count": 0
+        },
+        {
+          "fit_views": [
+            17,
+            21
+          ],
+          "heldout_view": 20,
+          "heldout_evaluated_frames": 0,
+          "heldout_median_errors_px": [],
+          "heldout_max_errors_px": [],
+          "passing_frame_count": 0
+        },
+        {
+          "fit_views": [
+            20,
+            21
+          ],
+          "heldout_view": 17,
+          "heldout_evaluated_frames": 0,
+          "heldout_median_errors_px": [],
+          "heldout_max_errors_px": [],
+          "passing_frame_count": 0
+        }
+      ],
+      "body_attachment_validated": false,
+      "physical_contact_validated": false,
+      "dynamics_executed": false,
+      "prediction": {
+        "speed_kmh": null,
+        "rpm": null,
+        "ivb_cm": null,
+        "hb_cm": null
+      }
+    }
+  ],
+  "validation": {
+    "new_and_related_tests": 67,
+    "failures": 0,
+    "skipped": 0,
+    "independent_geometry_checks": 1776,
+    "geometry_scalar_max_difference": 6.82e-12,
+    "coordinate_max_difference_m": 1.15e-14
+  },
+  "input_sha256": {
+    "input_manifest.private.json": "daf077102efe618b6c6d756fade9d8b7c9b836cc186f25b774082e5101180e98",
+    "inference.private.json": "d5a76ab256a752c175b0d0c4d4a07529d4c08257240e3eb0ab8e0ede007a0fa7",
+    "evaluation.private.json": "30ab03ae6373a44b3dc4b2d3fda816488b49ae05d9192dd9cb93a080d5083e1a",
+    "evidence.private.json": "35e04cbc0a5b4c3aae5021cf74640983191b590fa9c71a156227cc9de3c4ef75",
+    "bridge-raw.json": "5e73e5cbbfc6afc1fffeb1ee0b28b55c321d3d6f29f13dbb3fdab0f07ee04572",
+    "bridge-rotated.json": "3dd061c7081418570b9c30b532d3b9222a68293dfb3b0f4932f95a0b73bb40cb"
+  },
+  "video": {
+    "frames": 603,
+    "seconds": 20.1,
+    "body_intervention": false
+  }
+}
