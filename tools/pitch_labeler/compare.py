@@ -1,4 +1,4 @@
-"""Check two independent submissions and list decisions for an adjudicator."""
+"""Compare separate reader submissions without treating assisted labels as blind gold."""
 import argparse
 import json
 from math import hypot, isfinite
@@ -70,7 +70,11 @@ def compare(assignment, left, right):
                 centres.append([frame, round(hypot(a[1]-b[1], a[2]-b[2])*960/task["width"], 3)])
         rows.append({"id":task["id"], "release":[left_release,right_release],
                      "status_conflicts":status_conflicts, "ball_distances_px960":centres})
-    return {"batch":assignment["batch"], "readers":[left["reader"],right["reader"]], "clips":rows}
+    assisted = any(task.get("assistance") for task in assignment["tasks"]) or any(
+        clip.get("review_mode") == "machine_assisted" for data in (left, right) for clip in data["clips"])
+    return {"batch":assignment["batch"], "readers":[left["reader"],right["reader"]], "clips":rows,
+            "independent_blind_reference": not assisted,
+            "review_mode": "machine_assisted" if assisted else "unassisted"}
 
 
 if __name__ == "__main__":

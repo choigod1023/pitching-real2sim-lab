@@ -1,20 +1,36 @@
-# 야구 투구 영상 판독
+# 야구 투구 영상 검수
 
-검증에 쓰기 전, 두 사람이 같은 투구 원본에서 공이 손을 떠나는 범위와 자유 비행 중 공 중심을 독립적으로 표시하는 도구다. 작업 폴더는 브라우저가 기기에서 직접 연다. 판독은 브라우저에 임시 저장하며 작업자는 JSON 파일을 내려받아 의뢰자에게 전달한다.
+자동 공 추적기가 먼저 위치 후보와 분리 후보 구간을 제시하고, 사람이 원본 프레임에서 확인하는 도구다. 서버가 영상 프레임을 불러오고 검수할 때마다 작업자별 JSON을 저장한다. ZIP을 주고받을 필요가 없다.
 
 ## 작업자
 
-1. 배정받은 ZIP을 풀고 안의 '판독 시작.html'을 Chrome 또는 Edge에서 연다. 온라인 사이트에 접근 권한이 있으면 그 화면도 사용할 수 있다.
-2. '작업 폴더 열기'에서 'assignment.json'과 'frames'가 함께 있는 폴더를 선택한다. 판독자 코드에는 실명 대신 배정받은 영문 코드를 쓴다.
-3. 마지막으로 손과 공의 접촉이 확실한 프레임, 처음 분리가 확실한 프레임을 지정한다. 공이 손에서 분리되어 보이면 원본 프레임에서 공 중심을 클릭한다. 던지기 전이나 포구 후에는 '자유 비행 없음', 가림·흐림·화면 밖은 '판독 불가'를 선택한다.
-4. 작업 번호를 바꿔 지정 프레임을 모두 판독한 뒤 결과 JSON을 전달한다. 다른 작업자의 결과와 모델 검출 화면은 본인 작업을 마친 뒤에 본다.
+1. 배정받은 전용 링크를 연다. 미확인 자동 후보부터 표시한다. 이전 판독은 그대로 복원한다.
+2. 노란 점선 원이 손에서 떨어진 공 중심이면 **맞음(1)**. 틀리면 **틀림(2)**을 누른 뒤 실제 공 중심을 한 번 클릭한다. 가림·흐림으로 알 수 없으면 **안 보임(3)**을 누른다.
+3. 확인하면 다음 미확인 프레임으로 넘어간다. 자동 후보가 없는 프레임은 공이 보이면 클릭한다. 아직 손에 있거나 이미 잡혔다면 별도의 **아직 손에 있음 / 이미 잡힘**을 선택한다. 검출 실패를 공 없음으로 자동 처리하지 않는다.
+4. 릴리스 후보의 앞뒤 사진을 보고 **맞음 / 다른 시점 / 안 보임**으로 답한다. 사진을 누르면 크게 볼 수 있다. 다른 시점이면 상세 영역에서 마지막 접촉과 첫 분리를 지정한다.
+5. 작업 번호를 바꿔 모든 투구를 확인하고 서버에 제출한다. 좌우 방향키로 이전 판독을 다시 확인하고 수정할 수 있다.
+
+흰 원은 사람이 확인한 위치다. 후보를 보기만 하거나 틀림만 누른 상태는 완료로 처리하지 않는다. 서버 제출은 모든 지정 프레임과 릴리스 일관성 검사를 통과해야 가능하다. 파일 기반 오프라인 작업도 유지한다.
+
+## 자동 후보 생성
+
+기존 `experiments/shared_ball_tracking/study.py`의 RGB·움직임 후보와 앱 추적기의 `proposal_union`을 사용한다. `tracker-root`는 해당 코드가 있는 로컬 checkout이다. 현재 작업은 선행 추적기 브랜치의 모델을 재학습하거나 성능 기준으로 다시 선택하지 않는다.
+
+    python tools/pitch_labeler/suggest.py batch-folder/assignment.json assisted-spec.json tracker-root batch-folder/assignment-assisted-v1.json
+
+`assisted-spec.json`은 아래 작업 배정 목록에 각 영상의 원본 픽셀 `anchors:[[x1,y1],[x2,y2]]`를 추가한다. 이 영역은 운영자가 투수에서 포수로 향하는 장면을 보고 지정한 검색 범위이며 자동 검출 결과나 실측 구속이 아니다. 원본 SHA-256 일치 후 실제 RGB 프레임을 처리하며, 좌표는 원본 해상도로 되돌린다. 원래 배정 파일과 이전 후보 파일을 덮어쓰지 않는다.
+
+`assistance.points`에는 관측 후보만 넣는다. 보간점이나 검출되지 않은 프레임의 음성 라벨은 생성하지 않는다. `release_hint`는 3개 연속 검출의 시작 직전/시작 프레임으로 만든 **검색 제안**이며 실제 손 접촉 판정이 아니다. 사람이 별도로 확인한다. 후보를 승인해도 다른 미판독 프레임을 자동 완성하지 않는다.
+
+모델 후보, 사용한 추적기 커밋·입력 목록 해시, 사람의 승인·수정·거절·판독 불가를 별도로 저장한다. 과거 수동 판독의 좌표를 후보로 대체하지 않는다. 이 자료는 `machine_assisted`이며 독립 블라인드 정답이나 모델 정확도 검증으로 취급하지 않는다. `compare.py`도 이를 명시한다. 두 작업자의 불일치 검토와 개발용 수정 자료 수집에는 사용할 수 있다.
 
 ## 작업 배정과 검산
 
 Python 환경에 OpenCV가 필요하다. 원본 파일 경로, 작업 ID, 자료 유형, 원본 프레임의 시작·끝 번호를 지정한 목록으로 작업 폴더를 만든다.
 
     python tools/pitch_labeler/prepare.py private-spec.json batch-folder
-    node --test tools/pitch_labeler/labels.test.cjs
+    node --test tools/pitch_labeler/*.test.cjs
+    python -m unittest discover -s tools/pitch_labeler -p "test_*.py"
     python tools/pitch_labeler/compare.py batch-folder/assignment.json reader-a.json reader-b.json review.json
 
 배정 목록 형식은 다음과 같다.
@@ -29,7 +45,7 @@ Python 환경에 OpenCV가 필요하다. 원본 파일 경로, 작업 ID, 자료
 
 ## 로컬 서버 자동 저장
 
-    node tools/pitch_labeler/serve.cjs batch-folder/assignment.json readers.json records 8767
+    node tools/pitch_labeler/serve.cjs batch-folder/assignment-assisted-v1.json readers.json records 8767
 
 서버는 127.0.0.1에서 실행한다. 외부 HTTPS 터널을 쓸 때는 이 포트만 연결한다. 'readers.json'에는 작업자 코드별로 암호학적 난수 24바이트를 16진수로 적는다. 작업자는 사이트 주소 뒤에 '#key='와 본인 키가 붙은 링크를 열면 배정된 원본 프레임을 바로 볼 수 있다. 작업자 키가 있는 링크는 해당 작업자에게만 보낸다.
 
