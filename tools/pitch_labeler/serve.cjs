@@ -2,7 +2,7 @@ const {createServer} = require("node:http");
 const {randomUUID} = require("node:crypto");
 const {readFileSync, writeFileSync, mkdirSync, renameSync} = require("node:fs");
 const {dirname, join} = require("node:path");
-const {checkManifest, submission} = require("./site/labels.js");
+const {checkManifest, submission, validReview} = require("./site/labels.js");
 
 const site = join(__dirname, "site");
 const assets = {
@@ -34,8 +34,13 @@ function checkDrafts(assignment, drafts) {
     const frames = new Set(task.frames.map(frame => String(frame.index)));
     if (![draft.contact,draft.free].every(frame => frame === null ||
         (Number.isInteger(frame) && frames.has(String(frame))))) return false;
+    if (draft.rejections != null && (!plain(draft.rejections) ||
+        Object.entries(draft.rejections).some(([frame,value])=>value !== true || !task.assistance?.points[frame]))) return false;
+    if (draft.releaseReview != null && !["accepted","manual","unknown"].includes(draft.releaseReview)) return false;
+    if (draft.releaseReview === "accepted" && (!task.assistance?.release_hint || draft.uncertain ||
+        draft.contact !== task.assistance.release_hint[0] || draft.free !== task.assistance.release_hint[1])) return false;
     return Object.entries(draft.marks).every(([frame, mark]) => {
-      if (!frames.has(frame) || !plain(mark)) return false;
+      if (!frames.has(frame) || !plain(mark) || !validReview(task,frame,mark)) return false;
       if (mark.kind === "unknown" || mark.kind === "absent") return true;
       return mark.kind === "ball" && Number.isFinite(mark.x) && Number.isFinite(mark.y) &&
         mark.x >= 0 && mark.x < task.width && mark.y >= 0 && mark.y < task.height;
@@ -108,7 +113,8 @@ function makeServer({assignment, readers, directory, frameDirectory}) {
       const old = loadRecord(file);
       if (old.revision !== update.revision) return send(response,409,{error:"revision_conflict"});
       const savedAt = new Date().toISOString();
-      const next = {revision:old.revision+1,drafts:update.drafts,savedAt,submittedAt:null,result:null};
+      const next = {revision:old.revision+1,drafts:update.drafts,savedAt,submittedAt:null,result:null,
+        assistance:Object.fromEntries(assignment.tasks.map(task=>[task.id,task.assistance ?? null]))};
       if (update.final) {
         try { next.result = submission(assignment,update.drafts,reader); }
         catch { return send(response,422,{error:"incomplete_review"}); }

@@ -13,15 +13,56 @@
               frame.time_ms <= all[i - 1].time_ms)) || frame.file !== "frames/" + task.id + "/" + frame.index + ".png"))
         throw new Error("작업 번호, 프레임 또는 원본 정보에 오류가 있습니다.");
       ids.add(task.id);
+      if (task.assistance) {
+        const a = task.assistance;
+        const frames = new Set(task.frames.map(frame=>String(frame.index)));
+        if (typeof a.method !== "string" || !a.points || Array.isArray(a.points) ||
+            Object.entries(a.points).some(([frame,p])=>!frames.has(frame) || p?.kind !== "ball" ||
+              !Number.isFinite(p.x) || !Number.isFinite(p.y) || p.x < 0 || p.x >= task.width || p.y < 0 || p.y >= task.height) ||
+            (a.release_hint != null && (!Array.isArray(a.release_hint) || a.release_hint.length !== 2 ||
+              a.release_hint.some(frame=>!Number.isInteger(frame) || !frames.has(String(frame))) ||
+              a.release_hint[0] >= a.release_hint[1]))) throw new Error("자동 후보 정보를 확인하세요.");
+      }
     }
     return manifest;
+  }
+
+  function reviewFrame(task, draft, frame, decision, point) {
+    if (!task.frames.some(f=>f.index===frame)) throw new Error("Unknown frame");
+    const proposal = task.assistance?.points[frame];
+    if (decision === "accepted") {
+      if (!proposal) throw new Error("No candidate to accept");
+      draft.marks[frame] = {...proposal,review:"accepted"};
+      if (draft.rejections) delete draft.rejections[frame];
+    } else if (decision === "rejected") {
+      if (!proposal) throw new Error("No candidate to reject");
+      (draft.rejections ??= {})[frame] = true;
+      // A rejection alone is not a confirmed negative or a replacement coordinate.
+      delete draft.marks[frame];
+    } else if (decision === "ball") {
+      if (!point || !Number.isFinite(point.x) || !Number.isFinite(point.y) ||
+          point.x < 0 || point.x >= task.width || point.y < 0 || point.y >= task.height) throw new Error("Invalid point");
+      draft.marks[frame] = {kind:"ball",x:point.x,y:point.y,review:proposal ? "corrected" : "manual"};
+    } else if (["absent","unknown"].includes(decision)) {
+      draft.marks[frame] = {kind:decision,review:decision === "unknown" ? "unseen" : "no_free"};
+    } else throw new Error("Unknown decision");
+  }
+
+  function validReview(task, frame, mark) {
+    if (mark.review == null) return true; // Preserve older manual records.
+    if (mark.review === "accepted") {
+      const p = task.assistance?.points[frame];
+      return !!p && mark.kind === "ball" && p.x === mark.x && p.y === mark.y;
+    }
+    return (mark.kind === "ball" && ["corrected","manual"].includes(mark.review)) ||
+      (mark.kind === "unknown" && mark.review === "unseen") || (mark.kind === "absent" && mark.review === "no_free");
   }
 
   function readiness(task, draft) {
     for (const frame of task.frames) {
       const mark = draft.marks[frame.index];
       if (!mark) return "지정된 프레임을 모두 판독하세요.";
-      if (!["ball", "absent", "unknown"].includes(mark.kind) ||
+      if (!validReview(task,frame.index,mark) || !["ball", "absent", "unknown"].includes(mark.kind) ||
           (mark.kind === "ball" && !(mark.x >= 0 && mark.x < task.width && mark.y >= 0 && mark.y < task.height)))
         return "공 좌표 또는 판독 상태를 확인하세요.";
     }
@@ -56,11 +97,14 @@
         last_confirmed_contact:draft.uncertain ? null : draft.contact,
         first_confirmed_free:draft.uncertain ? null : draft.free,
         positive, negative, unknown, notes:draft.notes,
+        review_mode:task.assistance ? "machine_assisted" : "unassisted",
+        machine_proposals:task.assistance ?? null,
+        human_review:JSON.parse(JSON.stringify(draft)),
       };
     });
     return {schema:"pitch-video-annotation/1", batch:manifest.batch, practice:Boolean(manifest.practice), reader, clips};
   }
 
-  root.PitchLabels = {checkManifest, readiness, submission};
+  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview};
   if (typeof module === "object") module.exports = root.PitchLabels;
 })(globalThis);

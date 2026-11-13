@@ -3,14 +3,18 @@ const ui = Object.fromEntries([
   "folder","demo","notice","task-title","frame-id","viewport","picture","frame-image","point","empty",
   "prev","next","scrub","zoom","strip","progress","task","reader","controls","current","absent","unknown",
   "clear","contact","free","contact-value","free-value","uncertain","notes","download","readiness","save-status","retry","submit",
+  "proposal-point","proposal-status","question","accept","reject","unseen","correction-hint",
+  "release-assist","release-before","release-after","release-before-image","release-after-image",
+  "release-before-label","release-after-label","release-help","release-yes","release-no","release-unknown","release-state","release-details",
 ].map(id => [id, byId(id)]));
-const {checkManifest, readiness, submission} = PitchLabels;
+const {checkManifest, readiness, submission, reviewFrame} = PitchLabels;
 const states = {ball:"공 중심 표시됨", absent:"자유 비행 없음", unknown:"판독 불가"};
 let manifest, task, drafts, sources, index = 0, frameURL, currentFrameLoaded = false, loadTicket = 0;
 let storageKey = "";
 let storageFailed = false;
 let session;
 let frameRequest;
+let correction = false, releaseReady = false, releaseTicket = 0, releaseURLs = [];
 const token = new URLSearchParams(location.hash.slice(1)).get("key");
 
 function showSaveStatus(message) {
@@ -52,7 +56,7 @@ async function mount(data, files, online, remote) {
   ui.task.replaceChildren(...data.tasks.map(t=>new Option(t.id+" · "+t.group,t.id)));
   ui.task.disabled = false;
   ui.notice.textContent = data.practice ? "연습용 합성 프레임입니다. 연습 결과는 연구 판독에 포함하지 않습니다." :
-    online ? "배정된 투구를 판독하세요. 기록은 서버에 자동 저장됩니다." :
+    online ? "자동 후보를 먼저 확인하세요. 맞음·틀림·안 보임으로 답하면 서버에 자동 저장됩니다." :
       "영상은 브라우저에서만 엽니다. 모든 작업을 판독한 뒤 결과 JSON을 의뢰자에게 보내세요.";
   select(data.tasks[0].id);
   session?.report();
@@ -69,12 +73,46 @@ function select(id) {
     button.addEventListener("click",()=>seek(position));
     return button;
   }));
-  seek(0);
+  const firstProposal = task.frames.findIndex(f=>task.assistance?.points[f.index] && !drafts[task.id].marks[f.index]);
+  const firstMissing = task.frames.findIndex(f=>!drafts[task.id].marks[f.index]);
+  seek(firstProposal >= 0 ? firstProposal : Math.max(0,firstMissing));
+  void previewRelease();
+}
+
+async function previewRelease() {
+  const ticket = ++releaseTicket;
+  releaseReady = false;
+  releaseURLs.forEach(url=>URL.revokeObjectURL(url));
+  releaseURLs = [];
+  const hint = task.assistance?.release_hint;
+  ui["release-assist"].hidden = !hint;
+  ui["release-details"].open = !hint;
+  if (!hint) return;
+  try {
+    for (const [i,side] of ["before","after"].entries()) {
+      const frame = task.frames.find(f=>f.index===hint[i]);
+      ui["release-"+side+"-image"].removeAttribute("src");
+      const blob = sources ? sources.get(frame.file) : session ? await session.frame(frame.file) : null;
+      if (ticket !== releaseTicket) return;
+      const url = blob ? URL.createObjectURL(blob) : "./demo/"+frame.file;
+      if (blob) releaseURLs.push(url);
+      const image = ui["release-"+side+"-image"];
+      image.src = url;
+      await image.decode();
+      if (ticket !== releaseTicket) return;
+      ui["release-"+side+"-label"].textContent = "F"+hint[i]+" · 크게 보기";
+    }
+    releaseReady = true;
+  } catch {
+    ui["release-help"].textContent = "후보 사진을 열지 못했습니다. 앞뒤 프레임을 직접 확인하거나 새로고침하세요.";
+  }
+  refresh();
 }
 
 async function seek(target) {
   index = Math.max(0, Math.min(task.frames.length - 1, target));
   const frame = task.frames[index];
+  correction = !!drafts[task.id].rejections?.[frame.index] && !drafts[task.id].marks[frame.index];
   const ticket = ++loadTicket;
   frameRequest?.abort();
   const controller = new AbortController();
@@ -124,7 +162,23 @@ function refresh() {
   const draft = drafts[task.id];
   const frame = task.frames[index].index;
   const mark = draft.marks[frame];
+  const proposal = task.assistance?.points[frame];
   ui.controls.disabled = !currentFrameLoaded;
+  ui.question.textContent = proposal ? "표시한 공 위치가 맞나요?" : "공이 손에서 떨어져 보이나요?";
+  ui["proposal-status"].textContent = mark ? "사람이 확인한 기록입니다. 앞뒤 프레임으로 다시 확인할 수 있습니다." :
+    correction ? "자동 후보를 거절했습니다. 위치를 고치거나 안 보임을 선택하세요." :
+    proposal ? "자동 후보 · 아직 정답으로 확정하지 않았습니다." : "자동으로 찾지 못했습니다. 보이면 공 중심을 눌러주세요.";
+  ui.accept.disabled = !proposal || correction;
+  ui.reject.disabled = !proposal;
+  ui["correction-hint"].hidden = !correction;
+  ui["proposal-point"].hidden = !currentFrameLoaded || !proposal || !!mark || correction || !!draft.rejections?.[frame];
+  if (proposal) {
+    ui["proposal-point"].style.left = 100*proposal.x/task.width+"%";
+    ui["proposal-point"].style.top = 100*proposal.y/task.height+"%";
+  }
+  ui["release-yes"].disabled = !releaseReady;
+  ui["release-state"].textContent = draft.uncertain ? "안 보임으로 저장했습니다." :
+    draft.contact != null && draft.free != null ? "확인한 범위: F"+draft.contact+" → F"+draft.free : "분리 후보 · 확인 전";
   ui.current.textContent = mark ? states[mark.kind] : "미판독";
   ui.point.hidden = !currentFrameLoaded || mark?.kind !== "ball";
   if (!ui.point.hidden) {
@@ -161,7 +215,21 @@ function update(edit) {
   refresh();
 }
 
-function mark(kind) { update((draft,frame)=>{ draft.marks[frame] = {kind}; }); }
+function nextMissing() {
+  const positions = task.frames.map((_,i)=>(index+1+i)%task.frames.length);
+  const next = positions.find(i=>!drafts[task.id].marks[task.frames[i].index]);
+  if (next != null) void seek(next);
+  else ui.notice.textContent = "이 투구의 프레임 확인을 마쳤습니다. 릴리스 범위를 확인한 뒤 작업 번호에서 다음 투구를 여세요.";
+}
+
+function decide(decision,point) {
+  if (!currentFrameLoaded) return;
+  update((draft,frame)=>reviewFrame(task,draft,frame,decision,point));
+  if (decision === "rejected") { correction = true; refresh(); }
+  else nextMissing();
+}
+
+function mark(kind) { decide(kind); }
 
 ui.folder.addEventListener("change", async event=>{
   const files = new Map(Array.from(event.target.files,file=>[file.webkitRelativePath.split("/").slice(1).join("/"),file]));
@@ -185,14 +253,29 @@ ui["frame-image"].addEventListener("click",event=>{
   const box = event.currentTarget.getBoundingClientRect();
   const x = Math.min(task.width-0.1,Math.max(0,Math.round((event.clientX-box.left)*task.width/box.width*10)/10));
   const y = Math.min(task.height-0.1,Math.max(0,Math.round((event.clientY-box.top)*task.height/box.height*10)/10));
-  update((draft,frame)=>{ draft.marks[frame] = {kind:"ball",x,y}; });
+  decide("ball",{x,y});
 });
+ui.accept.addEventListener("click",()=>decide("accepted"));
+ui.reject.addEventListener("click",()=>decide("rejected"));
+ui.unseen.addEventListener("click",()=>decide("unknown"));
 ui.absent.addEventListener("click",()=>mark("absent"));
 ui.unknown.addEventListener("click",()=>mark("unknown"));
 ui.clear.addEventListener("click",()=>update((draft,frame)=>{ delete draft.marks[frame]; }));
-ui.contact.addEventListener("click",()=>update((draft,frame)=>{ draft.contact = frame; }));
-ui.free.addEventListener("click",()=>update((draft,frame)=>{ draft.free = frame; }));
-ui.uncertain.addEventListener("change",()=>update(draft=>{ draft.uncertain = ui.uncertain.checked; }));
+ui.contact.addEventListener("click",()=>update((draft,frame)=>{ draft.contact = frame; draft.releaseReview = "manual"; }));
+ui.free.addEventListener("click",()=>update((draft,frame)=>{ draft.free = frame; draft.releaseReview = "manual"; }));
+ui.uncertain.addEventListener("change",()=>update(draft=>{ draft.uncertain = ui.uncertain.checked; draft.releaseReview = draft.uncertain ? "unknown" : "manual"; }));
+for (const [i,side] of ["before","after"].entries()) {
+  ui["release-"+side].addEventListener("click",()=>seek(task.frames.findIndex(f=>f.index===task.assistance.release_hint[i])));
+}
+ui["release-yes"].addEventListener("click",()=>{
+  if (!releaseReady) return;
+  update(draft=>{ [draft.contact,draft.free] = task.assistance.release_hint; draft.uncertain = false; draft.releaseReview = "accepted"; });
+});
+ui["release-no"].addEventListener("click",()=>{
+  update(draft=>{ draft.contact = null; draft.free = null; draft.uncertain = false; draft.releaseReview = "manual"; });
+  ui["release-details"].open = true;
+});
+ui["release-unknown"].addEventListener("click",()=>update(draft=>{ draft.uncertain = true; draft.releaseReview = "unknown"; }));
 ui.notes.addEventListener("input",()=>update(draft=>{ draft.notes = ui.notes.value; }));
 ui.reader.addEventListener("input",()=>{ if (task) { save(); refresh(); } });
 ui.retry.addEventListener("click",()=>session?.flush());
@@ -215,6 +298,10 @@ document.addEventListener("keydown",event=>{
   if (event.key === "ArrowRight") { event.preventDefault(); seek(index+1); }
   if (event.key === "0") mark("absent");
   if (event.key === "?") mark("unknown");
+  if (event.repeat) return;
+  if (event.key === "1" && !ui.accept.disabled) { event.preventDefault(); decide("accepted"); }
+  if (event.key === "2" && !ui.reject.disabled) { event.preventDefault(); decide("rejected"); }
+  if (event.key === "3") { event.preventDefault(); decide("unknown"); }
 });
 
 async function openAssignment() {

@@ -10,6 +10,7 @@ test("isolates readers, saves and reloads drafts, and validates submissions and 
   const assignment = {version:1,batch:"test-batch",tasks:[{
     id:"pitch",group:"QA",width:100,height:100,sha256:"a".repeat(64),
     frames:[1,2].map(index=>({index,time_ms:index*16,file:"frames/pitch/"+index+".png"})),
+    assistance:{method:"proposal_union",points:{2:{kind:"ball",x:50,y:25}},release_hint:[1,2]},
   }]};
   const readers = {R01:"a".repeat(48),R02:"b".repeat(48)};
   const frameDirectory = join(directory,"assignment");
@@ -54,13 +55,18 @@ test("isolates readers, saves and reloads drafts, and validates submissions and 
     assert.deepEqual(restored.drafts,drafts);
     assert.equal(restored.revision,1);
     drafts.pitch.free = 2;
-    drafts.pitch.marks[2] = {kind:"ball",x:50,y:25};
+    drafts.pitch.marks[2] = {kind:"ball",x:51,y:25,review:"accepted"};
+    assert.equal((await request("PUT","R01",{drafts,revision:1,final:true})).status,400);
+    drafts.pitch.marks[2] = {kind:"ball",x:50,y:25,review:"accepted"};
     const final = await request("PUT","R01",{drafts,revision:1,final:true});
     assert.equal(final.status,200);
     const saved = JSON.parse(readFileSync(join(directory,"test-batch-R01.json"),"utf8"));
     assert.ok(saved.submittedAt);
     assert.deepEqual(saved.result.clips[0].release,[1,1]);
     assert.deepEqual(saved.result.clips[0].positive,[[2,50,25]]);
+    assert.equal(saved.result.clips[0].review_mode,"machine_assisted");
+    assert.deepEqual(saved.assistance.pitch,assignment.tasks[0].assistance);
+    assert.equal(saved.drafts.pitch.marks[1].review,undefined); // Old record preserved.
   } finally {
     await stop();
     rmSync(directory,{recursive:true,force:true});
