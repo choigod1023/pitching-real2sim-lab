@@ -8,13 +8,15 @@ const ui = Object.fromEntries([
   "release-before-label","release-after-label","release-help","release-yes","release-no","release-unknown","release-state","release-details",
   "portal","login-form","login-reader","access-code","login-submit","login-message","scene-hub","scene-list","scene-total",
   "account-name","change-reader","workbench","scene-status","inspect-issue","next-scene",
+  "submit-all","scene-submit-help",
 ].map(id => [id, byId(id)]));
-const {checkManifest, readiness, submission, reviewFrame, sceneProgress} = PitchLabels;
+const {checkManifest, readiness, submission, reviewFrame, sceneProgress, submissionState} = PitchLabels;
 const states = {ball:"공 중심 표시됨", absent:"자유 비행 없음", unknown:"판독 불가"};
 let manifest, task, drafts, sources, index = 0, frameURL, currentFrameLoaded = false, loadTicket = 0;
 let storageKey = "";
 let storageFailed = false;
 let session;
+let sceneSubmissions = {}, submittingScene = false;
 let frameRequest;
 let correction = false, releaseReady = false, releaseTicket = 0, releaseURLs = [];
 const accountStorageKey = "pitch-review-current-reader";
@@ -54,8 +56,10 @@ async function mount(data, files, online, remote) {
   ui["save-status"].hidden = !online;
   ui.retry.hidden = true;
   ui.submit.hidden = !online;
+  ui["submit-all"].hidden = !online;
   ui.reader.readOnly = Boolean(online);
   manifest = data;
+  sceneSubmissions = remote?.sceneSubmissions ?? {};
   sources = files;
   storageKey = "pitch-labels-v1:" + JSON.stringify([data.batch,data.tasks.map(t=>[t.id,t.sha256,t.frames[0].index,t.frames.at(-1).index])]);
   let previous;
@@ -82,7 +86,7 @@ async function mount(data, files, online, remote) {
   ui.notice.textContent = data.practice ? "연습용 합성 프레임입니다. 연습 결과는 연구 판독에 포함하지 않습니다." :
     online ? "자동 후보를 먼저 확인하세요. 맞음·틀림·안 보임으로 답하면 서버에 자동 저장됩니다." :
       "영상은 브라우저에서만 엽니다. 모든 작업을 판독한 뒤 결과 JSON을 의뢰자에게 보내세요.";
-  select((data.tasks.find(t=>sceneProgress(t,drafts[t.id]).status !== "complete") ?? data.tasks[0]).id);
+  select((data.tasks.find(t=>submissionState(drafts[t.id],sceneSubmissions[t.id]) !== "received") ?? data.tasks[0]).id);
   session?.report();
 }
 
@@ -190,7 +194,7 @@ function refresh() {
   const frame = task.frames[index].index;
   const mark = draft.marks[frame];
   const proposal = task.assistance?.points[frame];
-  ui.controls.disabled = !currentFrameLoaded;
+  ui.controls.disabled = !currentFrameLoaded || submittingScene;
   ui.question.textContent = proposal ? "표시한 공 위치가 맞나요?" : "공이 손에서 떨어져 보이나요?";
   ui["proposal-status"].textContent = mark ? "사람이 확인한 기록입니다. 앞뒤 프레임으로 다시 확인할 수 있습니다." :
     correction ? "자동 후보를 거절했습니다. 위치를 고치거나 안 보임을 선택하세요." :
@@ -226,35 +230,46 @@ function refresh() {
     button.setAttribute("aria-current",i===index ? "true" : "false");
   });
   ui.progress.textContent = Object.keys(draft.marks).length+" / "+task.frames.length;
-  let complete = 0;
-  const names = {complete:"씬 완료",needs_review:"다시 확인",in_progress:"진행 중",not_started:"시작 전"};
+  let received = 0;
+  const names = {complete:"제출 가능",needs_review:"제출 가능 · 검토 필요",in_progress:"진행 중",not_started:"시작 전"};
   manifest.tasks.forEach((t,i)=>{
     const status = sceneProgress(t,drafts[t.id]);
+    const state = submissionState(drafts[t.id],sceneSubmissions[t.id]);
     const card = ui["scene-list"].children[i];
     card.dataset.status = status.status;
     card.setAttribute("aria-current",String(t.id===task.id));
-    card.lastElementChild.textContent = status.marked+" / "+status.total+" · "+names[status.status]+
-      (status.status === "needs_review" && status.reviewFrames.length ? " "+status.reviewFrames.length+"곳" : "");
+    card.lastElementChild.textContent = status.marked+" / "+status.total+" · "+
+      (state === "received" ? (sceneSubmissions[t.id].validation === "needs_review" ? "접수 완료 · 검토 필요" : "접수 완료") :
+        state === "changed" ? "수정됨 · 다시 제출" : names[status.status]);
     card.title = status.issue;
-    if (status.status === "complete") complete++;
+    if (state === "received") received++;
   });
-  ui["scene-total"].textContent = complete+" / "+manifest.tasks.length+"개 씬 완료 · 판독은 자동 저장";
+  ui["scene-total"].textContent = received+" / "+manifest.tasks.length+"개 씬 접수 · 판독은 자동 저장";
   const scene = sceneProgress(task,draft);
-  ui["scene-status"].textContent = scene.status === "complete" ? "이 씬의 입력 검사를 통과했습니다. 기록은 자동 저장됩니다." :
-    scene.status === "needs_review" ? scene.issue : scene.marked+" / "+scene.total+"프레임 확인";
+  const receiptState = submissionState(draft,sceneSubmissions[task.id]);
+  ui["scene-status"].textContent = receiptState === "received" ?
+    (sceneSubmissions[task.id].validation === "needs_review" ? "씬 접수 완료. 확인 사항도 함께 전달했습니다. 다음 씬으로 넘어가세요." : "씬 접수 완료. 다음 씬으로 넘어가세요.") :
+    receiptState === "changed" ? "제출 후 수정했습니다. 이 씬을 다시 제출하세요." :
+    scene.status === "complete" ? "프레임 판독을 마쳤습니다. 이 씬만 제출할 수 있습니다." :
+    scene.status === "needs_review" ? "확인할 내용이 있지만 이 씬을 제출할 수 있습니다. "+scene.issue : scene.marked+" / "+scene.total+"프레임 확인";
   ui["inspect-issue"].hidden = scene.status !== "needs_review";
   ui["inspect-issue"].textContent = scene.frame == null ? "릴리스 범위 확인" : "F"+scene.frame+" 다시 확인";
-  ui["next-scene"].hidden = scene.status !== "complete" || complete === manifest.tasks.length;
+  ui["next-scene"].hidden = receiptState !== "received" || received === manifest.tasks.length;
   const incomplete = manifest.tasks.find(t=>readiness(t,drafts[t.id]));
   const readerOK = /^[A-Za-z0-9_-]{1,32}$/.test(ui.reader.value.trim());
   ui.download.disabled = Boolean(incomplete) || !readerOK;
-  ui.submit.disabled = ui.download.disabled;
+  ui["submit-all"].disabled = ui.download.disabled || submittingScene;
+  ui.submit.disabled = !session || !currentFrameLoaded || submittingScene || scene.marked !== scene.total || receiptState === "received";
+  ui.submit.textContent = submittingScene ? "제출 중…" : receiptState === "received" ? "이 씬 접수 완료" : receiptState === "changed" ? "수정한 씬 다시 제출" : "이 씬 제출";
+  ui["scene-submit-help"].textContent = receiptState === "received" ? "접수 기록을 서버에 저장했습니다. 판독을 수정하면 다시 제출할 수 있습니다." :
+    scene.marked !== scene.total ? "남은 "+(scene.total-scene.marked)+"프레임을 확인하면 이 씬을 제출할 수 있습니다. 안 보이는 공은 ‘안 보임’을 선택하세요." :
+    "다른 씬을 끝내지 않아도 제출됩니다. 입력 불일치는 원래 값과 함께 검토용으로 전달합니다.";
   ui.readiness.textContent = incomplete ? incomplete.id+" · "+readiness(incomplete,drafts[incomplete.id]) :
     readerOK ? "내보낼 수 있습니다." : "영문·숫자로 판독자 코드를 입력하세요.";
 }
 
 function update(edit) {
-  if (!currentFrameLoaded) return;
+  if (!currentFrameLoaded || submittingScene) return;
   edit(drafts[task.id],task.frames[index].index);
   if (session) session.save(drafts);
   else save();
@@ -265,13 +280,11 @@ function nextMissing() {
   const positions = task.frames.map((_,i)=>(index+1+i)%task.frames.length);
   const next = positions.find(i=>!drafts[task.id].marks[task.frames[i].index]);
   if (next != null) void seek(next);
-  else ui.notice.textContent = sceneProgress(task,drafts[task.id]).status === "complete" ?
-    "이 씬의 입력 검사를 통과했습니다. 다음 씬으로 이동할 수 있습니다." :
-    "프레임은 모두 저장됐습니다. 오른쪽에 표시된 확인 사항을 마쳐주세요.";
+  else ui.notice.textContent = "프레임은 모두 저장됐습니다. ‘이 씬 제출’을 눌러 판독을 전달하세요.";
 }
 
 function decide(decision,point) {
-  if (!currentFrameLoaded) return;
+  if (!currentFrameLoaded || submittingScene) return;
   update((draft,frame)=>reviewFrame(task,draft,frame,decision,point));
   if (decision === "rejected") { correction = true; refresh(); }
   else nextMissing();
@@ -333,10 +346,20 @@ ui["inspect-issue"].addEventListener("click",()=>{
   else ui["release-details"].open = true;
 });
 ui["next-scene"].addEventListener("click",()=>{
-  const next = manifest.tasks.find(t=>sceneProgress(t,drafts[t.id]).status !== "complete");
+  const next = manifest.tasks.find(t=>submissionState(drafts[t.id],sceneSubmissions[t.id]) !== "received");
   if (next) select(next.id);
 });
-ui.submit.addEventListener("click",()=>session?.save(drafts,true));
+ui.submit.addEventListener("click",async()=>{
+  if (!session || ui.submit.disabled) return;
+  const id = task.id;
+  submittingScene = true;
+  refresh();
+  try {
+    const ok = await session.save(drafts,false,id);
+    ui.notice.textContent = ok ? "씬 접수 완료. 원래 판독과 확인 사항을 서버에 저장했습니다." : "제출을 완료하지 못했습니다. 아래 저장 상태를 확인하고 다시 저장을 눌러주세요.";
+  } finally { submittingScene = false; refresh(); }
+});
+ui["submit-all"].addEventListener("click",()=>session?.save(drafts,true));
 ui.download.addEventListener("click",()=>{
   try {
     const result = submission(manifest,drafts,ui.reader.value.trim());
@@ -365,7 +388,10 @@ async function openAssignment(accessToken) {
   document.querySelector(".load").hidden = true;
   ui.notice.textContent = "서버에서 배정된 투구를 여는 중…";
   try {
-    const online = PitchReviewSession(accessToken,showSaveStatus);
+    const online = PitchReviewSession(accessToken,showSaveStatus,record=>{
+      sceneSubmissions = record.sceneSubmissions ?? {};
+      if (task) refresh();
+    });
     const remote = await online.open();
     if (!remote.assignment) throw new Error("이 링크에 배정된 서버 작업이 없습니다.");
     await mount(remote.assignment,null,online,remote);

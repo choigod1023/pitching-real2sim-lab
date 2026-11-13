@@ -1,7 +1,9 @@
 (function (root) {
-  function reviewSession(token, status) {
+  function reviewSession(token, status, onRecord = ()=>{}) {
     const headers = {"Authorization":"Bearer "+token, "Content-Type":"application/json"};
     let record, running = false, pending, conflict = false, generation = 0;
+    let activePromise;
+    const {stableJSON,submissionState} = root.PitchLabels;
     const key = "pitch-review-outbox:"+token;
     function backup() {
       try {
@@ -15,15 +17,23 @@
       record = await response.json();
       try { pending = JSON.parse(localStorage.getItem(key)); } catch { pending = null; }
       if (pending && pending.revision !== record.revision) {
-        if (JSON.stringify(pending.drafts) === JSON.stringify(record.drafts) &&
-            Boolean(record.submittedAt) === pending.final) pending = null;
-        else conflict = true;
+        if (stableJSON(pending.drafts) === stableJSON(record.drafts)) {
+          const submitted = pending.submitScene ? submissionState(pending.drafts[pending.submitScene],record.sceneSubmissions?.[pending.submitScene]) === "received" :
+            !pending.final || Boolean(record.submittedAt);
+          if (submitted) pending = null;
+          else pending.revision = record.revision;
+        } else conflict = true;
       }
       backup();
       return {...record,drafts:pending?.drafts ?? record.drafts};
     }
-    async function flush() {
-      if (running || conflict || !pending) return;
+    function flush() {
+      if (activePromise) return activePromise;
+      if (conflict || !pending) return Promise.resolve(!conflict);
+      activePromise = sendAll().finally(()=>{ activePromise = null; });
+      return activePromise;
+    }
+    async function sendAll() {
       running = true;
       try {
         while (pending) {
@@ -36,17 +46,20 @@
           if (response.status === 409) {
             conflict = true;
             status("다른 탭에서 기록이 바뀌었습니다. 이 탭의 기록을 덮어쓰지 않았습니다.");
-            return;
+            return false;
           }
           if (!response.ok) throw new Error("Save failed");
           record = {...record,...await response.json()};
+          onRecord(record);
           if (sent === generation) pending = null;
           else pending.revision = record.revision;
           backup();
           if (!pending) report();
         }
+        return true;
       } catch {
         status("서버 저장 실패. 연결을 확인하고 ‘다시 저장’을 누르세요.");
+        return false;
       } finally { running = false; }
     }
     function report() {
@@ -60,13 +73,14 @@
       const response = await fetch("/api/"+file,{headers,signal,cache:"no-store"});
       if (!response.ok) throw new Error("Frame unavailable");
       return response.blob();
-    },save(drafts,final=false) {
-      if (!record) return;
+    },save(drafts,final=false,submitScene) {
+      if (!record) return Promise.resolve(false);
       generation++;
       pending = {revision:record.revision,drafts:JSON.parse(JSON.stringify(drafts)),final};
+      if (submitScene != null) pending.submitScene = submitScene;
       backup();
-      if (conflict) report();
-      else void flush();
+      if (conflict) { report(); return Promise.resolve(false); }
+      return flush();
     }};
   }
   root.PitchReviewSession = reviewSession;
