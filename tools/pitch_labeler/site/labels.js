@@ -71,9 +71,25 @@
       return "마지막 접촉과 첫 분리 프레임을 순서대로 지정하세요.";
     if (draft.marks[draft.contact]?.kind !== "absent" || draft.marks[draft.free]?.kind !== "ball")
       return "접촉에는 ‘자유 비행 없음’, 첫 분리에는 공 중심을 표시하세요.";
-    if (task.frames.some(({index}) => index < draft.free && draft.marks[index].kind === "ball"))
-      return "첫 분리 이전에 찍은 공 중심을 확인하세요.";
+    const early = task.frames.find(({index}) => index < draft.free && draft.marks[index].kind === "ball");
+    if (early) return "F"+early.index+"에 공 위치가 있지만 첫 분리는 F"+draft.free+"입니다. F"+early.index+" 프레임을 다시 확인하세요.";
     return "";
+  }
+
+  function sceneProgress(task, draft) {
+    if (!draft) return {marked:0,total:task.frames.length,status:"not_started",issue:"아직 시작하지 않았습니다.",frame:task.frames[0].index,reviewFrames:[]};
+    const marked = task.frames.filter(f=>draft.marks[f.index]).length;
+    const issue = readiness(task,draft);
+    const missing = task.frames.find(f=>!draft.marks[f.index]);
+    const early = !draft.uncertain && draft.free != null && task.frames.find(f=>f.index < draft.free && draft.marks[f.index]?.kind === "ball");
+    const inconsistentContact = draft.contact != null && draft.marks[draft.contact]?.kind !== "absent";
+    const inconsistentFree = draft.free != null && draft.marks[draft.free]?.kind !== "ball";
+    const reviewFrames = draft.uncertain ? [] : [...new Set([
+      ...task.frames.filter(f=>draft.free != null && f.index < draft.free && draft.marks[f.index]?.kind === "ball").map(f=>f.index),
+      ...(inconsistentContact ? [draft.contact] : []), ...(inconsistentFree ? [draft.free] : []),
+    ])].sort((a,b)=>a-b);
+    return {marked,total:task.frames.length,status:!issue ? "complete" : !marked ? "not_started" : marked < task.frames.length ? "in_progress" : "needs_review",
+      issue,reviewFrames,frame:missing?.index ?? (inconsistentContact ? draft.contact : inconsistentFree ? draft.free : early?.index ?? null)};
   }
 
   function submission(manifest, drafts, reader) {
@@ -105,6 +121,6 @@
     return {schema:"pitch-video-annotation/1", batch:manifest.batch, practice:Boolean(manifest.practice), reader, clips};
   }
 
-  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview};
+  root.PitchLabels = {checkManifest, readiness, submission, reviewFrame, validReview, sceneProgress};
   if (typeof module === "object") module.exports = root.PitchLabels;
 })(globalThis);

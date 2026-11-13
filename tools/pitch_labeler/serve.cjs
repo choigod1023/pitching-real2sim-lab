@@ -1,8 +1,8 @@
 const {createServer} = require("node:http");
-const {randomUUID} = require("node:crypto");
+const {randomUUID,createHash,timingSafeEqual} = require("node:crypto");
 const {readFileSync, writeFileSync, mkdirSync, renameSync} = require("node:fs");
 const {dirname, join} = require("node:path");
-const {checkManifest, submission, validReview} = require("./site/labels.js");
+const {checkManifest, submission, validReview, sceneProgress} = require("./site/labels.js");
 
 const site = join(__dirname, "site");
 const assets = {
@@ -53,7 +53,7 @@ function send(response, status, payload) {
   response.end(JSON.stringify(payload));
 }
 
-function makeServer({assignment, readers, directory, frameDirectory}) {
+function makeServer({assignment, readers, directory, frameDirectory, portal}) {
   checkManifest(assignment);
   if (assignment.practice || !plain(readers)) throw new Error("A research assignment and readers are required");
   const byToken = new Map();
@@ -62,6 +62,10 @@ function makeServer({assignment, readers, directory, frameDirectory}) {
       throw new Error("Invalid reader credential");
     byToken.set(token, reader);
   }
+  if (portal && (typeof portal.accessCode !== "string" || portal.accessCode.length < 12))
+    throw new Error("A portal access code of at least 12 characters is required");
+  const digest = code=>createHash("sha256").update(code).digest();
+  let loginAttempts = 0, loginWindow = Date.now();
   const assignedFrames = new Set(assignment.tasks.flatMap(task => task.frames.map(frame => "/"+frame.file)));
   mkdirSync(directory,{recursive:true});
   return createServer(async (request, response) => {
@@ -70,6 +74,29 @@ function makeServer({assignment, readers, directory, frameDirectory}) {
     response.setHeader("Content-Security-Policy",
       "default-src 'self'; img-src 'self' blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'");
     const path = request.url.split("?")[0];
+    if (path === "/api/portal") {
+      if (request.method !== "GET") return send(response,405,{});
+      return send(response,200,{enabled:!!portal,readers:portal ? Object.keys(readers) : []});
+    }
+    if (path === "/api/session") {
+      if (!portal || request.method !== "POST") return send(response,404,{});
+      if (request.headers["content-type"] !== "application/json") return send(response,415,{});
+      if (Date.now()-loginWindow > 60000) { loginWindow = Date.now(); loginAttempts = 0; }
+      if (++loginAttempts > 20) return send(response,429,{error:"too_many_attempts"});
+      try {
+        let size = 0;
+        const chunks = [];
+        for await (const chunk of request) {
+          size += chunk.length;
+          if (size > 4096) return send(response,413,{});
+          chunks.push(chunk);
+        }
+        const data = JSON.parse(Buffer.concat(chunks).toString("utf8"));
+        if (!plain(data) || typeof data.accessCode !== "string" || !Object.hasOwn(readers,data.reader) ||
+            !timingSafeEqual(digest(data.accessCode),digest(portal.accessCode))) return send(response,401,{error:"invalid_access"});
+        return send(response,200,{reader:data.reader,token:readers[data.reader]});
+      } catch { return send(response,400,{error:"invalid_json"}); }
+    }
     const frameRequest = path.startsWith("/api/frames/");
     if (path !== "/api/review" && !frameRequest) {
       const asset = Object.hasOwn(assets,path) ? assets[path] : null;
@@ -93,7 +120,9 @@ function makeServer({assignment, readers, directory, frameDirectory}) {
         return response.end(request.method === "HEAD" ? undefined : bytes);
       }
       if (request.method === "GET") {
-        return send(response,200,{batch:assignment.batch,reader,assignment:frameDirectory ? assignment : null,...loadRecord(file)});
+        const record = loadRecord(file);
+        return send(response,200,{batch:assignment.batch,reader,assignment:frameDirectory ? assignment : null,...record,
+          scenes:Object.fromEntries(assignment.tasks.map(task=>[task.id,sceneProgress(task,record.drafts[task.id])]))});
       }
       if (request.method !== "PUT") return send(response,405,{});
       if (request.headers["content-type"] !== "application/json") return send(response,415,{});
@@ -131,9 +160,9 @@ function makeServer({assignment, readers, directory, frameDirectory}) {
 }
 
 if (require.main === module) {
-  const [assignmentFile, readersFile, directory, port = "8767"] = process.argv.slice(2);
+  const [assignmentFile, readersFile, directory, port = "8767", portalFile] = process.argv.slice(2);
   const read = file => JSON.parse(readFileSync(file,"utf8").replace(/^\uFEFF/,""));
-  makeServer({assignment:read(assignmentFile),readers:read(readersFile),directory,frameDirectory:dirname(assignmentFile)})
+  makeServer({assignment:read(assignmentFile),readers:read(readersFile),directory,frameDirectory:dirname(assignmentFile),portal:portalFile ? read(portalFile) : undefined})
     .listen(Number(port),"127.0.0.1",()=>console.log("Pitch review listening on 127.0.0.1:"+port));
 }
 
