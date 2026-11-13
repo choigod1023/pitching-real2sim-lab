@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="야구 투구의 릴리스와 공 중심을 원본 프레임에서 판독합니다.">
+  <title>야구 투구 영상 판독</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./labels.js"></script>
+  <script defer src="./demo/practice.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="mast"><span class="mark" aria-hidden="true">⊙</span><span>Pitching Real2Sim Lab</span><a href="#guide">판독 기준</a></header>
+  <main>
+    <div class="intro">
+      <div><h1>야구 투구 영상 판독</h1><p>릴리스 전후 프레임을 확인하고 자유 비행 중인 공의 중심을 표시합니다.</p></div>
+      <div class="load"><label class="button primary" for="folder">작업 폴더 열기</label><input id="folder" type="file" webkitdirectory multiple class="visually-hidden"><button id="demo">연습 열기</button></div>
+    </div>
+    <p id="notice" role="status">받은 작업 ZIP을 풀고 그 폴더를 선택하세요. 영상과 판독은 이 브라우저에서 처리합니다.</p>
+    <div class="workbench">
+      <section class="monitor" aria-label="원본 프레임 판독">
+        <div class="monitor-head"><strong id="task-title">원본 프레임</strong><span id="frame-id" class="mono"></span></div>
+        <div id="viewport" class="viewport">
+          <div id="empty"><div class="reticle" aria-hidden="true"></div><p>작업 폴더를 열면 원본 프레임이 표시됩니다.</p></div>
+          <div id="picture" class="picture" hidden><img id="frame-image" alt="투구 원본 프레임" draggable="false"><span id="point" hidden aria-hidden="true"></span></div>
+        </div>
+        <div class="transport">
+          <button id="prev" aria-label="이전 프레임" disabled>←</button><input type="range" id="scrub" aria-label="프레임 선택" disabled><button id="next" aria-label="다음 프레임" disabled>→</button>
+          <button id="zoom" disabled aria-pressed="false">2× 확대</button>
+        </div>
+        <div id="strip" class="strip" aria-label="프레임 판독 상태"></div>
+      </section>
+      <section class="sheet" aria-label="판독 기록">
+        <div class="sheet-head"><h2>판독 기록</h2><span id="progress" class="mono">0 / 0</span></div>
+        <label class="field">작업 번호<select id="task" disabled></select></label>
+        <label class="field">판독자 코드<input id="reader" maxlength="32" placeholder="예: R01" autocomplete="off" spellcheck="false"></label>
+        <fieldset id="controls" disabled>
+          <legend>현재 프레임</legend>
+          <p id="current" class="current">미판독</p>
+          <div class="button-row"><button id="absent">자유 비행 없음</button><button id="unknown">판독 불가</button><button id="clear">지우기</button></div>
+          <p class="hint">공이 손에서 분리되어 보이면 화면에서 공 중심을 클릭합니다.</p>
+          <div class="rule"></div>
+          <h3>릴리스 범위</h3>
+          <div class="event"><button id="contact">마지막 확실한 접촉</button><output id="contact-value">미지정</output></div>
+          <div class="event"><button id="free">첫 확실한 분리</button><output id="free-value">미지정</output></div>
+          <label class="check"><input type="checkbox" id="uncertain">릴리스 범위 판독 불가</label>
+          <label class="field">메모<textarea id="notes" rows="2" maxlength="500" placeholder="예: 손에 가림, 모션 블러, 화면 밖"></textarea></label>
+        </fieldset>
+        <button id="download" class="primary submit" disabled>결과 JSON 받기</button>
+        <p id="readiness" class="hint">작업을 열어 프레임을 판독하세요.</p>
+      </section>
+    </div>
+    <section id="guide" class="guide">
+      <h2>판독 기준</h2>
+      <ol>
+        <li><strong>대상 투구를 확인합니다.</strong> 작업에 지정된 마운드에서 포수 방향 투구 한 번만 봅니다. 포수가 되던지는 공은 대상에서 제외합니다.</li>
+        <li><strong>손에서 떨어지는 구간을 표시합니다.</strong> 마지막 확실한 접촉과 첫 확실한 분리를 지정합니다. 손에 가려 범위를 정할 수 없으면 판독 불가로 기록합니다.</li>
+        <li><strong>모든 지정 프레임을 판독합니다.</strong> 자유 비행 중인 공이 보이면 중심을 클릭합니다. 아직 손에 있거나 이미 잡혀 자유 비행이 없으면 해당 버튼을 누릅니다. 가림·화면 밖·심한 흐림으로 공의 위치를 알 수 없으면 판독 불가로 남깁니다.</li>
+        <li><strong>JSON만 의뢰자에게 돌려보냅니다.</strong> 서로의 결과나 모델 출력을 보기 전에 각자 작업합니다. 키보드 ←·→로 이동하고 0은 자유 비행 없음, ?는 판독 불가를 표시합니다.</li>
+      </ol>
+      <p class="credits">화면 설계에 적용한 <a href="https://heydamir.design/unslop">unslop 지침</a> · Damir Sokolovsky · CC BY 4.0</p>
+    </section>
+  </main>
+</body>
+</html>
