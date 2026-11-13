@@ -6,8 +6,10 @@ const ui = Object.fromEntries([
   "proposal-point","proposal-status","question","accept","reject","unseen","correction-hint",
   "release-assist","release-before","release-after","release-before-image","release-after-image",
   "release-before-label","release-after-label","release-help","release-yes","release-no","release-unknown","release-state","release-details",
+  "portal","login-form","login-reader","access-code","login-submit","login-message","scene-hub","scene-list","scene-total",
+  "account-name","change-reader","workbench","scene-status","inspect-issue","next-scene",
 ].map(id => [id, byId(id)]));
-const {checkManifest, readiness, submission, reviewFrame} = PitchLabels;
+const {checkManifest, readiness, submission, reviewFrame, sceneProgress} = PitchLabels;
 const states = {ball:"공 중심 표시됨", absent:"자유 비행 없음", unknown:"판독 불가"};
 let manifest, task, drafts, sources, index = 0, frameURL, currentFrameLoaded = false, loadTicket = 0;
 let storageKey = "";
@@ -15,7 +17,9 @@ let storageFailed = false;
 let session;
 let frameRequest;
 let correction = false, releaseReady = false, releaseTicket = 0, releaseURLs = [];
-const token = new URLSearchParams(location.hash.slice(1)).get("key");
+const accountStorageKey = "pitch-review-current-reader";
+let token = new URLSearchParams(location.hash.slice(1)).get("key");
+try { token ??= localStorage.getItem(accountStorageKey); } catch { /* Login remains usable. */ }
 
 function showSaveStatus(message) {
   ui["save-status"].textContent = message;
@@ -41,6 +45,12 @@ async function mount(data, files, online, remote) {
     }
   }
   session = online;
+  ui.portal.hidden = true;
+  ui.workbench.hidden = false;
+  ui["scene-hub"].hidden = false;
+  ui["change-reader"].hidden = !online;
+  ui["account-name"].hidden = !online;
+  ui["account-name"].textContent = online ? remote.reader+" 작업 중" : "";
   ui["save-status"].hidden = !online;
   ui.retry.hidden = true;
   ui.submit.hidden = !online;
@@ -55,15 +65,30 @@ async function mount(data, files, online, remote) {
   ui.reader.value = remote?.reader ?? previous?.reader ?? "";
   ui.task.replaceChildren(...data.tasks.map(t=>new Option(t.id+" · "+t.group,t.id)));
   ui.task.disabled = false;
+  ui["scene-list"].replaceChildren(...data.tasks.map((t,i)=>{
+    const button = document.createElement("button");
+    const title = document.createElement("strong");
+    title.textContent = "씬 "+(i+1)+" · "+t.group;
+    const name = document.createElement("small");
+    name.textContent = t.id;
+    const progress = document.createElement("span");
+    button.append(title,name,progress);
+    button.addEventListener("click",()=>{
+      select(t.id);
+      ui.workbench.scrollIntoView({block:"start"});
+    });
+    return button;
+  }));
   ui.notice.textContent = data.practice ? "연습용 합성 프레임입니다. 연습 결과는 연구 판독에 포함하지 않습니다." :
     online ? "자동 후보를 먼저 확인하세요. 맞음·틀림·안 보임으로 답하면 서버에 자동 저장됩니다." :
       "영상은 브라우저에서만 엽니다. 모든 작업을 판독한 뒤 결과 JSON을 의뢰자에게 보내세요.";
-  select(data.tasks[0].id);
+  select((data.tasks.find(t=>sceneProgress(t,drafts[t.id]).status !== "complete") ?? data.tasks[0]).id);
   session?.report();
 }
 
 function select(id) {
   task = manifest.tasks.find(entry=>entry.id===id);
+  ui.task.value = id;
   ui["task-title"].textContent = task.id + " · " + task.group;
   ui.scrub.min = 0;
   ui.scrub.max = task.frames.length - 1;
@@ -75,7 +100,9 @@ function select(id) {
   }));
   const firstProposal = task.frames.findIndex(f=>task.assistance?.points[f.index] && !drafts[task.id].marks[f.index]);
   const firstMissing = task.frames.findIndex(f=>!drafts[task.id].marks[f.index]);
-  seek(firstProposal >= 0 ? firstProposal : Math.max(0,firstMissing));
+  const progress = sceneProgress(task,drafts[task.id]);
+  seek(progress.status === "needs_review" && progress.frame != null ? task.frames.findIndex(f=>f.index===progress.frame) :
+    firstProposal >= 0 ? firstProposal : Math.max(0,firstMissing));
   void previewRelease();
 }
 
@@ -199,6 +226,25 @@ function refresh() {
     button.setAttribute("aria-current",i===index ? "true" : "false");
   });
   ui.progress.textContent = Object.keys(draft.marks).length+" / "+task.frames.length;
+  let complete = 0;
+  const names = {complete:"씬 완료",needs_review:"다시 확인",in_progress:"진행 중",not_started:"시작 전"};
+  manifest.tasks.forEach((t,i)=>{
+    const status = sceneProgress(t,drafts[t.id]);
+    const card = ui["scene-list"].children[i];
+    card.dataset.status = status.status;
+    card.setAttribute("aria-current",String(t.id===task.id));
+    card.lastElementChild.textContent = status.marked+" / "+status.total+" · "+names[status.status]+
+      (status.status === "needs_review" && status.reviewFrames.length ? " "+status.reviewFrames.length+"곳" : "");
+    card.title = status.issue;
+    if (status.status === "complete") complete++;
+  });
+  ui["scene-total"].textContent = complete+" / "+manifest.tasks.length+"개 씬 완료 · 판독은 자동 저장";
+  const scene = sceneProgress(task,draft);
+  ui["scene-status"].textContent = scene.status === "complete" ? "이 씬의 입력 검사를 통과했습니다. 기록은 자동 저장됩니다." :
+    scene.status === "needs_review" ? scene.issue : scene.marked+" / "+scene.total+"프레임 확인";
+  ui["inspect-issue"].hidden = scene.status !== "needs_review";
+  ui["inspect-issue"].textContent = scene.frame == null ? "릴리스 범위 확인" : "F"+scene.frame+" 다시 확인";
+  ui["next-scene"].hidden = scene.status !== "complete" || complete === manifest.tasks.length;
   const incomplete = manifest.tasks.find(t=>readiness(t,drafts[t.id]));
   const readerOK = /^[A-Za-z0-9_-]{1,32}$/.test(ui.reader.value.trim());
   ui.download.disabled = Boolean(incomplete) || !readerOK;
@@ -219,7 +265,9 @@ function nextMissing() {
   const positions = task.frames.map((_,i)=>(index+1+i)%task.frames.length);
   const next = positions.find(i=>!drafts[task.id].marks[task.frames[i].index]);
   if (next != null) void seek(next);
-  else ui.notice.textContent = "이 투구의 프레임 확인을 마쳤습니다. 릴리스 범위를 확인한 뒤 작업 번호에서 다음 투구를 여세요.";
+  else ui.notice.textContent = sceneProgress(task,drafts[task.id]).status === "complete" ?
+    "이 씬의 입력 검사를 통과했습니다. 다음 씬으로 이동할 수 있습니다." :
+    "프레임은 모두 저장됐습니다. 오른쪽에 표시된 확인 사항을 마쳐주세요.";
 }
 
 function decide(decision,point) {
@@ -279,6 +327,15 @@ ui["release-unknown"].addEventListener("click",()=>update(draft=>{ draft.uncerta
 ui.notes.addEventListener("input",()=>update(draft=>{ draft.notes = ui.notes.value; }));
 ui.reader.addEventListener("input",()=>{ if (task) { save(); refresh(); } });
 ui.retry.addEventListener("click",()=>session?.flush());
+ui["inspect-issue"].addEventListener("click",()=>{
+  const progress = sceneProgress(task,drafts[task.id]);
+  if (progress.frame != null) void seek(task.frames.findIndex(f=>f.index===progress.frame));
+  else ui["release-details"].open = true;
+});
+ui["next-scene"].addEventListener("click",()=>{
+  const next = manifest.tasks.find(t=>sceneProgress(t,drafts[t.id]).status !== "complete");
+  if (next) select(next.id);
+});
 ui.submit.addEventListener("click",()=>session?.save(drafts,true));
 ui.download.addEventListener("click",()=>{
   try {
@@ -304,20 +361,65 @@ document.addEventListener("keydown",event=>{
   if (event.key === "3") { event.preventDefault(); decide("unknown"); }
 });
 
-async function openAssignment() {
-  if (!token) return;
+async function openAssignment(accessToken) {
   document.querySelector(".load").hidden = true;
-  byId("guide-link").addEventListener("click",event=>{
-    event.preventDefault();
-    byId("guide").scrollIntoView();
-  });
   ui.notice.textContent = "서버에서 배정된 투구를 여는 중…";
   try {
-    const online = PitchReviewSession(token,showSaveStatus);
+    const online = PitchReviewSession(accessToken,showSaveStatus);
     const remote = await online.open();
     if (!remote.assignment) throw new Error("이 링크에 배정된 서버 작업이 없습니다.");
     await mount(remote.assignment,null,online,remote);
-  } catch (error) { ui.notice.textContent = error.message; }
+    token = accessToken;
+    try { localStorage.setItem(accountStorageKey,accessToken); } catch { /* The current session stays open. */ }
+    history.replaceState(null,"",location.pathname+location.search);
+    ui["access-code"].value = "";
+    return true;
+  } catch (error) {
+    ui.notice.textContent = error.message;
+    ui.portal.hidden = false;
+    return false;
+  }
 }
 
-void openAssignment();
+byId("guide-link").addEventListener("click",event=>{
+  event.preventDefault();
+  byId("guide").scrollIntoView();
+});
+ui["login-form"].addEventListener("submit",async event=>{
+  event.preventDefault();
+  ui["login-submit"].disabled = true;
+  ui["login-message"].textContent = "작업을 불러오는 중…";
+  try {
+    const response = await fetch("/api/session",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({reader:ui["login-reader"].value,accessCode:ui["access-code"].value.trim()})});
+    if (!response.ok) throw new Error(response.status === 429 ? "접속 시도가 많습니다. 1분 뒤 다시 시도하세요." : "작업자와 접속 코드를 확인하세요.");
+    const login = await response.json();
+    if (!await openAssignment(login.token)) throw new Error("작업을 열지 못했습니다. 다시 시도하세요.");
+  } catch (error) { ui["login-message"].textContent = error.message; }
+  finally { ui["login-submit"].disabled = false; }
+});
+ui["change-reader"].addEventListener("click",()=>{
+  if (session && !session.canLeave()) {
+    ui.notice.textContent = "현재 기록의 서버 저장을 먼저 마쳐주세요. 저장 실패 시 다시 저장을 눌러주세요.";
+    return;
+  }
+  try { localStorage.removeItem(accountStorageKey); } catch { /* Reload discards the active handle. */ }
+  location.assign(location.pathname+location.search);
+});
+
+async function start() {
+  try {
+    const response = await fetch("/api/portal",{cache:"no-store"});
+    if (response.ok) {
+      const portal = await response.json();
+      if (portal.enabled) {
+        ui.portal.hidden = false;
+        document.querySelector(".load").hidden = true;
+        ui["login-reader"].replaceChildren(...portal.readers.map(reader=>new Option(reader,reader)));
+        ui.notice.textContent = "본인의 작업자 번호로 접속하면 모든 씬과 진행 상태가 표시됩니다.";
+      }
+    }
+  } catch { /* File-based and offline practice remain available. */ }
+  if (token) await openAssignment(token);
+}
+void start();

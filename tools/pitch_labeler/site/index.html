@@ -13,14 +13,23 @@
   <script defer src="./app.js"></script>
 </head>
 <body>
-  <header class="mast"><span class="mark" aria-hidden="true">⊙</span><span>Pitching Real2Sim Lab</span><a href="#guide" id="guide-link">판독 기준</a></header>
+  <header class="mast"><span class="mark" aria-hidden="true">⊙</span><span>Pitching Real2Sim Lab</span><span id="account-name" hidden></span><button id="change-reader" hidden>작업자 바꾸기</button><a href="#guide" id="guide-link">판독 기준</a></header>
   <main>
     <div class="intro">
       <div><h1>표시된 공이 맞나요?</h1><p>자동으로 찾은 위치를 확인하세요. 틀린 곳만 고치면 됩니다.</p></div>
       <div class="load"><label class="button primary" for="folder">작업 폴더 열기</label><input id="folder" type="file" webkitdirectory multiple class="visually-hidden"><button id="demo">연습 열기</button></div>
     </div>
+    <section id="portal" class="portal" hidden aria-label="공통 작업 사이트 접속">
+      <div><h2>작업 이어서 하기</h2><p>주소 하나로 접속하고, 본인의 작업자 번호를 선택하세요.</p></div>
+      <form id="login-form">
+        <label class="field">작업자<select id="login-reader" required></select></label>
+        <label class="field">공통 접속 코드<input id="access-code" type="password" autocomplete="current-password" required maxlength="128" placeholder="처음 한 번 입력"></label>
+        <button class="primary" id="login-submit" type="submit">내 작업 열기</button>
+      </form><p class="hint" id="login-message" role="status">기존 판독 기록을 이어서 불러옵니다.</p>
+    </section>
+    <section id="scene-hub" class="scene-hub" hidden aria-label="내 씬 목록"><div class="scene-heading"><h2>내 씬 목록</h2><span id="scene-total"></span></div><div id="scene-list" class="scene-list"></div></section>
     <p id="notice" role="status">배정받은 링크에서 바로 작업을 시작할 수 있습니다. 파일을 받았다면 작업 폴더 열기를 사용하세요.</p>
-    <div class="workbench">
+    <div class="workbench" id="workbench" hidden>
       <section class="monitor" aria-label="원본 프레임 판독">
         <div class="monitor-head"><strong id="task-title">원본 프레임</strong><span id="frame-id" class="mono"></span></div>
         <div id="viewport" class="viewport">
@@ -34,7 +43,7 @@
         <div id="strip" class="strip" aria-label="프레임 판독 상태"></div>
       </section>
       <section class="sheet" aria-label="판독 기록">
-        <div class="sheet-head"><h2>확인하고 다음으로</h2><span id="progress" class="mono">0 / 0</span></div>
+        <div class="scene-check"><p id="scene-status" role="status"></p><button id="inspect-issue" hidden>확인이 필요한 장면 보기</button><button id="next-scene" hidden>다음 씬으로</button></div><div class="sheet-head"><h2>확인하고 다음으로</h2><span id="progress" class="mono">0 / 0</span></div>
         <label class="field">작업 번호<select id="task" disabled></select></label>
         <label class="field">판독자 코드<input id="reader" maxlength="32" placeholder="예: R01" autocomplete="off" spellcheck="false"></label>
         <fieldset id="controls" disabled>
@@ -61,7 +70,7 @@
         </fieldset>
         <p id="save-status" class="hint" role="status" hidden></p>
         <button id="retry" type="button" hidden>다시 저장</button>
-        <button id="submit" class="primary submit" hidden disabled>서버에 제출</button>
+        <button id="submit" class="primary submit" hidden disabled>전체 작업 제출</button>
         <button id="download" class="submit" disabled>결과 JSON 받기</button>
         <p id="readiness" class="hint">작업을 열어 프레임을 판독하세요.</p>
       </section>

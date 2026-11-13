@@ -56,7 +56,7 @@
       else if (record?.savedAt) status("서버 자동 저장 완료");
       else status("서버 연결됨 · 판독할 때마다 저장");
     }
-    return {open,report,flush,async frame(file,signal) {
+    return {open,report,flush,canLeave:()=>!pending && !running && !conflict,async frame(file,signal) {
       const response = await fetch("/api/"+file,{headers,signal,cache:"no-store"});
       if (!response.ok) throw new Error("Frame unavailable");
       return response.blob();
