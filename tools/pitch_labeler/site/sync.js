@@ -18,7 +18,10 @@
       try { pending = JSON.parse(localStorage.getItem(key)); } catch { pending = null; }
       if (pending && pending.revision !== record.revision) {
         if (stableJSON(pending.drafts) === stableJSON(record.drafts)) {
-          const submitted = pending.submitScene ? submissionState(pending.drafts[pending.submitScene],record.sceneSubmissions?.[pending.submitScene]) === "received" :
+          const decision = pending.correctionDecision;
+          const reviewed = decision && record.correctionReviews?.[decision.id];
+          const submitted = decision ? reviewed?.candidate_hash === decision.candidate_hash && reviewed?.decision === decision.decision :
+            pending.submitScene ? submissionState(pending.drafts[pending.submitScene],record.sceneSubmissions?.[pending.submitScene]) === "received" :
             !pending.final || Boolean(record.submittedAt);
           if (submitted) pending = null;
           else pending.revision = record.revision;
@@ -73,11 +76,12 @@
       const response = await fetch("/api/"+file,{headers,signal,cache:"no-store"});
       if (!response.ok) throw new Error("Frame unavailable");
       return response.blob();
-    },save(drafts,final=false,submitScene) {
+    },save(drafts,final=false,submitScene,correctionDecision) {
       if (!record) return Promise.resolve(false);
       generation++;
       pending = {revision:record.revision,drafts:JSON.parse(JSON.stringify(drafts)),final};
       if (submitScene != null) pending.submitScene = submitScene;
+      if (correctionDecision != null) pending.correctionDecision = {...correctionDecision};
       backup();
       if (conflict) { report(); return Promise.resolve(false); }
       return flush();

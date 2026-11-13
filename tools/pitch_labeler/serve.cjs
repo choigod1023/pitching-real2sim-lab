@@ -3,11 +3,13 @@ const {randomUUID,createHash,timingSafeEqual} = require("node:crypto");
 const {readFileSync, writeFileSync, mkdirSync, renameSync} = require("node:fs");
 const {dirname, join} = require("node:path");
 const {checkManifest, submission, validReview, sceneProgress, stableJSON} = require("./site/labels.js");
+const {prepareCorrections,reviewCorrection} = require("./corrections.cjs");
 
 const site = join(__dirname, "site");
 const assets = {
   "/": ["index.html", "text/html"], "/app.js": ["app.js", "text/javascript"],
   "/sync.js": ["sync.js", "text/javascript"], "/labels.js": ["labels.js", "text/javascript"],
+  "/corrections.js": ["corrections.js", "text/javascript"],
   "/style.css": ["style.css", "text/css"], "/demo/practice.js": ["demo/practice.js", "text/javascript"],
 };
 for (let frame=0; frame<8; frame++) {
@@ -53,9 +55,10 @@ function send(response, status, payload) {
   response.end(JSON.stringify(payload));
 }
 
-function makeServer({assignment, readers, directory, frameDirectory, portal}) {
+function makeServer({assignment, readers, directory, frameDirectory, portal, corrections}) {
   checkManifest(assignment);
   if (assignment.practice || !plain(readers)) throw new Error("A research assignment and readers are required");
+  const candidates = prepareCorrections(corrections,assignment,readers);
   const byToken = new Map();
   for (const [reader, token] of Object.entries(readers)) {
     if (!/^[A-Za-z0-9_-]{1,32}$/.test(reader) || !/^[a-f0-9]{48}$/.test(token) || byToken.has(token))
@@ -122,6 +125,7 @@ function makeServer({assignment, readers, directory, frameDirectory, portal}) {
       if (request.method === "GET") {
         const record = loadRecord(file);
         return send(response,200,{batch:assignment.batch,reader,assignment:frameDirectory ? assignment : null,...record,
+          correctionCandidates:candidates.filter(c=>c.reader===reader),
           scenes:Object.fromEntries(assignment.tasks.map(task=>[task.id,sceneProgress(task,record.drafts[task.id])]))});
       }
       if (request.method !== "PUT") return send(response,405,{});
@@ -142,12 +146,24 @@ function makeServer({assignment, readers, directory, frameDirectory, portal}) {
       const requestedScene = Object.hasOwn(update,"submitScene");
       const scene = requestedScene && assignment.tasks.find(task=>task.id===update.submitScene);
       if (requestedScene && (!scene || update.final)) return send(response,400,{error:"invalid_scene"});
+      const requestedCorrection = Object.hasOwn(update,"correctionDecision");
+      if (requestedCorrection && (requestedScene || update.final)) return send(response,400,{error:"mixed_submission"});
       const old = loadRecord(file);
       if (old.revision !== update.revision) return send(response,409,{error:"revision_conflict"});
       const savedAt = new Date().toISOString();
       const next = {revision:old.revision+1,drafts:update.drafts,savedAt,submittedAt:null,result:null,
         assistance:Object.fromEntries(assignment.tasks.map(task=>[task.id,task.assistance ?? null])),
-        sceneSubmissions:{...old.sceneSubmissions},sceneSubmissionHistory:[...(old.sceneSubmissionHistory ?? [])]};
+        sceneSubmissions:{...old.sceneSubmissions},sceneSubmissionHistory:[...(old.sceneSubmissionHistory ?? [])],
+        correctionReviews:{...old.correctionReviews},correctionReviewHistory:[...(old.correctionReviewHistory ?? [])]};
+      if (requestedCorrection) {
+        // Review is an independent layer; a yes/no click must not change original annotations or receipts.
+        if (stableJSON(update.drafts)!==stableJSON(old.drafts)) return send(response,422,{error:"correction_requires_saved_draft"});
+        const reviewed = reviewCorrection(candidates,reader,old,update.correctionDecision,savedAt);
+        if (reviewed.error) return send(response,reviewed.status,{error:reviewed.error});
+        next.submittedAt=old.submittedAt;next.result=old.result;
+        next.correctionReviews[reviewed.review.candidate_id]=reviewed.review;
+        next.correctionReviewHistory.push(reviewed.review);
+      }
       if (scene) {
         const draft = update.drafts[scene.id];
         const progress = sceneProgress(scene,draft);
@@ -167,7 +183,7 @@ function makeServer({assignment, readers, directory, frameDirectory, portal}) {
       const temporary = file+"."+randomUUID()+".tmp";
       writeFileSync(temporary,JSON.stringify(next,null,2),{encoding:"utf8",mode:0o600,flush:true});
       renameSync(temporary,file);
-      return send(response,200,{revision:next.revision,savedAt,submittedAt:next.submittedAt,sceneSubmissions:next.sceneSubmissions});
+      return send(response,200,{revision:next.revision,savedAt,submittedAt:next.submittedAt,sceneSubmissions:next.sceneSubmissions,correctionReviews:next.correctionReviews});
     } catch {
       return send(response,500,{error:"save_failed"});
     }
@@ -175,9 +191,9 @@ function makeServer({assignment, readers, directory, frameDirectory, portal}) {
 }
 
 if (require.main === module) {
-  const [assignmentFile, readersFile, directory, port = "8767", portalFile] = process.argv.slice(2);
+  const [assignmentFile, readersFile, directory, port = "8767", portalFile, correctionsFile] = process.argv.slice(2);
   const read = file => JSON.parse(readFileSync(file,"utf8").replace(/^\uFEFF/,""));
-  makeServer({assignment:read(assignmentFile),readers:read(readersFile),directory,frameDirectory:dirname(assignmentFile),portal:portalFile ? read(portalFile) : undefined})
+  makeServer({assignment:read(assignmentFile),readers:read(readersFile),directory,frameDirectory:dirname(assignmentFile),portal:portalFile ? read(portalFile) : undefined,corrections:correctionsFile ? read(correctionsFile) : undefined})
     .listen(Number(port),"127.0.0.1",()=>console.log("Pitch review listening on 127.0.0.1:"+port));
 }
 

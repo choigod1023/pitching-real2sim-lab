@@ -9,14 +9,19 @@ const ui = Object.fromEntries([
   "portal","login-form","login-reader","access-code","login-submit","login-message","scene-hub","scene-list","scene-total",
   "account-name","change-reader","workbench","scene-status","inspect-issue","next-scene",
   "submit-all","scene-submit-help","held","flight","caught","flight-controls","phase-context","release-title",
+  "correction-queue","correction-total","correction-next","correction-export","correction-panel","correction-change","correction-reason",
+  "correction-before","correction-target","correction-after","correction-accept","correction-reject","correction-defer","correction-status",
 ].map(id => [id, byId(id)]));
 const {checkManifest, readiness, submission, reviewFrame, sceneProgress, submissionState, releasePair} = PitchLabels;
+const {correctionState,acceptedCorrections} = PitchCorrections;
 const states = {ball:"날아가는 공 · 중심 표시됨", held:"손에 있음 · 비행 좌표 아님", caught:"잡힌 상태 · 비행 좌표 아님", absent:"이전 기록: 자유 비행 없음 · 손/글러브 미구분", unknown:"구분 안 됨 · 추측하지 않음"};
 let manifest, task, drafts, sources, index = 0, frameURL, currentFrameLoaded = false, loadTicket = 0;
 let storageKey = "";
 let storageFailed = false;
 let session;
 let sceneSubmissions = {}, submittingScene = false;
+let correctionCandidates = [], correctionReviews = {}, activeCorrectionId = null;
+let keepCorrectionContext = false;
 let frameRequest;
 let correction = false, releaseReady = false, releaseTicket = 0, releaseURLs = [];
 let flightSelected = false;
@@ -61,6 +66,9 @@ async function mount(data, files, online, remote) {
   ui.reader.readOnly = Boolean(online);
   manifest = data;
   sceneSubmissions = remote?.sceneSubmissions ?? {};
+  correctionCandidates = remote?.correctionCandidates ?? [];
+  correctionReviews = remote?.correctionReviews ?? {};
+  activeCorrectionId = null;
   sources = files;
   storageKey = "pitch-labels-v1:" + JSON.stringify([data.batch,data.tasks.map(t=>[t.id,t.sha256,t.frames[0].index,t.frames.at(-1).index])]);
   let previous;
@@ -91,7 +99,7 @@ async function mount(data, files, online, remote) {
   session?.report();
 }
 
-function select(id) {
+function select(id,frameIndex) {
   task = manifest.tasks.find(entry=>entry.id===id);
   ui.task.value = id;
   ui["task-title"].textContent = task.id + " · " + task.group;
@@ -106,7 +114,7 @@ function select(id) {
   const firstProposal = task.frames.findIndex(f=>task.assistance?.points[f.index] && !drafts[task.id].marks[f.index]);
   const firstMissing = task.frames.findIndex(f=>!drafts[task.id].marks[f.index]);
   const progress = sceneProgress(task,drafts[task.id]);
-  seek(progress.status === "needs_review" && progress.frame != null ? task.frames.findIndex(f=>f.index===progress.frame) :
+  seek(frameIndex != null ? task.frames.findIndex(f=>f.index===frameIndex) : progress.status === "needs_review" && progress.frame != null ? task.frames.findIndex(f=>f.index===progress.frame) :
     firstProposal >= 0 ? firstProposal : Math.max(0,firstMissing));
   void previewRelease();
 }
@@ -144,7 +152,8 @@ async function previewRelease() {
   refresh();
 }
 
-async function seek(target) {
+async function seek(target,keepCorrection=false) {
+  keepCorrectionContext=keepCorrection;
   index = Math.max(0, Math.min(task.frames.length - 1, target));
   const frame = task.frames[index];
   correction = !!drafts[task.id].rejections?.[frame.index] && !drafts[task.id].marks[frame.index];
@@ -278,7 +287,71 @@ function refresh() {
     "다른 씬을 끝내지 않아도 제출됩니다. 입력 불일치는 원래 값과 함께 검토용으로 전달합니다.";
   ui.readiness.textContent = incomplete ? incomplete.id+" · "+readiness(incomplete,drafts[incomplete.id]) :
     readerOK ? "내보낼 수 있습니다." : "영문·숫자로 판독자 코드를 입력하세요.";
+  refreshCorrections();
 }
+
+function refreshCorrections() {
+  const record = {drafts,sceneSubmissions,correctionReviews};
+  const counts = {pending:0,accept:0,reject:0,defer:0,stale:0};
+  correctionCandidates.forEach(c=>counts[correctionState(c,record)]++);
+  ui["correction-queue"].hidden = !correctionCandidates.length;
+  ui["correction-total"].textContent = correctionCandidates.length+"건 · 미확인 "+counts.pending+" · 맞다 "+counts.accept+" · 아니다 "+counts.reject+" · 보류 "+counts.defer+(counts.stale ? " · 원본 변경 "+counts.stale : "");
+  ui["correction-next"].disabled = submittingScene;
+  ui["correction-export"].disabled = submittingScene;
+  const frame = task.frames[index].index;
+  const here = correctionCandidates.find(c=>c.scene===task.id && c.frame===frame);
+  if (!keepCorrectionContext) activeCorrectionId=here?.id ?? null;
+  const c = correctionCandidates.find(c=>c.id===activeCorrectionId && c.scene===task.id);
+  ui["correction-panel"].hidden = !c;
+  if (!c) return;
+  const state = correctionState(c,record);
+  const names = {held:"손에 있음",caught:"잡힌 상태",unknown:"구분 안 됨"};
+  ui["correction-change"].textContent = "F"+c.frame+" · 기존: 날아가는 공 → 후보: "+names[c.proposed_mark.kind]+(c.frame!==frame ? " (현재 사진 F"+frame+")" : "");
+  ui["correction-reason"].textContent = c.reason;
+  const messages = {pending:"원본을 보고 맞다·아니다·모르겠다로 답해 주세요.",accept:"‘맞다’ 저장됨 · 수정안으로 별도 기록했습니다.",reject:"‘아니다’ 저장됨 · 이 후보를 적용하지 않습니다.",defer:"판독 보류로 저장했습니다. 나중에 다시 답할 수 있습니다.",stale:"판독이나 제출본이 바뀌어 이 후보는 재검토가 필요합니다. 적용하지 않습니다."};
+  ui["correction-status"].textContent = c.frame!==frame ? "앞뒤 프레임을 확인 중입니다. 대상 원본으로 돌아가 답해 주세요." : messages[state];
+  for (const decision of ["accept","reject","defer"]) {
+    const button=ui["correction-"+decision];
+    button.disabled=!currentFrameLoaded || submittingScene || c.frame!==frame || state==="stale" || state===decision;
+    button.setAttribute("aria-pressed",String(state===decision));
+  }
+  ui["correction-before"].disabled = submittingScene || c.frame<=task.frames[0].index;
+  ui["correction-after"].disabled = submittingScene || c.frame>=task.frames.at(-1).index;
+  ui["correction-target"].disabled = submittingScene;
+}
+
+async function answerCorrection(decision) {
+  const c=correctionCandidates.find(c=>c.id===activeCorrectionId);
+  if (!session || !c || submittingScene || c.scene!==task.id || c.frame!==task.frames[index].index || correctionState(c,{drafts,sceneSubmissions,correctionReviews})==="stale") return;
+  submittingScene=true;refresh();
+  try {
+    if (await session.flush()) await session.save(drafts,false,undefined,{id:c.id,candidate_hash:c.candidate_hash,decision});
+  } finally { submittingScene=false;refresh(); }
+}
+
+ui["correction-next"].addEventListener("click",()=>{
+  const record={drafts,sceneSubmissions,correctionReviews};
+  const start=Math.max(0,correctionCandidates.findIndex(c=>c.id===activeCorrectionId)+1);
+  const ordered=[...correctionCandidates.slice(start),...correctionCandidates.slice(0,start)];
+  const c=ordered.find(c=>correctionState(c,record)==="pending") ?? ordered.find(c=>correctionState(c,record)==="defer") ?? ordered[0];
+  if (c) { activeCorrectionId=c.id;select(c.scene,c.frame);ui.workbench.scrollIntoView({block:"start"}); }
+});
+for (const decision of ["accept","reject","defer"])
+  ui["correction-"+decision].addEventListener("click",()=>void answerCorrection(decision));
+for (const [side,offset] of [["before",-1],["target",0],["after",1]]) ui["correction-"+side].addEventListener("click",()=>{
+  const c=correctionCandidates.find(c=>c.id===activeCorrectionId);
+  if(c) seek(task.frames.findIndex(f=>f.index===c.frame+offset),true);
+});
+ui["correction-export"].addEventListener("click",()=>{
+  if (!session?.canLeave()) { ui.notice.textContent="서버 저장을 마친 뒤 수정 이력을 내려받으세요.";return; }
+  const record={drafts,sceneSubmissions,correctionReviews};
+  const result={schema:"pitch-correction-review/1",batch:manifest.batch,reader:ui.reader.value,
+    original_annotations_preserved:true,scientific_validation:"not_performed",candidates:correctionCandidates,
+    reviews:correctionReviews,accepted_overlay:acceptedCorrections(correctionCandidates,record)};
+  const url=URL.createObjectURL(new Blob([JSON.stringify(result,null,2)],{type:"application/json"}));
+  const link=document.createElement("a");link.href=url;link.download=manifest.batch+"-corrections-"+ui.reader.value+".json";link.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
 
 function update(edit) {
   if (!currentFrameLoaded || submittingScene) return;
@@ -421,6 +494,7 @@ async function openAssignment(accessToken) {
   try {
     const online = PitchReviewSession(accessToken,showSaveStatus,record=>{
       sceneSubmissions = record.sceneSubmissions ?? {};
+      correctionReviews = record.correctionReviews ?? {};
       if (task) refresh();
     });
     const remote = await online.open();
