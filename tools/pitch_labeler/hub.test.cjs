@@ -33,12 +33,11 @@ test("a fully marked scene identifies the old pre-release point rather than decl
   assert.equal(sceneProgress(task,d).frame,null);
 });
 
-test("common entrance requires a code, selects the correct reader, and retains API authorization",async()=>{
+test("common entrance needs only a reader number and preserves separate records",async()=>{
   const directory = mkdtempSync(join(tmpdir(),"pitch-hub-test-"));
   const readers = {R01:"a".repeat(48),R02:"b".repeat(48)};
-  const portal = {accessCode:"test-access-2026"};
   const assignment = {version:1,batch:"qa",tasks:[task]};
-  const server = makeServer({assignment,readers,portal,directory});
+  const server = makeServer({assignment,readers,directory});
   await new Promise(resolve=>server.listen(0,"127.0.0.1",resolve));
   const url = "http://127.0.0.1:"+server.address().port;
   const login = data=>fetch(url+"/api/session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
@@ -46,10 +45,12 @@ test("common entrance requires a code, selects the correct reader, and retains A
     const info = await (await fetch(url+"/api/portal")).json();
     assert.deepEqual(info,{enabled:true,readers:["R01","R02"]});
     assert.equal((await fetch(url+"/api/review")).status,401);
-    assert.equal((await login({reader:"R01",accessCode:"wrong"})).status,401);
-    assert.equal((await login({reader:"__proto__",accessCode:portal.accessCode})).status,401);
+    const page=await (await fetch(url+"/")).text();
+    assert.doesNotMatch(page,/access-code|type="password"/);
+    assert.equal((await login({reader:"__proto__"})).status,400);
+    assert.equal((await login({reader:[]})).status,400);
     for (const reader of Object.keys(readers)) {
-      const response = await login({reader,accessCode:portal.accessCode});
+      const response = await login({reader});
       assert.equal(response.status,200);
       const data = await response.json();
       assert.equal(data.token,readers[reader]);
@@ -58,9 +59,9 @@ test("common entrance requires a code, selects the correct reader, and retains A
       assert.equal(record.scenes.pitch.status,"not_started");
     }
     assert.deepEqual(readdirSync(directory),[]); // Login/read-only inspection never writes labels.
-    assert.equal((await login({reader:"R01",accessCode:"x".repeat(5000)})).status,413);
-    for (let i=0;i<16;i++) await login({reader:"R01",accessCode:"wrong"});
-    assert.equal((await login({reader:"R01",accessCode:portal.accessCode})).status,429);
+    assert.equal((await login({reader:"x".repeat(5000)})).status,413);
+    for (let i=0;i<16;i++) await login({reader:"R01"});
+    assert.equal((await login({reader:"R01"})).status,429);
   } finally {
     await new Promise(resolve=>server.close(resolve));
     rmSync(directory,{recursive:true,force:true});

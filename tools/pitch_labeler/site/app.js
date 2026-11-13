@@ -6,7 +6,7 @@ const ui = Object.fromEntries([
   "proposal-point","proposal-status","question","accept","reject","unseen","correction-hint",
   "release-assist","release-before","release-after","release-before-image","release-after-image",
   "release-before-label","release-after-label","release-help","release-yes","release-no","release-unknown","release-state","release-details",
-  "portal","login-form","login-reader","access-code","login-submit","login-message","scene-hub","scene-list","scene-total",
+  "portal","login-form","login-reader","login-submit","login-message","scene-hub","scene-list","scene-total",
   "account-name","change-reader","workbench","scene-status","inspect-issue","next-scene",
   "submit-all","scene-submit-help","held","flight","caught","flight-controls","phase-context","release-title",
   "correction-queue","correction-total","correction-next","correction-export","correction-panel","correction-change","correction-reason",
@@ -503,7 +503,6 @@ async function openAssignment(accessToken) {
     token = accessToken;
     try { localStorage.setItem(accountStorageKey,accessToken); } catch { /* The current session stays open. */ }
     history.replaceState(null,"",location.pathname+location.search);
-    ui["access-code"].value = "";
     return true;
   } catch (error) {
     ui.notice.textContent = error.message;
@@ -522,8 +521,8 @@ ui["login-form"].addEventListener("submit",async event=>{
   ui["login-message"].textContent = "작업을 불러오는 중…";
   try {
     const response = await fetch("/api/session",{method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({reader:ui["login-reader"].value,accessCode:ui["access-code"].value.trim()})});
-    if (!response.ok) throw new Error(response.status === 429 ? "접속 시도가 많습니다. 1분 뒤 다시 시도하세요." : "작업자와 접속 코드를 확인하세요.");
+      body:JSON.stringify({reader:ui["login-reader"].value})});
+    if (!response.ok) throw new Error(response.status === 429 ? "접속 시도가 많습니다. 1분 뒤 다시 시도하세요." : "작업자 번호를 다시 선택해 주세요.");
     const login = await response.json();
     if (!await openAssignment(login.token)) throw new Error("작업을 열지 못했습니다. 다시 시도하세요.");
   } catch (error) { ui["login-message"].textContent = error.message; }
