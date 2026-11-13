@@ -8,6 +8,7 @@
   <title>야구 투구 영상 판독</title>
   <link rel="stylesheet" href="./style.css">
   <script defer src="./labels.js"></script>
+  <script defer src="./corrections.js"></script>
   <script defer src="./demo/practice.js"></script>
   <script defer src="./sync.js"></script>
   <script defer src="./app.js"></script>
@@ -28,6 +29,11 @@
       </form><p class="hint" id="login-message" role="status">기존 판독 기록을 이어서 불러옵니다.</p>
     </section>
     <section id="scene-hub" class="scene-hub" hidden aria-label="내 씬 목록"><div class="scene-heading"><h2>내 씬 목록</h2><span id="scene-total"></span></div><div id="scene-list" class="scene-list"></div></section>
+    <section id="correction-queue" class="correction-queue" hidden aria-label="제출한 판독의 수정 후보">
+      <div><h2>제출한 판독 다시 확인</h2><p id="correction-total" class="hint"></p></div>
+      <button id="correction-next" type="button">다음 수정 후보 보기</button>
+      <button id="correction-export" type="button">수정 확인 이력 받기</button>
+    </section>
     <p id="notice" role="status">배정받은 링크에서 바로 작업을 시작할 수 있습니다. 파일을 받았다면 작업 폴더 열기를 사용하세요.</p>
     <div class="workbench" id="workbench" hidden>
       <section class="monitor" aria-label="원본 프레임 판독">
@@ -43,6 +49,14 @@
         <div id="strip" class="strip" aria-label="프레임 판독 상태"></div>
       </section>
       <section class="sheet" aria-label="판독 기록">
+        <section id="correction-panel" class="correction-panel" hidden aria-label="이 프레임의 수정 후보">
+          <h2>이 수정 후보가 맞나요?</h2><p id="correction-change"></p><p id="correction-reason" class="hint"></p>
+          <p class="hint">흰 점은 기존 판독입니다. 앞뒤 원본도 확인하세요. 이 제안은 확정 정답이 아닙니다.</p>
+          <div class="button-row"><button id="correction-before" type="button">앞 원본</button><button id="correction-target" type="button">대상 원본</button><button id="correction-after" type="button">뒤 원본</button></div>
+          <div class="correction-actions"><button id="correction-accept" type="button" class="primary">맞다</button><button id="correction-reject" type="button">아니다</button><button id="correction-defer" type="button">모르겠다</button></div>
+          <p id="correction-status" class="hint" role="status"></p>
+          <p class="hint">답변은 별도 저장합니다. 최초 판독·제출값과 릴리스 시점은 바꾸지 않습니다.</p>
+        </section>
         <div class="scene-check"><p id="scene-status" role="status"></p><button id="inspect-issue" hidden>확인이 필요한 장면 보기</button><button id="next-scene" hidden>다음 씬으로</button></div><div class="sheet-head"><h2>확인하고 다음으로</h2><span id="progress" class="mono">0 / 0</span></div>
         <label class="field">작업 번호<select id="task" disabled></select></label>
         <label class="field">판독자 코드<input id="reader" maxlength="32" placeholder="예: R01" autocomplete="off" spellcheck="false"></label>

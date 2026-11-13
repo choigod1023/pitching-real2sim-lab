@@ -47,7 +47,7 @@ Python 환경에 OpenCV가 필요하다. 원본 파일 경로, 작업 ID, 자료
 
 ## 로컬 서버 자동 저장
 
-    node tools/pitch_labeler/serve.cjs batch-folder/assignment-assisted-v1.json readers.json records 8767 portal.json
+    node tools/pitch_labeler/serve.cjs batch-folder/assignment-assisted-v1.json readers.json records 8767 portal.json [corrections.json]
 
 서버는 127.0.0.1에서 실행한다. 외부 HTTPS 터널은 이 포트만 연결한다. `readers.json`은 작업자별 내부 키를 보존하고, `portal.json`에는 12자 이상 난수 `accessCode`를 둔다. 두 파일은 공개 경로와 Git 밖에 둔다. 작업자에게는 모두 같은 사이트 주소와 공통 접속 코드를 전달한다. 화면에서 R01/R02를 고르면 기존 판독을 이어서 불러온다.
 
@@ -60,3 +60,13 @@ Python 환경에 OpenCV가 필요하다. 원본 파일 경로, 작업 ID, 자료
 씬별 접수는 전체 작업의 `submittedAt`이나 `result`를 채우지 않는다. 전체 입력 검사 결과 제출을 마친 파일만 기존 `compare.py`에 바로 넘긴다. 저장 중 제출을 눌러도 선행 자동 저장이 끝난 뒤 같은 순서로 제출하고 서버 응답을 기다린다. 전송 실패 시 제출 요청도 브라우저에 보관해 다시 저장으로 재시도한다. 접수 후 판독을 바꾸면 기존 접수 사본은 유지하고 화면에는 다시 제출이 필요하다고 표시한다.
 
 작업자 키와 판독 파일은 서버 공개 경로와 분리한다. 프레임 API는 유효한 작업자 키로 배정 목록에 있는 PNG만 제공한다.
+
+## 제출 판독의 수정 후보 확인
+
+원영상 검토에서 발견한 후보는 같은 사이트의 **제출한 판독 다시 확인 → 다음 수정 후보 보기**로 확인한다. 해당 프레임에 기존 표시, 제안 상태, 이유를 보여준다. **앞 원본 / 대상 원본 / 뒤 원본**으로 접촉과 분리 전후를 비교한 뒤 **맞다 / 아니다 / 모르겠다** 중 하나를 누른다. 앞뒤 사진을 보는 동안에도 질문의 대상 프레임은 유지하며, 다른 프레임을 보고 답하지 않도록 대상 원본으로 돌아와야 답변할 수 있다.
+
+답변은 서버 JSON의 `correctionReviews`와 누적 `correctionReviewHistory`에 별도로 자동 저장한다. **맞다를 눌러도 기존 좌표·릴리스 값·제출 사본은 바꾸지 않는다.** 원래 판독을 직접 수정하거나 다시 제출해 후보의 근거가 달라지면 오래된 후보를 무효로 표시한다. 미확인·거절·보류·무효 후보는 승인 목록에 포함하지 않는다.
+
+선택 인자 `corrections.json`은 운영자가 원영상과 대조한 후보 목록이다. 형식은 `schema: "pitch-correction-candidates/1"`, `batch`, `candidates`이며 각 후보에는 `id`, `reader`, `scene`, `frame`, `source_sha256`, `receipt_id`, `original_mark`, `original_release`, `proposed_mark`, `reason`, `evidence_frames`를 넣는다. 현재는 `ball`에서 좌표 없는 `held`·`caught`·`unknown`으로의 제안만 지원한다. 서버가 원본 해시·프레임 범위·작업자·후보 내용을 검사하고 `candidate_hash`를 계산한다. 같은 작업자·씬·프레임에 여러 후보를 동시에 넣지 않는다. 실제 목록과 판독 자료는 Git 밖에 둔다.
+
+**수정 확인 이력 받기**는 후보·답변·유효한 승인 목록(`accepted_overlay`)을 따로 내보낸다. 원래 연구 결과를 교체하지 않으며, 답변은 판독 재검토 이력이지 독립 정답이나 과학적 검증 통과가 아니다. 릴리스 일관성 검사는 별도로 유지한다. 검사 범위와 한계는 [CORRECTION_REVIEW_CHECK.md](CORRECTION_REVIEW_CHECK.md)에 기록했다.

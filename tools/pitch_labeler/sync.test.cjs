@@ -89,3 +89,24 @@ test("receipt matching ignores object key order but detects changed annotations"
   assert.equal(labels.submissionState({a:1,b:3},receipt),"changed");
   assert.equal(labels.submissionState({},undefined),"none");
 });
+
+test("correction answer survives offline retry and lost acknowledgement without mutating drafts",async()=>{
+  const action={id:"fix-1",candidate_hash:"hash",decision:"accept"};
+  let attempts=0;
+  const requests=[];
+  const c=client(async(_url,options)=>{
+    if(!options.method)return response({batch:"qa",revision:0,drafts,submittedAt:null});
+    requests.push(JSON.parse(options.body));
+    if(++attempts===1)throw new Error("offline");
+    return response({revision:1,correctionReviews:{"fix-1":{candidate_hash:"hash",decision:"accept"}}});
+  });
+  await c.session.open();assert.equal(await c.session.save(drafts,false,undefined,action),false);
+  assert.deepEqual(JSON.parse(c.storage.get("pitch-review-outbox:qa")).correctionDecision,action);
+  assert.equal(await c.session.flush(),true);assert.deepEqual(requests[1].drafts,drafts);
+  const pending={revision:0,drafts,final:false,correctionDecision:action};
+  const make=(decision)=>client(async()=>response({batch:"qa",revision:1,drafts,correctionReviews:{"fix-1":{candidate_hash:"hash",decision}}}),
+    {"pitch-review-outbox:qa":JSON.stringify(pending)});
+  const acknowledged=make("accept");await acknowledged.session.open();assert.equal(acknowledged.session.canLeave(),true);
+  const notAcknowledged=make("reject");await notAcknowledged.session.open();assert.equal(notAcknowledged.session.canLeave(),false);
+  assert.equal(JSON.parse(notAcknowledged.storage.get("pitch-review-outbox:qa")).revision,1);
+});
